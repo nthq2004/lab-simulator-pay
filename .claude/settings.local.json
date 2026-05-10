@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node -e \"const code = require\\('fs'\\).readFileSync\\('c:/Users/NTSC/Documents/BaiduSyncdisk/03 教学材料/仿真软件制作/网站/lab-simulator/workers/src/index.js', 'utf8'\\); try { new Function\\(code\\); console.log\\('Syntax OK'\\); } catch\\(e\\) { console.log\\('Syntax error:', e.message\\); }\")",
+      "Bash(curl -s http://127.0.0.1:8787/api/admin/users -H \"X-Admin-Secret: 123456\")"
+    ]
+  }
+}

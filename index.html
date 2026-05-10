@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>自动控制仿真系统</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body{
+    font-family:"Microsoft YaHei", Arial, sans-serif;
+    overflow:hidden;
+    color:white;
+    background:#0f2027;
+}
+
+canvas{
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:-1;
+}
+
+/* 顶部导航栏 */
+.navbar{
+    position:fixed;
+    top:0;
+    width:100%;
+    height:60px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:40px;
+    background:rgba(0,0,0,0.4);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid rgba(0,180,255,0.3);
+    z-index:10;
+}
+
+.nav-btn{
+    cursor:pointer;
+    padding:10px 25px;
+    border-radius:20px;
+    border:1px solid rgba(0,180,255,0.5);
+    transition:0.3s;
+}
+
+.nav-btn:hover{
+    background:rgba(0,180,255,0.3);
+}
+
+.nav-btn.active{
+    background:rgba(0,180,255,0.6);
+}
+
+/* 主体 */
+.container{
+    text-align:center;
+    padding-top:120px;
+}
+
+h1{
+    font-size:46px;
+    letter-spacing:4px;
+    margin-bottom:60px;
+    text-shadow:0 0 20px rgba(0,180,255,0.8);
+}
+
+/* 链接卡片 */
+.links{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:25px;
+    width:85%;
+    max-width:1100px;
+    margin:auto;
+}
+
+.card{
+    padding:25px;
+    border-radius:14px;
+    text-decoration:none;
+    color:white;
+    font-size:18px;
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(0,180,255,0.3);
+    backdrop-filter:blur(6px);
+    transition:all 0.3s ease;
+    box-shadow:0 0 15px rgba(0,180,255,0.2);
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    background:rgba(0,180,255,0.15);
+    box-shadow:0 0 25px rgba(0,180,255,0.6);
+}
+
+footer{
+    position:fixed;
+    bottom:20px;
+    width:100%;
+    font-weight:bolder;
+    text-align:center;
+    font-size:18px;
+    opacity:0.8;
+}
+
+/* 页面切换 */
+.page{
+    display:none;
+}
+
+.page.active{
+    display:block;
+}
+
+/* ===== 认证样式 ===== */
+
+/* 用户区域 */
+.user-area{
+    position:absolute;
+    right:20px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:14px;
+}
+
+.user-btn{
+    cursor:pointer;
+    padding:6px 16px;
+    border-radius:14px;
+    border:1px solid rgba(0,180,255,0.4);
+    transition:0.3s;
+    font-size:13px;
+}
+
+.user-btn:hover{
+    background:rgba(0,180,255,0.3);
+}
+
+.user-info{
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.vip-badge{
+    border:1px solid #ffc107;
+    color:#ffc107;
+    padding:2px 8px;
+    border-radius:10px;
+    font-size:11px;
+}
+
+/* 弹窗遮罩 */
+.modal-overlay{
+    position:fixed;
+    top:0;left:0;
+    width:100%;height:100%;
+    background:rgba(0,0,0,0.65);
+    backdrop-filter:blur(4px);
+    display:none;
+    justify-content:center;
+    align-items:center;
+    z-index:100;
+}
+
+.modal-overlay.active{
+    display:flex;
+}
+
+/* 弹窗卡片 */
+.modal-card{
+    background:rgba(15,32,39,0.97);
+    border:1px solid rgba(0,180,255,0.4);
+    border-radius:16px;
+    padding:35px;
+    width:400px;
+    max-width:90vw;
+    box-shadow:0 0 50px rgba(0,180,255,0.25);
+    position:relative;
+    animation:modalIn 0.25s ease;
+}
+
+@keyframes modalIn{
+    from{transform:scale(0.9);opacity:0;}
+    to{transform:scale(1);opacity:1;}
+}
+
+.modal-card h2{
+    text-align:center;
+    margin-bottom:25px;
+    font-size:24px;
+    letter-spacing:2px;
+}
+
+.modal-card input{
+    width:100%;
+    padding:12px 15px;
+    margin-bottom:15px;
+    border-radius:10px;
+    border:1px solid rgba(0,180,255,0.3);
+    background:rgba(255,255,255,0.05);
+    color:white;
+    font-size:15px;
+    outline:none;
+    transition:0.3s;
+    box-sizing:border-box;
+}
+
+.modal-card input:focus{
+    border-color:rgba(0,180,255,0.8);
+    box-shadow:0 0 12px rgba(0,180,255,0.2);
+}
+
+.modal-card input::placeholder{
+    color:rgba(255,255,255,0.35);
+}
+
+.modal-card button{
+    width:100%;
+    padding:12px;
+    border-radius:10px;
+    border:none;
+    background:rgba(0,180,255,0.7);
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
+    margin-top:5px;
+}
+
+.modal-card button:hover{
+    background:rgba(0,180,255,0.9);
+    box-shadow:0 0 20px rgba(0,180,255,0.3);
+}
+
+.modal-card .switch-link{
+    text-align:center;
+    margin-top:15px;
+    font-size:14px;
+    color:rgba(255,255,255,0.6);
+}
+
+.modal-card .switch-link a{
+    color:#00b4ff;
+    cursor:pointer;
+    text-decoration:none;
+}
+
+.modal-card .switch-link a:hover{
+    text-decoration:underline;
+}
+
+.modal-error{
+    color:#ff6b6b;
+    font-size:13px;
+    margin-bottom:10px;
+    min-height:18px;
+}
+
+.modal-close{
+    position:absolute;
+    top:12px;right:16px;
+    font-size:24px;
+    cursor:pointer;
+    color:rgba(255,255,255,0.4);
+    transition:0.3s;
+    line-height:1;
+}
+
+.modal-close:hover{
+    color:white;
+}
+
+/* 支付选项 */
+.pay-options{
+    display:flex;
+    gap:15px;
+    margin:20px 0;
+}
+
+.pay-option{
+    flex:1;
+    padding:20px;
+    border-radius:12px;
+    border:1px solid rgba(0,180,255,0.2);
+    text-align:center;
+    cursor:pointer;
+    transition:0.3s;
+    background:rgba(255,255,255,0.03);
+}
+
+.pay-option:hover{
+    border-color:rgba(0,180,255,0.6);
+    background:rgba(0,180,255,0.08);
+}
+
+.pay-option.selected{
+    border-color:#00b4ff;
+    background:rgba(0,180,255,0.15);
+    box-shadow:0 0 15px rgba(0,180,255,0.2);
+}
+
+.pay-option .pay-icon{
+    font-size:36px;
+    margin-bottom:8px;
+}
+
+.pay-option .pay-name{
+    font-size:16px;
+    font-weight:bold;
+}
+
+.pay-price{
+    text-align:center;
+    font-size:28px;
+    font-weight:bold;
+    color:#ffc107;
+    margin:15px 0;
+    letter-spacing:1px;
+}
+
+.pay-price small{
+    font-size:14px;
+    color:rgba(255,255,255,0.5);
+}
+
+.pay-qr{
+    text-align:center;
+    margin:20px 0;
+    padding:25px;
+    border:2px dashed rgba(0,180,255,0.3);
+    border-radius:12px;
+}
+
+.pay-qr img{
+    width:180px;
+    height:180px;
+}
+
+.pay-qr p{
+    margin-top:10px;
+    color:rgba(255,255,255,0.6);
+    font-size:13px;
+}
+
+.pay-hint{
+    text-align:center;
+    color:rgba(255,255,255,0.5);
+    font-size:13px;
+    margin-bottom:15px;
+}
+
+.pay-confirm-btn{
+    display:none;
+}
+</style>
+</head>
+
+<body>
+
+<canvas id="bg"></canvas>
+
+<!-- 顶部导航 -->
+<div class="navbar">
+    <div class="nav-btn active" onclick="switchPage('chief')">大管轮评估项目</div>
+    <div class="nav-btn" onclick="switchPage('third')">三管轮评估项目</div>
+    <div class="nav-btn" onclick="switchPage('automation')">自动化技能库</div>
+    <div class="nav-btn" onclick="switchPage('electrical')">电子电气技能库</div>
+    <div class="user-area" id="userArea">
+        <span class="user-btn" id="loginBtn" onclick="showLoginModal()">登录</span>
+        <span class="user-btn" id="registerBtn" onclick="showRegisterModal()">注册</span>
+        <span class="user-info" id="userInfo" style="display:none">
+            <span id="usernameDisplay" style="font-size:14px;font-weight:bold;"></span>
+            <span class="vip-badge" id="vipBadge" style="display:none">VIP</span>
+            <span class="user-btn" id="upgradeBtn" onclick="showPaymentModal()">升级VIP</span>
+            <span class="user-btn" onclick="handleLogout()">退出</span>
+        </span>
+    </div>
+</div>
+
+<div class="container">
+
+<!-- 大管轮 -->
+<div id="chief" class="page active">
+<div class="links">
+
+<a href="chief/press_transmitter.html" class="card">
+4.1 压力变送器功能测试
+</a>
+
+<a href="chief/temp_control.html" class="card">
+4.2 温控器最小系统功能测试
+</a>
+
+<a href="chief/control_module.html" class="card">
+6 传感器、变送器、调节器、执行器故障排除
+</a>
+
+<a href="chief/can_system.html" class="card">
+8-9 总线式监测报警系统
+</a>
+
+</div>
+</div>
+
+<!-- 三管轮 -->
+<div id="third" class="page">
+<div class="links">
+
+<a href="third/temp_sensor.html" class="card">
+7.1.1 温度传感器的测试
+</a>
+
+<a href="third/press_transmitter.html" class="card">
+7.1.2 压力变送器的测试
+</a>
+
+<a href="third/press_relay.html" class="card">
+7.2 压力开关的功能测试和参数调整
+</a>
+
+<a href="third/diff_transmitter.html" class="card">
+7.3 差压变送器的功能测试
+</a>
+
+<a href="third/pid_controller.html" class="card">
+7.4 PID数字调节器的接线和参数调整
+</a>
+
+<a href="third/control_module.html" class="card">
+8.2 自动控制系统各模块的功能测试
+</a>
+
+<a href="third/cooling_system.html" class="card">
+8.3 冷却水温度控制系统的功能测试
+</a>
+</div>
+</div>
+
+<!-- 自动化 -->
+<div id="automation" class="page">
+<div class="links">
+<a href="transmitter/index.html" class="card">
+1.1 基于PT100的温度变送器仿真
+</a>
+
+<a href="transmitter/ntc_transmitter.html" class="card">
+1.2 基于热敏电阻NTC的温度变送器仿真
+</a>
+
+<a href="transmitter/press_transmitter.html" class="card">
+2.1 基于电阻应变片的压力变送器
+</a>
+<a href="transmitter/diff_transformer.html" class="card">
+2.2 基于差动变压器的压力变送器
+
+<a href="auto/pneumatic_valve.html" class="card">
+3.1 气动薄膜调节阀的测试
+</a>
+
+<a href="auto/air_compressor.html" class="card">
+4.1 空气瓶压力双位控制
+</a>
+
+</a>
+</div>
+</div>
+
+<!-- 电子电气 -->
+<div id="electrical" class="page">
+<div class="links">
+
+
+</div>
+</div>
+
+</div>
+
+<!-- ===== 登录弹窗 ===== -->
+<div class="modal-overlay" id="loginModal">
+    <div class="modal-card">
+        <span class="modal-close" onclick="closeModal('loginModal')">&times;</span>
+        <h2>登录</h2>
+        <input type="text" id="loginUsername" placeholder="用户名" autocomplete="username">
+        <input type="password" id="loginPassword" placeholder="密码" autocomplete="current-password">
+        <div class="modal-error" id="loginError"></div>
+        <button onclick="handleLogin()">登录</button>
+        <div class="switch-link">还没有账号？<a onclick="switchToRegister()">立即注册</a></div>
+    </div>
+</div>
+
+<!-- ===== 注册弹窗 ===== -->
+<div class="modal-overlay" id="registerModal">
+    <div class="modal-card">
+        <span class="modal-close" onclick="closeModal('registerModal')">&times;</span>
+        <h2>注册</h2>
+        <input type="text" id="regUsername" placeholder="用户名（至少2个字符）" autocomplete="username">
+        <input type="password" id="regPassword" placeholder="密码（至少6个字符）" autocomplete="new-password">
+        <input type="password" id="regConfirm" placeholder="确认密码" autocomplete="new-password">
+        <div class="modal-error" id="regError"></div>
+        <button onclick="handleRegister()">注册</button>
+        <div class="switch-link">已有账号？<a onclick="switchToLogin()">立即登录</a></div>
+    </div>
+</div>
+
+<!-- ===== 支付弹窗 ===== -->
+<div class="modal-overlay" id="paymentModal">
+    <div class="modal-card">
+        <span class="modal-close" onclick="closeModal('paymentModal')">&times;</span>
+        <h2>升级 VIP</h2>
+        <p style="text-align:center;color:rgba(255,255,255,0.7);margin-bottom:5px;">解锁所有仿真内容</p>
+        <div class="pay-price">&yen;9.9 <small>永久有效</small></div>
+        <div class="pay-options">
+            <div class="pay-option wechat" onclick="selectPayment('wechat')">
+                <div class="pay-icon" style="color:#07c160;">&#99;&#119;</div>
+                <div class="pay-name">微信支付</div>
+            </div>
+            <div class="pay-option alipay" onclick="selectPayment('alipay')">
+                <div class="pay-icon" style="color:#1677ff;">&#97;&#108;</div>
+                <div class="pay-name">支付宝</div>
+            </div>
+        </div>
+        <div id="payQrArea" style="display:none;">
+            <div class="pay-qr" id="payQrContent">
+                <p style="color:rgba(255,255,255,0.6);">请使用对应 App 扫描二维码完成支付</p>
+            </div>
+            <div class="pay-hint">支付完成后，点击下方按钮确认</div>
+            <button class="pay-confirm-btn" id="payConfirmBtn" onclick="confirmPayment()">我已支付</button>
+        </div>
+    </div>
+</div>
+
+<footer>
+制作单位 —— 江苏航院·轮机工程学院
+</footer>
+
+<script src="auth.js"></script>
+<script>
+
+/* ===== 页面切换 ===== */
+function switchPage(page){
+document.querySelectorAll(".page").forEach(p=>{p.classList.remove("active")})
+document.getElementById(page).classList.add("active")
+document.querySelectorAll(".nav-btn").forEach(b=>{b.classList.remove("active")})
+event.target.classList.add("active")
+}
+
+/* ===== 认证 ===== */
+
+function updateAuthUI(){
+const loginBtn=document.getElementById("loginBtn")
+const registerBtn=document.getElementById("registerBtn")
+const userInfo=document.getElementById("userInfo")
+const usernameDisplay=document.getElementById("usernameDisplay")
+const upgradeBtn=document.getElementById("upgradeBtn")
+const vipBadge=document.getElementById("vipBadge")
+
+if(Auth.isLoggedIn()){
+loginBtn.style.display="none"
+registerBtn.style.display="none"
+userInfo.style.display="flex"
+usernameDisplay.textContent=Auth.getCurrentUser().username
+upgradeBtn.style.display=Auth.isPaid()?"none":"inline"
+vipBadge.style.display=Auth.isPaid()?"inline":"none"
+}else{
+loginBtn.style.display="inline"
+registerBtn.style.display="inline"
+userInfo.style.display="none"
+}
+}
+
+function showLoginModal(){document.getElementById("loginModal").classList.add("active")}
+function showRegisterModal(){document.getElementById("registerModal").classList.add("active")}
+function showPaymentModal(){document.getElementById("paymentModal").classList.add("active")}
+function closeModal(id){document.getElementById(id).classList.remove("active")}
+
+function switchToRegister(){
+closeModal("loginModal")
+showRegisterModal()
+}
+
+function switchToLogin(){
+closeModal("registerModal")
+showLoginModal()
+}
+
+async function handleLogin(){
+const username=document.getElementById("loginUsername").value
+const password=document.getElementById("loginPassword").value
+const errEl=document.getElementById("loginError")
+errEl.textContent=""
+const r=await Auth.login(username,password)
+if(r.success){closeModal("loginModal");updateAuthUI()}
+else errEl.textContent=r.message
+}
+
+async function handleRegister(){
+const username=document.getElementById("regUsername").value
+const password=document.getElementById("regPassword").value
+const confirm=document.getElementById("regConfirm").value
+const errEl=document.getElementById("regError")
+errEl.textContent=""
+if(password!==confirm){errEl.textContent="两次密码输入不一致";return}
+const r=await Auth.register(username,password)
+if(!r.success){errEl.textContent=r.message;return}
+const loginR=await Auth.login(username,password)
+if(loginR.success){closeModal("registerModal");updateAuthUI()}
+else errEl.textContent=loginR.message
+}
+
+function handleLogout(){
+Auth.logout()
+updateAuthUI()
+}
+
+// ---- 支付（方案二：个人收款码 + 手动确认） ----
+
+let selectedPayment=null
+
+async function selectPayment(method){
+selectedPayment=method
+document.querySelectorAll(".pay-option").forEach(el=>el.classList.remove("selected"))
+document.querySelector(".pay-option."+method).classList.add("selected")
+
+const qrContent=document.getElementById("payQrContent")
+const payConfirmBtn=document.getElementById("payConfirmBtn")
+const payQrArea=document.getElementById("payQrArea")
+
+const imgName=method==='wechat'?'wechat_qr.png':'alipay_qr.png'
+const label=method==='wechat'?'微信':'支付宝'
+
+qrContent.innerHTML='<div style="text-align:center;"><img src="assets/'+imgName+'" alt="'+label+'收款码" style="max-width:220px;border-radius:8px;background:white;padding:8px;" onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'block\'"><p style="display:none;color:rgba(255,255,255,0.5);padding:40px 0;">请将您的 '+label+' 收款码图片命名为<br><code>assets/'+imgName+'</code></p><p style="margin-top:12px;color:rgba(255,255,255,0.7);font-size:14px;">请使用 '+label+' 扫描上方二维码支付 <strong style="color:#ffc107;">¥9.9</strong></p></div>'
+payConfirmBtn.style.display="block"
+payConfirmBtn.textContent="我已支付"
+payQrArea.style.display="block"
+}
+
+async function confirmPayment(){
+if(!selectedPayment){alert("请选择支付方式");return}
+const r=await Auth.submitPaymentNotify(selectedPayment)
+if(r.success){
+alert("已通知管理员，请等待审核通过。\n\n审核通过后刷新页面即可访问全部内容。")
+closeModal("paymentModal")
+}else{
+alert(r.message)
+}
+}
+
+// ---- 导航访问控制 ----
+
+document.addEventListener("DOMContentLoaded",async function(){
+await Auth.init()
+updateAuthUI()
+
+// 拦截受保护链接的点击
+document.querySelectorAll('#automation a.card').forEach(function(el){
+el.addEventListener("click",function(e){
+const url=this.getAttribute("href")
+if(!url)return
+if(url.includes("/transmitter/")&&!Auth.isLoggedIn()){
+e.preventDefault();showLoginModal();return
+}
+if(url.includes("/auto/")&&!Auth.isLoggedIn()){
+e.preventDefault();showLoginModal();return
+}
+if(url.includes("/auto/")&&!Auth.isPaid()){
+e.preventDefault();showPaymentModal();return
+}
+})
+})
+})
+
+/* ===== 背景粒子动画 ===== */
+
+const canvas = document.getElementById("bg")
+const ctx = canvas.getContext("2d")
+
+let particles=[]
+const particleCount=120
+
+function resize(){
+canvas.width=window.innerWidth
+canvas.height=window.innerHeight
+}
+window.addEventListener("resize",resize)
+resize()
+
+class Particle{
+constructor(){
+this.x=Math.random()*canvas.width
+this.y=Math.random()*canvas.height
+this.radius=Math.random()*2+1
+this.dx=(Math.random()-0.5)*0.6
+this.dy=(Math.random()-0.5)*0.6
+}
+
+draw(){
+ctx.beginPath()
+ctx.arc(this.x,this.y,this.radius,0,Math.PI*2)
+ctx.fillStyle="rgba(0,180,255,0.7)"
+ctx.fill()
+}
+
+update(){
+this.x+=this.dx
+this.y+=this.dy
+
+if(this.x<0||this.x>canvas.width)this.dx*=-1
+if(this.y<0||this.y>canvas.height)this.dy*=-1
+
+this.draw()
+}
+}
+
+function init(){
+particles=[]
+for(let i=0;i<particleCount;i++){
+particles.push(new Particle())
+}
+}
+
+function connect(){
+for(let a=0;a<particles.length;a++){
+for(let b=a;b<particles.length;b++){
+
+let dx=particles[a].x-particles[b].x
+let dy=particles[a].y-particles[b].y
+let distance=dx*dx+dy*dy
+
+if(distance<12000){
+ctx.beginPath()
+ctx.strokeStyle="rgba(0,180,255,0.1)"
+ctx.lineWidth=1
+ctx.moveTo(particles[a].x,particles[a].y)
+ctx.lineTo(particles[b].x,particles[b].y)
+ctx.stroke()
+}
+
+}
+}
+}
+
+function animate(){
+ctx.clearRect(0,0,canvas.width,canvas.height)
+particles.forEach(p=>p.update())
+connect()
+requestAnimationFrame(animate)
+}
+
+init()
+animate()
+
+</script>
+
+</body>
+</html>

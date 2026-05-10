@@ -1,0 +1,15 @@
+{
+  "name": "lab-simulator-api",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "deploy": "wrangler deploy --env production",
+    "dev": "wrangler dev --port 8787",
+    "db:create": "wrangler d1 create simulator-db",
+    "db:init": "wrangler d1 execute simulator-db --remote --env production --file=schema.sql",
+    "db:init:local": "wrangler d1 execute simulator-db --local --file=schema.sql"
+  },
+  "devDependencies": {
+    "wrangler": "^4.90.0"
+  }
+}

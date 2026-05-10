@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>管理后台 — 付款审核</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family:"Microsoft YaHei", Arial, sans-serif;
+  background:#0f2027;
+  color:white;
+  min-height:100vh;
+}
+.navbar{
+  height:60px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:rgba(0,0,0,0.4);
+  backdrop-filter:blur(6px);
+  border-bottom:1px solid rgba(0,180,255,0.3);
+  position:relative;
+}
+.navbar h1{
+  font-size:20px;
+  letter-spacing:2px;
+}
+.navbar .back-link{
+  position:absolute;
+  right:20px;
+  color:#00b4ff;
+  text-decoration:none;
+  font-size:14px;
+}
+.container{max-width:950px;margin:30px auto;padding:0 20px;}
+
+/* 登录 */
+.login-box{
+  max-width:360px;margin:100px auto;
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(0,180,255,0.3);
+  border-radius:14px;padding:30px;
+  text-align:center;
+}
+.login-box h2{margin-bottom:20px;font-size:20px;}
+.login-box input{
+  width:100%;padding:12px 15px;margin-bottom:15px;
+  border-radius:10px;border:1px solid rgba(0,180,255,0.3);
+  background:rgba(255,255,255,0.05);color:white;font-size:15px;
+  outline:none;box-sizing:border-box;
+}
+.login-box input:focus{border-color:rgba(0,180,255,0.8);}
+.login-box button{
+  width:100%;padding:12px;border-radius:10px;border:none;
+  background:rgba(0,180,255,0.7);color:white;font-size:16px;
+  cursor:pointer;transition:0.3s;
+}
+.login-box button:hover{background:rgba(0,180,255,0.9);}
+.login-error{color:#ff6b6b;font-size:13px;margin-bottom:10px;min-height:18px;}
+
+/* 标签页 */
+.tabs{display:flex;gap:0;margin-bottom:20px;border-bottom:1px solid rgba(255,255,255,0.1);}
+.tab-btn{
+  padding:10px 24px;background:transparent;border:none;color:rgba(255,255,255,0.5);
+  font-size:14px;cursor:pointer;border-bottom:2px solid transparent;transition:0.3s;
+}
+.tab-btn:hover{color:rgba(255,255,255,0.8);}
+.tab-btn.active{color:#00b4ff;border-bottom-color:#00b4ff;}
+.tab-content{display:none;}
+.tab-content.active{display:block;}
+
+/* 工具栏 */
+.toolbar{
+  display:flex;justify-content:space-between;align-items:center;
+  margin-bottom:20px;
+}
+.toolbar .count{font-size:14px;color:rgba(255,255,255,0.6);}
+.refresh-btn{
+  padding:8px 20px;border-radius:8px;border:1px solid rgba(0,180,255,0.4);
+  background:transparent;color:white;cursor:pointer;font-size:13px;transition:0.3s;
+}
+.refresh-btn:hover{background:rgba(0,180,255,0.2);}
+
+/* 表格 */
+table{width:100%;border-collapse:collapse;font-size:14px;}
+th,td{padding:12px 15px;text-align:left;border-bottom:1px solid rgba(255,255,255,0.08);}
+th{color:rgba(255,255,255,0.5);font-weight:normal;font-size:12px;}
+tr:hover{background:rgba(255,255,255,0.03);}
+.badge-wechat{color:#07c160;font-weight:bold;}
+.badge-alipay{color:#1677ff;font-weight:bold;}
+.btn-approve{
+  padding:6px 16px;border-radius:6px;border:none;
+  background:#07c160;color:white;cursor:pointer;font-size:12px;margin-right:5px;
+}
+.btn-approve:hover{background:#06a84d;}
+.btn-reject{
+  padding:6px 16px;border-radius:6px;border:none;
+  background:rgba(255,255,255,0.15);color:rgba(255,255,255,0.7);cursor:pointer;font-size:12px;
+}
+.btn-reject:hover{background:rgba(255,255,255,0.25);}
+.empty{text-align:center;padding:60px 20px;color:rgba(255,255,255,0.4);font-size:15px;}
+
+/* 分页 */
+.pagination{
+  display:flex;justify-content:center;align-items:center;gap:8px;
+  margin-top:20px;padding-bottom:20px;
+}
+.page-btn{
+  padding:6px 14px;border-radius:6px;border:1px solid rgba(0,180,255,0.3);
+  background:transparent;color:white;cursor:pointer;font-size:13px;transition:0.3s;
+}
+.page-btn:hover{background:rgba(0,180,255,0.2);}
+.page-btn.active{background:rgba(0,180,255,0.4);border-color:#00b4ff;}
+.page-btn:disabled{opacity:0.3;cursor:default;background:transparent;}
+.page-info{font-size:13px;color:rgba(255,255,255,0.5);}
+</style>
+</head>
+<body>
+
+<div class="navbar">
+  <h1>管理后台</h1>
+  <a href="index.html" class="back-link">&larr; 返回首页</a>
+</div>
+
+<div class="container">
+
+<!-- 登录 -->
+<div class="login-box" id="loginBox">
+  <h2>管理员登录</h2>
+  <div class="login-error" id="loginError"></div>
+  <input type="password" id="adminPassword" placeholder="请输入管理员密码" autocomplete="off">
+  <button onclick="handleLogin()">登录</button>
+</div>
+
+<!-- 管理面板 -->
+<div id="adminPanel" style="display:none;">
+
+  <div class="tabs">
+    <button class="tab-btn active" id="tabPending" onclick="switchTab('pending')">待审核</button>
+    <button class="tab-btn" id="tabUsers" onclick="switchTab('users')">已付款用户</button>
+  </div>
+
+  <!-- 待审核标签页 -->
+  <div class="tab-content active" id="tabContentPending">
+    <div class="toolbar">
+      <span class="count" id="pendingCount">待审核：0</span>
+      <button class="refresh-btn" onclick="loadPending()">&#x21bb; 刷新</button>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>用户名</th>
+          <th>支付方式</th>
+          <th>金额</th>
+          <th>提交时间</th>
+          <th>操作</th>
+        </tr>
+      </thead>
+      <tbody id="pendingList"></tbody>
+    </table>
+    <div class="empty" id="emptyHint">暂无待审核记录</div>
+  </div>
+
+  <!-- 已付款用户标签页 -->
+  <div class="tab-content" id="tabContentUsers">
+    <div class="toolbar">
+      <span class="count" id="usersCount">已付款：0</span>
+      <button class="refresh-btn" onclick="loadUsers()">&#x21bb; 刷新</button>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>用户名</th>
+          <th>付款时间</th>
+          <th>注册时间</th>
+        </tr>
+      </thead>
+      <tbody id="usersList"></tbody>
+    </table>
+    <div class="empty" id="usersEmptyHint">暂无已付款用户</div>
+    <div class="pagination" id="usersPagination"></div>
+  </div>
+
+</div>
+
+</div>
+
+<script>
+const API_BASE = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
+  ? 'http://localhost:8787'
+  : 'https://pay.wangaijun.click') + '/api';
+
+let adminSecret = localStorage.getItem('admin_secret');
+
+function switchTab(tab) {
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+  if (tab === 'pending') {
+    document.getElementById('tabPending').classList.add('active');
+    document.getElementById('tabContentPending').classList.add('active');
+    loadPending();
+  } else {
+    document.getElementById('tabUsers').classList.add('active');
+    document.getElementById('tabContentUsers').classList.add('active');
+    loadUsers();
+  }
+}
+
+function handleLogin() {
+  const pwd = document.getElementById('adminPassword').value;
+  const errEl = document.getElementById('loginError');
+  errEl.textContent = '';
+  if (!pwd) { errEl.textContent = '请输入密码'; return; }
+  adminSecret = pwd;
+  localStorage.setItem('admin_secret', pwd);
+  loadPending().then(ok => {
+    if (!ok) {
+      localStorage.removeItem('admin_secret');
+      adminSecret = null;
+    }
+  });
+}
+
+async function loadPending() {
+  const list = document.getElementById('pendingList');
+  const emptyHint = document.getElementById('emptyHint');
+  const countEl = document.getElementById('pendingCount');
+  const loginBox = document.getElementById('loginBox');
+  const adminPanel = document.getElementById('adminPanel');
+
+  try {
+    const res = await fetch(API_BASE + '/admin/pending', {
+      headers: { 'X-Admin-Secret': adminSecret || '' },
+    });
+    const data = await res.json();
+    if (!data.success) {
+      loginBox.style.display = 'block';
+      adminPanel.style.display = 'none';
+      document.getElementById('loginError').textContent = data.message;
+      return false;
+    }
+    loginBox.style.display = 'none';
+    adminPanel.style.display = 'block';
+
+    const rows = data.requests || [];
+    countEl.textContent = '待审核：' + rows.length;
+    emptyHint.style.display = rows.length ? 'none' : 'block';
+
+    if (!rows.length) {
+      list.innerHTML = '';
+      return true;
+    }
+
+    list.innerHTML = rows.map(r => {
+      const providerLabel = r.provider === 'wechat' ? '微信支付' : '支付宝';
+      const badgeClass = r.provider === 'wechat' ? 'badge-wechat' : 'badge-alipay';
+      return '<tr>' +
+        '<td>' + r.id + '</td>' +
+        '<td>' + escapeHtml(r.username) + '</td>' +
+        '<td class="' + badgeClass + '">' + providerLabel + '</td>' +
+        '<td>¥' + (r.amount / 100).toFixed(1) + '</td>' +
+        '<td>' + r.created_at + '</td>' +
+        '<td>' +
+          '<button class="btn-approve" onclick="approve(' + r.id + ')">批准</button>' +
+          '<button class="btn-reject" onclick="rejectReq(' + r.id + ')">拒绝</button>' +
+        '</td>' +
+      '</tr>';
+    }).join('');
+    return true;
+  } catch (_) {
+    document.getElementById('loginError').textContent = '网络错误';
+    return false;
+  }
+}
+
+let currentUsersPage = 1;
+
+async function loadUsers(page) {
+  if (page !== undefined) currentUsersPage = page;
+  const list = document.getElementById('usersList');
+  const emptyHint = document.getElementById('usersEmptyHint');
+  const countEl = document.getElementById('usersCount');
+  const pagination = document.getElementById('usersPagination');
+
+  try {
+    const res = await fetch(API_BASE + '/admin/users?page=' + currentUsersPage, {
+      headers: { 'X-Admin-Secret': adminSecret || '' },
+    });
+    const data = await res.json();
+    if (!data.success) return;
+
+    const rows = data.users || [];
+    countEl.textContent = '已付款：' + data.total;
+    emptyHint.style.display = rows.length ? 'none' : 'block';
+    pagination.style.display = data.pages > 1 ? 'flex' : 'none';
+
+    if (!rows.length) {
+      list.innerHTML = '';
+      pagination.innerHTML = '';
+      return;
+    }
+
+    list.innerHTML = rows.map(u => {
+      return '<tr>' +
+        '<td>' + u.id + '</td>' +
+        '<td>' + escapeHtml(u.username) + '</td>' +
+        '<td>' + (u.paid_at || '-') + '</td>' +
+        '<td>' + u.created_at + '</td>' +
+      '</tr>';
+    }).join('');
+
+    // 分页
+    let html = '';
+    if (data.page > 1) {
+      html += '<button class="page-btn" onclick="loadUsers(' + (data.page - 1) + ')">上一页</button>';
+    }
+    for (let i = 1; i <= data.pages; i++) {
+      if (i === data.page) {
+        html += '<button class="page-btn active">' + i + '</button>';
+      } else if (i === 1 || i === data.pages || Math.abs(i - data.page) <= 2) {
+        html += '<button class="page-btn" onclick="loadUsers(' + i + ')">' + i + '</button>';
+      } else if (Math.abs(i - data.page) === 3) {
+        html += '<span class="page-info">...</span>';
+      }
+    }
+    if (data.page < data.pages) {
+      html += '<button class="page-btn" onclick="loadUsers(' + (data.page + 1) + ')">下一页</button>';
+    }
+    pagination.innerHTML = html;
+  } catch (_) {}
+}
+
+function escapeHtml(s) {
+  const d = document.createElement('div');
+  d.textContent = s;
+  return d.innerHTML;
+}
+
+async function approve(id) {
+  if (!confirm('确定批准该付款申请？')) return;
+  const res = await fetch(API_BASE + '/admin/approve', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'X-Admin-Secret': adminSecret || '' },
+    body: JSON.stringify({ request_id: id }),
+  });
+  const data = await res.json();
+  if (data.success) {
+    loadPending();
+  } else {
+    alert(data.message);
+  }
+}
+
+async function rejectReq(id) {
+  if (!confirm('确定拒绝该付款申请？')) return;
+  const res = await fetch(API_BASE + '/admin/reject', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'X-Admin-Secret': adminSecret || '' },
+    body: JSON.stringify({ request_id: id }),
+  });
+  const data = await res.json();
+  if (data.success) {
+    loadPending();
+  } else {
+    alert(data.message);
+  }
+}
+
+// 自动登录
+if (adminSecret) { loadPending(); }
+</script>
+</body>
+</html>

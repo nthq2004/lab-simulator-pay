@@ -1,0 +1,19 @@
+name = "lab-simulator-api"
+main = "src/index.js"
+compatibility_date = "2025-01-01"
+
+# 默认：本地开发（使用 Miniflare 本地 D1）
+[[d1_databases]]
+binding = "DB"
+database_name = "simulator-db"
+database_id = "local"
+
+# 线上部署（pnpm run deploy）
+[env.production]
+workers_dev = false
+routes = ["pay.wangaijun.click/*"]
+
+[[env.production.d1_databases]]
+binding = "DB"
+database_name = "simulator-db"
+database_id = "2dee7131-86ad-4d00-a988-30d038001b67"
