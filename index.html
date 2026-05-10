@@ -154,6 +154,97 @@ footer{
     font-size:11px;
 }
 
+/* 圆形头像 */
+.user-avatar-wrapper{
+    position:relative;
+    display:inline-block;
+}
+.user-avatar{
+    width:36px;height:36px;
+    border-radius:50%;
+    background:rgba(0,180,255,0.7);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    transition:0.3s;
+    user-select:none;
+}
+.user-avatar:hover{
+    background:rgba(0,180,255,0.9);
+    box-shadow:0 0 12px rgba(0,180,255,0.4);
+}
+.user-avatar span{
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+}
+
+/* 下拉菜单 */
+.dropdown-menu{
+    display:none;
+    position:absolute;
+    top:44px;
+    right:0;
+    width:200px;
+    background:rgba(15,32,39,0.96);
+    border:1px solid rgba(0,180,255,0.3);
+    border-radius:12px;
+    backdrop-filter:blur(10px);
+    box-shadow:0 8px 30px rgba(0,0,0,0.4);
+    z-index:50;
+    overflow:hidden;
+}
+.dropdown-menu.active{
+    display:block;
+}
+.dropdown-item{
+    padding:12px 16px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    cursor:pointer;
+    transition:0.2s;
+    font-size:14px;
+    color:rgba(255,255,255,0.85);
+}
+.dropdown-item:hover{
+    background:rgba(0,180,255,0.1);
+}
+.dropdown-item .menu-icon{
+    font-size:16px;
+    width:20px;
+    text-align:center;
+}
+.dropdown-divider{
+    height:1px;
+    background:rgba(255,255,255,0.08);
+    margin:0;
+}
+.user-info-row{
+    cursor:default;
+    pointer-events:none;
+}
+.user-info-row:hover{
+    background:transparent;
+}
+.dropdown-avatar{
+    width:28px;height:28px;
+    border-radius:50%;
+    background:rgba(0,180,255,0.7);
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
+    font-size:13px;
+    font-weight:bold;
+    flex-shrink:0;
+}
+.dropdown-username{
+    font-weight:bold;
+    flex:1;
+}
+
 /* 弹窗遮罩 */
 .modal-overlay{
     position:fixed;
@@ -371,14 +462,32 @@ footer{
     <div class="nav-btn" onclick="switchPage('automation')">自动化技能库</div>
     <div class="nav-btn" onclick="switchPage('electrical')">电子电气技能库</div>
     <div class="user-area" id="userArea">
+        <!-- 未登录 -->
         <span class="user-btn" id="loginBtn" onclick="showLoginModal()">登录</span>
         <span class="user-btn" id="registerBtn" onclick="showRegisterModal()">注册</span>
-        <span class="user-info" id="userInfo" style="display:none">
-            <span id="usernameDisplay" style="font-size:14px;font-weight:bold;"></span>
-            <span class="vip-badge" id="vipBadge" style="display:none">VIP</span>
-            <span class="user-btn" id="upgradeBtn" onclick="showPaymentModal()">升级VIP</span>
-            <span class="user-btn" onclick="handleLogout()">退出</span>
-        </span>
+        <!-- 已登录：圆形头像 -->
+        <div class="user-avatar-wrapper" id="userAvatarWrapper" style="display:none;">
+            <div class="user-avatar" id="userAvatar" onclick="toggleMenu(event)">
+                <span id="avatarLetter"></span>
+            </div>
+            <!-- 下拉菜单 -->
+            <div class="dropdown-menu" id="dropdownMenu">
+                <div class="dropdown-item user-info-row" id="menuUserInfo">
+                    <span class="dropdown-avatar" id="menuAvatarLetter"></span>
+                    <span class="dropdown-username" id="menuUsername"></span>
+                    <span class="vip-badge" id="menuVipBadge" style="display:none">VIP</span>
+                </div>
+                <div class="dropdown-item" id="menuMessages" onclick="showMessageModal()">
+                    <span class="menu-icon">💬</span>
+                    <span>留言系统</span>
+                </div>
+                <div class="dropdown-divider"></div>
+                <div class="dropdown-item" onclick="handleLogout()">
+                    <span class="menu-icon">🚪</span>
+                    <span>退出登录</span>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -554,22 +663,26 @@ event.target.classList.add("active")
 function updateAuthUI(){
 const loginBtn=document.getElementById("loginBtn")
 const registerBtn=document.getElementById("registerBtn")
-const userInfo=document.getElementById("userInfo")
-const usernameDisplay=document.getElementById("usernameDisplay")
-const upgradeBtn=document.getElementById("upgradeBtn")
-const vipBadge=document.getElementById("vipBadge")
+const avatarWrapper=document.getElementById("userAvatarWrapper")
+const avatarLetter=document.getElementById("avatarLetter")
+const menuAvatarLetter=document.getElementById("menuAvatarLetter")
+const menuUsername=document.getElementById("menuUsername")
+const menuVipBadge=document.getElementById("menuVipBadge")
 
 if(Auth.isLoggedIn()){
 loginBtn.style.display="none"
 registerBtn.style.display="none"
-userInfo.style.display="flex"
-usernameDisplay.textContent=Auth.getCurrentUser().username
-upgradeBtn.style.display=Auth.isPaid()?"none":"inline"
-vipBadge.style.display=Auth.isPaid()?"inline":"none"
+avatarWrapper.style.display="inline-block"
+const user=Auth.getCurrentUser()
+const firstChar=user.username.charAt(0)
+avatarLetter.textContent=firstChar
+menuAvatarLetter.textContent=firstChar
+menuUsername.textContent=user.username
+menuVipBadge.style.display=Auth.isPaid()?"inline":"none"
 }else{
 loginBtn.style.display="inline"
 registerBtn.style.display="inline"
-userInfo.style.display="none"
+avatarWrapper.style.display="none"
 }
 }
 
@@ -616,6 +729,18 @@ function handleLogout(){
 Auth.logout()
 updateAuthUI()
 }
+
+// ---- 下拉菜单 ----
+
+function toggleMenu(event){
+event.stopPropagation()
+document.getElementById("dropdownMenu").classList.toggle("active")
+}
+
+// 点击页面其他区域关闭菜单
+document.addEventListener("click",function(){
+document.getElementById("dropdownMenu").classList.remove("active")
+})
 
 // ---- 支付（方案二：个人收款码 + 手动确认） ----
 
