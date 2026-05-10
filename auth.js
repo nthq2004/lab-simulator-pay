@@ -96,6 +96,39 @@ const Auth = {
     if (this._user) return 1; // 注册用户
     return 0; // 访客
   },
+
+  // ---- 留言系统 ----
+
+  async createMessage(content) {
+    const res = await fetch(API_BASE + '/messages/create', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: 'Bearer ' + this._token,
+      },
+      body: JSON.stringify({ content }),
+    });
+    return res.json();
+  },
+
+  async getMessages() {
+    const res = await fetch(API_BASE + '/messages/list', {
+      headers: { Authorization: 'Bearer ' + this._token },
+    });
+    return res.json();
+  },
+
+  async deleteMessage(message_id) {
+    const res = await fetch(API_BASE + '/messages/delete', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: 'Bearer ' + this._token,
+      },
+      body: JSON.stringify({ message_id }),
+    });
+    return res.json();
+  },
 };
 
 // ---- 自动页面访问检查 ----
