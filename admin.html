@@ -144,6 +144,7 @@ tr:hover{background:rgba(255,255,255,0.03);}
   <div class="tabs">
     <button class="tab-btn active" id="tabPending" onclick="switchTab('pending')">待审核</button>
     <button class="tab-btn" id="tabUsers" onclick="switchTab('users')">已付款用户</button>
+    <button class="tab-btn" id="tabMessages" onclick="switchTab('messages')">留言管理</button>
   </div>
 
   <!-- 待审核标签页 -->
@@ -190,8 +191,44 @@ tr:hover{background:rgba(255,255,255,0.03);}
     <div class="pagination" id="usersPagination"></div>
   </div>
 
+  <!-- 留言管理标签页 -->
+  <div class="tab-content" id="tabContentMessages">
+    <div class="toolbar">
+      <span class="count" id="messagesCount">留言：0</span>
+      <button class="refresh-btn" onclick="loadAdminMessages()">&#x21bb; 刷新</button>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>用户名</th>
+          <th>留言内容</th>
+          <th>状态</th>
+          <th>操作</th>
+        </tr>
+      </thead>
+      <tbody id="messagesList"></tbody>
+    </table>
+    <div class="empty" id="messagesEmptyHint">暂无留言</div>
+  </div>
+
 </div>
 
+</div>
+
+<!-- 回复弹窗 -->
+<div class="modal-overlay" id="replyModal">
+  <div class="modal-card">
+    <span class="modal-close" onclick="closeModal('replyModal')">&times;</span>
+    <h2>回复留言</h2>
+    <div id="replyOriginalMsg" style="padding:12px;background:rgba(255,255,255,0.05);border-radius:8px;margin-bottom:15px;font-size:13px;color:rgba(255,255,255,0.7);"></div>
+    <textarea id="replyContent" placeholder="请输入回复内容..." style="width:100%;padding:12px 15px;border-radius:10px;border:1px solid rgba(0,180,255,0.3);background:rgba(255,255,255,0.05);color:white;font-size:14px;outline:none;resize:vertical;min-height:100px;font-family:inherit;box-sizing:border-box;margin-bottom:15px;"></textarea>
+    <div style="display:flex;gap:10px;">
+      <button onclick="closeModal('replyModal')" style="flex:1;padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.15);background:transparent;color:white;font-size:14px;cursor:pointer;">取消</button>
+      <button onclick="submitReply()" style="flex:1;padding:12px;border-radius:10px;border:none;background:rgba(0,180,255,0.7);color:white;font-size:14px;cursor:pointer;">提交回复</button>
+    </div>
+    <div id="replyError" style="color:#ff6b6b;font-size:13px;margin-top:10px;min-height:18px;"></div>
+  </div>
 </div>
 
 <script>
@@ -208,10 +245,14 @@ function switchTab(tab) {
     document.getElementById('tabPending').classList.add('active');
     document.getElementById('tabContentPending').classList.add('active');
     loadPending();
-  } else {
+  } else if (tab === 'users') {
     document.getElementById('tabUsers').classList.add('active');
     document.getElementById('tabContentUsers').classList.add('active');
     loadUsers();
+  } else {
+    document.getElementById('tabMessages').classList.add('active');
+    document.getElementById('tabContentMessages').classList.add('active');
+    loadAdminMessages();
   }
 }
 
@@ -345,6 +386,93 @@ function escapeHtml(s) {
   const d = document.createElement('div');
   d.textContent = s;
   return d.innerHTML;
+}
+
+function closeModal(id) {
+  document.getElementById(id).classList.remove('active');
+}
+
+let currentReplyMessageId = null;
+
+async function loadAdminMessages() {
+  const list = document.getElementById('messagesList');
+  const emptyHint = document.getElementById('messagesEmptyHint');
+  const countEl = document.getElementById('messagesCount');
+
+  try {
+    const res = await fetch(API_BASE + '/admin/messages', {
+      headers: { 'X-Admin-Secret': adminSecret || '' },
+    });
+    const data = await res.json();
+    if (!data.success) return;
+
+    const rows = data.messages || [];
+    countEl.textContent = '留言：' + rows.length;
+    emptyHint.style.display = rows.length ? 'none' : 'block';
+
+    if (!rows.length) {
+      list.innerHTML = '';
+      return;
+    }
+
+    list.innerHTML = rows.map(m => {
+      const replied = m.reply !== null;
+      const statusHtml = replied
+        ? '<span style="color:#07c160;">已回复</span>'
+        : '<span style="color:#ff4d4f;">未回复</span>';
+      const escapedContent = escapeHtml(m.content);
+      const contentPreview = escapedContent.length > 50
+        ? escapedContent.substring(0, 50) + '...'
+        : escapedContent;
+      return '<tr>' +
+        '<td>' + m.id + '</td>' +
+        '<td>' + escapeHtml(m.username) + '</td>' +
+        '<td title="' + escapedContent.replace(/"/g, '&quot;') + '">' + contentPreview + '</td>' +
+        '<td>' + statusHtml + '</td>' +
+        '<td><button class="btn-approve" onclick="openReply(' + m.id + ')">回复</button></td>' +
+      '</tr>';
+    }).join('');
+  } catch (_) {}
+}
+
+function openReply(messageId) {
+  currentReplyMessageId = messageId;
+  document.getElementById('replyOriginalMsg').textContent = '加载中...';
+  document.getElementById('replyContent').value = '';
+  document.getElementById('replyError').textContent = '';
+
+  fetch(API_BASE + '/admin/message?id=' + messageId, {
+    headers: { 'X-Admin-Secret': adminSecret || '' },
+  }).then(res => res.json()).then(data => {
+    if (data.success && data.message) {
+      document.getElementById('replyOriginalMsg').innerHTML =
+        '<strong>' + escapeHtml(data.message.username) + '</strong>：' + escapeHtml(data.message.content);
+    } else {
+      document.getElementById('replyOriginalMsg').textContent = '无法加载留言内容';
+    }
+  }).catch(() => {
+    document.getElementById('replyOriginalMsg').textContent = '无法加载留言内容';
+  });
+  document.getElementById('replyModal').classList.add('active');
+}
+
+async function submitReply() {
+  const reply = document.getElementById('replyContent').value.trim();
+  const errEl = document.getElementById('replyError');
+  if (!reply) { errEl.textContent = '回复内容不能为空'; return; }
+  errEl.textContent = '';
+  const res = await fetch(API_BASE + '/messages/reply', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'X-Admin-Secret': adminSecret || '' },
+    body: JSON.stringify({ message_id: currentReplyMessageId, reply }),
+  });
+  const data = await res.json();
+  if (data.success) {
+    closeModal('replyModal');
+    loadAdminMessages();
+  } else {
+    errEl.textContent = data.message;
+  }
 }
 
 async function approve(id) {
