@@ -686,6 +686,104 @@ async function handleAdminRevoke(request, env) {
   return json({ success: true, message: '已取消该用户的VIP权限' });
 }
 
+// ---- 留言系统 ----
+
+async function handleMessageCreate(request, env) {
+  const user = await getSessionUser(request.headers.get('Authorization'), env);
+  if (!user) return json({ success: false, message: '请先登录' }, 401);
+
+  const { content } = await request.json();
+  if (!content || content.trim().length === 0)
+    return json({ success: false, message: '留言内容不能为空' });
+  if (content.length > 500)
+    return json({ success: false, message: '留言内容不能超过500字' });
+
+  const result = await env.DB.prepare(
+    'INSERT INTO messages (user_id, username, content) VALUES (?, ?, ?)'
+  ).bind(user.id, user.username, content.trim()).run();
+
+  return json({ success: true, message_id: result.meta.last_row_id });
+}
+
+async function handleMessageList(request, env) {
+  const user = await getSessionUser(request.headers.get('Authorization'), env);
+  if (!user) return json({ success: false, message: '请先登录' }, 401);
+
+  const rows = await env.DB.prepare(
+    'SELECT id, user_id, username, content, reply, replied_at, created_at FROM messages ORDER BY created_at DESC'
+  ).all();
+
+  return json({ success: true, messages: rows.results });
+}
+
+async function handleMessageReply(request, env) {
+  const authErr = checkAdmin(request, env);
+  if (authErr) return authErr;
+
+  const { message_id, reply } = await request.json();
+  if (!message_id) return json({ success: false, message: '缺少留言ID' });
+  if (!reply || reply.trim().length === 0)
+    return json({ success: false, message: '回复内容不能为空' });
+
+  const msg = await env.DB.prepare(
+    'SELECT id FROM messages WHERE id = ?'
+  ).bind(message_id).first();
+  if (!msg) return json({ success: false, message: '留言不存在' });
+
+  await env.DB.prepare(
+    "UPDATE messages SET reply = ?, replied_at = datetime('now') WHERE id = ?"
+  ).bind(reply.trim(), message_id).run();
+
+  return json({ success: true, message: '回复成功' });
+}
+
+async function handleMessageDelete(request, env) {
+  const user = await getSessionUser(request.headers.get('Authorization'), env);
+  if (!user) return json({ success: false, message: '请先登录' }, 401);
+
+  const { message_id } = await request.json();
+  if (!message_id) return json({ success: false, message: '缺少留言ID' });
+
+  const msg = await env.DB.prepare(
+    'SELECT id, user_id FROM messages WHERE id = ?'
+  ).bind(message_id).first();
+  if (!msg) return json({ success: false, message: '留言不存在' });
+  if (msg.user_id !== user.id) return json({ success: false, message: '只能删除自己的留言' });
+
+  await env.DB.prepare('DELETE FROM messages WHERE id = ?').bind(message_id).run();
+  return json({ success: true, message: '已删除' });
+}
+
+// ---- 管理员留言管理 ----
+
+async function handleAdminMessages(request, env) {
+  const authErr = checkAdmin(request, env);
+  if (authErr) return authErr;
+
+  const rows = await env.DB.prepare(
+    'SELECT id, user_id, username, content, reply, replied_at, created_at FROM messages ORDER BY created_at DESC'
+  ).all();
+
+  return json({ success: true, messages: rows.results });
+}
+
+async function handleAdminMessageDetail(request, env) {
+  const authErr = checkAdmin(request, env);
+  if (authErr) return authErr;
+
+  const url = new URL(request.url);
+  const id = parseInt(url.searchParams.get('id'));
+  if (!id) return json({ success: false, message: '缺少留言ID' });
+
+  const msg = await env.DB.prepare(
+    'SELECT id, user_id, username, content, reply, replied_at, created_at FROM messages WHERE id = ?'
+  ).bind(id).first();
+
+  if (!msg) return json({ success: false, message: '留言不存在' });
+
+  return json({ success: true, message: msg });
+}
+
 // ---- 拒绝支付 ----
 
 async function handleAdminReject(request, env) {
@@ -752,6 +850,18 @@ export default {
           return handleAdminReject(request, env);
         case '/api/admin/revoke':
           return handleAdminRevoke(request, env);
+        case '/api/messages/create':
+          return handleMessageCreate(request, env);
+        case '/api/messages/list':
+          return handleMessageList(request, env);
+        case '/api/messages/reply':
+          return handleMessageReply(request, env);
+        case '/api/messages/delete':
+          return handleMessageDelete(request, env);
+        case '/api/admin/messages':
+          return handleAdminMessages(request, env);
+        case '/api/admin/message':
+          return handleAdminMessageDetail(request, env);
         default:
           return json({ success: false, message: '未找到路由' }, 404);
       }
