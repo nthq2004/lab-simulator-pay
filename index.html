@@ -645,19 +645,19 @@ footer{
 
 <!-- ===== 留言弹窗 ===== -->
 <div class="modal-overlay" id="messageModal">
-    <div class="modal-card" style="width:550px;max-height:80vh;display:flex;flex-direction:column;">
+    <div class="modal-card" style="width:550px;max-height:80vh;display:flex;flex-direction:column;overflow:hidden;">
         <span class="modal-close" onclick="closeModal('messageModal')">&times;</span>
-        <h2>留言系统</h2>
-        <div id="messageList" style="flex:1;overflow-y:auto;margin-bottom:15px;min-height:200px;max-height:50vh;">
+        <h2 style="flex-shrink:0;">留言系统</h2>
+        <div id="messageList" style="flex:1;overflow-y:auto;min-height:0;margin-bottom:15px;">
             <div class="empty" id="messageEmpty" style="padding:60px 20px;color:rgba(255,255,255,0.4);text-align:center;font-size:15px;">
                 暂无留言
             </div>
         </div>
-        <div style="display:flex;gap:10px;border-top:1px solid rgba(255,255,255,0.08);padding-top:15px;">
-            <textarea id="messageInput" placeholder="请输入留言内容..." style="flex:1;padding:10px 14px;border-radius:10px;border:1px solid rgba(0,180,255,0.3);background:rgba(255,255,255,0.05);color:white;font-size:14px;outline:none;resize:none;height:44px;font-family:inherit;box-sizing:border-box;" maxlength="500"></textarea>
-            <button onclick="submitMessage()" style="padding:10px 24px;border-radius:10px;border:none;background:rgba(0,180,255,0.7);color:white;font-size:14px;cursor:pointer;white-space:nowrap;transition:0.3s;height:44px;">提交</button>
+        <div style="flex-shrink:0;display:flex;gap:10px;border-top:1px solid rgba(255,255,255,0.08);padding:15px 0 0 0;">
+            <textarea id="messageInput" placeholder="请输入留言内容..." style="flex:1;padding:10px 14px;border-radius:10px;border:1px solid rgba(0,180,255,0.3);background:rgba(255,255,255,0.05);color:white;font-size:14px;outline:none;resize:none;min-height:44px;font-family:inherit;box-sizing:border-box;" maxlength="500"></textarea>
+            <button onclick="submitMessage()" style="flex-shrink:0;padding:10px 24px;border-radius:10px;border:none;background:rgba(0,180,255,0.7);color:white;font-size:14px;cursor:pointer;white-space:nowrap;transition:0.3s;height:44px;align-self:flex-start;">提交</button>
         </div>
-        <div id="messageError" style="color:#ff6b6b;font-size:13px;margin-top:8px;min-height:18px;"></div>
+        <div id="messageError" style="flex-shrink:0;color:#ff6b6b;font-size:13px;margin-top:8px;min-height:18px;"></div>
     </div>
 </div>
 
