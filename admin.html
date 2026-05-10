@@ -99,6 +99,11 @@ tr:hover{background:rgba(255,255,255,0.03);}
   background:rgba(255,255,255,0.15);color:rgba(255,255,255,0.7);cursor:pointer;font-size:12px;
 }
 .btn-reject:hover{background:rgba(255,255,255,0.25);}
+.btn-revoke{
+  padding:6px 16px;border-radius:6px;border:none;
+  background:#ff4d4f;color:white;cursor:pointer;font-size:12px;
+}
+.btn-revoke:hover{background:#d9363e;}
 .empty{text-align:center;padding:60px 20px;color:rgba(255,255,255,0.4);font-size:15px;}
 
 /* 分页 */
@@ -176,6 +181,7 @@ tr:hover{background:rgba(255,255,255,0.03);}
           <th>用户名</th>
           <th>付款时间</th>
           <th>注册时间</th>
+          <th>操作</th>
         </tr>
       </thead>
       <tbody id="usersList"></tbody>
@@ -304,11 +310,13 @@ async function loadUsers(page) {
     }
 
     list.innerHTML = rows.map(u => {
+      const safeUser = escapeHtml(u.username);
       return '<tr>' +
         '<td>' + u.id + '</td>' +
-        '<td>' + escapeHtml(u.username) + '</td>' +
+        '<td>' + safeUser + '</td>' +
         '<td>' + (u.paid_at || '-') + '</td>' +
         '<td>' + u.created_at + '</td>' +
+        '<td><button class="btn-revoke" onclick="revokeVip(' + u.id + ', \'' + safeUser.replace(/'/g, "\\'") + '\')">删除</button></td>' +
       '</tr>';
     }).join('');
 
@@ -364,6 +372,22 @@ async function rejectReq(id) {
   const data = await res.json();
   if (data.success) {
     loadPending();
+  } else {
+    alert(data.message);
+  }
+}
+
+async function revokeVip(userId, username) {
+  if (!confirm('确定取消用户 "' + username + '" 的 VIP 权限？此操作将强制该用户重新登录。')) return;
+  const res = await fetch(API_BASE + '/admin/revoke', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'X-Admin-Secret': adminSecret || '' },
+    body: JSON.stringify({ user_id: userId }),
+  });
+  const data = await res.json();
+  if (data.success) {
+    alert('已取消 ' + username + ' 的 VIP 权限');
+    loadUsers();
   } else {
     alert(data.message);
   }

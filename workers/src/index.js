@@ -658,6 +658,34 @@ async function handleAdminApprove(request, env) {
   return json({ success: true, message: '已批准，用户已升级为VIP' });
 }
 
+// ---- 取消 VIP（管理员删除用户付费状态） ----
+
+async function handleAdminRevoke(request, env) {
+  const authErr = checkAdmin(request, env);
+  if (authErr) return authErr;
+
+  const { user_id } = await request.json();
+  if (!user_id) return json({ success: false, message: '缺少用户ID' });
+
+  const user = await env.DB.prepare(
+    'SELECT id, paid FROM users WHERE id = ?'
+  ).bind(user_id).first();
+
+  if (!user) return json({ success: false, message: '用户不存在' });
+  if (!user.paid) return json({ success: false, message: '该用户不是VIP' });
+
+  await env.DB.batch([
+    env.DB.prepare(
+      "UPDATE users SET paid = 0, paid_at = NULL WHERE id = ?"
+    ).bind(user_id),
+    env.DB.prepare(
+      "DELETE FROM sessions WHERE user_id = ?"
+    ).bind(user_id),
+  ]);
+
+  return json({ success: true, message: '已取消该用户的VIP权限' });
+}
+
 // ---- 拒绝支付 ----
 
 async function handleAdminReject(request, env) {
@@ -722,6 +750,8 @@ export default {
           return handleAdminApprove(request, env);
         case '/api/admin/reject':
           return handleAdminReject(request, env);
+        case '/api/admin/revoke':
+          return handleAdminRevoke(request, env);
         default:
           return json({ success: false, message: '未找到路由' }, 404);
       }
