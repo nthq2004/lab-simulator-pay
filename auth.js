@@ -143,9 +143,9 @@ const Auth = {
 
   // 判断当前页面属于哪个目录
   let required = 0;
-  if (/\/auto\//.test(PWD)) required = 2;
-  else if (/\/transmitter\//.test(PWD)) required = 1;
-  // chief/ 和 third/ → required = 0 (始终允许)
+  if (/\/auto|elec\//.test(PWD)) required = 2;
+  else if (/\/control\//.test(PWD)) required = 1;
+  // chief/ 和 third/ 和/transmitter/ → required = 0 (始终允许)
 
   if (required === 0) return; // 无需检查
 
