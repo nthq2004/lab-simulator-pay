@@ -729,11 +729,45 @@ async function handleMessageList(request, env) {
   const user = await getSessionUser(request.headers.get('Authorization'), env);
   if (!user) return json({ success: false, message: '请先登录' }, 401);
 
-  const rows = await env.DB.prepare(
-    'SELECT id, user_id, username, content, reply, replied_at, created_at FROM messages ORDER BY created_at DESC'
-  ).all();
+  const url = new URL(request.url);
+  const page = Math.max(1, parseInt(url.searchParams.get('page')) || 1);
+  const filter = url.searchParams.get('filter') || 'mine';
+  const search = url.searchParams.get('search') || '';
+  const limit = 10;
+  const offset = (page - 1) * limit;
 
-  return json({ success: true, messages: rows.results });
+  const conditions = [];
+  const params = [];
+
+  if (filter === 'mine') {
+    conditions.push('user_id = ?');
+    params.push(user.id);
+  }
+
+  if (search.trim()) {
+    const kw = '%' + search.trim() + '%';
+    conditions.push('(content LIKE ? OR reply LIKE ?)');
+    params.push(kw, kw);
+  }
+
+  const where = conditions.length ? 'WHERE ' + conditions.join(' AND ') : '';
+
+  const countResult = await env.DB.prepare(
+    'SELECT COUNT(*) as count FROM messages ' + where
+  ).bind(...params).first();
+  const total = countResult ? countResult.count : 0;
+
+  const rows = await env.DB.prepare(
+    'SELECT id, user_id, username, content, reply, replied_at, created_at FROM messages ' + where + ' ORDER BY created_at DESC LIMIT ? OFFSET ?'
+  ).bind(...params, limit, offset).all();
+
+  return json({
+    success: true,
+    messages: rows.results,
+    total,
+    page,
+    pages: Math.max(1, Math.ceil(total / limit)),
+  });
 }
 
 async function handleMessageReply(request, env) {

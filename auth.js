@@ -111,8 +111,13 @@ const Auth = {
     return res.json();
   },
 
-  async getMessages() {
-    const res = await fetch(API_BASE + '/messages/list', {
+  async getMessages(page, filter, search) {
+    const params = new URLSearchParams();
+    if (page !== undefined) params.set('page', page);
+    if (filter) params.set('filter', filter);
+    if (search) params.set('search', search);
+    const qs = params.toString();
+    const res = await fetch(API_BASE + '/messages/list' + (qs ? '?' + qs : ''), {
       headers: { Authorization: 'Bearer ' + this._token },
     });
     return res.json();
