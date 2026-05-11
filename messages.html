@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>留言系统</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body{
+    font-family:"Microsoft YaHei", Arial, sans-serif;
+    color:white;
+    background:#0f2027;
+    min-height:100vh;
+}
+
+.navbar{
+    height:60px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:rgba(0,0,0,0.4);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid rgba(0,180,255,0.3);
+    position:relative;
+}
+.navbar h1{
+    font-size:20px;
+    letter-spacing:2px;
+}
+.navbar .back-link{
+    position:absolute;
+    right:20px;
+    color:#00b4ff;
+    text-decoration:none;
+    font-size:14px;
+}
+.navbar .back-link:hover{
+    text-decoration:underline;
+}
+
+.container{
+    max-width:700px;
+    margin:0 auto;
+    padding:20px;
+    display:flex;
+    flex-direction:column;
+    height:calc(100vh - 60px);
+}
+
+.msg-list{
+    flex:1;
+    overflow-y:auto;
+    margin-bottom:15px;
+    padding:10px 0;
+}
+
+.msg-item{
+    padding:16px 0;
+    border-bottom:1px solid rgba(255,255,255,0.06);
+}
+.msg-item:last-child{
+    border-bottom:none;
+}
+.msg-header{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    margin-bottom:6px;
+}
+.msg-username{
+    font-weight:bold;
+    font-size:14px;
+}
+.msg-time{
+    color:rgba(255,255,255,0.35);
+    font-size:12px;
+}
+.msg-content{
+    color:rgba(255,255,255,0.85);
+    font-size:14px;
+    line-height:1.6;
+}
+.msg-delete{
+    margin-left:12px;
+    color:#ff4d4f;
+    cursor:pointer;
+    font-size:12px;
+}
+.msg-delete:hover{
+    text-decoration:underline;
+}
+.msg-reply{
+    margin-top:10px;
+    padding:10px 14px;
+    background:rgba(0,180,255,0.08);
+    border-left:3px solid #00b4ff;
+    border-radius:6px;
+    font-size:13px;
+}
+.msg-reply-label{
+    color:#00b4ff;
+    font-weight:bold;
+}
+.msg-reply-text{
+    margin-top:4px;
+    color:rgba(255,255,255,0.85);
+}
+.msg-reply-time{
+    margin-top:4px;
+    color:rgba(255,255,255,0.4);
+    font-size:12px;
+}
+
+.empty{
+    text-align:center;
+    padding:80px 20px;
+    color:rgba(255,255,255,0.4);
+    font-size:15px;
+}
+
+.msg-bottom{
+    flex-shrink:0;
+    display:flex;
+    gap:10px;
+    border-top:1px solid rgba(255,255,255,0.08);
+    padding-top:15px;
+}
+.msg-bottom textarea{
+    flex:1;
+    padding:10px 14px;
+    border-radius:10px;
+    border:1px solid rgba(0,180,255,0.3);
+    background:rgba(255,255,255,0.05);
+    color:white;
+    font-size:14px;
+    outline:none;
+    resize:none;
+    height:44px;
+    font-family:inherit;
+    box-sizing:border-box;
+}
+.msg-bottom textarea:focus{
+    border-color:rgba(0,180,255,0.8);
+    box-shadow:0 0 12px rgba(0,180,255,0.2);
+}
+.msg-bottom textarea::placeholder{
+    color:rgba(255,255,255,0.35);
+}
+.msg-bottom button{
+    flex-shrink:0;
+    padding:10px 24px;
+    border-radius:10px;
+    border:none;
+    background:rgba(0,180,255,0.7);
+    color:white;
+    font-size:14px;
+    cursor:pointer;
+    white-space:nowrap;
+    height:44px;
+    transition:0.3s;
+}
+.msg-bottom button:hover{
+    background:rgba(0,180,255,0.9);
+    box-shadow:0 0 20px rgba(0,180,255,0.3);
+}
+
+.msg-error{
+    flex-shrink:0;
+    color:#ff6b6b;
+    font-size:13px;
+    margin-top:8px;
+    min-height:18px;
+}
+
+footer{
+    padding:20px;
+    text-align:center;
+    font-size:14px;
+    opacity:0.6;
+}
+</style>
+</head>
+<body>
+
+<div class="navbar">
+  <h1>留言系统</h1>
+  <a href="index.html" class="back-link">&larr; 返回首页</a>
+</div>
+
+<div class="container">
+  <div class="msg-list" id="messageList">
+  </div>
+  <div class="msg-bottom">
+    <textarea id="messageInput" placeholder="请输入留言内容..." maxlength="500"></textarea>
+    <button onclick="submitMessage()">提交</button>
+  </div>
+  <div class="msg-error" id="messageError"></div>
+</div>
+
+<script src="auth.js"></script>
+<script>
+
+function escapeHtml(s) {
+  const d = document.createElement('div');
+  d.textContent = s;
+  return d.innerHTML;
+}
+
+// ---- 页面初始化：验证登录 ----
+
+(async function() {
+  await Auth.init();
+  if (!Auth.isLoggedIn()) {
+    alert('请先登录');
+    window.location.href = 'index.html';
+    return;
+  }
+  updateUI();
+  loadMessages();
+  // 每 10 秒自动刷新留言列表，显示管理员的最新回复
+  setInterval(loadMessages, 10000);
+})();
+
+function updateUI() {
+  // 确保用户已登录，否则跳转
+}
+
+// ---- 留言列表 ----
+
+async function loadMessages() {
+  const list = document.getElementById('messageList');
+
+  const r = await Auth.getMessages();
+  if (!r.success) return;
+
+  const msgs = r.messages || [];
+
+  const currentUser = Auth.getCurrentUser();
+  list.innerHTML = (msgs.length === 0
+    ? '<div class="empty">暂无留言</div>'
+    : msgs.map(m => {
+    const isOwner = currentUser && currentUser.username === m.username;
+    const replyHtml = m.reply
+      ? '<div class="msg-reply">' +
+        '<div class="msg-reply-label">管理员回复</div>' +
+        '<div class="msg-reply-text">' + escapeHtml(m.reply) + '</div>' +
+        '<div class="msg-reply-time">' + (m.replied_at || '') + '</div>' +
+        '</div>'
+      : '';
+    const deleteBtn = isOwner
+      ? '<span class="msg-delete" onclick="deleteMessage(' + m.id + ')">删除</span>'
+      : '';
+    return '<div class="msg-item" data-id="' + m.id + '">' +
+      '<div class="msg-header">' +
+      '<span class="msg-username">' + escapeHtml(m.username) + '</span>' +
+      '<span class="msg-time">' + m.created_at + '</span>' +
+      deleteBtn +
+      '</div>' +
+      '<div class="msg-content">' + escapeHtml(m.content) + '</div>' +
+      replyHtml +
+      '</div>';
+  }).join(''));
+}
+
+// ---- 提交 ----
+
+async function submitMessage() {
+  const input = document.getElementById('messageInput');
+  const errEl = document.getElementById('messageError');
+  const content = input.value.trim();
+  if (!content) { errEl.textContent = '留言内容不能为空'; return; }
+  if (content.length > 500) { errEl.textContent = '留言内容不能超过500字'; return; }
+  errEl.textContent = '';
+  try {
+    const r = await Auth.createMessage(content);
+    if (r.success) {
+      input.value = '';
+      loadMessages();
+    } else {
+      errEl.textContent = r.message || '提交失败（错误信息为空）';
+    }
+  } catch (e) {
+    errEl.textContent = '网络错误：' + e.message;
+  }
+}
+
+// ---- 删除 ----
+
+async function deleteMessage(id) {
+  if (!confirm('确定删除该留言？')) return;
+  const r = await Auth.deleteMessage(id);
+  if (r.success) {
+    loadMessages();
+  } else {
+    alert(r.message);
+  }
+}
+</script>
+</body>
+</html>

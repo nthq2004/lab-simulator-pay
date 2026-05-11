@@ -203,6 +203,7 @@ tr:hover{background:rgba(255,255,255,0.03);}
           <th>ID</th>
           <th>用户名</th>
           <th>留言内容</th>
+          <th>回复内容</th>
           <th>状态</th>
           <th>操作</th>
         </tr>
@@ -214,21 +215,6 @@ tr:hover{background:rgba(255,255,255,0.03);}
 
 </div>
 
-</div>
-
-<!-- 回复弹窗 -->
-<div class="modal-overlay" id="replyModal">
-  <div class="modal-card">
-    <span class="modal-close" onclick="closeModal('replyModal')">&times;</span>
-    <h2>回复留言</h2>
-    <div id="replyOriginalMsg" style="padding:12px;background:rgba(255,255,255,0.05);border-radius:8px;margin-bottom:15px;font-size:13px;color:rgba(255,255,255,0.7);"></div>
-    <textarea id="replyContent" placeholder="请输入回复内容..." style="width:100%;padding:12px 15px;border-radius:10px;border:1px solid rgba(0,180,255,0.3);background:rgba(255,255,255,0.05);color:white;font-size:14px;outline:none;resize:vertical;min-height:100px;font-family:inherit;box-sizing:border-box;margin-bottom:15px;"></textarea>
-    <div style="display:flex;gap:10px;">
-      <button onclick="closeModal('replyModal')" style="flex:1;padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.15);background:transparent;color:white;font-size:14px;cursor:pointer;">取消</button>
-      <button onclick="submitReply()" style="flex:1;padding:12px;border-radius:10px;border:none;background:rgba(0,180,255,0.7);color:white;font-size:14px;cursor:pointer;">提交回复</button>
-    </div>
-    <div id="replyError" style="color:#ff6b6b;font-size:13px;margin-top:10px;min-height:18px;"></div>
-  </div>
 </div>
 
 <script>
@@ -388,12 +374,6 @@ function escapeHtml(s) {
   return d.innerHTML;
 }
 
-function closeModal(id) {
-  document.getElementById(id).classList.remove('active');
-}
-
-let currentReplyMessageId = null;
-
 async function loadAdminMessages() {
   const list = document.getElementById('messagesList');
   const emptyHint = document.getElementById('messagesEmptyHint');
@@ -421,54 +401,74 @@ async function loadAdminMessages() {
         ? '<span style="color:#07c160;">已回复</span>'
         : '<span style="color:#ff4d4f;">未回复</span>';
       const escapedContent = escapeHtml(m.content);
+      const escapedReply = m.reply ? escapeHtml(m.reply) : '';
       const contentPreview = escapedContent.length > 50
         ? escapedContent.substring(0, 50) + '...'
         : escapedContent;
+      const replyPreview = m.reply
+        ? (escapedReply.length > 40 ? escapedReply.substring(0, 40) + '...' : escapedReply)
+        : '<span style="color:rgba(255,255,255,0.3);">-</span>';
       return '<tr>' +
         '<td>' + m.id + '</td>' +
         '<td>' + escapeHtml(m.username) + '</td>' +
         '<td title="' + escapedContent.replace(/"/g, '&quot;') + '">' + contentPreview + '</td>' +
+        '<td title="' + escapedReply.replace(/"/g, '&quot;') + '">' + replyPreview + '</td>' +
         '<td>' + statusHtml + '</td>' +
-        '<td><button class="btn-approve" onclick="openReply(' + m.id + ')">回复</button></td>' +
+        '<td><button class="btn-approve" onclick="openReply(event, ' + m.id + ')">回复</button></td>' +
       '</tr>';
     }).join('');
   } catch (_) {}
 }
 
-function openReply(messageId) {
-  currentReplyMessageId = messageId;
-  document.getElementById('replyOriginalMsg').textContent = '加载中...';
-  document.getElementById('replyContent').value = '';
-  document.getElementById('replyError').textContent = '';
+function openReply(event, messageId) {
+  // 关闭其他已打开的行内回复框
+  document.querySelectorAll('.reply-inline').forEach(el => el.remove());
 
+  const row = event.target.closest('tr');
+  const replyRow = document.createElement('tr');
+  replyRow.className = 'reply-inline';
+  replyRow.innerHTML = '<td colspan="6" style="padding:10px 15px;background:rgba(0,180,255,0.05);">' +
+    '<div style="margin-bottom:8px;font-size:12px;color:rgba(255,255,255,0.6);" id="replyOriginalMsg">加载中...</div>' +
+    '<textarea id="replyContent" placeholder="请输入回复内容..." style="width:100%;padding:8px 12px;border-radius:8px;border:1px solid rgba(0,180,255,0.3);background:rgba(255,255,255,0.05);color:white;font-size:13px;outline:none;resize:none;min-height:60px;font-family:inherit;box-sizing:border-box;margin-bottom:8px;"></textarea>' +
+    '<div style="display:flex;gap:8px;justify-content:flex-end;">' +
+    '<button onclick="this.closest(\'tr.reply-inline\').remove()" style="padding:4px 14px;border-radius:6px;border:1px solid rgba(255,255,255,0.15);background:transparent;color:rgba(255,255,255,0.7);font-size:12px;cursor:pointer;">取消</button>' +
+    '<button onclick="submitReplyInline(' + messageId + ')" style="padding:4px 14px;border-radius:6px;border:none;background:rgba(0,180,255,0.7);color:white;font-size:12px;cursor:pointer;">提交回复</button>' +
+    '</div>' +
+    '<div id="replyError" style="color:#ff6b6b;font-size:12px;margin-top:6px;min-height:16px;"></div>' +
+    '</td></tr>';
+  row.after(replyRow);
+
+  // 加载留言原文
   fetch(API_BASE + '/admin/message?id=' + messageId, {
     headers: { 'X-Admin-Secret': adminSecret || '' },
   }).then(res => res.json()).then(data => {
     if (data.success && data.message) {
-      document.getElementById('replyOriginalMsg').innerHTML =
-        '<strong>' + escapeHtml(data.message.username) + '</strong>：' + escapeHtml(data.message.content);
+      document.getElementById('replyOriginalMsg').textContent =
+        data.message.username + '：' + data.message.content;
     } else {
       document.getElementById('replyOriginalMsg').textContent = '无法加载留言内容';
     }
   }).catch(() => {
     document.getElementById('replyOriginalMsg').textContent = '无法加载留言内容';
   });
-  document.getElementById('replyModal').classList.add('active');
 }
 
-async function submitReply() {
-  const reply = document.getElementById('replyContent').value.trim();
-  const errEl = document.getElementById('replyError');
+async function submitReplyInline(messageId) {
+  const replyRow = document.querySelector('.reply-inline');
+  if (!replyRow) return;
+  const textarea = replyRow.querySelector('#replyContent');
+  const errEl = replyRow.querySelector('#replyError');
+  const reply = textarea.value.trim();
   if (!reply) { errEl.textContent = '回复内容不能为空'; return; }
   errEl.textContent = '';
   const res = await fetch(API_BASE + '/messages/reply', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json', 'X-Admin-Secret': adminSecret || '' },
-    body: JSON.stringify({ message_id: currentReplyMessageId, reply }),
+    body: JSON.stringify({ message_id: messageId, reply }),
   });
   const data = await res.json();
   if (data.success) {
-    closeModal('replyModal');
+    replyRow.remove();
     loadAdminMessages();
   } else {
     errEl.textContent = data.message;

@@ -11,6 +11,26 @@ const CORS_HEADERS = {
   'Access-Control-Allow-Headers': 'Content-Type, Authorization, X-Admin-Secret',
 };
 
+let dbInitialized = false;
+
+async function ensureDbTables(env) {
+  if (dbInitialized) return;
+  await env.DB.exec(
+    "CREATE TABLE IF NOT EXISTS messages (" +
+    "id INTEGER PRIMARY KEY AUTOINCREMENT," +
+    "user_id INTEGER NOT NULL," +
+    "username TEXT NOT NULL," +
+    "content TEXT NOT NULL," +
+    "reply TEXT," +
+    "replied_at TEXT," +
+    "created_at TEXT DEFAULT (datetime('now'))," +
+    "FOREIGN KEY (user_id) REFERENCES users(id)" +
+    ");" +
+    "CREATE INDEX IF NOT EXISTS idx_messages_created_at ON messages(created_at);"
+  );
+  dbInitialized = true;
+}
+
 function json(data, status = 200) {
   return new Response(JSON.stringify(data), {
     status,
@@ -821,6 +841,8 @@ export default {
     const path = url.pathname;
 
     try {
+      await ensureDbTables(env).catch(() => {});
+
       switch (path) {
         case '/api/register':
           return handleRegister(request, env);
