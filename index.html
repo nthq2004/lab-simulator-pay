@@ -604,10 +604,12 @@ footer{
     <div class="modal-card">
         <span class="modal-close" onclick="closeModal('loginModal')">&times;</span>
         <h2>登录</h2>
+        <form onsubmit="event.preventDefault(); handleLogin()">
         <input type="text" id="loginUsername" placeholder="用户名" autocomplete="username">
         <input type="password" id="loginPassword" placeholder="密码" autocomplete="current-password">
         <div class="modal-error" id="loginError"></div>
-        <button onclick="handleLogin()">登录</button>
+        <button type="submit">登录</button>
+        </form>
         <div class="switch-link">还没有账号？<a onclick="switchToRegister()">立即注册</a></div>
     </div>
 </div>
@@ -617,11 +619,13 @@ footer{
     <div class="modal-card">
         <span class="modal-close" onclick="closeModal('registerModal')">&times;</span>
         <h2>注册</h2>
+        <form onsubmit="event.preventDefault(); handleRegister()">
         <input type="text" id="regUsername" placeholder="用户名（至少2个字符）" autocomplete="username">
         <input type="password" id="regPassword" placeholder="密码（至少6个字符）" autocomplete="new-password">
         <input type="password" id="regConfirm" placeholder="确认密码" autocomplete="new-password">
         <div class="modal-error" id="regError"></div>
-        <button onclick="handleRegister()">注册</button>
+        <button type="submit">注册</button>
+        </form>
         <div class="switch-link">已有账号？<a onclick="switchToLogin()">立即登录</a></div>
     </div>
 </div>
