@@ -6,3 +6,8 @@ build/
 *.log
 *.env
 .vscode/
+.agents/
+codegraph-analysis.md
+skills-lock.json
+docs/
+.codegraph/
