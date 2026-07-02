@@ -419,8 +419,9 @@ async function loadAdminMessages() {
 
     list.innerHTML = rows.map(m => {
       const replied = m.reply !== null;
+      const escapedReply = replied ? escapeHtml(m.reply) : '';
       const statusHtml = replied
-        ? '<span style="color:#07c160;">已回复</span>'
+        ? '<span style="color:#07c160;">' + escapedReply + '</span>'
         : '<span style="color:#ff4d4f;">未回复</span>';
       const escapedContent = escapeHtml(m.content);
       const contentPreview = escapedContent.length > 50
