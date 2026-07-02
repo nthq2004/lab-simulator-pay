@@ -11,6 +11,26 @@ const CORS_HEADERS = {
   'Access-Control-Allow-Headers': 'Content-Type, Authorization, X-Admin-Secret',
 };
 
+let dbInitialized = false;
+
+async function ensureDbTables(env) {
+  if (dbInitialized) return;
+  await env.DB.exec(
+    "CREATE TABLE IF NOT EXISTS messages (" +
+    "id INTEGER PRIMARY KEY AUTOINCREMENT," +
+    "user_id INTEGER NOT NULL," +
+    "username TEXT NOT NULL," +
+    "content TEXT NOT NULL," +
+    "reply TEXT," +
+    "replied_at TEXT," +
+    "created_at TEXT DEFAULT (datetime('now'))," +
+    "FOREIGN KEY (user_id) REFERENCES users(id)" +
+    ");" +
+    "CREATE INDEX IF NOT EXISTS idx_messages_created_at ON messages(created_at);"
+  );
+  dbInitialized = true;
+}
+
 function json(data, status = 200) {
   return new Response(JSON.stringify(data), {
     status,
@@ -658,6 +678,166 @@ async function handleAdminApprove(request, env) {
   return json({ success: true, message: '已批准，用户已升级为VIP' });
 }
 
+// ---- 取消 VIP（管理员删除用户付费状态） ----
+
+async function handleAdminRevoke(request, env) {
+  const authErr = checkAdmin(request, env);
+  if (authErr) return authErr;
+
+  const { user_id } = await request.json();
+  if (!user_id) return json({ success: false, message: '缺少用户ID' });
+
+  const user = await env.DB.prepare(
+    'SELECT id, paid FROM users WHERE id = ?'
+  ).bind(user_id).first();
+
+  if (!user) return json({ success: false, message: '用户不存在' });
+  if (!user.paid) return json({ success: false, message: '该用户不是VIP' });
+
+  await env.DB.batch([
+    env.DB.prepare(
+      "UPDATE users SET paid = 0, paid_at = NULL WHERE id = ?"
+    ).bind(user_id),
+    env.DB.prepare(
+      "DELETE FROM sessions WHERE user_id = ?"
+    ).bind(user_id),
+  ]);
+
+  return json({ success: true, message: '已取消该用户的VIP权限' });
+}
+
+// ---- 留言系统 ----
+
+async function handleMessageCreate(request, env) {
+  const user = await getSessionUser(request.headers.get('Authorization'), env);
+  if (!user) return json({ success: false, message: '请先登录' }, 401);
+
+  const { content } = await request.json();
+  if (!content || content.trim().length === 0)
+    return json({ success: false, message: '留言内容不能为空' });
+  if (content.length > 500)
+    return json({ success: false, message: '留言内容不能超过500字' });
+
+  const result = await env.DB.prepare(
+    'INSERT INTO messages (user_id, username, content) VALUES (?, ?, ?)'
+  ).bind(user.id, user.username, content.trim()).run();
+
+  return json({ success: true, message_id: result.meta.last_row_id });
+}
+
+async function handleMessageList(request, env) {
+  const user = await getSessionUser(request.headers.get('Authorization'), env);
+  if (!user) return json({ success: false, message: '请先登录' }, 401);
+
+  const url = new URL(request.url);
+  const page = Math.max(1, parseInt(url.searchParams.get('page')) || 1);
+  const filter = url.searchParams.get('filter') || 'mine';
+  const search = url.searchParams.get('search') || '';
+  const limit = 10;
+  const offset = (page - 1) * limit;
+
+  const conditions = [];
+  const params = [];
+
+  if (filter === 'mine') {
+    conditions.push('user_id = ?');
+    params.push(user.id);
+  }
+
+  if (search.trim()) {
+    const kw = '%' + search.trim() + '%';
+    conditions.push('(content LIKE ? OR reply LIKE ?)');
+    params.push(kw, kw);
+  }
+
+  const where = conditions.length ? 'WHERE ' + conditions.join(' AND ') : '';
+
+  const countResult = await env.DB.prepare(
+    'SELECT COUNT(*) as count FROM messages ' + where
+  ).bind(...params).first();
+  const total = countResult ? countResult.count : 0;
+
+  const rows = await env.DB.prepare(
+    'SELECT id, user_id, username, content, reply, replied_at, created_at FROM messages ' + where + ' ORDER BY created_at DESC LIMIT ? OFFSET ?'
+  ).bind(...params, limit, offset).all();
+
+  return json({
+    success: true,
+    messages: rows.results,
+    total,
+    page,
+    pages: Math.max(1, Math.ceil(total / limit)),
+  });
+}
+
+async function handleMessageReply(request, env) {
+  const authErr = checkAdmin(request, env);
+  if (authErr) return authErr;
+
+  const { message_id, reply } = await request.json();
+  if (!message_id) return json({ success: false, message: '缺少留言ID' });
+  if (!reply || reply.trim().length === 0)
+    return json({ success: false, message: '回复内容不能为空' });
+
+  const msg = await env.DB.prepare(
+    'SELECT id FROM messages WHERE id = ?'
+  ).bind(message_id).first();
+  if (!msg) return json({ success: false, message: '留言不存在' });
+
+  await env.DB.prepare(
+    "UPDATE messages SET reply = ?, replied_at = datetime('now') WHERE id = ?"
+  ).bind(reply.trim(), message_id).run();
+
+  return json({ success: true, message: '回复成功' });
+}
+
+async function handleMessageDelete(request, env) {
+  const user = await getSessionUser(request.headers.get('Authorization'), env);
+  if (!user) return json({ success: false, message: '请先登录' }, 401);
+
+  const { message_id } = await request.json();
+  if (!message_id) return json({ success: false, message: '缺少留言ID' });
+
+  const msg = await env.DB.prepare(
+    'SELECT id, user_id FROM messages WHERE id = ?'
+  ).bind(message_id).first();
+  if (!msg) return json({ success: false, message: '留言不存在' });
+  if (msg.user_id !== user.id) return json({ success: false, message: '只能删除自己的留言' });
+
+  await env.DB.prepare('DELETE FROM messages WHERE id = ?').bind(message_id).run();
+  return json({ success: true, message: '已删除' });
+}
+
+// ---- 管理员留言管理 ----
+
+async function handleAdminMessages(request, env) {
+  const authErr = checkAdmin(request, env);
+  if (authErr) return authErr;
+
+  const rows = await env.DB.prepare(
+    'SELECT id, user_id, username, content, reply, replied_at, created_at FROM messages ORDER BY created_at DESC'
+  ).all();
+
+  return json({ success: true, messages: rows.results });
+}
+
+async function handleAdminMessageDetail(request, env) {
+  const authErr = checkAdmin(request, env);
+  if (authErr) return authErr;
+
+  const url = new URL(request.url);
+  const id = parseInt(url.searchParams.get('id'));
+  if (!id) return json({ success: false, message: '缺少留言ID' });
+
+  const msg = await env.DB.prepare(
+    'SELECT id, user_id, username, content, reply, replied_at, created_at FROM messages WHERE id = ?'
+  ).bind(id).first();
+
+  if (!msg) return json({ success: false, message: '留言不存在' });
+
+  return json({ success: true, message: msg });
+}
+
 // ---- 拒绝支付 ----
 
 async function handleAdminReject(request, env) {
@@ -695,6 +875,8 @@ export default {
     const path = url.pathname;
 
     try {
+      await ensureDbTables(env).catch(() => {});
+
       switch (path) {
         case '/api/register':
           return handleRegister(request, env);
@@ -710,8 +892,6 @@ export default {
           return handlePayNotifyAlipay(request, env);
         case '/api/pay/status':
           return handlePayStatus(request, env);
-        case '/api/pay/confirm':
-          return handlePayConfirm(request, env);
         case '/api/pay/notify':
           return handlePayNotify(request, env);
         case '/api/admin/users':
@@ -722,6 +902,20 @@ export default {
           return handleAdminApprove(request, env);
         case '/api/admin/reject':
           return handleAdminReject(request, env);
+        case '/api/admin/revoke':
+          return handleAdminRevoke(request, env);
+        case '/api/messages/create':
+          return handleMessageCreate(request, env);
+        case '/api/messages/list':
+          return handleMessageList(request, env);
+        case '/api/messages/reply':
+          return handleMessageReply(request, env);
+        case '/api/messages/delete':
+          return handleMessageDelete(request, env);
+        case '/api/admin/messages':
+          return handleAdminMessages(request, env);
+        case '/api/admin/message':
+          return handleAdminMessageDetail(request, env);
         default:
           return json({ success: false, message: '未找到路由' }, 404);
       }
