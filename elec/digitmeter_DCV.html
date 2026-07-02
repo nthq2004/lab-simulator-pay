@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <title>数字式万用表：直流电压档</title>
 
-    <!-- 外部CSS -->
+    <!-- 外部CSS -->
+
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon-bUNewI43.png">
+  <script src="../auth.js"></script>
   <script type="module" crossorigin>var e=Object.defineProperty,t=(e,t,n)=>()=>{if(n)throw n[0];try{return e&&(t=e(e=0)),t}catch(e){throw n=[e],e}},n=(t,n)=>{let r={};for(var i in t)e(r,i,{get:t[i],enumerable:!0});return n||e(r,Symbol.toStringTag,{value:`Module`}),r};(function(){let e=document.createElement(`link`).relList;if(e&&e.supports&&e.supports(`modulepreload`))return;for(let e of document.querySelectorAll(`link[rel="modulepreload"]`))n(e);new MutationObserver(e=>{for(let t of e)if(t.type===`childList`)for(let e of t.addedNodes)e.tagName===`LINK`&&e.rel===`modulepreload`&&n(e)}).observe(document,{childList:!0,subtree:!0});function t(e){let t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),e.crossOrigin===`use-credentials`?t.credentials=`include`:e.crossOrigin===`anonymous`?t.credentials=`omit`:t.credentials=`same-origin`,t}function n(e){if(e.ep)return;e.ep=!0;let n=t(e);fetch(e.href,n)}})();var r=Math.PI/180;function i(){return typeof window<`u`&&({}.toString.call(window)===`[object Window]`||{}.toString.call(window)===`[object global]`)}var a=typeof global<`u`?global:typeof window<`u`?window:typeof WorkerGlobalScope<`u`?self:{},o={_global:a,version:`10.3.0`,isBrowser:i(),isUnminified:/param/.test(function(e){}.toString()),dblClickWindow:400,getAngle(e){return o.angleDeg?e*r:e},enableTrace:!1,pointerEventsEnabled:!0,autoDrawEnabled:!0,hitOnDragEnabled:!1,capturePointerEventsEnabled:!1,_mouseListenClick:!1,_touchListenClick:!1,_pointerListenClick:!1,_mouseInDblClickWindow:!1,_touchInDblClickWindow:!1,_pointerInDblClickWindow:!1,_mouseDblClickPointerId:null,_touchDblClickPointerId:null,_pointerDblClickPointerId:null,_renderBackend:`web`,legacyTextRendering:!1,pixelRatio:typeof window<`u`&&window.devicePixelRatio||1,dragDistance:3,angleDeg:!0,showWarnings:!0,dragButtons:[0,1],isDragging(){return o.DD.isDragging},isTransforming(){return o.Transformer?.isTransforming()??!1},isDragReady(){return!!o.DD.node},releaseCanvasOnDestroy:!0,document:a.document,_injectGlobal(e){a.Konva!==void 0&&console.error(`Several Konva instances detected. It is not recommended to use multiple Konva instances in the same environment.`),a.Konva=e}},s=e=>{o[e.prototype.getClassName()]=e};o._injectGlobal(o);var c=`Konva.js unsupported environment.
 
 Looks like you are trying to use Konva.js in Node.js environment. because "document" object is undefined.
@@ -241,7 +243,8 @@ LOOP`,xr:.74,fill:`#c00`},{label:`COM`,xr:.9,fill:`#222`}],o=10*e,s=n-30*e;a.for
 
     <!-- Konva容器 -->
     <div id="container"></div>
-    <!-- 主程序 -->
+    <!-- 主程序 -->
+
 
 </body>
 </html>
