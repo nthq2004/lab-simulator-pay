@@ -96,6 +96,44 @@ const Auth = {
     if (this._user) return 1; // 注册用户
     return 0; // 访客
   },
+
+  // ---- 留言系统 ----
+
+  async createMessage(content) {
+    const res = await fetch(API_BASE + '/messages/create', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: 'Bearer ' + this._token,
+      },
+      body: JSON.stringify({ content }),
+    });
+    return res.json();
+  },
+
+  async getMessages(page, filter, search) {
+    const params = new URLSearchParams();
+    if (page !== undefined) params.set('page', page);
+    if (filter) params.set('filter', filter);
+    if (search) params.set('search', search);
+    const qs = params.toString();
+    const res = await fetch(API_BASE + '/messages/list' + (qs ? '?' + qs : ''), {
+      headers: { Authorization: 'Bearer ' + this._token },
+    });
+    return res.json();
+  },
+
+  async deleteMessage(message_id) {
+    const res = await fetch(API_BASE + '/messages/delete', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: 'Bearer ' + this._token,
+      },
+      body: JSON.stringify({ message_id }),
+    });
+    return res.json();
+  },
 };
 
 // ---- 自动页面访问检查 ----
@@ -105,9 +143,9 @@ const Auth = {
 
   // 判断当前页面属于哪个目录
   let required = 0;
-  if (/\/pay\//.test(PWD)) required = 2;
+  if (/\/pay1|pay2\//.test(PWD)) required = 2;
   else if (/\/register\//.test(PWD)) required = 1;
-  // chief/ 和 third/ → required = 0 (始终允许)
+  // chief/ 和 third/ 和/transmitter/ → required = 0 (始终允许)
 
   if (required === 0) return; // 无需检查
 
