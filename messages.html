@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>留言板</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body{
+  font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif;
+  background:#f5f5f5;
+  color:#333;
+  min-height:100vh;
+}
+
+/* 顶部导航 */
+.navbar{
+  position:sticky;top:0;z-index:10;
+  height:52px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#fff;
+  border-bottom:1px solid #eee;
+}
+.navbar h1{
+  font-size:17px;
+  font-weight:600;
+  color:#333;
+}
+.navbar .back-link{
+  position:absolute;
+  right:16px;
+  color:#1677ff;
+  text-decoration:none;
+  font-size:14px;
+}
+
+/* 容器 */
+.container{
+  max-width:600px;
+  margin:0 auto;
+  display:flex;
+  flex-direction:column;
+  height:calc(100vh - 52px);
+}
+
+/* 工具栏 */
+.toolbar{
+  flex-shrink:0;
+  background:#fff;
+  padding:10px 16px 8px;
+  border-bottom:1px solid #eee;
+}
+.search-box{
+  display:flex;
+  gap:8px;
+  margin-bottom:8px;
+}
+.search-box input{
+  flex:1;
+  padding:8px 14px;
+  border-radius:18px;
+  border:1.5px solid #e0e0e0;
+  background:#f5f5f5;
+  color:#333;
+  font-size:14px;
+  outline:none;
+  transition:border-color 0.2s;
+}
+.search-box input:focus{
+  border-color:#1677ff;
+  background:#fff;
+}
+.search-box input::placeholder{color:#bbb;}
+.search-box button{
+  flex-shrink:0;
+  width:36px;height:36px;
+  border-radius:50%;
+  border:none;
+  background:#1677ff;
+  color:#fff;
+  font-size:16px;
+  cursor:pointer;
+}
+.search-box button:active{opacity:0.8;}
+
+/* 过滤标签 */
+.filter-tabs{
+  display:flex;
+  gap:0;
+  background:#f5f5f5;
+  border-radius:8px;
+  padding:2px;
+}
+.filter-tab{
+  flex:1;
+  padding:6px 0;
+  border:none;
+  background:transparent;
+  color:#999;
+  font-size:13px;
+  border-radius:6px;
+  cursor:pointer;
+  transition:all 0.2s;
+  text-align:center;
+}
+.filter-tab.active{
+  background:#fff;
+  color:#333;
+  font-weight:600;
+  box-shadow:0 1px 3px rgba(0,0,0,0.08);
+}
+
+/* 留言列表 */
+.msg-list{
+  flex:1;
+  overflow-y:auto;
+  -webkit-overflow-scrolling:touch;
+  padding:12px 16px;
+  padding-bottom:4px;
+}
+
+.msg-item{
+  background:#fff;
+  border-radius:12px;
+  padding:14px 16px;
+  margin-bottom:10px;
+  box-shadow:0 1px 3px rgba(0,0,0,0.06);
+}
+.msg-header{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  margin-bottom:6px;
+}
+.msg-avatar{
+  width:32px;height:32px;
+  border-radius:50%;
+  background:#e8f0fe;
+  color:#1677ff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:14px;
+  font-weight:600;
+  flex-shrink:0;
+}
+.msg-username{
+  font-weight:600;
+  font-size:14px;
+  color:#333;
+}
+.msg-time{
+  color:#999;
+  font-size:12px;
+  margin-left:auto;
+}
+.msg-content{
+  color:#333;
+  font-size:15px;
+  line-height:1.6;
+  padding-left:40px;
+  word-break:break-word;
+}
+.msg-delete{
+  color:#ff4d4f;
+  cursor:pointer;
+  font-size:12px;
+  margin-left:12px;
+  opacity:0.7;
+}
+.msg-delete:active{opacity:1;}
+
+/* 管理员回复 */
+.msg-reply{
+  margin-top:10px;
+  margin-left:40px;
+  padding:10px 14px;
+  background:#f0f5ff;
+  border-radius:10px;
+  font-size:13px;
+}
+.msg-reply-label{
+  color:#1677ff;
+  font-weight:600;
+  font-size:12px;
+  margin-bottom:4px;
+}
+.msg-reply-text{
+  color:#555;
+  line-height:1.5;
+}
+.msg-reply-time{
+  color:#bbb;
+  font-size:11px;
+  margin-top:4px;
+}
+
+/* 空状态 */
+.empty{
+  text-align:center;
+  padding:80px 20px;
+  color:#bbb;
+  font-size:15px;
+}
+
+/* 分页 */
+.pagination{
+  flex-shrink:0;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:4px;
+  padding:10px 16px 8px;
+  background:#fff;
+  border-top:1px solid #eee;
+  flex-wrap:wrap;
+}
+.page-btn{
+  min-width:34px;height:34px;
+  border-radius:8px;
+  border:1px solid #e0e0e0;
+  background:#fff;
+  color:#666;
+  font-size:13px;
+  cursor:pointer;
+  transition:all 0.15s;
+  padding:0 8px;
+  display:flex;align-items:center;justify-content:center;
+}
+.page-btn:active{background:#f0f0f0;}
+.page-btn.active{
+  background:#1677ff;
+  color:#fff;
+  border-color:#1677ff;
+}
+.page-btn:disabled{opacity:0.35;cursor:default;}
+.page-info{
+  color:#bbb;
+  font-size:12px;
+  padding:0 4px;
+}
+.page-total{
+  flex-shrink:0;
+  color:#999;
+  font-size:12px;
+  margin-left:8px;
+}
+
+/* 底部输入区 */
+.msg-bottom{
+  flex-shrink:0;
+  display:flex;
+  gap:8px;
+  padding:12px 16px;
+  background:#fff;
+  border-top:1px solid #eee;
+  align-items:flex-end;
+}
+.msg-bottom textarea{
+  flex:1;
+  padding:10px 14px;
+  border-radius:20px;
+  border:1.5px solid #e0e0e0;
+  background:#f5f5f5;
+  color:#333;
+  font-size:15px;
+  outline:none;
+  resize:none;
+  min-height:40px;
+  max-height:100px;
+  font-family:inherit;
+  box-sizing:border-box;
+  transition:border-color 0.2s;
+}
+.msg-bottom textarea:focus{
+  border-color:#1677ff;
+  background:#fff;
+}
+.msg-bottom textarea::placeholder{color:#bbb;}
+.msg-bottom button{
+  flex-shrink:0;
+  padding:0 22px;
+  height:40px;
+  border-radius:20px;
+  border:none;
+  background:#1677ff;
+  color:#fff;
+  font-size:15px;
+  cursor:pointer;
+  transition:opacity 0.2s;
+  white-space:nowrap;
+}
+.msg-bottom button:active{opacity:0.8;}
+
+.msg-error{
+  flex-shrink:0;
+  color:#ff4d4f;
+  font-size:13px;
+  padding:0 16px 0;
+  min-height:0;
+  line-height:0;
+}
+.msg-error.show{
+  padding:0 16px 8px;
+  min-height:18px;
+  line-height:1.4;
+}
+
+/* 淡入动画 */
+@keyframes fadeIn{
+  from{opacity:0;transform:translateY(8px);}
+  to{opacity:1;transform:translateY(0);}
+}
+.msg-item{animation:fadeIn 0.3s ease;}
+
+@media(max-width:480px){
+  .container{height:calc(100dvh - 52px);}
+  .msg-item{padding:12px 14px;}
+  .msg-content{font-size:14px;padding-left:0;margin-top:4px;}
+  .msg-reply{margin-left:0;}
+}
+</style>
+</head>
+<body>
+
+<div class="navbar">
+  <h1>留言板</h1>
+  <a href="index.html" class="back-link">&larr; 返回</a>
+</div>
+
+<div class="container">
+
+  <!-- 工具栏 -->
+  <div class="toolbar">
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="搜索留言..." maxlength="50" onkeydown="if(event.key==='Enter')doSearch()">
+      <button onclick="doSearch()">&#128269;</button>
+    </div>
+    <div class="filter-tabs">
+      <button class="filter-tab active" id="filterMine" onclick="setFilter('mine')">我的留言</button>
+      <button class="filter-tab" id="filterAll" onclick="setFilter('all')">全部留言</button>
+    </div>
+  </div>
+
+  <!-- 留言列表 -->
+  <div class="msg-list" id="messageList">
+  </div>
+
+  <!-- 分页 -->
+  <div class="pagination" id="pagination"></div>
+
+  <!-- 错误提示 -->
+  <div class="msg-error" id="messageError"></div>
+
+  <!-- 底部输入 -->
+  <div class="msg-bottom">
+    <textarea id="messageInput" placeholder="说点什么..." maxlength="500"></textarea>
+    <button onclick="submitMessage()">发送</button>
+  </div>
+</div>
+
+<script src="auth.js"></script>
+<script>
+
+let currentFilter = 'mine';
+let currentSearch = '';
+let currentPage = 1;
+let totalPages = 1;
+
+function escapeHtml(s) {
+  const d = document.createElement('div');
+  d.textContent = s;
+  return d.innerHTML;
+}
+
+function getInitial(name) {
+  return name.charAt(0).toUpperCase();
+}
+
+function showError(msg) {
+  const el = document.getElementById('messageError');
+  el.textContent = msg;
+  el.classList.toggle('show', !!msg);
+}
+
+// ---- 初始化 ----
+
+(async function() {
+  await Auth.init();
+  if (!Auth.isLoggedIn()) {
+    alert('请先登录');
+    window.location.href = 'index.html';
+    return;
+  }
+  loadMessages();
+})();
+
+// ---- 搜索 ----
+
+function doSearch() {
+  currentSearch = document.getElementById('searchInput').value.trim();
+  currentPage = 1;
+  loadMessages();
+}
+
+// ---- 过滤 ----
+
+function setFilter(filter) {
+  if (filter === currentFilter) return;
+  currentFilter = filter;
+  currentPage = 1;
+  document.querySelectorAll('.filter-tab').forEach(b => b.classList.remove('active'));
+  document.getElementById(filter === 'mine' ? 'filterMine' : 'filterAll').classList.add('active');
+  loadMessages();
+}
+
+// ---- 分页 ----
+
+function goToPage(page) {
+  if (page < 1 || page > totalPages) return;
+  currentPage = page;
+  loadMessages();
+}
+
+function renderPagination(page, pages, total) {
+  const el = document.getElementById('pagination');
+  if (pages <= 1) { el.innerHTML = ''; return; }
+
+  let html = '';
+  if (page > 1) {
+    html += '<button class="page-btn" onclick="goToPage(' + (page - 1) + ')">‹</button>';
+  }
+  for (let i = 1; i <= pages; i++) {
+    if (i === page) {
+      html += '<button class="page-btn active">' + i + '</button>';
+    } else if (i === 1 || i === pages || Math.abs(i - page) <= 2) {
+      html += '<button class="page-btn" onclick="goToPage(' + i + ')">' + i + '</button>';
+    } else if (Math.abs(i - page) === 3) {
+      html += '<span class="page-info">…</span>';
+    }
+  }
+  if (page < pages) {
+    html += '<button class="page-btn" onclick="goToPage(' + (page + 1) + ')">›</button>';
+  }
+  html += '<span class="page-total">共' + total + '条</span>';
+  el.innerHTML = html;
+}
+
+// ---- 留言列表 ----
+
+async function loadMessages() {
+  const list = document.getElementById('messageList');
+  const r = await Auth.getMessages(currentPage, currentFilter, currentSearch);
+  if (!r.success) return;
+
+  const msgs = r.messages || [];
+  totalPages = r.pages || 1;
+  const currentUser = Auth.getCurrentUser();
+
+  list.innerHTML = msgs.length === 0
+    ? '<div class="empty">' + (currentSearch ? '未找到匹配的留言' : '暂无留言，来说点什么吧') + '</div>'
+    : msgs.map(m => {
+    const isOwner = currentUser && currentUser.username === m.username;
+    const replyHtml = m.reply
+      ? '<div class="msg-reply">' +
+        '<div class="msg-reply-label">管理员回复</div>' +
+        '<div class="msg-reply-text">' + escapeHtml(m.reply) + '</div>' +
+        '<div class="msg-reply-time">' + (m.replied_at || '') + '</div>' +
+        '</div>'
+      : '';
+    const deleteBtn = isOwner
+      ? '<span class="msg-delete" onclick="deleteMessage(' + m.id + ')">删除</span>'
+      : '';
+    return '<div class="msg-item">' +
+      '<div class="msg-header">' +
+      '<div class="msg-avatar">' + escapeHtml(getInitial(m.username)) + '</div>' +
+      '<span class="msg-username">' + escapeHtml(m.username) + '</span>' +
+      '<span class="msg-time">' + m.created_at + '</span>' +
+      deleteBtn +
+      '</div>' +
+      '<div class="msg-content">' + escapeHtml(m.content) + '</div>' +
+      replyHtml +
+      '</div>';
+  }).join('');
+
+  renderPagination(r.page, r.pages, r.total);
+}
+
+// ---- 提交 ----
+
+async function submitMessage() {
+  const input = document.getElementById('messageInput');
+  const content = input.value.trim();
+  if (!content) { showError('请输入留言内容'); return; }
+  if (content.length > 500) { showError('留言内容不能超过500字'); return; }
+  showError('');
+  try {
+    const r = await Auth.createMessage(content);
+    if (r.success) {
+      input.value = '';
+      currentPage = 1;
+      loadMessages();
+    } else {
+      showError(r.message || '提交失败');
+    }
+  } catch (e) {
+    showError('网络错误：' + e.message);
+  }
+}
+
+// ---- 删除 ----
+
+async function deleteMessage(id) {
+  if (!confirm('确定删除该留言？')) return;
+  const r = await Auth.deleteMessage(id);
+  if (r.success) {
+    loadMessages();
+  } else {
+    alert(r.message);
+  }
+}
+</script>
+</body>
+</html>

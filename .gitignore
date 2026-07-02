@@ -1,0 +1,13 @@
+.dev.vars
+node_modules/
+.wrangler/
+dist/
+build/
+*.log
+*.env
+.vscode/
+.agents/
+codegraph-analysis.md
+skills-lock.json
+docs/
+.codegraph/
