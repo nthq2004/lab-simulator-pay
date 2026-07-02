@@ -450,22 +450,22 @@ footer{
 1.2 基于热敏电阻NTC的温度变送器仿真
 </a>
 
+<a href="auto/ntc_limiter.html" class="card">
+1.3 基于热敏电阻NTC的浪涌电流抑制仿真
+</a>
+
 <a href="transmitter/press_transmitter.html" class="card">
 2.1 基于电阻应变片的压力变送器
 </a>
 <a href="transmitter/diff_transformer.html" class="card">
 2.2 基于差动变压器的压力变送器
 
-<a href="auto/pneumatic_valve.html" class="card">
+<a href="control/pneumatic_valve.html" class="card">
 3.1 气动薄膜调节阀的测试
 </a>
 
-<a href="auto/air_compressor.html" class="card">
+<a href="control/air_compressor.html" class="card">
 4.1 空气瓶压力双位控制
-</a>
-
-<a href="third/cooling_system.html" class="card">
-4.2 冷却水温度控制系统的功能测试
 </a>
 
 </a>
@@ -489,10 +489,12 @@ footer{
     <div class="modal-card">
         <span class="modal-close" onclick="closeModal('loginModal')">&times;</span>
         <h2>登录</h2>
+        <form onsubmit="event.preventDefault(); handleLogin()">
         <input type="text" id="loginUsername" placeholder="用户名" autocomplete="username">
         <input type="password" id="loginPassword" placeholder="密码" autocomplete="current-password">
         <div class="modal-error" id="loginError"></div>
-        <button onclick="handleLogin()">登录</button>
+        <button type="submit">登录</button>
+        </form>
         <div class="switch-link">还没有账号？<a onclick="switchToRegister()">立即注册</a></div>
     </div>
 </div>
@@ -502,11 +504,13 @@ footer{
     <div class="modal-card">
         <span class="modal-close" onclick="closeModal('registerModal')">&times;</span>
         <h2>注册</h2>
+        <form onsubmit="event.preventDefault(); handleRegister()">
         <input type="text" id="regUsername" placeholder="用户名（至少2个字符）" autocomplete="username">
         <input type="password" id="regPassword" placeholder="密码（至少6个字符）" autocomplete="new-password">
         <input type="password" id="regConfirm" placeholder="确认密码" autocomplete="new-password">
         <div class="modal-error" id="regError"></div>
-        <button onclick="handleRegister()">注册</button>
+        <button type="submit">注册</button>
+        </form>
         <div class="switch-link">已有账号？<a onclick="switchToLogin()">立即登录</a></div>
     </div>
 </div>
@@ -539,7 +543,7 @@ footer{
 </div>
 
 <footer>
-制作单位 —— 江苏航院·轮机工程学院
+制作单位 —— 极点·仿真工作室
 </footer>
 
 <script src="auth.js"></script>

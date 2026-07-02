@@ -1,8 +1,0 @@
-.dev.vars
-node_modules/
-.wrangler/
-dist/
-build/
-*.log
-*.env
-.vscode/
