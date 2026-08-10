@@ -16,6 +16,8 @@ body{
     color:white;
     background:#0f2027;
     min-height:100vh;
+    display:flex;
+    flex-direction:column;
 }
 
 canvas{
@@ -61,6 +63,8 @@ canvas{
 .container{
     text-align:center;
     padding-top:120px;
+    flex:1 0 auto;
+    width:100%;
 }
 
 h1{
@@ -74,7 +78,8 @@ h1{
 .intro{
     max-width:900px;
     margin:0 auto 40px;
-    padding:0 20px;
+    padding:10px 20px 0;
+    flex-shrink:0;
     font-size:16px;
     line-height:1.9;
     color:rgba(255,255,255,0.75);
@@ -94,6 +99,7 @@ h1{
     max-width:1100px;
     margin:0 auto 30px;
     overflow:hidden;
+    flex-shrink:0;
 }
 
 /* 链接卡片 */
@@ -133,6 +139,7 @@ footer{
     text-align:center;
     font-size:18px;
     opacity:0.8;
+    flex-shrink:0;
 }
 
 /* 页面切换 */
@@ -527,12 +534,6 @@ footer{
 
 <div class="container">
 
-<!-- 平台简介 -->
-<div class="intro">
-    <p><strong>自动控制仿真系统</strong>是面向轮机工程专业的海事电气与自动化仿真教学平台，通过交互式动画还原船舶自动化设备的原理、功能测试、参数调整与故障排除训练，帮助学员掌握传感器、变送器、调节器与执行器之间的信号传递和闭环控制逻辑。</p>
-    <p>平台涵盖<strong>大管轮评估项目</strong>（压力变送器、温控器、总线式监测报警系统）、<strong>三管轮评估项目</strong>（温度传感器、压力开关、差压变送器、PID 数字调节器、控制箱识别）、<strong>自动化技能库</strong>（温度/压力变送器、气动调节阀、空气瓶压力双位控制、冷却水温度控制）以及<strong>电子电气技能库</strong>（指针式与数字式万用表测量原理）等实训模块。所有仿真均在浏览器中实时运行，无需安装任何软件。</p>
-</div>
-
 <!-- 顶部广告位 -->
 <div class="ad-slot" data-ad-banner data-ad-format="auto"></div>
 
@@ -748,6 +749,12 @@ footer{
 
 <!-- 底部广告位 -->
 <div class="ad-slot" data-ad-banner data-ad-format="auto"></div>
+
+<!-- 平台简介 -->
+<div class="intro">
+    <p><strong>自动控制仿真系统</strong>是面向轮机工程专业的海事电气与自动化仿真教学平台，通过交互式动画还原船舶自动化设备的原理、功能测试、参数调整与故障排除训练，帮助学员掌握传感器、变送器、调节器与执行器之间的信号传递和闭环控制逻辑。</p>
+    <p>平台涵盖<strong>大管轮评估项目</strong>（压力变送器、温控器、总线式监测报警系统）、<strong>三管轮评估项目</strong>（温度传感器、压力开关、差压变送器、PID 数字调节器、控制箱识别）、<strong>自动化技能库</strong>（温度/压力变送器、气动调节阀、空气瓶压力双位控制、冷却水温度控制）以及<strong>电子电气技能库</strong>（指针式与数字式万用表测量原理）等实训模块。所有仿真均在浏览器中实时运行，无需安装任何软件。</p>
+</div>
 
 <footer>
 制作单位 —— 极点·仿真工作室 &nbsp;|&nbsp; <a href="privacy.html" style="color:rgba(255,255,255,0.5);text-decoration:none;font-size:14px;">隐私政策</a>
