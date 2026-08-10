@@ -2,6 +2,7 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
+<meta name="google-adsense-account" content="ca-pub-0000000000000000">
 <title>留言板</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <style>
@@ -355,6 +356,8 @@ body{
   <div class="msg-error" id="messageError"></div>
 
   <!-- 底部输入 -->
+    <!-- 广告位 -->
+  <div data-ad-banner data-ad-format="auto" style="display:none;width:100%;max-width:600px;margin:0 auto;flex-shrink:0;min-height:60px;"></div>
   <div class="msg-bottom">
     <textarea id="messageInput" placeholder="说点什么..." maxlength="500"></textarea>
     <button onclick="submitMessage()">发送</button>
@@ -362,6 +365,7 @@ body{
 </div>
 
 <script src="auth.js"></script>
+<script src="ads.js"></script>
 <script>
 
 let currentFilter = 'mine';

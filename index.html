@@ -2,17 +2,20 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
+<meta name="google-adsense-account" content="ca-pub-0000000000000000">
 <title>自动控制仿真系统</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="海事电气与自动化仿真教学系统，提供压力变送器、温度变送器、PID调节器、万用表等船舶自动化设备的交互式仿真教学与故障排除训练。">
 
 <style>
 * { margin:0; padding:0; box-sizing:border-box; }
 
 body{
     font-family:"Microsoft YaHei", Arial, sans-serif;
-    overflow:hidden;
+    overflow:auto;
     color:white;
     background:#0f2027;
+    min-height:100vh;
 }
 
 canvas{
@@ -67,6 +70,32 @@ h1{
     text-shadow:0 0 20px rgba(0,180,255,0.8);
 }
 
+/* 首页正文介绍 */
+.intro{
+    max-width:900px;
+    margin:0 auto 40px;
+    padding:0 20px;
+    font-size:16px;
+    line-height:1.9;
+    color:rgba(255,255,255,0.75);
+    text-align:left;
+}
+.intro p{
+    margin-bottom:14px;
+}
+.intro strong{
+    color:#00b4ff;
+}
+
+/* 广告位 */
+.ad-slot{
+    display:none;
+    width:85%;
+    max-width:1100px;
+    margin:0 auto 30px;
+    overflow:hidden;
+}
+
 /* 链接卡片 */
 .links{
     display:grid;
@@ -97,9 +126,9 @@ h1{
 }
 
 footer{
-    position:fixed;
-    bottom:20px;
+    position:relative;
     width:100%;
+    padding:20px 0 40px;
     font-weight:bolder;
     text-align:center;
     font-size:18px;
@@ -498,6 +527,15 @@ footer{
 
 <div class="container">
 
+<!-- 平台简介 -->
+<div class="intro">
+    <p><strong>自动控制仿真系统</strong>是面向轮机工程专业的海事电气与自动化仿真教学平台，通过交互式动画还原船舶自动化设备的原理、功能测试、参数调整与故障排除训练，帮助学员掌握传感器、变送器、调节器与执行器之间的信号传递和闭环控制逻辑。</p>
+    <p>平台涵盖<strong>大管轮评估项目</strong>（压力变送器、温控器、总线式监测报警系统）、<strong>三管轮评估项目</strong>（温度传感器、压力开关、差压变送器、PID 数字调节器、控制箱识别）、<strong>自动化技能库</strong>（温度/压力变送器、气动调节阀、空气瓶压力双位控制、冷却水温度控制）以及<strong>电子电气技能库</strong>（指针式与数字式万用表测量原理）等实训模块。所有仿真均在浏览器中实时运行，无需安装任何软件。</p>
+</div>
+
+<!-- 顶部广告位 -->
+<div class="ad-slot" data-ad-banner data-ad-format="auto"></div>
+
 <!-- 大管轮 -->
 <div id="chief" class="page active">
 <div class="links">
@@ -708,11 +746,15 @@ footer{
     </div>
 </div>
 
+<!-- 底部广告位 -->
+<div class="ad-slot" data-ad-banner data-ad-format="auto"></div>
+
 <footer>
-制作单位 —— 极点·仿真工作室
+制作单位 —— 极点·仿真工作室 &nbsp;|&nbsp; <a href="privacy.html" style="color:rgba(255,255,255,0.5);text-decoration:none;font-size:14px;">隐私政策</a>
 </footer>
 
 <script src="auth.js"></script>
+<script src="ads.js"></script>
 <script>
 
 /* ===== 页面切换 ===== */
