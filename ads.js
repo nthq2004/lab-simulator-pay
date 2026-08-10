@@ -15,7 +15,7 @@
   'use strict';
 
   // TODO: 替换为你的 AdSense 发布商 ID 与广告单元 Slot
-  var CLIENT_ID = 'ca-pub-0000000000000000';
+  var CLIENT_ID = 'ca-pub-7761541288091235';
   var DEFAULT_SLOT = '0000000000';
 
   // 获取页面中的广告容器（DOM 就绪后再调用，避免 head 同步执行时找不到 body 元素）
