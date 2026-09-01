@@ -249,6 +249,25 @@ LOOP`,xr:.74,fill:`#c00`},{label:`COM`,xr:.9,fill:`#222`}],o=10*e,s=n-30*e;a.for
   var btnReturn = document.getElementById('btnReturnToSim');
   var docContent = document.getElementById('docContent');
   var tocList = document.getElementById('docTocList');
+  var btnShowDoc = null;
+  var docLoaded = false;
+
+  // 工具栏"实验文档"按钮：重新打开文档预览层
+  function showDocView(){
+    docView.style.display = 'block';
+    docView.style.opacity = '1';
+    docView.scrollTop = 0;
+  }
+
+  // 工具栏按钮位于文档层之后，需等 DOM 解析完成后再绑定
+  document.addEventListener('DOMContentLoaded', function(){
+    btnShowDoc = document.getElementById('btnShowDoc');
+    if(btnShowDoc){
+      btnShowDoc.addEventListener('click', showDocView);
+      // 文档已加载成功则显示按钮
+      if(docLoaded) btnShowDoc.style.display = '';
+    }
+  });
 
   // 返回实验：关闭文档层，显示仿真
   btnReturn.addEventListener('click', function(){
@@ -309,6 +328,9 @@ LOOP`,xr:.74,fill:`#c00`},{label:`COM`,xr:.9,fill:`#222`}],o=10*e,s=n-30*e;a.for
       }
       // 生成两级目录
       buildToc();
+      // 文档加载成功，显示工具栏"实验文档"按钮
+      docLoaded = true;
+      if(btnShowDoc) btnShowDoc.style.display = '';
     } catch(e){
       // 文档不存在，直接进入仿真
       docView.style.display = 'none';
@@ -331,6 +353,8 @@ LOOP`,xr:.74,fill:`#c00`},{label:`COM`,xr:.9,fill:`#222`}],o=10*e,s=n-30*e;a.for
         <button id="btnFiveStep" title="5点观察输入输出">5点步进</button>        
         <button id="faultBtn" title="选择故障进行设置">故障设置</button>
         <button id="btnReset" title="重置系统">重置系统</button>
+
+        <button id="btnShowDoc" title="查看实验文档" style="display:none;">实验文档</button>
 
         <select id="taskSelect">
         </select>
