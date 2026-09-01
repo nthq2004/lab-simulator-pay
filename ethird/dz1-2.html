@@ -188,17 +188,58 @@ LOOP`,xr:.74,fill:`#c00`},{label:`COM`,xr:.9,fill:`#222`}],o=10*e,s=n-30*e;a.for
 <body>
 
 <!-- Markdown 实验文档预览层 -->
-<div id="docView" style="position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:99999;background:#1a2332;overflow-y:auto;color:#e0e0e0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
+<div id="docView" style="position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:99999;background:#f8f5ee;overflow-y:auto;color:#333a42;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
+  <style>
+    /* ===== 浅色护目 · 文档预览样式 ===== */
+    #docContent{flex:1;min-width:0;}
+    #docContent h1{color:#1a5276;border-bottom:3px solid #d4a937;padding-bottom:12px;margin:0 0 24px;font-size:26px;line-height:1.5;}
+    #docContent h2{color:#1c6e5a;border-bottom:1px solid #cdc19c;padding-bottom:8px;margin:38px 0 14px;font-size:21px;}
+    #docContent h3{color:#7d6608;margin:24px 0 10px;font-size:17px;}
+    #docContent p{color:#333a42;margin:12px 0;font-size:15px;line-height:1.9;}
+    #docContent img{max-width:100%;border-radius:8px;margin:16px 0;border:1px solid #e2d9bd;background:#fff;box-shadow:0 2px 10px rgba(120,105,60,.14);}
+    #docContent strong{color:#a04000;font-weight:700;}
+    #docContent em{color:#148f77;font-style:italic;}
+    #docContent a{color:#21618c;}
+    #docContent code{background:#efe9d8;color:#7d3a1c;padding:2px 6px;border-radius:4px;font-size:13px;}
+    #docContent pre{background:#f2ecdb;border:1px solid #e0d8b6;padding:16px;border-radius:8px;overflow:auto;}
+    #docContent pre code{background:transparent;padding:0;}
+    #docContent table{width:100%;border-collapse:collapse;margin:16px 0;}
+    #docContent td,#docContent th{border:1px solid #d5cdb8;padding:10px 14px;text-align:left;font-size:14px;}
+    #docContent th{background:#efe9da;color:#4a4a3a;font-weight:600;}
+    #docContent ul,#docContent ol{padding-left:26px;margin:12px 0;color:#333a42;}
+    #docContent li{margin:6px 0;line-height:1.8;}
+    #docContent blockquote{border-left:4px solid #c8a95c;padding:12px 20px;background:#f3ecdb;border-radius:0 8px 8px 0;margin:16px 0;color:#5c5542;}
+    #docContent hr{border:none;border-top:1px solid #e0d8c0;margin:28px 0;}
+    #docContent h1[id],#docContent h2[id]{scroll-margin-top:74px;}
+
+    /* 左侧目录 */
+    #docToc{position:sticky;top:76px;width:248px;flex-shrink:0;background:#fff;border:1px solid #e8e1cc;border-radius:10px;padding:16px 14px;max-height:calc(100vh - 110px);overflow-y:auto;box-shadow:0 2px 10px rgba(120,105,60,.08);}
+    #docToc .toc-title{font-size:15px;font-weight:700;color:#1a5276;margin:0 0 10px;padding-bottom:9px;border-bottom:2px solid #d4a937;}
+    #docToc ul{list-style:none;margin:0;padding:0;}
+    #docToc a{display:block;padding:6px 10px;border-radius:6px;color:#5b5340;text-decoration:none;font-size:14px;line-height:1.5;transition:background .15s,color .15s;}
+    #docToc a:hover{background:#f3ecdb;color:#1a5276;}
+    #docToc a.toc-l1{font-weight:600;color:#333a42;}
+    #docToc a.toc-l2{padding-left:22px;font-size:13px;}
+    #docToc a.toc-active{background:#e7ecd9;color:#1c6e5a;font-weight:600;}
+
+    @media (max-width:900px){ #docToc{display:none;} }
+  </style>
   <!-- 顶部工具栏 -->
-  <div style="position:sticky;top:0;z-index:10;background:#799484d9;backdrop-filter:blur(8px);padding:12px 24px;display:flex;align-items:center;gap:16px;border-bottom:1px solid rgba(255,255,255,0.1);">
+  <div style="position:sticky;top:0;z-index:10;background:rgba(255,255,255,.93);backdrop-filter:blur(8px);padding:12px 24px;display:flex;align-items:center;gap:16px;border-bottom:1px solid #e0d8c0;box-shadow:0 1px 6px rgba(120,105,60,.08);">
     <button id="btnReturnToSim" style="background:#27ae60;color:#fff;border:none;padding:8px 20px;border-radius:6px;font-size:15px;font-weight:600;cursor:pointer;transition:background .2s;">
       &#9654; 返回实验
     </button>
-    <span style="color:rgba(255,255,255,0.6);font-size:14px;">实验文档预览</span>
+    <span style="color:#8a8270;font-size:14px;">实验文档预览</span>
   </div>
-  <!-- 文档内容区 -->
-  <div id="docContent" style="max-width:900px;margin:0 auto;padding:40px 32px 80px;line-height:1.8;">
-    <p style="text-align:center;color:#7f8c8d;padding:60px 0;">加载实验文档中...</p>
+  <!-- 两栏布局：左侧目录 + 右侧内容 -->
+  <div style="display:flex;align-items:flex-start;max-width:1200px;margin:0 auto;padding:28px 28px 80px;gap:32px;">
+    <nav id="docToc">
+      <div class="toc-title">目 录</div>
+      <ul id="docTocList"></ul>
+    </nav>
+    <div id="docContent">
+      <p style="text-align:center;color:#9a937f;padding:60px 0;font-size:15px;">加载实验文档中...</p>
+    </div>
   </div>
 </div>
 
@@ -207,6 +248,7 @@ LOOP`,xr:.74,fill:`#c00`},{label:`COM`,xr:.9,fill:`#222`}],o=10*e,s=n-30*e;a.for
   var docView = document.getElementById('docView');
   var btnReturn = document.getElementById('btnReturnToSim');
   var docContent = document.getElementById('docContent');
+  var tocList = document.getElementById('docTocList');
 
   // 返回实验：关闭文档层，显示仿真
   btnReturn.addEventListener('click', function(){
@@ -218,6 +260,37 @@ LOOP`,xr:.74,fill:`#c00`},{label:`COM`,xr:.9,fill:`#222`}],o=10*e,s=n-30*e;a.for
       window.dispatchEvent(new Event('resize'));
     }, 300);
   });
+
+  // 点击目录项：平滑滚动到对应标题
+  tocList.addEventListener('click', function(e){
+    var a = e.target.closest('a');
+    if(!a) return;
+    var el = document.getElementById(a.getAttribute('href').slice(1));
+    if(el){
+      e.preventDefault();
+      el.scrollIntoView({behavior:'smooth', block:'start'});
+      tocList.querySelectorAll('a').forEach(function(x){ x.classList.remove('toc-active'); });
+      a.classList.add('toc-active');
+    }
+  });
+
+  function escapeHtml(s){
+    return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+
+  // 根据文档最高两级标题（h1/h2）生成目录
+  function buildToc(){
+    var headings = docContent.querySelectorAll('h1, h2');
+    if(headings.length === 0) return;
+    var html = '';
+    headings.forEach(function(h, i){
+      var id = 'doc-sec-' + i;
+      h.id = id;
+      var cls = h.tagName.toLowerCase() === 'h1' ? 'toc-l1' : 'toc-l2';
+      html += '<li><a class="' + cls + '" href="#' + id + '">' + escapeHtml(h.textContent.trim()) + '</a></li>';
+    });
+    tocList.innerHTML = html;
+  }
 
   // 加载文档
   async function loadDoc(){
@@ -234,22 +307,8 @@ LOOP`,xr:.74,fill:`#c00`},{label:`COM`,xr:.9,fill:`#222`}],o=10*e,s=n-30*e;a.for
       } else {
         docContent.textContent = md;
       }
-      // 设置文档样式
-      docContent.querySelectorAll('h1').forEach(function(h){ h.style.color='#fff'; h.style.borderBottom='2px solid #27ae60'; h.style.paddingBottom='12px'; h.style.marginTop='0'; });
-      docContent.querySelectorAll('h2').forEach(function(h){ h.style.color='#ecf0f1'; h.style.borderBottom='1px solid #34495e'; h.style.paddingBottom='8px'; h.style.marginTop='32px'; });
-      docContent.querySelectorAll('h3').forEach(function(h){ h.style.color='#bdc3c7'; h.style.marginTop='24px'; });
-      docContent.querySelectorAll('p').forEach(function(p){ p.style.margin='12px 0'; p.style.color='#d0d0d0'; });
-      docContent.querySelectorAll('img').forEach(function(img){ img.style.maxWidth='100%'; img.style.borderRadius='8px'; img.style.margin='16px 0'; img.style.boxShadow='0 2px 12px rgba(0,0,0,0.3)'; });
-      docContent.querySelectorAll('strong').forEach(function(s){ s.style.color='#f39c12'; });
-      docContent.querySelectorAll('em').forEach(function(e){ e.style.color='#2ecc71'; });
-      docContent.querySelectorAll('code').forEach(function(c){ c.style.background='#2c3e50'; c.style.padding='2px 6px'; c.style.borderRadius='4px'; c.style.fontSize='13px'; });
-      docContent.querySelectorAll('pre').forEach(function(pre){ pre.style.background='#2c3e50'; pre.style.padding='16px'; pre.style.borderRadius='8px'; pre.style.overflow='auto'; });
-      docContent.querySelectorAll('table').forEach(function(t){ t.style.width='100%'; t.style.borderCollapse='collapse'; t.style.margin='16px 0'; });
-      docContent.querySelectorAll('td, th').forEach(function(c){ c.style.border='1px solid #34495e'; c.style.padding='10px 14px'; c.style.textAlign='left'; });
-      docContent.querySelectorAll('th').forEach(function(h){ h.style.background='#2c3e50'; h.style.color='#ecf0f1'; });
-      docContent.querySelectorAll('ul, ol').forEach(function(l){ l.style.paddingLeft='24px'; l.style.margin='12px 0'; });
-      docContent.querySelectorAll('li').forEach(function(li){ li.style.margin='6px 0'; });
-      docContent.querySelectorAll('blockquote').forEach(function(b){ b.style.borderLeft='4px solid #27ae60'; b.style.padding='12px 20px'; b.style.background='rgba(39,174,96,0.1)'; b.style.borderRadius='0 8px 8px 0'; b.style.margin='16px 0'; b.style.color='#a0a0a0'; });
+      // 生成两级目录
+      buildToc();
     } catch(e){
       // 文档不存在，直接进入仿真
       docView.style.display = 'none';
