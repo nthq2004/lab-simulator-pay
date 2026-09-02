@@ -181,10 +181,166 @@ LOOP`,xr:.74,fill:`#c00`},{label:`COM`,xr:.9,fill:`#222`}],o=10*e,s=n-30*e;a.for
         `}static bindEvents(e){let t=document.querySelectorAll(`input[name="gwyMode"]`),n=document.getElementById(`gwySerialConfig`),r=document.getElementById(`gwyWsConfig`);t.forEach(e=>{e.addEventListener(`change`,()=>{e.value===`serial`?(n.style.display=`block`,r.style.display=`none`):(n.style.display=`none`,r.style.display=`block`)})});let i=document.getElementById(`gwySerialConnect`);i.addEventListener(`click`,async()=>{i.disabled=!0,i.textContent=`连接中...`;try{await e.connectSerial(),i.textContent=`已连接`}catch(e){console.error(`[GatewayUI] 串口连接失败:`,e),i.textContent=`连接串口`,i.disabled=!1}});let a=document.getElementById(`gwyWsConnect`),o=document.getElementById(`gwyWsUrl`);a.addEventListener(`click`,async()=>{a.disabled=!0,a.textContent=`连接中...`;try{await e.connectWebSocket(o.value),a.textContent=`已连接`}catch(e){console.error(`[GatewayUI] WebSocket 连接失败:`,e),a.textContent=`连接 WebSocket`,a.disabled=!1}}),document.getElementById(`gwyDisconnect`).addEventListener(`click`,async()=>{await e.disconnect()}),document.getElementById(`gwyClearLog`).addEventListener(`click`,()=>{e.clearLog();let t=document.getElementById(`gwyLog`);t.innerHTML=`<div class="gateway-log-empty">等待数据...</div>`}),e.onStatusChange((e,t)=>{let n=document.getElementById(`gwyStatus`),r=document.getElementById(`gwyDisconnect`),i=document.getElementById(`gwySerialConnect`),a=document.getElementById(`gwyWsConnect`);e===`connected`?(n.textContent=t,n.className=`gateway-status connected`,r.disabled=!1,i.disabled=!0,a.disabled=!0):(n.textContent=t||`未连接`,n.className=`gateway-status`,r.disabled=!0,i.disabled=!1,i.textContent=`连接串口`,a.disabled=!1,a.textContent=`连接 WebSocket`)}),e.onLog((e,t)=>{let n=document.getElementById(`gwyLog`);if(e===`clear`)return;let r=n.querySelector(`.gateway-log-empty`);r&&r.remove();let i=document.createElement(`div`);i.className=`gateway-log-line gateway-log-${t.type}`,i.textContent=`[${new Date(t.timestamp).toLocaleTimeString(`zh-CN`,{hour12:!1})}] ${t.message}`,n.appendChild(i),n.scrollTop=n.scrollHeight})}}})),Bs=class{constructor(e){this.sys=e,this.devices=new Map}register(e){return this.devices.set(e.id,e),e}get(e){return this.devices.get(e)||null}getOrCreate(e,t){let n=this.devices.get(e);return n||(n=new t({id:e}),this.register(n)),n}remove(e){let t=this.devices.get(e);t&&(t.destroy?.(),this.devices.delete(e))}getAll(){return Array.from(this.devices.values())}tick(e){this.devices.forEach(t=>t.preUpdate(e)),this.devices.forEach(e=>e.commit())}},Vs=class{constructor(e={}){this._options=e,this.container=document.getElementById(`container`),this.stage=new Konva.Stage({container:`container`,width:window.innerWidth,height:window.innerHeight}),this.layer=new Konva.Layer,this.lineLayer=new Konva.Layer,this.stage.add(this.layer,this.lineLayer),this.comps={},this.conns=[],this.pipeNodes=[],this.wireNodes=[],this.linkingState=null,this.tempLine=null,this.stepsArray=[],this.workflowComp=null,this.voltageSolver=null,this.pressSolver=null,this.digitalSolver=null,this.mcuSolver=null,this.showComp=null,this._needsRedraw=!0,this._physicsIterCount=0,this._consecutiveStableFrames=0,this.selectedCompIds=new Set,this._selRectStart=null,this._selectionRect=null,this._dragStartPositions={},this._dragGroupId=null,this._lastPointerPos=null,this.history=new io,this.connMgr=new ao(this),this.renderer=new oo(this),this.uiMgr=new so(this),this.workflowMgr=new No(this),this.init(),this.initHistory(),this.initStageEvents(),this.workflowMgr.initSteps(),this.workflowMgr.initFault()}init(){let e=1920,t=1080,n=window.innerWidth/e,r=window.innerHeight/t,i=Math.min(n,r),a=(window.innerWidth-e*i)/2,o=(window.innerHeight-t*i)/2,s=Oo.map(e=>({...e,x:e.x*i+a,y:e.y*i+o})),c={};s.forEach(e=>{e.visible===!1&&(c[e.id]=!1,delete e.visible),this.comps[e.id]=new e.Class(e,this),this.layer.add(this.comps[e.id].group);let t=this.comps[e.id].group;t.on(`dragstart`,()=>this._onDragStart(e.id)),t.on(`dragmove`,()=>this._onDragMove(e.id)),t.on(`dragend`,()=>this._onDragEnd())}),this._applyStaticCaching(),this.layer.draw(),Object.keys(c).forEach(e=>{this.comps[e]&&this.comps[e].group&&this.comps[e].group.visible(!1)}),this.layer.draw(),this.workflowComp=new Ji(this),this.voltageSolver=new Qi(this),this.pressSolver=new $i(this),this.digitalSolver=new oa(this),this.mcuSolver=new sa(this),this.mcs51Solver=new La(this),this.showComp=new ea(this),this.eventBus=new Ra,this.equipmentPool=new Ha,this.thermalSolver=new Ua(this),this.deviceManager=new Bs(this),Object.values(this.comps).forEach(e=>{let t=e.config?.deviceid,n=e.constructor?.DeviceClass;t&&n&&(e.deviceRef=this.deviceManager.getOrCreate(t,n))}),this.gatewayController=null,this._animCompIds=Object.keys(this.comps).filter(e=>{let t=this.comps[e];return t&&typeof t.tick==`function`}),this._ledCompIds=Object.keys(this.comps).filter(e=>{let t=this.comps[e];return t&&typeof t.updateLED==`function`}),this._hasDigital=Object.values(this.comps).some(e=>e.type&&(e.type.startsWith(`digital_`)||e.type===`mcu`||e.type===`mcs51`)),this._hasACSource=Object.values(this.comps).some(e=>e.type===`ac_source`||e.type===`source_3p`||e.type===`signal_generator`||e.type===`ups`),this._hasCalibrator=Object.values(this.comps).some(e=>e.type===`calibrator`),ta.enabled=!1,this._scheduleNextPhysics()}initHistory(){let e=document.getElementById(`btnUndo`),t=document.getElementById(`btnRedo`);this.history.onChange=()=>{e.disabled=!(this.history.undos&&this.history.undos.length>0),t.disabled=!(this.history.redos&&this.history.redos.length>0)},this.history.onChange()}initStageEvents(){this.stage.on(`mousemove`,()=>{if(!this.linkingState||!this.tempLine)return;let e=this.stage.getPointerPosition(),t;if(this.linkingState.comp&&this.linkingState.comp.getAbsPortPos)t=this.linkingState.comp.getAbsPortPos(this.linkingState.portId);else{let e=this.linkingState.portId.split(`_wire_`)[0]||this.linkingState.portId.split(`_`)[0];t=this.comps[e]?.getAbsPortPos(this.linkingState.portId)}t&&(this.tempLine.points([t.x,t.y,e.x,e.y]),this.tempLine.moveToBottom(),this.requestRedraw())}),this.stage.on(`mousemove`,()=>{let e=this.stage.getPointerPosition();if(this._lastPointerPos=e,!this._selectionRect||!this._selRectStart)return;let t=Math.min(this._selRectStart.x,e.x),n=Math.min(this._selRectStart.y,e.y),r=Math.abs(e.x-this._selRectStart.x),i=Math.abs(e.y-this._selRectStart.y);this._selectionRect.x(t),this._selectionRect.y(n),this._selectionRect.width(r),this._selectionRect.height(i),this.lineLayer.batchDraw()}),this.stage.on(`mousedown`,e=>{let t=this._findCompGroup(e.target);if(t){t.id();return}this.deselectAll();let n=this.stage.getPointerPosition();this._selRectStart={x:n.x,y:n.y},this._selectionRect=new Konva.Rect({x:n.x,y:n.y,width:0,height:0,stroke:`#3498db`,strokeWidth:1.5,dash:[6,3],fill:`rgba(52, 152, 219, 0.1)`,name:`selection-rubber`,listening:!1}),this.lineLayer.add(this._selectionRect)}),this.stage.on(`mouseup`,()=>{if(!this._selectionRect||!this._selRectStart)return;let e=this._lastPointerPos||this.stage.getPointerPosition(),t={x:Math.min(this._selRectStart.x,e.x),y:Math.min(this._selRectStart.y,e.y),width:Math.abs(e.x-this._selRectStart.x),height:Math.abs(e.y-this._selRectStart.y)};if(this._selectionRect.destroy(),this._selectionRect=null,this._selRectStart=null,t.width>5&&t.height>5){for(let e in this.comps){let n=this.comps[e].group;if(!n.visible())continue;let r=n.getClientRect();this._rectsIntersect(t,r)&&(this.selectedCompIds.add(e),this.comps[e].setSelected(!0))}this.requestRedraw()}}),this.stage.on(`click`,e=>{if(this._selectionRect)return;let t=this._findCompGroup(e.target);if(t){let n=t.id();this.lastClickedId=n,e.evt.ctrlKey||e.evt.metaKey?this.selectedCompIds.has(n)?(this.selectedCompIds.delete(n),this.comps[n].setSelected(!1)):(this.selectedCompIds.add(n),this.comps[n].setSelected(!0)):(!this.selectedCompIds.has(n)||this.selectedCompIds.size>1)&&(this.deselectAll(),this.selectedCompIds.add(n),this.comps[n].setSelected(!0)),this.requestRedraw()}}),this.stage.on(`contextmenu`,e=>{e.evt.preventDefault(),e.evt.stopPropagation(),(e.target===this.stage||e.target.name()===`background-rect`)&&this.uiMgr.showSystemContextMenu(e.evt)}),window.addEventListener(`contextmenu`,e=>{e.preventDefault(),this.connMgr.resetLinking()}),window.addEventListener(`keydown`,e=>{e.key===`Escape`&&this.connMgr.resetLinking()}),window.addEventListener(`keydown`,e=>{e.key===`Delete`&&this.selectedCompIds.size>0&&(e.preventDefault(),this.deleteSelected()),(e.ctrlKey||e.metaKey)&&e.key===`a`&&(e.preventDefault(),this.selectAll()),e.key===`Escape`&&this.deselectAll()})}_findCompGroup(e){let t=e;for(;t&&t!==this.stage;){if(t.id&&t.id()&&this.comps[t.id()])return t;t=t.getParent()}return null}_rectsIntersect(e,t){return!(t.x>e.x+e.width||t.x+t.width<e.x||t.y>e.y+e.height||t.y+t.height<e.y)}deselectAll(){for(let e of this.selectedCompIds){let t=this.comps[e];t&&t.setSelected(!1)}this.selectedCompIds.clear(),this.requestRedraw()}selectAll(){this.deselectAll();for(let e in this.comps){let t=this.comps[e];t.group&&t.group.visible()&&(this.selectedCompIds.add(e),t.setSelected(!0))}this.requestRedraw()}deleteSelected(){if(this.selectedCompIds.size===0)return;let e=[...this.selectedCompIds];this.deselectAll();let t=this,n=e.map(e=>{let n=t.comps[e];return n?{config:{...n.config,x:n.group.x(),y:n.group.y()},Class:n.constructor}:null}).filter(Boolean),r=t.conns.filter(t=>{let n=t.from&&(t.from.split(`_wire_`)[0]||t.from.split(`_`)[0]),r=t.to&&(t.to.split(`_wire_`)[0]||t.to.split(`_`)[0]);return e.includes(n)||e.includes(r)});t.history.do({do(){n.forEach(({config:e})=>{let n=t.comps[e.id];n&&(n.group.destroy(),delete t.comps[e.id]);let r=t._animCompIds.indexOf(e.id);r!==-1&&t._animCompIds.splice(r,1);let i=t._ledCompIds.indexOf(e.id);i!==-1&&t._ledCompIds.splice(i,1)}),t.conns=t.conns.filter(t=>{let n=t.from&&(t.from.split(`_wire_`)[0]||t.from.split(`_`)[0]),r=t.to&&(t.to.split(`_wire_`)[0]||t.to.split(`_`)[0]);return!e.includes(n)&&!e.includes(r)}),t.renderer.redrawAll(),t.requestRedraw()},undo(){n.forEach(({config:e,Class:n})=>{let r=new n(e,t);t.layer.add(r.group);let i=r.group;i.on(`dragstart`,()=>t._onDragStart(e.id)),i.on(`dragmove`,()=>t._onDragMove(e.id)),i.on(`dragend`,()=>t._onDragEnd()),t.comps[e.id]=r,typeof r.tick==`function`&&!t._animCompIds.includes(e.id)&&t._animCompIds.push(e.id),typeof r.updateLED==`function`&&!t._ledCompIds.includes(e.id)&&t._ledCompIds.push(e.id)}),t._applyStaticCaching(),r.forEach(e=>t.conns.push(e)),t.renderer.redrawAll(),t.requestRedraw()}})}_onDragStart(e){if(!(this.selectedCompIds.size<2)){this._dragStartPositions={};for(let e of this.selectedCompIds){let t=this.comps[e].group;this._dragStartPositions[e]={x:t.x(),y:t.y()}}this._dragGroupId=e}}_onDragMove(e){if(this._dragGroupId!==e||this.selectedCompIds.size<2)return;let t=this.comps[e].group,n=this._dragStartPositions[e];if(!n)return;let r=t.x()-n.x,i=t.y()-n.y;if(r!==0||i!==0){for(let t of this.selectedCompIds){if(t===e)continue;let n=this.comps[t].group,a=this._dragStartPositions[t];a&&(n.x(a.x+r),n.y(a.y+i))}this.renderer.updateLinePositions(),this.requestRedraw()}}_onDragEnd(){this._dragStartPositions={},this._dragGroupId=null}handlePortClick(e,t,n){this.connMgr.handlePortClick(e,t,n)}resetLinking(){this.connMgr.resetLinking()}addConnWithHistory(e){this.connMgr.addConnWithHistory(e)}addConn(e){this.connMgr.addConn(e)}removeConnWithHistory(e){this.connMgr.removeConnWithHistory(e)}removeConn(e){this.connMgr.removeConn(e)}addConnectionAnimated(e){return this.connMgr.addConnectionAnimated(e)}_connEqual(e,t){return this.connMgr.connEqual(e,t)}_connKeyCanonical(e){return this.connMgr.connKeyCanonical(e)}redrawAll(){this.renderer.redrawAll()}requestRedraw(){this._needsRedraw=!0}updateLinePositions(){this.renderer.updateLinePositions()}showSystemContextMenu(e){this.uiMgr.showSystemContextMenu(e)}setSimulationStep(e){this.uiMgr.setSimulationStep(e)}showFloatingTip(e,t){this.uiMgr.showFloatingTip(e,t)}switchWorkflow(e){this.workflowMgr.switchWorkflow(e)}openWorkflowPanel(e){this.workflowMgr.openWorkflowPanel(e)}applyAllPresets(){this.workflowMgr.applyAllPresets()}async applyStartSystem(){return this.workflowMgr.applyStartSystem()}fiveStep(){this.workflowMgr.fiveStep()}getVoltageBetween(e,t){return this.voltageSolver.getPD(e,t)}isPortConnected(e,t){return this.voltageSolver.isPortConnected(e,t)}getPressAt(e){}onComponentStateChange(e){}_updatePhysics(){this._physicsIterCount++;let e=performance.now();if(this.conns.some(e=>e.type===`wire`)||this._hasCalibrator){let e=this._consecutiveStableFrames;if(!this._hasACSource&&e>10&&e%2==0)this._consecutiveStableFrames++;else{let e=performance.now();this.voltageSolver.update(),ta.recordMetric(`circuitSolve`,performance.now()-e),this.voltageSolver.lastIterCount<5?this._consecutiveStableFrames++:this._consecutiveStableFrames=0}}else this._consecutiveStableFrames=0;if(this.conns.some(e=>e.type===`pipe`)){let e=performance.now();this.pressSolver.solve(),ta.recordMetric(`pneumaticSolve`,performance.now()-e)}if(this._hasDigital){let e=performance.now();this.digitalSolver&&this.digitalSolver.update(1/20),this.mcuSolver&&this.mcuSolver.update(1/20,5),this.mcs51Solver&&this.mcs51Solver.update(1/20),this._updateDigitalLEDs(),ta.recordMetric(`digitalSolve`,performance.now()-e)}if(this.modbusBus)try{this.modbusBus.update()}catch(e){console.warn(`[consys] Modbus update error:`,e)}{let e=performance.now();this.thermalSolver&&this.thermalSolver.solve(1/20),ta.recordMetric(`thermalSolve`,performance.now()-e)}this.deviceManager&&this.deviceManager.tick(1/20);{let e=performance.now();this._tickAll(1/20),ta.recordMetric(`tickAll`,performance.now()-e)}ta.recordMetric(`physicUpdate`,performance.now()-e),this._physicsTimer=setTimeout(()=>this._scheduleNextPhysics(),50)}_scheduleNextPhysics(){this._updatePhysics()}_tickAll(e){if(this._animCompIds){for(let t=0;t<this._animCompIds.length;t++){let n=this.comps[this._animCompIds[t]];n&&n.tick&&n.tick(e)}if(this._needsRedraw){this._needsRedraw=!1;try{this.layer.draw(),this.lineLayer.draw()}catch{this.layer.batchDraw(),this.lineLayer.batchDraw()}}}}_updateDigitalLEDs(){for(let e=0;e<this._ledCompIds.length;e++){let t=this.comps[this._ledCompIds[e]];t&&t.updateLED()}}_applyStaticCaching(){Object.values(this.comps).forEach(e=>{if(e.cache===`fixed`){let t=e._staticGroup||e.group;if(t&&t.cache){let e=t.getClientRect({relativeTo:t});e&&e.width>0&&e.height>0&&t.cache({x:e.x,y:e.y,width:Math.ceil(e.width),height:Math.ceil(e.height)})}}})}showInstrument(){let e=document.getElementById(`instrumentModal`);if(e.style.display===`flex`){e.style.display=`none`;return}let t=document.getElementById(`instrumentForm`);t.innerHTML=``,[{id:`elecmeter`,name:`数字功率计`,compId:`elecmeter`},{id:`mf47`,name:`指针万用表`,compId:`mf47-panel`},{id:`multimeter`,name:`数字万用表`,compId:`multimeter`},{id:`sg`,name:`信号发生器`,compId:`sg`},{id:`cali`,name:`过程校验仪`,compId:`cali`},{id:`osc`,name:`三路示波器`,compId:`osc`},{id:`megohm`,name:`手摇兆欧表`,compId:`megohm`}].forEach(e=>{let n=document.createElement(`div`);n.className=`i-checkbox`;let r=document.createElement(`input`);r.type=`checkbox`,r.value=e.compId,r.id=`instr_${e.id}`;let i=this.comps[e.compId];i&&i.group&&(r.checked=i.group.visible()),r.addEventListener(`change`,t=>{this.toggleInstrumentVisibility(e.compId,t.target.checked)});let a=document.createElement(`label`);a.htmlFor=`instr_${e.id}`,a.textContent=e.name,a.style.cursor=`pointer`,a.style.flex=`1`,n.appendChild(r),n.appendChild(a),t.appendChild(n)}),e.style.display=`flex`}toggleInstrumentVisibility(e,t){let n=this.comps[e];if(n&&n.group){if(n.group.visible(t),n.group.listening(!0),t){if(n.cache===`fixed`&&n._staticGroup){let e=n._staticGroup.getClientRect({relativeTo:n._staticGroup});n._staticGroup.clearCache(),e&&e.width>0&&e.height>0&&n._staticGroup.cache({x:e.x,y:e.y,width:Math.ceil(e.width),height:Math.ceil(e.height)})}this.stage.draw()}this.requestRedraw()}}},Hs=`modulepreload`,Us=function(e,t){return new URL(e,t).href},Ws={},Gs=function(e,t,n){let r=Promise.resolve();if(t&&t.length>0){let e=document.getElementsByTagName(`link`),i=document.querySelector(`meta[property=csp-nonce]`),a=i?.nonce||i?.getAttribute(`nonce`);function o(e){return Promise.all(e.map(e=>Promise.resolve(e).then(e=>({status:`fulfilled`,value:e}),e=>({status:`rejected`,reason:e}))))}function s(e){return import.meta.resolve?import.meta.resolve(e):new URL(e,import.meta.url).href}r=o(t.map(t=>{if(t=Us(t,n),t=s(t),t in Ws)return;Ws[t]=!0;let r=t.endsWith(`.css`);for(let n=e.length-1;n>=0;n--){let i=e[n];if(i.href===t&&(!r||i.rel===`stylesheet`))return}let i=document.createElement(`link`);if(i.rel=r?`stylesheet`:Hs,r||(i.as=`script`),i.crossOrigin=``,i.href=t,a&&i.setAttribute(`nonce`,a),document.head.appendChild(i),r)return new Promise((e,n)=>{i.addEventListener(`load`,e),i.addEventListener(`error`,()=>n(Error(`Unable to preload CSS for ${t}`)))})}))}function i(e){let t=new Event(`vite:preloadError`,{cancelable:!0});if(t.payload=e,window.dispatchEvent(t),!t.defaultPrevented)throw e}return r.then(t=>{for(let e of t||[])e.status===`rejected`&&i(e.reason);return e().catch(i)})};window.sys=new Vs({gateway:!1});function Ks(){let e=document.getElementById(`gatewayPanel`),t=document.getElementById(`gatewayPanelBody`),n=document.getElementById(`btnGateway`);if(!e||!t||!n)return;let r=!1;n.onclick=()=>{let n=e.style.display===`block`;if(e.style.display=n?`none`:`block`,!n&&!r){t.innerHTML=window.sys.gatewayPanelHtml;let{GatewayPanel:e}=window.sys.gatewayPanelModule;e.bindEvents(window.sys.gatewayController),r=!0}},document.getElementById(`gatewayPanelClose`).onclick=()=>{e.style.display=`none`}}function qs(){let e=document.getElementById(`btnGateway`),t=document.getElementById(`gatewayPanel`);if(!window.sys._options.gateway){e&&(e.style.display=`none`),t&&(t.style.display=`none`);return}Gs(()=>Promise.resolve().then(()=>(zs(),Is)).then(e=>{window.sys.gatewayPanelModule=e,window.sys.gatewayPanelHtml=e.GatewayPanel.createPanel(),window.sys.gatewayController=new e.GatewayController(window.sys.equipmentPool,window.sys.eventBus,{baudRate:115200,wsUrl:`ws://localhost:8080`}),Ks()}),void 0,import.meta.url).catch(e=>{console.warn(`[GatewayUI] 无法加载网关模块:`,e)})}var Js=()=>{if(!sys||!sys.connMgr||!sys.comps)return;let e=document.getElementById(`heavyLoadShow`);!e||!e.checked||Xs.forEach(e=>sys.connMgr.addConn(e))};Object.entries({btnUndo:()=>sys.history.undo(),btnRedo:()=>sys.history.redo(),btnAutoWire:()=>{sys.applyAllPresets(),Js()},btnStartSys:()=>{sys.applyStartSystem(),Js()},btnFiveStep:()=>sys.fiveStep(),btnReset:()=>location.reload(),btnInstrument:()=>sys.showInstrument()}).forEach(([e,t])=>{let n=document.getElementById(e);n&&(n.onclick=t)});var Ys={modal:document.getElementById(`faultModal`),form:document.getElementById(`faultForm`),toggle:e=>{e&&Ys.sync(),Ys.modal.style.display=e?`flex`:`none`},sync:()=>{Ys.form.querySelectorAll(`input[type="checkbox"]`).forEach(e=>{let t=sys.FAULT_CONFIG[e.value];t&&(e.checked=t.check())})},apply:()=>{Ys.form.querySelectorAll(`input[type="checkbox"]`).forEach(e=>{let t=e.value,n=sys.FAULT_CONFIG[t];n&&(e.checked?n.trigger():n.repair())}),Ys.toggle(!1),sys&&typeof sys.requestRedraw==`function`&&sys.requestRedraw()}};document.getElementById(`faultBtn`).onclick=()=>Ys.toggle(!0),document.getElementById(`cancelBtn`).onclick=()=>Ys.toggle(!1),document.getElementById(`applyBtn`).onclick=()=>Ys.apply(),document.getElementById(`instrumentCancelBtn`).onclick=()=>{document.getElementById(`instrumentModal`).style.display=`none`};var Xs=[{from:`bus1_wire_l1_5`,to:`heavyload_wire_l1`,type:`wire`},{from:`bus1_wire_l2_5`,to:`heavyload_wire_l2`,type:`wire`},{from:`bus1_wire_l3_5`,to:`heavyload_wire_l3`,type:`wire`},{from:`heavyload_wire_n`,to:`gnd1_wire_gnd`,type:`wire`},{from:`auto_ctl_wire_heavy_a`,to:`heavyload_wire_heavy_a`,type:`wire`},{from:`auto_ctl_wire_heavy_b`,to:`heavyload_wire_heavy_b`,type:`wire`}],Zs=document.getElementById(`heavyLoadShow`);Zs&&Zs.addEventListener(`change`,()=>{let e=Zs.checked;if(sys.toggleInstrumentVisibility(`heavyload`,e),!(!sys||!sys.connMgr)){if(e)Xs.forEach(e=>sys.connMgr.addConn(e));else{let e=sys.comps&&sys.comps.heavyload;e&&typeof e._stopLoad==`function`&&e._stopLoad(),Xs.forEach(e=>sys.connMgr.removeConn(e))}}}),window.addEventListener(`DOMContentLoaded`,e=>{Qs(),qs()});function Qs(){let e=document.getElementById(`taskSelect`),t=[document.getElementById(`btnShow`),document.getElementById(`btnStep`),document.getElementById(`btnTrain`),document.getElementById(`btnEval`)],n=()=>{let n=e.value!==``;t.forEach(e=>{e&&(e.disabled=!n,e.style.cursor=n?`pointer`:`not-allowed`,e.style.opacity=n?`1`:`0.5`)})};n(),e.addEventListener(`change`,()=>{n(),sys.switchWorkflow(e.value)})}Object.entries({btnShow:`show`,btnStep:`step`,btnTrain:`train`,btnEval:`eval`}).forEach(([e,t])=>{let n=document.getElementById(e);n&&(n.onclick=()=>sys.openWorkflowPanel(t))}),window.addEventListener(`resize`,()=>{sys.stage.width(sys.container.offsetWidth),sys.stage.height(sys.container.offsetHeight),sys.redrawAll()});</script>
   <style rel="stylesheet" crossorigin>body{background:#1e272e;flex-direction:column;height:100vh;margin:0;font-family:sans-serif;display:flex;overflow:hidden}#toolbar{color:#fff;z-index:1000;background:#799484d9;align-items:center;gap:8px;height:40px;padding:4px 6px;display:flex;box-shadow:0 2px 6px #00000040}#toolbar button{color:#fff;cursor:pointer;background:0 0;border:2px solid #312cbf40;border-radius:6px;padding:6px 10px}#toolbar button:hover{background:#06de554d}#toolbar button:disabled{color:#bcbcbc;cursor:not-allowed;opacity:.6;background-color:#f5f5f5;border:1px solid #d9d9d9}#toolbar label{color:#fff;align-items:center;gap:4px;font-size:13px;display:inline-flex}#toolbar select{border-radius:6px;padding:5px}#toolbar .toolbar-radio{color:#fff;cursor:pointer;white-space:nowrap;align-items:center;gap:2px;margin:0 2px;font-size:13px;display:inline-flex}#toolbar .toolbar-radio input[type=radio]{accent-color:#1395eb;cursor:pointer;margin:0 1px}#toolbar .toolbar-radio label{cursor:pointer;-webkit-user-select:none;user-select:none}#faultModal{z-index:2000;background:#0009;justify-content:center;align-items:center;display:none;position:fixed;inset:0}.modal-content{background:#fff;border-radius:8px;width:400px;overflow:hidden;box-shadow:0 10px 30px #00000080}.modal-header{color:#fff;background:#34495e;padding:15px;font-size:18px;font-weight:700}.modal-body{max-height:400px;padding:20px;overflow-y:auto}.modal-footer{background:#f1f2f6;justify-content:flex-end;gap:12px;padding:15px;display:flex}.btn-cancel{color:#fff;cursor:pointer;background:#95a5a6;border:none;border-radius:4px;padding:8px 20px}.btn-apply{color:#fff;cursor:pointer;background:#27ae60;border:none;border-radius:4px;padding:8px 25px;font-weight:700}.f-checkbox{cursor:pointer;border-bottom:1px solid #eee;align-items:center;gap:12px;padding:10px;transition:background .2s;display:flex}.f-checkbox:hover{background:#eae8a4}.f-checkbox input{cursor:pointer;width:18px;height:18px}.f-checkbox:last-child{border-bottom:none}.i-checkbox{cursor:pointer;border-bottom:1px solid #eee;align-items:center;gap:12px;padding:10px;transition:background .2s;display:flex}.i-checkbox:hover{background:#eae8a4}.i-checkbox input{cursor:pointer;width:18px;height:18px}.i-checkbox:last-child{border-bottom:none}#instrumentModal{z-index:2000;background:0 0;display:none;position:fixed;top:50px;left:50%;transform:translate(-50%)}#instrumentModal .modal-content{width:300px;max-height:480px}#instrumentModal .modal-body{max-height:360px;overflow-y:auto}#container{background:#f6f8f9 radial-gradient(#00000026 1px,#0000 1px) 0 0/60px 60px;flex:1;width:100%;min-height:0;position:relative}.side-panel{z-index:1500;color:#ecf0f1;background:#1e272e;border:1px solid #34495e;border-radius:8px;width:420px;max-height:calc(100vh - 70px);font-size:13px;display:none;position:fixed;top:52px;right:12px;overflow:hidden;box-shadow:0 8px 24px #00000080}.side-panel-header{background:#2c3e50;border-bottom:1px solid #34495e;justify-content:space-between;align-items:center;padding:10px 14px;font-size:14px;font-weight:700;display:flex}.side-panel-actions{align-items:center;gap:6px;display:flex}.side-panel-body{max-height:calc(100vh - 120px);padding:8px;overflow-y:auto}.btn-close{color:#95a5a6;cursor:pointer;background:0 0;border:none;padding:0 4px;font-size:18px;line-height:1}.btn-close:hover{color:#e74c3c}.btn-small{color:#ecf0f1;cursor:pointer;background:#34495e;border:1px solid #5d6d7e;border-radius:4px;padding:4px 10px;font-size:11px}.btn-small:hover{background:#4a6785}.btn-small.btn-danger{background:#a93226;border-color:#c0392b}.btn-small.btn-danger:hover{background:#c0392b}#btnGateway{background:#8e44ad;border-color:#9b59b6}.gateway-panel{color:#ecf0f1;flex-direction:column;gap:0;font-size:13px;display:flex}.gateway-header{border-bottom:1px solid #34495e;justify-content:space-between;align-items:center;padding:8px 0;font-size:14px;font-weight:700;display:flex}.gateway-status{color:#f39c12;background:#f39c1226;border-radius:3px;padding:2px 8px;font-size:11px;font-weight:400}.gateway-status.connected{color:#2ecc71;background:#2ecc7126}.gateway-section{border-bottom:1px solid #2c3e50;padding:10px 0}.gateway-section:last-child{border-bottom:none}.gateway-section-title{color:#7f8c8d;text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px;font-size:11px;font-weight:700}.gateway-radio-group{flex-direction:column;gap:6px;display:flex}.gateway-radio{cursor:pointer;align-items:center;gap:8px;padding:4px 0;display:flex}.gateway-radio input[type=radio]{cursor:pointer}.gateway-field{align-items:center;gap:8px;margin-bottom:8px;display:flex}.gateway-field label{color:#95a5a6;min-width:50px;font-size:12px}.gateway-select,.gateway-input{color:#ecf0f1;background:#2c3e50;border:1px solid #5d6d7e;border-radius:4px;flex:1;padding:5px 8px;font-size:12px}.gateway-input::placeholder{color:#5d6d7e}.gateway-btn{color:#ecf0f1;cursor:pointer;background:#34495e;border:1px solid #5d6d7e;border-radius:4px;padding:6px 14px;font-size:12px;transition:background .15s}.gateway-btn:hover{background:#4a6785}.gateway-btn:disabled{opacity:.4;cursor:not-allowed}.gateway-btn-primary{background:#2980b9;border-color:#3498db}.gateway-btn-primary:hover{background:#3498db}.gateway-btn-primary:disabled{opacity:.4;cursor:not-allowed;background:#2980b9}.gateway-btn-danger{background:#c0392b;border-color:#e74c3c}.gateway-btn-danger:hover{background:#e74c3c}.gateway-log{background:#1a1a2e;border:1px solid #34495e;border-radius:4px;max-height:200px;padding:6px;font-family:Consolas,Courier New,monospace;font-size:11px;line-height:1.6;overflow-y:auto}.gateway-log-empty{color:#5d6d7e;text-align:center;padding:20px 0;font-size:12px}.gateway-log-line{word-break:break-all;border-bottom:1px solid #ffffff08;padding:1px 0}.gateway-log-info{color:#7f8c8d}.gateway-log-rx{color:#2ecc71}.gateway-log-tx{color:#3498db}.gateway-log-error{color:#e74c3c}
 /*$vite$:1*/</style>
-<script src="../auth.js"></script>
+<script src="../lib/marked.min.js"></script>
+    <script src="../auth.js"></script>
 </head>
 
 <body>
+
+<!-- Markdown 实验文档预览层 -->
+<div id="docView" style="position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:99999;background:#f8f5ee;overflow-y:auto;color:#333a42;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
+  <style>
+    /* ===== 浅色护目 · 文档预览样式 ===== */
+    #docContent{flex:1;min-width:0;}
+    #docContent h1{color:#1a5276;border-bottom:3px solid #d4a937;padding-bottom:12px;margin:0 0 24px;font-size:26px;line-height:1.5;}
+    #docContent h2{color:#1c6e5a;border-bottom:1px solid #cdc19c;padding-bottom:8px;margin:38px 0 14px;font-size:21px;}
+    #docContent h3{color:#7d6608;margin:24px 0 10px;font-size:17px;}
+    #docContent p{color:#333a42;margin:12px 0;font-size:15px;line-height:1.9;}
+    #docContent img{max-width:100%;border-radius:8px;margin:16px 0;border:1px solid #e2d9bd;background:#fff;box-shadow:0 2px 10px rgba(120,105,60,.14);}
+    #docContent strong{color:#a04000;font-weight:700;}
+    #docContent em{color:#148f77;font-style:italic;}
+    #docContent a{color:#21618c;}
+    #docContent code{background:#efe9d8;color:#7d3a1c;padding:2px 6px;border-radius:4px;font-size:13px;}
+    #docContent pre{background:#f2ecdb;border:1px solid #e0d8b6;padding:16px;border-radius:8px;overflow:auto;}
+    #docContent pre code{background:transparent;padding:0;}
+    #docContent table{width:100%;border-collapse:collapse;margin:16px 0;}
+    #docContent td,#docContent th{border:1px solid #d5cdb8;padding:10px 14px;text-align:left;font-size:14px;}
+    #docContent th{background:#efe9da;color:#4a4a3a;font-weight:600;}
+    #docContent ul,#docContent ol{padding-left:26px;margin:12px 0;color:#333a42;}
+    #docContent li{margin:6px 0;line-height:1.8;}
+    #docContent blockquote{border-left:4px solid #c8a95c;padding:12px 20px;background:#f3ecdb;border-radius:0 8px 8px 0;margin:16px 0;color:#5c5542;}
+    #docContent hr{border:none;border-top:1px solid #e0d8c0;margin:28px 0;}
+    #docContent h1[id],#docContent h2[id]{scroll-margin-top:74px;}
+
+    /* 左侧目录 */
+    #docToc{position:sticky;top:76px;width:248px;flex-shrink:0;background:#fff;border:1px solid #e8e1cc;border-radius:10px;padding:16px 14px;max-height:calc(100vh - 110px);overflow-y:auto;box-shadow:0 2px 10px rgba(120,105,60,.08);}
+    #docToc .toc-title{font-size:15px;font-weight:700;color:#1a5276;margin:0 0 10px;padding-bottom:9px;border-bottom:2px solid #d4a937;}
+    #docToc ul{list-style:none;margin:0;padding:0;}
+    #docToc a{display:block;padding:6px 10px;border-radius:6px;color:#5b5340;text-decoration:none;font-size:14px;line-height:1.5;transition:background .15s,color .15s;}
+    #docToc a:hover{background:#f3ecdb;color:#1a5276;}
+    #docToc a.toc-l1{font-weight:600;color:#333a42;}
+    #docToc a.toc-l2{padding-left:22px;font-size:13px;}
+    #docToc a.toc-active{background:#e7ecd9;color:#1c6e5a;font-weight:600;}
+
+    @media (max-width:900px){ #docToc{display:none;} }
+  </style>
+  <!-- 顶部工具栏 -->
+  <div style="position:sticky;top:0;z-index:10;background:rgba(255,255,255,.93);backdrop-filter:blur(8px);padding:12px 24px;display:flex;align-items:center;gap:16px;border-bottom:1px solid #e0d8c0;box-shadow:0 1px 6px rgba(120,105,60,.08);">
+    <button id="btnReturnToSim" style="background:#27ae60;color:#fff;border:none;padding:8px 20px;border-radius:6px;font-size:15px;font-weight:600;cursor:pointer;transition:background .2s;">
+      &#9654; 返回实验
+    </button>
+    <span style="color:#8a8270;font-size:14px;">实验文档预览</span>
+  </div>
+  <!-- 两栏布局：左侧目录 + 右侧内容 -->
+  <div style="display:flex;align-items:flex-start;max-width:1200px;margin:0 auto;padding:28px 28px 80px;gap:32px;">
+    <nav id="docToc">
+      <div class="toc-title">目 录</div>
+      <ul id="docTocList"></ul>
+    </nav>
+    <div id="docContent">
+      <p style="text-align:center;color:#9a937f;padding:60px 0;font-size:15px;">加载实验文档中...</p>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var docView = document.getElementById('docView');
+  var btnReturn = document.getElementById('btnReturnToSim');
+  var docContent = document.getElementById('docContent');
+  var tocList = document.getElementById('docTocList');
+  var btnShowDoc = null;
+  var docLoaded = false;
+
+  // 工具栏"实验文档"按钮：重新打开文档预览层
+  function showDocView(){
+    docView.style.display = 'block';
+    docView.style.opacity = '1';
+    docView.scrollTop = 0;
+  }
+
+  // 工具栏按钮位于文档层之后，需等 DOM 解析完成后再绑定
+  document.addEventListener('DOMContentLoaded', function(){
+    btnShowDoc = document.getElementById('btnShowDoc');
+    if(btnShowDoc){
+      btnShowDoc.addEventListener('click', showDocView);
+      // 文档已加载成功则显示按钮
+      if(docLoaded) btnShowDoc.style.display = '';
+    }
+  });
+
+  // 返回实验：关闭文档层，显示仿真
+  btnReturn.addEventListener('click', function(){
+    docView.style.transition = 'opacity 0.3s';
+    docView.style.opacity = '0';
+    setTimeout(function(){
+      docView.style.display = 'none';
+      // 触发 resize 让 Konva 舞台适应容器尺寸
+      window.dispatchEvent(new Event('resize'));
+    }, 300);
+  });
+
+  // 点击目录项：平滑滚动到对应标题
+  tocList.addEventListener('click', function(e){
+    var a = e.target.closest('a');
+    if(!a) return;
+    var el = document.getElementById(a.getAttribute('href').slice(1));
+    if(el){
+      e.preventDefault();
+      el.scrollIntoView({behavior:'smooth', block:'start'});
+      tocList.querySelectorAll('a').forEach(function(x){ x.classList.remove('toc-active'); });
+      a.classList.add('toc-active');
+    }
+  });
+
+  function escapeHtml(s){
+    return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+
+  // 根据文档最高两级标题（h1/h2）生成目录
+  function buildToc(){
+    var headings = docContent.querySelectorAll('h1, h2');
+    if(headings.length === 0) return;
+    var html = '';
+    headings.forEach(function(h, i){
+      var id = 'doc-sec-' + i;
+      h.id = id;
+      var cls = h.tagName.toLowerCase() === 'h1' ? 'toc-l1' : 'toc-l2';
+      html += '<li><a class="' + cls + '" href="#' + id + '">' + escapeHtml(h.textContent.trim()) + '</a></li>';
+    });
+    tocList.innerHTML = html;
+  }
+
+  // 加载文档
+  async function loadDoc(){
+    var title = document.title.trim();
+    try {
+      var resp = await fetch('docs/' + encodeURIComponent(title) + '.md');
+      if(!resp.ok) throw new Error('not found');
+      var md = await resp.text();
+      // 修正图片路径：docs-img/ → docs/docs-img/
+      md = md.replace(/]\(docs-img\//g, '](docs/docs-img/').replace(/]\(images\//g, '](docs/docs-img/');
+      // 解析 Markdown
+      if(typeof marked !== 'undefined'){
+        docContent.innerHTML = marked.parse(md);
+      } else {
+        docContent.textContent = md;
+      }
+      // 生成两级目录
+      buildToc();
+      // 文档加载成功，显示工具栏"实验文档"按钮
+      docLoaded = true;
+      if(btnShowDoc) btnShowDoc.style.display = '';
+    } catch(e){
+      // 文档不存在，直接进入仿真
+      docView.style.display = 'none';
+      console.log('[DocLoader] 文档不存在或加载失败，直接进入仿真:', e.message);
+    }
+  }
+
+  loadDoc();
+})();
+</script>
 
     <!-- 顶部工具栏 -->
     <div id="toolbar">
@@ -195,6 +351,8 @@ LOOP`,xr:.74,fill:`#c00`},{label:`COM`,xr:.9,fill:`#222`}],o=10*e,s=n-30*e;a.for
         <button id="btnFiveStep" title="5点观察输入输出">5点步进</button>        
         <button id="faultBtn" title="选择故障进行设置">故障设置</button>
         <button id="btnReset" title="重置系统">重置系统</button>
+
+        <button id="btnShowDoc" title="查看实验文档" style="display:none;">实验文档</button>
 
         <select id="taskSelect">
         </select>
