@@ -10,11 +10,6 @@ build/
 .claude/settings.local.json
 codegraph-analysis.md
 skills-lock.json
-docs/
-!ethird/docs/
-!ethird/docs/docs-img/
-!motor/docs/
-!motor/docs/docs-img/
 .codegraph/
 .playwright-mcp/page-2026-08-10T09-39-37-230Z.yml
 .playwright-mcp/page-2026-08-10T09-41-46-304Z.yml
