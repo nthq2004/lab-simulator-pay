@@ -9,5 +9,5 @@
 - `workers/` — Cloudflare Worker API（注册/登录/支付）
 
 ## 部署
-- **静态站点**：由 Cloudflare Pages 通过 GitHub 集成自动部署（生产分支 `master`）
+- **静态站点**：由 Cloudflare Pages 通过 GitHub 集成自动部署（生产分支 `master`）。若 push 后长时间未更新，检查 GitHub 仓库 Webhooks 中是否有 Cloudflare 的 webhook，必要时在 Cloudflare Pages 重新连接 GitHub 仓库。
 - **Worker API**：`cd workers && pnpm run deploy`（部署到 pay.wangaijun.click）
