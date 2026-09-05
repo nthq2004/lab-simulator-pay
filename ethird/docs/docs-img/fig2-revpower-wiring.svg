@@ -1,0 +1,160 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="680" viewBox="0 0 1000 680" font-family="'Microsoft YaHei', SimHei, sans-serif">
+  <defs>
+    <marker id="aw" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L9,3 L0,6 Z" fill="#333"/>
+    </marker>
+  </defs>
+
+  <!-- 标题 -->
+  <text x="500" y="32" text-anchor="middle" font-size="22" font-weight="bold" fill="#1a2a4a">逆功率继电器与发电机输出的连接接线图</text>
+  <text x="500" y="53" text-anchor="middle" font-size="13" fill="#666">发电机经断路器并网运行，电流取自发电机出口 CT、电压取自母线 TV，出口触点作用于跳闸与信号</text>
+  <line x1="40" y1="66" x2="960" y2="66" stroke="#c9d6e8" stroke-width="2"/>
+
+  <!-- ═══════════ 母线（三相） ═══════════ -->
+  <rect x="55" y="14" width="200" height="26" rx="6" fill="#eaf4fb" stroke="#3a7bd5" stroke-width="1.4"/>
+  <text x="155" y="31" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#1a4d8f">母线（电网 / 系统）</text>
+  <line x1="60" y1="86" x2="430" y2="86" stroke="#333" stroke-width="2.4"/>
+  <line x1="60" y1="100" x2="430" y2="100" stroke="#333" stroke-width="2.4"/>
+  <line x1="60" y1="114" x2="430" y2="114" stroke="#333" stroke-width="2.4"/>
+  <text x="440" y="91" font-size="11" fill="#666">A相</text>
+  <text x="440" y="105" font-size="11" fill="#666">B相</text>
+  <text x="440" y="119" font-size="11" fill="#666">C相</text>
+
+  <!-- ═══════════ TV 电压互感器（母线侧） ═══════════ -->
+  <rect x="360" y="118" width="92" height="46" rx="8" fill="#fdf3e3" stroke="#d98a2b" stroke-width="1.6"/>
+  <text x="406" y="139" text-anchor="middle" font-size="13" font-weight="bold" fill="#8a5a1a">TV</text>
+  <text x="406" y="155" text-anchor="middle" font-size="10.5" fill="#666">电压互感器</text>
+  <!-- TV 一次并联母线 A 相 -->
+  <line x1="150" y1="86" x2="150" y2="146" stroke="#333" stroke-width="1.6"/>
+  <line x1="150" y1="146" x2="360" y2="146" stroke="#333" stroke-width="1.6"/>
+  <line x1="150" y1="86" x2="360" y2="146" stroke="#333" stroke-width="1.6" stroke-dasharray="2,4" opacity="0"/>
+  <text x="248" y="136" text-anchor="middle" font-size="10.5" fill="#666">一次并联</text>
+  <!-- 二次输出端子 a / n -->
+  <circle cx="406" cy="164" r="3" fill="#333"/>
+  <text x="418" y="168" font-size="10.5" fill="#555">a（A相电压）</text>
+  <circle cx="406" cy="178" r="3" fill="#333"/>
+  <text x="418" y="182" font-size="10.5" fill="#555">n（中性点）</text>
+
+  <!-- ═══════════ 主回路：母线 A 相 → QF → CT → 发电机 ═══════════ -->
+  <line x1="150" y1="86" x2="150" y2="122" stroke="#333" stroke-width="2.2"/>
+
+  <!-- QF 并网断路器 -->
+  <rect x="118" y="122" width="64" height="52" rx="8" fill="#fff" stroke="#555" stroke-width="1.8"/>
+  <text x="150" y="144" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">QF</text>
+  <text x="150" y="160" text-anchor="middle" font-size="10" fill="#666">并网断路器</text>
+  <!-- 分闸跳闸线圈注 -->
+  <text x="214" y="140" font-size="10.5" fill="#555">跳闸线圈 YT</text>
+  <text x="214" y="154" font-size="10.5" fill="#555">（QF 内）</text>
+  <line x1="182" y1="140" x2="206" y2="140" stroke="#888" stroke-width="1.2" stroke-dasharray="3,3"/>
+
+  <line x1="150" y1="174" x2="150" y2="196" stroke="#333" stroke-width="2.2"/>
+
+  <!-- CT 电流互感器（发电机出口 A 相） -->
+  <rect x="116" y="196" width="68" height="62" rx="8" fill="#eaf4fb" stroke="#3a7bd5" stroke-width="1.6"/>
+  <text x="150" y="222" text-anchor="middle" font-size="14" font-weight="bold" fill="#1a4d8f">CT</text>
+  <text x="150" y="240" text-anchor="middle" font-size="10" fill="#666">电流互感器</text>
+  <text x="150" y="253" text-anchor="middle" font-size="10" fill="#666">（发电机出口）</text>
+  <!-- 穿心主线 -->
+  <line x1="150" y1="196" x2="150" y2="258" stroke="#333" stroke-width="2.2"/>
+  <!-- 二次端子 -->
+  <circle cx="104" cy="212" r="3" fill="#333"/>
+  <text x="62" y="216" text-anchor="middle" font-size="10.5" fill="#555">s1</text>
+  <circle cx="104" cy="244" r="3" fill="#333"/>
+  <text x="62" y="248" text-anchor="middle" font-size="10.5" fill="#555">s2</text>
+
+  <!-- 发电机 -->
+  <circle cx="150" cy="380" r="58" fill="#f2f7f2" stroke="#2f6b3d" stroke-width="2.4"/>
+  <text x="150" y="376" text-anchor="middle" font-size="22" font-weight="bold" fill="#2f6b3d">G</text>
+  <text x="150" y="398" text-anchor="middle" font-size="11" fill="#333">发电机</text>
+  <text x="150" y="414" text-anchor="middle" font-size="10.5" fill="#666">（由原动机驱动）</text>
+  <line x1="150" y1="322" x2="150" y2="358" stroke="#333" stroke-width="1.2" stroke-dasharray="4,3"/>
+  <!-- 中性点接地示意 -->
+  <line x1="120" y1="408" x2="82" y2="446" stroke="#2f6b3d" stroke-width="1.6"/>
+  <line x1="72" y1="456" x2="92" y2="446" stroke="#2f6b3d" stroke-width="2"/>
+  <line x1="82" y1="446" x2="94" y2="434" stroke="#2f6b3d" stroke-width="1.6"/>
+  <text x="36" y="470" font-size="10.5" fill="#2f6b3d">中性点</text>
+
+  <!-- ═══════════ 逆功率继电器 KRP ═══════════ -->
+  <rect x="420" y="212" width="190" height="210" rx="10" fill="#f6f0fc" stroke="#8e5bc0" stroke-width="2"/>
+  <text x="515" y="238" text-anchor="middle" font-size="15" font-weight="bold" fill="#4a2d8a">逆功率继电器 KRP</text>
+  <line x1="432" y1="248" x2="598" y2="248" stroke="#8e5bc0" stroke-width="1"/>
+  <text x="515" y="268" text-anchor="middle" font-size="11" fill="#555">电流线圈（I1、I2）＋ 电压线圈（U1、U2）</text>
+  <text x="515" y="286" text-anchor="middle" font-size="11" fill="#555">相敏测量 → 逆功率判别 → 延时 → 出口</text>
+
+  <!-- 端子竖排 -->
+  <text x="432" y="318" font-size="11.5" fill="#333">I1（电流进）</text>
+  <circle cx="424" cy="312" r="3.5" fill="#333"/>
+  <text x="432" y="342" font-size="11.5" fill="#333">I2（电流出）</text>
+  <circle cx="424" cy="336" r="3.5" fill="#333"/>
+  <text x="432" y="366" font-size="11.5" fill="#333">U1（电压进）</text>
+  <circle cx="424" cy="360" r="3.5" fill="#333"/>
+  <text x="432" y="390" font-size="11.5" fill="#333">U2（电压回）</text>
+  <circle cx="424" cy="384" r="3.5" fill="#333"/>
+
+  <!-- 出口触点端子 -->
+  <text x="598" y="272" text-anchor="start" font-size="11.5" fill="#a02020">NO 出口（跳闸）</text>
+  <circle cx="612" cy="266" r="3.5" fill="#a02020"/>
+  <text x="598" y="296" text-anchor="start" font-size="11.5" fill="#a02020">NO 出口（信号）</text>
+  <circle cx="612" cy="290" r="3.5" fill="#a02020"/>
+
+  <!-- ═══════════ CT 二次接入继电器（电流回路） ═══════════ -->
+  <path d="M104 212 L300 212 L300 312 L424 312" stroke="#b5451d" stroke-width="1.8" fill="none" marker-end="url(#aw)"/>
+  <path d="M104 244 L330 244 L330 336 L424 336" stroke="#b5451d" stroke-width="1.8" fill="none"/>
+  <circle cx="300" cy="212" r="2.5" fill="#b5451d"/>
+  <circle cx="330" cy="244" r="2.5" fill="#b5451d"/>
+  <text x="246" y="262" font-size="10.5" fill="#b5451d">CT 二次（电流回路，注意极性）</text>
+
+  <!-- ═══════════ TV 二次接入继电器（电压回路） ═══════════ -->
+  <path d="M406 164 L380 164 L380 360 L424 360" stroke="#1a6bd6" stroke-width="1.8" fill="none" marker-end="url(#aw)"/>
+  <path d="M406 178 L398 178 L398 384 L424 384" stroke="#1a6bd6" stroke-width="1.8" fill="none"/>
+  <text x="432" y="330" font-size="10.5" fill="#1a6bd6">TV 二次（电压回路）</text>
+
+  <!-- ═══════════ 直流操作电源 ═══════════ -->
+  <line x1="790" y1="180" x2="790" y2="600" stroke="#c0392b" stroke-width="2.4"/>
+  <line x1="950" y1="180" x2="950" y2="600" stroke="#7f8c8d" stroke-width="2.4"/>
+  <text x="790" y="172" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#c0392b">+KM（正极）</text>
+  <text x="950" y="172" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#666">-KM（负极）</text>
+  <text x="870" y="200" text-anchor="middle" font-size="10.5" fill="#888">直流操作电源（110 / 220 V）</text>
+
+  <!-- ═══════════ 跳闸回路：NO 出口 → KM 中间继电器 → YT ═══════════ -->
+  <path d="M612 266 L700 266 L700 240 L790 240" stroke="#a02020" stroke-width="1.8" fill="none" marker-end="url(#aw)"/>
+  <!-- KM 中间继电器线圈 -->
+  <rect x="790" y="240" width="70" height="52" rx="6" fill="#fff" stroke="#555" stroke-width="1.5"/>
+  <text x="825" y="262" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">KM</text>
+  <text x="825" y="280" text-anchor="middle" font-size="10" fill="#666">中间继电器</text>
+  <line x1="825" y1="292" x2="825" y2="318" stroke="#333" stroke-width="1.5" marker-end="url(#aw)"/>
+  <line x1="825" y1="318" x2="950" y2="318" stroke="#333" stroke-width="1.5" marker-end="url(#aw)"/>
+
+  <!-- KM 触点 → 跳闸线圈 YT -->
+  <line x1="790" y1="348" x2="640" y2="348" stroke="#333" stroke-width="1.5"/>
+  <line x1="640" y1="348" x2="640" y2="330" stroke="#333" stroke-width="1.5" marker-end="url(#aw)"/>
+  <path d="M790 266 L790 348" stroke="#a02020" stroke-width="1.8" fill="none"/>
+  <text x="730" y="360" text-anchor="middle" font-size="10.5" fill="#a02020">KM 常开触点（闭合）</text>
+  <line x1="855" y1="348" x2="855" y2="392" stroke="#333" stroke-width="1.5" marker-end="url(#aw)"/>
+
+  <!-- 跳闸线圈 YT -->
+  <rect x="820" y="392" width="70" height="52" rx="6" fill="#fdeaea" stroke="#cc4444" stroke-width="1.6"/>
+  <text x="855" y="414" text-anchor="middle" font-size="13" font-weight="bold" fill="#a02020">YT</text>
+  <text x="855" y="431" text-anchor="middle" font-size="10" fill="#666">跳闸线圈</text>
+  <line x1="855" y1="444" x2="855" y2="480" stroke="#333" stroke-width="1.5" marker-end="url(#aw)"/>
+
+  <!-- QF 辅助常开触点 -->
+  <rect x="820" y="480" width="70" height="52" rx="6" fill="#fff" stroke="#555" stroke-width="1.5"/>
+  <text x="855" y="502" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">QF</text>
+  <text x="855" y="520" text-anchor="middle" font-size="9.5" fill="#666">辅助触点(常开)</text>
+  <line x1="855" y1="532" x2="855" y2="566" stroke="#333" stroke-width="1.5" marker-end="url(#aw)"/>
+  <line x1="855" y1="566" x2="950" y2="566" stroke="#333" stroke-width="1.5" marker-end="url(#aw)"/>
+  <text x="700" y="560" font-size="10.5" fill="#555">跳闸回路：+KM → KM ⊥ → YT → QF⊥ → -KM</text>
+
+  <!-- ═══════════ 信号回路：NO 信号出口 → 光字牌 ═══════════ -->
+  <path d="M612 290 L660 290 L660 440 L790 440" stroke="#2b6cb0" stroke-width="1.6" fill="none"/>
+  <rect x="790" y="440" width="70" height="46" rx="6" fill="#e8f0fe" stroke="#2b6cb0" stroke-width="1.6"/>
+  <text x="825" y="460" text-anchor="middle" font-size="12" font-weight="bold" fill="#1a4d8f">HS</text>
+  <text x="825" y="476" text-anchor="middle" font-size="9.5" fill="#555">光字牌</text>
+  <line x1="860" y1="463" x2="950" y2="463" stroke="#333" stroke-width="1.5" marker-end="url(#aw)"/>
+  <text x="700" y="434" font-size="10.5" fill="#2b6cb0">信号回路（"逆功率动作"告警）</text>
+
+  <!-- 底部说明 -->
+  <text x="500" y="640" text-anchor="middle" font-size="12" fill="#555">注：CT 二次极性须与 TV 二次电压相位正确配合，否则功率方向判别反向，功能测试时必须校验。</text>
+  <text x="500" y="662" text-anchor="middle" font-size="12" fill="#555">发电机失磁/失原动力时向系统倒送有功 → 逆功率继电器动作 → 切除发电机（解列）。</text>
+</svg>
