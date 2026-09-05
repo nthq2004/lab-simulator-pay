@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" font-family="Microsoft YaHei, sans-serif">
+  <defs>
+    <marker id="aR2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#e74c3c"/>
+    </marker>
+    <marker id="aK2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#333"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="32" text-anchor="middle" font-size="20" font-weight="bold" fill="#2d3436">项目二：通电感应法检测同名端</text>
+
+  <!-- ── 直流电源 ── -->
+  <rect x="40" y="120" width="150" height="120" rx="10" fill="#fdebd0" stroke="#e67e22" stroke-width="2"/>
+  <text x="115" y="165" text-anchor="middle" font-size="18" font-weight="bold" fill="#d35400">直流电源</text>
+  <text x="115" y="192" text-anchor="middle" font-size="14" fill="#2d3436">DC 12V</text>
+  <text x="115" y="215" text-anchor="middle" font-size="13" fill="#555">U1 接正、U2 接负</text>
+  <!-- 正负端子 -->
+  <line x1="72" y1="240" x2="72" y2="272" stroke="#e74c3c" stroke-width="3"/>
+  <text x="60" y="286" font-size="16" font-weight="bold" fill="#e74c3c">+</text>
+  <line x1="158" y1="240" x2="158" y2="272" stroke="#333" stroke-width="3"/>
+  <text x="150" y="286" font-size="16" font-weight="bold" fill="#333">−</text>
+  <!-- 电源开关 -->
+  <line x1="185" y1="180" x2="252" y2="180" stroke="#555" stroke-width="2"/>
+  <circle cx="186" cy="180" r="4" fill="#555"/>
+  <line x1="190" y1="180" x2="212" y2="168" stroke="#555" stroke-width="2.5"/>
+  <circle cx="252" cy="180" r="4" fill="#555"/>
+  <text x="300" y="186" font-size="13" fill="#555">接通 / 断开瞬间观察指针动作</text>
+
+  <!-- U 相绕组 -->
+  <line x1="72" y1="285" x2="300" y2="285" stroke="#e74c3c" stroke-width="3"/>
+  <line x1="158" y1="285" x2="300" y2="285" stroke="#333" stroke-width="3"/>
+  <circle cx="300" cy="100" r="12" fill="#e74c3c" stroke="#c0392b"/>
+  <circle cx="300" cy="300" r="12" fill="#e74c3c" stroke="#c0392b"/>
+  <text x="300" y="84" text-anchor="middle" font-size="15" fill="#2d3436">U1（+）</text>
+  <text x="300" y="330" text-anchor="middle" font-size="15" fill="#2d3436">U2（−）</text>
+  <path d="M300,112 L292,130 L308,148 L292,166 L308,184 L292,202 L308,220 L292,238 L308,256 L292,274 L308,288 L300,288" stroke="#2d3436" stroke-width="2.5" fill="none"/>
+
+  <!-- V 相绕组 -->
+  <circle cx="470" cy="100" r="12" fill="#e74c3c" stroke="#c0392b"/>
+  <circle cx="470" cy="300" r="12" fill="#e74c3c" stroke="#c0392b"/>
+  <text x="470" y="84" text-anchor="middle" font-size="15" fill="#2d3436">V1（红表笔）</text>
+  <text x="470" y="330" text-anchor="middle" font-size="15" fill="#2d3436">V2（黑表笔）</text>
+  <path d="M470,112 L462,130 L478,148 L462,166 L478,184 L462,202 L478,220 L462,238 L478,256 L462,274 L478,288 L470,288" stroke="#2d3436" stroke-width="2.5" fill="none"/>
+
+  <!-- MF47 指针表 -->
+  <rect x="600" y="150" width="160" height="130" rx="10" fill="#fdf2e9" stroke="#c0392b" stroke-width="2"/>
+  <circle cx="680" cy="205" r="42" fill="#fff" stroke="#333" stroke-width="2"/>
+  <g stroke="#333" stroke-width="1">
+    <line x1="680" y1="205" x2="680" y2="168"/>
+    <line x1="680" y1="205" x2="712" y2="196"/>
+    <line x1="680" y1="205" x2="668" y2="232"/>
+  </g>
+  <line x1="680" y1="205" x2="696" y2="178" stroke="#e74c3c" stroke-width="2.5"/>
+  <circle cx="680" cy="205" r="4" fill="#333"/>
+  <text x="680" y="262" text-anchor="middle" font-size="14" font-weight="bold" fill="#c0392b">MF47 指针表</text>
+  <text x="680" y="278" text-anchor="middle" font-size="12" fill="#2d3436">直流电压档 DCV10</text>
+  <!-- 表笔 -->
+  <line x1="620" y1="160" x2="470" y2="112" stroke="#e74c3c" stroke-width="3" marker-end="url(#aR2)"/>
+  <text x="532" y="130" font-size="13" fill="#e74c3c">红表笔(V-Ω)→V1</text>
+  <line x1="748" y1="170" x2="470" y2="288" stroke="#333" stroke-width="3" marker-end="url(#aK2)"/>
+  <text x="600" y="320" font-size="13" fill="#333" transform="rotate(-4 600 320)">黑表笔(COM)→V2</text>
+
+  <!-- 指针现象 -->
+  <rect x="40" y="360" width="720" height="46" rx="8" fill="#eafaf1" stroke="#27ae60" stroke-width="1.5"/>
+  <text x="400" y="378" text-anchor="middle" font-size="14" fill="#1e8449" font-weight="bold">接通瞬间：U 相电流增大 → V 相感应反向电压 → 指针反向偏转（U1 与 V1 为同名端）</text>
+  <text x="400" y="398" text-anchor="middle" font-size="13" fill="#555">断开瞬间：U 相电流减小 → 指针正向偏转</text>
+</svg>
