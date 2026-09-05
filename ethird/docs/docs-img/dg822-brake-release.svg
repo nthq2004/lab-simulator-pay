@@ -1,0 +1,63 @@
+<svg width="760" height="360" viewBox="0 0 760 360" xmlns="http://www.w3.org/2000/svg" font-family="Microsoft YaHei, sans-serif">
+  <rect x="0" y="0" width="760" height="360" fill="#fcfcfc" stroke="#ccc" stroke-width="1" rx="8"/>
+  <text x="380" y="26" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">图2 松闸（通电）状态</text>
+
+  <!-- 转轴 -->
+  <line x1="15" y1="180" x2="745" y2="180" stroke="#666" stroke-width="10" stroke-linecap="round"/>
+  <text x="682" y="166" font-size="12" fill="#444">转轴（可自由旋转）</text>
+  <path d="M620 180 q 18 -16 0 -34 q -14 0 -14 14 q 0 12 14 20 z" fill="none" stroke="#d32f2f" stroke-width="2.5"/>
+
+  <!-- 磁轭 -->
+  <rect x="40" y="70"  width="30" height="220" fill="#b9c4d4" stroke="#5a6a84" stroke-width="2"/>
+  <rect x="40" y="70"  width="130" height="40"  fill="#c2cddd" stroke="#5a6a84" stroke-width="2"/>
+  <rect x="40" y="250" width="130" height="40"  fill="#c2cddd" stroke="#5a6a84" stroke-width="2"/>
+  <rect x="130" y="150" width="40" height="60"  fill="#c2cddd" stroke="#5a6a84" stroke-width="2"/>
+  <text x="90" y="330" text-anchor="middle" font-size="13" fill="#3c4a63">磁轭（E形静铁心）</text>
+
+  <!-- 线圈（通电标记） -->
+  <rect x="95" y="118" width="36" height="124" fill="#ff9800" stroke="#b96b00" stroke-width="2" rx="4"/>
+  <line x1="101" y1="132" x2="125" y2="132" stroke="#fff" stroke-width="2"/>
+  <line x1="101" y1="146" x2="125" y2="146" stroke="#fff" stroke-width="2"/>
+  <line x1="101" y1="160" x2="125" y2="160" stroke="#fff" stroke-width="2"/>
+  <line x1="101" y1="174" x2="125" y2="174" stroke="#fff" stroke-width="2"/>
+  <line x1="101" y1="188" x2="125" y2="188" stroke="#fff" stroke-width="2"/>
+  <line x1="101" y1="202" x2="125" y2="202" stroke="#fff" stroke-width="2"/>
+  <line x1="101" y1="216" x2="125" y2="216" stroke="#fff" stroke-width="2"/>
+  <text x="113" y="336" text-anchor="middle" font-size="13" fill="#8a5200">线圈（通电）</text>
+
+  <!-- 复位弹簧（压缩） -->
+  <path d="M175 52 q 12 -6 0 0 q -12 6 0 0 q 12 -6 0 0 q -12 6 0 0" stroke="#2e7d32" stroke-width="3" fill="none"/>
+  <path d="M175 62 q 12 -6 0 0 q -12 6 0 0 q 12 -6 0 0 q -12 6 0 0" stroke="#2e7d32" stroke-width="3" fill="none"/>
+  <path d="M175 312 q 12 6 0 0 q -12 -6 0 0 q 12 6 0 0 q -12 -6 0 0" stroke="#2e7d32" stroke-width="3" fill="none"/>
+  <path d="M175 302 q 12 6 0 0 q -12 -6 0 0 q 12 6 0 0 q -12 -6 0 0" stroke="#2e7d32" stroke-width="3" fill="none"/>
+  <text x="375" y="52" text-anchor="middle" font-size="12" fill="#2e7d32">复位弹簧（压缩）</text>
+  <text x="375" y="334" text-anchor="middle" font-size="12" fill="#2e7d32">复位弹簧（压缩）</text>
+
+  <!-- 衔铁（吸合，左移贴近铁心） -->
+  <rect x="185" y="100" width="60" height="160" fill="#e8e8e8" stroke="#555" stroke-width="2"/>
+  <text x="215" y="340" text-anchor="middle" font-size="13" fill="#444">衔铁（吸合）</text>
+  <path d="M212 96 h 18 l -9 -10 z" fill="#2e7d32"/>
+
+  <!-- 摩擦片 -->
+  <rect x="245" y="112" width="16" height="136" fill="#a33" stroke="#5c1010" stroke-width="1.5" rx="2"/>
+  <text x="253" y="348" text-anchor="middle" font-size="12" fill="#8a2020">摩擦片（分离）</text>
+
+  <!-- 制动盘 -->
+  <rect x="306" y="70" width="20" height="220" fill="#7ba7d0" stroke="#2a5a86" stroke-width="2"/>
+  <circle cx="316" cy="180" r="10" fill="#fff" stroke="#2a5a86" stroke-width="2"/>
+  <text x="316" y="60" text-anchor="middle" font-size="13" fill="#2a5a86">制动盘</text>
+
+  <!-- 固定压板 -->
+  <rect x="340" y="70" width="36" height="220" fill="#9a9a9a" stroke="#555" stroke-width="2"/>
+  <text x="358" y="340" text-anchor="middle" font-size="12" fill="#555">固定压板</text>
+
+  <!-- 释放间隙标注 -->
+  <line x1="261" y1="128" x2="306" y2="128" stroke="#1565c0" stroke-width="2.5"/>
+  <line x1="261" y1="162" x2="306" y2="162" stroke="#1565c0" stroke-width="1" stroke-dasharray="4 4"/>
+  <text x="283" y="150" text-anchor="middle" font-size="13" font-weight="bold" fill="#1565c0">释放间隙</text>
+
+  <!-- 电磁吸力方向 -->
+  <text x="80" y="196" font-size="12" font-weight="bold" fill="#c62828">电磁吸力 →→</text>
+  <line x1="120" y1="210" x2="160" y2="210" stroke="#c62828" stroke-width="2.5"/>
+  <polygon points="160,204 170,210 160,216" fill="#c62828"/>
+</svg>
