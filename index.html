@@ -494,11 +494,11 @@ footer{
 
 <!-- 顶部导航 -->
 <div class="navbar">
-    <div class="nav-btn active" onclick="switchPage('chief')">大管轮评估项目</div>
-    <div class="nav-btn" onclick="switchPage('third')">三管轮评估项目</div>
-    <div class="nav-btn" onclick="switchPage('electronic')">电子员评估项目</div>
-    <div class="nav-btn" onclick="switchPage('automation')">自动化技能库</div>
-    <div class="nav-btn" onclick="switchPage('electrical')">电子电气技能库</div>
+    <div class="nav-btn active" data-page="chief" onclick="switchPage('chief')">大管轮评估项目</div>
+    <div class="nav-btn" data-page="third" onclick="switchPage('third')">三管轮评估项目</div>
+    <div class="nav-btn" data-page="electronic" onclick="switchPage('electronic')">电子员评估项目</div>
+    <div class="nav-btn" data-page="automation" onclick="switchPage('automation')">自动化技能库</div>
+    <div class="nav-btn" data-page="electrical" onclick="switchPage('electrical')">电子电气技能库</div>
     <div class="user-area" id="userArea">
         <!-- 未登录 -->
         <span class="user-btn" id="loginBtn" onclick="showLoginModal()">登录</span>
@@ -862,8 +862,24 @@ function switchPage(page){
 document.querySelectorAll(".page").forEach(p=>{p.classList.remove("active")})
 document.getElementById(page).classList.add("active")
 document.querySelectorAll(".nav-btn").forEach(b=>{b.classList.remove("active")})
-event.target.classList.add("active")
+var btn=document.querySelector('.nav-btn[data-page="'+page+'"]')
+if(btn)btn.classList.add("active")
+try{localStorage.setItem("labActivePage",page)}catch(e){}
 }
+
+/* ===== 恢复上次激活的栏目（练习时返回/前进保持停留）===== */
+(function(){
+var saved=null
+try{saved=localStorage.getItem("labActivePage")}catch(e){}
+if(!saved)return
+var pageEl=document.getElementById(saved)
+if(!pageEl)return
+document.querySelectorAll(".page").forEach(p=>{p.classList.remove("active")})
+pageEl.classList.add("active")
+document.querySelectorAll(".nav-btn").forEach(b=>{b.classList.remove("active")})
+var btn=document.querySelector('.nav-btn[data-page="'+saved+'"]')
+if(btn)btn.classList.add("active")
+})();
 
 /* ===== 认证 ===== */
 
