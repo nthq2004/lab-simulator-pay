@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="760" viewBox="0 0 940 760" font-family="'Microsoft YaHei',SimHei,sans-serif">
+  <defs>
+    <marker id="aDn" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#1c7ed6"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="940" height="760" fill="#fbfbfb" stroke="#ccc"/>
+  <text x="470" y="36" text-anchor="middle" font-size="22" font-weight="bold" fill="#1a1a1a">主开关不能合闸故障排查流程</text>
+
+  <g font-family="'Microsoft YaHei',SimHei,sans-serif">
+    <!-- 步骤1 -->
+    <rect x="300" y="60" width="340" height="52" rx="10" fill="#e7f0ff" stroke="#1c7ed6" stroke-width="2"/>
+    <text x="470" y="83" text-anchor="middle" font-size="14" font-weight="bold" fill="#1c7ed6">① 遥控合闸失败（按 SC 合不上）</text>
+    <text x="470" y="103" text-anchor="middle" font-size="12" fill="#333">故障设置面板触发“合不上闸”故障（6种之一）</text>
+    <line x1="470" y1="114" x2="470" y2="140" stroke="#555" stroke-width="2" marker-end="url(#aDn)"/>
+
+    <!-- 步骤2 -->
+    <rect x="260" y="144" width="420" height="52" rx="10" fill="#fff8e1" stroke="#b8860b" stroke-width="2"/>
+    <text x="470" y="167" text-anchor="middle" font-size="14" font-weight="bold" fill="#b8860b">② 观察储能指示牌</text>
+    <text x="470" y="187" text-anchor="middle" font-size="12" fill="#333">已储能→试合闸；未储能→手动储能</text>
+    <line x1="470" y1="198" x2="470" y2="224" stroke="#555" stroke-width="2" marker-end="url(#aDn)"/>
+
+    <!-- 分支：储能弹簧故障 / 储能电机 -->
+    <rect x="330" y="228" width="280" height="46" rx="10" fill="#fdecec" stroke="#c92a2a" stroke-width="2"/>
+    <text x="470" y="250" text-anchor="middle" font-size="12.5" fill="#c92a2a">手动储能仍失败 → 储能弹簧故障 → 修复</text>
+    <text x="470" y="266" text-anchor="middle" font-size="12" fill="#333">手动储能成功 → 储能电机控制回路故障</text>
+
+    <line x1="350" y1="274" x2="350" y2="300" stroke="#555" stroke-width="2" marker-end="url(#aDn)"/>
+    <rect x="210" y="304" width="280" height="52" rx="10" fill="#e7f0ff" stroke="#1c7ed6" stroke-width="2"/>
+    <text x="350" y="327" text-anchor="middle" font-size="14" font-weight="bold" fill="#1c7ed6">③ 试手动/遥控合闸</text>
+    <text x="350" y="347" text-anchor="middle" font-size="12" fill="#333">若手动合闸成功→合闸线圈回路故障</text>
+
+    <line x1="470" y1="274" x2="470" y2="300" stroke="#555" stroke-width="2" marker-end="url(#aDn)"/>
+    <rect x="560" y="304" width="280" height="52" rx="10" fill="#e7f0ff" stroke="#1c7ed6" stroke-width="2"/>
+    <text x="700" y="327" text-anchor="middle" font-size="14" font-weight="bold" fill="#1c7ed6">④ 储能释放仍合不上</text>
+    <text x="700" y="347" text-anchor="middle" font-size="12" fill="#333">检查失压脱扣器（线圈/脱扣轴）</text>
+
+    <!-- 汇总到失压检查 -->
+    <line x1="560" y1="356" x2="470" y2="356" stroke="#555" stroke-width="2"/>
+    <line x1="470" y1="356" x2="470" y2="382" stroke="#555" stroke-width="2" marker-end="url(#aDn)"/>
+
+    <line x1="350" y1="356" x2="350" y2="382" stroke="#555" stroke-width="2"/>
+    <rect x="300" y="386" width="340" height="52" rx="10" fill="#f0eaff" stroke="#7048e8" stroke-width="2"/>
+    <text x="470" y="409" text-anchor="middle" font-size="14" font-weight="bold" fill="#7048e8">⑤ 检查失压脱扣器（万能表/24V电源）</text>
+    <text x="470" y="429" text-anchor="middle" font-size="12" fill="#333">测线圈电阻→通电试验→按压动衔铁</text>
+    <line x1="470" y1="440" x2="470" y2="466" stroke="#555" stroke-width="2" marker-end="url(#aDn)"/>
+
+    <!-- 失压故障细分 -->
+    <rect x="170" y="470" width="190" height="74" rx="10" fill="#fdecec" stroke="#c92a2a" stroke-width="2"/>
+    <text x="265" y="496" text-anchor="middle" font-size="13" font-weight="bold" fill="#c92a2a">失压线圈开路</text>
+    <text x="265" y="516" text-anchor="middle" font-size="11.5" fill="#333">阻值 O.L</text>
+    <text x="265" y="532" text-anchor="middle" font-size="11.5" fill="#333">→ 更换线圈</text>
+
+    <rect x="375" y="470" width="190" height="74" rx="10" fill="#fdecec" stroke="#c92a2a" stroke-width="2"/>
+    <text x="470" y="496" text-anchor="middle" font-size="13" font-weight="bold" fill="#c92a2a">脱扣器卡死</text>
+    <text x="470" y="516" text-anchor="middle" font-size="11.5" fill="#333">按压动衔铁无法复位</text>
+    <text x="470" y="532" text-anchor="middle" font-size="11.5" fill="#333">→ 检修脱扣轴</text>
+
+    <rect x="580" y="470" width="190" height="74" rx="10" fill="#fdecec" stroke="#c92a2a" stroke-width="2"/>
+    <text x="675" y="496" text-anchor="middle" font-size="13" font-weight="bold" fill="#c92a2a">复位弹簧弹力过大</text>
+    <text x="675" y="516" text-anchor="middle" font-size="11.5" fill="#333">按压后脱扣器复位</text>
+    <text x="675" y="532" text-anchor="middle" font-size="11.5" fill="#333">→ 更换复位弹簧</text>
+
+    <!-- 修复汇总 -->
+    <line x1="670" y1="544" x2="765" y2="600" stroke="#555" stroke-width="2" marker-end="url(#aDn)"/>
+    <line x1="470" y1="544" x2="470" y2="576" stroke="#555" stroke-width="2"/>
+    <line x1="265" y1="544" x2="175" y2="600" stroke="#555" stroke-width="2" marker-end="url(#aDn)"/>
+    <rect x="300" y="580" width="340" height="60" rx="12" fill="#e8f7ec" stroke="#2b8a3e" stroke-width="2"/>
+    <text x="470" y="606" text-anchor="middle" font-size="15" font-weight="bold" fill="#2b8a3e">⑥ 复位故障（故障面板取消勾选并应用）</text>
+    <text x="470" y="628" text-anchor="middle" font-size="12" fill="#333">恢复正常 → 按下遥控合闸（SC）成功合闸</text>
+  </g>
+
+  <text x="470" y="722" text-anchor="middle" font-size="12" fill="#666">故障随机触发6种之一：失压线圈开路 / 失压脱扣器卡死 / 复位弹簧弹力过大 / 合闸线圈开路 / 储能电机控制回路 / 储能弹簧</text>
+</svg>

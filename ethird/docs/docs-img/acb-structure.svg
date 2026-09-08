@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="620" viewBox="0 0 920 620" font-family="'Microsoft YaHei',SimHei,sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#c9302c"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="920" height="620" fill="#fbfbfb" stroke="#ccc"/>
+  <text x="460" y="34" text-anchor="middle" font-size="22" font-weight="bold" fill="#1a1a1a">框架式空气断路器（主开关）组成结构示意图</text>
+
+  <!-- 主触头组件 -->
+  <g>
+    <rect x="180" y="150" width="150" height="120" rx="10" fill="#eaf4fe" stroke="#2b6cb0" stroke-width="2"/>
+    <text x="255" y="190" text-anchor="middle" font-size="15" font-weight="bold" fill="#2b6cb0">主触头（三极）</text>
+    <line x1="245" y1="205" x2="215" y2="235" stroke="#555" stroke-width="3"/>
+    <line x1="265" y1="205" x2="295" y2="235" stroke="#555" stroke-width="3"/>
+    <text x="255" y="258" text-anchor="middle" font-size="12" fill="#444">主回路通断</text>
+  </g>
+
+  <!-- 辅助触头 -->
+  <g>
+    <rect x="180" y="310" width="150" height="90" rx="10" fill="#f0fff0" stroke="#2f9e44" stroke-width="2"/>
+    <text x="255" y="342" text-anchor="middle" font-size="14" font-weight="bold" fill="#2f9e44">辅助触头</text>
+    <text x="255" y="366" text-anchor="middle" font-size="11" fill="#444">信号/联锁/指示</text>
+  </g>
+
+  <!-- 储能弹簧 -->
+  <g>
+    <rect x="400" y="80" width="160" height="110" rx="10" fill="#fff8e1" stroke="#b8860b" stroke-width="2"/>
+    <text x="480" y="115" text-anchor="middle" font-size="15" font-weight="bold" fill="#b8860b">储能弹簧</text>
+    <path d="M440,130 l6,-14 6,14 6,-14 6,14 6,-14 6,14" fill="none" stroke="#b8860b" stroke-width="2.5" stroke-linecap="round"/>
+    <text x="480" y="175" text-anchor="middle" font-size="11" fill="#444">储能电机/储能手柄驱动</text>
+  </g>
+
+  <!-- 合闸线圈 -->
+  <g>
+    <rect x="400" y="230" width="160" height="85" rx="10" fill="#e8f7e8" stroke="#38a169" stroke-width="2"/>
+    <text x="480" y="262" text-anchor="middle" font-size="14" font-weight="bold" fill="#38a169">合闸线圈</text>
+    <text x="480" y="285" text-anchor="middle" font-size="11" fill="#444">释放储能弹簧锁扣</text>
+  </g>
+
+  <!-- 失压脱扣器 -->
+  <g>
+    <rect x="400" y="360" width="160" height="90" rx="10" fill="#fdecec" stroke="#c0392b" stroke-width="2"/>
+    <text x="480" y="392" text-anchor="middle" font-size="14" font-weight="bold" fill="#c0392b">失压脱扣器</text>
+    <text x="480" y="416" text-anchor="middle" font-size="11" fill="#444">欠压/失压自动分闸</text>
+  </g>
+
+  <!-- 分励线圈 -->
+  <g>
+    <rect x="400" y="495" width="160" height="85" rx="10" fill="#f0eaff" stroke="#7048e8" stroke-width="2"/>
+    <text x="480" y="527" text-anchor="middle" font-size="14" font-weight="bold" fill="#7048e8">分励线圈</text>
+    <text x="480" y="551" text-anchor="middle" font-size="11" fill="#444">远方电动分闸（SS）</text>
+  </g>
+
+  <!-- 分闸弹簧 -->
+  <g>
+    <rect x="630" y="360" width="130" height="90" rx="10" fill="#fff0f0" stroke="#e03131" stroke-width="2"/>
+    <text x="695" y="392" text-anchor="middle" font-size="14" font-weight="bold" fill="#e03131">分闸弹簧</text>
+    <text x="695" y="416" text-anchor="middle" font-size="11" fill="#444">分闸时拉动主轴左移</text>
+  </g>
+
+  <!-- 储能手柄 + 指示牌 + 手动按钮 -->
+  <g>
+    <rect x="630" y="180" width="240" height="130" rx="10" fill="#eef6fb" stroke="#1c7ed6" stroke-width="2"/>
+    <text x="750" y="208" text-anchor="middle" font-size="14" font-weight="bold" fill="#1c7ed6">操作与指示面板</text>
+    <text x="662" y="238" font-size="12" fill="#333">• 储能手柄（手动储能）</text>
+    <text x="662" y="260" font-size="12" fill="#333">• 储能指示牌（已/未储能）</text>
+    <text x="662" y="282" font-size="12" fill="#333">• 手动合闸 / 手动分闸按钮</text>
+  </g>
+
+  <!-- 工作位圆盘 -->
+  <g>
+    <rect x="630" y="495" width="240" height="85" rx="10" fill="#e7f5ee" stroke="#219653" stroke-width="2"/>
+    <text x="750" y="527" text-anchor="middle" font-size="14" font-weight="bold" fill="#219653">工作位圆盘（抽拉）</text>
+    <text x="750" y="552" text-anchor="middle" font-size="11" fill="#444">连接位 → 测试位 → 脱开位</text>
+  </g>
+
+  <!-- 电子脱扣器 ET -->
+  <g>
+    <rect x="630" y="80" width="240" height="70" rx="10" fill="#ffeef8" stroke="#c2255c" stroke-width="2"/>
+    <text x="750" y="110" text-anchor="middle" font-size="15" font-weight="bold" fill="#c2255c">电子脱扣器（ET）</text>
+    <text x="750" y="134" text-anchor="middle" font-size="11" fill="#444">短路/过载/欠压/逆功率保护</text>
+  </g>
+
+  <!-- 遥控按钮区 -->
+  <g>
+    <rect x="630" y="230" width="0" height="0" fill="none"/>
+    <text x="750" y="154" font-size="12" fill="#444">遥控：合闸 SC / 分闸 SS</text>
+  </g>
+
+  <text x="460" y="612" text-anchor="middle" font-size="11" fill="#666">配套：1#同步发电机（gen1）、24V 失压脱扣电源（dc_uv）、汇流排（bus1）、QF2/QF3 负载馈线</text>
+</svg>
