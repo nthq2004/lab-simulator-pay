@@ -1,84 +1,100 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 460" font-family="Microsoft YaHei, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 640" font-family="Microsoft YaHei, sans-serif">
   <defs>
-    <marker id="arrowR" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+    <marker id="aR" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
       <path d="M0,0 L6,3 L0,6 Z" fill="#e74c3c"/>
     </marker>
-    <marker id="arrowK" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+    <marker id="aK" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
       <path d="M0,0 L6,3 L0,6 Z" fill="#333"/>
     </marker>
   </defs>
 
-  <!-- 标题 -->
-  <text x="400" y="32" text-anchor="middle" font-size="20" font-weight="bold" fill="#2d3436">项目一：测量三相绕组电阻（数字万用表 RES200 档）</text>
+  <text x="450" y="32" text-anchor="middle" font-size="20" font-weight="bold" fill="#2d3436">项目一：测量三相绕组电阻（数字万用表 RES200 档）</text>
 
-  <!-- ── 左侧：测量 U 相电阻 ── -->
+  <!-- ═══ 左区：测量 U 相电阻 ═══ -->
+  <text x="235" y="72" text-anchor="middle" font-size="15" font-weight="bold" fill="#1a5276">① 测量 U 相绕组电阻</text>
   <g fill="#e74c3c" stroke="#c0392b" stroke-width="1.5">
-    <circle cx="110" cy="110" r="12"/><circle cx="110" cy="320" r="12"/>
-    <circle cx="250" cy="110" r="12"/><circle cx="250" cy="320" r="12"/>
-    <circle cx="390" cy="110" r="12"/><circle cx="390" cy="320" r="12"/>
+    <circle cx="130" cy="130" r="11"/><circle cx="130" cy="290" r="11"/>
+    <circle cx="240" cy="130" r="11"/><circle cx="240" cy="290" r="11"/>
+    <circle cx="350" cy="130" r="11"/><circle cx="350" cy="290" r="11"/>
   </g>
-  <g font-size="15" fill="#2d3436" text-anchor="middle">
-    <text x="110" y="92">U1</text><text x="110" y="350">U2</text>
-    <text x="250" y="92">V1</text><text x="250" y="350">V2</text>
-    <text x="390" y="92">W1</text><text x="390" y="350">W2</text>
+  <g font-size="14" fill="#2d3436" text-anchor="middle">
+    <text x="130" y="110">U1</text><text x="130" y="318">U2</text>
+    <text x="240" y="110">V1</text><text x="240" y="318">V2</text>
+    <text x="350" y="110">W1</text><text x="350" y="318">W2</text>
   </g>
   <!-- 三相绕组锯齿 -->
   <g stroke="#2d3436" stroke-width="2.5" fill="none">
-    <path d="M110,122 L104,140 L116,158 L104,176 L116,194 L104,212 L116,230 L104,248 L116,266 L104,284 L116,302 L110,308"/>
-    <path d="M250,122 L244,140 L256,158 L244,176 L256,194 L244,212 L256,230 L244,248 L256,266 L244,284 L256,302 L250,308"/>
-    <path d="M390,122 L384,140 L396,158 L384,176 L396,194 L384,212 L396,230 L384,248 L396,266 L384,284 L396,302 L390,308"/>
+    <path d="M130,141 L124,158 L136,172 L124,186 L136,200 L124,214 L136,228 L124,242 L136,256 L124,270 L130,279"/>
+    <path d="M240,141 L234,158 L246,172 L234,186 L246,200 L234,214 L246,228 L234,242 L246,256 L234,270 L240,279"/>
+    <path d="M350,141 L344,158 L356,172 L344,186 L356,200 L344,214 L356,228 L344,242 L356,256 L344,270 L350,279"/>
   </g>
   <!-- 万用表 -->
-  <rect x="60" y="372" width="150" height="62" rx="8" fill="#dff0f8" stroke="#2980b9" stroke-width="2"/>
-  <text x="135" y="400" text-anchor="middle" font-size="16" font-weight="bold" fill="#2980b9">数字万用表</text>
-  <text x="135" y="422" text-anchor="middle" font-size="13" fill="#2d3436">档位 RES200</text>
-  <!-- 红表笔：V 插孔 → U1 -->
-  <line x1="85" y1="372" x2="110" y2="122" stroke="#e74c3c" stroke-width="3" marker-end="url(#arrowR)"/>
-  <text x="30" y="185" font-size="13" fill="#e74c3c" transform="rotate(-16 30 185)">红表笔(V)→U1</text>
-  <!-- 黑表笔：COM 插孔 → U2 -->
-  <line x1="185" y1="372" x2="110" y2="308" stroke="#333" stroke-width="3" marker-end="url(#arrowK)"/>
-  <text x="196" y="372" font-size="13" fill="#333">黑表笔(COM)→U2</text>
-  <!-- 读数标注 -->
-  <text x="250" y="400" font-size="15" fill="#27ae60" font-weight="bold">LCD 显示 ≈ 2.5Ω</text>
-  <text x="250" y="423" font-size="13" fill="#555">三相绕组电阻平衡，V、W 相依次测量</text>
+  <rect x="70" y="390" width="200" height="90" rx="8" fill="#dff0f8" stroke="#2980b9" stroke-width="2"/>
+  <text x="170" y="418" text-anchor="middle" font-size="15" font-weight="bold" fill="#2980b9">数字万用表</text>
+  <text x="170" y="440" text-anchor="middle" font-size="12.5" fill="#2d3436">档位 RES200（电阻）</text>
+  <text x="170" y="462" text-anchor="middle" font-size="13" font-weight="bold" fill="#27ae60">LCD：2.5 Ω</text>
+  <!-- 红表笔 → U1 -->
+  <path d="M100,386 L100,134 L114,134" stroke="#e74c3c" stroke-width="3" fill="none" marker-end="url(#aR)"/>
+  <text x="92" y="152" text-anchor="end" font-size="12" fill="#e74c3c">红表笔(V)</text>
+  <!-- 黑表笔 → U2 -->
+  <path d="M170,386 L170,290 L143,290" stroke="#333" stroke-width="3" fill="none" marker-end="url(#aK)"/>
+  <text x="180" y="336" font-size="12" fill="#333">黑表笔(COM)</text>
+  <!-- 读数说明 -->
+  <text x="310" y="400" font-size="14" fill="#27ae60" font-weight="bold">读数 ≈ 2.5 Ω</text>
+  <text x="310" y="424" font-size="12" fill="#555">三相电阻平衡，</text>
+  <text x="310" y="442" font-size="12" fill="#555">V、W 相依次测量</text>
 
-  <!-- ── 右侧：Y 接法 ── -->
-  <text x="620" y="72" text-anchor="middle" font-size="16" font-weight="bold" fill="#2d3436">Y 星形接法（尾端短接）</text>
+  <!-- ═══ 右上：Y 星形接法 ═══ -->
+  <text x="670" y="72" text-anchor="middle" font-size="15" font-weight="bold" fill="#1a5276">② Y 星形接法（尾端短接）</text>
   <g fill="#e74c3c" stroke="#c0392b" stroke-width="1.5">
-    <circle cx="560" cy="120" r="9"/><circle cx="680" cy="120" r="9"/>
-    <circle cx="560" cy="225" r="9"/><circle cx="680" cy="225" r="9"/>
+    <circle cx="540" cy="120" r="9"/><circle cx="650" cy="120" r="9"/><circle cx="760" cy="120" r="9"/>
+    <circle cx="540" cy="240" r="9"/><circle cx="650" cy="240" r="9"/><circle cx="760" cy="240" r="9"/>
   </g>
   <g font-size="13" fill="#2d3436" text-anchor="middle">
-    <text x="560" y="105">U1</text><text x="680" y="105">W1</text>
-    <text x="560" y="245">U2</text><text x="680" y="245">W2</text>
+    <text x="540" y="103">U1</text><text x="650" y="103">V1</text><text x="760" y="103">W1</text>
+    <text x="540" y="264">U2</text><text x="650" y="264">V2</text><text x="760" y="264">W2</text>
   </g>
   <g stroke="#2d3436" stroke-width="2" fill="none">
-    <path d="M560,129 L556,144 L564,159 L556,174 L564,189 L556,204 L560,216"/>
-    <path d="M680,129 L676,144 L684,159 L676,174 L684,189 L676,204 L680,216"/>
+    <path d="M540,129 L534,144 L546,158 L534,172 L546,186 L534,200 L546,214 L540,231"/>
+    <path d="M650,129 L644,144 L656,158 L644,172 L656,186 L644,200 L656,214 L650,231"/>
+    <path d="M760,129 L754,144 L766,158 L754,172 L766,186 L754,200 L766,214 L760,231"/>
   </g>
-  <text x="620" y="172" text-anchor="middle" font-size="13" fill="#2d3436">V 相</text>
-  <line x1="560" y1="225" x2="620" y2="258" stroke="#2d3436" stroke-width="2"/>
-  <line x1="620" y1="120" x2="620" y2="258" stroke="#2d3436" stroke-width="2"/>
-  <line x1="680" y1="225" x2="620" y2="258" stroke="#2d3436" stroke-width="2"/>
-  <circle cx="620" cy="258" r="6" fill="#f39c12" stroke="#e67e22"/>
-  <text x="642" y="263" font-size="13" fill="#e67e22">星点（U2·V2·W2 短接）</text>
+  <text x="596" y="180" text-anchor="middle" font-size="12" fill="#555">U相</text>
+  <text x="706" y="180" text-anchor="middle" font-size="12" fill="#555">W相</text>
+  <!-- 尾端短接星点 -->
+  <line x1="540" y1="249" x2="650" y2="300" stroke="#e67e22" stroke-width="2.5"/>
+  <line x1="650" y1="249" x2="650" y2="300" stroke="#e67e22" stroke-width="2.5"/>
+  <line x1="760" y1="249" x2="650" y2="300" stroke="#e67e22" stroke-width="2.5"/>
+  <circle cx="650" cy="300" r="7" fill="#f39c12" stroke="#e67e22" stroke-width="2"/>
+  <text x="650" y="328" text-anchor="middle" font-size="12" fill="#e67e22">U2·V2·W2 短接（星点）</text>
+  <text x="670" y="352" text-anchor="middle" font-size="11.5" fill="#8e8e8e">首端 U1、V1、W1 引出｜线电压 = √3 × 相电压</text>
 
-  <!-- ── 右侧下方：Δ 接法 ── -->
-  <text x="620" y="318" text-anchor="middle" font-size="16" font-weight="bold" fill="#2d3436">Δ 三角形接法（首尾相接）</text>
-  <!-- 三角形三顶点 -->
-  <circle cx="490" cy="352" r="9" fill="#e74c3c" stroke="#c0392b"/>
-  <circle cx="610" cy="436" r="9" fill="#e74c3c" stroke="#c0392b"/>
-  <circle cx="730" cy="352" r="9" fill="#e74c3c" stroke="#c0392b"/>
-  <!-- 三条边（绕组） -->
-  <g stroke="#2d3436" stroke-width="2.5" fill="none">
-    <path d="M490,361 L462,378 L478,394 L452,410 L730,352"/>
-    <path d="M612,427 L600,408 L618,392 L606,374 L618,358 L604,342 L612,345"/>
-    <path d="M490,343 L522,328 L508,312 L538,296 L538,318 L536,362 L538,336"/>
+  <!-- ═══ 右下：Δ 三角形接法 ═══ -->
+  <text x="670" y="392" text-anchor="middle" font-size="15" font-weight="bold" fill="#1a5276">③ Δ 三角形接法（首尾相接）</text>
+  <!-- 三个角、每角两端子 -->
+  <g fill="#e74c3c" stroke="#c0392b" stroke-width="1.5">
+    <circle cx="548" cy="440" r="9"/><circle cx="574" cy="440" r="9"/>
+    <circle cx="788" cy="440" r="9"/><circle cx="814" cy="440" r="9"/>
+    <circle cx="668" cy="580" r="9"/><circle cx="694" cy="580" r="9"/>
   </g>
-  <g font-size="13" fill="#2d3436" text-anchor="middle">
-    <text x="490" y="330">U1·W2</text>
-    <text x="610" y="460">V1·U2</text>
-    <text x="730" y="330">W1·V2</text>
+  <g font-size="12.5" fill="#2d3436" text-anchor="middle">
+    <text x="548" y="464">U1</text><text x="574" y="464">W2</text>
+    <text x="788" y="464">W1</text><text x="814" y="464">V2</text>
+    <text x="668" y="604">V1</text><text x="694" y="604">U2</text>
   </g>
-  <text x="610" y="305" font-size="12" fill="#8e8e8e" text-anchor="middle">三边绕组首尾相接成闭环</text>
+  <g font-size="11.5" fill="#8e8e8e" text-anchor="middle">
+    <text x="561" y="418">首尾相接</text>
+    <text x="801" y="418">首尾相接</text>
+    <text x="681" y="622">首尾相接</text>
+  </g>
+  <!-- 上边：W 相（W2-W1） -->
+  <path d="M574,431 L588,422 L602,431 L616,422 L630,431 L644,422 L658,431 L672,422 L686,431 L700,422 L714,431 L728,422 L742,431 L756,422 L770,431 L788,431" stroke="#2d3436" stroke-width="2.2" fill="none"/>
+  <text x="681" y="455" text-anchor="middle" font-size="11.5" fill="#8e44ad">W 相绕组</text>
+  <!-- 右下边：V 相（V2-V1） -->
+  <path d="M814,440 L800,468 L768,480 L760,514 L728,526 L720,560 L694,580" stroke="#2d3436" stroke-width="2.2" fill="none"/>
+  <text x="790" y="516" text-anchor="middle" font-size="11.5" fill="#8e44ad">V 相</text>
+  <!-- 左下边：U 相（U2-U1） -->
+  <path d="M668,580 L642,560 L634,526 L602,514 L594,480 L562,468 L548,440" stroke="#2d3436" stroke-width="2.2" fill="none"/>
+  <text x="566" y="516" text-anchor="middle" font-size="11.5" fill="#8e44ad">U 相</text>
+  <text x="670" y="636" text-anchor="middle" font-size="11.5" fill="#8e8e8e">三边绕组首尾相接成闭环｜线电压 = 相电压</text>
 </svg>
