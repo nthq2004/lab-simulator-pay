@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 560" font-family="'Microsoft YaHei','PingFang SC',sans-serif">
+  <rect x="0" y="0" width="940" height="560" fill="#ffffff"/>
+
+  <!-- ── 顶部：跳闸失电 ── -->
+  <rect x="330" y="16" width="280" height="42" rx="8" fill="#fce8e6" stroke="#d93025" stroke-width="2.5"/>
+  <text x="470" y="43" text-anchor="middle" font-size="15" font-weight="bold" fill="#d93025">主开关跳闸 · 全船失电</text>
+
+  <!-- 分叉箭头 -->
+  <path d="M 400 58 L 250 84" fill="none" stroke="#188038" stroke-width="2.5" marker-end="url(#arrGreen)"/>
+  <path d="M 540 58 L 690 84" fill="none" stroke="#d93025" stroke-width="2.5" marker-end="url(#arrRed)"/>
+
+  <!-- ── 左列标题 ── -->
+  <rect x="80" y="88" width="340" height="30" rx="6" fill="#188038"/>
+  <text x="250" y="108" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffffff">情况 A：机械故障 / 欠压故障 → 自动恢复</text>
+
+  <!-- 左列流程 -->
+  <line x1="250" y1="118" x2="250" y2="130" stroke="#188038" stroke-width="2.5" marker-end="url(#arrGreen)"/>
+  <rect x="110" y="134" width="280" height="44" rx="8" fill="#e6f4ea" stroke="#188038" stroke-width="2"/>
+  <text x="250" y="152" text-anchor="middle" font-size="12" font-weight="bold" fill="#188038">① 检测母线失电</text>
+  <text x="250" y="170" text-anchor="middle" font-size="10" fill="#5f6368">延时 3 s 确认，防止瞬时扰动误动作</text>
+  <line x1="250" y1="178" x2="250" y2="200" stroke="#188038" stroke-width="2.5" marker-end="url(#arrGreen)"/>
+  <rect x="110" y="204" width="280" height="48" rx="8" fill="#e6f4ea" stroke="#188038" stroke-width="2"/>
+  <text x="250" y="222" text-anchor="middle" font-size="12" font-weight="bold" fill="#188038">② 按备用顺序 1-2-3 查找可用机组</text>
+  <text x="250" y="242" text-anchor="middle" font-size="10" fill="#5f6368">故障机组（原动机 / AVR 故障）自动跳过</text>
+  <line x1="250" y1="252" x2="250" y2="274" stroke="#188038" stroke-width="2.5" marker-end="url(#arrGreen)"/>
+  <rect x="110" y="278" width="280" height="44" rx="8" fill="#e6f4ea" stroke="#188038" stroke-width="2"/>
+  <text x="250" y="296" text-anchor="middle" font-size="12" font-weight="bold" fill="#188038">③ 自动起动 2# 机组</text>
+  <text x="250" y="314" text-anchor="middle" font-size="10" fill="#5f6368">经通信接口向遥控面板发出起动命令</text>
+  <line x1="250" y1="322" x2="250" y2="344" stroke="#188038" stroke-width="2.5" marker-end="url(#arrGreen)"/>
+  <rect x="110" y="348" width="280" height="44" rx="8" fill="#e6f4ea" stroke="#188038" stroke-width="2"/>
+  <text x="250" y="366" text-anchor="middle" font-size="12" font-weight="bold" fill="#188038">④ 建压 + 合闸弹簧储能</text>
+  <text x="250" y="384" text-anchor="middle" font-size="10" fill="#5f6368">发电机建立额定电压，储能电机充满弹簧（约 3 s）</text>
+  <line x1="250" y1="392" x2="250" y2="414" stroke="#188038" stroke-width="2.5" marker-end="url(#arrGreen)"/>
+  <rect x="110" y="418" width="280" height="46" rx="8" fill="#188038"/>
+  <text x="250" y="437" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">⑤ 自动合闸 2# 主开关</text>
+  <text x="250" y="455" text-anchor="middle" font-size="10" fill="#ceead6">恢复全船供电，全程无需人工干预</text>
+
+  <!-- ── 右列标题 ── -->
+  <rect x="520" y="88" width="340" height="30" rx="6" fill="#d93025"/>
+  <text x="690" y="108" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffffff">情况 B：汇流排干线短路 → 自动模式闭锁</text>
+
+  <!-- 右列流程 -->
+  <line x1="690" y1="118" x2="690" y2="130" stroke="#d93025" stroke-width="2.5" marker-end="url(#arrRed)"/>
+  <rect x="550" y="134" width="280" height="44" rx="8" fill="#fce8e6" stroke="#d93025" stroke-width="2"/>
+  <text x="690" y="152" text-anchor="middle" font-size="12" font-weight="bold" fill="#d93025">① 检测到短路标记</text>
+  <text x="690" y="170" text-anchor="middle" font-size="10" fill="#5f6368">主开关短路保护瞬时跳闸，两路同时分断</text>
+  <line x1="690" y1="178" x2="690" y2="200" stroke="#d93025" stroke-width="2.5" marker-end="url(#arrRed)"/>
+  <rect x="550" y="204" width="280" height="48" rx="8" fill="#fce8e6" stroke="#d93025" stroke-width="2"/>
+  <text x="690" y="222" text-anchor="middle" font-size="12" font-weight="bold" fill="#d93025">② 阻塞自动模式</text>
+  <text x="690" y="242" text-anchor="middle" font-size="10" fill="#5f6368">"自动"指示灯熄灭：不自动起动、不自动合闸，防止对短路点反复送电</text>
+  <line x1="690" y1="252" x2="690" y2="274" stroke="#d93025" stroke-width="2.5" marker-end="url(#arrRed)"/>
+  <rect x="550" y="278" width="280" height="44" rx="8" fill="#fef7e0" stroke="#b26a00" stroke-width="2"/>
+  <text x="690" y="296" text-anchor="middle" font-size="12" font-weight="bold" fill="#b26a00">③ 人工将模式旋钮转回"手动"</text>
+  <text x="690" y="314" text-anchor="middle" font-size="10" fill="#5f6368">确认自动模式已阻塞后再退出自动运行</text>
+  <line x1="690" y1="322" x2="690" y2="344" stroke="#b26a00" stroke-width="2.5" marker-end="url(#arrOrange)"/>
+  <rect x="550" y="348" width="280" height="44" rx="8" fill="#fef7e0" stroke="#b26a00" stroke-width="2"/>
+  <text x="690" y="366" text-anchor="middle" font-size="12" font-weight="bold" fill="#b26a00">④ 查明并隔离短路点</text>
+  <text x="690" y="384" text-anchor="middle" font-size="10" fill="#5f6368">绝缘损坏 / 进水 / 误操作 / 检修遗留物，确认绝缘正常</text>
+  <line x1="690" y1="392" x2="690" y2="414" stroke="#b26a00" stroke-width="2.5" marker-end="url(#arrOrange)"/>
+  <rect x="550" y="418" width="280" height="46" rx="8" fill="#b26a00"/>
+  <text x="690" y="437" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">⑤ 手动起动 / 合闸恢复供电</text>
+  <text x="690" y="455" text-anchor="middle" font-size="10" fill="#fef7e0">严禁未排除短路强行合闸或拨回"自动"档</text>
+
+  <!-- ── 底部注释 ── -->
+  <text x="470" y="505" text-anchor="middle" font-size="11" fill="#5f6368">对比要点：失电类故障（机械 / 欠压）由自动电站全程自动恢复；短路故障必须"人工确认 + 排除后手动恢复"——这是"选择性保护 + 人工确认"的安全原则</text>
+
+  <defs>
+    <marker id="arrGreen" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M0,0 L8,4.5 L0,9 Z" fill="#188038"/>
+    </marker>
+    <marker id="arrRed" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M0,0 L8,4.5 L0,9 Z" fill="#d93025"/>
+    </marker>
+    <marker id="arrOrange" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M0,0 L8,4.5 L0,9 Z" fill="#b26a00"/>
+    </marker>
+  </defs>
+</svg>

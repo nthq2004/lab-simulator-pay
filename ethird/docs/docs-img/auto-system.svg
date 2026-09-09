@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 530" font-family="'Microsoft YaHei','PingFang SC',sans-serif">
+  <rect x="0" y="0" width="940" height="530" fill="#ffffff"/>
+
+  <!-- ── 三相汇流排 ── -->
+  <rect x="40" y="36" width="860" height="42" rx="6" fill="#eceff1" stroke="#37474f" stroke-width="2"/>
+  <text x="470" y="63" text-anchor="middle" font-size="16" font-weight="bold" fill="#37474f">三相汇流排 bus1（AC 380 V / 50 Hz）</text>
+
+  <!-- ── 1# 发电机支路 ── -->
+  <line x1="135" y1="360" x2="135" y2="306" stroke="#188038" stroke-width="2.5"/>
+  <line x1="135" y1="250" x2="135" y2="78" stroke="#1a73e8" stroke-width="2.5"/>
+  <rect x="70" y="250" width="130" height="56" rx="8" fill="#e8f0fe" stroke="#1a73e8" stroke-width="2"/>
+  <text x="135" y="273" text-anchor="middle" font-size="12" font-weight="bold" fill="#1a73e8">1# 主开关</text>
+  <text x="135" y="292" text-anchor="middle" font-size="10" fill="#1a73e8">qf1 · 船用 ACB</text>
+  <rect x="70" y="360" width="130" height="76" rx="8" fill="#e6f4ea" stroke="#188038" stroke-width="2"/>
+  <text x="135" y="384" text-anchor="middle" font-size="12" font-weight="bold" fill="#188038">1# 同步发电机</text>
+  <text x="135" y="402" text-anchor="middle" font-size="10" fill="#188038">gen1 · 80 kW</text>
+  <text x="135" y="420" text-anchor="middle" font-size="10" fill="#5f6368">400 V / 50 Hz</text>
+
+  <!-- ── 2# 发电机支路 ── -->
+  <line x1="385" y1="360" x2="385" y2="306" stroke="#188038" stroke-width="2.5"/>
+  <line x1="385" y1="250" x2="385" y2="78" stroke="#1a73e8" stroke-width="2.5"/>
+  <rect x="320" y="250" width="130" height="56" rx="8" fill="#e8f0fe" stroke="#1a73e8" stroke-width="2"/>
+  <text x="385" y="273" text-anchor="middle" font-size="12" font-weight="bold" fill="#1a73e8">2# 主开关</text>
+  <text x="385" y="292" text-anchor="middle" font-size="10" fill="#1a73e8">qf2 · 船用 ACB</text>
+  <rect x="320" y="360" width="130" height="76" rx="8" fill="#e6f4ea" stroke="#188038" stroke-width="2"/>
+  <text x="385" y="384" text-anchor="middle" font-size="12" font-weight="bold" fill="#188038">2# 同步发电机</text>
+  <text x="385" y="402" text-anchor="middle" font-size="10" fill="#188038">gen2 · 80 kW</text>
+  <text x="385" y="420" text-anchor="middle" font-size="10" fill="#5f6368">400 V / 50 Hz</text>
+
+  <!-- ── 负载与照明支路 ── -->
+  <line x1="715" y1="78" x2="715" y2="120" stroke="#b26a00" stroke-width="2.5"/>
+  <rect x="650" y="120" width="130" height="64" rx="8" fill="#fef7e0" stroke="#b26a00" stroke-width="2"/>
+  <text x="715" y="146" text-anchor="middle" font-size="12" font-weight="bold" fill="#b26a00">三相可调负载</text>
+  <text x="715" y="166" text-anchor="middle" font-size="10" fill="#b26a00">load3 · 0 ~ 70 kW</text>
+  <line x1="870" y1="78" x2="870" y2="120" stroke="#5f6368" stroke-width="2.5"/>
+  <rect x="808" y="120" width="124" height="64" rx="8" fill="#f1f3f4" stroke="#5f6368" stroke-width="2"/>
+  <text x="870" y="146" text-anchor="middle" font-size="12" font-weight="bold" fill="#5f6368">QF3 照明支路</text>
+  <text x="870" y="166" text-anchor="middle" font-size="10" fill="#5f6368">白炽灯 × 3</text>
+
+  <!-- ── 电站自动控制模块 ── -->
+  <rect x="540" y="240" width="220" height="118" rx="10" fill="#f3e8fd" stroke="#8430ce" stroke-width="2.5"/>
+  <text x="650" y="264" text-anchor="middle" font-size="13" font-weight="bold" fill="#8430ce">船舶电站自动控制模块</text>
+  <text x="650" y="282" text-anchor="middle" font-size="10" fill="#8430ce">auto_ctl</text>
+  <text x="650" y="304" text-anchor="middle" font-size="11" fill="#5f6368">模式旋钮：手动 / 自动</text>
+  <text x="650" y="322" text-anchor="middle" font-size="11" fill="#5f6368">备用顺序旋钮：1-2-3 ｜ LCD 状态</text>
+  <text x="650" y="340" text-anchor="middle" font-size="11" fill="#5f6368">"自动"指示灯 ｜ 失电 / 短路检测</text>
+  <!-- auto_ctl 母线采集线 -->
+  <line x1="650" y1="240" x2="650" y2="78" stroke="#8430ce" stroke-width="2" stroke-dasharray="6 4"/>
+
+  <!-- ── 通信链路（虚线）── -->
+  <path d="M 560 358 L 560 392 L 170 392 L 170 408" fill="none" stroke="#8430ce" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#arrPurple)"/>
+  <path d="M 700 358 L 700 392 L 460 392 L 460 408" fill="none" stroke="#8430ce" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#arrPurple)"/>
+  <text x="305" y="388" text-anchor="middle" font-size="10" fill="#8430ce">通信接口（起动/停止/合闸/调速命令）</text>
+
+  <!-- ── 遥控面板 ── -->
+  <rect x="60" y="410" width="220" height="64" rx="8" fill="#f1f3f4" stroke="#5f6368" stroke-width="2"/>
+  <text x="170" y="434" text-anchor="middle" font-size="12" font-weight="bold" fill="#5f6368">1# 机组遥控面板 genpanel</text>
+  <text x="170" y="454" text-anchor="middle" font-size="10" fill="#5f6368">起动 / 停止 / 合闸 / 分闸 / 调速</text>
+  <rect x="350" y="410" width="220" height="64" rx="8" fill="#f1f3f4" stroke="#5f6368" stroke-width="2"/>
+  <text x="460" y="434" text-anchor="middle" font-size="12" font-weight="bold" fill="#5f6368">2# 机组遥控面板 genpanel2</text>
+  <text x="460" y="454" text-anchor="middle" font-size="10" fill="#5f6368">起动 / 停止 / 合闸 / 分闸 / 调速</text>
+
+  <!-- ── 底部注释 ── -->
+  <text x="470" y="500" text-anchor="middle" font-size="11" fill="#5f6368">控制电源：DC 24 V（dc_uv / dc_uv2）→ 主开关失压脱扣线圈、合闸弹簧储能电机、遥控面板电源</text>
+  <text x="470" y="518" text-anchor="middle" font-size="11" fill="#8430ce">紫色虚线 = 自动电站通信 / 采集链路；实线 = 动力与照明主回路</text>
+
+  <defs>
+    <marker id="arrPurple" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M0,0 L8,4.5 L0,9 Z" fill="#8430ce"/>
+    </marker>
+  </defs>
+</svg>
