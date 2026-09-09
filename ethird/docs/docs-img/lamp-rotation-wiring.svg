@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 380" font-family="'Microsoft YaHei','PingFang SC',sans-serif">
+  <rect width="660" height="380" fill="#f7fafc"/>
+  <text x="330" y="36" text-anchor="middle" font-size="18" font-weight="bold" fill="#1a252f">灯光旋转法接线（A 相直连，B/C 两相交叉）</text>
+
+  <!-- 汇流排 -->
+  <text x="83" y="102" text-anchor="middle" font-size="14" font-weight="bold" fill="#1a252f">汇流排</text>
+  <rect x="70" y="112" width="26" height="208" rx="4" fill="#2e9e4f" stroke="#1a252f" stroke-width="1.5"/>
+
+  <!-- 待并发电机 -->
+  <text x="565" y="102" text-anchor="middle" font-size="14" font-weight="bold" fill="#1a252f">待并发电机</text>
+  <rect x="520" y="112" width="90" height="208" rx="6" fill="#e8eef4" stroke="#1a252f" stroke-width="1.5"/>
+  <text x="565" y="200" text-anchor="middle" font-size="26" font-weight="bold" fill="#5a6a75">G</text>
+  <text x="565" y="228" text-anchor="middle" font-size="12" fill="#5a6a75">三相绕组</text>
+
+  <!-- 三盏灯 -->
+  <g stroke="#1a252f" stroke-width="2" fill="#ffffff">
+    <circle cx="330" cy="140" r="26"/>
+    <circle cx="330" cy="216" r="26"/>
+    <circle cx="330" cy="292" r="26"/>
+  </g>
+  <g stroke="#5a6a75" stroke-width="2">
+    <line x1="321" y1="131" x2="339" y2="149"/>
+    <line x1="339" y1="131" x2="321" y2="149"/>
+    <line x1="321" y1="207" x2="339" y2="225"/>
+    <line x1="339" y1="207" x2="321" y2="225"/>
+    <line x1="321" y1="283" x2="339" y2="301"/>
+    <line x1="339" y1="283" x2="321" y2="301"/>
+  </g>
+  <g font-size="12" fill="#1a252f" text-anchor="middle" font-weight="bold">
+    <text x="330" y="182">灯1（12点）</text>
+    <text x="330" y="258">灯2（4点）</text>
+    <text x="330" y="334">灯3（8点）</text>
+  </g>
+
+  <!-- 端子文字 -->
+  <g font-size="13" font-weight="bold" fill="#1a252f">
+    <text x="104" y="145">L1</text>
+    <text x="104" y="221">L2</text>
+    <text x="104" y="297">L3</text>
+    <text x="500" y="145">A</text>
+    <text x="500" y="221">B</text>
+    <text x="500" y="297">C</text>
+  </g>
+
+  <!-- 连线：L1-灯1-A（黄，直连） -->
+  <g stroke="#f2c500" stroke-width="2.5" fill="none">
+    <line x1="96" y1="140" x2="304" y2="140"/>
+    <line x1="356" y1="140" x2="520" y2="140"/>
+  </g>
+  <!-- 连线：L2-灯2-C（绿，交叉到下端） -->
+  <g stroke="#2e9e4f" stroke-width="2.5" fill="none">
+    <line x1="96" y1="216" x2="304" y2="216"/>
+    <line x1="356" y1="216" x2="520" y2="292"/>
+  </g>
+  <!-- 连线：L3-灯3-B（红，交叉到中端） -->
+  <g stroke="#d33" stroke-width="2.5" fill="none">
+    <line x1="96" y1="292" x2="304" y2="292"/>
+    <line x1="356" y1="292" x2="520" y2="216"/>
+  </g>
+
+  <!-- 端子圆点 -->
+  <g fill="#1a252f">
+    <circle cx="96" cy="140" r="3.5"/><circle cx="96" cy="216" r="3.5"/><circle cx="96" cy="292" r="3.5"/>
+    <circle cx="520" cy="140" r="3.5"/><circle cx="520" cy="216" r="3.5"/><circle cx="520" cy="292" r="3.5"/>
+  </g>
+
+  <!-- 交叉标注 -->
+  <rect x="418" y="228" width="64" height="30" rx="6" fill="#fff3cd" stroke="#e0a800"/>
+  <text x="450" y="248" text-anchor="middle" font-size="12" font-weight="bold" fill="#856404">交叉</text>
+
+  <!-- 底部说明 -->
+  <text x="330" y="362" text-anchor="middle" font-size="13" fill="#555">灯1 直连 L1—A；灯2 接 L2—C、灯3 接 L3—B（B/C 两相交叉）</text>
+</svg>
