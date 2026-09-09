@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="430" viewBox="0 0 920 430">
+  <style>text{font-family:'Microsoft YaHei','PingFang SC','Noto Sans SC',sans-serif;}</style>
+  <rect width="920" height="430" fill="#fafafa"/>
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#5f6368"/>
+    </marker>
+  </defs>
+
+  <!-- 顶框：故障发生 -->
+  <rect x="330" y="18" width="260" height="44" rx="8" fill="#fce8e6" stroke="#d93025" stroke-width="2"/>
+  <text x="460" y="46" text-anchor="middle" font-size="15" font-weight="bold" fill="#d93025">主开关跳闸 · 全船失电</text>
+  <line x1="460" y1="62" x2="460" y2="88" stroke="#5f6368" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- 第一步 -->
+  <rect x="270" y="90" width="380" height="52" rx="8" fill="#e6f4ea" stroke="#188038" stroke-width="2"/>
+  <text x="460" y="111" text-anchor="middle" font-size="14" font-weight="bold" fill="#188038">第一步：尽快恢复供电</text>
+  <text x="460" y="131" text-anchor="middle" font-size="11" fill="#188038">起动备用机组 → 合闸 → 接通重要负载</text>
+  <line x1="460" y1="142" x2="460" y2="166" stroke="#5f6368" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- 第二步 -->
+  <rect x="320" y="168" width="280" height="44" rx="8" fill="#e8f0fe" stroke="#1a73e8" stroke-width="2"/>
+  <text x="460" y="196" text-anchor="middle" font-size="14" font-weight="bold" fill="#1a73e8">第二步：查明跳闸原因并排除</text>
+
+  <!-- 分支线 -->
+  <line x1="460" y1="212" x2="460" y2="236" stroke="#5f6368" stroke-width="2"/>
+  <line x1="122" y1="236" x2="826" y2="236" stroke="#5f6368" stroke-width="2"/>
+  <line x1="122" y1="236" x2="122" y2="262" stroke="#5f6368" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="298" y1="236" x2="298" y2="262" stroke="#5f6368" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="474" y1="236" x2="474" y2="262" stroke="#5f6368" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="650" y1="236" x2="650" y2="262" stroke="#5f6368" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="826" y1="236" x2="826" y2="262" stroke="#5f6368" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- 分支 1：过载 -->
+  <rect x="40" y="266" width="164" height="118" rx="6" fill="#e6f4ea" stroke="#188038" stroke-width="1.6"/>
+  <text x="122" y="290" text-anchor="middle" font-size="13" font-weight="bold" fill="#188038">过载跳闸</text>
+  <text x="122" y="316" text-anchor="middle" font-size="11" fill="#33691e">发电机仍在运行</text>
+  <text x="122" y="336" text-anchor="middle" font-size="11" fill="#33691e">可直接合闸恢复</text>
+  <text x="122" y="356" text-anchor="middle" font-size="11" fill="#33691e">注意控制负荷</text>
+
+  <!-- 分支 2：机械故障 -->
+  <rect x="216" y="266" width="164" height="118" rx="6" fill="#fce8e6" stroke="#d93025" stroke-width="1.6"/>
+  <text x="298" y="290" text-anchor="middle" font-size="13" font-weight="bold" fill="#d93025">机械故障跳闸</text>
+  <text x="298" y="316" text-anchor="middle" font-size="11" fill="#b3261e">原动机故障停机</text>
+  <text x="298" y="336" text-anchor="middle" font-size="11" fill="#b3261e">未排除禁止起动</text>
+  <text x="298" y="356" text-anchor="middle" font-size="11" fill="#b3261e">排除后重新起动</text>
+
+  <!-- 分支 3：逆功率 -->
+  <rect x="392" y="266" width="164" height="118" rx="6" fill="#fef7e0" stroke="#f9ab00" stroke-width="1.6"/>
+  <text x="474" y="290" text-anchor="middle" font-size="13" font-weight="bold" fill="#b26a00">逆功率跳闸</text>
+  <text x="474" y="316" text-anchor="middle" font-size="11" fill="#8a5a00">原动机故障被拖转</text>
+  <text x="474" y="336" text-anchor="middle" font-size="11" fill="#8a5a00">负荷转移致过载</text>
+  <text x="474" y="356" text-anchor="middle" font-size="11" fill="#8a5a00">排除后均衡负荷</text>
+
+  <!-- 分支 4：欠压 -->
+  <rect x="568" y="266" width="164" height="118" rx="6" fill="#fef7e0" stroke="#f9ab00" stroke-width="1.6"/>
+  <text x="650" y="290" text-anchor="middle" font-size="13" font-weight="bold" fill="#b26a00">欠压跳闸</text>
+  <text x="650" y="316" text-anchor="middle" font-size="11" fill="#8a5a00">AVR 故障电压跌落</text>
+  <text x="650" y="336" text-anchor="middle" font-size="11" fill="#8a5a00">检查 AVR 与励磁</text>
+  <text x="650" y="356" text-anchor="middle" font-size="11" fill="#8a5a00">电压恢复后合闸</text>
+
+  <!-- 分支 5：短路 -->
+  <rect x="744" y="266" width="164" height="118" rx="6" fill="#fce8e6" stroke="#d93025" stroke-width="1.6"/>
+  <text x="826" y="290" text-anchor="middle" font-size="13" font-weight="bold" fill="#d93025">短路跳闸</text>
+  <text x="826" y="316" text-anchor="middle" font-size="11" fill="#b3261e">保护瞬时动作</text>
+  <text x="826" y="336" text-anchor="middle" font-size="11" fill="#b3261e">排除短路点查绝缘</text>
+  <text x="826" y="356" text-anchor="middle" font-size="11" fill="#b3261e">严禁强行合闸</text>
+
+  <!-- 底部汇总 -->
+  <line x1="460" y1="384" x2="460" y2="398" stroke="#5f6368" stroke-width="2"/>
+  <text x="460" y="416" text-anchor="middle" font-size="12" fill="#5f6368">处理完毕后核对各级保护整定值与动作时限，恢复电网正常运行</text>
+</svg>

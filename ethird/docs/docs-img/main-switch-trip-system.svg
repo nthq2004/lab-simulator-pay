@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="430" viewBox="0 0 920 430">
+  <style>text{font-family:'Microsoft YaHei','PingFang SC','Noto Sans SC',sans-serif;}</style>
+  <rect width="920" height="430" fill="#fafafa"/>
+
+  <!-- 汇流排 -->
+  <text x="460" y="50" text-anchor="middle" font-size="16" font-weight="bold" fill="#37474f">三相汇流排 bus1（AC 380 V / 50 Hz）</text>
+  <rect x="60" y="64" width="820" height="14" rx="4" fill="#37474f"/>
+
+  <!-- 1# 机组馈线 -->
+  <line x1="130" y1="78" x2="130" y2="148" stroke="#37474f" stroke-width="3"/>
+  <rect x="93" y="148" width="74" height="46" rx="6" fill="#e8f0fe" stroke="#1a73e8" stroke-width="2"/>
+  <text x="130" y="168" text-anchor="middle" font-size="12" font-weight="bold" fill="#1a73e8">1# 主开关</text>
+  <text x="130" y="185" text-anchor="middle" font-size="10" fill="#1a73e8">qf1 · ACB</text>
+  <line x1="130" y1="194" x2="130" y2="248" stroke="#37474f" stroke-width="3"/>
+  <circle cx="130" cy="293" r="45" fill="#e6f4ea" stroke="#188038" stroke-width="2"/>
+  <text x="130" y="289" text-anchor="middle" font-size="12" font-weight="bold" fill="#188038">1# 同步</text>
+  <text x="130" y="306" text-anchor="middle" font-size="12" font-weight="bold" fill="#188038">发电机</text>
+  <text x="130" y="356" text-anchor="middle" font-size="11" fill="#5f6368">gen1 · 80 kW</text>
+
+  <!-- 2# 机组馈线 -->
+  <line x1="420" y1="78" x2="420" y2="148" stroke="#37474f" stroke-width="3"/>
+  <rect x="383" y="148" width="74" height="46" rx="6" fill="#e8f0fe" stroke="#1a73e8" stroke-width="2"/>
+  <text x="420" y="168" text-anchor="middle" font-size="12" font-weight="bold" fill="#1a73e8">2# 主开关</text>
+  <text x="420" y="185" text-anchor="middle" font-size="10" fill="#1a73e8">qf2 · ACB</text>
+  <line x1="420" y1="194" x2="420" y2="248" stroke="#37474f" stroke-width="3"/>
+  <circle cx="420" cy="293" r="45" fill="#e6f4ea" stroke="#188038" stroke-width="2"/>
+  <text x="420" y="289" text-anchor="middle" font-size="12" font-weight="bold" fill="#188038">2# 同步</text>
+  <text x="420" y="306" text-anchor="middle" font-size="12" font-weight="bold" fill="#188038">发电机</text>
+  <text x="420" y="356" text-anchor="middle" font-size="11" fill="#5f6368">gen2 · 80 kW</text>
+
+  <!-- 三相可调负载 -->
+  <line x1="660" y1="78" x2="660" y2="148" stroke="#37474f" stroke-width="3"/>
+  <rect x="585" y="148" width="150" height="46" rx="6" fill="#fef7e0" stroke="#f9ab00" stroke-width="2"/>
+  <text x="660" y="168" text-anchor="middle" font-size="12" font-weight="bold" fill="#b26a00">三相可调负载</text>
+  <text x="660" y="185" text-anchor="middle" font-size="10" fill="#b26a00">load3 · 0 ~ 70 kW</text>
+
+  <!-- 照明支路 -->
+  <line x1="815" y1="78" x2="815" y2="148" stroke="#37474f" stroke-width="3"/>
+  <rect x="765" y="148" width="100" height="46" rx="6" fill="#fef7e0" stroke="#f9ab00" stroke-width="2"/>
+  <text x="815" y="168" text-anchor="middle" font-size="12" font-weight="bold" fill="#b26a00">QF3 照明支路</text>
+  <text x="815" y="185" text-anchor="middle" font-size="10" fill="#b26a00">白炽灯 × 3</text>
+
+  <!-- 1# 遥控面板 -->
+  <line x1="130" y1="338" x2="130" y2="372" stroke="#9aa0a6" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <rect x="55" y="372" width="200" height="46" rx="6" fill="#ffffff" stroke="#9aa0a6" stroke-width="1.6" stroke-dasharray="6 4"/>
+  <text x="155" y="391" text-anchor="middle" font-size="12" font-weight="bold" fill="#5f6368">1# 机组遥控面板</text>
+  <text x="155" y="409" text-anchor="middle" font-size="10" fill="#5f6368">起动 / 停止 / 合闸 / 分闸 / 调速</text>
+
+  <!-- 2# 遥控面板 -->
+  <line x1="420" y1="338" x2="420" y2="372" stroke="#9aa0a6" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <rect x="345" y="372" width="200" height="46" rx="6" fill="#ffffff" stroke="#9aa0a6" stroke-width="1.6" stroke-dasharray="6 4"/>
+  <text x="445" y="391" text-anchor="middle" font-size="12" font-weight="bold" fill="#5f6368">2# 机组遥控面板</text>
+  <text x="445" y="409" text-anchor="middle" font-size="10" fill="#5f6368">起动 / 停止 / 合闸 / 分闸 / 调速</text>
+
+  <!-- 同步表与选择开关 -->
+  <polyline points="880,78 880,395 862,395" fill="none" stroke="#9aa0a6" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <rect x="560" y="372" width="300" height="46" rx="6" fill="#ffffff" stroke="#9aa0a6" stroke-width="1.6" stroke-dasharray="6 4"/>
+  <text x="710" y="391" text-anchor="middle" font-size="12" font-weight="bold" fill="#5f6368">数字同步表 sync1 ＋ 选择开关 sync_sel</text>
+  <text x="710" y="409" text-anchor="middle" font-size="10" fill="#5f6368">比较汇流排与待并机电压，指示合闸时机</text>
+</svg>
