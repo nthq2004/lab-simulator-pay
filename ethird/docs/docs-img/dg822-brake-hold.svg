@@ -1,64 +1,102 @@
-<svg width="760" height="360" viewBox="0 0 760 360" xmlns="http://www.w3.org/2000/svg" font-family="Microsoft YaHei, sans-serif">
-  <rect x="0" y="0" width="760" height="360" fill="#fcfcfc" stroke="#ccc" stroke-width="1" rx="8"/>
-  <text x="380" y="26" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">图1 抱闸（失电）状态</text>
-
-  <!-- 转轴 -->
-  <line x1="15" y1="180" x2="745" y2="180" stroke="#666" stroke-width="10" stroke-linecap="round"/>
-  <text x="700" y="166" font-size="12" fill="#444">转轴</text>
-
-  <!-- 磁轭 E 形铁心 -->
-  <rect x="40" y="70"  width="30" height="220" fill="#b9c4d4" stroke="#5a6a84" stroke-width="2"/>   <!-- 左竖梁 -->
-  <rect x="40" y="70"  width="130" height="40"  fill="#c2cddd" stroke="#5a6a84" stroke-width="2"/>  <!-- 上横梁 -->
-  <rect x="40" y="250" width="130" height="40"  fill="#c2cddd" stroke="#5a6a84" stroke-width="2"/>  <!-- 下横梁 -->
-  <rect x="130" y="150" width="40" height="60"  fill="#c2cddd" stroke="#5a6a84" stroke-width="2"/>  <!-- 中柱 -->
-  <text x="90" y="330" text-anchor="middle" font-size="13" fill="#3c4a63">磁轭（E形静铁心）</text>
-
-  <!-- 线圈 -->
-  <rect x="95" y="118" width="36" height="124" fill="#f5a623" stroke="#b96b00" stroke-width="2" rx="4"/>
-  <line x1="101" y1="132" x2="125" y2="132" stroke="#b96b00" stroke-width="2"/>
-  <line x1="101" y1="146" x2="125" y2="146" stroke="#b96b00" stroke-width="2"/>
-  <line x1="101" y1="160" x2="125" y2="160" stroke="#b96b00" stroke-width="2"/>
-  <line x1="101" y1="174" x2="125" y2="174" stroke="#b96b00" stroke-width="2"/>
-  <line x1="101" y1="188" x2="125" y2="188" stroke="#b96b00" stroke-width="2"/>
-  <line x1="101" y1="202" x2="125" y2="202" stroke="#b96b00" stroke-width="2"/>
-  <line x1="101" y1="216" x2="125" y2="216" stroke="#b96b00" stroke-width="2"/>
-  <text x="113" y="336" text-anchor="middle" font-size="13" fill="#8a5200">线圈</text>
-
-  <!-- 复位弹簧（上、下，自然伸长） -->
-  <path d="M175 52 q 10 -8 20 0 t 20 0 t 20 0" stroke="#2e7d32" stroke-width="3" fill="none"/>
-  <path d="M175 62 q 10 -8 20 0 t 20 0 t 20 0" stroke="#2e7d32" stroke-width="3" fill="none"/>
-  <path d="M175 312 q 10 8 20 0 t 20 0 t 20 0" stroke="#2e7d32" stroke-width="3" fill="none"/>
-  <path d="M175 302 q 10 8 20 0 t 20 0 t 20 0" stroke="#2e7d32" stroke-width="3" fill="none"/>
-  <text x="380" y="52" text-anchor="middle" font-size="12" fill="#2e7d32">复位弹簧（自然伸长）</text>
-  <text x="380" y="334" text-anchor="middle" font-size="12" fill="#2e7d32">复位弹簧（自然伸长）</text>
-
-  <!-- 衔铁 -->
-  <rect x="230" y="100" width="60" height="160" fill="#e8e8e8" stroke="#555" stroke-width="2"/>
-  <text x="260" y="340" text-anchor="middle" font-size="13" fill="#444">衔铁</text>
-
-  <!-- 摩擦片 -->
-  <rect x="290" y="112" width="16" height="136" fill="#a33" stroke="#5c1010" stroke-width="1.5" rx="2"/>
-  <text x="298" y="348" text-anchor="middle" font-size="12" fill="#8a2020">摩擦片</text>
-
-  <!-- 制动盘 -->
-  <rect x="306" y="70" width="20" height="220" fill="#7ba7d0" stroke="#2a5a86" stroke-width="2"/>
-  <circle cx="316" cy="180" r="10" fill="#fff" stroke="#2a5a86" stroke-width="2"/>
-  <text x="316" y="60" text-anchor="middle" font-size="13" fill="#2a5a86">制动盘</text>
-
-  <!-- 固定压板 -->
-  <rect x="340" y="70" width="36" height="220" fill="#9a9a9a" stroke="#555" stroke-width="2"/>
-  <text x="358" y="340" text-anchor="middle" font-size="12" fill="#555">固定压板</text>
-
-  <!-- 工作气隙标注 -->
-  <line x1="170" y1="176" x2="230" y2="176" stroke="#d32f2f" stroke-width="2.5" marker-start="url(#arrowL)" marker-end="url(#arrowR)"/>
-  <line x1="170" y1="205" x2="230" y2="205" stroke="#d32f2f" stroke-width="1" stroke-dasharray="4 4"/>
-  <text x="200" y="196" text-anchor="middle" font-size="13" font-weight="bold" fill="#d32f2f">工作气隙 δ</text>
-
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400" font-family="Microsoft YaHei, sans-serif">
   <defs>
-    <marker id="arrowL" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M9 0 L0 4.5 L9 9 z" fill="#d32f2f"/></marker>
-    <marker id="arrowR" markerWidth="9" markerHeight="9" refX="1" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 z" fill="#d32f2f"/></marker>
+    <marker id="aL" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto">
+      <path d="M9,0 L0,4.5 L9,9 Z" fill="#d32f2f"/>
+    </marker>
+    <marker id="aR" markerWidth="9" markerHeight="9" refX="1" refY="4.5" orient="auto">
+      <path d="M0,0 L9,4.5 L0,9 Z" fill="#d32f2f"/>
+    </marker>
+    <marker id="aG" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M0,0 L9,4.5 L0,9 Z" fill="#2e7d32"/>
+    </marker>
   </defs>
 
-  <!-- 运动方向 -->
-  <text x="278" y="96" font-size="12" font-weight="bold" fill="#2e7d32">← 压力</text>
+  <text x="380" y="26" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">图1 抱闸（失电）状态</text>
+
+  <!-- 磁轭与压板刚性连接杆 -->
+  <line x1="170" y1="68" x2="342" y2="68" stroke="#8a94a6" stroke-width="4"/>
+  <line x1="170" y1="68" x2="170" y2="80" stroke="#8a94a6" stroke-width="4"/>
+  <line x1="342" y1="68" x2="342" y2="80" stroke="#8a94a6" stroke-width="4"/>
+  <text x="256" y="58" text-anchor="middle" font-size="11" fill="#8a94a6">刚性连接</text>
+
+  <!-- 转轴（剖面横穿） -->
+  <line x1="15" y1="200" x2="745" y2="200" stroke="#666" stroke-width="10" stroke-linecap="round"/>
+
+  <!-- 磁轭（E 形静铁心） -->
+  <rect x="40" y="80"  width="30" height="240" fill="#b9c4d4" stroke="#5a6a84" stroke-width="2"/>
+  <rect x="40" y="80"  width="130" height="50"  fill="#c2cddd" stroke="#5a6a84" stroke-width="2"/>
+  <rect x="40" y="270" width="130" height="50"  fill="#c2cddd" stroke="#5a6a84" stroke-width="2"/>
+  <rect x="130" y="155" width="40" height="90"  fill="#c2cddd" stroke="#5a6a84" stroke-width="2"/>
+
+  <!-- 线圈（绕中柱） -->
+  <rect x="134" y="160" width="32" height="80" fill="#f5a623" stroke="#b96b00" stroke-width="2" rx="4"/>
+  <line x1="139" y1="172" x2="161" y2="172" stroke="#b96b00" stroke-width="1.5"/>
+  <line x1="139" y1="184" x2="161" y2="184" stroke="#b96b00" stroke-width="1.5"/>
+  <line x1="139" y1="196" x2="161" y2="196" stroke="#b96b00" stroke-width="1.5"/>
+  <line x1="139" y1="208" x2="161" y2="208" stroke="#b96b00" stroke-width="1.5"/>
+  <line x1="139" y1="220" x2="161" y2="220" stroke="#b96b00" stroke-width="1.5"/>
+  <line x1="139" y1="232" x2="161" y2="232" stroke="#b96b00" stroke-width="1.5"/>
+  <line x1="134" y1="180" x2="110" y2="180" stroke="#b96b00" stroke-width="2"/>
+  <line x1="134" y1="220" x2="110" y2="220" stroke="#b96b00" stroke-width="2"/>
+  <text x="106" y="176" text-anchor="end" font-size="10.5" fill="#8a5200">A1</text>
+  <text x="106" y="216" text-anchor="end" font-size="10.5" fill="#8a5200">A2</text>
+  <text x="106" y="258" text-anchor="end" font-size="10.5" fill="#8a5200">（断电）</text>
+
+  <!-- 复位弹簧 ×2（自然伸长，连接铁心与衔铁） -->
+  <path d="M170,115 L175,108 L185,122 L195,108 L205,122 L215,108 L225,122 L230,115" stroke="#2e7d32" stroke-width="2.5" fill="none"/>
+  <path d="M170,285 L175,292 L185,278 L195,292 L205,278 L215,292 L225,278 L230,285" stroke="#2e7d32" stroke-width="2.5" fill="none"/>
+  <text x="200" y="96" text-anchor="middle" font-size="11.5" fill="#2e7d32">复位弹簧（自然伸长）</text>
+
+  <!-- 衔铁 + 摩擦片（抱闸位置：右移压紧） -->
+  <rect x="230" y="110" width="60" height="180" fill="#e8e8e8" stroke="#555" stroke-width="2"/>
+  <rect x="290" y="122" width="14" height="156" fill="#b03030" stroke="#5c1010" stroke-width="1.5" rx="2"/>
+  <text x="260" y="178" text-anchor="middle" font-size="12.5" fill="#444">衔铁</text>
+  <text x="260" y="196" text-anchor="middle" font-size="10.5" fill="#777">（右移压紧）</text>
+
+  <!-- 制动盘（固定在转轴上） -->
+  <rect x="304" y="80" width="20" height="240" fill="#7ba7d0" stroke="#2a5a86" stroke-width="2"/>
+  <circle cx="314" cy="200" r="9" fill="#fff" stroke="#2a5a86" stroke-width="2"/>
+
+  <!-- 固定压板（抱闸时被压紧） -->
+  <rect x="324" y="80" width="36" height="240" fill="#9a9a9a" stroke="#555" stroke-width="2"/>
+
+  <!-- 工作气隙标注（极面 ↔ 衔铁左端面） -->
+  <line x1="172" y1="148" x2="228" y2="148" stroke="#d32f2f" stroke-width="2.5" marker-start="url(#aL)" marker-end="url(#aR)"/>
+  <text x="200" y="168" text-anchor="middle" font-size="11" font-weight="bold" fill="#d32f2f">工作气隙</text>
+  <text x="200" y="184" text-anchor="middle" font-size="10" fill="#d32f2f">δ ≈ 0.8mm</text>
+
+  <!-- 接触压紧标注 -->
+  <text x="297" y="106" text-anchor="middle" font-size="11" font-weight="bold" fill="#b03030">压紧①</text>
+  <text x="314" y="48" text-anchor="middle" font-size="12" fill="#2a5a86">制动盘</text>
+  <text x="348" y="106" text-anchor="middle" font-size="11" font-weight="bold" fill="#555">压紧②</text>
+
+  <!-- 转轴状态 -->
+  <text x="740" y="182" text-anchor="end" font-size="12" fill="#444">转轴</text>
+  <text x="740" y="228" text-anchor="end" font-size="12.5" font-weight="bold" fill="#c62828">✕ 已制停（抱闸）</text>
+
+  <!-- 底部组件名称 -->
+  <text x="90" y="352" text-anchor="middle" font-size="12" fill="#3c4a63">磁轭（E形静铁心）</text>
+  <line x1="150" y1="242" x2="150" y2="336" stroke="#8a5200" stroke-width="1" stroke-dasharray="3 3"/>
+  <text x="150" y="368" text-anchor="middle" font-size="12" fill="#8a5200">线圈</text>
+  <line x1="297" y1="282" x2="297" y2="336" stroke="#8a2020" stroke-width="1" stroke-dasharray="3 3"/>
+  <text x="297" y="352" text-anchor="middle" font-size="12" fill="#8a2020">摩擦片</text>
+  <line x1="342" y1="322" x2="372" y2="338" stroke="#555" stroke-width="1" stroke-dasharray="3 3"/>
+  <text x="377" y="352" text-anchor="middle" font-size="12" fill="#555">固定压板</text>
+
+  <!-- 右侧动作链说明 -->
+  <rect x="420" y="80" width="320" height="180" rx="10" fill="#eafaf1" stroke="#27ae60" stroke-width="1.5"/>
+  <text x="580" y="106" text-anchor="middle" font-size="14" font-weight="bold" fill="#1e8449">抱闸动作链（断电）</text>
+  <g font-size="12.5" fill="#2d3436">
+    <text x="436" y="136">① 线圈断电，电磁力消失</text>
+    <text x="436" y="162">② 复位弹簧（自然伸长）推动衔铁右移</text>
+    <text x="436" y="188">③ 摩擦片压紧制动盘（压紧①）</text>
+    <text x="436" y="214">④ 制动盘压向固定压板（压紧②）</text>
+    <text x="436" y="240">→ 依靠摩擦力矩使转轴减速制停</text>
+  </g>
+
+  <!-- 安全提示 -->
+  <rect x="420" y="280" width="320" height="80" rx="10" fill="#fdeaea" stroke="#cc4444" stroke-width="1.5"/>
+  <text x="580" y="308" text-anchor="middle" font-size="13" font-weight="bold" fill="#a02020">安全制动器核心优势</text>
+  <text x="580" y="332" text-anchor="middle" font-size="12" fill="#555">任何断电或故障状态下都能自动制停，</text>
+  <text x="580" y="352" text-anchor="middle" font-size="12" fill="#555">保障设备与人员安全（失电即抱闸）。</text>
 </svg>
