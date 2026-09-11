@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 760" font-family="'Microsoft YaHei','PingFang SC',sans-serif">
+  <rect x="0" y="0" width="940" height="760" fill="#ffffff"/>
+  <defs>
+    <marker id="f1" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 z" fill="#1a73e8"/>
+    </marker>
+  </defs>
+  <text x="470" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#202124">电网绝缘故障查找流程（拉电查找法 + 兆欧表复核）</text>
+
+  <!-- 1 报警 -->
+  <rect x="330" y="55" width="280" height="52" rx="10" fill="#fdecea" stroke="#c0392b" stroke-width="2"/>
+  <text x="470" y="86" text-anchor="middle" font-size="13" fill="#c0392b">绝缘监视仪读数下降，声光报警</text>
+
+  <!-- 2 消音消闪 -->
+  <rect x="330" y="130" width="280" height="52" rx="10" fill="#fef7e0" stroke="#b26a00" stroke-width="2"/>
+  <text x="470" y="161" text-anchor="middle" font-size="13" fill="#b26a00">按下「消音」「消闪」，记录当前读数</text>
+
+  <!-- 3 判断类型 -->
+  <rect x="330" y="205" width="280" height="52" rx="10" fill="#f3e8fd" stroke="#8430ce" stroke-width="2"/>
+  <text x="470" y="228" text-anchor="middle" font-size="12.5" fill="#8430ce">判断故障类型：读数≈0.05MΩ（绝缘低）</text>
+  <text x="470" y="247" text-anchor="middle" font-size="12.5" fill="#8430ce">或 =0MΩ（直接接地）</text>
+
+  <!-- 4 拉电查找 -->
+  <rect x="300" y="280" width="340" height="66" rx="10" fill="#e8f0fe" stroke="#1a73e8" stroke-width="2.5"/>
+  <text x="470" y="305" text-anchor="middle" font-size="13" font-weight="bold" fill="#1a73e8">拉电查找法：依次拉开各路负载开关</text>
+  <text x="470" y="328" text-anchor="middle" font-size="11.5" fill="#1a73e8">照明电网可直接拉开关；动力电网先停电机再操作</text>
+
+  <!-- 决策菱形 -->
+  <polygon points="470,370 610,445 470,520 330,445" fill="#fff8e1" stroke="#b26a00" stroke-width="2.5"/>
+  <text x="470" y="438" text-anchor="middle" font-size="12.5" fill="#b26a00">拉掉某路后，监视仪</text>
+  <text x="470" y="458" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#b26a00">读数是否恢复正常？</text>
+
+  <!-- 否 -> 合回继续 -->
+  <path d="M610 445 L720 445 L720 313 L640 313" fill="none" stroke="#5f6368" stroke-width="2" marker-end="url(#f1)"/>
+  <text x="650" y="430" font-size="11.5" fill="#5f6368">否：合回该路，继续下一路</text>
+
+  <!-- 是 -> 检修牌 -->
+  <path d="M470 520 L470 555" fill="none" stroke="#1a73e8" stroke-width="2.5" marker-end="url(#f1)"/>
+  <text x="482" y="545" font-size="11.5" fill="#188038">是：判定该路为故障路</text>
+
+  <rect x="330" y="555" width="280" height="50" rx="10" fill="#e6f4ea" stroke="#188038" stroke-width="2"/>
+  <text x="470" y="586" text-anchor="middle" font-size="12.5" fill="#188038">挂「禁止合闸，有人工作」检修牌</text>
+
+  <!-- 兆欧表复核 -->
+  <path d="M470 605 L470 628" fill="none" stroke="#1a73e8" stroke-width="2.5" marker-end="url(#f1)"/>
+  <rect x="300" y="628" width="340" height="56" rx="10" fill="#f3e8fd" stroke="#8430ce" stroke-width="2.5"/>
+  <text x="470" y="652" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#8430ce">兆欧表复核：L 接故障相端子、E 接船体地</text>
+  <text x="470" y="673" text-anchor="middle" font-size="11.5" fill="#8430ce">摇动手柄，读数约 0.05MΩ → 确认该支路绝缘低</text>
+
+  <!-- 修复复位 -->
+  <path d="M470 684 L470 706" fill="none" stroke="#1a73e8" stroke-width="2.5" marker-end="url(#f1)"/>
+  <rect x="300" y="706" width="340" height="46" rx="10" fill="#d2e3fc" stroke="#0b5394" stroke-width="2.5"/>
+  <text x="470" y="734" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#0b5394">修复绝缘 → 合回负载开关 → 按下「复位」验证</text>
+
+  <!-- 侧栏提示 -->
+  <rect x="60" y="130" width="200" height="150" rx="10" fill="#f8f9fa" stroke="#dadce0" stroke-width="1.5"/>
+  <text x="78" y="158" font-size="12.5" font-weight="bold" fill="#202124">为什么用「拉电」？</text>
+  <text x="78" y="184" font-size="11" fill="#37474f">电网由多路负载组成，</text>
+  <text x="78" y="204" font-size="11" fill="#37474f">逐路断电可缩小范围：</text>
+  <text x="78" y="224" font-size="11" fill="#37474f">断开某路后故障点被隔离，</text>
+  <text x="78" y="244" font-size="11" fill="#37474f">读数即回正常值，该路</text>
+  <text x="78" y="264" font-size="11" fill="#37474f">即为故障路。</text>
+
+  <rect x="700" y="130" width="200" height="150" rx="10" fill="#f8f9fa" stroke="#dadce0" stroke-width="1.5"/>
+  <text x="718" y="158" font-size="12.5" font-weight="bold" fill="#202124">安全要点</text>
+  <text x="718" y="184" font-size="11" fill="#37474f">• 拉闸前确认负载已停</text>
+  <text x="718" y="204" font-size="11" fill="#37474f">• 动力回路先停电机</text>
+  <text x="718" y="224" font-size="11" fill="#37474f">• 挂检修牌防止误合闸</text>
+  <text x="718" y="244" font-size="11" fill="#37474f">• 兆欧表摇测前先断电</text>
+  <text x="718" y="264" font-size="11" fill="#37474f">  并对地放电</text>
+</svg>

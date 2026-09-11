@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 540" font-family="'Microsoft YaHei','PingFang SC',sans-serif">
+  <rect x="0" y="0" width="940" height="540" fill="#ffffff"/>
+  <defs>
+    <marker id="m1" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 z" fill="#1a73e8"/>
+    </marker>
+    <marker id="m2" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 z" fill="#8430ce"/>
+    </marker>
+    <marker id="m3" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 z" fill="#c0392b"/>
+    </marker>
+  </defs>
+  <text x="470" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#202124">绝缘监视仪工作原理</text>
+
+  <!-- 信号源 -->
+  <rect x="40" y="70" width="160" height="80" rx="10" fill="#e8f0fe" stroke="#1a73e8" stroke-width="2.5"/>
+  <text x="120" y="102" text-anchor="middle" font-size="13" font-weight="bold" fill="#1a73e8">低频脉冲信号源</text>
+  <text x="120" y="124" text-anchor="middle" font-size="11" fill="#1a73e8">持续注入测量脉冲</text>
+
+  <!-- 内部串联电阻 -->
+  <rect x="250" y="70" width="150" height="80" rx="10" fill="#fef7e0" stroke="#b26a00" stroke-width="2.5"/>
+  <text x="325" y="102" text-anchor="middle" font-size="13" font-weight="bold" fill="#b26a00">内部串联电阻 Rin</text>
+  <text x="325" y="124" text-anchor="middle" font-size="11" fill="#b26a00">仪表固有内阻</text>
+
+  <!-- 注入电容 -->
+  <line x1="450" y1="110" x2="540" y2="110" stroke="#5f6368" stroke-width="2.5"/>
+  <line x1="540" y1="86" x2="540" y2="134" stroke="#5f6368" stroke-width="3"/>
+  <line x1="556" y1="86" x2="556" y2="134" stroke="#5f6368" stroke-width="3"/>
+  <line x1="556" y1="110" x2="620" y2="110" stroke="#5f6368" stroke-width="2.5"/>
+  <text x="548" y="78" text-anchor="middle" font-size="11" fill="#5f6368">注入电容 C</text>
+
+  <!-- 被测电网 -->
+  <rect x="620" y="55" width="240" height="150" rx="10" fill="#f1f3f4" stroke="#5f6368" stroke-width="2"/>
+  <text x="740" y="80" text-anchor="middle" font-size="13" font-weight="bold" fill="#202124">被测三相电网</text>
+  <line x1="650" y1="100" x2="830" y2="100" stroke="#c0392b" stroke-width="3"/>
+  <line x1="650" y1="124" x2="830" y2="124" stroke="#d4a017" stroke-width="3"/>
+  <line x1="650" y1="148" x2="830" y2="148" stroke="#2471a3" stroke-width="3"/>
+  <text x="644" y="104" text-anchor="end" font-size="10" fill="#c0392b">L1</text>
+  <text x="644" y="128" text-anchor="end" font-size="10" fill="#d4a017">L2</text>
+  <text x="644" y="152" text-anchor="end" font-size="10" fill="#2471a3">L3</text>
+
+  <!-- 绝缘电阻 Rx 对地 -->
+  <line x1="740" y1="205" x2="740" y2="250" stroke="#5f6368" stroke-width="2.5"/>
+  <rect x="726" y="250" width="28" height="52" fill="#fff" stroke="#8430ce" stroke-width="2.5"/>
+  <text x="775" y="282" font-size="12" fill="#8430ce">绝缘电阻 Rx</text>
+  <line x1="740" y1="302" x2="740" y2="330" stroke="#5f6368" stroke-width="2.5"/>
+  <line x1="710" y1="330" x2="770" y2="330" stroke="#5f6368" stroke-width="3"/>
+  <line x1="720" y1="342" x2="760" y2="342" stroke="#5f6368" stroke-width="3"/>
+  <line x1="731" y1="354" x2="749" y2="354" stroke="#5f6368" stroke-width="3"/>
+  <text x="740" y="378" text-anchor="middle" font-size="11" fill="#5f6368">船体地</text>
+
+  <!-- 泄漏电流检测 -->
+  <rect x="60" y="210" width="180" height="80" rx="10" fill="#f3e8fd" stroke="#8430ce" stroke-width="2.5"/>
+  <text x="150" y="242" text-anchor="middle" font-size="13" font-weight="bold" fill="#8430ce">泄漏电流检测</text>
+  <text x="150" y="264" text-anchor="middle" font-size="11" fill="#8430ce">微电流采样 I</text>
+
+  <!-- 换算 -->
+  <rect x="290" y="210" width="190" height="80" rx="10" fill="#e6f4ea" stroke="#188038" stroke-width="2.5"/>
+  <text x="385" y="238" text-anchor="middle" font-size="13" font-weight="bold" fill="#188038">分压关系换算</text>
+  <text x="385" y="262" text-anchor="middle" font-size="12" fill="#188038">Rx ≈ U / I − Rin</text>
+
+  <!-- 显示 -->
+  <rect x="530" y="210" width="150" height="80" rx="10" fill="#e8f0fe" stroke="#1a73e8" stroke-width="2.5"/>
+  <text x="605" y="242" text-anchor="middle" font-size="13" font-weight="bold" fill="#1a73e8">液晶显示</text>
+  <text x="605" y="264" text-anchor="middle" font-size="11" fill="#1a73e8">绝缘电阻读数</text>
+
+  <!-- 报警 -->
+  <rect x="730" y="210" width="170" height="80" rx="10" fill="#fdecea" stroke="#c0392b" stroke-width="2.5"/>
+  <text x="815" y="238" text-anchor="middle" font-size="13" font-weight="bold" fill="#c0392b">阈值比较</text>
+  <text x="815" y="262" text-anchor="middle" font-size="11" fill="#c0392b">Rx &lt; 0.1MΩ → 声光报警</text>
+
+  <!-- 连线 -->
+  <path d="M200 110 L250 110" fill="none" stroke="#1a73e8" stroke-width="2.5" marker-end="url(#m1)"/>
+  <path d="M400 110 L450 110" fill="none" stroke="#1a73e8" stroke-width="2.5" marker-end="url(#m1)"/>
+  <path d="M590 110 L590 205" fill="none" stroke="#5f6368" stroke-width="2.5"/>
+  <path d="M590 205 L150 190 L150 210" fill="none" stroke="#8430ce" stroke-width="2.5" marker-end="url(#m2)"/>
+  <text x="330" y="192" font-size="11" fill="#8430ce">回路泄漏电流 I</text>
+
+  <path d="M240 250 L290 250" fill="none" stroke="#188038" stroke-width="2.5" marker-end="url(#m1)"/>
+  <path d="M480 250 L530 250" fill="none" stroke="#1a73e8" stroke-width="2.5" marker-end="url(#m1)"/>
+  <path d="M680 250 L730 250" fill="none" stroke="#c0392b" stroke-width="2.5" marker-end="url(#m3)"/>
+
+  <!-- 结论 -->
+  <rect x="60" y="330" width="540" height="140" rx="10" fill="#f8f9fa" stroke="#dadce0" stroke-width="1.5"/>
+  <text x="80" y="358" font-size="13" font-weight="bold" fill="#202124">测量要点</text>
+  <text x="80" y="384" font-size="12" fill="#37474f">1. 仪表内阻 Rin 与被测绝缘电阻 Rx 串联，构成测量回路。</text>
+  <text x="80" y="408" font-size="12" fill="#37474f">2. 泄漏电流 I 随 Rx 减小而增大；由分压关系即可反算 Rx。</text>
+  <text x="80" y="432" font-size="12" fill="#37474f">3. Rx 越低，读数越小；低于整定阈值（本模型 0.1MΩ）时报警。</text>
+  <text x="80" y="456" font-size="12" fill="#37474f">4. 监视仪只能给出绝缘电阻数值，故障「相」仍需靠地气灯或分段查找。</text>
+</svg>
