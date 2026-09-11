@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 540" font-family="'Microsoft YaHei','PingFang SC',sans-serif">
+  <rect x="0" y="0" width="920" height="540" fill="#ffffff"/>
+
+  <defs>
+    <marker id="arrBlue" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 z" fill="#1a73e8"/>
+    </marker>
+    <marker id="arrOrange" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 z" fill="#b26a00"/>
+    </marker>
+    <marker id="arrPurple" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 z" fill="#8430ce"/>
+    </marker>
+    <marker id="arrGreen" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 z" fill="#188038"/>
+    </marker>
+  </defs>
+
+  <!-- ── 断路器保护特性测试仪 ── -->
+  <rect x="30" y="60" width="300" height="240" rx="12" fill="#e8f0fe" stroke="#1a73e8" stroke-width="2.5"/>
+  <text x="180" y="90" text-anchor="middle" font-size="16" font-weight="bold" fill="#1a73e8">断路器保护特性测试仪</text>
+  <text x="180" y="110" text-anchor="middle" font-size="11" fill="#1a73e8">tester1</text>
+  <text x="52" y="142" font-size="12" fill="#37474f">旋钮：一次电流 / 二次电流</text>
+  <text x="52" y="164" font-size="12" fill="#37474f">         电流相位 / 线电压</text>
+  <text x="52" y="192" font-size="12" fill="#37474f">按钮：一次起动·停止 / 二次起动·停止</text>
+  <text x="52" y="220" font-size="12" fill="#37474f">LCD：显示电流、电压、跳闸时间</text>
+  <rect x="52" y="238" width="256" height="46" rx="6" fill="#ffffff" stroke="#1a73e8" stroke-width="1.5"/>
+  <text x="180" y="257" text-anchor="middle" font-size="11" fill="#1a73e8">24V 供电 · 一次/二次电流输出</text>
+  <text x="180" y="275" text-anchor="middle" font-size="11" fill="#1a73e8">可调线电压输出</text>
+
+  <!-- ── 电流互感器 ── -->
+  <rect x="388" y="66" width="152" height="68" rx="10" fill="#fef7e0" stroke="#b26a00" stroke-width="2"/>
+  <text x="464" y="94" text-anchor="middle" font-size="13" font-weight="bold" fill="#b26a00">电流互感器 CT</text>
+  <text x="464" y="114" text-anchor="middle" font-size="10" fill="#b26a00">变比 100/5 = 20</text>
+
+  <!-- ── 电压互感器 ── -->
+  <rect x="388" y="166" width="152" height="68" rx="10" fill="#fef7e0" stroke="#b26a00" stroke-width="2"/>
+  <text x="464" y="194" text-anchor="middle" font-size="13" font-weight="bold" fill="#b26a00">电压互感器 PT</text>
+  <text x="464" y="214" text-anchor="middle" font-size="10" fill="#b26a00">变比 400/100 = 4</text>
+
+  <!-- ── 主开关 ── -->
+  <rect x="640" y="56" width="250" height="118" rx="12" fill="#d2e3fc" stroke="#0b5394" stroke-width="2.5"/>
+  <text x="765" y="86" text-anchor="middle" font-size="16" font-weight="bold" fill="#0b5394">主开关 qf1</text>
+  <text x="765" y="110" text-anchor="middle" font-size="11" fill="#0b5394">船用空气断路器 ACB</text>
+  <text x="765" y="132" text-anchor="middle" font-size="11" fill="#0b5394">主触头 · 储能机构</text>
+  <text x="765" y="152" text-anchor="middle" font-size="11" fill="#0b5394">ET 脱扣接口 · 常开辅助触点</text>
+
+  <!-- ── 电子脱扣器 ── -->
+  <rect x="640" y="212" width="250" height="128" rx="12" fill="#f3e8fd" stroke="#8430ce" stroke-width="2.5"/>
+  <text x="765" y="242" text-anchor="middle" font-size="15" font-weight="bold" fill="#8430ce">电子脱扣器 et1</text>
+  <text x="765" y="264" text-anchor="middle" font-size="11" fill="#8430ce">In = 100 A · Un = 400 V</text>
+  <text x="765" y="284" text-anchor="middle" font-size="11" fill="#8430ce">按 CT/PT 变比还原原边量</text>
+  <text x="765" y="304" text-anchor="middle" font-size="11" fill="#8430ce">过载 / 短路 / 欠压 / 逆功率判据</text>
+  <text x="765" y="324" text-anchor="middle" font-size="11" fill="#8430ce">整定值与动作时间可调</text>
+
+  <!-- ── 控制电源 ── -->
+  <rect x="52" y="398" width="220" height="94" rx="12" fill="#e6f4ea" stroke="#188038" stroke-width="2.5"/>
+  <text x="162" y="428" text-anchor="middle" font-size="14" font-weight="bold" fill="#188038">控制电源 DC 24V</text>
+  <text x="162" y="450" text-anchor="middle" font-size="11" fill="#188038">失压脱扣线圈 · 储能电机</text>
+  <text x="162" y="470" text-anchor="middle" font-size="11" fill="#188038">脱扣器与测试仪工作电源</text>
+
+  <!-- ── 信号连线 ── -->
+  <!-- 一次电流输出 -->
+  <path d="M330 160 L388 100" fill="none" stroke="#1a73e8" stroke-width="2.5" marker-end="url(#arrBlue)"/>
+  <text x="300" y="124" font-size="10" fill="#1a73e8">一次电流 out1~3</text>
+  <!-- CT 原边到主开关 -->
+  <path d="M540 100 L640 100" fill="none" stroke="#1a73e8" stroke-width="2.5" marker-end="url(#arrBlue)"/>
+  <!-- 主开关回流 -->
+  <path d="M640 150 L340 250" fill="none" stroke="#1a73e8" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#arrBlue)"/>
+  <text x="430" y="240" font-size="10" fill="#1a73e8">经主触头回流 r1~3</text>
+
+  <!-- 测试仪线电压 -> PT 原边 -->
+  <path d="M330 244 L388 200" fill="none" stroke="#8430ce" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#arrPurple)"/>
+  <text x="292" y="236" font-size="10" fill="#8430ce">线电压 vout</text>
+  <!-- CT 副边 -> ET -->
+  <path d="M540 130 L640 250" fill="none" stroke="#b26a00" stroke-width="2" marker-end="url(#arrOrange)"/>
+  <text x="548" y="185" font-size="10" fill="#b26a00">CT 副边电流 s1/s2</text>
+  <!-- PT 副边 -> ET -->
+  <path d="M540 200 L640 285" fill="none" stroke="#b26a00" stroke-width="2" marker-end="url(#arrOrange)"/>
+  <text x="548" y="255" font-size="10" fill="#b26a00">PT 副边电压</text>
+  <!-- ET 脱扣 -> 主开关 -->
+  <path d="M765 212 L765 174" fill="none" stroke="#8430ce" stroke-width="2.5" marker-end="url(#arrPurple)"/>
+  <text x="772" y="198" font-size="10" fill="#8430ce">脱扣输出 t1/t2</text>
+
+  <!-- 控制电源 -> 各负载 -->
+  <path d="M272 430 L640 330" fill="none" stroke="#188038" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#arrGreen)"/>
+  <text x="380" y="392" font-size="10" fill="#188038">DC 24V 供电</text>
+
+  <!-- 地 -->
+  <path d="M340 400 L340 420" stroke="#5f6368" stroke-width="2"/>
+  <path d="M322 420 L358 420" stroke="#5f6368" stroke-width="2"/>
+  <path d="M330 428 L350 428" stroke="#5f6368" stroke-width="2"/>
+  <path d="M337 436 L343 436" stroke="#5f6368" stroke-width="2"/>
+  <text x="352" y="404" font-size="10" fill="#5f6368">共地</text>
+</svg>

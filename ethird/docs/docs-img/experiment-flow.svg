@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 560" font-family="'Microsoft YaHei','PingFang SC',sans-serif">
+  <rect x="0" y="0" width="980" height="560" fill="#ffffff"/>
+
+  <!-- ===== 列 1 一次大电流 ===== -->
+  <rect x="24" y="30" width="220" height="46" rx="8" fill="#1a73e8"/>
+  <text x="134" y="52" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffffff">实验一</text>
+  <text x="134" y="69" text-anchor="middle" font-size="11" fill="#ffffff">一次大电流故障实验</text>
+  <rect x="24" y="92" width="220" height="92" rx="8" fill="#e8f0fe" stroke="#1a73e8" stroke-width="1.5"/>
+  <text x="38" y="118" font-size="11" fill="#1a3d7c">1. 自动接线</text>
+  <text x="38" y="140" font-size="11" fill="#1a3d7c">2. 合上主开关</text>
+  <rect x="24" y="196" width="220" height="92" rx="8" fill="#e8f0fe" stroke="#1a73e8" stroke-width="1.5"/>
+  <text x="38" y="222" font-size="11" fill="#1a3d7c">3. 一次电流 140A</text>
+  <text x="38" y="244" font-size="11" fill="#1a3d7c">4. 起动 → 过载脱扣</text>
+  <rect x="24" y="300" width="220" height="92" rx="8" fill="#e8f0fe" stroke="#1a73e8" stroke-width="1.5"/>
+  <text x="38" y="326" font-size="11" fill="#1a3d7c">5. 停止 + 复位</text>
+  <text x="38" y="348" font-size="11" fill="#1a3d7c">6. 重新合上主开关</text>
+  <rect x="24" y="404" width="220" height="92" rx="8" fill="#e8f0fe" stroke="#1a73e8" stroke-width="1.5"/>
+  <text x="38" y="430" font-size="11" fill="#1a3d7c">7. 一次电流 300A</text>
+  <text x="38" y="452" font-size="11" fill="#1a3d7c">8. 起动 → 短路脱扣</text>
+  <path d="M134 128 L134 190" stroke="#1a73e8" stroke-width="2" marker-end="url(#fArr)"/>
+  <path d="M134 232 L134 294" stroke="#1a73e8" stroke-width="2" marker-end="url(#fArr)"/>
+  <path d="M134 336 L134 398" stroke="#1a73e8" stroke-width="2" marker-end="url(#fArr)"/>
+
+  <!-- ===== 列 2 二次小电流 ===== -->
+  <rect x="264" y="30" width="220" height="46" rx="8" fill="#b26a00"/>
+  <text x="374" y="52" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffffff">实验二</text>
+  <text x="374" y="69" text-anchor="middle" font-size="11" fill="#ffffff">二次小电流故障实验</text>
+  <rect x="264" y="92" width="220" height="92" rx="8" fill="#fef7e0" stroke="#b26a00" stroke-width="1.5"/>
+  <text x="278" y="118" font-size="11" fill="#7a4a00">1. 拆 CT 副边接线</text>
+  <text x="278" y="140" font-size="11" fill="#7a4a00">2. 接入二次电流 + 合闸</text>
+  <rect x="264" y="196" width="220" height="92" rx="8" fill="#fef7e0" stroke="#b26a00" stroke-width="1.5"/>
+  <text x="278" y="222" font-size="11" fill="#7a4a00">3. 二次电流 7A</text>
+  <text x="278" y="244" font-size="11" fill="#7a4a00">4. 起动 → 过载脱扣</text>
+  <rect x="264" y="300" width="220" height="92" rx="8" fill="#fef7e0" stroke="#b26a00" stroke-width="1.5"/>
+  <text x="278" y="326" font-size="11" fill="#7a4a00">5. 停止 + 复位</text>
+  <text x="278" y="348" font-size="11" fill="#7a4a00">6. 重新合上主开关</text>
+  <rect x="264" y="404" width="220" height="92" rx="8" fill="#fef7e0" stroke="#b26a00" stroke-width="1.5"/>
+  <text x="278" y="430" font-size="11" fill="#7a4a00">7. 二次电流 15A</text>
+  <text x="278" y="452" font-size="11" fill="#7a4a00">8. 起动 → 短路脱扣</text>
+  <path d="M374 128 L374 190" stroke="#b26a00" stroke-width="2" marker-end="url(#fArr)"/>
+  <path d="M374 232 L374 294" stroke="#b26a00" stroke-width="2" marker-end="url(#fArr)"/>
+  <path d="M374 336 L374 398" stroke="#b26a00" stroke-width="2" marker-end="url(#fArr)"/>
+
+  <!-- ===== 列 3 逆功率 ===== -->
+  <rect x="504" y="30" width="220" height="46" rx="8" fill="#8430ce"/>
+  <text x="614" y="52" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffffff">实验三</text>
+  <text x="614" y="69" text-anchor="middle" font-size="11" fill="#ffffff">逆功率保护模拟实验</text>
+  <rect x="504" y="92" width="220" height="92" rx="8" fill="#f3e8fd" stroke="#8430ce" stroke-width="1.5"/>
+  <text x="518" y="118" font-size="11" fill="#5b1f8f">1. 拆 CT 副边接线</text>
+  <text x="518" y="140" font-size="11" fill="#5b1f8f">2. 接入二次电流 + 合闸</text>
+  <rect x="504" y="196" width="220" height="92" rx="8" fill="#f3e8fd" stroke="#8430ce" stroke-width="1.5"/>
+  <text x="518" y="222" font-size="11" fill="#5b1f8f">3. 二次电流 5A</text>
+  <text x="518" y="244" font-size="11" fill="#5b1f8f">4. 相位 100° → 逆功率脱扣</text>
+  <rect x="504" y="300" width="220" height="92" rx="8" fill="#f3e8fd" stroke="#8430ce" stroke-width="1.5"/>
+  <text x="518" y="326" font-size="11" fill="#5b1f8f">5. 停止 + 复位</text>
+  <text x="518" y="348" font-size="11" fill="#5b1f8f">6. 重新合上主开关</text>
+  <rect x="504" y="404" width="220" height="92" rx="8" fill="#f3e8fd" stroke="#8430ce" stroke-width="1.5"/>
+  <text x="518" y="430" font-size="11" fill="#5b1f8f">7. 测试题</text>
+  <text x="518" y="452" font-size="11" fill="#5b1f8f">8. 逆功率测试方法种类</text>
+  <path d="M614 128 L614 190" stroke="#8430ce" stroke-width="2" marker-end="url(#fArr)"/>
+  <path d="M614 232 L614 294" stroke="#8430ce" stroke-width="2" marker-end="url(#fArr)"/>
+  <path d="M614 336 L614 398" stroke="#8430ce" stroke-width="2" marker-end="url(#fArr)"/>
+
+  <!-- ===== 列 4 欠压 ===== -->
+  <rect x="744" y="30" width="220" height="46" rx="8" fill="#188038"/>
+  <text x="854" y="52" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffffff">实验四</text>
+  <text x="854" y="69" text-anchor="middle" font-size="11" fill="#ffffff">欠压保护模拟实验</text>
+  <rect x="744" y="92" width="220" height="92" rx="8" fill="#e6f4ea" stroke="#188038" stroke-width="1.5"/>
+  <text x="758" y="118" font-size="11" fill="#0d5225">1. 自动接线</text>
+  <text x="758" y="140" font-size="11" fill="#0d5225">2. 合上主开关</text>
+  <rect x="744" y="196" width="220" height="92" rx="8" fill="#e6f4ea" stroke="#188038" stroke-width="1.5"/>
+  <text x="758" y="222" font-size="11" fill="#0d5225">3. 线电压降至 280V</text>
+  <text x="758" y="244" font-size="11" fill="#0d5225">4. 欠压脱扣</text>
+  <rect x="744" y="300" width="220" height="92" rx="8" fill="#e6f4ea" stroke="#188038" stroke-width="1.5"/>
+  <text x="758" y="326" font-size="11" fill="#0d5225">5. 恢复 400V + 复位</text>
+  <text x="758" y="348" font-size="11" fill="#0d5225">6. 重新合上主开关</text>
+  <rect x="744" y="404" width="220" height="92" rx="8" fill="#e6f4ea" stroke="#188038" stroke-width="1.5"/>
+  <text x="758" y="430" font-size="11" fill="#0d5225">7. 测试题</text>
+  <text x="758" y="452" font-size="11" fill="#0d5225">8. 发电机为何装欠压保护</text>
+  <path d="M854 128 L854 190" stroke="#188038" stroke-width="2" marker-end="url(#fArr)"/>
+  <path d="M854 232 L854 294" stroke="#188038" stroke-width="2" marker-end="url(#fArr)"/>
+  <path d="M854 336 L854 398" stroke="#188038" stroke-width="2" marker-end="url(#fArr)"/>
+
+  <defs>
+    <marker id="fArr" markerWidth="10" markerHeight="10" refX="4" refY="8" orient="auto">
+      <path d="M0,0 L8,0 L4,8 z" fill="#5f6368"/>
+    </marker>
+  </defs>
+
+  <text x="490" y="536" text-anchor="middle" font-size="11" fill="#5f6368">四个实验均遵循"自动接线 → 整定/注入 → 观察跳闸 → 复位重合"的相同节奏</text>
+</svg>

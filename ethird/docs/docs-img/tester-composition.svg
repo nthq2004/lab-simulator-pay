@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 470" font-family="'Microsoft YaHei','PingFang SC',sans-serif">
+  <rect x="0" y="0" width="820" height="470" fill="#ffffff"/>
+
+  <!-- 面板外框 -->
+  <rect x="40" y="36" width="660" height="396" rx="14" fill="#f8fbff" stroke="#1a73e8" stroke-width="2.5"/>
+  <text x="370" y="62" text-anchor="middle" font-size="14" font-weight="bold" fill="#1a73e8">断路器保护特性测试仪 · 操作面板</text>
+
+  <!-- 上排 4 旋钮 -->
+  <g>
+    <circle cx="140" cy="140" r="36" fill="#e8f0fe" stroke="#1a73e8" stroke-width="2"/>
+    <line x1="140" y1="140" x2="140" y2="112" stroke="#1a73e8" stroke-width="3"/>
+    <text x="140" y="196" text-anchor="middle" font-size="12" font-weight="bold" fill="#1a73e8">一次电流</text>
+    <text x="140" y="214" text-anchor="middle" font-size="10" fill="#5f6368">0 ~ 2000 A</text>
+  </g>
+  <g>
+    <circle cx="300" cy="140" r="36" fill="#e8f0fe" stroke="#1a73e8" stroke-width="2"/>
+    <line x1="300" y1="140" x2="318" y2="120" stroke="#1a73e8" stroke-width="3"/>
+    <text x="300" y="196" text-anchor="middle" font-size="12" font-weight="bold" fill="#1a73e8">二次电流</text>
+    <text x="300" y="214" text-anchor="middle" font-size="10" fill="#5f6368">0 ~ 20 A</text>
+  </g>
+  <g>
+    <circle cx="460" cy="140" r="36" fill="#e8f0fe" stroke="#1a73e8" stroke-width="2"/>
+    <line x1="460" y1="140" x2="440" y2="118" stroke="#1a73e8" stroke-width="3"/>
+    <text x="460" y="196" text-anchor="middle" font-size="12" font-weight="bold" fill="#1a73e8">电流相位</text>
+    <text x="460" y="214" text-anchor="middle" font-size="10" fill="#5f6368">0 ~ 350 °</text>
+  </g>
+  <g>
+    <circle cx="620" cy="140" r="36" fill="#e8f0fe" stroke="#1a73e8" stroke-width="2"/>
+    <line x1="620" y1="140" x2="620" y2="112" stroke="#1a73e8" stroke-width="3"/>
+    <text x="620" y="196" text-anchor="middle" font-size="12" font-weight="bold" fill="#1a73e8">线电压</text>
+    <text x="620" y="214" text-anchor="middle" font-size="10" fill="#5f6368">0 ~ 450 V</text>
+  </g>
+
+  <!-- 按钮组 -->
+  <rect x="96" y="236" width="96" height="30" rx="6" fill="#188038"/>
+  <text x="144" y="256" text-anchor="middle" font-size="12" fill="#ffffff">一次 起动</text>
+  <rect x="200" y="236" width="96" height="30" rx="6" fill="#c5221f"/>
+  <text x="248" y="256" text-anchor="middle" font-size="12" fill="#ffffff">一次 停止</text>
+  <rect x="396" y="236" width="96" height="30" rx="6" fill="#188038"/>
+  <text x="444" y="256" text-anchor="middle" font-size="12" fill="#ffffff">二次 起动</text>
+  <rect x="500" y="236" width="96" height="30" rx="6" fill="#c5221f"/>
+  <text x="548" y="256" text-anchor="middle" font-size="12" fill="#ffffff">二次 停止</text>
+
+  <!-- LCD -->
+  <rect x="96" y="290" width="500" height="92" rx="8" fill="#1a252f" stroke="#0b5394" stroke-width="2"/>
+  <text x="112" y="322" font-size="13" fill="#7fdbff">一次电流 I = 140 A</text>
+  <text x="112" y="348" font-size="13" fill="#7fdbff">跳闸时间 t = 2.35 s</text>
+  <text x="112" y="372" font-size="11" fill="#5a6a75">U / I / P 与保护动作信息</text>
+
+  <!-- 端口说明 -->
+  <rect x="96" y="396" width="500" height="26" rx="5" fill="#eef3f9"/>
+  <text x="106" y="414" font-size="10" fill="#5f6368">上边端口：out1~3（一次电流输出）· r1~3（回流）　右边端口：no1~2 · iout1~2 · vout1~2 · p24</text>
+</svg>

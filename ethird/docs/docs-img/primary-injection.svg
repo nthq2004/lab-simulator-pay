@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 440" font-family="'Microsoft YaHei','PingFang SC',sans-serif">
+  <rect x="0" y="0" width="900" height="440" fill="#ffffff"/>
+
+  <defs>
+    <marker id="pArr" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 z" fill="#1a73e8"/>
+    </marker>
+    <marker id="pArrO" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 z" fill="#b26a00"/>
+    </marker>
+    <marker id="pArrP" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 z" fill="#8430ce"/>
+    </marker>
+  </defs>
+
+  <text x="450" y="30" text-anchor="middle" font-size="15" font-weight="bold" fill="#37474f">一次大电流注入法（一次测试）</text>
+
+  <!-- 测试仪 -->
+  <rect x="30" y="120" width="260" height="230" rx="12" fill="#e8f0fe" stroke="#1a73e8" stroke-width="2.5"/>
+  <text x="160" y="150" text-anchor="middle" font-size="14" font-weight="bold" fill="#1a73e8">测试仪 tester1</text>
+  <text x="160" y="176" text-anchor="middle" font-size="12" fill="#37474f">三相大电流源</text>
+  <text x="160" y="200" text-anchor="middle" font-size="11" fill="#5f6368">（诺顿等效，50 Hz）</text>
+  <rect x="60" y="216" width="200" height="34" rx="6" fill="#ffffff" stroke="#1a73e8" stroke-width="1.5"/>
+  <text x="160" y="238" text-anchor="middle" font-size="11" fill="#1a73e8">一次电流 0 ~ 2000 A</text>
+  <rect x="60" y="258" width="200" height="34" rx="6" fill="#ffffff" stroke="#1a73e8" stroke-width="1.5"/>
+  <text x="160" y="280" text-anchor="middle" font-size="11" fill="#1a73e8">LCD 显示跳闸时间</text>
+  <text x="160" y="322" text-anchor="middle" font-size="11" fill="#5f6368">输出 out1~3 ｜ 回流 r1~3</text>
+
+  <!-- 主开关 -->
+  <rect x="650" y="70" width="220" height="190" rx="12" fill="#d2e3fc" stroke="#0b5394" stroke-width="2.5"/>
+  <text x="760" y="100" text-anchor="middle" font-size="14" font-weight="bold" fill="#0b5394">主开关 qf1</text>
+  <text x="760" y="124" text-anchor="middle" font-size="11" fill="#0b5394">进线 T1/T2/T3</text>
+  <text x="760" y="146" text-anchor="middle" font-size="11" fill="#0b5394">主触头</text>
+  <text x="760" y="168" text-anchor="middle" font-size="11" fill="#0b5394">出线 L1/L2/L3</text>
+  <text x="760" y="196" text-anchor="middle" font-size="11" fill="#0b5394">常开辅助触点</text>
+  <text x="760" y="218" text-anchor="middle" font-size="11" fill="#0b5394">ET 脱扣接口</text>
+
+  <!-- CT -->
+  <rect x="420" y="52" width="160" height="64" rx="10" fill="#fef7e0" stroke="#b26a00" stroke-width="2"/>
+  <text x="500" y="78" text-anchor="middle" font-size="12" font-weight="bold" fill="#b26a00">电流互感器 CT</text>
+  <text x="500" y="98" text-anchor="middle" font-size="10" fill="#b26a00">W 相串入原边 · 变比 20</text>
+
+  <!-- ET -->
+  <rect x="600" y="320" width="270" height="104" rx="12" fill="#f3e8fd" stroke="#8430ce" stroke-width="2.5"/>
+  <text x="735" y="348" text-anchor="middle" font-size="13" font-weight="bold" fill="#8430ce">电子脱扣器 et1</text>
+  <text x="735" y="370" text-anchor="middle" font-size="11" fill="#8430ce">I原 = I副 × 20（还原为原边值）</text>
+  <text x="735" y="390" text-anchor="middle" font-size="11" fill="#8430ce">与整定值比较 → 过载 / 短路判据</text>
+  <text x="735" y="410" text-anchor="middle" font-size="11" fill="#8430ce">超时 → 输出脱扣信号</text>
+
+  <!-- 一次电流去程 -->
+  <path d="M290 175 L420 84" fill="none" stroke="#1a73e8" stroke-width="3" marker-end="url(#pArr)"/>
+  <text x="300" y="130" font-size="11" fill="#1a73e8">三相大电流</text>
+  <path d="M580 84 L650 120" fill="none" stroke="#1a73e8" stroke-width="3" marker-end="url(#pArr)"/>
+  <text x="586" y="72" font-size="10" fill="#1a73e8">T1~T3</text>
+
+  <!-- 回流 -->
+  <path d="M650 215 L300 315" fill="none" stroke="#1a73e8" stroke-width="2.5" stroke-dasharray="7 4" marker-end="url(#pArr)"/>
+  <text x="360" y="300" font-size="11" fill="#1a73e8">经主触头回流 L1~L3 → r1~r3</text>
+
+  <!-- CT 副边 → ET -->
+  <path d="M500 116 L680 320" fill="none" stroke="#b26a00" stroke-width="2" marker-end="url(#pArrO)"/>
+  <text x="508" y="220" font-size="10" fill="#b26a00">CT 副边电流 s1/s2</text>
+
+  <!-- ET 脱扣 → 主开关 -->
+  <path d="M760 320 L760 260" fill="none" stroke="#8430ce" stroke-width="2.5" marker-end="url(#pArrP)"/>
+  <text x="768" y="296" font-size="10" fill="#8430ce">脱扣输出 t1/t2</text>
+
+  <!-- 电流标注 -->
+  <rect x="300" y="150" width="120" height="44" rx="6" fill="#fff3e0" stroke="#e65100" stroke-width="1.5"/>
+  <text x="360" y="170" text-anchor="middle" font-size="11" font-weight="bold" fill="#e65100">I = 140 A</text>
+  <text x="360" y="187" text-anchor="middle" font-size="11" font-weight="bold" fill="#e65100">或 300 A</text>
+</svg>

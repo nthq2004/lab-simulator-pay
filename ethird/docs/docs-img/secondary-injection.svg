@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 460" font-family="'Microsoft YaHei','PingFang SC',sans-serif">
+  <rect x="0" y="0" width="900" height="460" fill="#ffffff"/>
+
+  <defs>
+    <marker id="sArr" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 z" fill="#1a73e8"/>
+    </marker>
+    <marker id="sArrO" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 z" fill="#b26a00"/>
+    </marker>
+    <marker id="sArrP" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 z" fill="#8430ce"/>
+    </marker>
+  </defs>
+
+  <text x="450" y="30" text-anchor="middle" font-size="15" font-weight="bold" fill="#37474f">二次小电流注入法（二次测试）</text>
+
+  <!-- 测试仪 -->
+  <rect x="30" y="120" width="260" height="250" rx="12" fill="#e8f0fe" stroke="#1a73e8" stroke-width="2.5"/>
+  <text x="160" y="150" text-anchor="middle" font-size="14" font-weight="bold" fill="#1a73e8">测试仪 tester1</text>
+  <rect x="60" y="168" width="200" height="34" rx="6" fill="#ffffff" stroke="#1a73e8" stroke-width="1.5"/>
+  <text x="160" y="190" text-anchor="middle" font-size="11" fill="#1a73e8">二次电流 iout1 / iout2</text>
+  <rect x="60" y="210" width="200" height="34" rx="6" fill="#ffffff" stroke="#1a73e8" stroke-width="1.5"/>
+  <text x="160" y="232" text-anchor="middle" font-size="11" fill="#1a73e8">线电压 vout1 / vout2</text>
+  <rect x="60" y="252" width="200" height="34" rx="6" fill="#ffffff" stroke="#1a73e8" stroke-width="1.5"/>
+  <text x="160" y="274" text-anchor="middle" font-size="11" fill="#1a73e8">电流相位 0 ~ 350 °</text>
+  <text x="160" y="318" text-anchor="middle" font-size="11" fill="#5f6368">幅值小、接线安全</text>
+  <text x="160" y="340" text-anchor="middle" font-size="11" fill="#5f6368">无需主回路通大电流</text>
+
+  <!-- 主开关 -->
+  <rect x="680" y="66" width="190" height="140" rx="12" fill="#d2e3fc" stroke="#0b5394" stroke-width="2.5"/>
+  <text x="775" y="96" text-anchor="middle" font-size="14" font-weight="bold" fill="#0b5394">主开关 qf1</text>
+  <text x="775" y="120" text-anchor="middle" font-size="11" fill="#0b5394">主触头</text>
+  <text x="775" y="142" text-anchor="middle" font-size="11" fill="#0b5394">ET 脱扣接口</text>
+  <text x="775" y="164" text-anchor="middle" font-size="11" fill="#0b5394">常开辅助触点</text>
+
+  <!-- PT -->
+  <rect x="420" y="60" width="170" height="64" rx="10" fill="#fef7e0" stroke="#b26a00" stroke-width="2"/>
+  <text x="505" y="86" text-anchor="middle" font-size="12" font-weight="bold" fill="#b26a00">电压互感器 PT</text>
+  <text x="505" y="106" text-anchor="middle" font-size="10" fill="#b26a00">变比 400/100 = 4</text>
+
+  <!-- CT 拆除 -->
+  <rect x="420" y="160" width="170" height="64" rx="10" fill="#fdecec" stroke="#c5221f" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="505" y="186" text-anchor="middle" font-size="12" font-weight="bold" fill="#c5221f">电流互感器 CT</text>
+  <text x="505" y="206" text-anchor="middle" font-size="10" fill="#c5221f">副边接线已拆除</text>
+  <line x1="470" y1="170" x2="540" y2="214" stroke="#c5221f" stroke-width="3"/>
+  <line x1="540" y1="170" x2="470" y2="214" stroke="#c5221f" stroke-width="3"/>
+
+  <!-- ET -->
+  <rect x="600" y="300" width="270" height="130" rx="12" fill="#f3e8fd" stroke="#8430ce" stroke-width="2.5"/>
+  <text x="735" y="328" text-anchor="middle" font-size="13" font-weight="bold" fill="#8430ce">电子脱扣器 et1</text>
+  <text x="735" y="350" text-anchor="middle" font-size="11" fill="#8430ce">i+/i- 采二次电流，× 20 还原原边</text>
+  <text x="735" y="370" text-anchor="middle" font-size="11" fill="#8430ce">u+/u- 采 PT 副边电压</text>
+  <text x="735" y="390" text-anchor="middle" font-size="11" fill="#8430ce">I = 5A×20 = 100A → 1×In</text>
+  <text x="735" y="410" text-anchor="middle" font-size="11" fill="#8430ce">P = U·I·cosφ → 判逆功率</text>
+
+  <!-- 二次电流 -->
+  <path d="M290 185 L600 350" fill="none" stroke="#1a73e8" stroke-width="3" marker-end="url(#sArr)"/>
+  <text x="300" y="270" font-size="11" fill="#1a73e8">二次电流 iout1/2 → i+/i-</text>
+
+  <!-- 线电压 → PT -->
+  <path d="M290 227 L420 92" fill="none" stroke="#8430ce" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#sArrP)"/>
+  <text x="230" y="150" font-size="10" fill="#8430ce">线电压 vout</text>
+  <!-- PT 副边 → ET -->
+  <path d="M590 92 L660 320" fill="none" stroke="#b26a00" stroke-width="2" marker-end="url(#sArrO)"/>
+  <text x="600" y="210" font-size="10" fill="#b26a00">PT 副边电压</text>
+
+  <!-- ET 脱扣 → 主开关 -->
+  <path d="M775 300 L775 206" fill="none" stroke="#8430ce" stroke-width="2.5" marker-end="url(#sArrP)"/>
+  <text x="783" y="256" font-size="10" fill="#8430ce">脱扣输出</text>
+</svg>
