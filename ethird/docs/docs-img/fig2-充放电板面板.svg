@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 380" width="620" height="380" font-family="Microsoft YaHei, SimHei, sans-serif">
+  <rect width="620" height="380" fill="#fbfcfe"/>
+  <text x="310" y="28" text-anchor="middle" font-size="19" font-weight="bold" fill="#1f2d3d">图2 充放电板面板与控制部件</text>
+
+  <rect x="40" y="46" width="540" height="290" rx="14" fill="#f0f1f3" stroke="#b0b8c0" stroke-width="2"/>
+
+  <!-- 电压表与电流表 -->
+  <rect x="70" y="70" width="120" height="44" rx="4" fill="#0e1218" stroke="#40464e"/>
+  <text x="130" y="99" text-anchor="middle" font-size="18" fill="#7fdbff" font-family="Courier New">27.00</text>
+  <text x="130" y="132" text-anchor="middle" font-size="13" fill="#032b52">直流电压表 V</text>
+
+  <rect x="430" y="70" width="120" height="44" rx="4" fill="#0e1218" stroke="#40464e"/>
+  <text x="490" y="99" text-anchor="middle" font-size="18" fill="#7fdbff" font-family="Courier New">5.000</text>
+  <text x="490" y="132" text-anchor="middle" font-size="13" fill="#032b52">直流电流表 A</text>
+
+  <!-- 交流指示灯 -->
+  <circle cx="310" cy="92" r="17" fill="#dce0e6" stroke="#b0b8c0" stroke-width="2"/>
+  <circle cx="310" cy="92" r="11" fill="#40e060"/>
+  <text x="310" y="132" text-anchor="middle" font-size="13" fill="#032b52">交流指示灯</text>
+
+  <!-- 仪表切换开关 -->
+  <path d="M 250 208 A 60 60 0 0 1 370 208" fill="none" stroke="#a0a8b0" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="262" cy="176" r="5" fill="#2060b0"/>
+  <circle cx="310" cy="156" r="5" fill="#a0a8b0"/>
+  <circle cx="358" cy="176" r="5" fill="#a0a8b0"/>
+  <text x="258" y="166" text-anchor="middle" font-size="12" fill="#205080" font-weight="bold">I路</text>
+  <text x="310" y="146" text-anchor="middle" font-size="12" fill="#808890">关</text>
+  <text x="362" y="166" text-anchor="middle" font-size="12" fill="#808890">II路</text>
+  <circle cx="310" cy="208" r="17" fill="#e8eaed" stroke="#707880" stroke-width="2"/>
+  <line x1="310" y1="208" x2="262" y2="176" stroke="#d03030" stroke-width="3" stroke-linecap="round"/>
+  <text x="310" y="250" text-anchor="middle" font-size="13" fill="#032b52">仪表切换开关（I路/关/II路）</text>
+
+  <!-- CH1 浮充/均充开关 -->
+  <rect x="70" y="298" width="56" height="30" rx="15" fill="#c8ccd2" stroke="#a0a6b0"/>
+  <circle cx="102" cy="313" r="13" fill="#40a060" stroke="#707880"/>
+  <text x="98" y="348" text-anchor="middle" font-size="12" fill="#505860">CH1 浮充/均充</text>
+
+  <!-- CH1 电流旋钮 -->
+  <circle cx="200" cy="313" r="30" fill="#e0e4e8" stroke="#707880" stroke-width="2"/>
+  <line x1="200" y1="313" x2="222" y2="293" stroke="#d03030" stroke-width="3.5" stroke-linecap="round"/>
+  <text x="200" y="358" text-anchor="middle" font-size="12" fill="#505860">CH1 电流调节</text>
+
+  <!-- CH2 -->
+  <rect x="300" y="298" width="56" height="30" rx="15" fill="#c8ccd2" stroke="#a0a6b0"/>
+  <circle cx="332" cy="313" r="13" fill="#40a060" stroke="#707880"/>
+  <text x="328" y="348" text-anchor="middle" font-size="12" fill="#505860">CH2 浮充/均充</text>
+
+  <circle cx="440" cy="313" r="30" fill="#e0e4e8" stroke="#707880" stroke-width="2"/>
+  <line x1="440" y1="313" x2="418" y2="293" stroke="#d03030" stroke-width="3.5" stroke-linecap="round"/>
+  <text x="440" y="358" text-anchor="middle" font-size="12" fill="#505860">CH2 电流调节</text>
+</svg>

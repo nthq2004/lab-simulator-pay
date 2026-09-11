@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 420" width="840" height="420" font-family="Microsoft YaHei, SimHei, sans-serif">
+  <rect width="840" height="420" fill="#fbfcfe"/>
+  <text x="420" y="26" text-anchor="middle" font-size="19" font-weight="bold" fill="#1f2d3d">图4 数字万用表测量蓄电池组电压（DCV200 档）</text>
+
+  <!-- 蓄电池组 -->
+  <rect x="200" y="120" width="110" height="60" rx="6" fill="#e6ecf2" stroke="#3a5a7a" stroke-width="2"/>
+  <text x="255" y="156" text-anchor="middle" font-size="12" fill="#2c3e50">1# 蓄电池 12V</text>
+  <rect x="200" y="200" width="110" height="60" rx="6" fill="#e6ecf2" stroke="#3a5a7a" stroke-width="2"/>
+  <text x="255" y="236" text-anchor="middle" font-size="12" fill="#2c3e50">2# 蓄电池 12V</text>
+  <line x1="255" y1="180" x2="255" y2="200" stroke="#3a5a7a" stroke-width="3"/>
+  <text x="265" y="115" font-size="14" fill="#c0392b" font-weight="bold">+</text>
+  <text x="265" y="278" font-size="14" fill="#222" font-weight="bold">−</text>
+  <text x="120" y="205" font-size="12" fill="#888">串联 24V</text>
+
+  <!-- 万用表 -->
+  <rect x="520" y="80" width="270" height="300" rx="14" fill="#e8eaed" stroke="#5b6b7c" stroke-width="2"/>
+  <rect x="545" y="100" width="220" height="60" rx="4" fill="#0e1218"/>
+  <text x="755" y="143" text-anchor="end" font-size="30" fill="#7fdbff" font-family="Courier New" font-weight="bold">21.2</text>
+  <text x="555" y="184" font-size="12" fill="#2c3e50">DCV 200V 档</text>
+  <circle cx="655" cy="250" r="52" fill="#d7dde3" stroke="#707880" stroke-width="2"/>
+  <line x1="655" y1="250" x2="655" y2="206" stroke="#d03030" stroke-width="4" stroke-linecap="round" transform="rotate(-90 655 250)"/>
+  <text x="655" y="316" text-anchor="middle" font-size="12" fill="#555566">量程旋钮 → 200V −</text>
+
+  <!-- 插孔 -->
+  <circle cx="570" cy="355" r="9" fill="#c0392b"/>
+  <text x="570" y="382" text-anchor="middle" font-size="12" fill="#c0392b">V Ω</text>
+  <circle cx="655" cy="355" r="9" fill="#222"/>
+  <text x="655" y="382" text-anchor="middle" font-size="12" fill="#333">COM</text>
+  <circle cx="740" cy="355" r="9" fill="#888"/>
+  <text x="740" y="382" text-anchor="middle" font-size="12" fill="#666">mA</text>
+
+  <!-- 红表笔：bt1+ → V -->
+  <path d="M 255 110 L 255 62 L 570 62 L 570 344" fill="none" stroke="#c0392b" stroke-width="3"/>
+  <text x="300" y="54" font-size="12" fill="#c0392b">红表笔：接 bt1 正极</text>
+  <!-- 黑表笔：bt2− → COM -->
+  <path d="M 255 280 L 255 405 L 655 405 L 655 366" fill="none" stroke="#222" stroke-width="3"/>
+  <text x="300" y="418" font-size="12" fill="#333">黑表笔：接 bt2 负极</text>
+
+  <text x="420" y="40" text-anchor="middle" font-size="12" fill="#888">测量结果应低于 24V（亏电）或接近/略高于 24V（满电）</text>
+</svg>

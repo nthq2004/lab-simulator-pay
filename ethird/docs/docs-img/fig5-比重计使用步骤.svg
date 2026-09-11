@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 460" width="960" height="460" font-family="Microsoft YaHei, SimHei, sans-serif">
+  <rect width="960" height="460" fill="#fbfcfe"/>
+  <text x="480" y="30" text-anchor="middle" font-size="20" font-weight="bold" fill="#1f2d3d">图5 比重计测量电解液比重的操作步骤</text>
+
+  <!-- 卡片1：移动到位 -->
+  <g>
+    <rect x="40" y="60" width="280" height="170" rx="10" fill="#eef4fb" stroke="#7aa7d0"/>
+    <circle cx="66" cy="86" r="15" fill="#1395eb"/>
+    <text x="66" y="91" text-anchor="middle" font-size="15" fill="#fff" font-weight="bold">1</text>
+    <text x="92" y="91" font-size="15" fill="#0d3c61" font-weight="bold">移动到位</text>
+    <!-- 图标 -->
+    <rect x="120" y="118" width="26" height="80" rx="8" fill="#dff0fb" stroke="#7aa7d0"/>
+    <rect x="120" y="150" width="26" height="40" fill="#a0d8ef"/>
+    <rect x="132" y="108" width="6" height="16" fill="#555566"/>
+    <rect x="120" y="196" width="26" height="10" fill="#606870"/>
+    <rect x="170" y="176" width="70" height="34" rx="4" fill="#e6ecf2" stroke="#3a5a7a"/>
+    <text x="205" y="198" text-anchor="middle" font-size="11" fill="#2c3e50">注液孔</text>
+    <text x="80" y="222" font-size="12" fill="#555566">吸管对准已开盖的注液孔</text>
+  </g>
+
+  <!-- 卡片2：捏住吸球 -->
+  <g>
+    <rect x="340" y="60" width="280" height="170" rx="10" fill="#eef4fb" stroke="#7aa7d0"/>
+    <circle cx="366" cy="86" r="15" fill="#1395eb"/>
+    <text x="366" y="91" text-anchor="middle" font-size="15" fill="#fff" font-weight="bold">2</text>
+    <text x="392" y="91" font-size="15" fill="#0d3c61" font-weight="bold">捏住吸球</text>
+    <!-- 图标 -->
+    <ellipse cx="470" cy="132" rx="30" ry="26" fill="#cc4444" stroke="#992222" stroke-width="2"/>
+    <rect x="464" y="156" width="12" height="60" rx="4" fill="#dff0fb" stroke="#7aa7d0"/>
+    <rect x="540" y="120" width="34" height="20" rx="4" fill="#dfe6e9" stroke="#2d3436"/>
+    <text x="557" y="134" text-anchor="middle" font-size="11" fill="#333">挤压</text>
+    <path d="M 500 118 L 528 126" stroke="#d03030" stroke-width="3" marker-end="url(#a6)"/>
+    <text x="392" y="222" font-size="12" fill="#555566">排出吸球内的空气</text>
+  </g>
+
+  <!-- 卡片3：松开吸取 -->
+  <g>
+    <rect x="640" y="60" width="280" height="170" rx="10" fill="#eef4fb" stroke="#7aa7d0"/>
+    <circle cx="666" cy="86" r="15" fill="#1395eb"/>
+    <text x="666" y="91" text-anchor="middle" font-size="15" fill="#fff" font-weight="bold">3</text>
+    <text x="692" y="91" font-size="15" fill="#0d3c61" font-weight="bold">松开吸取</text>
+    <!-- 图标 -->
+    <ellipse cx="770" cy="130" rx="30" ry="26" fill="#e05a5a" stroke="#992222" stroke-width="2"/>
+    <rect x="764" y="156" width="12" height="62" rx="4" fill="#dff0fb" stroke="#7aa7d0"/>
+    <rect x="764" y="176" width="12" height="42" fill="#a0d8ef"/>
+    <circle cx="770" cy="188" r="5" fill="#d03020"/>
+    <text x="830" y="196" font-size="12" fill="#2e7d32">电解液上升</text>
+    <text x="692" y="222" font-size="12" fill="#555566">松开吸球，电解液被吸入管中</text>
+  </g>
+
+  <!-- 卡片4：移开读数 -->
+  <g>
+    <rect x="40" y="250" width="280" height="170" rx="10" fill="#eef4fb" stroke="#7aa7d0"/>
+    <circle cx="66" cy="276" r="15" fill="#1395eb"/>
+    <text x="66" y="281" text-anchor="middle" font-size="15" fill="#fff" font-weight="bold">4</text>
+    <text x="92" y="281" font-size="15" fill="#0d3c61" font-weight="bold">移开读数</text>
+    <rect x="120" y="308" width="26" height="90" rx="8" fill="#dff0fb" stroke="#7aa7d0"/>
+    <rect x="120" y="340" width="26" height="48" fill="#a0d8ef"/>
+    <rect x="123" y="346" width="20" height="12" fill="#d03020"/>
+    <rect x="123" y="358" width="20" height="12" fill="#20a040"/>
+    <rect x="123" y="370" width="20" height="12" fill="#d0a020"/>
+    <text x="160" y="360" font-size="14" fill="#2e7d32" font-weight="bold">SG≈1.15</text>
+    <text x="80" y="400" font-size="12" fill="#555566">移开并读取比重值</text>
+  </g>
+
+  <!-- 卡片5：排出电解液 -->
+  <g>
+    <rect x="340" y="250" width="280" height="170" rx="10" fill="#fdf3f3" stroke="#d08a8a"/>
+    <circle cx="366" cy="276" r="15" fill="#d81b60"/>
+    <text x="366" y="281" text-anchor="middle" font-size="15" fill="#fff" font-weight="bold">5</text>
+    <text x="392" y="281" font-size="15" fill="#7a0b34" font-weight="bold">排出电解液</text>
+    <ellipse cx="470" cy="322" rx="28" ry="24" fill="#cc4444" stroke="#992222" stroke-width="2"/>
+    <rect x="464" y="346" width="12" height="52" rx="4" fill="#dff0fb" stroke="#7aa7d0"/>
+    <path d="M 480 384 L 480 404" stroke="#1395eb" stroke-width="3"/>
+    <path d="M 474 400 L 480 408 L 486 400" fill="none" stroke="#1395eb" stroke-width="3"/>
+    <text x="500" y="400" font-size="12" fill="#1395eb">液体排出</text>
+    <text x="392" y="410" font-size="12" fill="#555566">捏住吸球排空，避免残液腐蚀</text>
+  </g>
+
+  <!-- 卡片6：关闭注液孔 -->
+  <g>
+    <rect x="640" y="250" width="280" height="170" rx="10" fill="#eef4fb" stroke="#7aa7d0"/>
+    <circle cx="666" cy="276" r="15" fill="#1395eb"/>
+    <text x="666" y="281" text-anchor="middle" font-size="15" fill="#fff" font-weight="bold">6</text>
+    <text x="692" y="281" font-size="15" fill="#0d3c61" font-weight="bold">关闭注液孔</text>
+    <rect x="740" y="336" width="80" height="40" rx="4" fill="#e6ecf2" stroke="#3a5a7a"/>
+    <circle cx="780" cy="356" r="14" fill="#3890d0" stroke="#2860a0" stroke-width="2"/>
+    <line x1="774" y1="350" x2="786" y2="362" stroke="#60a0d0" stroke-width="2.5"/>
+    <line x1="786" y1="350" x2="774" y2="362" stroke="#60a0d0" stroke-width="2.5"/>
+    <text x="780" y="400" text-anchor="middle" font-size="12" fill="#2e7d32">盖好孔盖</text>
+    <text x="692" y="410" font-size="12" fill="#555566">防止电解液蒸发与杂质落入</text>
+  </g>
+
+  <defs>
+    <marker id="a6" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 z" fill="#d03030"/>
+    </marker>
+  </defs>
+</svg>

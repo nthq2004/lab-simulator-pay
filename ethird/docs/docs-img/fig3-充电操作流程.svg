@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" width="900" height="520" font-family="Microsoft YaHei, SimHei, sans-serif">
+  <defs>
+    <marker id="arr3" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 z" fill="#5b6b7c"/>
+    </marker>
+  </defs>
+  <rect width="900" height="520" fill="#fbfcfe"/>
+  <text x="450" y="30" text-anchor="middle" font-size="20" font-weight="bold" fill="#1f2d3d">图3 流程一：铅酸蓄电池充电操作流程</text>
+
+  <!-- 步骤框 -->
+  <g font-size="14">
+    <rect x="230" y="55" width="440" height="48" rx="8" fill="#e3f2fd" stroke="#1395eb"/>
+    <text x="450" y="85" text-anchor="middle" fill="#0d3c61">① 按电路图接线：AC220V → 充放电板 → 两个12V蓄电池串联，并接入开关+20Ω负载支路</text>
+
+    <rect x="230" y="123" width="440" height="48" rx="8" fill="#e8f5e9" stroke="#43a047"/>
+    <text x="450" y="153" text-anchor="middle" fill="#1b5e20">② 闭合交流电源开关，充放电板「交流指示灯」变亮</text>
+
+    <rect x="230" y="191" width="440" height="48" rx="8" fill="#e8f5e9" stroke="#43a047"/>
+    <text x="450" y="221" text-anchor="middle" fill="#1b5e20">③ 仪表切换开关拨到「I路」，读取 CH1 电压/电流（默认浮充）</text>
+
+    <rect x="230" y="259" width="440" height="48" rx="8" fill="#fff8e1" stroke="#fb8c00"/>
+    <text x="450" y="289" text-anchor="middle" fill="#7a4a00">④ CH1 切换为「均充」，电压由约27V升到约28.8V</text>
+
+    <rect x="230" y="327" width="440" height="48" rx="8" fill="#fff8e1" stroke="#fb8c00"/>
+    <text x="450" y="357" text-anchor="middle" fill="#7a4a00">⑤ 调节 CH1 电流旋钮，使充电电流接近额定值的一半</text>
+
+    <rect x="230" y="395" width="440" height="48" rx="8" fill="#fce4ec" stroke="#d81b60"/>
+    <text x="450" y="425" text-anchor="middle" fill="#7a0b34">⑥ 关闭交流电源、合上负荷开关，观察蓄电池放电电压/电流</text>
+
+    <rect x="230" y="463" width="440" height="46" rx="8" fill="#ede7f6" stroke="#5e35b1" stroke-dasharray="6 4"/>
+    <text x="450" y="492" text-anchor="middle" fill="#311b92">⑦ 测试题：浮充与均充充电特性的区别</text>
+  </g>
+
+  <!-- 箭头 -->
+  <g stroke="#5b6b7c" stroke-width="2" marker-end="url(#arr3)">
+    <line x1="230" y1="79" x2="180" y2="79"/>
+    <line x1="180" y1="79" x2="180" y2="419"/>
+    <line x1="180" y1="419" x2="228" y2="419"/>
+    <line x1="450" y1="103" x2="450" y2="121"/>
+    <line x1="450" y1="171" x2="450" y2="189"/>
+    <line x1="450" y1="239" x2="450" y2="257"/>
+    <line x1="450" y1="307" x2="450" y2="325"/>
+    <line x1="450" y1="375" x2="450" y2="393"/>
+    <line x1="450" y1="443" x2="450" y2="461"/>
+  </g>
+
+  <text x="70" y="250" font-size="13" fill="#888" transform="rotate(-90 70 250)">充电 → 放电观察</text>
+</svg>

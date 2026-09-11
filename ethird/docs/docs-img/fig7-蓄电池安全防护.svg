@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 260" width="800" height="260" font-family="Microsoft YaHei, SimHei, sans-serif">
+  <rect width="800" height="260" fill="#fbfcfe"/>
+  <text x="400" y="30" text-anchor="middle" font-size="19" font-weight="bold" fill="#1f2d3d">图7 蓄电池操作的安全防护</text>
+
+  <!-- 手套 -->
+  <rect x="35" y="60" width="170" height="170" rx="12" fill="#fdf3f3" stroke="#d08a8a"/>
+  <path d="M 90 200 L 90 130 Q 90 112 105 112 Q 120 112 120 130 L 120 150 L 122 120 Q 122 104 137 104 Q 152 104 152 120 L 152 200 Z"
+        fill="#f7c8c8" stroke="#c0392b" stroke-width="2"/>
+  <text x="120" y="222" text-anchor="middle" font-size="14" fill="#7a0b34" font-weight="bold">戴防护手套</text>
+
+  <!-- 护目镜 -->
+  <rect x="225" y="60" width="170" height="170" rx="12" fill="#eef4fb" stroke="#7aa7d0"/>
+  <path d="M 262 140 Q 310 116 358 140 Q 358 172 310 182 Q 262 172 262 140 Z" fill="#cfe8f7" stroke="#2c5f8a" stroke-width="2"/>
+  <line x1="262" y1="140" x2="240" y2="134" stroke="#2c5f8a" stroke-width="3"/>
+  <line x1="358" y1="140" x2="380" y2="134" stroke="#2c5f8a" stroke-width="3"/>
+  <text x="310" y="222" text-anchor="middle" font-size="14" fill="#0d3c61" font-weight="bold">戴护目镜</text>
+
+  <!-- 通风 -->
+  <rect x="415" y="60" width="170" height="170" rx="12" fill="#eef8f0" stroke="#7fbf90"/>
+  <path d="M 445 118 L 445 182 L 555 182 L 555 118" fill="none" stroke="#2e7d32" stroke-width="3"/>
+  <path d="M 470 150 L 490 134 L 490 144 L 530 144 L 530 156 L 490 156 L 490 166 Z" fill="#43a047"/>
+  <path d="M 520 120 Q 536 138 520 156" fill="none" stroke="#43a047" stroke-width="3"/>
+  <path d="M 536 112 Q 558 138 536 164" fill="none" stroke="#43a047" stroke-width="3"/>
+  <text x="500" y="222" text-anchor="middle" font-size="14" fill="#1b5e20" font-weight="bold">保持通风排气</text>
+
+  <!-- 禁止明火/绝缘 -->
+  <rect x="605" y="60" width="170" height="170" rx="12" fill="#fff8e1" stroke="#d9a648"/>
+  <circle cx="690" cy="145" r="46" fill="none" stroke="#d03030" stroke-width="5"/>
+  <line x1="658" y1="177" x2="722" y2="113" stroke="#d03030" stroke-width="5"/>
+  <path d="M 690 112 Q 702 132 690 145 Q 680 156 690 168" fill="none" stroke="#fb8c00" stroke-width="4"/>
+  <text x="690" y="222" text-anchor="middle" font-size="14" fill="#7a4a00" font-weight="bold">禁止明火·防短路</text>
+</svg>
