@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" font-family="'Microsoft YaHei','Arial',sans-serif" font-size="13">
+  <rect width="1000" height="600" fill="#ffffff"/>
+
+  <!-- ============ 面板 A：主电失电 → 应急转电 ============ -->
+  <text x="30" y="34" font-size="16" font-weight="bold" fill="#c05621">A. 主电网失电 → 应急电网自动投入</text>
+  <g stroke="#cbd5e0" stroke-width="1">
+    <line x1="120" y1="50" x2="120" y2="268"/>
+    <line x1="520" y1="50" x2="520" y2="268"/>
+    <line x1="840" y1="50" x2="840" y2="268"/>
+  </g>
+  <g fill="#718096" font-size="12" text-anchor="middle">
+    <text x="120" y="46">t₀ 失电</text>
+    <text x="520" y="46">t₀+10s 起动</text>
+    <text x="840" y="46">t₀+18s 合闸</text>
+  </g>
+
+  <!-- 行标签 -->
+  <g fill="#1a202c" font-weight="bold" font-size="13">
+    <text x="20" y="84">主电网</text>
+    <text x="20" y="134">联络开关</text>
+    <text x="20" y="184">应急发电机</text>
+    <text x="20" y="234">应急主开关</text>
+  </g>
+  <!-- 主电网：有电→失电 -->
+  <polyline points="110,90 120,90 120,110 950,110" fill="none" stroke="#c05621" stroke-width="3.5"/>
+  <text x="260" y="104" fill="#c05621" font-size="12">失电（低电平）</text>
+  <text x="126" y="80" fill="#c05621" font-size="12">t₀ 前：有电</text>
+
+  <!-- 联络开关：合→断 -->
+  <polyline points="110,140 120,140 120,160 950,160" fill="none" stroke="#276749" stroke-width="3.5"/>
+  <text x="126" y="134" fill="#276749" font-size="12">正常：合闸供电</text>
+  <text x="300" y="176" fill="#276749" font-size="12">立即断开</text>
+
+  <!-- 应急发电机：停→起动 -->
+  <polyline points="110,210 520,210 520,190 950,190" fill="none" stroke="#dd6b20" stroke-width="3.5"/>
+  <text x="240" y="204" fill="#dd6b20" font-size="12">停机</text>
+  <text x="540" y="184" fill="#dd6b20" font-size="12">运行（约10s后起动）</text>
+
+  <!-- 应急主开关：分→合 -->
+  <polyline points="110,260 840,260 840,240 950,240" fill="none" stroke="#2b6cb0" stroke-width="3.5"/>
+  <text x="300" y="254" fill="#2b6cb0" font-size="12">分闸</text>
+  <text x="700" y="234" fill="#2b6cb0" font-size="12">合闸（约18s）</text>
+
+  <!-- ============ 面板 B：主电恢复 → 恢复供电 ============ -->
+  <text x="30" y="322" font-size="16" font-weight="bold" fill="#2b6cb0">B. 主电网恢复 → 自动切回主电网并停机</text>
+  <g stroke="#cbd5e0" stroke-width="1">
+    <line x1="200" y1="340" x2="200" y2="540"/>
+    <line x1="320" y1="340" x2="320" y2="540"/>
+    <line x1="520" y1="340" x2="520" y2="540"/>
+    <line x1="720" y1="340" x2="720" y2="540"/>
+  </g>
+  <g fill="#718096" font-size="12" text-anchor="middle">
+    <text x="200" y="336">主电恢复</text>
+    <text x="320" y="336">+3s 应主分闸</text>
+    <text x="520" y="336">+8s 联络合闸</text>
+    <text x="720" y="336">+13s 应发停机</text>
+  </g>
+
+  <g fill="#1a202c" font-weight="bold" font-size="13">
+    <text x="20" y="374">主电网</text>
+    <text x="20" y="424">联络开关</text>
+    <text x="20" y="474">应急发电机</text>
+    <text x="20" y="524">应急主开关</text>
+  </g>
+  <!-- 主电：恢复 -->
+  <polyline points="110,400 200,400 200,380 950,380" fill="none" stroke="#c05621" stroke-width="3.5"/>
+  <text x="206" y="394" fill="#c05621" font-size="12">恢复有电</text>
+  <!-- 联络：合（+8s） -->
+  <polyline points="110,440 520,440 520,420 950,420" fill="none" stroke="#276749" stroke-width="3.5"/>
+  <text x="530" y="414" fill="#276749" font-size="12">合闸</text>
+  <!-- 应发：运行→停（+13s） -->
+  <polyline points="110,480 720,480 720,500 950,500" fill="none" stroke="#dd6b20" stroke-width="3.5"/>
+  <text x="540" y="474" fill="#dd6b20" font-size="12">继续运行</text>
+  <text x="726" y="494" fill="#dd6b20" font-size="12">停机</text>
+  <!-- 应主：合→分（+3s） -->
+  <polyline points="110,520 320,520 320,540 950,540" fill="none" stroke="#2b6cb0" stroke-width="3.5"/>
+  <text x="120" y="514" fill="#2b6cb0" font-size="12">合闸</text>
+  <text x="326" y="534" fill="#2b6cb0" font-size="12">分闸</text>
+
+  <text x="30" y="580" font-size="12" fill="#718096">注：时间为仿真中的典型值，用于说明动作顺序；实际工程以设备整定值为准。</text>
+</svg>
