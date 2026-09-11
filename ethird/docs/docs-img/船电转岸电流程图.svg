@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 620" font-family="'Microsoft YaHei','Arial',sans-serif" font-size="14">
+  <marker id="ar4" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto">
+    <path d="M0,0 L7,3 L0,6 z" fill="#2b6cb0"/>
+  </marker>
+  <rect width="1000" height="620" fill="#ffffff"/>
+  <text x="40" y="34" font-size="17" font-weight="bold" fill="#2b6cb0">船电转换为岸电供电 · 操作流程</text>
+
+  <!-- 步骤 1 -->
+  <circle cx="66" cy="92" r="20" fill="#2b6cb0"/>
+  <text x="66" y="98" text-anchor="middle" fill="#ffffff" font-weight="bold">1</text>
+  <rect x="106" y="62" width="600" height="60" rx="9" fill="#ebf4ff" stroke="#2b6cb0" stroke-width="2"/>
+  <text x="126" y="88" font-weight="bold" fill="#2c5282">船电供电：自动接线 → 遥控面板起动 1# 发电机 → 面板合闸</text>
+  <text x="126" y="110" font-size="12" fill="#4a5568">发电机建立电压/频率，储能到位后合上船电主开关 qf1，汇流排由船电供电</text>
+  <text x="726" y="88" font-size="12" fill="#718096">操作台：发电机组遥控面板</text>
+  <text x="726" y="108" font-size="12" fill="#718096">观察：汇流排带电、船电运行灯亮</text>
+
+  <!-- 步骤 2 -->
+  <circle cx="66" cy="192" r="20" fill="#2b6cb0"/>
+  <text x="66" y="198" text-anchor="middle" fill="#ffffff" font-weight="bold">2</text>
+  <rect x="106" y="162" width="600" height="60" rx="9" fill="#ebf4ff" stroke="#2b6cb0" stroke-width="2"/>
+  <text x="126" y="188" font-weight="bold" fill="#2c5282">接通岸电输入：U/V/W → 岸电箱 in1/in2/in3，N → 船体接线柱</text>
+  <text x="126" y="210" font-size="12" fill="#4a5568">按动画接线逐条接入后，按下岸电电源「电源开关」按钮送电</text>
+  <text x="726" y="188" font-size="12" fill="#718096">岸电箱液晶显示线电压/频率</text>
+  <text x="726" y="208" font-size="12" fill="#718096">电源灯（白）点亮</text>
+
+  <!-- 步骤 3 -->
+  <circle cx="66" cy="292" r="20" fill="#2b6cb0"/>
+  <text x="66" y="298" text-anchor="middle" fill="#ffffff" font-weight="bold">3</text>
+  <rect x="106" y="262" width="600" height="60" rx="9" fill="#ebf4ff" stroke="#2b6cb0" stroke-width="2"/>
+  <text x="126" y="288" font-weight="bold" fill="#2c5282">确认正相序：相序旋钮转「相序1」，合上岸电箱出口空气开关</text>
+  <text x="126" y="310" font-size="12" fill="#4a5568">正序灯（绿）亮表示输出相序正确；若为负序则改打「相序2」换相</text>
+  <text x="726" y="288" font-size="12" fill="#718096">只有正相序才允许继续</text>
+  <text x="726" y="308" font-size="12" fill="#c53030">负序灯（红）亮时禁止合闸</text>
+
+  <!-- 步骤 4 -->
+  <circle cx="66" cy="392" r="20" fill="#2b6cb0"/>
+  <text x="66" y="398" text-anchor="middle" fill="#ffffff" font-weight="bold">4</text>
+  <rect x="106" y="362" width="600" height="60" rx="9" fill="#ebf4ff" stroke="#2b6cb0" stroke-width="2"/>
+  <text x="126" y="388" font-weight="bold" fill="#2c5282">切断船电：遥控面板按住「分闸」，船电主开关 qf1 分闸</text>
+  <text x="126" y="410" font-size="12" fill="#4a5568">qf1 分闸后其常闭辅助触头闭合，岸电主开关失压线圈得电</text>
+  <text x="726" y="388" font-size="12" fill="#718096">船电先退出，避免非同期并列</text>
+  <text x="726" y="408" font-size="12" fill="#718096">为合岸电创造条件</text>
+
+  <!-- 步骤 5 -->
+  <circle cx="66" cy="492" r="20" fill="#2f855a"/>
+  <text x="66" y="498" text-anchor="middle" fill="#ffffff" font-weight="bold">5</text>
+  <rect x="106" y="462" width="600" height="60" rx="9" fill="#f0fff4" stroke="#2f855a" stroke-width="2"/>
+  <text x="126" y="488" font-weight="bold" fill="#276749">合上岸电主开关 pdb1，由岸电向汇流排供电，切换完成</text>
+  <text x="126" y="510" font-size="12" fill="#4a5568">岸电经岸电箱 → 负序继电器 → pdb1 → 汇流排，负载由岸电供电</text>
+  <text x="726" y="488" font-size="12" fill="#718096">汇流排保持带电、负载不断电</text>
+  <text x="726" y="508" font-size="12" fill="#c53030">此时 qf1 因互锁无法再合闸</text>
+
+  <!-- 步骤箭头 -->
+  <g stroke="#2b6cb0" stroke-width="2.4" fill="none" marker-end="url(#ar4)">
+    <line x1="66" y1="112" x2="66" y2="170"/>
+    <line x1="66" y1="212" x2="66" y2="270"/>
+    <line x1="66" y1="312" x2="66" y2="370"/>
+    <line x1="66" y1="412" x2="66" y2="470"/>
+  </g>
+
+  <!-- 注意事项 -->
+  <rect x="40" y="552" width="920" height="52" rx="8" fill="#fffaf0" stroke="#dd6b20" stroke-width="1.8"/>
+  <text x="58" y="575" font-size="13" font-weight="bold" fill="#9c4221">要点：</text>
+  <text x="110" y="575" font-size="12" fill="#744210">先断船电、后合岸电，顺序不可颠倒；切换前必须确认输出为正相序；两台主开关经失压脱扣线圈互锁，只能一台合闸。</text>
+  <text x="58" y="595" font-size="12" fill="#744210">岸电中性线接船体接线柱，使岸电中性点与船体（船电中性点）等电位，构成回路参考点并提供绝缘故障电流通路。</text>
+</svg>

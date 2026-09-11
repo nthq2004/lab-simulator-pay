@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 650" font-family="'Microsoft YaHei','Arial',sans-serif" font-size="14">
+  <marker id="ar3" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+    <path d="M0,0 L8,3 L0,6 z" fill="#4a5568"/>
+  </marker>
+  <rect width="1000" height="650" fill="#ffffff"/>
+  <text x="40" y="32" font-size="16" font-weight="bold" fill="#2b6cb0">岸电主开关与船电主开关的双向电气互锁</text>
+
+  <!-- 电源母线 -->
+  <line x1="70" y1="64" x2="930" y2="64" stroke="#c53030" stroke-width="4"/>
+  <text x="70" y="56" font-size="13" font-weight="bold" fill="#c53030">DC 24V+ 控制电源（dc_uv）</text>
+
+  <!-- 接地母线 -->
+  <line x1="70" y1="540" x2="930" y2="540" stroke="#4a5568" stroke-width="4"/>
+  <text x="70" y="562" font-size="13" font-weight="bold" fill="#4a5568">0V / 控制接地</text>
+
+  <!-- 左支路：qf1 失压线圈 -->
+  <g stroke="#4a5568" stroke-width="2.4" fill="none">
+    <line x1="270" y1="64" x2="270" y2="120"/>
+    <line x1="270" y1="180" x2="270" y2="270"/>
+    <line x1="270" y1="340" x2="270" y2="540"/>
+  </g>
+  <rect x="200" y="120" width="140" height="60" rx="8" fill="#fff0f0" stroke="#c53030" stroke-width="2"/>
+  <text x="270" y="146" text-anchor="middle" font-size="13" font-weight="bold" fill="#9b2c2c">pdb1 常闭触头</text>
+  <text x="270" y="166" text-anchor="middle" font-size="12" fill="#742a2a">nc2 — nc1</text>
+  <text x="352" y="146" font-size="12" fill="#4a5568">岸电主开关分闸 / 未合到位时闭合</text>
+  <text x="352" y="166" font-size="12" fill="#4a5568">合闸完全到位后断开</text>
+
+  <ellipse cx="270" cy="305" rx="78" ry="35" fill="#ebf4ff" stroke="#2b6cb0" stroke-width="2"/>
+  <text x="270" y="300" text-anchor="middle" font-size="13" font-weight="bold" fill="#2c5282">qf1 失压脱扣线圈</text>
+  <text x="270" y="319" text-anchor="middle" font-size="12" fill="#2c5282">uv1 — uv2</text>
+  <text x="352" y="298" font-size="12" fill="#4a5568">线圈有电 → 允许船电主开关合闸</text>
+  <text x="352" y="318" font-size="12" fill="#c53030">线圈失电 → 船电主开关脱扣、合不上</text>
+
+  <!-- 右支路：pdb1 失压线圈 -->
+  <g stroke="#4a5568" stroke-width="2.4" fill="none">
+    <line x1="700" y1="64" x2="700" y2="110"/>
+    <line x1="700" y1="168" x2="700" y2="214"/>
+    <line x1="700" y1="272" x2="700" y2="350"/>
+    <line x1="700" y1="418" x2="700" y2="540"/>
+  </g>
+  <rect x="628" y="110" width="144" height="58" rx="8" fill="#fffaf0" stroke="#dd6b20" stroke-width="2"/>
+  <text x="700" y="135" text-anchor="middle" font-size="13" font-weight="bold" fill="#9c4221">neg1 常闭触点</text>
+  <text x="700" y="155" text-anchor="middle" font-size="12" fill="#7b341e">nc2 — nc1</text>
+  <text x="784" y="135" font-size="12" fill="#4a5568">岸电输出为正序时闭合</text>
+  <text x="784" y="155" font-size="12" fill="#c53030">负序 / 缺相时断开</text>
+
+  <rect x="628" y="214" width="144" height="58" rx="8" fill="#fff0f0" stroke="#c53030" stroke-width="2"/>
+  <text x="700" y="239" text-anchor="middle" font-size="13" font-weight="bold" fill="#9b2c2c">qf1 常闭触头</text>
+  <text x="700" y="259" text-anchor="middle" font-size="12" fill="#742a2a">nc1 — nc2</text>
+  <text x="784" y="239" font-size="12" fill="#4a5568">船电主开关分闸 / 未合到位时闭合</text>
+  <text x="784" y="259" font-size="12" fill="#4a5568">合闸完全到位后断开</text>
+
+  <ellipse cx="700" cy="384" rx="82" ry="34" fill="#ebf4ff" stroke="#2b6cb0" stroke-width="2"/>
+  <text x="700" y="379" text-anchor="middle" font-size="13" font-weight="bold" fill="#2c5282">pdb1 失压脱扣线圈</text>
+  <text x="700" y="398" text-anchor="middle" font-size="12" fill="#2c5282">sw1_uv1 — sw1_uv2</text>
+  <text x="792" y="377" font-size="12" fill="#4a5568">线圈有电 → 允许岸电主开关合闸</text>
+  <text x="792" y="397" font-size="12" fill="#c53030">线圈失电 → 岸电主开关脱扣、合不上</text>
+
+  <!-- 结论 -->
+  <rect x="70" y="578" width="860" height="58" rx="8" fill="#f0fff4" stroke="#2f855a" stroke-width="2"/>
+  <text x="88" y="602" font-size="13" font-weight="bold" fill="#276749">互锁结论</text>
+  <text x="88" y="624" font-size="12" fill="#22543d">任一台主开关合闸到位 → 其常闭触头断开 → 切断对方失压脱扣线圈电源 → 对方随即脱扣，两电源不能同时供电。</text>
+</svg>
