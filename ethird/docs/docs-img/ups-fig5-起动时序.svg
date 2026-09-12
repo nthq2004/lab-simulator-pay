@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 380" font-family="Microsoft YaHei, PingFang SC, sans-serif">
+  <rect width="1000" height="380" fill="#fbfcfe"/>
+  <text x="500" y="34" text-anchor="middle" font-size="22" font-weight="bold" fill="#1f3b57">图5  UPS 起动时序（长按 ON 后）</text>
+
+  <!-- 时间轴 -->
+  <line x1="100" y1="210" x2="920" y2="210" stroke="#9aa5b1" stroke-width="2"/>
+
+  <!-- 区段条 -->
+  <g>
+    <rect x="100" y="180" width="400" height="30" fill="#cfe0f5" stroke="#3b6ea5" stroke-width="1.5"/>
+    <rect x="500" y="180" width="60" height="30" fill="#cdead9" stroke="#2e8b57" stroke-width="1.5"/>
+    <rect x="560" y="180" width="60" height="30" fill="#cdead9" stroke="#2e8b57" stroke-width="1.5"/>
+    <rect x="620" y="180" width="160" height="30" fill="#fcefc9" stroke="#d98e00" stroke-width="1.5"/>
+    <rect x="780" y="180" width="140" height="30" fill="#cdead9" stroke="#2e8b57" stroke-width="1.5"/>
+  </g>
+  <g font-size="12" text-anchor="middle" fill="#33475b">
+    <text x="300" y="201">旁通模式 BYPASS（约 10s）</text>
+    <text x="530" y="201" font-size="11">整流自检</text>
+    <text x="590" y="201" font-size="11">逆变自检</text>
+    <text x="700" y="201" font-size="11">等待时间（4s）</text>
+    <text x="850" y="201">在线模式 LINE</text>
+  </g>
+
+  <!-- 刻度 -->
+  <g stroke="#b0b7bf" stroke-width="1" stroke-dasharray="4 3">
+    <line x1="100" y1="150" x2="100" y2="250"/>
+    <line x1="500" y1="140" x2="500" y2="250"/>
+    <line x1="560" y1="150" x2="560" y2="250"/>
+    <line x1="620" y1="150" x2="620" y2="250"/>
+    <line x1="780" y1="140" x2="780" y2="250"/>
+  </g>
+  <g font-size="12" fill="#5b6b7c" text-anchor="middle">
+    <text x="100" y="270">0s</text>
+    <text x="100" y="132">长按 ON</text>
+    <text x="500" y="132">10s</text>
+    <text x="560" y="270">11.5s</text>
+    <text x="620" y="270">13s</text>
+    <text x="780" y="132">17s</text>
+    <text x="850" y="270">在线（LINE）</text>
+  </g>
+  <text x="60" y="200" font-size="12" fill="#5b6b7c" text-anchor="end">模式</text>
+
+  <!-- 指示灯状态条 -->
+  <text x="60" y="316" font-size="12" fill="#5b6b7c" text-anchor="end">指示灯</text>
+  <g font-size="12">
+    <rect x="100" y="300" width="400" height="22" fill="#dbeafe" stroke="#3b6ea5" stroke-width="1"/>
+    <text x="300" y="316" text-anchor="middle" fill="#1f3b57">BYPASS 亮</text>
+    <rect x="780" y="300" width="140" height="22" fill="#dcf1e3" stroke="#2e8b57" stroke-width="1"/>
+    <text x="850" y="316" text-anchor="middle" fill="#1e6b3a">LINE 亮</text>
+  </g>
+  <text x="500" y="352" text-anchor="middle" font-size="13" fill="#5b6b7c">整流器与逆变器自检期间（10~13s）输出仍由旁路维持，负载供电全程不中断</text>
+</svg>

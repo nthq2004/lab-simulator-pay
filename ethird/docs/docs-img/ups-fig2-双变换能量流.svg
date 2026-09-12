@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 620" font-family="Microsoft YaHei, PingFang SC, sans-serif">
+  <rect width="980" height="620" fill="#fbfcfe"/>
+  <text x="490" y="34" text-anchor="middle" font-size="22" font-weight="bold" fill="#1f3b57">图2  双变换在线式 UPS 的能量流向</text>
+
+  <!-- ================= 在线模式 ================= -->
+  <rect x="30" y="60" width="920" height="150" rx="10" fill="#f4fbf6" stroke="#2e8b57" stroke-width="1.5"/>
+  <text x="50" y="88" font-size="16" font-weight="bold" fill="#1e6b3a">① 在线模式（LINE）：交流 → 直流 → 交流（双变换）</text>
+  <g font-size="14" text-anchor="middle">
+    <rect x="60" y="105" width="140" height="70" rx="8" fill="#e8f6ec" stroke="#2e8b57" stroke-width="2"/>
+    <text x="130" y="137" fill="#1e6b3a">市电 AC</text>
+    <text x="130" y="159" font-size="11" fill="#2e8b57">220V/50Hz</text>
+
+    <rect x="270" y="105" width="140" height="70" rx="8" fill="#dff0e6" stroke="#2e8b57" stroke-width="2"/>
+    <text x="340" y="137" fill="#1e6b3a">整流器</text>
+    <text x="340" y="159" font-size="11" fill="#2e8b57">AC→DC</text>
+
+    <rect x="480" y="105" width="140" height="70" rx="8" fill="#fdf3df" stroke="#d98e00" stroke-width="2"/>
+    <text x="550" y="137" fill="#a8670a">直流母线</text>
+    <text x="550" y="159" font-size="11" fill="#a8670a">DC 216V（浮充）</text>
+
+    <rect x="690" y="105" width="140" height="70" rx="8" fill="#dff0e6" stroke="#2e8b57" stroke-width="2"/>
+    <text x="760" y="137" fill="#1e6b3a">逆变器</text>
+    <text x="760" y="159" font-size="11" fill="#2e8b57">DC→AC</text>
+  </g>
+  <g stroke="#2e8b57" stroke-width="4" fill="none" marker-end="url(#arwG)">
+    <line x1="200" y1="140" x2="268" y2="140"/>
+    <line x1="410" y1="140" x2="478" y2="140"/>
+    <line x1="620" y1="140" x2="688" y2="140"/>
+    <line x1="830" y1="140" x2="900" y2="140"/>
+  </g>
+  <text x="905" y="145" font-size="13" fill="#1e6b3a">负载</text>
+  <path d="M130 175 L130 192 L540 192" stroke="#d98e00" stroke-width="2.5" stroke-dasharray="6 4" fill="none" marker-end="url(#arwO)"/>
+  <text x="335" y="188" text-anchor="middle" font-size="12" fill="#a8670a">市电同时经整流后给蓄电池充电</text>
+
+  <!-- ================= 电池模式 ================= -->
+  <rect x="30" y="230" width="920" height="150" rx="10" fill="#fffaf0" stroke="#d98e00" stroke-width="1.5"/>
+  <text x="50" y="258" font-size="16" font-weight="bold" fill="#a8670a">② 电池模式（BATTERY）：直流 → 交流（市电失电，切换无间断）</text>
+  <g font-size="14" text-anchor="middle">
+    <rect x="60" y="275" width="140" height="70" rx="8" fill="#f3f4f6" stroke="#b0b7bf" stroke-width="2"/>
+    <text x="130" y="307" fill="#9aa5b1">市电 AC</text>
+    <text x="130" y="329" font-size="11" fill="#9aa5b1">失电（×）</text>
+
+    <rect x="270" y="275" width="140" height="70" rx="8" fill="#f3f4f6" stroke="#b0b7bf" stroke-width="2"/>
+    <text x="340" y="307" fill="#9aa5b1">整流器</text>
+    <text x="340" y="329" font-size="11" fill="#9aa5b1">停止</text>
+
+    <rect x="480" y="275" width="140" height="70" rx="8" fill="#fdf3df" stroke="#d98e00" stroke-width="2"/>
+    <text x="550" y="307" fill="#a8670a">蓄电池组</text>
+    <text x="550" y="329" font-size="11" fill="#a8670a">放电</text>
+
+    <rect x="690" y="275" width="140" height="70" rx="8" fill="#dff0e6" stroke="#2e8b57" stroke-width="2"/>
+    <text x="760" y="307" fill="#1e6b3a">逆变器</text>
+    <text x="760" y="329" font-size="11" fill="#2e8b57">DC→AC</text>
+  </g>
+  <g stroke="#d98e00" stroke-width="4" fill="none" marker-end="url(#arwO)">
+    <line x1="620" y1="310" x2="688" y2="310"/>
+    <line x1="830" y1="310" x2="900" y2="310"/>
+  </g>
+  <text x="905" y="315" font-size="13" fill="#a8670a">负载</text>
+  <text x="60" y="368" font-size="12" fill="#9aa5b1">静态开关转向逆变器侧，负载供电不中断</text>
+
+  <!-- ================= 旁路模式 ================= -->
+  <rect x="30" y="400" width="920" height="150" rx="10" fill="#f3f7fc" stroke="#3b6ea5" stroke-width="1.5"/>
+  <text x="50" y="428" font-size="16" font-weight="bold" fill="#1f3b57">③ 旁路模式（BYPASS）：市电经旁路直通（过载 / 故障时保护逆变器）</text>
+  <g font-size="14" text-anchor="middle">
+    <rect x="60" y="445" width="140" height="70" rx="8" fill="#eef4fb" stroke="#3b6ea5" stroke-width="2"/>
+    <text x="130" y="477" fill="#1f3b57">市电 AC</text>
+    <text x="130" y="499" font-size="11" fill="#3b6ea5">正常</text>
+
+    <rect x="270" y="445" width="140" height="70" rx="8" fill="#f3f4f6" stroke="#b0b7bf" stroke-width="2"/>
+    <text x="340" y="477" fill="#9aa5b1">整流器/逆变器</text>
+    <text x="340" y="499" font-size="11" fill="#9aa5b1">过载保护退出</text>
+
+    <rect x="480" y="445" width="140" height="70" rx="8" fill="#eef4fb" stroke="#8e44ad" stroke-width="2"/>
+    <text x="550" y="477" fill="#6c3483">旁路开关</text>
+    <text x="550" y="499" font-size="11" fill="#8e44ad">+ 静态开关</text>
+
+    <rect x="690" y="445" width="140" height="70" rx="8" fill="#eef4fb" stroke="#3b6ea5" stroke-width="2"/>
+    <text x="760" y="477" fill="#1f3b57">直通输出</text>
+    <text x="760" y="499" font-size="11" fill="#3b6ea5">无稳压稳频</text>
+  </g>
+  <g stroke="#3b6ea5" stroke-width="4" fill="none" marker-end="url(#arwB)">
+    <path d="M200 480 L240 480 L240 436 L520 436 L520 443"/>
+    <line x1="620" y1="480" x2="688" y2="480"/>
+    <line x1="830" y1="480" x2="900" y2="480"/>
+  </g>
+  <text x="905" y="485" font-size="13" fill="#1f3b57">负载</text>
+
+  <!-- 箭头定义 -->
+  <defs>
+    <marker id="arwG" markerWidth="10" markerHeight="10" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#2e8b57"/>
+    </marker>
+    <marker id="arwO" markerWidth="10" markerHeight="10" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#d98e00"/>
+    </marker>
+    <marker id="arwB" markerWidth="10" markerHeight="10" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#3b6ea5"/>
+    </marker>
+  </defs>
+
+  <text x="490" y="592" text-anchor="middle" font-size="13" fill="#5b6b7c">"双变换"指市电正常时电能始终经过"交流 → 直流 → 交流"两级变换；负载始终由逆变器供电，故切换无间断。</text>
+</svg>
