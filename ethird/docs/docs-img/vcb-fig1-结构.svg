@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 640" font-family="Microsoft YaHei, PingFang SC, sans-serif">
+  <rect width="980" height="640" fill="#fbfcfe"/>
+  <text x="490" y="34" text-anchor="middle" font-size="22" font-weight="bold" fill="#1f3b57">图1  10kV 真空断路器（手车式）结构组成</text>
+
+  <!-- 柜体轮廓 -->
+  <rect x="40" y="70" width="900" height="500" rx="14" fill="#f2f5f9" stroke="#5a6a75" stroke-width="2"/>
+
+  <!-- 左侧操作面板 -->
+  <rect x="60" y="95" width="200" height="450" rx="8" fill="#e8edf3" stroke="#8a97a3" stroke-width="1.5"/>
+  <text x="160" y="120" text-anchor="middle" font-size="15" font-weight="bold" fill="#1f3b57">操作面板（手车正面）</text>
+
+  <rect x="80" y="140" width="160" height="30" rx="4" fill="#fff" stroke="#9aa3ad"/>
+  <text x="160" y="160" text-anchor="middle" font-size="13" font-weight="bold" fill="#1b8a1b">合/分闸指示牌（ON/OFF）</text>
+
+  <rect x="80" y="190" width="72" height="26" rx="4" fill="#1e7e34"/>
+  <text x="116" y="208" text-anchor="middle" font-size="12" fill="#fff">手动合闸</text>
+  <rect x="168" y="190" width="72" height="26" rx="4" fill="#b3392f"/>
+  <text x="204" y="208" text-anchor="middle" font-size="12" fill="#fff">手动分闸</text>
+
+  <circle cx="160" cy="270" r="22" fill="#e8eaee" stroke="#7a7f8a" stroke-width="2"/>
+  <line x1="160" y1="270" x2="160" y2="250" stroke="#38404f" stroke-width="3.5" stroke-linecap="round"/>
+  <text x="160" y="308" text-anchor="middle" font-size="12" fill="#4a5560">工作位转换开关</text>
+  <text x="160" y="324" text-anchor="middle" font-size="11" fill="#7f8c8d">连接位 / 试验位 / 检修位</text>
+
+  <circle cx="160" cy="365" r="16" fill="#4a4a4a" stroke="#2a2a2a" stroke-width="2"/>
+  <text x="160" y="398" text-anchor="middle" font-size="12" fill="#4a5560">接地开关电磁锁 + 摇柄孔</text>
+
+  <rect x="80" y="425" width="160" height="46" rx="6" fill="#eef7f0" stroke="#2e8b57"/>
+  <text x="160" y="446" text-anchor="middle" font-size="12" font-weight="bold" fill="#1e6b3a">接地开关 GS1/GS2/GS3</text>
+  <text x="160" y="463" text-anchor="middle" font-size="11" fill="#2e8b57">摇柄顺时针 5 次合闸</text>
+
+  <rect x="80" y="488" width="160" height="40" rx="6" fill="#f7f8fa" stroke="#9aa3ad"/>
+  <text x="160" y="505" text-anchor="middle" font-size="12" fill="#4a5560">储能指示</text>
+  <text x="160" y="521" text-anchor="middle" font-size="11" fill="#7f8c8d">储能手柄 / 储能电机</text>
+
+  <!-- 中部：真空灭弧室 -->
+  <rect x="300" y="110" width="180" height="300" rx="10" fill="#ffffff" stroke="#3b6ea5" stroke-width="2"/>
+  <text x="390" y="136" text-anchor="middle" font-size="15" font-weight="bold" fill="#1f3b57">真空灭弧室（真空泡）</text>
+
+  <line x1="330" y1="170" x2="450" y2="170" stroke="#c0392b" stroke-width="4"/>
+  <text x="390" y="164" text-anchor="middle" font-size="11" fill="#4a5560">上静触头（进线）</text>
+
+  <rect x="360" y="195" width="60" height="14" rx="3" fill="#c8a24a" stroke="#7a6028"/>
+  <text x="390" y="230" text-anchor="middle" font-size="11" fill="#4a5560">动触头</text>
+
+  <path d="M330 250 L450 250" stroke="#9aa3ad" stroke-width="1" stroke-dasharray="4 3"/>
+  <path d="M330 300 L450 300" stroke="#9aa3ad" stroke-width="1" stroke-dasharray="4 3"/>
+  <text x="390" y="278" text-anchor="middle" font-size="11" fill="#7f8c8d">波纹管 / 绝缘外壳</text>
+  <text x="390" y="322" text-anchor="middle" font-size="11" fill="#7f8c8d">三相主触头</text>
+
+  <line x1="330" y1="360" x2="450" y2="360" stroke="#2e8b57" stroke-width="4"/>
+  <text x="390" y="380" text-anchor="middle" font-size="11" fill="#4a5560">下静触头（出线）</text>
+
+  <rect x="300" y="430" width="180" height="60" rx="8" fill="#eef4fb" stroke="#3b6ea5"/>
+  <text x="390" y="454" text-anchor="middle" font-size="13" font-weight="bold" fill="#1f3b57">操动机构</text>
+  <text x="390" y="476" text-anchor="middle" font-size="11" fill="#3b6ea5">储能弹簧 · 合闸/分闸线圈 · 失压脱扣</text>
+
+  <!-- 右侧：一次/二次插头、CT/PT、接地母排 -->
+  <rect x="530" y="110" width="180" height="120" rx="10" fill="#fff6e5" stroke="#d98e00" stroke-width="2"/>
+  <text x="620" y="140" text-anchor="middle" font-size="14" font-weight="bold" fill="#a8670a">一次插头（隔离连接片）</text>
+  <text x="620" y="165" text-anchor="middle" font-size="11" fill="#a8670a">随手车位置接通/断开主回路</text>
+  <text x="620" y="190" text-anchor="middle" font-size="11" fill="#a8670a">工作位接通，试验/检修位断开</text>
+
+  <rect x="530" y="250" width="180" height="110" rx="10" fill="#eef7f0" stroke="#2e8b57" stroke-width="2"/>
+  <text x="620" y="278" text-anchor="middle" font-size="14" font-weight="bold" fill="#1e6b3a">二次插头（航空插头）</text>
+  <text x="620" y="303" text-anchor="middle" font-size="11" fill="#2e8b57">控制 / 信号 / 保护回路</text>
+  <text x="620" y="326" text-anchor="middle" font-size="11" fill="#2e8b57">检修位断开，其余接通</text>
+
+  <rect x="530" y="380" width="180" height="100" rx="10" fill="#fdecea" stroke="#c0392b" stroke-width="2"/>
+  <text x="620" y="408" text-anchor="middle" font-size="14" font-weight="bold" fill="#a93226">柜门联锁</text>
+  <text x="620" y="432" text-anchor="middle" font-size="11" fill="#c0392b">未可靠接地禁止开门</text>
+  <text x="620" y="455" text-anchor="middle" font-size="11" fill="#c0392b">开门后电磁锁闭锁、摇柄拔出</text>
+
+  <rect x="750" y="110" width="170" height="120" rx="10" fill="#eef4fb" stroke="#3b6ea5"/>
+  <text x="835" y="138" text-anchor="middle" font-size="14" font-weight="bold" fill="#1f3b57">测量互感器</text>
+  <text x="835" y="163" text-anchor="middle" font-size="11" fill="#3b6ea5">CT：出口 / 入口 / 中性点</text>
+  <text x="835" y="186" text-anchor="middle" font-size="11" fill="#3b6ea5">PT：母线/发电机电压</text>
+  <text x="835" y="209" text-anchor="middle" font-size="11" fill="#3b6ea5">供微机综合保护采样</text>
+
+  <rect x="750" y="250" width="170" height="110" rx="10" fill="#f7f8fa" stroke="#9aa3ad"/>
+  <text x="835" y="278" text-anchor="middle" font-size="14" font-weight="bold" fill="#1f3b57">接地母排</text>
+  <text x="835" y="303" text-anchor="middle" font-size="11" fill="#4a5560">经接地开关接至柜体地</text>
+  <text x="835" y="326" text-anchor="middle" font-size="11" fill="#4a5560">检修时泄放残余电荷</text>
+
+  <rect x="750" y="380" width="170" height="100" rx="10" fill="#eef4fb" stroke="#3b6ea5"/>
+  <text x="835" y="408" text-anchor="middle" font-size="14" font-weight="bold" fill="#1f3b57">控制电源</text>
+  <text x="835" y="432" text-anchor="middle" font-size="11" fill="#3b6ea5">DC 24V 储能/合闸/失压/分励</text>
+  <text x="835" y="455" text-anchor="middle" font-size="11" fill="#3b6ea5">额定控制电压 24V</text>
+
+  <!-- 底部说明 -->
+  <text x="60" y="600" font-size="13" fill="#4a5560">要点：真空断路器由"灭弧室 + 操动机构 + 手车（一、二次插头）+ 接地开关 + 柜门联锁 + 测量互感器"组成，</text>
+  <text x="60" y="624" font-size="13" fill="#4a5560">利用真空中电弧迅速熄灭实现无油、无气、免维护的灭弧，配合手车三位置实现运行/试验/检修状态切换。</text>
+</svg>

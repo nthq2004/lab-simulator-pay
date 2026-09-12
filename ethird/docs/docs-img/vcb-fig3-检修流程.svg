@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 800" font-family="Microsoft YaHei, PingFang SC, sans-serif">
+  <rect width="980" height="800" fill="#fbfcfe"/>
+  <text x="490" y="34" text-anchor="middle" font-size="22" font-weight="bold" fill="#1f3b57">图3  真空断路器检修流程（含高压五防联锁）</text>
+
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#3b6ea5"/>
+    </marker>
+  </defs>
+
+  <!-- 流程框 -->
+  <g font-size="14">
+    <!-- 1 -->
+    <rect x="300" y="60" width="380" height="56" rx="10" fill="#eef4fb" stroke="#3b6ea5" stroke-width="2"/>
+    <text x="490" y="84" text-anchor="middle" font-weight="bold" fill="#1f3b57">① 断路器分闸，手车摇至【试验位】</text>
+    <text x="490" y="104" text-anchor="middle" font-size="11.5" fill="#3b6ea5">试验位：一次插头断开、二次插头接通</text>
+
+    <!-- 2 -->
+    <rect x="300" y="146" width="380" height="56" rx="10" fill="#eef7f0" stroke="#2e8b57" stroke-width="2"/>
+    <text x="490" y="170" text-anchor="middle" font-weight="bold" fill="#1e6b3a">② 解锁电磁锁，摇柄顺时针 5 次合接地开关</text>
+    <text x="490" y="190" text-anchor="middle" font-size="11.5" fill="#2e8b57">三相出线可靠接地，泄放残余电荷</text>
+
+    <!-- 3 -->
+    <rect x="300" y="232" width="380" height="56" rx="10" fill="#eef4fb" stroke="#3b6ea5" stroke-width="2"/>
+    <text x="490" y="256" text-anchor="middle" font-weight="bold" fill="#1f3b57">③ 打开柜门</text>
+    <text x="490" y="276" text-anchor="middle" font-size="11.5" fill="#3b6ea5">联锁：必须已可靠接地才能开门</text>
+
+    <!-- 4 -->
+    <rect x="300" y="318" width="380" height="56" rx="10" fill="#fff6e5" stroke="#d98e00" stroke-width="2"/>
+    <text x="490" y="342" text-anchor="middle" font-weight="bold" fill="#a8670a">④ 拔出二次插头 → 手车摇至【检修位】</text>
+    <text x="490" y="362" text-anchor="middle" font-size="11.5" fill="#a8670a">一、二次插头全断，本体可移出检修</text>
+
+    <!-- 5 -->
+    <rect x="300" y="404" width="380" height="56" rx="10" fill="#f7f8fa" stroke="#9aa3ad" stroke-width="2"/>
+    <text x="490" y="428" text-anchor="middle" font-weight="bold" fill="#4a5560">⑤ 柜内检修作业（可移出断路器本体）</text>
+    <text x="490" y="448" text-anchor="middle" font-size="11.5" fill="#7f8c8d">检查触头、操动机构、绝缘、二次回路</text>
+
+    <!-- 6 -->
+    <rect x="300" y="490" width="380" height="56" rx="10" fill="#fff6e5" stroke="#d98e00" stroke-width="2"/>
+    <text x="490" y="514" text-anchor="middle" font-weight="bold" fill="#a8670a">⑥ 插入二次接头 → 手车摇至【试验位】</text>
+    <text x="490" y="534" text-anchor="middle" font-size="11.5" fill="#a8670a">恢复控制/保护回路，可做传动试验</text>
+
+    <!-- 7 -->
+    <rect x="300" y="576" width="380" height="56" rx="10" fill="#eef7f0" stroke="#2e8b57" stroke-width="2"/>
+    <text x="490" y="600" text-anchor="middle" font-weight="bold" fill="#1e6b3a">⑦ 关闭柜门 → 逆时针 5 次断开接地开关</text>
+    <text x="490" y="620" text-anchor="middle" font-size="11.5" fill="#2e8b57">拆除接地，恢复冷备用状态</text>
+
+    <!-- 8 -->
+    <rect x="300" y="662" width="380" height="56" rx="10" fill="#e8f6ec" stroke="#2e8b57" stroke-width="2"/>
+    <text x="490" y="686" text-anchor="middle" font-weight="bold" fill="#1e6b3a">⑧ 手车摇至【工作位（连接位）】</text>
+    <text x="490" y="706" text-anchor="middle" font-size="11.5" fill="#2e8b57">一次插头接通，具备送电条件</text>
+  </g>
+
+  <!-- 箭头 -->
+  <g stroke="#3b6ea5" stroke-width="2.5" fill="none" marker-end="url(#arr)">
+    <line x1="490" y1="116" x2="490" y2="144"/>
+    <line x1="490" y1="202" x2="490" y2="230"/>
+    <line x1="490" y1="288" x2="490" y2="316"/>
+    <line x1="490" y1="374" x2="490" y2="402"/>
+    <line x1="490" y1="460" x2="490" y2="488"/>
+    <line x1="490" y1="546" x2="490" y2="574"/>
+    <line x1="490" y1="632" x2="490" y2="660"/>
+  </g>
+
+  <!-- 右侧五防标注 -->
+  <g>
+    <rect x="710" y="146" width="240" height="56" rx="8" fill="#fdecea" stroke="#c0392b"/>
+    <text x="830" y="170" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#a93226">防③：防带电合接地开关</text>
+    <text x="830" y="190" text-anchor="middle" font-size="11" fill="#c0392b">T1–T3 带电时电磁锁闭锁</text>
+
+    <rect x="710" y="232" width="240" height="56" rx="8" fill="#fdecea" stroke="#c0392b"/>
+    <text x="830" y="256" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#a93226">防⑤：防误入带电间隔</text>
+    <text x="830" y="276" text-anchor="middle" font-size="11" fill="#c0392b">未接地禁止开门；开门后锁摇柄</text>
+
+    <rect x="710" y="490" width="240" height="56" rx="8" fill="#fdecea" stroke="#c0392b"/>
+    <text x="830" y="514" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#a93226">防④：防带接地线合闸</text>
+    <text x="830" y="534" text-anchor="middle" font-size="11" fill="#c0392b">接地期间禁止摇向工作位</text>
+
+    <rect x="710" y="576" width="240" height="56" rx="8" fill="#fdecea" stroke="#c0392b"/>
+    <text x="830" y="600" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#a93226">防①②：防带负荷分合</text>
+    <text x="830" y="620" text-anchor="middle" font-size="11" fill="#c0392b">分闸、试验位后再操作接地</text>
+  </g>
+
+  <!-- 左侧步骤序号说明 -->
+  <g font-size="12.5" fill="#4a5560">
+    <text x="30" y="90" font-weight="bold" fill="#1f3b57">停电</text>
+    <text x="30" y="176" font-weight="bold" fill="#1e6b3a">验电接地</text>
+    <text x="30" y="262" font-weight="bold" fill="#1f3b57">开门</text>
+    <text x="30" y="348" font-weight="bold" fill="#a8670a">隔离</text>
+    <text x="30" y="434" font-weight="bold" fill="#4a5560">检修</text>
+    <text x="30" y="520" font-weight="bold" fill="#a8670a">恢复</text>
+    <text x="30" y="606" font-weight="bold" fill="#1e6b3a">拆除接地</text>
+    <text x="30" y="692" font-weight="bold" fill="#1e6b3a">送电准备</text>
+  </g>
+</svg>

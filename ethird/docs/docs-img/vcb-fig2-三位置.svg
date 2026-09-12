@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 600" font-family="Microsoft YaHei, PingFang SC, sans-serif">
+  <rect width="980" height="600" fill="#fbfcfe"/>
+  <text x="490" y="34" text-anchor="middle" font-size="22" font-weight="bold" fill="#1f3b57">图2  手车三位置与一次/二次插头状态</text>
+
+  <!-- 表头 -->
+  <rect x="60" y="80" width="200" height="56" rx="8" fill="#1f3b57"/>
+  <text x="160" y="115" text-anchor="middle" font-size="15" font-weight="bold" fill="#ffffff">项目 / 位置</text>
+
+  <rect x="270" y="80" width="210" height="56" rx="8" fill="#e8f6ec" stroke="#2e8b57" stroke-width="2"/>
+  <text x="375" y="106" text-anchor="middle" font-size="15" font-weight="bold" fill="#1e6b3a">工作位（连接位）</text>
+  <text x="375" y="126" text-anchor="middle" font-size="11" fill="#2e8b57">正常运行位置</text>
+
+  <rect x="490" y="80" width="210" height="56" rx="8" fill="#eef4fb" stroke="#3b6ea5" stroke-width="2"/>
+  <text x="595" y="106" text-anchor="middle" font-size="15" font-weight="bold" fill="#1f3b57">试验位</text>
+  <text x="595" y="126" text-anchor="middle" font-size="11" fill="#3b6ea5">可分合闸试验</text>
+
+  <rect x="710" y="80" width="210" height="56" rx="8" fill="#fff6e5" stroke="#d98e00" stroke-width="2"/>
+  <text x="815" y="106" text-anchor="middle" font-size="15" font-weight="bold" fill="#a8670a">检修位</text>
+  <text x="815" y="126" text-anchor="middle" font-size="11" fill="#a8670a">本体可移出检修</text>
+
+  <!-- 行 1 -->
+  <rect x="60" y="146" width="860" height="52" fill="#f7f8fa" stroke="#d5dbe2"/>
+  <text x="160" y="177" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#4a5560">一次插头（主回路）</text>
+  <text x="375" y="177" text-anchor="middle" font-size="13" fill="#1e6b3a">接通</text>
+  <text x="595" y="177" text-anchor="middle" font-size="13" fill="#c0392b">断开</text>
+  <text x="815" y="177" text-anchor="middle" font-size="13" fill="#c0392b">断开</text>
+
+  <!-- 行 2 -->
+  <rect x="60" y="198" width="860" height="52" fill="#ffffff" stroke="#d5dbe2"/>
+  <text x="160" y="229" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#4a5560">二次插头（控制回路）</text>
+  <text x="375" y="229" text-anchor="middle" font-size="13" fill="#1e6b3a">接通</text>
+  <text x="595" y="229" text-anchor="middle" font-size="13" fill="#1e6b3a">接通</text>
+  <text x="815" y="229" text-anchor="middle" font-size="13" fill="#c0392b">断开</text>
+
+  <!-- 行 3 -->
+  <rect x="60" y="250" width="860" height="52" fill="#f7f8fa" stroke="#d5dbe2"/>
+  <text x="160" y="281" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#4a5560">保护/分合闸回路</text>
+  <text x="375" y="281" text-anchor="middle" font-size="13" fill="#1e6b3a">有效</text>
+  <text x="595" y="281" text-anchor="middle" font-size="13" fill="#1e6b3a">有效（可分合闸试验）</text>
+  <text x="815" y="281" text-anchor="middle" font-size="13" fill="#c0392b">失效</text>
+
+  <!-- 行 4 -->
+  <rect x="60" y="302" width="860" height="52" fill="#ffffff" stroke="#d5dbe2"/>
+  <text x="160" y="333" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#4a5560">接地开关操作</text>
+  <text x="375" y="333" text-anchor="middle" font-size="13" fill="#c0392b">闭锁（工作位禁止）</text>
+  <text x="595" y="333" text-anchor="middle" font-size="13" fill="#1e6b3a">允许</text>
+  <text x="815" y="333" text-anchor="middle" font-size="13" fill="#1e6b3a">允许</text>
+
+  <!-- 行 5 -->
+  <rect x="60" y="354" width="860" height="52" fill="#f7f8fa" stroke="#d5dbe2"/>
+  <text x="160" y="385" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#4a5560">手车摇动（五防）</text>
+  <text x="375" y="385" text-anchor="middle" font-size="12.5" fill="#4a5560">合闸时禁止摇动</text>
+  <text x="595" y="385" text-anchor="middle" font-size="12.5" fill="#4a5560">接地时↙不可摇向工作位</text>
+  <text x="815" y="385" text-anchor="middle" font-size="12.5" fill="#4a5560">接地时↗可摇向试验位</text>
+
+  <!-- 底部联锁说明 -->
+  <rect x="60" y="428" width="860" height="140" rx="10" fill="#f7f9fc" stroke="#d5dbe2" stroke-width="1.5"/>
+  <text x="82" y="456" font-size="14" font-weight="bold" fill="#1f3b57">位置切换与联锁要点</text>
+  <text x="82" y="482" font-size="13" fill="#4a5560">· 运行：手车在工作位，一、二次插头均接通，防跳/联锁投入，断路器可远方或就地操作。</text>
+  <text x="82" y="506" font-size="13" fill="#4a5560">· 试验：手车摇至试验位，一次插头断开、二次插头仍接通，可做分合闸、保护传动试验，主回路不带电。</text>
+  <text x="82" y="530" font-size="13" fill="#4a5560">· 检修：拔出二次插头后手车摇至检修位，一、二次插头全断，断路器本体可与柜体分离、移出检修。</text>
+  <text x="82" y="554" font-size="13" fill="#c0392b">· 五防联锁：接地开关闭合期间，手车不得由试验位摇回工作位（防带地线合闸）；工作位或合闸状态禁止操作接地开关。</text>
+</svg>

@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 720" font-family="Microsoft YaHei, PingFang SC, sans-serif">
+  <rect width="980" height="720" fill="#fbfcfe"/>
+  <text x="490" y="34" text-anchor="middle" font-size="22" font-weight="bold" fill="#1f3b57">图5  高压"五防"及其在本仿真中的实现方式</text>
+
+  <!-- 表头 -->
+  <rect x="50" y="60" width="480" height="44" rx="8" fill="#1f3b57"/>
+  <text x="290" y="88" text-anchor="middle" font-size="15" font-weight="bold" fill="#ffffff">五防内容</text>
+  <rect x="530" y="60" width="400" height="44" rx="8" fill="#3b6ea5"/>
+  <text x="730" y="88" text-anchor="middle" font-size="15" font-weight="bold" fill="#ffffff">本仿真中的具体实现</text>
+
+  <!-- 行 1 -->
+  <rect x="50" y="108" width="480" height="100" fill="#eef4fb" stroke="#d5dbe2"/>
+  <text x="70" y="140" font-size="15" font-weight="bold" fill="#1f3b57">① 防止误分、误合断路器</text>
+  <text x="70" y="166" font-size="12.5" fill="#4a5560">只有在正确状态、正确位置才允许操作断路器，</text>
+  <text x="70" y="188" font-size="12.5" fill="#4a5560">防止人为误碰、误操作导致事故。</text>
+  <rect x="530" y="108" width="400" height="100" fill="#ffffff" stroke="#d5dbe2"/>
+  <text x="550" y="138" font-size="12.5" fill="#4a5560">· 合闸条件：已储能 + 接地开关分位 + 非检修位</text>
+  <text x="550" y="162" font-size="12.5" fill="#4a5560">· 分闸/合闸按钮带防护玻璃盖，须先开盖</text>
+  <text x="550" y="186" font-size="12.5" fill="#4a5560">· 工作位合闸状态时智能闭锁，拒绝误操作</text>
+
+  <!-- 行 2 -->
+  <rect x="50" y="212" width="480" height="100" fill="#f7f8fa" stroke="#d5dbe2"/>
+  <text x="70" y="244" font-size="15" font-weight="bold" fill="#1f3b57">② 防止带负荷拉、合隔离开关</text>
+  <text x="70" y="270" font-size="12.5" fill="#4a5560">隔离开关（手车）无灭弧能力，带负荷操作会</text>
+  <text x="70" y="292" font-size="12.5" fill="#4a5560">引发电弧并造成相间短路。</text>
+  <rect x="530" y="212" width="400" height="100" fill="#ffffff" stroke="#d5dbe2"/>
+  <text x="550" y="242" font-size="12.5" fill="#4a5560">· 断路器合闸（带负荷）时，工作位旋钮机械闭锁</text>
+  <text x="550" y="266" font-size="12.5" fill="#4a5560">· 摇动 3 次才切换一档，非连接位/试验位才可移动</text>
+  <text x="550" y="290" font-size="12.5" fill="#4a5560">· 检修流程要求"先分闸、再摇位、后接地"</text>
+
+  <!-- 行 3 -->
+  <rect x="50" y="316" width="480" height="100" fill="#eef7f0" stroke="#d5dbe2"/>
+  <text x="70" y="348" font-size="15" font-weight="bold" fill="#1e6b3a">③ 防止带电挂（合）接地线（接地开关）</text>
+  <text x="70" y="374" font-size="12.5" fill="#4a5560">线路带电时合接地开关等同于对地短路，必须</text>
+  <text x="70" y="396" font-size="12.5" fill="#4a5560">在确认无电后才能装设接地。</text>
+  <rect x="530" y="316" width="400" height="100" fill="#ffffff" stroke="#d5dbe2"/>
+  <text x="550" y="346" font-size="12.5" fill="#4a5560">· 检测 T1–T3 端口电压，任一带电（&gt;60V）即闭锁</text>
+  <text x="550" y="370" font-size="12.5" fill="#4a5560">· 工作位（连接位）时电磁锁机械闭锁，无法解锁</text>
+  <text x="550" y="394" font-size="12.5" fill="#4a5560">· 摇柄插入后带电将无法转动并自动拔出</text>
+
+  <!-- 行 4 -->
+  <rect x="50" y="420" width="480" height="100" fill="#fff6e5" stroke="#d5dbe2"/>
+  <text x="70" y="452" font-size="15" font-weight="bold" fill="#a8670a">④ 防止带接地线（接地开关）合断路器</text>
+  <text x="70" y="478" font-size="12.5" fill="#4a5560">接地线未拆除就合闸送电，将造成三相短路，</text>
+  <text x="70" y="500" font-size="12.5" fill="#4a5560">是本流程中最危险的误操作。</text>
+  <rect x="530" y="420" width="400" height="100" fill="#ffffff" stroke="#d5dbe2"/>
+  <text x="550" y="450" font-size="12.5" fill="#4a5560">· 接地开关合位时 tryClose() 直接拒绝合闸</text>
+  <text x="550" y="474" font-size="12.5" fill="#4a5560">· 接地期间禁止手车由试验位摇回工作位</text>
+  <text x="550" y="498" font-size="12.5" fill="#4a5560">· 断开接地（逆时针 5 次）后方可摇向工作位</text>
+
+  <!-- 行 5 -->
+  <rect x="50" y="524" width="480" height="100" fill="#fdecea" stroke="#d5dbe2"/>
+  <text x="70" y="556" font-size="15" font-weight="bold" fill="#a93226">⑤ 防止误入带电间隔</text>
+  <text x="70" y="582" font-size="12.5" fill="#4a5560">检修人员进入未接地的带电柜体或间隔，可能</text>
+  <text x="70" y="604" font-size="12.5" fill="#4a5560">触电，必须确认无电并可靠接地后才可开门。</text>
+  <rect x="530" y="524" width="400" height="100" fill="#ffffff" stroke="#d5dbe2"/>
+  <text x="550" y="554" font-size="12.5" fill="#4a5560">· 柜门联锁：接地开关未全合闸前禁止开门</text>
+  <text x="550" y="578" font-size="12.5" fill="#4a5560">· 开门后接地开关电磁锁立即闭锁、摇柄拔出</text>
+  <text x="550" y="602" font-size="12.5" fill="#4a5560">· 开门状态禁止解锁/摇动接地开关与合闸</text>
+
+  <text x="50" y="668" font-size="13" fill="#4a5560">说明：本仿真把"五防"落到了具体元件的联锁布尔条件上——接地开关状态、手车位置、T 侧带电检测、</text>
+  <text x="50" y="692" font-size="13" fill="#4a5560">柜门开关、储能状态，任一条件不满足即拒绝动作，从而在操作层面复现真实开关柜的防误逻辑。</text>
+</svg>

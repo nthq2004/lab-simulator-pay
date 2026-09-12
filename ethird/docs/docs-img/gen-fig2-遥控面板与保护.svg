@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 640" font-family="Microsoft YaHei, PingFang SC, sans-serif">
+  <rect width="980" height="640" fill="#fbfcfe"/>
+  <text x="490" y="34" text-anchor="middle" font-size="22" font-weight="bold" fill="#1f3b57">图6  高压发电机遥控面板、微机保护与自动模式</text>
+
+  <!-- 发电机 -->
+  <rect x="40" y="90" width="230" height="220" rx="12" fill="#eef4fb" stroke="#3b6ea5" stroke-width="2"/>
+  <text x="155" y="118" text-anchor="middle" font-size="16" font-weight="bold" fill="#1f3b57">高压发电机（6600V）</text>
+  <circle cx="155" cy="185" r="46" fill="#ffffff" stroke="#3b6ea5" stroke-width="2"/>
+  <text x="155" y="180" text-anchor="middle" font-size="13" fill="#1f3b57">发电机</text>
+  <text x="155" y="200" text-anchor="middle" font-size="11" fill="#3b6ea5">U/V/W · N</text>
+  <text x="60" y="256" font-size="12.5" fill="#4a5560">· 控制方式：本地 / 遥控</text>
+  <text x="60" y="278" font-size="12.5" fill="#4a5560">· 励磁开关：（ON / OFF）</text>
+  <text x="60" y="300" font-size="12.5" fill="#4a5560">· 起/停按钮、灭磁接口</text>
+
+  <!-- 24V 控制电源 -->
+  <rect x="300" y="90" width="150" height="90" rx="10" fill="#f7f8fa" stroke="#9aa3ad" stroke-width="2"/>
+  <text x="375" y="120" text-anchor="middle" font-size="14" font-weight="bold" fill="#4a5560">DC 24V</text>
+  <text x="375" y="146" text-anchor="middle" font-size="11.5" fill="#7f8c8d">控制电源</text>
+  <text x="375" y="166" text-anchor="middle" font-size="11.5" fill="#7f8c8d">提供操作能量</text>
+
+  <!-- 遥控面板 -->
+  <rect x="480" y="90" width="460" height="270" rx="12" fill="#e8f6ec" stroke="#2e8b57" stroke-width="2"/>
+  <text x="710" y="118" text-anchor="middle" font-size="16" font-weight="bold" fill="#1e6b3a">高压发电机遥控面板</text>
+
+  <rect x="505" y="135" width="120" height="46" rx="6" fill="#fff" stroke="#2e8b57"/>
+  <text x="565" y="155" text-anchor="middle" font-size="12" font-weight="bold" fill="#1e6b3a">手动·自动</text>
+  <text x="565" y="172" text-anchor="middle" font-size="10.5" fill="#2e8b57">转换开关</text>
+
+  <rect x="640" y="135" width="120" height="46" rx="6" fill="#fff" stroke="#2e8b57"/>
+  <text x="700" y="155" text-anchor="middle" font-size="12" font-weight="bold" fill="#1e6b3a">起 · 停</text>
+  <text x="700" y="172" text-anchor="middle" font-size="10.5" fill="#2e8b57">自复位开关</text>
+
+  <rect x="775" y="135" width="140" height="46" rx="6" fill="#fff" stroke="#2e8b57"/>
+  <text x="845" y="155" text-anchor="middle" font-size="12" font-weight="bold" fill="#1e6b3a">合 · 分</text>
+  <text x="845" y="172" text-anchor="middle" font-size="10.5" fill="#2e8b57">遥控断路器</text>
+
+  <!-- 带电显示 + 自检 -->
+  <rect x="505" y="198" width="290" height="66" rx="6" fill="#fffef0" stroke="#d9c200"/>
+  <text x="650" y="220" text-anchor="middle" font-size="12" font-weight="bold" fill="#8a7800">高压带电显示器</text>
+  <circle cx="545" cy="242" r="8" fill="#e0c020"/><text x="545" y="266" text-anchor="middle" font-size="9.5" fill="#8a7800">A</text>
+  <circle cx="585" cy="242" r="8" fill="#20a030"/><text x="585" y="266" text-anchor="middle" font-size="9.5" fill="#1e6b3a">B</text>
+  <circle cx="625" cy="242" r="8" fill="#e03030"/><text x="625" y="266" text-anchor="middle" font-size="9.5" fill="#a93226">C</text>
+  <circle cx="720" cy="242" r="14" fill="#3498db"/><text x="720" y="247" text-anchor="middle" font-size="10.5" fill="#fff">自检</text>
+
+  <!-- 接地指示 -->
+  <rect x="810" y="198" width="110" height="66" rx="6" fill="#fff" stroke="#2e8b57"/>
+  <circle cx="838" cy="222" r="7" fill="#20a030"/><text x="855" y="226" font-size="11" fill="#1e6b3a">接地合</text>
+  <circle cx="838" cy="248" r="7" fill="#e03030"/><text x="855" y="252" font-size="11" fill="#a93226">接地开</text>
+
+  <text x="505" y="292" font-size="12" fill="#4a5560">· 带电显示：T1–T3 任一线电压 &gt;60V 三灯常亮；无压时按【自检】验证</text>
+  <text x="505" y="316" font-size="12" fill="#4a5560">· 接地指示：绿=接地合，红=接地开；同步表用于并车</text>
+  <text x="505" y="340" font-size="12" fill="#c0392b">· 自动模式：电网无电 → 延时 3s 自起动（已运行则跳过）→ 延时 5s 自动合闸</text>
+
+  <!-- 微机保护 -->
+  <rect x="40" y="380" width="900" height="220" rx="12" fill="#eef4fb" stroke="#1f3b57" stroke-width="2"/>
+  <text x="490" y="410" text-anchor="middle" font-size="16" font-weight="bold" fill="#1f3b57">微机综合保护装置（保护仅在主开关闭合时有效）</text>
+
+  <g font-size="12" fill="#4a5560">
+    <rect x="70" y="430" width="270" height="52" rx="6" fill="#fff" stroke="#3b6ea5"/>
+    <text x="90" y="455" font-weight="bold" fill="#1f3b57">差动保护</text>
+    <text x="90" y="473" font-size="11">机端 CT 与中性点 CT 差流，0.2s 确认</text>
+
+    <rect x="360" y="430" width="270" height="52" rx="6" fill="#fff" stroke="#3b6ea5"/>
+    <text x="380" y="455" font-weight="bold" fill="#1f3b57">短路速断</text>
+    <text x="380" y="473" font-size="11">出口电流瞬时峰值 &gt;6In×√2 立即跳闸</text>
+
+    <rect x="650" y="430" width="270" height="52" rx="6" fill="#fff" stroke="#3b6ea5"/>
+    <text x="670" y="455" font-weight="bold" fill="#1f3b57">过载保护</text>
+    <text x="670" y="473" font-size="11">电流超定值并延时跳闸</text>
+
+    <rect x="70" y="500" width="270" height="52" rx="6" fill="#fff" stroke="#3b6ea5"/>
+    <text x="90" y="525" font-weight="bold" fill="#1f3b57">接地保护</text>
+    <text x="90" y="543" font-size="11">零序电流超定值跳闸</text>
+
+    <rect x="360" y="500" width="270" height="52" rx="6" fill="#fff" stroke="#3b6ea5"/>
+    <text x="380" y="525" font-weight="bold" fill="#1f3b57">欠压保护</text>
+    <text x="380" y="543" font-size="11">机端电压低于定值延时跳闸（灭磁时闭锁）</text>
+
+    <rect x="650" y="500" width="270" height="52" rx="6" fill="#fff" stroke="#3b6ea5"/>
+    <text x="670" y="525" font-weight="bold" fill="#1f3b57">逆功率保护</text>
+    <text x="670" y="543" font-size="11">发电机从电网吸收有功时延时跳闸</text>
+  </g>
+  <text x="490" y="584" text-anchor="middle" font-size="12.5" fill="#c0392b">主开关（真空断路器）断开时 CT 无电流，保护不动作；因此检修前必须先分断主开关再操作。</text>
+</svg>
