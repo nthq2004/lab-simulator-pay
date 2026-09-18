@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 700" font-family="Microsoft YaHei, SimHei, sans-serif">
+  <rect x="0" y="0" width="840" height="700" fill="#ffffff"/>
+  <text x="420" y="34" text-anchor="middle" font-size="22" font-weight="bold" fill="#1f2d3d">图1  常用电子元器件的电路符号</text>
+
+  <g stroke="#22313f" stroke-width="2.6" fill="none" stroke-linecap="round">
+
+    <!-- 电阻 -->
+    <g transform="translate(60,110)">
+      <line x1="0" y1="0" x2="40" y2="0"/><line x1="140" y1="0" x2="180" y2="0"/>
+      <rect x="40" y="-16" width="100" height="32" fill="#eef3f8"/>
+      <text x="90" y="-30" text-anchor="middle" font-size="16" fill="#22313f" stroke="none">电阻</text>
+    </g>
+
+    <!-- 电容 -->
+    <g transform="translate(470,110)">
+      <line x1="0" y1="0" x2="75" y2="0"/><line x1="105" y1="0" x2="180" y2="0"/>
+      <line x1="75" y1="-24" x2="75" y2="24"/><line x1="105" y1="-24" x2="105" y2="24"/>
+      <text x="90" y="-36" text-anchor="middle" font-size="16" fill="#22313f" stroke="none">电容</text>
+    </g>
+
+    <!-- 电感 -->
+    <g transform="translate(60,280)">
+      <line x1="0" y1="0" x2="35" y2="0"/><line x1="145" y1="0" x2="180" y2="0"/>
+      <path d="M35 0 A 14 14 0 0 1 63 0 A 14 14 0 0 1 91 0 A 14 14 0 0 1 119 0 A 14 14 0 0 1 147 0" fill="none"/>
+      <text x="90" y="-30" text-anchor="middle" font-size="16" fill="#22313f" stroke="none">电感</text>
+    </g>
+
+    <!-- 二极管 -->
+    <g transform="translate(470,280)">
+      <line x1="0" y1="0" x2="65" y2="0"/><line x1="115" y1="0" x2="180" y2="0"/>
+      <path d="M65 -24 L65 24 L115 0 Z" fill="#eef3f8"/>
+      <line x1="115" y1="-24" x2="115" y2="24"/>
+      <text x="90" y="-38" text-anchor="middle" font-size="16" fill="#22313f" stroke="none">二极管</text>
+    </g>
+
+    <!-- 三极管 -->
+    <g transform="translate(60,460)">
+      <line x1="0" y1="0" x2="45" y2="0"/>
+      <circle cx="90" cy="0" r="34" fill="#eef3f8"/>
+      <line x1="72" y1="-20" x2="72" y2="20"/>
+      <line x1="45" y1="0" x2="72" y2="0"/>
+      <path d="M72 -10 L118 -34 L118 -60"/>
+      <path d="M72 10 L118 34 L118 60"/>
+      <path d="M80 20 L104 12 L94 34 Z" fill="#22313f" stroke="none"/>
+      <text x="90" y="-70" text-anchor="middle" font-size="16" fill="#22313f" stroke="none">三极管</text>
+    </g>
+
+    <!-- 晶闸管 -->
+    <g transform="translate(470,460)">
+      <line x1="0" y1="0" x2="65" y2="0"/><line x1="115" y1="0" x2="180" y2="0"/>
+      <path d="M65 -24 L65 24 L115 0 Z" fill="#eef3f8"/>
+      <line x1="115" y1="-24" x2="115" y2="24"/>
+      <line x1="115" y1="0" x2="150" y2="34"/>
+      <text x="90" y="-40" text-anchor="middle" font-size="16" fill="#22313f" stroke="none">晶闸管</text>
+    </g>
+
+    <!-- IGBT -->
+    <g transform="translate(255,595)">
+      <line x1="0" y1="-40" x2="0" y2="40"/>
+      <line x1="-16" y1="-22" x2="-16" y2="22"/>
+      <line x1="-16" y1="22" x2="-58" y2="22"/>
+      <path d="M0 -26 L34 -60 L34 -84"/>
+      <path d="M0 26 L34 60 L34 84"/>
+      <path d="M8 34 L30 26 L22 48 Z" fill="#22313f" stroke="none"/>
+      <text x="20" y="-96" text-anchor="middle" font-size="16" fill="#22313f" stroke="none">IGBT（绝缘栅双极型晶体管）</text>
+    </g>
+
+  </g>
+</svg>

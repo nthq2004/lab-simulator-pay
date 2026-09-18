@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 660" font-family="Microsoft YaHei, SimHei, sans-serif">
+  <rect x="0" y="0" width="980" height="660" fill="#ffffff"/>
+  <text x="490" y="34" text-anchor="middle" font-size="22" font-weight="bold" fill="#1f2d3d">图4  晶闸管与 IGBT 引脚的万用表判别</text>
+
+  <!-- ========== (a) 晶闸管 ========== -->
+  <rect x="30" y="58" width="450" height="574" rx="10" fill="#fbfcfe" stroke="#bcd4ea"/>
+  <text x="255" y="88" text-anchor="middle" font-size="17" font-weight="bold" fill="#1f2d3d">（a）晶闸管（SCR）：判别门极与阴极</text>
+
+  <!-- 器件示意（rotation 90：上/下/左） -->
+  <g>
+    <rect x="205" y="150" width="100" height="80" rx="8" fill="#e8ecf0" stroke="#555" stroke-width="2"/>
+    <line x1="255" y1="150" x2="255" y2="110" stroke="#aab3bb" stroke-width="5"/>
+    <line x1="255" y1="230" x2="255" y2="270" stroke="#aab3bb" stroke-width="5"/>
+    <line x1="205" y1="190" x2="165" y2="190" stroke="#aab3bb" stroke-width="5"/>
+    <text x="255" y="104" text-anchor="middle" font-size="13" fill="#333">上端</text>
+    <text x="255" y="288" text-anchor="middle" font-size="13" fill="#333">下端</text>
+    <text x="155" y="194" text-anchor="end" font-size="13" fill="#333">左端</text>
+  </g>
+
+  <text x="255" y="330" text-anchor="middle" font-size="14" fill="#1f2d3d">门极（G）与阴极（K）之间是一个 PN 结：</text>
+  <text x="255" y="356" text-anchor="middle" font-size="13" fill="#333">红笔接左端、黑笔接下端 → 阻值很大（∞）</text>
+  <text x="255" y="380" text-anchor="middle" font-size="13" fill="#2d862d">红笔接下端、黑笔接左端 → 正向导通（阻值小）</text>
+
+  <text x="255" y="430" text-anchor="middle" font-size="14" font-weight="bold" fill="#1f2d3d">结论：</text>
+  <text x="255" y="458" text-anchor="middle" font-size="14" fill="#2d862d">左端 = 控制极（门极 G）</text>
+  <text x="255" y="484" text-anchor="middle" font-size="14" fill="#2d862d">下端 = 阴极 K</text>
+  <text x="255" y="510" text-anchor="middle" font-size="14" fill="#2d862d">上端 = 阳极 A</text>
+  <text x="255" y="556" text-anchor="middle" font-size="12" fill="#888">触发导通后即使撤去门极信号，晶闸管仍保持导通（自锁）。</text>
+
+  <!-- ========== (b) IGBT ========== -->
+  <rect x="500" y="58" width="450" height="574" rx="10" fill="#fbfcfe" stroke="#bcd4ea"/>
+  <text x="725" y="88" text-anchor="middle" font-size="17" font-weight="bold" fill="#1f2d3d">（b）IGBT：判别集电极、发射极与门极</text>
+
+  <!-- 器件示意 -->
+  <g>
+    <rect x="675" y="150" width="100" height="80" rx="8" fill="#e8ecf0" stroke="#555" stroke-width="2"/>
+    <rect x="675" y="138" width="100" height="12" rx="3" fill="#9aa2aa" stroke="#666"/>
+    <line x1="725" y1="150" x2="725" y2="110" stroke="#aab3bb" stroke-width="5"/>
+    <line x1="725" y1="230" x2="725" y2="270" stroke="#aab3bb" stroke-width="5"/>
+    <line x1="675" y1="190" x2="635" y2="190" stroke="#aab3bb" stroke-width="5"/>
+    <text x="725" y="104" text-anchor="middle" font-size="13" fill="#333">上端</text>
+    <text x="725" y="288" text-anchor="middle" font-size="13" fill="#333">下端</text>
+    <text x="625" y="194" text-anchor="end" font-size="13" fill="#333">左端</text>
+  </g>
+
+  <text x="725" y="330" text-anchor="middle" font-size="14" fill="#1f2d3d">C-E 之间有一个体二极管：</text>
+  <text x="725" y="356" text-anchor="middle" font-size="13" fill="#333">红笔接上端、黑笔接下端 → 正向导通（阻值小）</text>
+  <text x="725" y="382" text-anchor="middle" font-size="13" fill="#333">门极与 E、C 之间均为绝缘栅 → 阻值很大（∞）</text>
+
+  <text x="725" y="430" text-anchor="middle" font-size="14" font-weight="bold" fill="#1f2d3d">结论：</text>
+  <text x="725" y="458" text-anchor="middle" font-size="14" fill="#2d862d">上端 = 集电极 C</text>
+  <text x="725" y="484" text-anchor="middle" font-size="14" fill="#2d862d">下端 = 发射极 E</text>
+  <text x="725" y="510" text-anchor="middle" font-size="14" fill="#2d862d">左端 = 门极 G</text>
+  <text x="725" y="556" text-anchor="middle" font-size="12" fill="#888">门极靠电压驱动，不吸取电流；体二极管正向时黑笔所接为 E。</text>
+</svg>

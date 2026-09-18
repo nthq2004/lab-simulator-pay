@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 640" font-family="Microsoft YaHei, SimHei, sans-serif">
+  <rect x="0" y="0" width="980" height="640" fill="#ffffff"/>
+  <text x="490" y="34" text-anchor="middle" font-size="22" font-weight="bold" fill="#1f2d3d">图2  指针万用表（MF47）电阻档的调零与测量</text>
+
+  <!-- ===== 面板 ===== -->
+  <rect x="40" y="70" width="310" height="520" rx="12" fill="#f3f2ee" stroke="#333" stroke-width="2"/>
+  <text x="195" y="98" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">MF47 指针万用表</text>
+
+  <!-- 表盘 -->
+  <rect x="62" y="112" width="266" height="150" rx="8" fill="#fffde8" stroke="#999"/>
+  <path d="M80 250 A 130 130 0 0 1 310 250" fill="none" stroke="#444" stroke-width="2"/>
+  <g stroke="#444" stroke-width="1.5">
+    <line x1="92" y1="214" x2="92" y2="224"/><line x1="126" y1="182" x2="132" y2="190"/>
+    <line x1="168" y1="166" x2="171" y2="176"/><line x1="212" y1="166" x2="215" y2="176"/>
+    <line x1="254" y1="182" x2="260" y2="190"/><line x1="292" y1="214" x2="292" y2="224"/>
+  </g>
+  <text x="86" y="210" font-size="13" fill="#a00" font-weight="bold">∞</text>
+  <text x="296" y="214" font-size="13" fill="#333" font-weight="bold">0</text>
+  <text x="196" y="150" text-anchor="middle" font-size="12" fill="#666">Ω 刻度（右端为 0，左端为 ∞）</text>
+  <!-- 指针 -->
+  <line x1="195" y1="258" x2="285" y2="205" stroke="#c0392b" stroke-width="3"/>
+  <circle cx="195" cy="258" r="6" fill="#333"/>
+
+  <!-- 量程旋钮 -->
+  <circle cx="150" cy="352" r="52" fill="#e8e6df" stroke="#555" stroke-width="2"/>
+  <circle cx="150" cy="352" r="40" fill="#d8d5cb" stroke="#888"/>
+  <line x1="150" y1="352" x2="150" y2="312" stroke="#c0392b" stroke-width="4"/>
+  <text x="150" y="374" text-anchor="middle" font-size="12" fill="#333">量程旋钮</text>
+  <text x="150" y="290" text-anchor="middle" font-size="12" fill="#a00">R×100</text>
+
+  <!-- 欧姆调零旋钮 -->
+  <circle cx="290" cy="352" r="26" fill="#e8e6df" stroke="#555" stroke-width="2"/>
+  <line x1="290" y1="352" x2="290" y2="332" stroke="#333" stroke-width="3"/>
+  <text x="290" y="398" text-anchor="middle" font-size="11" fill="#333">欧姆调零</text>
+
+  <!-- 端子 -->
+  <g>
+    <circle cx="100" cy="520" r="12" fill="#333"/>
+    <circle cx="195" cy="520" r="12" fill="#111"/>
+    <circle cx="290" cy="520" r="12" fill="#c0392b"/>
+    <text x="100" y="552" text-anchor="middle" font-size="12" fill="#333">mA</text>
+    <text x="195" y="552" text-anchor="middle" font-size="12" fill="#333">COM（黑）</text>
+    <text x="290" y="552" text-anchor="middle" font-size="12" fill="#333">VΩ（红）</text>
+  </g>
+
+  <!-- ===== (b) 短接调零 ===== -->
+  <rect x="400" y="70" width="540" height="250" rx="10" fill="#f7fbff" stroke="#bcd4ea"/>
+  <text x="670" y="100" text-anchor="middle" font-size="16" font-weight="bold" fill="#1f2d3d">① 短接 VΩ 与 COM，进行欧姆调零</text>
+  <!-- 红黑表笔相碰 -->
+  <line x1="470" y1="210" x2="640" y2="210" stroke="#c0392b" stroke-width="6" stroke-linecap="round"/>
+  <line x1="700" y1="210" x2="860" y2="210" stroke="#111" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="670" cy="210" r="8" fill="#888"/>
+  <text x="480" y="238" font-size="13" fill="#c0392b">红表笔（VΩ）</text>
+  <text x="790" y="238" font-size="13" fill="#111">黑表笔（COM）</text>
+  <text x="670" y="290" text-anchor="middle" font-size="14" fill="#1f2d3d">两只表笔相碰，旋转"欧姆调零"旋钮，</text>
+  <text x="670" y="312" text-anchor="middle" font-size="14" fill="#1f2d3d">使指针指到 Ω 刻度的 0 位</text>
+
+  <!-- ===== (c) 测量 ===== -->
+  <rect x="400" y="340" width="540" height="250" rx="10" fill="#f7fbff" stroke="#bcd4ea"/>
+  <text x="670" y="370" text-anchor="middle" font-size="16" font-weight="bold" fill="#1f2d3d">② 表笔接被测元器件两端，读取阻值</text>
+  <!-- 被测元件（方框） -->
+  <rect x="630" y="450" width="80" height="40" fill="#eef3f8" stroke="#22313f" stroke-width="3"/>
+  <text x="670" y="440" text-anchor="middle" font-size="13" fill="#333">被测元器件</text>
+  <line x1="630" y1="470" x2="560" y2="470" stroke="#22313f" stroke-width="3"/>
+  <line x1="710" y1="470" x2="800" y2="470" stroke="#22313f" stroke-width="3"/>
+  <line x1="490" y1="530" x2="550" y2="470" stroke="#c0392b" stroke-width="3"/>
+  <line x1="860" y1="530" x2="800" y2="470" stroke="#111" stroke-width="3"/>
+  <text x="470" y="552" font-size="13" fill="#c0392b">红（VΩ）</text>
+  <text x="840" y="552" font-size="13" fill="#111">黑（COM）</text>
+  <text x="670" y="400" text-anchor="middle" font-size="14" fill="#1f2d3d">表内电池经内阻向被测元件供电，指针偏转角度对应阻值</text>
+</svg>

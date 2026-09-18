@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 580" font-family="Microsoft YaHei, SimHei, sans-serif">
+  <rect x="0" y="0" width="1000" height="580" fill="#ffffff"/>
+  <text x="500" y="34" text-anchor="middle" font-size="22" font-weight="bold" fill="#1f2d3d">图0  七种元器件的实物外观</text>
+
+  <!-- 电阻 -->
+  <g transform="translate(70,110)">
+    <line x1="-40" y1="30" x2="30" y2="30" stroke="#aeb6bf" stroke-width="4"/>
+    <line x1="150" y1="30" x2="220" y2="30" stroke="#aeb6bf" stroke-width="4"/>
+    <rect x="30" y="4" width="120" height="52" rx="10" fill="#e6d9b8" stroke="#b9a97c"/>
+    <rect x="46" y="4" width="12" height="52" fill="#7b3f00"/>
+    <rect x="66" y="4" width="12" height="52" fill="#111"/>
+    <rect x="86" y="4" width="12" height="52" fill="#a00"/>
+    <rect x="118" y="4" width="12" height="52" fill="#d4af37"/>
+    <text x="90" y="92" text-anchor="middle" font-size="15" font-weight="bold" fill="#1f2d3d">色环电阻</text>
+    <text x="90" y="112" text-anchor="middle" font-size="12" fill="#777">阻值由色环读出</text>
+  </g>
+
+  <!-- 电容 -->
+  <g transform="translate(310,110)">
+    <line x1="50" y1="60" x2="50" y2="120" stroke="#aeb6bf" stroke-width="4"/>
+    <line x1="110" y1="60" x2="110" y2="120" stroke="#aeb6bf" stroke-width="4"/>
+    <rect x="30" y="0" width="100" height="60" rx="8" fill="#2c3e50" stroke="#1a252f"/>
+    <rect x="100" y="0" width="30" height="60" rx="0" fill="#bdc3c7" opacity="0.85"/>
+    <text x="80" y="92" text-anchor="middle" font-size="15" font-weight="bold" fill="#1f2d3d">电容</text>
+    <text x="80" y="112" text-anchor="middle" font-size="12" fill="#777">注意极性（负极有条纹）</text>
+  </g>
+
+  <!-- 电感 -->
+  <g transform="translate(550,110)">
+    <line x1="-10" y1="30" x2="60" y2="30" stroke="#aeb6bf" stroke-width="4"/>
+    <line x1="180" y1="30" x2="250" y2="30" stroke="#aeb6bf" stroke-width="4"/>
+    <rect x="60" y="4" width="120" height="52" rx="12" fill="#27ae60" stroke="#1e8449"/>
+    <rect x="82" y="4" width="10" height="52" fill="#7e5109"/>
+    <rect x="102" y="4" width="10" height="52" fill="#2c3e50"/>
+    <rect x="122" y="4" width="10" height="52" fill="#f1c40f"/>
+    <text x="120" y="92" text-anchor="middle" font-size="15" font-weight="bold" fill="#1f2d3d">电感（线圈）</text>
+    <text x="120" y="112" text-anchor="middle" font-size="12" fill="#777">有线圈直流电阻</text>
+  </g>
+
+  <!-- 二极管 -->
+  <g transform="translate(800,110)">
+    <line x1="-20" y1="30" x2="50" y2="30" stroke="#aeb6bf" stroke-width="4"/>
+    <line x1="150" y1="30" x2="220" y2="30" stroke="#aeb6bf" stroke-width="4"/>
+    <rect x="50" y="8" width="100" height="44" rx="8" fill="#1a1a1a" stroke="#333"/>
+    <rect x="132" y="8" width="14" height="44" rx="0" fill="#e8e8e8"/>
+    <text x="100" y="92" text-anchor="middle" font-size="15" font-weight="bold" fill="#1f2d3d">二极管</text>
+    <text x="100" y="112" text-anchor="middle" font-size="12" fill="#777">白色色环为负极</text>
+  </g>
+
+  <!-- 三极管 -->
+  <g transform="translate(70,340)">
+    <path d="M30 10 Q80 -8 130 10 L130 70 L30 70 Z" fill="#1a1a1a" stroke="#444"/>
+    <rect x="30" y="10" width="26" height="60" fill="#0d0d0d"/>
+    <line x1="50" y1="70" x2="50" y2="120" stroke="#aeb6bb" stroke-width="5"/>
+    <line x1="80" y1="70" x2="80" y2="120" stroke="#aeb6bb" stroke-width="5"/>
+    <line x1="110" y1="70" x2="110" y2="120" stroke="#aeb6bb" stroke-width="5"/>
+    <text x="80" y="150" text-anchor="middle" font-size="15" font-weight="bold" fill="#1f2d3d">三极管（TO-92）</text>
+    <text x="80" y="170" text-anchor="middle" font-size="12" fill="#777">三个 PN 结引脚 B/C/E</text>
+  </g>
+
+  <!-- 晶闸管 -->
+  <g transform="translate(310,340)">
+    <rect x="45" y="0" width="70" height="16" rx="3" fill="#9aa2aa" stroke="#666"/>
+    <rect x="35" y="14" width="90" height="60" rx="6" fill="#1a1a1a" stroke="#444"/>
+    <line x1="50" y1="74" x2="50" y2="120" stroke="#aeb6bb" stroke-width="5"/>
+    <line x1="80" y1="74" x2="80" y2="120" stroke="#aeb6bb" stroke-width="5"/>
+    <line x1="110" y1="74" x2="110" y2="120" stroke="#aeb6bb" stroke-width="5"/>
+    <text x="80" y="150" text-anchor="middle" font-size="15" font-weight="bold" fill="#1f2d3d">晶闸管（TO-220）</text>
+    <text x="80" y="170" text-anchor="middle" font-size="12" fill="#777">A / K / G 三极</text>
+  </g>
+
+  <!-- IGBT -->
+  <g transform="translate(550,340)">
+    <rect x="45" y="0" width="70" height="16" rx="3" fill="#9aa2aa" stroke="#666"/>
+    <rect x="35" y="14" width="90" height="60" rx="6" fill="#1a1a1a" stroke="#444"/>
+    <line x1="50" y1="74" x2="50" y2="120" stroke="#aeb6bb" stroke-width="5"/>
+    <line x1="80" y1="74" x2="80" y2="120" stroke="#aeb6bb" stroke-width="5"/>
+    <line x1="110" y1="74" x2="110" y2="120" stroke="#aeb6bb" stroke-width="5"/>
+    <text x="80" y="150" text-anchor="middle" font-size="15" font-weight="bold" fill="#1f2d3d">IGBT（TO-220）</text>
+    <text x="80" y="170" text-anchor="middle" font-size="12" fill="#777">C / E / G 三极</text>
+  </g>
+
+  <!-- 说明 -->
+  <g transform="translate(800,340)">
+    <text x="0" y="20" font-size="14" fill="#1f2d3d">识别要点：</text>
+    <text x="0" y="48" font-size="13" fill="#555">· 先看外形与标记（色环、色环、条纹、散热片）</text>
+    <text x="0" y="74" font-size="13" fill="#555">· 再用电表确认引脚与好坏</text>
+    <text x="0" y="100" font-size="13" fill="#555">· 二/三极管等有极性，接反可能损坏电路</text>
+  </g>
+</svg>
