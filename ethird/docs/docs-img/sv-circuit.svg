@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" font-family="sans-serif" font-size="14">
+  <rect width="640" height="420" fill="#f6f8f9"/>
+  <g stroke="#222" stroke-width="2" fill="none">
+    <!-- 主回路：pt1 +24V -->
+    <line x1="110" y1="60" x2="110" y2="110"/>
+    <!-- 电磁阀线圈 -->
+    <rect x="90" y="110" width="40" height="26" fill="#fff"/>
+    <line x1="110" y1="136" x2="110" y2="250"/>
+    <line x1="110" y1="250" x2="330" y2="250"/>
+    <!-- 电磁阀符号（虚线联动） -->
+    <line x1="130" y1="123" x2="175" y2="123" stroke="#888" stroke-dasharray="4 3"/>
+    <polygon points="165,95 215,95 190,123" fill="none"/>
+    <polygon points="190,123 215,151 165,151" fill="none"/>
+    <line x1="190" y1="95" x2="190" y2="78"/>
+    <line x1="190" y1="151" x2="190" y2="168"/>
+    <!-- 三极管 -->
+    <circle cx="360" cy="250" r="34" fill="#fff"/>
+    <line x1="330" y1="250" x2="350" y2="250"/>
+    <line x1="350" y1="232" x2="350" y2="268" stroke-width="3"/>
+    <line x1="350" y1="242" x2="372" y2="225"/>
+    <line x1="350" y1="258" x2="372" y2="272"/>
+    <polygon points="366,268 375,273 372,262" fill="#222"/>
+    <!-- 基极支路：pt2 → 开关 → 电阻 -->
+    <line x1="240" y1="330" x2="240" y2="316"/>
+    <line x1="240" y1="316" x2="285" y2="330"/>
+    <circle cx="285" cy="330" r="3" fill="#222"/>
+    <line x1="315" y1="330" x2="348" y2="330"/>
+    <rect x="352" y="322" width="70" height="16" fill="#d8cf9f"/>
+    <line x1="426" y1="330" x2="470" y2="330"/>
+    <line x1="470" y1="330" x2="470" y2="284"/>
+    <!-- 发射极接地 -->
+    <line x1="384" y1="250" x2="470" y2="250"/>
+    <line x1="470" y1="250" x2="470" y2="380"/>
+    <line x1="445" y1="380" x2="495" y2="380"/>
+    <line x1="452" y1="387" x2="488" y2="387"/>
+    <line x1="459" y1="394" x2="481" y2="394"/>
+  </g>
+  <g fill="#e8b339" stroke="#333" stroke-width="2">
+    <circle cx="110" cy="52" r="8"/>
+    <circle cx="240" cy="322" r="8"/>
+  </g>
+  <g font-weight="bold" fill="#8a5a00">
+    <text x="124" y="56">+24V</text>
+    <text x="252" y="318">+3V</text>
+  </g>
+  <g fill="#555">
+    <text x="82" y="163">SV</text>
+    <text x="150" y="80">管路口</text>
+    <text x="392" y="245">Q1</text>
+    <text x="368" y="312">RL 1kΩ</text>
+    <text x="270" y="316">SB</text>
+    <text x="500" y="384">GND</text>
+  </g>
+</svg>
