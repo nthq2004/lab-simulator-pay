@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" font-family="Microsoft YaHei, SimHei, sans-serif">
+  <rect x="0" y="0" width="900" height="600" fill="#ffffff"/>
+  <text x="450" y="34" text-anchor="middle" font-size="22" font-weight="bold" fill="#1f2d3d">图1  三相异步电动机测量电路与自动接线</text>
+
+  <!-- 电机控制箱 -->
+  <rect x="60" y="80" width="250" height="290" rx="8" fill="#eef3f8" stroke="#2c3e50" stroke-width="2"/>
+  <text x="185" y="106" text-anchor="middle" font-size="16" font-weight="bold" fill="#1f2d3d">电机控制箱</text>
+  <rect x="80" y="122" width="95" height="52" rx="4" fill="#d9e4ef" stroke="#7a8a99"/>
+  <text x="127" y="153" text-anchor="middle" font-size="13" fill="#33455f">空气开关</text>
+  <rect x="190" y="122" width="95" height="52" rx="4" fill="#d9e4ef" stroke="#7a8a99"/>
+  <text x="237" y="153" text-anchor="middle" font-size="13" fill="#33455f">接触器</text>
+  <rect x="80" y="190" width="95" height="52" rx="4" fill="#d9e4ef" stroke="#7a8a99"/>
+  <text x="127" y="221" text-anchor="middle" font-size="13" fill="#33455f">热继电器</text>
+  <rect x="190" y="190" width="95" height="52" rx="4" fill="#d9e4ef" stroke="#7a8a99"/>
+  <text x="237" y="221" text-anchor="middle" font-size="13" fill="#33455f">起停按钮</text>
+  <text x="185" y="300" text-anchor="middle" font-size="12" fill="#6b7a89">内部中性点 n / PE 端子排</text>
+  <text x="185" y="352" text-anchor="middle" font-size="12" fill="#6b7a89">状态：正常 / 堵转　负荷率：0~125%</text>
+
+  <!-- 电机 -->
+  <rect x="640" y="110" width="200" height="200" rx="8" fill="#eaf1f7" stroke="#2c3e50" stroke-width="2"/>
+  <text x="740" y="140" text-anchor="middle" font-size="16" font-weight="bold" fill="#1f2d3d">三相异步电动机 M1</text>
+  <circle cx="740" cy="210" r="46" fill="#c9d6e2" stroke="#7a8a99" stroke-width="2"/>
+  <text x="740" y="216" text-anchor="middle" font-size="15" fill="#33455f">3~</text>
+  <text x="740" y="292" text-anchor="middle" font-size="12" fill="#6b7a89">m-3d　U/V/W + PE</text>
+
+  <!-- 控制箱右侧端子 -->
+  <g font-size="13" fill="#c0392b">
+    <circle cx="310" cy="150" r="4" fill="#c0392b"/><text x="316" y="146">out1</text>
+    <circle cx="310" cy="185" r="4" fill="#27ae60"/><text x="316" y="181">out2</text>
+    <circle cx="310" cy="220" r="4" fill="#2c6fbf"/><text x="316" y="216">out3</text>
+    <circle cx="310" cy="300" r="4" fill="#7a8a20"/><text x="316" y="296">pe1</text>
+  </g>
+
+  <!-- 电机左侧端子 -->
+  <g font-size="13" fill="#c0392b">
+    <circle cx="640" cy="150" r="4" fill="#c0392b"/><text x="600" y="146">U</text>
+    <circle cx="640" cy="185" r="4" fill="#27ae60"/><text x="600" y="181">V</text>
+    <circle cx="640" cy="220" r="4" fill="#2c6fbf"/><text x="600" y="216">W</text>
+    <circle cx="640" cy="270" r="4" fill="#7a8a20"/><text x="598" y="266">PE</text>
+  </g>
+
+  <!-- 三相导线 -->
+  <line x1="310" y1="150" x2="640" y2="150" stroke="#c0392b" stroke-width="4" stroke-linecap="round"/>
+  <line x1="310" y1="185" x2="640" y2="185" stroke="#27ae60" stroke-width="4" stroke-linecap="round"/>
+  <line x1="310" y1="220" x2="640" y2="220" stroke="#2c6fbf" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- 接地母排 -->
+  <rect x="330" y="470" width="330" height="34" rx="5" fill="#c8a24a" stroke="#8a6a20" stroke-width="2"/>
+  <text x="495" y="493" text-anchor="middle" font-size="14" font-weight="bold" fill="#3a2c08">接地母排 PE1~PE4</text>
+  <g fill="#3a2c08" font-size="12">
+    <circle cx="365" cy="470" r="4"/><text x="358" y="460">1</text>
+    <circle cx="440" cy="470" r="4"/><text x="433" y="460">2</text>
+    <circle cx="515" cy="470" r="4"/><text x="508" y="460">3</text>
+    <circle cx="590" cy="470" r="4"/><text x="583" y="460">4</text>
+  </g>
+  <!-- 母排接地符号 -->
+  <line x1="495" y1="504" x2="495" y2="526" stroke="#111" stroke-width="3"/>
+  <line x1="470" y1="526" x2="520" y2="526" stroke="#111" stroke-width="4"/>
+  <line x1="480" y1="534" x2="510" y2="534" stroke="#111" stroke-width="4"/>
+  <line x1="489" y1="542" x2="501" y2="542" stroke="#111" stroke-width="4"/>
+
+  <!-- 控制箱 pe1 -> 母排 第2柱 黄绿线 -->
+  <polyline points="310,300 440,300 440,470" fill="none" stroke="#2fa34d" stroke-width="4" stroke-dasharray="10 7"/>
+  <text x="470" y="330" font-size="12" fill="#2a7d3c">①自动接线：控制箱 pe1 → 母排第2柱</text>
+
+  <!-- 电机 PE 默认不接 -->
+  <line x1="640" y1="270" x2="700" y2="270" stroke="#7a8a20" stroke-width="3" stroke-dasharray="6 5"/>
+  <text x="706" y="266" font-size="12" fill="#8a3b12">默认不接（悬空）</text>
+
+  <!-- 自动接线说明 -->
+  <text x="380" y="150" text-anchor="middle" font-size="13" fill="#5a3b8a">②自动接线：U/V/W ↔ out1/out2/out3</text>
+  <g font-size="13" fill="#1f2d3d">
+    <text x="60" y="420">接线要点：</text>
+    <text x="60" y="444">• 点击工具栏「自动接线」即可完成三相导线与 PE 接地线。</text>
+    <text x="60" y="468">• 三相导线颜色对应 U(红) / V(绿) / W(蓝)。</text>
+    <text x="60" y="492">• 电机 PE 端子默认不接，测量绝缘/接地时再手动接入。</text>
+  </g>
+</svg>

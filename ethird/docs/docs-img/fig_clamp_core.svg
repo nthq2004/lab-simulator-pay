@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 600" font-family="Microsoft YaHei, SimHei, sans-serif">
+  <rect x="0" y="0" width="820" height="600" fill="#ffffff"/>
+  <text x="410" y="34" text-anchor="middle" font-size="22" font-weight="bold" fill="#1f2d3d">图2  钳形电流表穿心测量原理与三维遮挡效果</text>
+
+  <!-- 钳形表表体 -->
+  <rect x="230" y="250" width="270" height="300" rx="16" fill="#3a3f45" stroke="#1e2226" stroke-width="2"/>
+  <text x="365" y="300" text-anchor="middle" font-size="15" font-weight="bold" fill="#e8e8e8">钳形电流表</text>
+  <rect x="290" y="330" width="150" height="70" rx="6" fill="#f2eedf" stroke="#b8b090"/>
+  <text x="365" y="372" text-anchor="middle" font-size="15" fill="#c0392b">I 显示</text>
+  <text x="365" y="440" text-anchor="middle" font-size="12" fill="#c9d2da">量程选择 / 机械调零</text>
+
+  <!-- 铁芯环：上钳口（可动） -->
+  <path d="M 230 210 A 120 120 0 0 1 470 210 L 410 210 A 60 60 0 0 0 290 210 Z"
+        fill="#f8d860" stroke="#c88810" stroke-width="2"/>
+  <!-- 铁芯环：下钳口（固定） -->
+  <path d="M 230 210 A 120 120 0 0 0 470 210 L 410 210 A 60 60 0 0 1 290 210 Z"
+        fill="#e8b840" stroke="#c88810" stroke-width="2"/>
+
+  <!-- 二次绕组示意（右侧若干小半圆） -->
+  <g fill="none" stroke="#8a6a20" stroke-width="2.4">
+    <path d="M 400 130 a 10 10 0 0 1 0 20"/>
+    <path d="M 408 128 a 11 11 0 0 1 0 24"/>
+    <path d="M 416 126 a 12 12 0 0 1 0 28"/>
+  </g>
+  <text x="470" y="150" font-size="13" fill="#6b5a20">二次绕组 N₂</text>
+
+  <!-- 被测导线（黑色），与铁芯上半部相交段留空（被上钳口遮挡） -->
+  <line x1="350" y1="44" x2="350" y2="90" stroke="#1a1a1a" stroke-width="6" stroke-linecap="round"/>
+  <line x1="350" y1="150" x2="350" y2="470" stroke="#1a1a1a" stroke-width="6" stroke-linecap="round"/>
+  <text x="358" y="470" font-size="13" fill="#1a1a1a">被测导线（一次，1 匝）</text>
+
+  <!-- 遮挡段标注 -->
+  <line x1="350" y1="120" x2="250" y2="120" stroke="#c0392b" stroke-width="1.6" stroke-dasharray="5 4"/>
+  <text x="60" y="116" font-size="13" fill="#c0392b">与铁芯上半部相交段</text>
+  <text x="60" y="136" font-size="13" fill="#c0392b">被上钳口遮挡（不可见）</text>
+  <text x="60" y="156" font-size="12" fill="#8a99a8">→ 形成"从前往后穿过铁芯"的立体感</text>
+
+  <!-- 标注 -->
+  <text x="486" y="196" font-size="13" fill="#6b5a20">上钳口（可动）</text>
+  <line x1="486" y1="200" x2="440" y2="185" stroke="#6b5a20" stroke-width="1.4"/>
+  <text x="486" y="256" font-size="13" fill="#6b5a20">下钳口（固定）</text>
+  <line x1="486" y1="252" x2="445" y2="235" stroke="#6b5a20" stroke-width="1.4"/>
+  <text x="486" y="228" font-size="13" fill="#6b5a20">铁芯</text>
+
+  <text x="60" y="250" font-size="13" fill="#33455f">原理：I₁·N₁ = I₂·N₂</text>
+  <text x="60" y="272" font-size="13" fill="#33455f">N₁ = 1，故 I₂ ∝ I₁</text>
+  <text x="60" y="300" font-size="13" fill="#33455f">无需断开电路</text>
+
+  <!-- 操作提示 -->
+  <g font-size="13" fill="#1f2d3d">
+    <text x="60" y="520">操作：张开钳口 → 让被测导线穿心 → 合上钳口才开始测量。</text>
+    <text x="60" y="544">导线一直处于钳口感测范围内才持续显示；离开则停止测量。</text>
+    <text x="60" y="568">超量程时指针限位在满刻度，数字显示仍给出真实测量值。</text>
+  </g>
+</svg>

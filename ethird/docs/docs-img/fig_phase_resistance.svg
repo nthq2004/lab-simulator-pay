@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 560" font-family="Microsoft YaHei, SimHei, sans-serif">
+  <rect x="0" y="0" width="880" height="560" fill="#ffffff"/>
+  <text x="440" y="34" text-anchor="middle" font-size="22" font-weight="bold" fill="#1f2d3d">图3  电机状态 / 负荷率与每相对地注入电阻</text>
+
+  <!-- 星形负载示意 -->
+  <text x="200" y="72" text-anchor="middle" font-size="15" font-weight="bold" fill="#1f2d3d">U/V/W 每相对地注入电阻</text>
+
+  <g stroke="#22313f" stroke-width="2.4" fill="none" stroke-linecap="round">
+    <!-- U 相 -->
+    <line x1="80" y1="120" x2="150" y2="120"/>
+    <rect x="150" y="106" width="52" height="28" fill="#eef3f8"/>
+    <line x1="202" y1="120" x2="340" y2="120"/>
+    <line x1="340" y1="120" x2="340" y2="250"/>
+    <!-- V 相 -->
+    <line x1="80" y1="250" x2="150" y2="250"/>
+    <rect x="150" y="236" width="52" height="28" fill="#eef3f8"/>
+    <line x1="202" y1="250" x2="340" y2="250"/>
+    <!-- W 相 -->
+    <line x1="80" y1="380" x2="150" y2="380"/>
+    <rect x="150" y="366" width="52" height="28" fill="#eef3f8"/>
+    <line x1="202" y1="380" x2="340" y2="380"/>
+    <line x1="340" y1="380" x2="340" y2="250"/>
+  </g>
+  <g font-size="16" fill="#c0392b" font-weight="bold">
+    <text x="52" y="126">U</text>
+    <text x="52" y="256" fill="#27ae60">V</text>
+    <text x="52" y="386" fill="#2c6fbf">W</text>
+  </g>
+  <g font-size="13" fill="#33455f">
+    <text x="212" y="104">R 每相</text>
+  </g>
+  <circle cx="340" cy="250" r="5" fill="#33455f"/>
+  <text x="352" y="244" font-size="14" fill="#33455f">PE（星点）</text>
+  <!-- 星点接地符号 -->
+  <line x1="340" y1="255" x2="340" y2="300" stroke="#111" stroke-width="3"/>
+  <line x1="315" y1="300" x2="365" y2="300" stroke="#111" stroke-width="4"/>
+  <line x1="325" y1="308" x2="355" y2="308" stroke="#111" stroke-width="4"/>
+  <line x1="334" y1="316" x2="346" y2="316" stroke="#111" stroke-width="4"/>
+
+  <!-- 公式 -->
+  <rect x="70" y="440" width="300" height="86" rx="8" fill="#f6f2e6" stroke="#c8b890"/>
+  <text x="220" y="470" text-anchor="middle" font-size="15" font-weight="bold" fill="#8a3b12">R = 2.9 ÷ 负荷率</text>
+  <text x="220" y="496" text-anchor="middle" font-size="13" fill="#5a4a20">负荷率 = 0 时 R = 29 Ω</text>
+  <text x="220" y="518" text-anchor="middle" font-size="13" fill="#5a4a20">堵转时 R = 2.9 ÷ 5 = 0.58 Ω</text>
+
+  <!-- 表格 -->
+  <g font-size="14" fill="#1f2d3d">
+    <rect x="440" y="80" width="400" height="36" fill="#dce6f0" stroke="#8a99a8"/>
+    <text x="520" y="104" text-anchor="middle" font-weight="bold">状态</text>
+    <text x="650" y="104" text-anchor="middle" font-weight="bold">负荷率</text>
+    <text x="790" y="104" text-anchor="middle" font-weight="bold">每相对地电阻</text>
+
+    <g stroke="#8a99a8" fill="none">
+      <line x1="440" y1="116" x2="840" y2="116"/>
+      <line x1="440" y1="152" x2="840" y2="152"/>
+      <line x1="440" y1="188" x2="840" y2="188"/>
+      <line x1="440" y1="224" x2="840" y2="224"/>
+      <line x1="440" y1="260" x2="840" y2="260"/>
+      <line x1="440" y1="296" x2="840" y2="296"/>
+      <line x1="440" y1="332" x2="840" y2="332"/>
+      <line x1="570" y1="80" x2="570" y2="332"/>
+      <line x1="720" y1="80" x2="720" y2="332"/>
+    </g>
+
+    <text x="505" y="140">正常</text><text x="645" y="140">100%</text><text x="780" y="140">2.9 ÷ 1.0 = 2.9 Ω</text>
+    <text x="505" y="176">正常</text><text x="645" y="176">75%</text><text x="775" y="176">2.9 ÷ 0.75 ≈ 3.87 Ω</text>
+    <text x="505" y="212">正常</text><text x="645" y="212">50%</text><text x="780" y="212">2.9 ÷ 0.50 = 5.8 Ω</text>
+    <text x="505" y="248">正常</text><text x="645" y="248">25%</text><text x="778" y="248">2.9 ÷ 0.25 = 11.6 Ω</text>
+    <text x="505" y="284">正常</text><text x="648" y="284">0</text><text x="790" y="284">29 Ω</text>
+    <text x="505" y="320" fill="#c0392b">堵转</text><text x="636" y="320" fill="#c0392b">不可设置</text><text x="775" y="320" fill="#c0392b">2.9 ÷ 5 = 0.58 Ω</text>
+  </g>
+
+  <text x="440" y="380" font-size="13" fill="#6b7a89">状态为「正常」时可设置负荷率；「堵转」时负荷率不可设置，一律按 0.58 Ω 注入。</text>
+  <text x="440" y="404" font-size="13" fill="#6b7a89">负荷率越小，注入电阻越大，电机从电源吸取的电流越小。</text>
+</svg>
