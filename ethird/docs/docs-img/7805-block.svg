@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="150" viewBox="0 0 760 150" font-family="SimSun, Microsoft YaHei, sans-serif">
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#333"/>
+    </marker>
+  </defs>
+  <style>
+    .box { fill:#eef4fb; stroke:#2b6cb0; stroke-width:1.5; rx:8; }
+    .lbl { font-size:15px; text-anchor:middle; fill:#1a3c6e; }
+    .sub { font-size:11px; text-anchor:middle; fill:#666; }
+    .wire{ stroke:#333; stroke-width:1.5; fill:none; marker-end:url(#arr); }
+  </style>
+  <text x="380" y="24" class="lbl" style="font-size:17px;">7805 直流稳压电源四个基本环节</text>
+
+  <rect x="20"  y="45" width="110" height="52" class="box"/>
+  <text x="75"  y="75" class="lbl" style="font-size:16px;">变 压</text>
+  <text x="75"  y="92" class="sub">220V → 12V</text>
+
+  <rect x="175" y="45" width="110" height="52" class="box"/>
+  <text x="230" y="75" class="lbl" style="font-size:16px;">整 流</text>
+  <text x="230" y="92" class="sub">桥式（4 只二极管）</text>
+
+  <rect x="330" y="45" width="110" height="52" class="box"/>
+  <text x="385" y="75" class="lbl" style="font-size:16px;">滤 波</text>
+  <text x="385" y="92" class="sub">47µF 电容</text>
+
+  <rect x="485" y="45" width="110" height="52" class="box"/>
+  <text x="540" y="75" class="lbl" style="font-size:16px;">稳 压</text>
+  <text x="540" y="92" class="sub">7805</text>
+
+  <rect x="640" y="45" width="100" height="52" class="box"/>
+  <text x="690" y="75" class="lbl" style="font-size:16px;">负 载</text>
+  <text x="690" y="92" class="sub">200Ω</text>
+
+  <line x1="130" y1="71" x2="173" y2="71" class="wire"/>
+  <line x1="285" y1="71" x2="328" y2="71" class="wire"/>
+  <line x1="440" y1="71" x2="483" y2="71" class="wire"/>
+  <line x1="595" y1="71" x2="638" y2="71" class="wire"/>
+</svg>
