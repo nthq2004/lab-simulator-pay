@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="520" viewBox="0 0 880 520" font-family="Microsoft YaHei, Arial, sans-serif">
+  <rect width="880" height="520" fill="#ffffff"/>
+
+  <text x="440" y="32" text-anchor="middle" font-size="22" font-weight="bold" fill="#1c3d5a">直流法验证同名端（原边接 24V 直流、副边接直流电压表）</text>
+
+  <!-- 直流电源 -->
+  <g>
+    <rect x="70" y="180" width="140" height="120" rx="8" fill="#ecf0f1" stroke="#2c3e50" stroke-width="2.5"/>
+    <text x="140" y="210" text-anchor="middle" font-size="14" font-weight="bold" fill="#2c3e50">DC 24V</text>
+    <text x="140" y="272" text-anchor="middle" font-size="12" fill="#666">电源开关（合/断）</text>
+    <circle cx="140" cy="232" r="16" fill="#bdc3c7" stroke="#7f8c8d"/>
+    <text x="140" y="237" text-anchor="middle" font-size="11" fill="#333">ON</text>
+  </g>
+
+  <!-- 变压器 -->
+  <g>
+    <rect x="360" y="120" width="200" height="200" rx="8" fill="#e8eaec" stroke="#b0b4b8" stroke-width="2"/>
+    <!-- 铁芯 -->
+    <rect x="420" y="150" width="18" height="140" fill="#8898a8" stroke="#485060"/>
+    <rect x="470" y="150" width="18" height="140" fill="#8898a8" stroke="#485060"/>
+    <rect x="420" y="150" width="68" height="20" fill="#8898a8" stroke="#485060"/>
+    <rect x="420" y="270" width="68" height="20" fill="#8898a8" stroke="#485060"/>
+    <!-- 原边绕组 -->
+    <path d="M400 185 h20 M400 215 h20 M400 245 h20" stroke="#c07030" stroke-width="3"/>
+    <path d="M400 185 v60" stroke="#c07030" stroke-width="1.5"/>
+    <!-- 副边绕组 -->
+    <path d="M488 190 h20 M488 220 h20 M488 250 h20" stroke="#3080b0" stroke-width="3"/>
+
+    <text x="345" y="185" text-anchor="end" font-size="12" fill="#c07030" font-weight="bold">P1 ●</text>
+    <text x="345" y="270" text-anchor="end" font-size="12" fill="#3068c0" font-weight="bold">P2 ●</text>
+    <text x="575" y="195" font-size="12" fill="#20a060" font-weight="bold">● S1</text>
+    <text x="575" y="265" font-size="12" fill="#806020" font-weight="bold">● S2</text>
+    <text x="460" y="345" text-anchor="middle" font-size="12" fill="#555">控制变压器</text>
+  </g>
+
+  <!-- 原边接线（红/蓝） -->
+  <path d="M205 200 H 355" stroke="#e41c1c" stroke-width="3" fill="none"/>
+  <path d="M205 265 H 355" stroke="#1c4ce4" stroke-width="3" fill="none"/>
+  <circle cx="205" cy="200" r="4" fill="#e41c1c"/>
+  <circle cx="205" cy="265" r="4" fill="#1c4ce4"/>
+  <text x="255" y="192" text-anchor="middle" font-size="12" fill="#e41c1c">正极 → P1</text>
+  <text x="255" y="284" text-anchor="middle" font-size="12" fill="#1c4ce4">负极 → P2</text>
+
+  <!-- 副边接表 -->
+  <path d="M498 195 H 660 V 250" stroke="#e41c1c" stroke-width="3" fill="none"/>
+  <path d="M498 265 H 620 V 340" stroke="#222" stroke-width="3" fill="none"/>
+
+  <!-- 万用表 -->
+  <g>
+    <rect x="600" y="250" width="170" height="180" rx="8" fill="#f4f4f0" stroke="#9aa0a6" stroke-width="2"/>
+    <text x="685" y="278" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">指针万用表 DC 10V</text>
+    <!-- 表盘 -->
+    <path d="M625 340 A 50 50 0 0 1 745 340" fill="none" stroke="#bbb" stroke-width="2"/>
+    <!-- 正偏指针 -->
+    <line x1="685" y1="345" x2="725" y2="305" stroke="#c0392b" stroke-width="3"/>
+    <circle cx="685" cy="345" r="4" fill="#333"/>
+    <text x="700" y="300" font-size="11" fill="#c0392b">正偏</text>
+    <text x="620" y="285" font-size="11" fill="#e41c1c">红表笔</text>
+    <text x="620" y="372" font-size="11" fill="#222">黑表笔</text>
+  </g>
+
+  <!-- 原理说明 -->
+  <rect x="70" y="380" width="480" height="110" rx="6" fill="#f0f7ff" stroke="#8fb8e0"/>
+  <text x="84" y="404" font-size="14" font-weight="bold" fill="#1c5c9c">判断依据</text>
+  <text x="84" y="428" font-size="13" fill="#333">① 合上电源瞬间：原边电流由 0 建立，磁通变化 → 副边感应出约 6V 电压；</text>
+  <text x="84" y="450" font-size="13" fill="#333">② 若表针“正向偏转”，说明红表笔所接 S1 与电源正极所接 P1 为同名端；</text>
+  <text x="84" y="472" font-size="13" fill="#333">③ 断开瞬间磁通塌缩，表针反向偏转一次，之后回零（直流下无持续感应电动势）。</text>
+
+  <text x="440" y="508" text-anchor="middle" font-size="12.5" fill="#777">图 3  直流法接线与表针偏转方向</text>
+</svg>
