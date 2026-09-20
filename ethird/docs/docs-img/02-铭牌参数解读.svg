@@ -29,12 +29,12 @@
   <rect x="70" y="262" width="150" height="20" fill="#bcd9f5" opacity="0.9"/>
   <rect x="70" y="310" width="108" height="20" fill="#f5c6c6" opacity="0.9"/>
 
-  <!-- 引导线与说明 -->
+  <!-- 引导线（折线连到说明框左边中点） -->
   <g stroke="#c0392b" stroke-width="1.6" fill="none">
     <path d="M285 152 H 500"/>
     <path d="M178 224 H 500"/>
-    <path d="M220 272 H 500"/>
-    <path d="M178 320 H 500"/>
+    <path d="M220 272 H 470 V 297 H 500"/>
+    <path d="M178 320 H 470 V 369 H 500"/>
   </g>
 
   <g font-size="13.5" fill="#333">
@@ -55,5 +55,5 @@
     <text x="510" y="384">A=空气，N=自然循环（自然风冷）；若为 AF 则加装风机强迫风冷</text>
   </g>
 
-  <text x="440" y="534" text-anchor="middle" font-size="12.5" fill="#777">图 2  铭牌关键参数含义（黄色/绿色/蓝色/红色高亮为本文重点）</text>
+  <text x="440" y="534" text-anchor="middle" font-size="12.5" fill="#777">图 1  铭牌关键参数含义（黄色/绿色/蓝色/红色高亮为本文重点）</text>
 </svg>

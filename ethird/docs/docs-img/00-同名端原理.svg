@@ -2,22 +2,43 @@
   <rect width="880" height="420" fill="#ffffff"/>
   <text x="440" y="32" text-anchor="middle" font-size="21" font-weight="bold" fill="#1c3d5a">同名端与感应电压极性</text>
 
-  <!-- 左：同名端定义 -->
+  <!-- 左：同名端定义（闭合铁芯 + 四个端子 + ·记号） -->
   <rect x="50" y="60" width="360" height="320" rx="8" fill="#f7fbff" stroke="#9cc3e6"/>
   <text x="230" y="88" text-anchor="middle" font-size="15" font-weight="bold" fill="#1c5c9c">① 什么是同名端</text>
 
-  <rect x="120" y="120" width="30" height="150" fill="#8898a8" stroke="#485060"/>
-  <rect x="180" y="120" width="30" height="150" fill="#8898a8" stroke="#485060"/>
-  <path d="M100 150 h20 M100 180 h20 M100 210 h20" stroke="#c07030" stroke-width="3.5"/>
-  <path d="M210 158 h20 M210 188 h20 M210 218 h20" stroke="#3080b0" stroke-width="3.5"/>
-  <circle cx="100" cy="150" r="5" fill="#e41c1c"/>
-  <text x="96" y="140" text-anchor="end" font-size="12" fill="#c07030" font-weight="bold">P1（红）</text>
-  <circle cx="230" cy="158" r="5" fill="#e41c1c"/>
-  <text x="240" y="152" font-size="12" fill="#20a060" font-weight="bold">S1（红）</text>
+  <!-- 闭合铁芯：两心柱 + 上下铁轭 -->
+  <rect x="150" y="125" width="25" height="130" fill="#8898a8" stroke="#485060"/>
+  <rect x="215" y="125" width="25" height="130" fill="#8898a8" stroke="#485060"/>
+  <rect x="150" y="125" width="90" height="20" fill="#8898a8" stroke="#485060"/>
+  <rect x="150" y="235" width="90" height="20" fill="#8898a8" stroke="#485060"/>
 
-  <text x="230" y="300" text-anchor="middle" font-size="12.5" fill="#333">当原边电流从 P1 流入时，</text>
-  <text x="230" y="322" text-anchor="middle" font-size="12.5" fill="#333">副边感应电流从 S1 流出的端，</text>
-  <text x="230" y="344" text-anchor="middle" font-size="12.5" fill="#c0392b" font-weight="bold">即与 P1 互为同名端。</text>
+  <!-- 原边绕组（左） -->
+  <line x1="110" y1="140" x2="110" y2="255" stroke="#c07030" stroke-width="1.5"/>
+  <path d="M110 170 h40 M110 195 h40 M110 220 h40" stroke="#c07030" stroke-width="3"/>
+  <!-- 副边绕组（右） -->
+  <line x1="280" y1="150" x2="280" y2="245" stroke="#3080b0" stroke-width="1.5"/>
+  <path d="M240 175 h40 M240 200 h40 M240 225 h40" stroke="#3080b0" stroke-width="3"/>
+
+  <!-- 端子（红=P1/S1 同名端） -->
+  <circle cx="110" cy="140" r="5" fill="#e41c1c"/>
+  <circle cx="110" cy="255" r="5" fill="#1c4ce4"/>
+  <circle cx="280" cy="150" r="5" fill="#e41c1c"/>
+  <circle cx="280" cy="245" r="5" fill="#555"/>
+
+  <!-- · 同名端记号 -->
+  <circle cx="110" cy="124" r="3" fill="#222"/>
+  <circle cx="280" cy="134" r="3" fill="#222"/>
+
+  <text x="102" y="144" text-anchor="end" font-size="12" fill="#c0392b" font-weight="bold">P1（红）</text>
+  <text x="102" y="259" text-anchor="end" font-size="12" fill="#1c4ce4" font-weight="bold">P2（蓝）</text>
+  <text x="290" y="150" font-size="12" fill="#c0392b" font-weight="bold">S1（红）</text>
+  <text x="290" y="253" font-size="12" fill="#555" font-weight="bold">S2</text>
+  <text x="96" y="118" font-size="11" fill="#222">·</text>
+  <text x="288" y="128" font-size="11" fill="#222">·</text>
+
+  <text x="230" y="300" text-anchor="middle" font-size="12.5" fill="#333">电流同时从 P1 和 S1 流入时，</text>
+  <text x="230" y="322" text-anchor="middle" font-size="12.5" fill="#333">两个绕组在铁芯中产生同方向磁通，</text>
+  <text x="230" y="344" text-anchor="middle" font-size="12.5" fill="#c0392b" font-weight="bold">则 P1 与 S1 为一对同名端（以“·”标记）。</text>
 
   <!-- 右：两种接法的电压 -->
   <rect x="470" y="60" width="360" height="320" rx="8" fill="#fffaf5" stroke="#e6c29c"/>
@@ -35,5 +56,5 @@
   <text x="502" y="320" font-size="13" fill="#932a2a">若测得 24 + 6 = 30 V</text>
   <text x="502" y="344" font-size="13" fill="#932a2a" font-weight="bold">⇒ 所测两端为异名端</text>
 
-  <text x="440" y="404" text-anchor="middle" font-size="12.5" fill="#777">图 1  同名端定义与交流法“相加 / 相减”判据</text>
+  <text x="440" y="404" text-anchor="middle" font-size="12.5" fill="#777">图 3  同名端定义与交流法“相加 / 相减”判据</text>
 </svg>

@@ -1,69 +1,86 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="880" height="560" viewBox="0 0 880 560" font-family="Microsoft YaHei, Arial, sans-serif">
   <rect width="880" height="560" fill="#ffffff"/>
 
-  <text x="440" y="32" text-anchor="middle" font-size="22" font-weight="bold" fill="#1c3d5a">交流法验证同名端（P2—S2 短接，测 P1—S1 电压）</text>
+  <text x="440" y="32" text-anchor="middle" font-size="20" font-weight="bold" fill="#1c3d5a">交流法验证同名端（P2—S2 短接，测 P1—S1 电压）</text>
 
   <!-- 交流电源 -->
   <g>
-    <rect x="60" y="180" width="150" height="120" rx="8" fill="#ecf0f1" stroke="#2c3e50" stroke-width="2.5"/>
-    <text x="135" y="212" text-anchor="middle" font-size="14" font-weight="bold" fill="#2c3e50">AC 24V / 50Hz</text>
-    <path d="M95 250 q10 -14 20 0 t20 0 t20 0 t20 0" fill="none" stroke="#c0392b" stroke-width="2"/>
-    <text x="135" y="280" text-anchor="middle" font-size="12" fill="#666">交流电源</text>
+    <rect x="60" y="160" width="150" height="140" rx="8" fill="#ecf0f1" stroke="#2c3e50" stroke-width="2.5"/>
+    <text x="135" y="192" text-anchor="middle" font-size="14" font-weight="bold" fill="#2c3e50">AC 24V / 50Hz</text>
+    <path d="M85 240 q10 -16 20 0 t20 0 t20 0 t20 0" fill="none" stroke="#c0392b" stroke-width="2"/>
+    <text x="135" y="282" text-anchor="middle" font-size="12" fill="#666">交流电源</text>
+    <circle cx="210" cy="180" r="5" fill="#e41c1c"/>
+    <circle cx="210" cy="280" r="5" fill="#1c4ce4"/>
   </g>
 
   <!-- 变压器 -->
-  <g>
-    <rect x="330" y="110" width="200" height="210" rx="8" fill="#e8eaec" stroke="#b0b4b8" stroke-width="2"/>
-    <rect x="390" y="140" width="18" height="150" fill="#8898a8" stroke="#485060"/>
-    <rect x="440" y="140" width="18" height="150" fill="#8898a8" stroke="#485060"/>
-    <rect x="390" y="140" width="68" height="20" fill="#8898a8" stroke="#485060"/>
-    <rect x="390" y="270" width="68" height="20" fill="#8898a8" stroke="#485060"/>
-    <path d="M370 175 h20 M370 205 h20 M370 235 h20" stroke="#c07030" stroke-width="3"/>
-    <path d="M458 180 h20 M458 210 h20 M458 240 h20" stroke="#3080b0" stroke-width="3"/>
+  <rect x="350" y="130" width="210" height="200" rx="8" fill="#e8eaec" stroke="#b0b4b8" stroke-width="2"/>
+  <!-- 闭合铁芯 -->
+  <rect x="450" y="170" width="20" height="120" fill="#8898a8" stroke="#485060"/>
+  <rect x="500" y="170" width="20" height="120" fill="#8898a8" stroke="#485060"/>
+  <rect x="450" y="170" width="70" height="20" fill="#8898a8" stroke="#485060"/>
+  <rect x="450" y="270" width="70" height="20" fill="#8898a8" stroke="#485060"/>
+  <!-- 原边绕组 -->
+  <line x1="410" y1="180" x2="410" y2="310" stroke="#c07030" stroke-width="1.5"/>
+  <path d="M410 210 h40 M410 240 h40 M410 270 h40" stroke="#c07030" stroke-width="3"/>
+  <!-- 副边绕组 -->
+  <line x1="530" y1="190" x2="530" y2="290" stroke="#3080b0" stroke-width="1.5"/>
+  <path d="M520 215 h10 M520 245 h10 M520 275 h10" stroke="#3080b0" stroke-width="3"/>
+  <!-- 端子（P1/S1 同名端，均红色） -->
+  <circle cx="350" cy="180" r="5" fill="#e41c1c"/>
+  <circle cx="390" cy="310" r="5" fill="#7a4fd0"/>
+  <circle cx="530" cy="190" r="5" fill="#e41c1c"/>
+  <circle cx="530" cy="290" r="5" fill="#333"/>
+  <line x1="410" y1="180" x2="350" y2="180" stroke="#c07030" stroke-width="1.5"/>
+  <line x1="410" y1="310" x2="390" y2="310" stroke="#c07030" stroke-width="1.5"/>
+  <text x="362" y="170" text-anchor="end" font-size="12" fill="#c0392b" font-weight="bold">P1（红）</text>
+  <text x="390" y="300" text-anchor="middle" font-size="11" fill="#1c4ce4" font-weight="bold">P2</text>
+  <text x="540" y="180" font-size="11" fill="#c0392b" font-weight="bold">S1</text>
+  <text x="540" y="308" font-size="11" fill="#333" font-weight="bold">S2</text>
 
-    <text x="315" y="178" text-anchor="end" font-size="12" fill="#c07030" font-weight="bold">P1 ●</text>
-    <text x="315" y="272" text-anchor="end" font-size="12" fill="#3068c0" font-weight="bold">P2 ●</text>
-    <text x="545" y="188" font-size="12" fill="#20a060" font-weight="bold">● S1</text>
-    <text x="545" y="262" font-size="12" fill="#806020" font-weight="bold">● S2</text>
+  <!-- 原边接线（电源 → 端子） -->
+  <path d="M210 180 H 350" stroke="#e41c1c" stroke-width="3" fill="none"/>
+  <path d="M210 280 H 300 V 310 H 390" stroke="#1c4ce4" stroke-width="3" fill="none"/>
+  <text x="250" y="168" text-anchor="middle" font-size="12" fill="#e41c1c">U1 = 24V</text>
+
+  <!-- P2—S2 短接线（经下方绕行，两端落在端子上） -->
+  <path d="M390 310 V 345 H 530 V 290" stroke="#7b1fa2" stroke-width="3" fill="none"/>
+  <text x="415" y="363" text-anchor="middle" font-size="12.5" fill="#7b1fa2" font-weight="bold">短接线：P2 — S2（下面一对端子）</text>
+
+  <!-- MF47 指针表（红S1 黑S2 测 U2） -->
+  <path d="M530 190 H 585 V 290 H 620" stroke="#e41c1c" stroke-width="3" fill="none"/>
+  <path d="M530 290 H 570 V 350 H 620" stroke="#222" stroke-width="3" fill="none"/>
+  <g>
+    <rect x="620" y="240" width="180" height="140" rx="8" fill="#f4f4f0" stroke="#9aa0a6" stroke-width="2"/>
+    <text x="710" y="264" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#333">指针表 ~50V</text>
+    <text x="710" y="298" text-anchor="middle" font-size="20" fill="#1f6b3c" font-weight="bold">≈ 6 V</text>
+    <text x="710" y="328" text-anchor="middle" font-size="12" fill="#555">测副边 U2</text>
+    <text x="710" y="356" text-anchor="middle" font-size="11.5" fill="#c0392b">（S1—S2）</text>
+    <circle cx="620" cy="290" r="5" fill="#e41c1c"/>
+    <text x="632" y="294" font-size="11" fill="#e41c1c">VΩ</text>
+    <circle cx="620" cy="350" r="5" fill="#222"/>
+    <text x="632" y="354" font-size="11" fill="#222">COM</text>
   </g>
 
-  <!-- 原边接线 -->
-  <path d="M210 200 H 325" stroke="#e41c1c" stroke-width="3" fill="none"/>
-  <path d="M210 270 H 325" stroke="#1c4ce4" stroke-width="3" fill="none"/>
-  <text x="258" y="192" text-anchor="middle" font-size="12" fill="#e41c1c">U1 = 24V</text>
-
-  <!-- P2-S2 短接线 -->
-  <path d="M315 272 H 285 V 335 H 545 V 262" stroke="#7b1fa2" stroke-width="3" fill="none" stroke-dasharray="0"/>
-  <text x="430" y="352" text-anchor="middle" font-size="12.5" fill="#7b1fa2" font-weight="bold">短接线：P2 — S2（下面两个同名端）</text>
-
-  <!-- 副边到 MF47 -->
-  <path d="M545 188 H 690 V 230" stroke="#e41c1c" stroke-width="3" fill="none"/>
-  <path d="M545 262 H 660 V 300" stroke="#222" stroke-width="3" fill="none"/>
-  <g>
-    <rect x="620" y="230" width="180" height="150" rx="8" fill="#f4f4f0" stroke="#9aa0a6" stroke-width="2"/>
-    <text x="710" y="256" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#333">指针表 ~50V</text>
-    <text x="710" y="286" text-anchor="middle" font-size="20" fill="#1f6b3c" font-weight="bold">≈ 6 V</text>
-    <text x="710" y="320" text-anchor="middle" font-size="12" fill="#555">测副边 U2</text>
-    <text x="710" y="352" text-anchor="middle" font-size="11.5" fill="#c0392b">（S1—S2）</text>
-  </g>
-
-  <!-- 数字表 P1-S1 -->
-  <path d="M325 178 H 250 V 430 H 620" stroke="#e41c1c" stroke-width="2.5" fill="none"/>
-  <path d="M545 188 H 560 V 455 H 620" stroke="#222" stroke-width="2.5" fill="none"/>
+  <!-- 数字表（红P1 黑S1 测 U1±U2） -->
+  <path d="M350 180 H 330 V 485 H 620" stroke="#e41c1c" stroke-width="2.5" fill="none"/>
+  <path d="M530 190 L 555 210 L 555 470 L 620 470" stroke="#222" stroke-width="2.5" fill="none"/>
   <g>
     <rect x="620" y="400" width="180" height="110" rx="8" fill="#22272b" stroke="#555" stroke-width="2"/>
     <rect x="642" y="418" width="136" height="44" rx="4" fill="#0a0a0a" stroke="#444"/>
     <text x="710" y="450" text-anchor="middle" font-size="22" font-family="monospace" fill="#7CFC00" font-weight="bold">18.0</text>
     <text x="710" y="484" text-anchor="middle" font-size="12" fill="#ddd">数字表 ~200V：测 P1—S1</text>
+    <circle cx="620" cy="485" r="4" fill="#e41c1c"/>
+    <circle cx="620" cy="470" r="4" fill="#222"/>
   </g>
 
-  <!-- 相量图 -->
-  <rect x="60" y="400" width="300" height="130" rx="6" fill="#f7f9fb" stroke="#c3ccd4"/>
-  <text x="210" y="422" text-anchor="middle" font-size="13" font-weight="bold" fill="#1c5c9c">电压关系（有效值）</text>
-  <text x="78" y="448" font-size="13" fill="#c07030">U1 (P1—P2) = 24 V</text>
-  <text x="78" y="470" font-size="13" fill="#3080b0">U2 (S1—S2) = 6 V</text>
-  <text x="78" y="492" font-size="13.5" fill="#c0392b" font-weight="bold">U(P1—S1) = U1 − U2 = 18 V</text>
-  <text x="78" y="514" font-size="12" fill="#666">⇒ P1 与 S1 为同名端</text>
+  <!-- 相量/电压关系 -->
+  <rect x="60" y="400" width="260" height="130" rx="6" fill="#f7f9fb" stroke="#c3ccd4"/>
+  <text x="190" y="422" text-anchor="middle" font-size="13" font-weight="bold" fill="#1c5c9c">电压关系（有效值）</text>
+  <text x="76" y="448" font-size="13" fill="#c07030">U1 (P1—P2) = 24 V</text>
+  <text x="76" y="470" font-size="13" fill="#3080b0">U2 (S1—S2) = 6 V</text>
+  <text x="76" y="492" font-size="13.5" fill="#c0392b" font-weight="bold">U(P1—S1) = U1 − U2 = 18 V</text>
+  <text x="76" y="514" font-size="12" fill="#666">⇒ P1 与 S1 为同名端</text>
 
-  <text x="440" y="546" text-anchor="middle" font-size="12.5" fill="#777">图 4  交流法接线、仪表读数与电压关系</text>
+  <text x="440" y="546" text-anchor="middle" font-size="12.5" fill="#777">图 5  交流法接线、仪表读数与电压关系</text>
 </svg>
