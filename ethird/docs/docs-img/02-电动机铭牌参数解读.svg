@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="600" viewBox="0 0 900 600" font-family="Microsoft YaHei, Arial, sans-serif">
+  <rect width="900" height="600" fill="#f7f9fb"/>
+  <text x="450" y="34" text-anchor="middle" font-size="22" font-weight="bold" fill="#1c3d5a">三相异步电动机铭牌参数解读</text>
+
+  <!-- 铭牌主体 -->
+  <rect x="40" y="58" width="380" height="470" rx="6" fill="#cfd3d6" stroke="#6b7076" stroke-width="2"/>
+  <text x="230" y="86" text-anchor="middle" font-size="16" font-weight="bold" fill="#222">三相异步电动机</text>
+  <text x="230" y="106" text-anchor="middle" font-size="12" fill="#444">THREE-PHASE INDUCTION MOTOR</text>
+  <line x1="56" y1="116" x2="404" y2="116" stroke="#7a8086" stroke-width="1.5"/>
+
+  <g font-size="13" fill="#2b2f33">
+    <text x="58" y="142">型号  TYPE        Y355L2-4</text>
+    <text x="58" y="168">功率  OUTPUT      315 kW</text>
+    <text x="58" y="194">电压  VOLTAGE     380 V</text>
+    <text x="58" y="220">电流  CURRENT     555 A</text>
+    <text x="58" y="246">转速  SPEED       1490 r/min</text>
+    <text x="58" y="272">频率  50 Hz</text>
+    <text x="58" y="298">绝缘  INSULATION  F</text>
+    <text x="58" y="324">功率因数 P.F.      0.87</text>
+    <text x="58" y="350">接法  CONNECTION  Δ</text>
+    <text x="58" y="376">定额  RATING      S1</text>
+    <text x="58" y="402">防护  IP44</text>
+    <text x="58" y="428">重量  WEIGHT      1650 kg</text>
+    <text x="58" y="454">标准  JB5274-1991</text>
+    <text x="58" y="480">厂家  六安江淮电机有限公司</text>
+  </g>
+
+  <!-- 高亮 -->
+  <rect x="50" y="130" width="190" height="20" fill="#ffe9a8" opacity="0.9"/>
+  <rect x="50" y="286" width="160" height="20" fill="#b7e4c7" opacity="0.9"/>
+  <rect x="50" y="338" width="160" height="20" fill="#bcd9f5" opacity="0.9"/>
+  <rect x="50" y="364" width="150" height="20" fill="#f5c6c6" opacity="0.9"/>
+  <rect x="50" y="390" width="150" height="20" fill="#e6d9f7" opacity="0.9"/>
+
+  <!-- 引导线 -->
+  <g stroke="#c0392b" stroke-width="1.6" fill="none">
+    <path d="M240 140 H 470"/>
+    <path d="M210 296 H 470"/>
+    <path d="M210 348 H 470"/>
+    <path d="M200 374 H 470"/>
+    <path d="M200 400 H 470"/>
+  </g>
+
+  <g font-size="12.5" fill="#333">
+    <rect x="470" y="118" width="410" height="62" rx="4" fill="#fff8e1" stroke="#e0c56a"/>
+    <text x="480" y="137" font-weight="bold" fill="#8a6d00">型号 Y355L2-4</text>
+    <text x="480" y="155">Y=三相异步；355=机座中心高 355 mm；L2=长机座 2 号铁芯；</text>
+    <text x="480" y="172">末尾 4=4 极（磁极对数 p=2）</text>
+
+    <rect x="470" y="188" width="410" height="62" rx="4" fill="#e8f7ee" stroke="#63b581"/>
+    <text x="480" y="207" font-weight="bold" fill="#1f6b3c">转速 1490 r/min</text>
+    <text x="480" y="225">同步转速 n₁=60f/p=60×50/2=1500 r/min；</text>
+    <text x="480" y="242">额定转差率 s=(1500−1490)/1500≈0.67%</text>
+
+    <rect x="470" y="258" width="410" height="62" rx="4" fill="#fdeaea" stroke="#d98c8c"/>
+    <text x="480" y="277" font-weight="bold" fill="#932a2a">绝缘等级 F</text>
+    <text x="480" y="295">最高允许工作温度 155 ℃（A=105 / E=120 / B=130 / F=155 / H=180）</text>
+
+    <rect x="470" y="328" width="410" height="62" rx="4" fill="#e8f1fb" stroke="#5a8fd0"/>
+    <text x="480" y="347" font-weight="bold" fill="#22527f">接法 Δ（三角形）</text>
+    <text x="480" y="365">正常运行为三角形接法，可采用星/三角（Y-Δ）降压起动；</text>
+    <text x="480" y="382">Y-Δ 起动时每相电压降为 380/√3≈220 V，起动电流降为 1/3</text>
+
+    <rect x="470" y="398" width="410" height="62" rx="4" fill="#f3e8fb" stroke="#a06cd0"/>
+    <text x="480" y="417" font-weight="bold" fill="#5b2a86">定额 S1、防护 IP44</text>
+    <text x="480" y="435">S1=连续工作制（长期连续运行）；IP44=防尘、防溅水</text>
+    <text x="480" y="452">（IP 后第 1 位 4 级防固体≥1 mm，第 2 位 4 级防各方向溅水）</text>
+  </g>
+
+  <text x="450" y="560" text-anchor="middle" font-size="12.5" fill="#777">图 2  铭牌关键参数含义（黄色/绿色/蓝色/红色/紫色高亮为本文重点）</text>
+</svg>

@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="720" viewBox="0 0 880 720" font-family="Microsoft YaHei, Arial, sans-serif">
+  <rect width="880" height="720" fill="#f7f9fb"/>
+  <text x="440" y="32" text-anchor="middle" font-size="20" font-weight="bold" fill="#1c3d5a">三相异步电动机拆解工艺顺序与所需工具</text>
+
+  <g font-size="13.5">
+    <!-- 行模板：序号圆 + 步骤框 + 工具标签 -->
+    <!-- 1 -->
+    <circle cx="60" cy="76" r="16" fill="#2d862d"/><text x="60" y="81" text-anchor="middle" fill="#fff" font-size="14">1</text>
+    <rect x="90" y="58" width="360" height="36" rx="6" fill="#eaf6ea" stroke="#63b581"/>
+    <text x="102" y="82">做对位标记（前后端盖与机座接合处）</text>
+    <rect x="470" y="62" width="170" height="28" rx="14" fill="#eef1f5" stroke="#9aa7b6"/>
+    <text x="555" y="81" text-anchor="middle" font-size="12.5" fill="#60707f">无工具</text>
+
+    <!-- 2 -->
+    <circle cx="60" cy="132" r="16" fill="#2d862d"/><text x="60" y="137" text-anchor="middle" fill="#fff" font-size="14">2</text>
+    <rect x="90" y="114" width="360" height="36" rx="6" fill="#eaf6ea" stroke="#63b581"/>
+    <text x="102" y="138">拆联轴器</text>
+    <rect x="470" y="118" width="170" height="28" rx="14" fill="#fdeaea" stroke="#d98c8c"/>
+    <text x="555" y="137" text-anchor="middle" font-size="12.5" fill="#932a2a">拉具</text>
+
+    <!-- 3 -->
+    <circle cx="60" cy="188" r="16" fill="#2d862d"/><text x="60" y="193" text-anchor="middle" fill="#fff" font-size="14">3</text>
+    <rect x="90" y="170" width="360" height="36" rx="6" fill="#eaf6ea" stroke="#63b581"/>
+    <text x="102" y="194">拆风扇罩</text>
+    <rect x="470" y="174" width="170" height="28" rx="14" fill="#fff8e1" stroke="#e0c56a"/>
+    <text x="555" y="193" text-anchor="middle" font-size="12.5" fill="#8a6d00">螺丝刀</text>
+
+    <!-- 4 -->
+    <circle cx="60" cy="244" r="16" fill="#2d862d"/><text x="60" y="249" text-anchor="middle" fill="#fff" font-size="14">4</text>
+    <rect x="90" y="226" width="360" height="36" rx="6" fill="#eaf6ea" stroke="#63b581"/>
+    <text x="102" y="250">拆风扇</text>
+    <rect x="470" y="230" width="170" height="28" rx="14" fill="#e8f1fb" stroke="#5a8fd0"/>
+    <text x="555" y="249" text-anchor="middle" font-size="12.5" fill="#22527f">铜棒 + 手锤</text>
+
+    <!-- 5 -->
+    <circle cx="60" cy="300" r="16" fill="#2d862d"/><text x="60" y="305" text-anchor="middle" fill="#fff" font-size="14">5</text>
+    <rect x="90" y="282" width="360" height="36" rx="6" fill="#eaf6ea" stroke="#63b581"/>
+    <text x="102" y="306">拆前轴承盖，同时松开后端盖</text>
+    <rect x="470" y="286" width="170" height="28" rx="14" fill="#fff8e1" stroke="#e0c56a"/>
+    <text x="555" y="305" text-anchor="middle" font-size="12.5" fill="#8a6d00">螺丝刀</text>
+
+    <!-- 6 -->
+    <circle cx="60" cy="356" r="16" fill="#2d862d"/><text x="60" y="361" text-anchor="middle" fill="#fff" font-size="14">6</text>
+    <rect x="90" y="338" width="360" height="36" rx="6" fill="#fff4e5" stroke="#e0a35a"/>
+    <text x="102" y="362">转子、前后轴承、后端盖、后轴承盖整体拆下</text>
+    <rect x="470" y="342" width="170" height="28" rx="14" fill="#f3e8fb" stroke="#a06cd0"/>
+    <text x="555" y="361" text-anchor="middle" font-size="12.5" fill="#5b2a86">木板 + 手锤</text>
+
+    <!-- 7 -->
+    <circle cx="60" cy="412" r="16" fill="#2d862d"/><text x="60" y="417" text-anchor="middle" fill="#fff" font-size="14">7</text>
+    <rect x="90" y="394" width="360" height="36" rx="6" fill="#eaf6ea" stroke="#63b581"/>
+    <text x="102" y="418">拆前端盖</text>
+    <rect x="470" y="398" width="170" height="28" rx="14" fill="#e8f7ee" stroke="#63b581"/>
+    <text x="555" y="417" text-anchor="middle" font-size="12.5" fill="#1f6b3c">螺丝刀+木棒+手锤</text>
+
+    <!-- 8 -->
+    <circle cx="60" cy="468" r="16" fill="#2d862d"/><text x="60" y="473" text-anchor="middle" fill="#fff" font-size="14">8</text>
+    <rect x="90" y="450" width="360" height="36" rx="6" fill="#eaf6ea" stroke="#63b581"/>
+    <text x="102" y="474">从转子上拆下后轴承盖</text>
+    <rect x="470" y="454" width="170" height="28" rx="14" fill="#fff8e1" stroke="#e0c56a"/>
+    <text x="555" y="473" text-anchor="middle" font-size="12.5" fill="#8a6d00">螺丝刀</text>
+
+    <!-- 9 -->
+    <circle cx="60" cy="524" r="16" fill="#2d862d"/><text x="60" y="529" text-anchor="middle" fill="#fff" font-size="14">9</text>
+    <rect x="90" y="506" width="360" height="36" rx="6" fill="#eaf6ea" stroke="#63b581"/>
+    <text x="102" y="530">从转子上拆下后端盖</text>
+    <rect x="470" y="510" width="170" height="28" rx="14" fill="#eef1f5" stroke="#9aa7b6"/>
+    <text x="555" y="529" text-anchor="middle" font-size="12.5" fill="#60707f">无工具</text>
+
+    <!-- 10 -->
+    <circle cx="60" cy="580" r="16" fill="#2d862d"/><text x="60" y="585" text-anchor="middle" fill="#fff" font-size="14">10</text>
+    <rect x="90" y="562" width="360" height="36" rx="6" fill="#eaf6ea" stroke="#63b581"/>
+    <text x="102" y="586">从转子上拆下前轴承</text>
+    <rect x="470" y="566" width="170" height="28" rx="14" fill="#fdeaea" stroke="#d98c8c"/>
+    <text x="555" y="585" text-anchor="middle" font-size="12.5" fill="#932a2a">拉具 或 铜棒+手锤</text>
+
+    <!-- 11 -->
+    <circle cx="60" cy="636" r="16" fill="#2d862d"/><text x="60" y="641" text-anchor="middle" fill="#fff" font-size="14">11</text>
+    <rect x="90" y="618" width="360" height="36" rx="6" fill="#eaf6ea" stroke="#63b581"/>
+    <text x="102" y="642">从转子上拆下后轴承</text>
+    <rect x="470" y="622" width="170" height="28" rx="14" fill="#fdeaea" stroke="#d98c8c"/>
+    <text x="555" y="641" text-anchor="middle" font-size="12.5" fill="#932a2a">拉具 或 铜棒+手锤</text>
+  </g>
+
+  <!-- 顺序箭头 -->
+  <g stroke="#9aa7b6" stroke-width="2" fill="none">
+    <line x1="60" y1="94" x2="60" y2="114"/><line x1="60" y1="150" x2="60" y2="170"/>
+    <line x1="60" y1="206" x2="60" y2="226"/><line x1="60" y1="262" x2="60" y2="282"/>
+    <line x1="60" y1="318" x2="60" y2="338"/><line x1="60" y1="374" x2="60" y2="394"/>
+    <line x1="60" y1="430" x2="60" y2="450"/><line x1="60" y1="486" x2="60" y2="506"/>
+    <line x1="60" y1="542" x2="60" y2="562"/><line x1="60" y1="598" x2="60" y2="618"/>
+  </g>
+
+  <text x="440" y="692" text-anchor="middle" font-size="12" fill="#777">图 4  拆解顺序：先打标记，再按“外→内、附件→主体”逐级拆卸；工具箱备有拉具、螺丝刀、铜管、铜棒、木棒、手锤、木板</text>
+</svg>

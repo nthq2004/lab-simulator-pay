@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="440" viewBox="0 0 880 440" font-family="Microsoft YaHei, Arial, sans-serif">
+  <rect width="880" height="440" fill="#f7f9fb"/>
+  <text x="440" y="30" text-anchor="middle" font-size="20" font-weight="bold" fill="#1c3d5a">三相异步电动机结构（侧视剖视）</text>
+
+  <!-- 机座（剖视：四边框 + 中间窗口） -->
+  <rect x="380" y="150" width="240" height="140" fill="none"/>
+  <rect x="380" y="150" width="240" height="22" fill="#5b78a8" stroke="#33475f" stroke-width="1.5"/>
+  <rect x="380" y="268" width="240" height="22" fill="#5b78a8" stroke="#33475f" stroke-width="1.5"/>
+  <rect x="380" y="150" width="40" height="140" fill="#5b78a8" stroke="#33475f" stroke-width="1.5"/>
+  <rect x="580" y="150" width="40" height="140" fill="#5b78a8" stroke="#33475f" stroke-width="1.5"/>
+  <rect x="420" y="172" width="160" height="96" fill="#e9edf3" stroke="#9aa8bd"/>
+
+  <!-- 底座 -->
+  <rect x="370" y="290" width="260" height="22" rx="3" fill="#55606e" stroke="#37414d"/>
+
+  <!-- 接线盒 -->
+  <rect x="450" y="118" width="90" height="32" rx="4" fill="#4a5568" stroke="#2d3748"/>
+  <text x="495" y="139" text-anchor="middle" font-size="11" fill="#fff">接线盒 U/V/W</text>
+  <circle cx="470" cy="160" r="4" fill="#e03030"/><circle cx="495" cy="160" r="4" fill="#20a030"/><circle cx="520" cy="160" r="4" fill="#2050e0"/>
+
+  <!-- 转轴 -->
+  <rect x="170" y="203" width="560" height="14" rx="4" fill="#9aa4b0" stroke="#6b7480"/>
+  <!-- 转子铁芯 -->
+  <rect x="430" y="182" width="140" height="66" rx="6" fill="#cfd5de" stroke="#8b95a3"/>
+  <g stroke="#aeb7c3"><line x1="455" y1="184" x2="455" y2="246"/><line x1="480" y1="184" x2="480" y2="246"/><line x1="505" y1="184" x2="505" y2="246"/><line x1="530" y1="184" x2="530" y2="246"/></g>
+
+  <!-- 前后端盖 -->
+  <ellipse cx="380" cy="220" rx="14" ry="70" fill="#7f93b5" stroke="#41597e"/>
+  <ellipse cx="620" cy="220" rx="14" ry="70" fill="#7f93b5" stroke="#41597e"/>
+
+  <!-- 前后轴承盖 -->
+  <ellipse cx="330" cy="220" rx="11" ry="38" fill="#6f83a6" stroke="#41597e"/>
+  <ellipse cx="670" cy="220" rx="11" ry="38" fill="#6f83a6" stroke="#41597e"/>
+
+  <!-- 前后轴承 -->
+  <rect x="398" y="188" width="22" height="48" rx="3" fill="#c9a227" stroke="#8a6d13"/>
+  <rect x="580" y="188" width="22" height="48" rx="3" fill="#c9a227" stroke="#8a6d13"/>
+
+  <!-- 联轴器 -->
+  <rect x="170" y="180" width="52" height="60" rx="6" fill="#b0713a" stroke="#7d4c22"/>
+
+  <!-- 风扇 -->
+  <circle cx="740" cy="220" r="38" fill="#cfd8e3" stroke="#8391a5"/>
+  <g stroke="#8391a5"><line x1="740" y1="188" x2="740" y2="252"/><line x1="708" y1="220" x2="772" y2="220"/><line x1="718" y1="198" x2="762" y2="242"/><line x1="762" y1="198" x2="718" y2="242"/></g>
+  <!-- 风扇罩 -->
+  <rect x="690" y="172" width="104" height="96" rx="10" fill="none" stroke="#5b6d88" stroke-width="2"/>
+  <g stroke="#6d8098" stroke-width="2"><line x1="700" y1="190" x2="784" y2="190"/><line x1="700" y1="210" x2="784" y2="210"/><line x1="700" y1="230" x2="784" y2="230"/><line x1="700" y1="250" x2="784" y2="250"/></g>
+
+  <!-- 标注 -->
+  <g font-size="12.5" fill="#333">
+    <line x1="196" y1="180" x2="150" y2="96" stroke="#c0392b"/><text x="70" y="90" font-size="12.5">联轴器</text>
+    <line x1="330" y1="182" x2="270" y2="120" stroke="#c0392b"/><text x="150" y="114">前轴承盖</text>
+    <line x1="380" y1="150" x2="330" y2="70" stroke="#c0392b"/><text x="300" y="64">前端盖</text>
+    <line x1="409" y1="236" x2="330" y2="330" stroke="#c0392b"/><text x="300" y="344">前轴承</text>
+    <line x1="495" y1="248" x2="470" y2="360" stroke="#c0392b"/><text x="430" y="374">转子（铁芯+绕组+轴）</text>
+    <line x1="495" y1="172" x2="500" y2="112" stroke="#c0392b"/><text x="505" y="106">接线盒</text>
+    <line x1="598" y1="150" x2="610" y2="90" stroke="#c0392b"/><text x="600" y="84">机座（定子）</text>
+    <line x1="591" y1="236" x2="640" y2="330" stroke="#c0392b"/><text x="640" y="344">后轴承</text>
+    <line x1="620" y1="150" x2="660" y2="120" stroke="#c0392b"/><text x="664" y="114">后端盖</text>
+    <line x1="670" y1="182" x2="700" y2="140" stroke="#c0392b"/><text x="704" y="134">后轴承盖</text>
+    <line x1="740" y1="182" x2="770" y2="120" stroke="#c0392b"/><text x="774" y="114">风扇</text>
+    <line x1="790" y1="220" x2="836" y2="220" stroke="#c0392b"/><text x="800" y="200">风扇罩</text>
+  </g>
+
+  <text x="440" y="418" text-anchor="middle" font-size="12" fill="#777">图 3  电机主要零（部）件：定子（机座）固定不动，其余零件按顺序拆卸</text>
+</svg>
