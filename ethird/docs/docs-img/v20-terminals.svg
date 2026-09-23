@@ -1,0 +1,73 @@
+<svg width="940" height="650" viewBox="0 0 940 650" xmlns="http://www.w3.org/2000/svg" font-family="Microsoft YaHei, sans-serif">
+  <rect x="0" y="0" width="940" height="650" fill="#fcfcfc" stroke="#ccc" stroke-width="1" rx="8"/>
+  <text x="470" y="28" text-anchor="middle" font-size="17" font-weight="bold" fill="#333">图1  SINAMICS V20 端子布局</text>
+
+  <!-- 机身 -->
+  <rect x="90" y="55" width="760" height="560" fill="#4a525a" stroke="#2b3238" stroke-width="2" rx="12"/>
+  <!-- 品牌条 -->
+  <rect x="110" y="72" width="150" height="26" fill="#009999" rx="3"/>
+  <text x="185" y="90" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">SIEMENS</text>
+  <text x="290" y="90" font-size="15" font-weight="bold" fill="#e8ecef">SINAMICS V20</text>
+
+  <!-- 顶部主回路输入 -->
+  <text x="130" y="130" font-size="13" font-weight="bold" fill="#ffd479">主回路输入（3AC 380V）</text>
+  <g font-size="12" fill="#eef3f7" text-anchor="middle">
+    <rect x="120" y="140" width="46" height="26" fill="#9aa1a8" stroke="#565c62" rx="3"/><text x="143" y="158">L1</text>
+    <rect x="180" y="140" width="46" height="26" fill="#9aa1a8" stroke="#565c62" rx="3"/><text x="203" y="158">L2</text>
+    <rect x="240" y="140" width="46" height="26" fill="#9aa1a8" stroke="#565c62" rx="3"/><text x="263" y="158">L3</text>
+    <rect x="330" y="140" width="56" height="26" fill="#9aa1a8" stroke="#565c62" rx="3"/><text x="358" y="158">DC+</text>
+    <rect x="400" y="140" width="56" height="26" fill="#9aa1a8" stroke="#565c62" rx="3"/><text x="428" y="158">DC-</text>
+  </g>
+
+  <!-- 控制端子排 -->
+  <rect x="120" y="190" width="700" height="300" fill="#1b2024" stroke="#0e1216" rx="8"/>
+  <text x="135" y="214" font-size="13" font-weight="bold" fill="#9aa2aa">控制端子</text>
+
+  <!-- 第1排 -->
+  <g font-size="11" fill="#dbe2e8" text-anchor="middle">
+    <rect x="140" y="235" width="42" height="22" fill="#8a929a" rx="2"/><text x="161" y="251">10V</text>
+    <rect x="212" y="235" width="42" height="22" fill="#8a929a" rx="2"/><text x="233" y="251">AI1</text>
+    <rect x="284" y="235" width="42" height="22" fill="#8a929a" rx="2"/><text x="305" y="251">AI2</text>
+    <rect x="356" y="235" width="42" height="22" fill="#8a929a" rx="2"/><text x="377" y="251">0V</text>
+    <rect x="428" y="235" width="42" height="22" fill="#8a929a" rx="2"/><text x="449" y="251">DI1</text>
+    <rect x="500" y="235" width="42" height="22" fill="#8a929a" rx="2"/><text x="521" y="251">DI2</text>
+    <rect x="572" y="235" width="42" height="22" fill="#8a929a" rx="2"/><text x="593" y="251">DI3</text>
+    <rect x="644" y="235" width="42" height="22" fill="#8a929a" rx="2"/><text x="665" y="251">DI4</text>
+    <rect x="716" y="235" width="46" height="22" fill="#8a929a" rx="2"/><text x="739" y="251">DIC</text>
+  </g>
+  <text x="161" y="278" text-anchor="middle" font-size="11" fill="#7fce90">＋10V</text>
+  <text x="233" y="278" text-anchor="middle" font-size="11" fill="#7fce90">模拟量输入1</text>
+  <text x="739" y="278" text-anchor="middle" font-size="11" fill="#7fce90">DI公共端</text>
+
+  <!-- 第2排 -->
+  <g font-size="11" fill="#dbe2e8" text-anchor="middle">
+    <rect x="140" y="330" width="46" height="22" fill="#8a929a" rx="2"/><text x="163" y="346">24V</text>
+    <rect x="212" y="330" width="42" height="22" fill="#8a929a" rx="2"/><text x="233" y="346">0V</text>
+    <rect x="284" y="330" width="42" height="22" fill="#8a929a" rx="2"/><text x="305" y="346">AO</text>
+    <rect x="356" y="330" width="52" height="22" fill="#8a929a" rx="2"/><text x="382" y="346">DO1+</text>
+    <rect x="430" y="330" width="52" height="22" fill="#8a929a" rx="2"/><text x="456" y="346">DO1-</text>
+    <rect x="504" y="330" width="52" height="22" fill="#8a929a" rx="2"/><text x="530" y="346">DO2</text>
+    <rect x="598" y="330" width="42" height="22" fill="#8a929a" rx="2"/><text x="619" y="346">P+</text>
+    <rect x="670" y="330" width="42" height="22" fill="#8a929a" rx="2"/><text x="691" y="346">N-</text>
+  </g>
+  <text x="163" y="373" text-anchor="middle" font-size="11" fill="#7fce90">内部24V</text>
+  <text x="619" y="373" text-anchor="middle" font-size="11" fill="#7fce90">RS485/USS/Modbus</text>
+
+  <!-- 底部电机输出 -->
+  <text x="130" y="522" font-size="13" font-weight="bold" fill="#ffd479">主回路输出（至电动机）</text>
+  <g font-size="12" fill="#eef3f7" text-anchor="middle">
+    <rect x="140" y="532" width="46" height="26" fill="#9aa1a8" stroke="#565c62" rx="3"/><text x="163" y="550" fill="#ff6060">U</text>
+    <rect x="210" y="532" width="46" height="26" fill="#9aa1a8" stroke="#565c62" rx="3"/><text x="233" y="550" fill="#7cff9c">V</text>
+    <rect x="280" y="532" width="46" height="26" fill="#9aa1a8" stroke="#565c62" rx="3"/><text x="303" y="550" fill="#9cc0ff">W</text>
+    <rect x="360" y="532" width="46" height="26" fill="#9aa1a8" stroke="#565c62" rx="3"/><text x="383" y="550" fill="#d0e070">PE</text>
+  </g>
+
+  <!-- 右侧图例 -->
+  <rect x="690" y="410" width="140" height="130" fill="#f2f6fa" stroke="#c8d2dc" rx="6"/>
+  <text x="760" y="432" text-anchor="middle" font-size="12" font-weight="bold" fill="#2b5a86">要点</text>
+  <text x="702" y="454" font-size="11" fill="#333">• L1/L2/L3 进线</text>
+  <text x="702" y="474" font-size="11" fill="#333">• U/V/W 接电机</text>
+  <text x="702" y="494" font-size="11" fill="#333">• PE 保护接地</text>
+  <text x="702" y="514" font-size="11" fill="#333">• DI1/DI2 数字输入</text>
+  <text x="702" y="534" font-size="11" fill="#333">• AI1 模拟量给定</text>
+</svg>

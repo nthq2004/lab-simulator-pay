@@ -1,0 +1,53 @@
+<svg width="1040" height="460" viewBox="0 0 1040 460" xmlns="http://www.w3.org/2000/svg" font-family="Microsoft YaHei, sans-serif">
+  <rect x="0" y="0" width="1040" height="460" fill="#fcfcfc" stroke="#ccc" stroke-width="1" rx="8"/>
+  <text x="520" y="28" text-anchor="middle" font-size="17" font-weight="bold" fill="#333">图4  面板设置参数流程（以 P0700 = 2 为例）</text>
+
+  <!-- 节点 -->
+  <g font-size="13" text-anchor="middle">
+    <rect x="30" y="180" width="120" height="70" fill="#0f2e14" stroke="#2f6b3a" rx="8"/>
+    <text x="90" y="210" fill="#8ef08e" font-size="16" font-weight="bold" font-family="monospace">40.00</text>
+    <text x="90" y="232" fill="#8ef08e" font-size="12">Hz 状态屏</text>
+
+    <rect x="210" y="180" width="120" height="70" fill="#23282d" stroke="#555" rx="8"/>
+    <text x="270" y="212" fill="#d8f0a0" font-size="15" font-family="monospace">P0003</text>
+    <text x="270" y="233" fill="#aaa" font-size="11">参数菜单</text>
+
+    <rect x="390" y="180" width="120" height="70" fill="#23282d" stroke="#555" rx="8"/>
+    <text x="450" y="212" fill="#d8f0a0" font-size="15" font-family="monospace">P0700</text>
+    <text x="450" y="233" fill="#aaa" font-size="11">命令源</text>
+
+    <rect x="570" y="180" width="120" height="70" fill="#0f2e14" stroke="#2f6b3a" rx="8"/>
+    <text x="630" y="212" fill="#8ef08e" font-size="17" font-weight="bold" font-family="monospace">1</text>
+    <text x="630" y="233" fill="#8ef08e" font-size="11">数值显示</text>
+
+    <rect x="750" y="180" width="120" height="70" fill="#3a2f10" stroke="#c9a227" rx="8"/>
+    <text x="810" y="212" fill="#ffe08a" font-size="17" font-weight="bold" font-family="monospace">2</text>
+    <text x="810" y="233" fill="#e0c060" font-size="11">编辑/保存</text>
+
+    <rect x="900" y="180" width="110" height="70" fill="#0f2e14" stroke="#2f6b3a" rx="8"/>
+    <text x="955" y="210" fill="#8ef08e" font-size="16" font-weight="bold" font-family="monospace">40.00</text>
+    <text x="955" y="232" fill="#8ef08e" font-size="12">Hz 状态屏</text>
+  </g>
+
+  <!-- 箭头与按键 -->
+  <g stroke="#2b5a86" stroke-width="2.5" fill="#2b5a86">
+    <line x1="150" y1="215" x2="205" y2="215"/><polygon points="205,215 196,210 196,220"/>
+    <line x1="330" y1="215" x2="385" y2="215"/><polygon points="385,215 376,210 376,220"/>
+    <line x1="510" y1="215" x2="565" y2="215"/><polygon points="565,215 556,210 556,220"/>
+    <line x1="690" y1="215" x2="745" y2="215"/><polygon points="745,215 736,210 736,220"/>
+    <line x1="870" y1="215" x2="895" y2="215"/><polygon points="895,215 886,210 886,220"/>
+  </g>
+  <g font-size="12" fill="#c0392b" text-anchor="middle" font-weight="bold">
+    <text x="177" y="205">按 M</text>
+    <text x="357" y="205">连按 ▲</text>
+    <text x="537" y="205">按 OK</text>
+    <text x="717" y="205">按 OK 编辑，▲ 改2</text>
+  </g>
+  <!-- 最后 M 返回 -->
+  <path d="M810 250 Q810 320 630 320 Q450 320 270 320 Q90 320 90 254" fill="none" stroke="#2b5a86" stroke-width="2.5" stroke-dasharray="7 5"/>
+  <text x="450" y="340" text-anchor="middle" font-size="12" fill="#c0392b" font-weight="bold">按 OK 保存 → 按 M 退出</text>
+
+  <!-- 说明 -->
+  <text x="520" y="392" text-anchor="middle" font-size="12" fill="#555">P0700：1 = 操作面板 BOP，2 = 端子控制，5 = USS/Modbus（RS485）。设为 2 后由外部 DI 端子决定启停。</text>
+  <text x="520" y="416" text-anchor="middle" font-size="12" fill="#555">P1000 设置方式相同：1 = MOP（面板▲▼）、2 = 模拟量 AI1、3 = 固定频率、5 = RS485。</text>
+</svg>

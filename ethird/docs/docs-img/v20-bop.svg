@@ -1,0 +1,43 @@
+<svg width="800" height="520" viewBox="0 0 800 520" xmlns="http://www.w3.org/2000/svg" font-family="Microsoft YaHei, sans-serif">
+  <rect x="0" y="0" width="800" height="520" fill="#fcfcfc" stroke="#ccc" stroke-width="1" rx="8"/>
+  <text x="400" y="28" text-anchor="middle" font-size="17" font-weight="bold" fill="#333">图3  操作面板 BOP 与按键功能</text>
+
+  <!-- 面板 -->
+  <rect x="70" y="60" width="360" height="400" fill="#23282d" stroke="#12161a" stroke-width="2" rx="8"/>
+  <!-- LCD -->
+  <rect x="95" y="85" width="230" height="90" fill="#0c2410" stroke="#0a1a0a" rx="4"/>
+  <text x="120" y="122" font-size="12" font-weight="bold" fill="#2b5a2b">HAND</text>
+  <text x="245" y="150" text-anchor="end" font-size="40" font-weight="bold" font-family="monospace" fill="#8ef08e">40.00</text>
+  <text x="245" y="168" text-anchor="end" font-size="16" font-weight="bold" fill="#8ef08e">Hz</text>
+  <circle cx="340" cy="105" r="6" fill="#26d24e"/>
+  <!-- 箭头键 -->
+  <rect x="345" y="95" width="40" height="34" fill="#c3c8ce" rx="4"/><text x="365" y="119" text-anchor="middle" font-size="20" fill="#333">▲</text>
+  <rect x="345" y="140" width="40" height="34" fill="#c3c8ce" rx="4"/><text x="365" y="164" text-anchor="middle" font-size="20" fill="#333">▼</text>
+  <!-- I O M OK -->
+  <g text-anchor="middle" font-size="22">
+    <rect x="95" y="240" width="80" height="60" fill="#1f9d55" stroke="#0f6b37" rx="6"/><text x="135" y="279" fill="#fff">I</text>
+    <rect x="190" y="240" width="80" height="60" fill="#d84438" stroke="#932a22" rx="6"/><text x="230" y="279" fill="#fff">O</text>
+    <rect x="285" y="240" width="80" height="60" fill="#c3c8ce" stroke="#8b9096" rx="6"/><text x="325" y="279" fill="#333" font-size="20">M</text>
+    <rect x="95" y="330" width="130" height="60" fill="#c3c8ce" stroke="#8b9096" rx="6"/><text x="160" y="368" fill="#333" font-size="20">OK</text>
+  </g>
+  <text x="250" y="420" font-size="12" fill="#8a929a">BOP 基本操作面板</text>
+
+  <!-- 说明 -->
+  <g font-size="12">
+    <rect x="470" y="70" width="300" height="360" fill="#f2f6fa" stroke="#c8d2dc" rx="8"/>
+    <text x="490" y="96" font-size="13" font-weight="bold" fill="#2b5a86">按键功能</text>
+
+    <circle cx="492" cy="122" r="7" fill="#1f9d55"/><text x="508" y="127" fill="#333">I（绿）：启动 —— 命令源为 BOP 时有效</text>
+    <circle cx="492" cy="152" r="7" fill="#d84438"/><text x="508" y="157" fill="#333">O（红）：停止（OFF1 斜坡停车）；故障时复位</text>
+    <circle cx="492" cy="182" r="7" fill="#c3c8ce"/><text x="508" y="187" fill="#333">M：短按进/退参数菜单；默认屏长按 2s 进快速调试</text>
+    <circle cx="492" cy="212" r="7" fill="#c3c8ce"/><text x="508" y="217" fill="#333">OK：确认、进入/退出编辑、保存</text>
+    <circle cx="492" cy="242" r="7" fill="#c3c8ce"/><text x="508" y="247" fill="#333">▲：菜单中向后翻参数；编辑时数字增大</text>
+    <circle cx="492" cy="272" r="7" fill="#c3c8ce"/><text x="508" y="277" fill="#333">▼：菜单中向前翻参数；编辑时数字减小</text>
+
+    <text x="490" y="312" font-size="13" font-weight="bold" fill="#2b5a86">逐位编辑（digit-by-digit）</text>
+    <text x="490" y="334" font-size="12" fill="#333">数值参数编辑时，▲/▼ 修改“当前位”，</text>
+    <text x="490" y="354" font-size="12" fill="#333">再按 OK 移到下一位；末位 OK 保存。</text>
+    <text x="490" y="374" font-size="12" fill="#333">例：7.60 → 依次设 “7”“6”“0”。</text>
+    <text x="490" y="404" font-size="11" fill="#888">LCD 左下显示 HAND/AUTO（面板/端子控制）</text>
+  </g>
+</svg>

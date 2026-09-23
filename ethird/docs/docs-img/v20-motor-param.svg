@@ -1,0 +1,68 @@
+<svg width="1060" height="560" viewBox="0 0 1060 560" xmlns="http://www.w3.org/2000/svg" font-family="Microsoft YaHei, sans-serif">
+  <rect x="0" y="0" width="1060" height="560" fill="#fcfcfc" stroke="#ccc" stroke-width="1" rx="8"/>
+  <text x="530" y="28" text-anchor="middle" font-size="17" font-weight="bold" fill="#333">图5  电机参数设置流程（快速调试）</text>
+
+  <!-- 步骤条 -->
+  <g font-size="13" text-anchor="middle">
+    <rect x="40" y="60" width="180" height="66" fill="#3a2f10" stroke="#c9a227" rx="8"/>
+    <text x="130" y="90" fill="#ffe08a" font-size="15" font-weight="bold" font-family="monospace">P0010 = 1</text>
+    <text x="130" y="112" fill="#e0c060" font-size="11">进入快速调试</text>
+
+    <rect x="270" y="60" width="380" height="66" fill="#23282d" stroke="#555" rx="8"/>
+    <text x="460" y="88" fill="#d8f0a0" font-size="14" font-family="monospace">P0304 → P0305 → P0307 → P0310 → P0311</text>
+    <text x="460" y="112" fill="#aaa" font-size="11">按铭牌依次设置电机参数</text>
+
+    <rect x="700" y="60" width="200" height="66" fill="#3a2f10" stroke="#c9a227" rx="8"/>
+    <text x="800" y="90" fill="#ffe08a" font-size="15" font-weight="bold" font-family="monospace">P3900 = 3</text>
+    <text x="800" y="112" fill="#e0c060" font-size="11">结束并触发电机数据计算</text>
+  </g>
+  <g stroke="#2b5a86" stroke-width="2.5" fill="#2b5a86">
+    <line x1="220" y1="93" x2="265" y2="93"/><polygon points="265,93 256,88 256,98"/>
+    <line x1="650" y1="93" x2="695" y2="93"/><polygon points="695,93 686,88 686,98"/>
+  </g>
+
+  <!-- 参数表 -->
+  <g font-size="13">
+    <rect x="40" y="160" width="980" height="330" fill="#f7f9fc" stroke="#c8d2dc" rx="8"/>
+    <text x="60" y="188" font-size="14" font-weight="bold" fill="#2b5a86">电机铭牌参数对照表</text>
+
+    <!-- 表头 -->
+    <rect x="60" y="200" width="940" height="34" fill="#e3ebf3"/>
+    <text x="80" y="223" font-weight="bold" fill="#1a3a5a">参数号</text>
+    <text x="250" y="223" font-weight="bold" fill="#1a3a5a">名称</text>
+    <text x="520" y="223" font-weight="bold" fill="#1a3a5a">含义</text>
+    <text x="820" y="223" font-weight="bold" fill="#1a3a5a">本例设定值</text>
+
+    <line x1="60" y1="234" x2="1000" y2="234" stroke="#c8d2dc"/>
+    <text x="80" y="264" font-family="monospace" fill="#0a6">P0304</text>
+    <text x="250" y="264" fill="#333">额定电压</text>
+    <text x="520" y="264" fill="#666">电机铭牌上的电压值</text>
+    <text x="820" y="264" font-weight="bold" fill="#c0392b">380 V</text>
+
+    <line x1="60" y1="278" x2="1000" y2="278" stroke="#e6ecf2"/>
+    <text x="80" y="308" font-family="monospace" fill="#0a6">P0305</text>
+    <text x="250" y="308" fill="#333">额定电流</text>
+    <text x="520" y="308" fill="#666">电机铭牌上的电流值</text>
+    <text x="820" y="308" font-weight="bold" fill="#c0392b">7.60 A</text>
+
+    <line x1="60" y1="322" x2="1000" y2="322" stroke="#e6ecf2"/>
+    <text x="80" y="352" font-family="monospace" fill="#0a6">P0307</text>
+    <text x="250" y="352" fill="#333">额定功率</text>
+    <text x="520" y="352" fill="#666">电机铭牌上的功率值（kW）</text>
+    <text x="820" y="352" font-weight="bold" fill="#c0392b">5.00 kW</text>
+
+    <line x1="60" y1="366" x2="1000" y2="366" stroke="#e6ecf2"/>
+    <text x="80" y="396" font-family="monospace" fill="#0a6">P0310</text>
+    <text x="250" y="396" fill="#333">额定频率</text>
+    <text x="520" y="396" fill="#666">电机铭牌上的频率值（Hz）</text>
+    <text x="820" y="396" font-weight="bold" fill="#c0392b">50.00 Hz</text>
+
+    <line x1="60" y1="410" x2="1000" y2="410" stroke="#e6ecf2"/>
+    <text x="80" y="440" font-family="monospace" fill="#0a6">P0311</text>
+    <text x="250" y="440" fill="#333">额定转速</text>
+    <text x="520" y="440" fill="#666">电机铭牌上的转速值（RPM）</text>
+    <text x="820" y="440" font-weight="bold" fill="#c0392b">1440 RPM</text>
+
+    <text x="60" y="476" font-size="11" fill="#888">设置前必须先 P0010 = 1；全部设完后 P3900 = 3 结束快速调试并触发电机数据计算（P0010 自动复位为 0）。</text>
+  </g>
+</svg>
