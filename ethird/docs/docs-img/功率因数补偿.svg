@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 340" font-family="Microsoft YaHei, PingFang SC, sans-serif">
+  <rect width="760" height="340" fill="#fbfcfe"/>
+  <text x="380" y="32" text-anchor="middle" font-size="20" font-weight="bold" fill="#1f3b57">图 3  功率因数测量与电容补偿</text>
+
+  <!-- 功率计串入 -->
+  <g stroke="#3b6ea5" stroke-width="3" fill="none">
+    <line x1="40" y1="90" x2="90" y2="90"/>
+    <line x1="210" y1="90" x2="300" y2="90"/>
+    <line x1="420" y1="90" x2="560" y2="90"/>
+    <line x1="560" y1="90" x2="560" y2="150"/>
+    <line x1="40" y1="250" x2="40" y2="90"/>
+    <line x1="40" y1="250" x2="620" y2="250"/>
+    <line x1="620" y1="150" x2="620" y2="250"/>
+    <line x1="560" y1="150" x2="620" y2="150"/>
+  </g>
+
+  <!-- AC -->
+  <rect x="40" y="60" width="50" height="50" rx="6" fill="#eef4fb" stroke="#3b6ea5" stroke-width="2"/>
+  <text x="65" y="90" text-anchor="middle" font-size="13" fill="#1f3b57">AC</text>
+  <text x="65" y="55" text-anchor="middle" font-size="11" fill="#c0392b">L</text>
+  <text x="65" y="270" text-anchor="middle" font-size="11" fill="#3b6ea5">N</text>
+
+  <!-- 功率计 -->
+  <rect x="90" y="60" width="120" height="60" rx="8" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
+  <text x="150" y="85" text-anchor="middle" font-size="14" fill="#0d47a1">功率计</text>
+  <text x="150" y="105" text-anchor="middle" font-size="12" fill="#1565c0">I+ 串入 · U 并联</text>
+
+  <!-- 负载 -->
+  <rect x="300" y="65" width="120" height="50" rx="8" fill="#e8f6ec" stroke="#2e8b57" stroke-width="2"/>
+  <text x="360" y="95" text-anchor="middle" font-size="14" fill="#1e6b3a">镇流器+灯管</text>
+
+  <!-- 电容并联 -->
+  <g stroke="#c62828" stroke-width="3" fill="none">
+    <line x1="360" y1="115" x2="360" y2="180"/>
+    <line x1="340" y1="180" x2="380" y2="180"/>
+    <line x1="340" y1="196" x2="380" y2="196"/>
+    <line x1="360" y1="196" x2="360" y2="250"/>
+  </g>
+  <text x="400" y="192" font-size="14" fill="#c62828" font-weight="bold">C = 5μF 并联补偿</text>
+
+  <!-- 对比表 -->
+  <g font-size="13">
+    <rect x="80" y="280" width="280" height="40" rx="6" fill="#fff8e1" stroke="#f9a825" stroke-width="1.5"/>
+    <text x="220" y="305" text-anchor="middle" fill="#f57f17">补偿前：PF ≈ 0.4~0.6（感性）</text>
+    <rect x="400" y="280" width="280" height="40" rx="6" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.5"/>
+    <text x="540" y="305" text-anchor="middle" fill="#1b5e20">补偿后：I 下降，PF 明显提高</text>
+  </g>
+</svg>

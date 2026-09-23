@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" font-family="Microsoft YaHei, PingFang SC, sans-serif">
+  <rect width="720" height="420" fill="#fbfcfe"/>
+  <text x="360" y="32" text-anchor="middle" font-size="20" font-weight="bold" fill="#1f3b57">图 1  日光灯电路组成与接线</text>
+
+  <!-- 主回路连线 -->
+  <g stroke="#3b6ea5" stroke-width="3" fill="none">
+    <!-- L → 开关 -->
+    <line x1="90" y1="140" x2="150" y2="140"/>
+    <!-- 开关 → 镇流器 -->
+    <line x1="220" y1="140" x2="270" y2="140"/>
+    <!-- 镇流器 → 灯管 left_b 节点 -->
+    <line x1="380" y1="140" x2="470" y2="140"/>
+    <!-- 节点下到灯管 left_b -->
+    <line x1="470" y1="140" x2="470" y2="200"/>
+    <!-- 灯管 right_b → N -->
+    <line x1="630" y1="260" x2="630" y2="340"/>
+    <line x1="90" y1="340" x2="630" y2="340"/>
+    <!-- left_a → 启辉器 -->
+    <line x1="470" y1="200" x2="500" y2="200" stroke="none"/>
+    <!-- 灯丝引出示意线 -->
+    <line x1="470" y1="200" x2="505" y2="200"/>
+    <line x1="555" y1="200" x2="595" y2="200"/>
+    <!-- right_a → 启辉器右 -->
+    <line x1="595" y1="200" x2="630" y2="200" stroke="none"/>
+    <line x1="595" y1="200" x2="630" y2="200"/>
+    <!-- 启辉器到 right_a 灯丝端 -->
+  </g>
+
+  <!-- 节点 -->
+  <g fill="#3b6ea5">
+    <circle cx="470" cy="140" r="5"/>
+    <circle cx="470" cy="340" r="5"/>
+    <circle cx="630" cy="340" r="5"/>
+  </g>
+
+  <!-- AC 电源 -->
+  <g>
+    <rect x="30" y="100" width="60" height="80" rx="8" fill="#eef4fb" stroke="#3b6ea5" stroke-width="2"/>
+    <text x="60" y="135" text-anchor="middle" font-size="13" fill="#1f3b57">AC</text>
+    <text x="60" y="155" text-anchor="middle" font-size="12" fill="#5b6b7c">220V</text>
+    <text x="70" y="96" font-size="12" fill="#c0392b" font-weight="bold">L</text>
+    <text x="70" y="360" font-size="12" fill="#3b6ea5" font-weight="bold">N</text>
+    <line x1="60" y1="180" x2="60" y2="340" stroke="#3b6ea5" stroke-width="3"/>
+  </g>
+
+  <!-- 开关 -->
+  <g>
+    <circle cx="155" cy="140" r="5" fill="#3b6ea5"/>
+    <circle cx="215" cy="140" r="5" fill="#3b6ea5"/>
+    <line x1="155" y1="140" x2="212" y2="118" stroke="#c0392b" stroke-width="3"/>
+    <text x="185" y="110" text-anchor="middle" font-size="13" fill="#c0392b">开关</text>
+  </g>
+
+  <!-- 镇流器 -->
+  <g>
+    <rect x="270" y="115" width="110" height="50" rx="8" fill="#e8f6ec" stroke="#2e8b57" stroke-width="2"/>
+    <text x="325" y="145" text-anchor="middle" font-size="15" fill="#1e6b3a">镇流器</text>
+    <text x="325" y="108" text-anchor="middle" font-size="11" fill="#888">电感 L</text>
+  </g>
+
+  <!-- 灯管 -->
+  <g>
+    <rect x="450" y="185" width="180" height="50" rx="10" fill="#fffde7" stroke="#f9a825" stroke-width="2"/>
+    <text x="540" y="215" text-anchor="middle" font-size="15" fill="#f57f17">灯管</text>
+    <text x="470" y="250" font-size="11" fill="#888">left_a / left_b</text>
+    <text x="575" y="250" font-size="11" fill="#888">right_a / right_b</text>
+    <!-- 左灯丝 -->
+    <line x1="460" y1="200" x2="470" y2="215" stroke="#e67e22" stroke-width="3"/>
+    <line x1="460" y1="235" x2="470" y2="220" stroke="#e67e22" stroke-width="3"/>
+    <!-- 右灯丝 -->
+    <line x1="620" y1="200" x2="610" y2="215" stroke="#e67e22" stroke-width="3"/>
+    <line x1="620" y1="235" x2="610" y2="220" stroke="#e67e22" stroke-width="3"/>
+    <!-- 放电通道虚线 -->
+    <line x1="475" y1="217" x2="605" y2="217" stroke="#f9a825" stroke-width="2" stroke-dasharray="4 3"/>
+  </g>
+
+  <!-- 启辉器（跨接 left_a-right_a） -->
+  <g>
+    <rect x="505" y="270" width="50" height="36" rx="18" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
+    <text x="530" y="293" text-anchor="middle" font-size="12" fill="#1565c0">启辉器</text>
+    <!-- 启辉器引线 -->
+    <path d="M530,270 L530,260 L470,260 L470,235" stroke="#1565c0" stroke-width="2" fill="none"/>
+    <path d="M530,306 L530,320 L630,320 L630,235" stroke="#1565c0" stroke-width="2" fill="none"/>
+    <!-- 修正：right_a 侧 -->
+    <path d="M555,288 L595,288 L595,235" stroke="#1565c0" stroke-width="2" fill="none"/>
+  </g>
+
+  <!-- 标注连接关系 -->
+  <text x="360" y="385" text-anchor="middle" font-size="14" fill="#1f3b57" font-weight="bold">AC 220V → 开关 → 镇流器 → left_b 灯丝</text>
+  <text x="360" y="408" text-anchor="middle" font-size="13" fill="#5b6b7c">left_a → 启辉器 → right_a　｜　right_b → 中性线 N</text>
+</svg>

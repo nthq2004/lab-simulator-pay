@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 360" font-family="Microsoft YaHei, PingFang SC, sans-serif">
+  <rect width="780" height="360" fill="#fbfcfe"/>
+  <text x="390" y="32" text-anchor="middle" font-size="20" font-weight="bold" fill="#1f3b57">图 4  常见故障现象与检测流程</text>
+
+  <!-- 四故障卡片 -->
+  <g font-size="13">
+    <rect x="30" y="55" width="165" height="120" rx="8" fill="#ffebee" stroke="#c62828" stroke-width="2"/>
+    <text x="112" y="80" text-anchor="middle" fill="#b71c1c" font-weight="bold">启辉器触点粘连</text>
+    <text x="112" y="105" text-anchor="middle" fill="#333">灯丝持续发红</text>
+    <text x="112" y="125" text-anchor="middle" fill="#333">灯管不亮</text>
+    <text x="112" y="150" text-anchor="middle" fill="#c62828">测电阻 ≈ 0Ω</text>
+
+    <rect x="215" y="55" width="165" height="120" rx="8" fill="#ffebee" stroke="#c62828" stroke-width="2"/>
+    <text x="297" y="80" text-anchor="middle" fill="#b71c1c" font-weight="bold">启辉器开路</text>
+    <text x="297" y="105" text-anchor="middle" fill="#333">氖泡与灯管</text>
+    <text x="297" y="125" text-anchor="middle" fill="#333">均无反应</text>
+    <text x="297" y="150" text-anchor="middle" fill="#c62828">测电阻 = ∞</text>
+
+    <rect x="400" y="55" width="165" height="120" rx="8" fill="#fff3e0" stroke="#ef6c00" stroke-width="2"/>
+    <text x="482" y="80" text-anchor="middle" fill="#e65100" font-weight="bold">镇流器开路</text>
+    <text x="482" y="105" text-anchor="middle" fill="#333">合闸全无反应</text>
+    <text x="482" y="125" text-anchor="middle" fill="#333">电路无电流</text>
+    <text x="482" y="150" text-anchor="middle" fill="#ef6c00">测电阻 = ∞</text>
+
+    <rect x="585" y="55" width="165" height="120" rx="8" fill="#e8eaf6" stroke="#3949ab" stroke-width="2"/>
+    <text x="667" y="80" text-anchor="middle" fill="#283593" font-weight="bold">灯管老化</text>
+    <text x="667" y="105" text-anchor="middle" fill="#333">两端发黑</text>
+    <text x="667" y="125" text-anchor="middle" fill="#333">启动困难/闪烁</text>
+    <text x="667" y="150" text-anchor="middle" fill="#3949ab">替换法确认</text>
+  </g>
+
+  <!-- 流程 -->
+  <g font-size="14" fill="#1f3b57">
+    <rect x="40" y="210" width="120" height="50" rx="25" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
+    <text x="100" y="240" text-anchor="middle">观察现象</text>
+
+    <line x1="160" y1="235" x2="200" y2="235" stroke="#3b6ea5" stroke-width="2.5"/>
+    <polygon points="200,235 188,228 188,242" fill="#3b6ea5"/>
+
+    <rect x="200" y="210" width="120" height="50" rx="25" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+    <text x="260" y="240" text-anchor="middle">断电安全</text>
+
+    <line x1="320" y1="235" x2="360" y2="235" stroke="#3b6ea5" stroke-width="2.5"/>
+    <polygon points="360,235 348,228 348,242" fill="#3b6ea5"/>
+
+    <rect x="360" y="210" width="150" height="50" rx="25" fill="#fff8e1" stroke="#f9a825" stroke-width="2"/>
+    <text x="435" y="240" text-anchor="middle">万用表电阻档</text>
+
+    <line x1="510" y1="235" x2="550" y2="235" stroke="#3b6ea5" stroke-width="2.5"/>
+    <polygon points="550,235 538,228 538,242" fill="#3b6ea5"/>
+
+    <rect x="550" y="210" width="100" height="50" rx="25" fill="#fce4ec" stroke="#ad1457" stroke-width="2"/>
+    <text x="600" y="240" text-anchor="middle">排除故障</text>
+
+    <line x1="650" y1="235" x2="690" y2="235" stroke="#3b6ea5" stroke-width="2.5"/>
+    <polygon points="690,235 678,228 678,242" fill="#3b6ea5"/>
+
+    <rect x="690" y="210" width="70" height="50" rx="25" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+    <text x="725" y="240" text-anchor="middle">上电验证</text>
+  </g>
+
+  <text x="390" y="300" text-anchor="middle" font-size="13" fill="#5b6b7c">检测口诀：先看现象 → 必须断电 → 电阻档量关键件 → 修复后再通电</text>
+  <text x="390" y="330" text-anchor="middle" font-size="12" fill="#888">启辉器正常断电测量应接近开路（∞）；镇流器正常约几十 Ω；灯丝应有数 Ω~数十 Ω</text>
+</svg>

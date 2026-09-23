@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 300" font-family="Microsoft YaHei, PingFang SC, sans-serif">
+  <rect width="720" height="300" fill="#fbfcfe"/>
+  <text x="360" y="32" text-anchor="middle" font-size="20" font-weight="bold" fill="#1f3b57">图 2  启辉器启动时序</text>
+
+  <!-- 时间轴 -->
+  <line x1="50" y1="160" x2="680" y2="160" stroke="#3b6ea5" stroke-width="3"/>
+  <polygon points="680,160 665,152 665,168" fill="#3b6ea5"/>
+
+  <!-- 四阶段块 -->
+  <g font-size="13">
+    <rect x="70" y="70" width="130" height="60" rx="8" fill="#fff3e0" stroke="#ef6c00" stroke-width="2"/>
+    <text x="135" y="95" text-anchor="middle" fill="#e65100" font-weight="bold">① 辉光放电</text>
+    <text x="135" y="115" text-anchor="middle" fill="#5b6b7c">氖泡发橙光</text>
+    <line x1="135" y1="130" x2="135" y2="155" stroke="#ef6c00" stroke-width="2"/>
+
+    <rect x="220" y="70" width="140" height="60" rx="8" fill="#fce4ec" stroke="#c2185b" stroke-width="2"/>
+    <text x="290" y="95" text-anchor="middle" fill="#ad1457" font-weight="bold">② 触点闭合</text>
+    <text x="290" y="115" text-anchor="middle" fill="#5b6b7c">灯丝预热发红</text>
+    <line x1="290" y1="130" x2="290" y2="155" stroke="#c2185b" stroke-width="2"/>
+
+    <rect x="390" y="70" width="140" height="60" rx="8" fill="#e8eaf6" stroke="#3949ab" stroke-width="2"/>
+    <text x="460" y="95" text-anchor="middle" fill="#283593" font-weight="bold">③ 触点断开</text>
+    <text x="460" y="115" text-anchor="middle" fill="#5b6b7c">电流突变</text>
+    <line x1="460" y1="130" x2="460" y2="155" stroke="#3949ab" stroke-width="2"/>
+
+    <rect x="560" y="70" width="120" height="60" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+    <text x="620" y="95" text-anchor="middle" fill="#1b5e20" font-weight="bold">④ 点亮</text>
+    <text x="620" y="115" text-anchor="middle" fill="#5b6b7c">高压击穿</text>
+    <line x1="620" y1="130" x2="620" y2="155" stroke="#2e7d32" stroke-width="2"/>
+  </g>
+
+  <!-- 阶段说明 -->
+  <text x="135" y="190" text-anchor="middle" font-size="12" fill="#333">220V 加在启辉器</text>
+  <text x="290" y="190" text-anchor="middle" font-size="12" fill="#333">双金属片弯曲</text>
+  <text x="460" y="190" text-anchor="middle" font-size="12" fill="#333">镇流器自感电动势</text>
+  <text x="620" y="190" text-anchor="middle" font-size="12" fill="#333">600~1500V 脉冲</text>
+
+  <text x="360" y="230" text-anchor="middle" font-size="14" fill="#1f3b57">触点断开瞬间：U = −L·di/dt，高压脉冲击穿灯管内气体</text>
+  <text x="360" y="260" text-anchor="middle" font-size="13" fill="#5b6b7c">灯管导通后两端电压约 100V，启辉器两端不足以再辉光，退出工作</text>
+  <text x="360" y="285" text-anchor="middle" font-size="12" fill="#888">仿真参数：辉光时间默认 1s、接通时间 0.5s（可在参数设置中加长观察）</text>
+</svg>
