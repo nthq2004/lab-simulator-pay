@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 450" width="780" height="450" font-family="Microsoft YaHei, SimHei, sans-serif">
+  <rect width="780" height="450" fill="#ffffff"/>
+  <text x="24" y="30" font-size="17" font-weight="bold" fill="#20303f">接触器触头系统：线圈通/断电时的触点状态</text>
+
+  <!-- 状态说明 -->
+  <rect x="16" y="46" width="748" height="176" rx="8" fill="#eef2f8" stroke="#b8c4d6"/>
+  <text x="32" y="72" font-size="14" font-weight="bold" fill="#2470c0">线圈断电 → 衔铁释放（反作用弹簧复位）</text>
+
+  <rect x="16" y="236" width="748" height="176" rx="8" fill="#fdf3ee" stroke="#e0c0a8"/>
+  <text x="32" y="262" font-size="14" font-weight="bold" fill="#c0392b">线圈通电 → 衔铁吸合（电磁力克服弹簧力）</text>
+
+  <!-- 断电行：主触头断开、常开断开、常闭闭合 -->
+  <g>
+    <!-- 主触头 NO -->
+    <g>
+      <line x1="150" y1="96" x2="150" y2="196" stroke="#9aa4b2" stroke-width="2"/>
+      <circle cx="150" cy="96" r="5" fill="#333"/><circle cx="150" cy="196" r="5" fill="#333"/>
+      <circle cx="150" cy="132" r="4" fill="#333"/>
+      <line x1="150" y1="162" x2="172" y2="128" stroke="#c0392b" stroke-width="4" stroke-linecap="round"/>
+      <text x="150" y="220" font-size="13" text-anchor="middle" fill="#20303f">主触头 L-T</text>
+      <text x="220" y="176" font-size="12" text-anchor="middle" fill="#c0392b">断开</text>
+    </g>
+    <!-- 常开 NO -->
+    <g>
+      <line x1="380" y1="96" x2="380" y2="196" stroke="#9aa4b2" stroke-width="2"/>
+      <circle cx="380" cy="96" r="5" fill="#333"/><circle cx="380" cy="196" r="5" fill="#333"/>
+      <circle cx="380" cy="132" r="4" fill="#333"/>
+      <line x1="380" y1="162" x2="402" y2="128" stroke="#c0392b" stroke-width="4" stroke-linecap="round"/>
+      <text x="380" y="220" font-size="13" text-anchor="middle" fill="#20303f">辅助常开 NO</text>
+      <text x="450" y="176" font-size="12" text-anchor="middle" fill="#c0392b">断开</text>
+    </g>
+    <!-- 常闭 NC -->
+    <g>
+      <line x1="610" y1="96" x2="610" y2="196" stroke="#9aa4b2" stroke-width="2"/>
+      <circle cx="610" cy="96" r="5" fill="#333"/><circle cx="610" cy="196" r="5" fill="#333"/>
+      <circle cx="610" cy="132" r="4" fill="#333"/>
+      <line x1="610" y1="162" x2="610" y2="130" stroke="#27ae60" stroke-width="4" stroke-linecap="round"/>
+      <text x="610" y="220" font-size="13" text-anchor="middle" fill="#20303f">辅助常闭 NC</text>
+      <text x="610" y="176" font-size="12" text-anchor="middle" fill="#27ae60">闭合</text>
+    </g>
+  </g>
+
+  <!-- 通电行：主触头闭合、常开闭合、常闭断开 -->
+  <g>
+    <!-- 主触头闭合 -->
+    <g>
+      <line x1="150" y1="286" x2="150" y2="386" stroke="#9aa4b2" stroke-width="2"/>
+      <circle cx="150" cy="286" r="5" fill="#333"/><circle cx="150" cy="386" r="5" fill="#333"/>
+      <circle cx="150" cy="322" r="4" fill="#333"/>
+      <line x1="150" y1="352" x2="150" y2="320" stroke="#27ae60" stroke-width="4" stroke-linecap="round"/>
+      <text x="150" y="410" font-size="13" text-anchor="middle" fill="#20303f">主触头 L-T</text>
+      <text x="220" y="366" font-size="12" text-anchor="middle" fill="#27ae60">闭合</text>
+    </g>
+    <!-- 常开闭合 -->
+    <g>
+      <line x1="380" y1="286" x2="380" y2="386" stroke="#9aa4b2" stroke-width="2"/>
+      <circle cx="380" cy="286" r="5" fill="#333"/><circle cx="380" cy="386" r="5" fill="#333"/>
+      <circle cx="380" cy="322" r="4" fill="#333"/>
+      <line x1="380" y1="352" x2="380" y2="320" stroke="#27ae60" stroke-width="4" stroke-linecap="round"/>
+      <text x="380" y="410" font-size="13" text-anchor="middle" fill="#20303f">辅助常开 NO</text>
+      <text x="450" y="366" font-size="12" text-anchor="middle" fill="#27ae60">闭合</text>
+    </g>
+    <!-- 常闭断开 -->
+    <g>
+      <line x1="610" y1="286" x2="610" y2="386" stroke="#9aa4b2" stroke-width="2"/>
+      <circle cx="610" cy="286" r="5" fill="#333"/><circle cx="610" cy="386" r="5" fill="#333"/>
+      <circle cx="610" cy="322" r="4" fill="#333"/>
+      <line x1="610" y1="352" x2="632" y2="318" stroke="#c0392b" stroke-width="4" stroke-linecap="round"/>
+      <text x="610" y="410" font-size="13" text-anchor="middle" fill="#20303f">辅助常闭 NC</text>
+      <text x="680" y="366" font-size="12" text-anchor="middle" fill="#c0392b">断开</text>
+    </g>
+  </g>
+</svg>
