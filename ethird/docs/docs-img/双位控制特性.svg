@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 440" width="720" height="440" font-family="Microsoft YaHei, SimHei, sans-serif">
+  <rect width="720" height="440" fill="#ffffff"/>
+  <text x="24" y="32" font-size="18" font-weight="bold" fill="#20303f">双位控制（切换差 / 幅差）特性</text>
+
+  <defs>
+    <marker id="axE" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#333"/>
+    </marker>
+    <marker id="arrR" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M0,0 L9,4.5 L0,9 z" fill="#c0392b"/>
+    </marker>
+    <marker id="arrB" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M0,0 L9,4.5 L0,9 z" fill="#2470c0"/>
+    </marker>
+    <marker id="arrL" markerWidth="8" markerHeight="8" refX="1" refY="4" orient="auto">
+      <path d="M8,0 L0,4 L8,8 z" fill="#888"/>
+    </marker>
+    <marker id="arrR2" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 z" fill="#888"/>
+    </marker>
+  </defs>
+
+  <!-- 坐标轴 -->
+  <line x1="100" y1="360" x2="672" y2="360" stroke="#333" stroke-width="2" marker-end="url(#axE)"/>
+  <line x1="100" y1="360" x2="100" y2="72" stroke="#333" stroke-width="2" marker-end="url(#axE)"/>
+  <text x="678" y="364" font-size="13" fill="#20303f">温度 t（℃）</text>
+  <text x="96" y="64" font-size="13" fill="#20303f" text-anchor="end">NO 触点</text>
+
+  <!-- 上、下限参考线 -->
+  <line x1="294" y1="96" x2="294" y2="360" stroke="#888" stroke-width="1.2" stroke-dasharray="6 4"/>
+  <line x1="486" y1="96" x2="486" y2="360" stroke="#888" stroke-width="1.2" stroke-dasharray="6 4"/>
+  <text x="294" y="386" font-size="13" fill="#c0392b" text-anchor="middle">下限 −5℃</text>
+  <text x="486" y="386" font-size="13" fill="#c0392b" text-anchor="middle">上限 −1℃</text>
+
+  <!-- 状态标签 -->
+  <text x="92" y="145" font-size="12" fill="#c0392b" text-anchor="end">闭合</text>
+  <text x="92" y="305" font-size="12" fill="#555" text-anchor="end">断开</text>
+  <text x="150" y="145" font-size="11" fill="#888">（压缩机运行·制冷）</text>
+  <text x="150" y="320" font-size="11" fill="#888">（压缩机停止）</text>
+
+  <!-- 升温过程（红实线） -->
+  <path d="M150 300 H486 V140 H630" fill="none" stroke="#c0392b" stroke-width="3"/>
+  <line x1="340" y1="300" x2="372" y2="300" stroke="#c0392b" stroke-width="3" marker-end="url(#arrR)"/>
+  <line x1="486" y1="230" x2="486" y2="198" stroke="#c0392b" stroke-width="3" marker-end="url(#arrR)"/>
+  <text x="150" y="288" font-size="12" fill="#c0392b">升温：到上限 −1℃ 才闭合</text>
+
+  <!-- 降温过程（蓝虚线） -->
+  <path d="M630 140 H294 V300 H150" fill="none" stroke="#2470c0" stroke-width="3" stroke-dasharray="8 5"/>
+  <line x1="440" y1="140" x2="408" y2="140" stroke="#2470c0" stroke-width="3" marker-end="url(#arrB)"/>
+  <line x1="294" y1="210" x2="294" y2="242" stroke="#2470c0" stroke-width="3" marker-end="url(#arrB)"/>
+  <text x="360" y="128" font-size="12" fill="#2470c0">降温：到下限 −5℃ 才断开</text>
+
+  <!-- 幅差标注 -->
+  <line x1="294" y1="332" x2="486" y2="332" stroke="#888" stroke-width="1.6" marker-start="url(#arrL)" marker-end="url(#arrR2)"/>
+  <text x="390" y="350" font-size="13" fill="#20303f" text-anchor="middle">幅差（切换差）= 上限 − 下限 = 4℃</text>
+
+  <!-- 图例 -->
+  <line x1="520" y1="70" x2="556" y2="70" stroke="#c0392b" stroke-width="3"/>
+  <text x="562" y="74" font-size="12" fill="#c0392b">升温过程</text>
+  <line x1="520" y1="90" x2="556" y2="90" stroke="#2470c0" stroke-width="3" stroke-dasharray="8 5"/>
+  <text x="562" y="94" font-size="12" fill="#2470c0">降温过程</text>
+</svg>

@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" width="800" height="560" font-family="Microsoft YaHei, SimHei, sans-serif">
+  <rect width="800" height="560" fill="#ffffff"/>
+  <text x="24" y="32" font-size="18" font-weight="bold" fill="#20303f">温度继电器（WTZK-50-C）结构原理示意图</text>
+
+  <defs>
+    <marker id="arR" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M0,0 L9,4.5 L0,9 z" fill="#c0392b"/>
+    </marker>
+  </defs>
+
+  <!-- 感温包 -->
+  <rect x="60" y="404" width="96" height="84" rx="12" fill="#e2b98a" stroke="#8b5a2b" stroke-width="2.5"/>
+  <path d="M74 424 H142 M74 440 H142 M74 456 H142 M74 472 H142" stroke="#b8834a" stroke-width="2.4" fill="none"/>
+  <rect x="101" y="392" width="14" height="14" rx="3" fill="#b87333" stroke="#8b5a2b" stroke-width="1.5"/>
+  <text x="108" y="510" font-size="13" fill="#8b5a2b" text-anchor="middle">感温包</text>
+
+  <!-- 毛细管（沿底部绕行，避开幅差机构） -->
+  <path d="M108 392 C 108 452, 178 482, 258 480 C 322 478, 358 452, 373 414"
+        fill="none" stroke="#b87333" stroke-width="3.5" stroke-linecap="round"/>
+  <text x="248" y="504" font-size="13" fill="#8b5a2b" text-anchor="middle">毛细管</text>
+
+  <!-- 波纹管 -->
+  <rect x="326" y="320" width="94" height="88" rx="6" fill="#eef4fb" stroke="#1565c0" stroke-width="2"/>
+  <path d="M340 328 L358 340 L340 352 L358 364 L340 376 L358 388 L340 398" fill="none" stroke="#1565c0" stroke-width="2"/>
+  <path d="M372 328 L390 340 L372 352 L390 364 L372 376 L390 388 L372 398" fill="none" stroke="#1565c0" stroke-width="2"/>
+  <rect x="366" y="410" width="14" height="12" rx="2" fill="#b87333" stroke="#8b5a2b" stroke-width="1.5"/>
+  <text x="373" y="440" font-size="13" fill="#1565c0" text-anchor="middle">波纹管</text>
+
+  <!-- 传动杆（波纹管 → 杠杆） -->
+  <line x1="420" y1="326" x2="512" y2="266" stroke="#333" stroke-width="5" stroke-linecap="round"/>
+
+  <!-- 杠杆与支点 -->
+  <line x1="214" y1="266" x2="532" y2="266" stroke="#8b4513" stroke-width="11" stroke-linecap="round"/>
+  <path d="M508 288 L532 288 L520 266 Z" fill="#333"/>
+  <line x1="520" y1="288" x2="520" y2="318" stroke="#333" stroke-width="4"/>
+  <line x1="498" y1="318" x2="542" y2="318" stroke="#333" stroke-width="4"/>
+  <text x="556" y="300" font-size="13" fill="#8b4513">杠杆（支点）</text>
+
+  <!-- 触点系统 -->
+  <circle cx="392" cy="128" r="7" fill="#7d7c78" stroke="#333"/>
+  <circle cx="512" cy="128" r="7" fill="#777" stroke="#333"/>
+  <line x1="392" y1="128" x2="330" y2="128" stroke="#848985" stroke-width="4"/>
+  <line x1="512" y1="128" x2="574" y2="128" stroke="#c0392b" stroke-width="4"/>
+  <text x="324" y="132" font-size="13" fill="#20303f" text-anchor="end">NC</text>
+  <text x="580" y="132" font-size="13" fill="#c0392b">NO</text>
+  <circle cx="452" cy="128" r="7" fill="#08f818" stroke="#000"/>
+  <line x1="452" y1="128" x2="452" y2="172" stroke="#555" stroke-width="4" stroke-linecap="round"/>
+  <!-- 机械传动：弹性片（杠杆 → 动触点） -->
+  <line x1="452" y1="172" x2="404" y2="266" stroke="#979dc7" stroke-width="5" stroke-linecap="round"/>
+  <!-- 电气：COM 端子 -->
+  <line x1="452" y1="172" x2="452" y2="214" stroke="#555" stroke-width="4"/>
+  <circle cx="452" cy="218" r="7" fill="#555" stroke="#333"/>
+  <text x="452" y="242" font-size="13" fill="#20303f" text-anchor="middle">COM</text>
+  <text x="646" y="106" font-size="12" fill="#666">动触点在 NC / NO 间切换</text>
+
+  <!-- 设定值调节螺钉 + 给定弹簧 -->
+  <rect x="128" y="72" width="50" height="74" rx="4" fill="#0c7b08" stroke="#0a5c06" stroke-width="1.5"/>
+  <path d="M153 146 L141 160 L165 174 L141 188 L165 202 L141 216 L165 230 L141 244 L153 258"
+        fill="none" stroke="#444" stroke-width="4" stroke-linejoin="round"/>
+  <line x1="153" y1="258" x2="214" y2="266" stroke="#444" stroke-width="3"/>
+  <text x="54" y="66" font-size="13" fill="#0c7b08" font-weight="bold">设定值调节螺钉</text>
+  <text x="54" y="84" font-size="12" fill="#0c7b08">（调动作下限）</text>
+
+  <!-- 幅差调节机构 -->
+  <rect x="242" y="336" width="80" height="54" rx="5" fill="#077d59" stroke="#055f44" stroke-width="1.5"/>
+  <rect x="234" y="304" width="88" height="32" rx="3" fill="#eeeeee" stroke="#444" stroke-width="1.5"/>
+  <path d="M250 324 L266 314 L282 324 L298 314 L314 324" fill="none" stroke="#888" stroke-width="2" stroke-linejoin="round"/>
+  <line x1="282" y1="304" x2="282" y2="266" stroke="#666" stroke-width="3"/>
+  <text x="282" y="416" font-size="13" fill="#077d59" text-anchor="middle">幅差调节螺钉</text>
+  <text x="282" y="434" font-size="12" fill="#077d59" text-anchor="middle">（调上、下限之差）</text>
+
+  <!-- 动作方向标注 -->
+  <line x1="430" y1="452" x2="480" y2="416" stroke="#c0392b" stroke-width="2.5" marker-end="url(#arR)"/>
+  <text x="414" y="474" font-size="12" fill="#c0392b">温度升高 → 波纹管推动杠杆 → 触点切换</text>
+</svg>
