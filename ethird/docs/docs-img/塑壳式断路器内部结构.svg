@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 540" font-family="Microsoft YaHei,SimHei,sans-serif">
+  <rect width="900" height="540" fill="#f7f9fc"/>
+  <text x="450" y="28" text-anchor="middle" font-size="20" font-weight="bold" fill="#1a3a5c">塑壳式断路器内部结构（原理图）</text>
+
+  <!-- ── 三相主回路 ── -->
+  <g stroke-linecap="round">
+    <!-- 极1 -->
+    <g>
+      <line x1="200" y1="52" x2="200" y2="108" stroke="#c0392b" stroke-width="3"/>
+      <line x1="186" y1="114" x2="214" y2="114" stroke="#c0392b" stroke-width="6"/>
+      <line x1="200" y1="210" x2="200" y2="252" stroke="#c0392b" stroke-width="3"/>
+      <line x1="200" y1="312" x2="200" y2="332" stroke="#c0392b" stroke-width="3"/>
+      <line x1="200" y1="382" x2="200" y2="496" stroke="#c0392b" stroke-width="3"/>
+      <circle cx="200" cy="44" r="7" fill="#d4aa52" stroke="#6a5a28"/>
+      <circle cx="200" cy="504" r="7" fill="#d4aa52" stroke="#6a5a28"/>
+      <text x="214" y="48" font-size="14" font-weight="bold" fill="#c0392b">L1</text>
+      <text x="214" y="508" font-size="14" font-weight="bold" fill="#c0392b">T1</text>
+    </g>
+    <!-- 极2 -->
+    <g>
+      <line x1="340" y1="52" x2="340" y2="108" stroke="#27a04a" stroke-width="3"/>
+      <line x1="326" y1="114" x2="354" y2="114" stroke="#27a04a" stroke-width="6"/>
+      <line x1="340" y1="210" x2="340" y2="252" stroke="#27a04a" stroke-width="3"/>
+      <line x1="340" y1="312" x2="340" y2="332" stroke="#27a04a" stroke-width="3"/>
+      <line x1="340" y1="382" x2="340" y2="496" stroke="#27a04a" stroke-width="3"/>
+      <circle cx="340" cy="44" r="7" fill="#d4aa52" stroke="#6a5a28"/>
+      <circle cx="340" cy="504" r="7" fill="#d4aa52" stroke="#6a5a28"/>
+      <text x="354" y="48" font-size="14" font-weight="bold" fill="#27a04a">L2</text>
+      <text x="354" y="508" font-size="14" font-weight="bold" fill="#27a04a">T2</text>
+    </g>
+    <!-- 极3 -->
+    <g>
+      <line x1="480" y1="52" x2="480" y2="108" stroke="#2b6fd0" stroke-width="3"/>
+      <line x1="466" y1="114" x2="494" y2="114" stroke="#2b6fd0" stroke-width="6"/>
+      <line x1="480" y1="210" x2="480" y2="252" stroke="#2b6fd0" stroke-width="3"/>
+      <line x1="480" y1="312" x2="480" y2="332" stroke="#2b6fd0" stroke-width="3"/>
+      <line x1="480" y1="382" x2="480" y2="496" stroke="#2b6fd0" stroke-width="3"/>
+      <circle cx="480" cy="44" r="7" fill="#d4aa52" stroke="#6a5a28"/>
+      <circle cx="480" cy="504" r="7" fill="#d4aa52" stroke="#6a5a28"/>
+      <text x="494" y="48" font-size="14" font-weight="bold" fill="#2b6fd0">L3</text>
+      <text x="494" y="508" font-size="14" font-weight="bold" fill="#2b6fd0">T3</text>
+    </g>
+
+    <!-- 可动触头（断开状态，绕传动轴旋转） -->
+    <line x1="200" y1="210" x2="258" y2="140" stroke="#c8a040" stroke-width="7"/>
+    <line x1="340" y1="210" x2="398" y2="140" stroke="#c8a040" stroke-width="7"/>
+    <line x1="480" y1="210" x2="538" y2="140" stroke="#c8a040" stroke-width="7"/>
+    <circle cx="200" cy="210" r="5" fill="#5a6068"/>
+    <circle cx="340" cy="210" r="5" fill="#5a6068"/>
+    <circle cx="480" cy="210" r="5" fill="#5a6068"/>
+  </g>
+
+  <!-- 传动轴 -->
+  <line x1="170" y1="210" x2="720" y2="210" stroke="#7a8088" stroke-width="8" stroke-linecap="round"/>
+  <line x1="170" y1="210" x2="720" y2="210" stroke="#b8bec6" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- 电磁脱扣器线圈（每相 1 个） -->
+  <g>
+    <rect x="189" y="252" width="22" height="60" rx="6" fill="#c07830" stroke="#5a3410"/>
+    <rect x="329" y="252" width="22" height="60" rx="6" fill="#c07830" stroke="#5a3410"/>
+    <rect x="469" y="252" width="22" height="60" rx="6" fill="#c07830" stroke="#5a3410"/>
+    <line x1="191" y1="267" x2="209" y2="267" stroke="#5a3410"/>
+    <line x1="191" y1="282" x2="209" y2="282" stroke="#5a3410"/>
+    <line x1="191" y1="297" x2="209" y2="297" stroke="#5a3410"/>
+    <line x1="331" y1="267" x2="349" y2="267" stroke="#5a3410"/>
+    <line x1="331" y1="282" x2="349" y2="282" stroke="#5a3410"/>
+    <line x1="331" y1="297" x2="349" y2="297" stroke="#5a3410"/>
+    <line x1="471" y1="267" x2="489" y2="267" stroke="#5a3410"/>
+    <line x1="471" y1="282" x2="489" y2="282" stroke="#5a3410"/>
+    <line x1="471" y1="297" x2="489" y2="297" stroke="#5a3410"/>
+  </g>
+
+  <!-- 热脱扣器双金属片（每相 1 个） -->
+  <g>
+    <rect x="194" y="332" width="12" height="50" rx="2" fill="#e6e9ee" stroke="#b8bec6"/>
+    <rect x="334" y="332" width="12" height="50" rx="2" fill="#e6e9ee" stroke="#b8bec6"/>
+    <rect x="474" y="332" width="12" height="50" rx="2" fill="#e6e9ee" stroke="#b8bec6"/>
+    <line x1="200" y1="334" x2="200" y2="380" stroke="#b8892f" stroke-width="5"/>
+    <line x1="340" y1="334" x2="340" y2="380" stroke="#b8892f" stroke-width="5"/>
+    <line x1="480" y1="334" x2="480" y2="380" stroke="#b8892f" stroke-width="5"/>
+  </g>
+
+  <!-- 脱扣轴 -->
+  <line x1="160" y1="420" x2="700" y2="420" stroke="#8a6a30" stroke-width="6" stroke-linecap="round"/>
+  <line x1="700" y1="420" x2="700" y2="235" stroke="#8a6a30" stroke-width="4"/>
+
+  <!-- 自由脱扣机构（锁扣） -->
+  <rect x="672" y="182" width="56" height="56" rx="4" fill="none" stroke="#8a9099" stroke-dasharray="4 3"/>
+  <path d="M 700 236 L 700 210 L 684 210 L 684 196" fill="none" stroke="#5a6068" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- 操作手柄 + 手柄轴→传动轴（虚线） -->
+  <line x1="770" y1="130" x2="770" y2="196" stroke="#c0392b" stroke-width="9" stroke-linecap="round"/>
+  <circle cx="770" cy="124" r="9" fill="#e04a38" stroke="#7a1a12"/>
+  <circle cx="770" cy="200" r="5" fill="#3a3e44"/>
+  <line x1="770" y1="200" x2="720" y2="210" stroke="#9aa0a6" stroke-width="2" stroke-dasharray="5 4"/>
+
+  <!-- 分励脱扣器线圈 -->
+  <rect x="758" y="300" width="22" height="52" rx="5" fill="#b06a20" stroke="#5a3410"/>
+  <line x1="760" y1="315" x2="778" y2="315" stroke="#5a3410"/>
+  <line x1="760" y1="330" x2="778" y2="330" stroke="#5a3410"/>
+  <line x1="769" y1="352" x2="740" y2="420" stroke="#8a6a30" stroke-width="3"/>
+  <line x1="769" y1="300" x2="840" y2="300" stroke="#8a6a30" stroke-width="3"/>
+  <line x1="769" y1="352" x2="840" y2="352" stroke="#8a6a30" stroke-width="3"/>
+  <circle cx="848" cy="300" r="7" fill="#d4aa52" stroke="#6a5a28"/>
+  <circle cx="848" cy="352" r="7" fill="#d4aa52" stroke="#6a5a28"/>
+  <text x="858" y="304" font-size="13" font-weight="bold" fill="#6a3828">fla</text>
+  <text x="858" y="356" font-size="13" font-weight="bold" fill="#6a3828">flb</text>
+
+  <!-- ── 标注 ── -->
+  <g font-size="13" fill="#33475b">
+    <text x="60" y="118">主触头</text>
+    <line x1="112" y1="114" x2="184" y2="114" stroke="#33475b" stroke-dasharray="3 3"/>
+    <text x="60" y="204">传动轴</text>
+    <line x1="112" y1="200" x2="166" y2="208" stroke="#33475b" stroke-dasharray="3 3"/>
+    <text x="42" y="286">电磁脱扣器</text>
+    <line x1="124" y1="282" x2="187" y2="282" stroke="#33475b" stroke-dasharray="3 3"/>
+    <text x="20" y="360">热脱扣器（双金属片）</text>
+    <line x1="164" y1="356" x2="192" y2="356" stroke="#33475b" stroke-dasharray="3 3"/>
+    <text x="60" y="446">脱扣轴</text>
+    <line x1="112" y1="442" x2="158" y2="424" stroke="#33475b" stroke-dasharray="3 3"/>
+    <text x="742" y="112">操作手柄</text>
+    <text x="600" y="176">自由脱扣机构</text>
+    <text x="620" y="290">分励脱扣器</text>
+    <line x1="692" y1="286" x2="756" y2="310" stroke="#33475b" stroke-dasharray="3 3"/>
+  </g>
+
+  <text x="450" y="532" text-anchor="middle" font-size="12" fill="#7a8290">合闸：手柄经机构带动传动轴转动 → 三极可动触头同时闭合；跳闸：脱扣轴动作释放锁扣 → 传动轴回弹分闸</text>
+</svg>
