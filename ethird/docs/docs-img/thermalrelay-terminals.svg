@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 540" font-family="Microsoft YaHei, SimHei, sans-serif">
+  <rect width="660" height="540" fill="#ffffff"/>
+  <text x="330" y="28" text-anchor="middle" font-size="18" font-weight="bold" fill="#1a252f">图 1  热继电器结构与端子排列</text>
+
+  <!-- 面板 -->
+  <rect x="60" y="52" width="540" height="464" rx="10" fill="#f2efe8" stroke="#c8b8a0" stroke-width="2"/>
+  <rect x="62" y="54" width="536" height="24" rx="8" fill="#c8882a" opacity="0.16"/>
+  <line x1="340" y1="72" x2="340" y2="502" stroke="#8090a8" stroke-width="1.2" stroke-dasharray="5 4"/>
+  <text x="200" y="88" text-anchor="middle" font-size="13" font-weight="bold" fill="#7a6a50">三相热元件（双金属片）</text>
+  <text x="470" y="88" text-anchor="middle" font-size="13" font-weight="bold" fill="#3a5a7a">触点机构</text>
+
+  <!-- 三列热元件 -->
+  <g>
+    <!-- 列 1：L1/T1 -->
+    <text x="130" y="106" text-anchor="middle" font-size="12" font-weight="bold" fill="#c0392b">L1</text>
+    <circle cx="130" cy="118" r="10" fill="#d4aa52" stroke="#6a5a28" stroke-width="1.5"/>
+    <circle cx="130" cy="118" r="3.5" fill="#2a1a08"/>
+    <line x1="130" y1="128" x2="130" y2="146" stroke="#c0392b" stroke-width="2"/>
+    <rect x="119" y="146" width="10" height="212" fill="#4a5060"/>
+    <rect x="129" y="146" width="10" height="212" fill="#8a7040"/>
+    <polyline points="112,178 148,190 112,202 148,214 112,226 148,238 112,250 148,262 112,274 148,286 112,298 148,310 112,322 148,334"
+      fill="none" stroke="#c89020" stroke-width="2.4" stroke-linecap="round"/>
+    <line x1="130" y1="358" x2="130" y2="386" stroke="#c0392b" stroke-width="2"/>
+    <circle cx="130" cy="396" r="10" fill="#d4aa52" stroke="#6a5a28" stroke-width="1.5"/>
+    <circle cx="130" cy="396" r="3.5" fill="#2a1a08"/>
+    <text x="130" y="428" text-anchor="middle" font-size="12" font-weight="bold" fill="#c0392b">T1</text>
+
+    <!-- 列 2：L2/T2 -->
+    <text x="200" y="106" text-anchor="middle" font-size="12" font-weight="bold" fill="#20a030">L2</text>
+    <circle cx="200" cy="118" r="10" fill="#d4aa52" stroke="#6a5a28" stroke-width="1.5"/>
+    <circle cx="200" cy="118" r="3.5" fill="#2a1a08"/>
+    <line x1="200" y1="128" x2="200" y2="146" stroke="#20a030" stroke-width="2"/>
+    <rect x="189" y="146" width="10" height="212" fill="#4a5060"/>
+    <rect x="199" y="146" width="10" height="212" fill="#8a7040"/>
+    <polyline points="182,178 218,190 182,202 218,214 182,226 218,238 182,250 218,262 182,274 218,286 182,298 218,310 182,322 218,334"
+      fill="none" stroke="#c89020" stroke-width="2.4" stroke-linecap="round"/>
+    <line x1="200" y1="358" x2="200" y2="386" stroke="#20a030" stroke-width="2"/>
+    <circle cx="200" cy="396" r="10" fill="#d4aa52" stroke="#6a5a28" stroke-width="1.5"/>
+    <circle cx="200" cy="396" r="3.5" fill="#2a1a08"/>
+    <text x="200" y="428" text-anchor="middle" font-size="12" font-weight="bold" fill="#20a030">T2</text>
+
+    <!-- 列 3：L3/T3 -->
+    <text x="270" y="106" text-anchor="middle" font-size="12" font-weight="bold" fill="#2050e0">L3</text>
+    <circle cx="270" cy="118" r="10" fill="#d4aa52" stroke="#6a5a28" stroke-width="1.5"/>
+    <circle cx="270" cy="118" r="3.5" fill="#2a1a08"/>
+    <line x1="270" y1="128" x2="270" y2="146" stroke="#2050e0" stroke-width="2"/>
+    <rect x="259" y="146" width="10" height="212" fill="#4a5060"/>
+    <rect x="269" y="146" width="10" height="212" fill="#8a7040"/>
+    <polyline points="252,178 288,190 252,202 288,214 252,226 288,238 252,250 288,262 252,274 288,286 252,298 288,310 252,322 288,334"
+      fill="none" stroke="#c89020" stroke-width="2.4" stroke-linecap="round"/>
+    <line x1="270" y1="358" x2="270" y2="386" stroke="#2050e0" stroke-width="2"/>
+    <circle cx="270" cy="396" r="10" fill="#d4aa52" stroke="#6a5a28" stroke-width="1.5"/>
+    <circle cx="270" cy="396" r="3.5" fill="#2a1a08"/>
+    <text x="270" y="428" text-anchor="middle" font-size="12" font-weight="bold" fill="#2050e0">T3</text>
+
+    <!-- 挡板 + 推杆 -->
+    <rect x="104" y="372" width="192" height="10" rx="2" fill="#90a0b8" stroke="#607080" stroke-width="1"/>
+    <rect x="150" y="350" width="8" height="24" fill="#90a0b8" stroke="#607080" stroke-width="0.8"/>
+    <rect x="220" y="350" width="8" height="24" fill="#90a0b8" stroke="#607080" stroke-width="0.8"/>
+    <line x1="296" y1="377" x2="404" y2="377" stroke="#a0b0c0" stroke-width="3" stroke-linecap="round"/>
+    <text x="160" y="406" text-anchor="middle" font-size="11" fill="#607080">挡板 / 推杆</text>
+  </g>
+
+  <!-- 右侧触点机构 -->
+  <g>
+    <!-- TRIP 指示灯 -->
+    <circle cx="400" cy="112" r="9" fill="#c0392b" stroke="#7a1a12" stroke-width="1.2"/>
+    <text x="400" y="98" text-anchor="middle" font-size="11" fill="#7a2a20">TRIP</text>
+    <!-- RESET -->
+    <circle cx="500" cy="112" r="14" fill="#cc2020" stroke="#660808" stroke-width="1.5"/>
+    <text x="500" y="116" text-anchor="middle" font-size="8" font-weight="bold" fill="#fff8f0">RESET</text>
+
+    <!-- 触点臂（绕支点） -->
+    <circle cx="420" cy="270" r="5" fill="#c0c8d8" stroke="#809098" stroke-width="1.2"/>
+    <line x1="446" y1="176" x2="446" y2="364" stroke="#6070a0" stroke-width="8" stroke-linecap="round"/>
+
+    <!-- NC 触头（上） -->
+    <line x1="396" y1="176" x2="420" y2="176" stroke="#8a5a30" stroke-width="2"/>
+    <rect x="390" y="172" width="12" height="8" rx="1" fill="#8a5a30"/>
+    <circle cx="446" cy="176" r="4" fill="#e06020" stroke="#b04010" stroke-width="1"/>
+    <line x1="400" y1="176" x2="560" y2="176" stroke="#e06020" stroke-width="1.6"/>
+    <text x="510" y="166" text-anchor="middle" font-size="11" fill="#8a5a30">NC 常闭</text>
+
+    <!-- NO 触头（下） -->
+    <rect x="390" y="360" width="12" height="8" rx="1" fill="#1a5080"/>
+    <circle cx="446" cy="364" r="4" fill="#2080d0" stroke="#1060b0" stroke-width="1"/>
+    <line x1="446" y1="364" x2="560" y2="364" stroke="#2080d0" stroke-width="1.6"/>
+    <text x="510" y="390" text-anchor="middle" font-size="11" fill="#1a5080">NO 常开</text>
+
+    <!-- 端口 95/96 -->
+    <circle cx="576" cy="160" r="11" fill="#8a5a30" stroke="#5a3a18" stroke-width="1.4"/>
+    <text x="576" y="164" text-anchor="middle" font-size="11" font-weight="bold" fill="#fff">95</text>
+    <line x1="560" y1="176" x2="568" y2="166" stroke="#8a5a30" stroke-width="1.4"/>
+    <circle cx="576" cy="196" r="11" fill="#e06020" stroke="#a04010" stroke-width="1.4"/>
+    <text x="576" y="200" text-anchor="middle" font-size="11" font-weight="bold" fill="#fff">96</text>
+    <line x1="560" y1="176" x2="568" y2="192" stroke="#e06020" stroke-width="1.4" stroke-dasharray="3 2"/>
+
+    <!-- 端口 97/98 -->
+    <circle cx="576" cy="348" r="11" fill="#1a5080" stroke="#0a3050" stroke-width="1.4"/>
+    <text x="576" y="352" text-anchor="middle" font-size="11" font-weight="bold" fill="#fff">97</text>
+    <line x1="560" y1="364" x2="568" y2="352" stroke="#1a5080" stroke-width="1.4"/>
+    <circle cx="576" cy="384" r="11" fill="#2080d0" stroke="#1060b0" stroke-width="1.4"/>
+    <text x="576" y="388" text-anchor="middle" font-size="11" font-weight="bold" fill="#fff">98</text>
+    <line x1="560" y1="364" x2="568" y2="382" stroke="#2080d0" stroke-width="1.4" stroke-dasharray="3 2"/>
+
+    <!-- 整定旋钮 -->
+    <circle cx="500" cy="272" r="36" fill="#e8e2d6" stroke="#505870" stroke-width="2.5"/>
+    <g stroke="#504030" stroke-width="1.2">
+      <line x1="500" y1="240" x2="500" y2="248"/>
+      <line x1="528" y1="254" x2="522" y2="260"/>
+      <line x1="472" y1="254" x2="478" y2="260"/>
+    </g>
+    <line x1="500" y1="272" x2="500" y2="248" stroke="#e03030" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="500" cy="272" r="5" fill="#384050"/>
+    <text x="500" y="326" text-anchor="middle" font-size="11" fill="#605040">整定旋钮 5~15 A</text>
+
+    <!-- 推杆到触点的虚线 -->
+    <line x1="404" y1="377" x2="420" y2="272" stroke="#8a9bb8" stroke-width="1.4" stroke-dasharray="5 4"/>
+  </g>
+
+  <!-- 底部说明 -->
+  <rect x="76" y="446" width="508" height="58" rx="6" fill="#fbfbf3" stroke="#ddd"/>
+  <text x="88" y="466" font-size="12.5" fill="#2d3436">主电路：L1/L2/L3（进线）→ 热元件 → T1/T2/T3（出线，接负载）</text>
+  <text x="88" y="485" font-size="12.5" fill="#2d3436">辅助触头：95-96 常闭 NC（过载断开）；97-98 常开 NO（过载闭合）</text>
+</svg>
