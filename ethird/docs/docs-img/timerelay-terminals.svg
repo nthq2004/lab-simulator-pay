@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 540" font-family="Microsoft YaHei, SimHei, sans-serif">
+  <rect width="640" height="540" fill="#ffffff"/>
+  <text x="320" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#1a252f">图 1  JSZ3 系列时间继电器端子排列与功能</text>
+
+  <!-- 外壳 -->
+  <rect x="60" y="50" width="520" height="470" rx="12" fill="#f4f0e8" stroke="#b8a898" stroke-width="2"/>
+
+  <!-- 左侧刻度盘 -->
+  <circle cx="170" cy="285" r="90" fill="#ece8e0" stroke="#a09080" stroke-width="1.5"/>
+  <line x1="170" y1="285" x2="170" y2="215" stroke="#d63031" stroke-width="2.5"/>
+  <circle cx="170" cy="285" r="5" fill="#302818"/>
+  <text x="170" y="320" text-anchor="middle" font-size="13" fill="#605040">延时刻度盘</text>
+  <text x="170" y="338" text-anchor="middle" font-size="12" fill="#605040">0 ~ 30 s</text>
+  <text x="170" y="200" text-anchor="middle" font-size="12" fill="#605040">0</text>
+  <text x="120" y="290" text-anchor="middle" font-size="12" fill="#605040">30</text>
+
+  <!-- 右侧端子圆环 -->
+  <circle cx="450" cy="285" r="130" fill="#ece8e0" stroke="#a09080" stroke-width="1.5"/>
+  <text x="450" y="285" text-anchor="middle" font-size="13" fill="#605040">端子</text>
+
+  <!-- 端子：编号 + 坐标（对应 angle 定义）-->
+  <!-- 1 com_b 112.5 -->
+  <circle cx="400" cy="405" r="15" fill="#d0c8b8" stroke="#605040" stroke-width="2"/>
+  <text x="400" y="410" text-anchor="middle" font-size="13" font-weight="bold" fill="#202020">1</text>
+  <!-- 2 l 157.5 -->
+  <circle cx="330" cy="335" r="15" fill="#d0c8b8" stroke="#605040" stroke-width="2"/>
+  <text x="330" y="340" text-anchor="middle" font-size="13" font-weight="bold" fill="#202020">2</text>
+  <!-- 3 no_b 202.5 -->
+  <circle cx="330" cy="235" r="15" fill="#f0c0b8" stroke="#d04020" stroke-width="2"/>
+  <text x="330" y="240" text-anchor="middle" font-size="13" font-weight="bold" fill="#d03020">3</text>
+  <!-- 4 nc_b 247.5 -->
+  <circle cx="400" cy="165" r="15" fill="#d0c8b8" stroke="#605040" stroke-width="2"/>
+  <text x="400" y="170" text-anchor="middle" font-size="13" font-weight="bold" fill="#202020">4</text>
+  <!-- 5 nc_a 292.5 -->
+  <circle cx="500" cy="165" r="15" fill="#d0c8b8" stroke="#605040" stroke-width="2"/>
+  <text x="500" y="170" text-anchor="middle" font-size="13" font-weight="bold" fill="#202020">5</text>
+  <!-- 6 no_a 337.5 -->
+  <circle cx="570" cy="235" r="15" fill="#f0c0b8" stroke="#d04020" stroke-width="2"/>
+  <text x="570" y="240" text-anchor="middle" font-size="13" font-weight="bold" fill="#d03020">6</text>
+  <!-- 7 r 22.5 -->
+  <circle cx="570" cy="335" r="15" fill="#d0c8b8" stroke="#605040" stroke-width="2"/>
+  <text x="570" y="340" text-anchor="middle" font-size="13" font-weight="bold" fill="#202020">7</text>
+  <!-- 8 com_a 67.5 -->
+  <circle cx="500" cy="405" r="15" fill="#d0c8b8" stroke="#605040" stroke-width="2"/>
+  <text x="500" y="410" text-anchor="middle" font-size="13" font-weight="bold" fill="#202020">8</text>
+
+  <!-- 线圈标注 -->
+  <path d="M345 325 Q375 300 410 300" fill="none" stroke="#1a6fb5" stroke-width="1.6" stroke-dasharray="5 4"/>
+  <path d="M555 325 Q525 300 490 300" fill="none" stroke="#1a6fb5" stroke-width="1.6" stroke-dasharray="5 4"/>
+  <rect x="410" y="286" width="80" height="28" rx="4" fill="#e3eefb" stroke="#1a6fb5"/>
+  <text x="450" y="305" text-anchor="middle" font-size="13" fill="#1a6fb5">线圈 2-7</text>
+
+  <!-- 触头标注 -->
+  <rect x="390" y="435" width="190" height="72" rx="6" fill="#fafafa" stroke="#ccc"/>
+  <text x="402" y="458" font-size="11.5" fill="#2d3436">常开 NO：1-3、6-8</text>
+  <text x="402" y="480" font-size="11.5" fill="#2d3436">常闭 NC：1-4、5-8</text>
+  <text x="402" y="500" font-size="11" fill="#888">公共端 1、8；红=常开</text>
+
+  <!-- 指示灯 -->
+  <circle cx="110" cy="470" r="9" fill="#c0392b"/>
+  <text x="126" y="475" font-size="12" fill="#2d3436">电源/计时指示</text>
+  <circle cx="250" cy="470" r="9" fill="#27ae60"/>
+  <text x="266" y="475" font-size="12" fill="#2d3436">OUTPUT 输出指示</text>
+
+  <text x="320" y="530" text-anchor="middle" font-size="12" fill="#888">端子 2、7 为线圈接线端；同一组触头的公共端为 1 或 8</text>
+</svg>

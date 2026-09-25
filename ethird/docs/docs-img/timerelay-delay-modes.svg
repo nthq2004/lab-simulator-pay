@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 560" font-family="Microsoft YaHei, SimHei, sans-serif">
+  <rect width="760" height="560" fill="#ffffff"/>
+  <text x="380" y="28" text-anchor="middle" font-size="18" font-weight="bold" fill="#1a252f">图 2  通电延时（JSZ3）与断电延时（JSZ3N）动作时序对比</text>
+
+  <!-- ============ 上：通电延时 ============ -->
+  <text x="30" y="60" font-size="15" font-weight="bold" fill="#1a6fb5">通电延时型 JSZ3：得电→延时动作；失电→立即复位</text>
+  <line x1="90" y1="190" x2="710" y2="190" stroke="#bbb" stroke-width="1.5"/>
+  <line x1="90" y1="200" x2="90" y2="100" stroke="#bbb" stroke-width="1.5"/>
+  <text x="60" y="115" font-size="12" fill="#666">线圈</text>
+  <text x="60" y="185" font-size="12" fill="#666">触头</text>
+
+  <!-- 线圈波形 -->
+  <polyline points="90,190 160,190 160,115 560,115 560,190 710,190"
+            fill="none" stroke="#1a6fb5" stroke-width="2.5"/>
+  <text x="110" y="108" font-size="12" fill="#1a6fb5">线圈电压</text>
+  <text x="150" y="210" font-size="12" fill="#666">得电</text>
+  <text x="548" y="210" font-size="12" fill="#666">失电</text>
+
+  <!-- 触头波形 -->
+  <polyline points="90,175 220,175 220,130 560,130 560,175 710,175"
+            fill="none" stroke="#d35400" stroke-width="2.5"/>
+  <text x="360" y="152" font-size="12" fill="#d35400">NO 触头闭合</text>
+
+  <!-- 延时间隔 -->
+  <line x1="160" y1="95" x2="220" y2="95" stroke="#c0392b" stroke-width="1.5"/>
+  <line x1="160" y1="90" x2="160" y2="100" stroke="#c0392b" stroke-width="1.5"/>
+  <line x1="220" y1="90" x2="220" y2="100" stroke="#c0392b" stroke-width="1.5"/>
+  <text x="190" y="85" text-anchor="middle" font-size="12" fill="#c0392b">延时 t</text>
+  <text x="232" y="142" font-size="12" fill="#c0392b">延时到达才动作</text>
+
+  <!-- 分隔线 -->
+  <line x1="30" y1="255" x2="730" y2="255" stroke="#e0e0e0" stroke-width="1.5"/>
+
+  <!-- ============ 下：断电延时 ============ -->
+  <text x="30" y="292" font-size="15" font-weight="bold" fill="#8e44ad">断电延时型 JSZ3N：得电→瞬时动作；失电→延时复位</text>
+  <line x1="90" y1="420" x2="710" y2="420" stroke="#bbb" stroke-width="1.5"/>
+  <line x1="90" y1="430" x2="90" y2="330" stroke="#bbb" stroke-width="1.5"/>
+  <text x="60" y="345" font-size="12" fill="#666">线圈</text>
+  <text x="60" y="415" font-size="12" fill="#666">触头</text>
+
+  <!-- 线圈波形 -->
+  <polyline points="90,420 160,420 160,345 480,345 480,420 710,420"
+            fill="none" stroke="#8e44ad" stroke-width="2.5"/>
+  <text x="110" y="338" font-size="12" fill="#8e44ad">线圈电压</text>
+  <text x="150" y="440" font-size="12" fill="#666">得电</text>
+  <text x="468" y="440" font-size="12" fill="#666">失电</text>
+
+  <!-- 触头波形 -->
+  <polyline points="90,405 160,405 160,360 560,360 560,405 710,405"
+            fill="none" stroke="#d35400" stroke-width="2.5"/>
+  <text x="360" y="382" font-size="12" fill="#d35400">NO 触头保持闭合</text>
+
+  <!-- 延时间隔 -->
+  <line x1="480" y1="325" x2="560" y2="325" stroke="#c0392b" stroke-width="1.5"/>
+  <line x1="480" y1="320" x2="480" y2="330" stroke="#c0392b" stroke-width="1.5"/>
+  <line x1="560" y1="320" x2="560" y2="330" stroke="#c0392b" stroke-width="1.5"/>
+  <text x="520" y="315" text-anchor="middle" font-size="12" fill="#c0392b">延时 t</text>
+  <text x="572" y="350" font-size="12" fill="#c0392b">延时结束才复位</text>
+
+  <text x="380" y="505" text-anchor="middle" font-size="13" fill="#2d3436">对照：JSZ3 的延时发生在“得电之后”，JSZ3N 的延时发生在“失电之后”，两者正好相反。</text>
+  <text x="380" y="530" text-anchor="middle" font-size="12" fill="#888">时间继电器延时范围 0~30s，可通过刻度盘旋钮或参数设置界面调整。</text>
+</svg>

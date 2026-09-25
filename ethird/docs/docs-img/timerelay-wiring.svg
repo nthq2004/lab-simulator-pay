@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 520" font-family="Microsoft YaHei, SimHei, sans-serif">
+  <rect width="780" height="520" fill="#ffffff"/>
+  <text x="390" y="28" text-anchor="middle" font-size="18" font-weight="bold" fill="#1a252f">图 3  时间继电器实验接线示意（线圈通电 + 万用表测触头）</text>
+
+  <!-- 电源 -->
+  <rect x="60" y="90" width="170" height="160" rx="8" fill="#dfe6e9" stroke="#2d3436" stroke-width="2"/>
+  <text x="145" y="140" text-anchor="middle" font-size="13" font-weight="bold" fill="#2d3436">单相交流电源</text>
+  <text x="145" y="160" text-anchor="middle" font-size="12" fill="#2d3436">220V / 50Hz</text>
+  <circle cx="110" cy="195" r="10" fill="#078d67"/>
+  <text x="128" y="199" font-size="12" fill="#2d3436">电源按钮</text>
+  <!-- 电源端子 -->
+  <circle cx="230" cy="140" r="7" fill="#1a6fb5"/>
+  <text x="238" y="136" font-size="12" fill="#1a6fb5">P</text>
+  <circle cx="230" cy="200" r="7" fill="#444"/>
+  <text x="238" y="205" font-size="12" fill="#444">N</text>
+
+  <!-- 继电器 -->
+  <rect x="470" y="90" width="260" height="170" rx="8" fill="#f4f0e8" stroke="#b8a898" stroke-width="2"/>
+  <text x="600" y="135" text-anchor="middle" font-size="13" font-weight="bold" fill="#2d3436">时间继电器 JSZ3</text>
+  <text x="600" y="155" text-anchor="middle" font-size="12" fill="#605040">延时刻度盘 0~30s</text>
+  <circle cx="470" cy="130" r="7" fill="#d0c8b8" stroke="#605040" stroke-width="2"/>
+  <text x="452" y="126" font-size="12" fill="#202020">7</text>
+  <circle cx="470" cy="190" r="7" fill="#d0c8b8" stroke="#605040" stroke-width="2"/>
+  <text x="452" y="195" font-size="12" fill="#202020">2</text>
+  <text x="500" y="188" font-size="12" fill="#1a6fb5">线圈 2-7</text>
+  <!-- 触头端子 -->
+  <circle cx="530" cy="260" r="7" fill="#d0c8b8" stroke="#605040" stroke-width="2"/>
+  <text x="524" y="282" font-size="12" fill="#202020">5</text>
+  <circle cx="620" cy="260" r="7" fill="#f0c0b8" stroke="#d04020" stroke-width="2"/>
+  <text x="614" y="282" font-size="12" fill="#d03020">6</text>
+  <circle cx="690" cy="260" r="7" fill="#d0c8b8" stroke="#605040" stroke-width="2"/>
+  <text x="684" y="282" font-size="12" fill="#202020">8</text>
+  <text x="628" y="232" text-anchor="middle" font-size="11.5" fill="#888">NC 5-8 ／ NO 6-8</text>
+
+  <!-- 电源连线（实线） -->
+  <polyline points="230,140 350,140 350,130 470,130" fill="none" stroke="#c0392b" stroke-width="2.5"/>
+  <text x="300" y="128" text-anchor="middle" font-size="12" fill="#c0392b">P → 端子 7</text>
+  <polyline points="230,200 350,200 350,190 470,190" fill="none" stroke="#2d3436" stroke-width="2.5"/>
+  <text x="300" y="218" text-anchor="middle" font-size="12" fill="#2d3436">N → 端子 2</text>
+
+  <!-- 万用表 -->
+  <rect x="450" y="370" width="320" height="105" rx="8" fill="#eef3f6" stroke="#2d3436" stroke-width="2"/>
+  <text x="610" y="398" text-anchor="middle" font-size="13" font-weight="bold" fill="#2d3436">数字万用表（200Ω 电阻档）</text>
+  <circle cx="510" cy="370" r="8" fill="#c0392b"/>
+  <text x="522" y="374" font-size="12" fill="#c0392b">V（红表笔）</text>
+  <circle cx="690" cy="370" r="8" fill="#2d3436"/>
+  <text x="660" y="412" text-anchor="middle" font-size="12" fill="#2d3436">COM（黑表笔）</text>
+  <text x="610" y="452" text-anchor="middle" font-size="12" fill="#888">测常闭 5-8 时会显示 O.L；改接端子 6 可测常开 6-8</text>
+
+  <!-- 表笔（虚线） -->
+  <polyline points="510,370 510,310 530,310 530,267" fill="none" stroke="#c0392b" stroke-width="2" stroke-dasharray="7 5"/>
+  <polyline points="690,370 690,267" fill="none" stroke="#2d3436" stroke-width="2" stroke-dasharray="7 5"/>
+
+  <text x="390" y="498" text-anchor="middle" font-size="12" fill="#2d3436">实线：电源与线圈接线（2、7）　　虚线：万用表表笔（5/6 与 8）</text>
+</svg>
