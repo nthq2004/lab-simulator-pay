@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <title>电动三速锚机仿真系统</title>
 
-    <!-- 外部CSS -->
+    <!-- 外部CSS -->
+
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon-bUNewI43.png">
   <script type="module" crossorigin>var e=Object.defineProperty,t=(e,t,n)=>()=>{if(n)throw n[0];try{return e&&(t=e(e=0)),t}catch(e){throw n=[e],e}},n=(t,n)=>{let r={};for(var i in t)e(r,i,{get:t[i],enumerable:!0});return n||e(r,Symbol.toStringTag,{value:`Module`}),r};(function(){let e=document.createElement(`link`).relList;if(e&&e.supports&&e.supports(`modulepreload`))return;for(let e of document.querySelectorAll(`link[rel="modulepreload"]`))n(e);new MutationObserver(e=>{for(let t of e)if(t.type===`childList`)for(let e of t.addedNodes)e.tagName===`LINK`&&e.rel===`modulepreload`&&n(e)}).observe(document,{childList:!0,subtree:!0});function t(e){let t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),t.credentials=e.crossOrigin===`use-credentials`?`include`:e.crossOrigin===`anonymous`?`omit`:`same-origin`,t}function n(e){if(e.ep)return;e.ep=!0;let n=t(e);fetch(e.href,n)}})();var r=Math.PI/180;function i(){return typeof window<`u`&&({}.toString.call(window)===`[object Window]`||{}.toString.call(window)===`[object global]`)}var a=typeof global<`u`?global:typeof window<`u`?window:typeof WorkerGlobalScope<`u`?self:{},o={_global:a,version:`10.3.2`,isBrowser:i(),isUnminified:/param/.test(function(e){}.toString()),dblClickWindow:400,getAngle(e){return o.angleDeg?e*r:e},enableTrace:!1,pointerEventsEnabled:!0,autoDrawEnabled:!0,hitOnDragEnabled:!1,capturePointerEventsEnabled:!1,_mouseListenClick:!1,_touchListenClick:!1,_pointerListenClick:!1,_mouseInDblClickWindow:!1,_touchInDblClickWindow:!1,_pointerInDblClickWindow:!1,_mouseDblClickPointerId:null,_touchDblClickPointerId:null,_pointerDblClickPointerId:null,_renderBackend:`web`,legacyTextRendering:!1,pixelRatio:typeof window<`u`&&window.devicePixelRatio||1,dragDistance:3,angleDeg:!0,showWarnings:!0,dragButtons:[0,1],isDragging(){return o.DD.isDragging},isTransforming(){return o.Transformer?.isTransforming()??!1},isDragReady(){return!!o.DD.node},releaseCanvasOnDestroy:!0,document:a.document,_injectGlobal(e){a.Konva!==void 0&&console.error(`Several Konva instances detected. It is not recommended to use multiple Konva instances in the same environment.`),a.Konva=e}},s=e=>{o[e.prototype.getClassName()]=e};o._injectGlobal(o);var c=`Konva.js unsupported environment.
 
@@ -268,6 +269,14 @@ LOOP`,xr:.74,fill:`#c00`},{label:`COM`,xr:.9,fill:`#222`}],o=10*e,s=n-30*e;a.for
     #docContent blockquote{border-left:4px solid #c8a95c;padding:12px 20px;background:#f3ecdb;border-radius:0 8px 8px 0;margin:16px 0;color:#5c5542;}
     #docContent hr{border:none;border-top:1px solid #e0d8c0;margin:28px 0;}
     #docContent h1[id],#docContent h2[id]{scroll-margin-top:74px;}
+    /* ===== 轻量公式渲染（\frac、上下标、\sqrt、希腊字母等）===== */
+    .mblock{display:block;text-align:center;margin:18px 0;font-size:1.12em;line-height:2;}
+    .mf{display:inline-flex;flex-direction:column;vertical-align:middle;text-align:center;margin:0 3px;font-size:.94em;}
+    .mf-n{border-bottom:1.5px solid currentColor;padding:0 5px;line-height:1.2;}
+    .mf-d{padding:0 5px;line-height:1.2;}
+    .msqrt-a{border-top:1.5px solid currentColor;padding:0 3px;margin-left:1px;}
+    .msup{font-size:.76em;vertical-align:super;line-height:0;}
+    .msub{font-size:.76em;vertical-align:sub;line-height:0;}
 
     /* 左侧目录 */
     #docToc{position:sticky;top:76px;width:248px;flex-shrink:0;background:#fff;border:1px solid #e8e1cc;border-radius:10px;padding:16px 14px;max-height:calc(100vh - 110px);overflow-y:auto;box-shadow:0 2px 10px rgba(120,105,60,.08);}
@@ -355,6 +364,80 @@ LOOP`,xr:.74,fill:`#c00`},{label:`COM`,xr:.9,fill:`#222`}],o=10*e,s=n-30*e;a.for
   }
 
   // marked 缺陷修复：把残留的 **内容** 转为 <strong>（避开 pre/code 内文本）
+  // ===== 轻量 LaTeX 公式渲染 =====
+  var TEX_SYM = {'Delta':'\u0394','delta':'\u03b4','omega':'\u03c9','Omega':'\u03a9','alpha':'\u03b1','beta':'\u03b2','gamma':'\u03b3','theta':'\u03b8','lambda':'\u03bb','mu':'\u03bc','pi':'\u03c0','rho':'\u03c1','sigma':'\u03c3','tau':'\u03c4','phi':'\u03c6','varphi':'\u03c6','eta':'\u03b7','nu':'\u03bd','xi':'\u03be','zeta':'\u03b6','psi':'\u03c8','epsilon':'\u03b5','times':'\u00d7','cdot':'\u00b7','div':'\u00f7','pm':'\u00b1','le':'\u2264','leq':'\u2264','ge':'\u2265','geq':'\u2265','ne':'\u2260','neq':'\u2260','approx':'\u2248','equiv':'\u2261','propto':'\u221d','infty':'\u221e','sum':'\u2211','int':'\u222b','angle':'\u2220','perp':'\u22a5','parallel':'\u2225','degree':'\u00b0','circ':'\u00b0','to':'\u2192','rightarrow':'\u2192','leftarrow':'\u2190','Rightarrow':'\u21d2','Leftarrow':'\u21d0','leftrightarrow':'\u2194','in':'\u2208','notin':'\u2209','cup':'\u222a','cap':'\u2229','subset':'\u2282','ldots':'\u2026','cdots':'\u22ef'};
+  function texArg(s, i){
+    if(s.charAt(i) !== '{') return null;
+    var d = 0;
+    for(var j = i; j < s.length; j++){
+      var c = s.charAt(j);
+      if(c === '{') d++;
+      else if(c === '}'){ d--; if(d === 0) return { arg: s.slice(i+1, j), end: j+1 }; }
+    }
+    return null;
+  }
+  function texRender(src){
+    var out = '', i = 0;
+    while(i < src.length){
+      var c = src.charAt(i);
+      if(c === '\\'){
+        var m = /^\\([a-zA-Z]+)/.exec(src.slice(i));
+        if(m){
+          var name = m[1], p = i + m[0].length;
+          if(name === 'frac'){
+            var a1 = texArg(src, p);
+            if(a1){ var a2 = texArg(src, a1.end);
+              if(a2){ out += '<span class="mf"><span class="mf-n">' + texRender(a1.arg) + '</span><span class="mf-d">' + texRender(a2.arg) + '</span></span>'; i = a2.end; continue; }
+            }
+            out += '\\frac'; i = p; continue;
+          }
+          if(name === 'sqrt'){
+            var a3 = texArg(src, p);
+            if(a3){ out += '<span class="msqrt">\u221a<span class="msqrt-a">' + texRender(a3.arg) + '</span></span>'; i = a3.end; continue; }
+            out += '\u221a'; i = p; continue;
+          }
+          if(name === 'text' || name === 'mathrm'){
+            var a4 = texArg(src, p);
+            if(a4){ out += escapeHtml(a4.arg); i = a4.end; continue; }
+          }
+          if(TEX_SYM[name] !== undefined){ out += TEX_SYM[name]; i = p; continue; }
+          out += m[0]; i = p; continue;
+        }
+        out += '\\'; i++; continue;
+      }
+      if(c === '^' || c === '_'){
+        var cls = c === '^' ? 'msup' : 'msub', np = i + 1, arg = null;
+        if(src.charAt(np) === '{'){ var a5 = texArg(src, np); if(a5){ arg = a5.arg; np = a5.end; } }
+        if(arg === null){ arg = src.charAt(np); np = np + 1; }
+        out += '<span class="' + cls + '">' + texRender(arg) + '</span>'; i = np; continue;
+      }
+      out += escapeHtml(c); i++;
+    }
+    return out;
+  }
+  // 把 $$...$$（行间）与 $...$（行内）提取为占位符，避免被 marked 误解析
+  function extractFormulas(md, store){
+    md = md.replace(/\$\$([\s\S]+?)\$\$/g, function(all, tex){
+      store.push({ tex: tex, block: true });
+      return '\n\nFMLPH' + (store.length - 1) + 'PH\n\n';
+    });
+    md = md.replace(/\$([^\$\n]+?)\$/g, function(all, tex){
+      store.push({ tex: tex, block: false });
+      return 'FMLPH' + (store.length - 1) + 'PH';
+    });
+    return md;
+  }
+  // 把占位符替换为渲染后的公式
+  function renderFormulas(root, store){
+    if(!store || !store.length) return;
+    root.innerHTML = root.innerHTML.replace(/FMLPH(\d+)PH/g, function(all, n){
+      var f = store[+n];
+      if(!f) return all;
+      var body = texRender(f.tex.trim());
+      return f.block ? '<span class="mblock">' + body + '</span>' : body;
+    });
+  }
+
   function fixStarEmphasis(root){
     var codeNodes = new Set();
     var list = root.querySelectorAll('pre code');
@@ -410,9 +493,13 @@ LOOP`,xr:.74,fill:`#c00`},{label:`COM`,xr:.9,fill:`#222`}],o=10*e,s=n-30*e;a.for
       var md = await resp.text();
       // 修正图片路径：docs-img/ → docs/docs-img/
       md = md.replace(/]\(docs-img\//g, '](docs/docs-img/').replace(/]\(images\//g, '](docs/docs-img/');
+      // 提取 LaTeX 公式为占位符（避免被 marked 误解析）
+      var formulas = [];
+      md = extractFormulas(md, formulas);
       // 解析 Markdown
       if(typeof marked !== 'undefined'){
         docContent.innerHTML = marked.parse(md);
+      renderFormulas(docContent, formulas);
         // 修复 marked 对含括号强调（如 **变极调速**）不解析的缺陷
         fixStarEmphasis(docContent);
       } else {
@@ -527,7 +614,8 @@ LOOP`,xr:.74,fill:`#c00`},{label:`COM`,xr:.9,fill:`#222`}],o=10*e,s=n-30*e;a.for
 
     <!-- Konva容器 -->
     <div id="container"></div>
-    <!-- 主程序 -->
+    <!-- 主程序 -->
+
 
 </body>
 </html>
