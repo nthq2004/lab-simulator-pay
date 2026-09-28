@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="380" viewBox="0 0 920 380" font-family="Microsoft YaHei, SimHei, sans-serif">
+  <rect x="0" y="0" width="920" height="380" fill="#f7f9fc"/>
+  <text x="24" y="38" font-size="22" font-weight="bold" fill="#1f3a5f">RJ45 水晶头线序（第 1~8 脚，卡扣朝下，从左到右）</text>
+
+  <!-- 表头 -->
+  <g font-size="15" fill="#334155">
+    <text x="24" y="86">线序标准</text>
+    <text x="150" y="86">第 1 脚</text>
+    <text x="245" y="86">第 2 脚</text>
+    <text x="340" y="86">第 3 脚</text>
+    <text x="435" y="86">第 4 脚</text>
+    <text x="530" y="86">第 5 脚</text>
+    <text x="625" y="86">第 6 脚</text>
+    <text x="720" y="86">第 7 脚</text>
+    <text x="815" y="86">第 8 脚</text>
+  </g>
+
+  <!-- T568B -->
+  <text x="24" y="150" font-size="18" font-weight="bold" fill="#0f766e">T568B</text>
+  <g transform="translate(150,112)">
+    <g><rect width="70" height="48" rx="6" fill="#E8A33D"/><rect x="18" y="20" width="34" height="8" rx="3" fill="#ffffff" opacity="0.9"/><text x="35" y="66" text-anchor="middle" font-size="12" fill="#334155">白橙</text></g>
+    <g transform="translate(95,0)"><rect width="70" height="48" rx="6" fill="#FF7A00"/><text x="35" y="66" text-anchor="middle" font-size="12" fill="#334155">橙</text></g>
+    <g transform="translate(190,0)"><rect width="70" height="48" rx="6" fill="#69C24A"/><rect x="18" y="20" width="34" height="8" rx="3" fill="#ffffff" opacity="0.9"/><text x="35" y="66" text-anchor="middle" font-size="12" fill="#334155">白绿</text></g>
+    <g transform="translate(285,0)"><rect width="70" height="48" rx="6" fill="#2F6FE0"/><text x="35" y="66" text-anchor="middle" font-size="12" fill="#334155">蓝</text></g>
+    <g transform="translate(380,0)"><rect width="70" height="48" rx="6" fill="#7FA8F0"/><rect x="18" y="20" width="34" height="8" rx="3" fill="#ffffff" opacity="0.9"/><text x="35" y="66" text-anchor="middle" font-size="12" fill="#334155">白蓝</text></g>
+    <g transform="translate(475,0)"><rect width="70" height="48" rx="6" fill="#1E9E38"/><text x="35" y="66" text-anchor="middle" font-size="12" fill="#334155">绿</text></g>
+    <g transform="translate(570,0)"><rect width="70" height="48" rx="6" fill="#A9763C"/><rect x="18" y="20" width="34" height="8" rx="3" fill="#ffffff" opacity="0.9"/><text x="35" y="66" text-anchor="middle" font-size="12" fill="#334155">白棕</text></g>
+    <g transform="translate(665,0)"><rect width="70" height="48" rx="6" fill="#7A4A22"/><text x="35" y="66" text-anchor="middle" font-size="12" fill="#334155">棕</text></g>
+  </g>
+
+  <line x1="24" y1="204" x2="896" y2="204" stroke="#e2e8f0" stroke-width="1.5"/>
+
+  <!-- T568A -->
+  <text x="24" y="268" font-size="18" font-weight="bold" fill="#9a3412">T568A</text>
+  <g transform="translate(150,230)">
+    <g><rect width="70" height="48" rx="6" fill="#69C24A"/><rect x="18" y="20" width="34" height="8" rx="3" fill="#ffffff" opacity="0.9"/><text x="35" y="66" text-anchor="middle" font-size="12" fill="#334155">白绿</text></g>
+    <g transform="translate(95,0)"><rect width="70" height="48" rx="6" fill="#1E9E38"/><text x="35" y="66" text-anchor="middle" font-size="12" fill="#334155">绿</text></g>
+    <g transform="translate(190,0)"><rect width="70" height="48" rx="6" fill="#E8A33D"/><rect x="18" y="20" width="34" height="8" rx="3" fill="#ffffff" opacity="0.9"/><text x="35" y="66" text-anchor="middle" font-size="12" fill="#334155">白橙</text></g>
+    <g transform="translate(285,0)"><rect width="70" height="48" rx="6" fill="#2F6FE0"/><text x="35" y="66" text-anchor="middle" font-size="12" fill="#334155">蓝</text></g>
+    <g transform="translate(380,0)"><rect width="70" height="48" rx="6" fill="#7FA8F0"/><rect x="18" y="20" width="34" height="8" rx="3" fill="#ffffff" opacity="0.9"/><text x="35" y="66" text-anchor="middle" font-size="12" fill="#334155">白蓝</text></g>
+    <g transform="translate(475,0)"><rect width="70" height="48" rx="6" fill="#FF7A00"/><text x="35" y="66" text-anchor="middle" font-size="12" fill="#334155">橙</text></g>
+    <g transform="translate(570,0)"><rect width="70" height="48" rx="6" fill="#A9763C"/><rect x="18" y="20" width="34" height="8" rx="3" fill="#ffffff" opacity="0.9"/><text x="35" y="66" text-anchor="middle" font-size="12" fill="#334155">白棕</text></g>
+    <g transform="translate(665,0)"><rect width="70" height="48" rx="6" fill="#7A4A22"/><text x="35" y="66" text-anchor="middle" font-size="12" fill="#334155">棕</text></g>
+  </g>
+
+  <text x="24" y="340" font-size="13" fill="#64748b">说明：白橙＝橙色底带白色条纹，其余带「白」字的线芯同理；第 4、5、6 脚（蓝/白蓝/绿）是最易排错的位置。</text>
+</svg>
