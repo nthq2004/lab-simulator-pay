@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="360" viewBox="0 0 760 360" font-family="SimSun,serif">
+<rect width="760" height="360" fill="#ffffff"/>
+<text x="380" y="30" text-anchor="middle" font-size="17" font-weight="bold">图 1　变极调速原理（极对数 p 与转速 n）</text>
+<text x="50" y="66" font-size="14">n = 60 f₁ (1 − s) / p　　　f₁ = 50Hz，忽略转差 s：</text>
+<rect x="46" y="78" width="668" height="52" fill="#f2f6fb" stroke="#9bb7d4"/>
+<text x="380" y="98" text-anchor="middle" font-size="13">1 对极（2 极）→ 3000 r/min　　2 对极（4 极）→ 1500 r/min</text>
+<text x="380" y="120" text-anchor="middle" font-size="13">4 对极（8 极）→ 750 r/min　　8 对极（16 极）→ 375 r/min</text>
+<g transform="translate(120,150)">
+  <circle cx="90" cy="80" r="62" fill="none" stroke="#111" stroke-width="2"/>
+  <circle cx="90" cy="30" r="8" fill="#e74c3c"/><circle cx="90" cy="130" r="8" fill="#2c6fbb"/>
+  <circle cx="40" cy="80" r="8" fill="#e74c3c"/><circle cx="140" cy="80" r="8" fill="#2c6fbb"/>
+  <text x="90" y="168" text-anchor="middle" font-size="14">2 对极（4 极）</text>
+</g>
+<g transform="translate(420,150)">
+  <circle cx="90" cy="80" r="62" fill="none" stroke="#111" stroke-width="2"/>
+  <circle cx="90" cy="30" r="8" fill="#e74c3c"/><circle cx="90" cy="130" r="8" fill="#2c6fbb"/>
+  <circle cx="40" cy="80" r="8" fill="#e74c3c"/><circle cx="140" cy="80" r="8" fill="#2c6fbb"/>
+  <circle cx="48" cy="38" r="8" fill="#e74c3c"/><circle cx="132" cy="122" r="8" fill="#2c6fbb"/>
+  <circle cx="48" cy="122" r="8" fill="#e74c3c"/><circle cx="132" cy="38" r="8" fill="#2c6fbb"/>
+  <text x="90" y="168" text-anchor="middle" font-size="14">4 对极（8 极）</text>
+</g>
+<rect x="46" y="308" width="668" height="34" fill="#fffbe6" stroke="#d9b800"/>
+<text x="380" y="330" text-anchor="middle" font-size="14">变极只需改变定子绕组接法即可实现，无需外加设备 —— 属于有级（分级）调速</text>
+</svg>

@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="380" viewBox="0 0 760 380" font-family="SimSun,serif">
+<rect width="760" height="380" fill="#ffffff"/>
+<text x="380" y="30" text-anchor="middle" font-size="17" font-weight="bold">图 3　直流电磁制动器（ZDQ）回路 —— 经济电阻与放电回路</text>
+<g transform="translate(40,70)" font-size="13">
+  <text x="0" y="46">DC+</text>
+  <path d="M40 40 L90 40" fill="none" stroke="#111" stroke-width="2"/>
+  <rect x="90" y="26" width="76" height="28" fill="#f2f6fb" stroke="#111" stroke-width="2"/>
+  <text x="128" y="45" text-anchor="middle" font-size="12">ZDC 常开</text>
+  <path d="M166 40 L240 40" fill="none" stroke="#111" stroke-width="2"/>
+  <rect x="240" y="24" width="96" height="32" fill="#ffe9c9" stroke="#111" stroke-width="2"/>
+  <text x="288" y="45" text-anchor="middle" font-size="12">50Ω 经济电阻</text>
+  <path d="M336 40 L420 40" fill="none" stroke="#111" stroke-width="2"/>
+  <rect x="420" y="24" width="96" height="32" fill="#f7fbff" stroke="#111" stroke-width="2"/>
+  <text x="468" y="45" text-anchor="middle" font-size="12">ZDQ 线圈</text>
+  <path d="M516 40 L610 40" fill="none" stroke="#111" stroke-width="2"/>
+  <text x="618" y="45">DC−</text>
+  <path d="M240 40 L240 106 L336 106 L336 40" fill="none" stroke="#4a8f4a" stroke-width="2"/>
+  <rect x="242" y="92" width="92" height="28" fill="#eef7ee" stroke="#4a8f4a" stroke-width="2"/>
+  <text x="288" y="111" text-anchor="middle" font-size="12">3SJ 常开</text>
+  <path d="M420 56 L420 150 L468 150" fill="none" stroke="#c0392b" stroke-width="2"/>
+  <rect x="468" y="136" width="70" height="28" fill="#fdeaea" stroke="#c0392b" stroke-width="2"/>
+  <text x="503" y="155" text-anchor="middle" font-size="12">300Ω</text>
+  <path d="M538 150 L580 150 L580 110" fill="none" stroke="#c0392b" stroke-width="2"/>
+  <path d="M560 100 L600 120 M600 100 L560 120" fill="none" stroke="#c0392b" stroke-width="2"/>
+  <path d="M580 120 L580 40" fill="none" stroke="#c0392b" stroke-width="2"/>
+  <text x="614" y="126" font-size="12" fill="#c0392b">ZL 二极管</text>
+  <text x="560" y="86" font-size="12" fill="#c0392b">放电回路</text>
+</g>
+<rect x="46" y="270" width="668" height="98" fill="#eef7ee" stroke="#4a8f4a"/>
+<text x="60" y="294" font-size="13">① 得电瞬间：3SJ 常开仍闭合 → 短接 50Ω → 线圈全电压强激磁 → 快速松闸（起动时短接经济电阻）。</text>
+<text x="60" y="318" font-size="13">② 运行期间：3SJ 断电延时到达后常开断开 → 串入 50Ω → 维持电流减小 → 省电、减少发热（运行时接入）。</text>
+<text x="60" y="342" font-size="13">③ 失电瞬间：弹簧抱闸，300Ω+ZL 为线圈磁场能量提供泄放通路 → 抑制过电压、加快制动、保护触点。</text>
+<text x="60" y="362" font-size="13" fill="#c0392b">ZDQ 得电松闸 ↔ 失电抱闸，是锚机"停机即制动"的关键执行部件。</text>
+</svg>

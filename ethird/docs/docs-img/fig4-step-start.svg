@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="390" viewBox="0 0 760 390" font-family="SimSun,serif">
+<rect width="760" height="390" fill="#ffffff"/>
+<text x="380" y="30" text-anchor="middle" font-size="17" font-weight="bold">图 4　逐级起动时序（手柄直接推到"上升3"）</text>
+<text x="40" y="60" font-size="13">手柄一次推到高速档时，电路并不立即进入高速，而是自动按"低速→中速→高速"分级投入。</text>
+<g transform="translate(90,90)">
+  <path d="M0 200 L640 200" fill="none" stroke="#111" stroke-width="2"/>
+  <path d="M0 200 L0 24" fill="none" stroke="#111" stroke-width="2"/>
+  <text x="-12" y="28" text-anchor="end" font-size="12">得电</text>
+  <text x="-12" y="204" text-anchor="end" font-size="12">失电</text>
+  <path d="M0 140 L640 140" stroke="#ddd" stroke-width="1"/>
+  <path d="M0 80 L640 80" stroke="#ddd" stroke-width="1"/>
+  <path d="M6 200 L6 80 L640 80" fill="none" stroke="#2c6fbb" stroke-width="3"/>
+  <text x="16" y="74" font-size="12" fill="#2c6fbb">ZC 方向接触器、2C2→2C1 中速接触器</text>
+  <path d="M12 140 L12 24 L210 24 L210 140 L640 140" fill="none" stroke="#c0392b" stroke-width="3"/>
+  <text x="222" y="18" font-size="12" fill="#c0392b">1SJ 线圈：静态得电 → 中速投入后失电 → 断电延时（约 15s）</text>
+  <path d="M430 200 L430 80 L640 80" fill="none" stroke="#4a8f4a" stroke-width="3"/>
+  <text x="436" y="74" font-size="12" fill="#4a8f4a">3C 高速接触器</text>
+  <text x="10" y="226" text-anchor="middle" font-size="12">t₀ 推档</text>
+  <text x="210" y="226" text-anchor="middle" font-size="12">1SJ 延时开始</text>
+  <text x="430" y="226" text-anchor="middle" font-size="12">延时到达</text>
+  <text x="560" y="226" text-anchor="middle" font-size="12">高速运行</text>
+</g>
+<rect x="46" y="336" width="668" height="42" fill="#fffbe6" stroke="#d9b800"/>
+<text x="380" y="356" text-anchor="middle" font-size="13">1SJ 的常闭触点串在高速支路中：延时到达前始终断开，"锁住"高速接触器 3C；</text>
+<text x="380" y="374" text-anchor="middle" font-size="13">1C、2C1、2C2、3C 之间还有常闭触点互锁，防止两只以上接触器同时吸合造成短路。</text>
+</svg>

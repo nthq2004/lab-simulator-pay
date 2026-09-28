@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="386" viewBox="0 0 760 386" font-family="SimSun,serif">
+<rect width="760" height="386" fill="#ffffff"/>
+<text x="380" y="30" text-anchor="middle" font-size="17" font-weight="bold">图 5　高速运行电流监视的延时接入（2LH + 2SJ + GLJ）</text>
+<g transform="translate(50,60)" font-size="13">
+  <text x="0" y="0">主电路</text>
+  <path d="M20 12 L20 50 M0 12 L60 12 M-10 50 L50 50" fill="none" stroke="#111" stroke-width="2"/>
+  <circle cx="20" cy="72" r="22" fill="#f7fbff" stroke="#111" stroke-width="2"/>
+  <text x="20" y="78" text-anchor="middle" font-size="12">2LH</text>
+  <path d="M20 94 L20 140" fill="none" stroke="#111" stroke-width="2"/>
+  <text x="-14" y="112" font-size="12">3C 出线</text>
+  <text x="56" y="50" font-size="12">→ 电机 4D（第 3 相）</text>
+  <path d="M42 72 L110 72 L110 120" fill="none" stroke="#111" stroke-width="2"/>
+  <text x="116" y="76" font-size="12">s1</text>
+  <path d="M110 120 L290 120" fill="none" stroke="#111" stroke-width="2"/>
+  <rect x="290" y="106" width="86" height="28" fill="#eef7ee" stroke="#4a8f4a" stroke-width="2"/>
+  <text x="333" y="125" text-anchor="middle" font-size="12">2SJ 常开</text>
+  <path d="M376 120 L460 120" fill="none" stroke="#111" stroke-width="2"/>
+  <rect x="460" y="104" width="120" height="32" fill="#fdeaea" stroke="#c0392b" stroke-width="2"/>
+  <text x="520" y="125" text-anchor="middle" font-size="12">GLJ 测量绕组</text>
+  <path d="M580 120 L640 120 L640 86 L38 86" fill="none" stroke="#111" stroke-width="2"/>
+  <text x="646" y="76" font-size="12">s2</text>
+  <text x="216" y="158" font-size="12" fill="#4a8f4a">2SJ 常开并接副边：闭合 = 短接副边（保护退出）</text>
+</g>
+<rect x="46" y="262" width="668" height="108" fill="#f7fbff" stroke="#9bb7d4"/>
+<text x="60" y="286" font-size="12">① 起动期间：3C 未吸合 → 2SJ 经 3C 常闭得电 → 常开闭合短接副边 → GLJ 感受不到电流，躲过起动大电流。</text>
+<text x="60" y="310" font-size="12">② 高速运行：3C 吸合 → 3C 常闭打开 → 2SJ 失电，经约 10s 断电延时 → 常开断开 → GLJ 正式投入过流监视。</text>
+<text x="60" y="334" font-size="13">③ GLJ 动作（整定 60% 额定、延时约 5s）→ DJ 吸合并自锁 → DJ 常闭断开 3C → 自动退回中速运行。</text>
+<text x="60" y="358" font-size="13" fill="#c0392b">核心思想：把"电流监视"延时接入，既躲过起动电流的误动作，又保证高速运行时的过流保护不缺位。</text>
+</svg>

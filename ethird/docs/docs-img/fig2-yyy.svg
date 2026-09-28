@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="380" viewBox="0 0 760 380" font-family="SimSun,serif">
+<rect width="760" height="380" fill="#ffffff"/>
+<text x="380" y="30" text-anchor="middle" font-size="17" font-weight="bold">图 2　Y/YY（双星形）变换原理与特点</text>
+<text x="40" y="60" font-size="13">每相绕组分成两个半绕组。Y 接：两半绕组串联，极对数 p；YY 接：两半绕组并联，极对数 p/2，转速加倍。</text>
+<g transform="translate(50,80)">
+  <rect x="0" y="0" width="300" height="225" fill="#f7fbff" stroke="#9bb7d4"/>
+  <text x="150" y="24" text-anchor="middle" font-size="15" font-weight="bold">Y 接（16 极，低速档）</text>
+  <g fill="none" stroke="#111" stroke-width="2">
+    <path d="M70 50 L70 78"/><circle cx="70" cy="88" r="10"/><path d="M70 98 L70 128"/>
+    <path d="M150 50 L150 78"/><circle cx="150" cy="88" r="10"/><path d="M150 98 L150 128"/>
+    <path d="M230 50 L230 78"/><circle cx="230" cy="88" r="10"/><path d="M230 98 L230 128"/>
+    <path d="M70 128 L150 128 L230 128"/>
+  </g>
+  <text x="70" y="44" text-anchor="middle" font-size="12">U1</text>
+  <text x="150" y="44" text-anchor="middle" font-size="12">V1</text>
+  <text x="230" y="44" text-anchor="middle" font-size="12">W1</text>
+  <text x="150" y="160" text-anchor="middle" font-size="13">半绕组串联，每相匝数多、极对数大</text>
+  <text x="150" y="184" text-anchor="middle" font-size="13">转速低、输出转矩大</text>
+  <text x="150" y="208" text-anchor="middle" font-size="12" fill="#2c6fbb">1C 接触器进电</text>
+</g>
+<g transform="translate(400,80)">
+  <rect x="0" y="0" width="310" height="225" fill="#fff7f5" stroke="#e0a99b"/>
+  <text x="155" y="24" text-anchor="middle" font-size="15" font-weight="bold">YY 接（8 极，中速档）</text>
+  <g fill="none" stroke="#111" stroke-width="2">
+    <path d="M60 50 L60 78"/><circle cx="60" cy="88" r="10"/><path d="M60 98 L60 132"/>
+    <path d="M120 50 L120 78"/><circle cx="120" cy="88" r="10"/><path d="M120 98 L120 132"/>
+    <path d="M195 50 L195 78"/><circle cx="195" cy="88" r="10"/><path d="M195 98 L195 132"/>
+    <path d="M255 50 L255 78"/><circle cx="255" cy="88" r="10"/><path d="M255 98 L255 132"/>
+    <path d="M60 132 L120 132 M195 132 L255 132"/>
+    <path d="M90 132 L90 150 M225 132 L225 150 M90 150 L225 150"/>
+  </g>
+  <text x="90" y="168" text-anchor="middle" font-size="12">中点并联成双星点</text>
+  <text x="155" y="192" text-anchor="middle" font-size="13">半绕组并联，极对数减半 → 转速加倍</text>
+  <text x="155" y="212" text-anchor="middle" font-size="12" fill="#c0392b">2C1 进电、2C2 短接 16D1/2/3</text>
+</g>
+<rect x="46" y="322" width="668" height="48" fill="#fffbe6" stroke="#d9b800"/>
+<text x="380" y="342" text-anchor="middle" font-size="13">特点：接线简单、无附加损耗、效率与功率因数高，转矩基本不变（近似恒转矩调速）；</text>
+<text x="380" y="362" text-anchor="middle" font-size="13">但只能有级调速，切换时须先断电或低速过渡，否则冲击电流大</text>
+</svg>
