@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 470" font-family="Microsoft YaHei, PingFang SC, sans-serif">
   <rect width="840" height="470" fill="#ffffff"/>
-  <text x="420" y="28" text-anchor="middle" font-size="18" font-weight="bold" fill="#1f2a33">图 1　双交换机 + 路由器跨网段组网拓扑</text>
+  <text x="420" y="28" text-anchor="middle" font-size="18" font-weight="bold" fill="#1f2a33">图 9　双交换机 + 路由器跨网段组网拓扑</text>
 
   <rect x="30" y="46" width="360" height="150" rx="10" fill="#eef6ff" stroke="#9cc3e8" stroke-dasharray="6 4"/>
   <text x="46" y="68" font-size="13" fill="#2c6ea8">LAN1　192.168.1.0/24</text>

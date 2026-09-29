@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 400" font-family="Microsoft YaHei, PingFang SC, sans-serif">
   <rect width="840" height="400" fill="#ffffff"/>
-  <text x="420" y="28" text-anchor="middle" font-size="18" font-weight="bold" fill="#1f2a33">图 9　交换机与路由器：工作层次与职责对比</text>
+  <text x="420" y="28" text-anchor="middle" font-size="18" font-weight="bold" fill="#1f2a33">图 1　交换机与路由器：工作层次与职责对比</text>
 
   <rect x="40" y="70" width="360" height="280" rx="10" fill="#eef6ff" stroke="#9cc3e8"/>
   <text x="220" y="100" text-anchor="middle" font-size="16" font-weight="bold" fill="#2c6ea8">交换机（Switch）</text>
