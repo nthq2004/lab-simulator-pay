@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 420" font-family="Microsoft YaHei, PingFang SC, sans-serif">
+  <rect width="840" height="420" fill="#ffffff"/>
+  <text x="420" y="28" text-anchor="middle" font-size="18" font-weight="bold" fill="#1f2a33">图 3　子网掩码：区分“网络号”与“主机号”</text>
+
+  <text x="60" y="72" font-size="14" fill="#333">例：IP 地址 192.168.1.2，子网掩码 255.255.255.0</text>
+
+  <g font-family="Consolas, monospace" font-size="16">
+    <text x="60" y="120" fill="#2c6ea8">IP 地址</text>
+    <text x="200" y="120" fill="#1f2a33">192 . 168 . 1 . 2</text>
+    <text x="60" y="160" fill="#2c6ea8">子网掩码</text>
+    <text x="200" y="160" fill="#1f2a33">255 . 255 . 255 . 0</text>
+  </g>
+  <line x1="60" y1="180" x2="780" y2="180" stroke="#333" stroke-width="2"/>
+  <g font-family="Consolas, monospace" font-size="16">
+    <text x="60" y="212" fill="#c0392b">网络地址</text>
+    <text x="200" y="212" fill="#c0392b" font-weight="bold">192 . 168 . 1 . 0</text>
+  </g>
+
+  <rect x="198" y="92" width="290" height="90" rx="8" fill="rgba(192,57,43,0.08)" stroke="#c0392b" stroke-dasharray="5 4"/>
+  <rect x="488" y="92" width="130" height="90" rx="8" fill="rgba(47,143,67,0.10)" stroke="#2f8f43" stroke-dasharray="5 4"/>
+  <text x="343" y="85" text-anchor="middle" font-size="13" fill="#c0392b">网络号（掩码为 255 的位）</text>
+  <text x="553" y="85" text-anchor="middle" font-size="13" fill="#2f8f43">主机号（掩码为 0 的位）</text>
+
+  <rect x="60" y="250" width="720" height="140" rx="10" fill="#f7f9fb" stroke="#cfd8dc"/>
+  <text x="80" y="278" font-size="14" font-weight="bold" fill="#1f2a33">一句话理解：</text>
+  <text x="80" y="304" font-size="13" fill="#333">子网掩码里“255”对应的部分是<span fill="#c0392b">网络号</span>（标识所在网段），“0”对应的部分是<span fill="#2f8f43">主机号</span>（标识网段内的某台主机）。</text>
+  <text x="80" y="332" font-size="13" fill="#333">255.255.255.0 也写作 /24，表示前 24 位是网络号；同理 /16 表示前 16 位、/25 表示前 25 位。</text>
+  <text x="80" y="360" font-size="13" fill="#333">把 IP 与掩码按位相“与（AND）”，就得到网络地址；网络地址相同即为同一网段。</text>
+</svg>

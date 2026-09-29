@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 430" font-family="Microsoft YaHei, PingFang SC, sans-serif">
+  <rect width="840" height="430" fill="#ffffff"/>
+  <text x="420" y="28" text-anchor="middle" font-size="18" font-weight="bold" fill="#1f2a33">图 5　跨网段通信：为什么要配置“默认网关”</text>
+
+  <rect x="40" y="70" width="150" height="60" rx="8" fill="#37474f"/>
+  <text x="115" y="96" text-anchor="middle" font-size="14" fill="#fff">PC1</text>
+  <text x="115" y="116" text-anchor="middle" font-size="11" fill="#b0bec5">192.168.1.2/24</text>
+
+  <rect x="250" y="70" width="150" height="60" rx="8" fill="#455a64"/>
+  <text x="325" y="96" text-anchor="middle" font-size="14" fill="#fff">SW1</text>
+  <text x="325" y="116" text-anchor="middle" font-size="11" fill="#cfd8dc">二层交换机</text>
+
+  <rect x="470" y="70" width="150" height="60" rx="8" fill="#3a4550"/>
+  <text x="545" y="92" text-anchor="middle" font-size="14" fill="#fff">R1 路由器</text>
+  <text x="545" y="110" text-anchor="middle" font-size="10" fill="#b0bec5">GE0/0/0 .1</text>
+  <text x="545" y="124" text-anchor="middle" font-size="10" fill="#b0bec5">GE0/0/1 .1</text>
+
+  <rect x="680" y="70" width="120" height="60" rx="8" fill="#37474f"/>
+  <text x="740" y="96" text-anchor="middle" font-size="14" fill="#fff">PC3</text>
+  <text x="740" y="116" text-anchor="middle" font-size="11" fill="#b0bec5">192.168.2.2</text>
+
+  <line x1="190" y1="100" x2="250" y2="100" stroke="#e60c0c" stroke-width="2.5"/>
+  <line x1="400" y1="100" x2="470" y2="100" stroke="#e60c0c" stroke-width="2.5"/>
+  <line x1="620" y1="100" x2="680" y2="100" stroke="#e60c0c" stroke-width="2.5"/>
+
+  <g font-size="13">
+    <circle cx="115" cy="175" r="14" fill="#c0392b"/><text x="115" y="180" text-anchor="middle" fill="#fff">1</text>
+    <text x="140" y="180" fill="#333">PC1 发现目标 192.168.2.2 不在本网段 → 把数据交给默认网关 192.168.1.1</text>
+
+    <circle cx="115" cy="215" r="14" fill="#c0392b"/><text x="115" y="220" text-anchor="middle" fill="#fff">2</text>
+    <text x="140" y="220" fill="#333">数据经交换机送到路由器接口 GE0/0/0（网关地址 192.168.1.1）</text>
+
+    <circle cx="115" cy="255" r="14" fill="#c0392b"/><text x="115" y="260" text-anchor="middle" fill="#fff">3</text>
+    <text x="140" y="260" fill="#333">路由器查“路由表”，发现 192.168.2.0/24 从 GE0/0/1 出去</text>
+
+    <circle cx="115" cy="295" r="14" fill="#c0392b"/><text x="115" y="300" text-anchor="middle" fill="#fff">4</text>
+    <text x="140" y="300" fill="#333">从 GE0/0/1 转发，经交换机 SW2 到达 PC3，完成跨网段通信</text>
+  </g>
+
+  <rect x="60" y="325" width="720" height="80" rx="10" fill="#fff7e6" stroke="#e0a800"/>
+  <text x="80" y="352" font-size="13" fill="#8a6d00">结论：同一网段内的通信靠“交换机”转发；跨网段通信必须把数据交给“默认网关”，由“路由器”转发。</text>
+  <text x="80" y="378" font-size="13" fill="#8a6d00">因此跨网段的 PC，除了 IP/掩码，还必须正确配置默认网关，否则会出现“无法访问目标主机”。</text>
+</svg>

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 380" font-family="Microsoft YaHei, PingFang SC, sans-serif">
+  <rect width="840" height="380" fill="#ffffff"/>
+  <text x="420" y="28" text-anchor="middle" font-size="18" font-weight="bold" fill="#1f2a33">图 8　tracert：逐跳显示数据包经过的路径</text>
+
+  <rect x="50" y="66" width="130" height="56" rx="8" fill="#37474f"/>
+  <text x="115" y="92" text-anchor="middle" font-size="13" fill="#fff">PC1</text>
+  <rect x="355" y="66" width="130" height="56" rx="8" fill="#3a4550"/>
+  <text x="420" y="88" text-anchor="middle" font-size="13" fill="#fff">R1</text>
+  <text x="420" y="106" text-anchor="middle" font-size="10" fill="#b0bec5">192.168.2.1</text>
+  <rect x="660" y="66" width="130" height="56" rx="8" fill="#37474f"/>
+  <text x="725" y="92" text-anchor="middle" font-size="13" fill="#fff">PC3</text>
+
+  <line x1="180" y1="94" x2="355" y2="94" stroke="#999" stroke-width="2" stroke-dasharray="6 4"/>
+  <line x1="485" y1="94" x2="660" y2="94" stroke="#999" stroke-width="2" stroke-dasharray="6 4"/>
+
+  <rect x="50" y="150" width="740" height="200" rx="10" fill="#0d1117"/>
+  <g font-family="Consolas, monospace" font-size="14" fill="#c9d1d9">
+    <text x="70" y="180" fill="#8b949e">C:\&gt; tracert 192.168.2.2</text>
+    <text x="70" y="212">通过最多 8 个跃点跟踪到 192.168.2.2 的路由</text>
+    <text x="70" y="244">  1    &lt;1ms    192.168.2.1    R1（GigabitEthernet0/0/1）</text>
+    <text x="70" y="276">  2    &lt;1ms    192.168.2.2    PC3（目标）</text>
+    <text x="70" y="308">跟踪完成。</text>
+  </g>
+  <text x="70" y="340" font-size="12" fill="#8b949e">每一行代表“一跳”：第 1 跳是路由器接口，第 2 跳到达目标主机。</text>
+  <text x="60" y="372" font-size="13" fill="#333">原理：先发 TTL=1 的报文，第 1 台路由器回送“超时”并暴露自己；再发 TTL=2……逐跳逼近目标。</text>
+</svg>

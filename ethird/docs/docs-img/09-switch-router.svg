@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 400" font-family="Microsoft YaHei, PingFang SC, sans-serif">
+  <rect width="840" height="400" fill="#ffffff"/>
+  <text x="420" y="28" text-anchor="middle" font-size="18" font-weight="bold" fill="#1f2a33">图 9　交换机与路由器：工作层次与职责对比</text>
+
+  <rect x="40" y="70" width="360" height="280" rx="10" fill="#eef6ff" stroke="#9cc3e8"/>
+  <text x="220" y="100" text-anchor="middle" font-size="16" font-weight="bold" fill="#2c6ea8">交换机（Switch）</text>
+  <text x="220" y="134" text-anchor="middle" font-size="13" fill="#333">工作在“二层（数据链路层）”</text>
+  <text x="70" y="170" font-size="13" fill="#333">• 依据 MAC 地址转发数据帧</text>
+  <text x="70" y="200" font-size="13" fill="#333">• 把连接的主机划入同一广播域</text>
+  <text x="70" y="230" font-size="13" fill="#333">• 用 VLAN 隔离广播域、划分网段</text>
+  <text x="70" y="260" font-size="13" fill="#333">• 不修改 IP，不做跨网段转发</text>
+  <text x="70" y="290" font-size="13" fill="#333">• 端口多（8/24 口），即插即用</text>
+  <text x="70" y="320" font-size="13" fill="#2c6ea8">常见：接入交换机、汇聚交换机</text>
+
+  <rect x="440" y="70" width="360" height="280" rx="10" fill="#f1fbf1" stroke="#9ad39a"/>
+  <text x="620" y="100" text-anchor="middle" font-size="16" font-weight="bold" fill="#2f8f43">路由器（Router）</text>
+  <text x="620" y="134" text-anchor="middle" font-size="13" fill="#333">工作在“三层（网络层）”</text>
+  <text x="470" y="170" font-size="13" fill="#333">• 依据 IP 地址与路由表转发</text>
+  <text x="470" y="200" font-size="13" fill="#333">• 连接不同网段（广播域）</text>
+  <text x="470" y="230" font-size="13" fill="#333">• 为各网段提供默认网关</text>
+  <text x="470" y="260" font-size="13" fill="#333">• 隔离广播、实现跨网段互通</text>
+  <text x="470" y="290" font-size="13" fill="#333">• 端口少（2~4 口），需配置地址</text>
+  <text x="470" y="320" font-size="13" fill="#2f8f43">常见：边界路由器、三层交换机</text>
+
+  <text x="420" y="380" text-anchor="middle" font-size="13" fill="#666">一句话：交换机“在同一网段内转发”，路由器“在不同网段之间转发”。</text>
+</svg>

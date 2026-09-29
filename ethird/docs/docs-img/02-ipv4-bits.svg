@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 360" font-family="Microsoft YaHei, PingFang SC, sans-serif">
+  <rect width="840" height="360" fill="#ffffff"/>
+  <text x="420" y="28" text-anchor="middle" font-size="18" font-weight="bold" fill="#1f2a33">图 2　IPv4 地址：32 位二进制，每 8 位一组</text>
+
+  <text x="60" y="80" font-size="14" fill="#333">IP 地址 = 32 位二进制，分成 4 个“八位组（Octet）”，每组转成十进制，用“.”连接：</text>
+
+  <g font-size="13">
+    <rect x="80" y="110" width="150" height="70" rx="8" fill="#eef6ff" stroke="#2c6ea8" stroke-width="2"/>
+    <text x="155" y="140" text-anchor="middle" fill="#2c6ea8">第 1 组（8 位）</text>
+    <text x="155" y="164" text-anchor="middle" font-family="Consolas, monospace" font-size="16" fill="#1f2a33">11000000</text>
+
+    <rect x="245" y="110" width="150" height="70" rx="8" fill="#eef6ff" stroke="#2c6ea8" stroke-width="2"/>
+    <text x="320" y="140" text-anchor="middle" fill="#2c6ea8">第 2 组（8 位）</text>
+    <text x="320" y="164" text-anchor="middle" font-family="Consolas, monospace" font-size="16" fill="#1f2a33">10101000</text>
+
+    <rect x="410" y="110" width="150" height="70" rx="8" fill="#eef6ff" stroke="#2c6ea8" stroke-width="2"/>
+    <text x="485" y="140" text-anchor="middle" fill="#2c6ea8">第 3 组（8 位）</text>
+    <text x="485" y="164" text-anchor="middle" font-family="Consolas, monospace" font-size="16" fill="#1f2a33">00000001</text>
+
+    <rect x="575" y="110" width="150" height="70" rx="8" fill="#eef6ff" stroke="#2c6ea8" stroke-width="2"/>
+    <text x="650" y="140" text-anchor="middle" fill="#2c6ea8">第 4 组（8 位）</text>
+    <text x="650" y="164" text-anchor="middle" font-family="Consolas, monospace" font-size="16" fill="#1f2a33">00000010</text>
+  </g>
+
+  <text x="155" y="210" text-anchor="middle" font-size="20" fill="#999">↓</text>
+  <text x="320" y="210" text-anchor="middle" font-size="20" fill="#999">↓</text>
+  <text x="485" y="210" text-anchor="middle" font-size="20" fill="#999">↓</text>
+  <text x="650" y="210" text-anchor="middle" font-size="20" fill="#999">↓</text>
+
+  <g font-size="22" font-weight="bold" fill="#c0392b" font-family="Consolas, monospace">
+    <text x="155" y="250" text-anchor="middle">192</text>
+    <text x="320" y="250" text-anchor="middle">168</text>
+    <text x="485" y="250" text-anchor="middle">1</text>
+    <text x="650" y="250" text-anchor="middle">2</text>
+  </g>
+
+  <rect x="240" y="278" width="360" height="56" rx="8" fill="#fff7e6" stroke="#e0a800" stroke-width="2"/>
+  <text x="420" y="303" text-anchor="middle" font-size="15" fill="#8a6d00">点分十进制记法：192.168.1.2</text>
+  <text x="420" y="324" text-anchor="middle" font-size="12" fill="#8a6d00">取值范围：每组 0 ~ 255</text>
+</svg>
