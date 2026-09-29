@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 540" width="900" height="540" font-family="Microsoft YaHei, PingFang SC, sans-serif">
+  <rect width="900" height="540" fill="#ffffff"/>
+  <text x="450" y="32" text-anchor="middle" font-size="21" font-weight="bold" fill="#1f2a33">图 4　三层交换机用 VLANIF 虚接口实现 VLAN 间通信</text>
+
+  <!-- 三层交换机内部 -->
+  <rect x="230" y="120" width="440" height="250" rx="14" fill="#e8f1fb" stroke="#1395eb" stroke-width="3"/>
+  <text x="450" y="150" text-anchor="middle" font-size="16" font-weight="bold" fill="#0b5c94">三层交换机 L3SW1</text>
+
+  <!-- 交换引擎 -->
+  <rect x="360" y="170" width="180" height="42" rx="8" fill="#ffffff" stroke="#4a5a68"/>
+  <text x="450" y="197" text-anchor="middle" font-size="13" fill="#33424f">二层交换引擎（按 VLAN 转发）</text>
+
+  <!-- 路由引擎 -->
+  <rect x="330" y="292" width="240" height="52" rx="8" fill="#dff3ec" stroke="#1fa97a" stroke-width="2"/>
+  <text x="450" y="314" text-anchor="middle" font-size="13" font-weight="bold" fill="#0d7a56">三层路由引擎（查路由表转发）</text>
+  <text x="450" y="333" text-anchor="middle" font-size="11" fill="#1a8f68">VLAN 间通信即在这里完成</text>
+
+  <!-- VLANIF10 -->
+  <rect x="120" y="176" width="190" height="60" rx="8" fill="#ffffff" stroke="#1395eb" stroke-width="2"/>
+  <text x="215" y="199" text-anchor="middle" font-size="13" font-weight="bold" fill="#0b5c94">VLANIF 10</text>
+  <text x="215" y="220" text-anchor="middle" font-size="12" fill="#2b6f9c">192.168.10.1/24（网关）</text>
+
+  <!-- VLANIF20 -->
+  <rect x="590" y="176" width="190" height="60" rx="8" fill="#ffffff" stroke="#e67e22" stroke-width="2"/>
+  <text x="685" y="199" text-anchor="middle" font-size="13" font-weight="bold" fill="#b5651d">VLANIF 20</text>
+  <text x="685" y="220" text-anchor="middle" font-size="12" fill="#c07a2e">192.168.20.1/24（网关）</text>
+
+  <line x1="310" y1="206" x2="360" y2="206" stroke="#1395eb" stroke-width="2"/>
+  <line x1="540" y1="206" x2="590" y2="206" stroke="#e67e22" stroke-width="2"/>
+  <line x1="215" y1="236" x2="380" y2="292" stroke="#1fa97a" stroke-width="2"/>
+  <line x1="685" y1="236" x2="520" y2="292" stroke="#1fa97a" stroke-width="2"/>
+
+  <!-- PC -->
+  <rect x="70" y="330" width="180" height="60" rx="8" fill="#eaf7ee" stroke="#34a853" stroke-width="2"/>
+  <text x="160" y="355" text-anchor="middle" font-size="14" font-weight="bold" fill="#1e6b34">PC1　VLAN10</text>
+  <text x="160" y="376" text-anchor="middle" font-size="12" fill="#3a7d4e">192.168.10.10　网关 .1</text>
+
+  <rect x="650" y="330" width="180" height="60" rx="8" fill="#eaf7ee" stroke="#34a853" stroke-width="2"/>
+  <text x="740" y="355" text-anchor="middle" font-size="14" font-weight="bold" fill="#1e6b34">PC2　VLAN20</text>
+  <text x="740" y="376" text-anchor="middle" font-size="12" fill="#3a7d4e">192.168.20.10　网关 .1</text>
+
+  <path d="M250 360 C 380 360, 380 330, 450 344" stroke="#34a853" stroke-width="2" fill="none" stroke-dasharray="5 4"/>
+  <path d="M650 360 C 520 360, 520 330, 450 344" stroke="#34a853" stroke-width="2" fill="none" stroke-dasharray="5 4"/>
+
+  <text x="450" y="428" text-anchor="middle" font-size="12" fill="#5b6b7a">PC1 与 PC2 同网段判断失败 → 交给默认网关 → 网关即为其 VLAN 的 VLANIF 接口。</text>
+  <text x="450" y="452" text-anchor="middle" font-size="12" fill="#5b6b7a">三层交换机为每个 VLAN 建一个 VLANIF，配置 IP 后自动生成直连路由，从而在 VLAN 之间转发。</text>
+  <text x="450" y="476" text-anchor="middle" font-size="12" fill="#5b6b7a">核心命令：interface Vlanif 10 → ip address 192.168.10.1 255.255.255.0</text>
+  <text x="450" y="502" text-anchor="middle" font-size="12" fill="#c9302c">若缺少 VLANIF 或网关配置错误，跨 VLAN 的 ping 会提示“无法访问目标主机 / 请求超时”。</text>
+</svg>

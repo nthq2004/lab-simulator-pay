@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" width="900" height="620" font-family="Microsoft YaHei, PingFang SC, sans-serif">
+  <rect width="900" height="620" fill="#ffffff"/>
+  <text x="450" y="32" text-anchor="middle" font-size="21" font-weight="bold" fill="#1f2a33">图 8　DNS 解析与 HTTP / FTP 访问流程</text>
+
+  <!-- 泳道 -->
+  <rect x="60" y="60" width="150" height="520" rx="10" fill="#eaf7ee" stroke="#34a853"/>
+  <text x="135" y="86" text-anchor="middle" font-size="14" font-weight="bold" fill="#1e6b34">PC1 客户端</text>
+
+  <rect x="310" y="60" width="150" height="520" rx="10" fill="#e8f1fb" stroke="#1395eb"/>
+  <text x="385" y="86" text-anchor="middle" font-size="14" font-weight="bold" fill="#0b5c94">网络 / 路由器</text>
+
+  <rect x="560" y="60" width="290" height="520" rx="10" fill="#fdeee0" stroke="#e67e22"/>
+  <text x="705" y="86" text-anchor="middle" font-size="14" font-weight="bold" fill="#b5651d">服务器 SRV1（203.0.113.10）</text>
+
+  <!-- 步骤 1 DNS -->
+  <text x="135" y="130" text-anchor="middle" font-size="12" fill="#33424f">① 输入域名</text>
+  <text x="135" y="148" text-anchor="middle" font-size="11" fill="#5b6b7a">www.example.com</text>
+  <path d="M135 162 L705 162" stroke="#7a8b99" stroke-width="2" marker-end="url(#m8)"/>
+  <text x="420" y="156" text-anchor="middle" font-size="11" fill="#5b6b7a">DNS 查询（UDP 53）</text>
+  <text x="705" y="188" text-anchor="middle" font-size="11" fill="#c07a2e">查 A 记录：www.example.com → 203.0.113.10</text>
+  <path d="M705 202 L135 202" stroke="#e67e22" stroke-width="2" marker-end="url(#m8o)"/>
+  <text x="420" y="196" text-anchor="middle" font-size="11" fill="#c07a2e">返回 IP 203.0.113.10</text>
+
+  <!-- 步骤 2 HTTP -->
+  <text x="135" y="250" text-anchor="middle" font-size="12" fill="#33424f">② 拿到 IP 后</text>
+  <text x="135" y="268" text-anchor="middle" font-size="11" fill="#5b6b7a">发起 HTTP 请求</text>
+  <path d="M135 282 L705 282" stroke="#34a853" stroke-width="2" marker-end="url(#m8g)"/>
+  <text x="420" y="276" text-anchor="middle" font-size="11" fill="#1e6b34">TCP 80：GET /</text>
+  <path d="M705 322 L135 322" stroke="#34a853" stroke-width="2" marker-end="url(#m8g)"/>
+  <text x="420" y="316" text-anchor="middle" font-size="11" fill="#1e6b34">HTTP 200 + 网页内容</text>
+  <text x="135" y="342" text-anchor="middle" font-size="11" fill="#3a7d4e">浏览器渲染页面</text>
+
+  <!-- 步骤 3 FTP -->
+  <text x="135" y="392" text-anchor="middle" font-size="12" fill="#33424f">③ FTP 文件传输</text>
+  <text x="135" y="410" text-anchor="middle" font-size="11" fill="#5b6b7a">登录 ftpuser</text>
+  <path d="M135 424 L705 424" stroke="#1395eb" stroke-width="2" marker-end="url(#m8b)"/>
+  <text x="420" y="418" text-anchor="middle" font-size="11" fill="#0b5c94">TCP 21：USER / PASS</text>
+  <path d="M705 456 L135 456" stroke="#1395eb" stroke-width="2" marker-end="url(#m8b)"/>
+  <text x="420" y="450" text-anchor="middle" font-size="11" fill="#0b5c94">目录列表（readme.txt 等）</text>
+  <path d="M135 490 L705 490" stroke="#1395eb" stroke-width="2" marker-end="url(#m8b)"/>
+  <text x="420" y="484" text-anchor="middle" font-size="11" fill="#0b5c94">下载 readme.txt</text>
+  <path d="M705 524 L135 524" stroke="#1395eb" stroke-width="2" marker-end="url(#m8b)"/>
+  <text x="420" y="518" text-anchor="middle" font-size="11" fill="#0b5c94">文件数据（“正在下载… → 完成”）</text>
+
+  <defs>
+    <marker id="m8" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#7a8b99"/></marker>
+    <marker id="m8o" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#e67e22"/></marker>
+    <marker id="m8g" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#34a853"/></marker>
+    <marker id="m8b" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1395eb"/></marker>
+  </defs>
+
+  <text x="450" y="600" text-anchor="middle" font-size="12" fill="#5b6b7a">先“通网络”（IP/网关/路由/NAT），再“通服务”（DNS 解析、HTTP/FTP 端口与账号），两者缺一不可。</text>
+</svg>

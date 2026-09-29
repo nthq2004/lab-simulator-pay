@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" width="900" height="520" font-family="Microsoft YaHei, PingFang SC, sans-serif">
+  <rect width="900" height="520" fill="#ffffff"/>
+  <text x="450" y="32" text-anchor="middle" font-size="21" font-weight="bold" fill="#1f2a33">图 3　VLAN 把一台交换机划分为多个广播域</text>
+
+  <rect x="150" y="70" width="600" height="330" rx="14" fill="#f7f9fb" stroke="#4a5a68" stroke-width="2"/>
+  <text x="450" y="98" text-anchor="middle" font-size="15" font-weight="bold" fill="#33424f">二层交换机 SW1（一台设备）</text>
+
+  <!-- VLAN10 -->
+  <rect x="185" y="120" width="255" height="250" rx="12" fill="#e8f1fb" stroke="#1395eb" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="312" y="146" text-anchor="middle" font-size="14" font-weight="bold" fill="#0b5c94">VLAN 10（广播域 A）</text>
+  <text x="312" y="166" text-anchor="middle" font-size="11" fill="#2b6f9c">192.168.10.0/24</text>
+  <rect x="215" y="188" width="195" height="44" rx="8" fill="#ffffff" stroke="#1395eb"/>
+  <text x="312" y="215" text-anchor="middle" font-size="13" fill="#0b5c94">PC1　192.168.10.10</text>
+  <rect x="215" y="248" width="195" height="44" rx="8" fill="#ffffff" stroke="#1395eb"/>
+  <text x="312" y="275" text-anchor="middle" font-size="13" fill="#0b5c94">PC3　192.168.10.11</text>
+  <text x="312" y="330" text-anchor="middle" font-size="11" fill="#2b6f9c">端口：Ethernet0/0/1、0/0/3</text>
+
+  <!-- VLAN20 -->
+  <rect x="460" y="120" width="255" height="250" rx="12" fill="#fdeee0" stroke="#e67e22" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="587" y="146" text-anchor="middle" font-size="14" font-weight="bold" fill="#b5651d">VLAN 20（广播域 B）</text>
+  <text x="587" y="166" text-anchor="middle" font-size="11" fill="#c07a2e">192.168.20.0/24</text>
+  <rect x="490" y="188" width="195" height="44" rx="8" fill="#ffffff" stroke="#e67e22"/>
+  <text x="587" y="215" text-anchor="middle" font-size="13" fill="#b5651d">PC2　192.168.20.10</text>
+  <rect x="490" y="248" width="195" height="44" rx="8" fill="#ffffff" stroke="#e67e22"/>
+  <text x="587" y="275" text-anchor="middle" font-size="13" fill="#b5651d">PC4　192.168.20.11</text>
+  <text x="587" y="330" text-anchor="middle" font-size="11" fill="#c07a2e">端口：Ethernet0/0/2、0/0/4</text>
+
+  <!-- 隔离示意 -->
+  <line x1="450" y1="120" x2="450" y2="370" stroke="#d9534f" stroke-width="2" stroke-dasharray="5 5"/>
+  <text x="450" y="392" text-anchor="middle" font-size="12" fill="#c9302c">VLAN 之间二层完全隔离：广播帧不会跨越</text>
+
+  <text x="450" y="446" text-anchor="middle" font-size="12" fill="#5b6b7a">同一 VLAN 内可二层互通；不同 VLAN 即使 IP 在同一网段也无法直接通信，必须经三层设备路由。</text>
+  <text x="450" y="470" text-anchor="middle" font-size="12" fill="#5b6b7a">把端口划入 VLAN 的命令：access 口用 port default vlan &lt;id&gt;，交换机之间用 trunk 承载多个 VLAN。</text>
+</svg>

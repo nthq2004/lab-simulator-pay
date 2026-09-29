@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" width="900" height="560" font-family="Microsoft YaHei, PingFang SC, sans-serif">
+  <rect width="900" height="560" fill="#ffffff"/>
+  <text x="450" y="32" text-anchor="middle" font-size="21" font-weight="bold" fill="#1f2a33">图 2　接入层 / 汇聚层 / 核心层 的分层结构</text>
+
+  <!-- 接入层 -->
+  <rect x="70" y="70" width="760" height="120" rx="12" fill="#e8f1fb" stroke="#1395eb" stroke-width="2"/>
+  <text x="95" y="98" font-size="15" font-weight="bold" fill="#0b5c94">接入层（Access）</text>
+  <text x="95" y="120" font-size="12" fill="#2b6f9c">直接连接终端主机，负责二层接入与 VLAN 划分；设备数量多、成本低、无需路由。</text>
+  <g>
+    <rect x="150" y="132" width="150" height="46" rx="8" fill="#ffffff" stroke="#1395eb"/>
+    <text x="225" y="160" text-anchor="middle" font-size="13" fill="#0b5c94">接入交换机 SW1</text>
+    <rect x="360" y="132" width="150" height="46" rx="8" fill="#ffffff" stroke="#1395eb"/>
+    <text x="435" y="160" text-anchor="middle" font-size="13" fill="#0b5c94">接入交换机 SW2</text>
+    <rect x="590" y="132" width="190" height="46" rx="8" fill="#ffffff" stroke="#1395eb"/>
+    <text x="685" y="160" text-anchor="middle" font-size="13" fill="#0b5c94">…… 可按需扩展更多</text>
+  </g>
+
+  <!-- 汇聚层 -->
+  <rect x="70" y="212" width="760" height="120" rx="12" fill="#dff3ec" stroke="#1fa97a" stroke-width="2"/>
+  <text x="95" y="240" font-size="15" font-weight="bold" fill="#0d7a56">汇聚层（Distribution）</text>
+  <text x="95" y="262" font-size="12" fill="#1a8f68">汇聚多台接入交换机；完成 VLAN 间路由（三层交换）、策略与网关，是本工程的重点。</text>
+  <g>
+    <rect x="300" y="274" width="300" height="46" rx="8" fill="#ffffff" stroke="#1fa97a" stroke-width="2"/>
+    <text x="450" y="302" text-anchor="middle" font-size="14" font-weight="bold" fill="#0d7a56">三层交换机 L3SW1（VLANIF 网关）</text>
+  </g>
+
+  <!-- 核心/出口 -->
+  <rect x="70" y="354" width="760" height="120" rx="12" fill="#f0ebfb" stroke="#7e57c2" stroke-width="2"/>
+  <text x="95" y="382" font-size="15" font-weight="bold" fill="#5b3fa0">核心层 / 出口（Core / Edge）</text>
+  <text x="95" y="404" font-size="12" fill="#6a55a8">高速转发与对外连接；出口路由器负责 NAT、默认路由，与互联网路由器互联。</text>
+  <g>
+    <rect x="230" y="416" width="170" height="46" rx="8" fill="#ffffff" stroke="#7e57c2"/>
+    <text x="315" y="444" text-anchor="middle" font-size="13" fill="#5b3fa0">出口路由器 R1</text>
+    <rect x="470" y="416" width="200" height="46" rx="8" fill="#ffffff" stroke="#7e57c2"/>
+    <text x="570" y="444" text-anchor="middle" font-size="13" fill="#5b3fa0">互联网路由器 R2 + 服务器</text>
+  </g>
+
+  <path d="M450 190 L450 212" stroke="#7a8b99" stroke-width="2" fill="none" marker-end="url(#a)"/>
+  <path d="M450 332 L450 354" stroke="#7a8b99" stroke-width="2" fill="none" marker-end="url(#a)"/>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#7a8b99"/>
+    </marker>
+  </defs>
+
+  <text x="450" y="506" text-anchor="middle" font-size="12" fill="#5b6b7a">说明：中小型园区网常把「汇聚 + 核心」合并为一台三层交换机（本工程的 L3SW1），即“折叠核心”。</text>
+</svg>

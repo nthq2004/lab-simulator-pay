@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 680" width="900" height="680" font-family="Microsoft YaHei, PingFang SC, sans-serif">
+  <rect width="900" height="680" fill="#ffffff"/>
+  <text x="450" y="32" text-anchor="middle" font-size="21" font-weight="bold" fill="#1f2a33">图 1　园区网总体拓扑（接入 → 汇聚/核心 → 出口 → 互联网 → 服务器）</text>
+
+  <!-- 连线 -->
+  <g stroke="#7a8b99" stroke-width="2" fill="none">
+    <line x1="125" y1="106" x2="150" y2="170"/>
+    <line x1="265" y1="106" x2="230" y2="170"/>
+    <line x1="635" y1="106" x2="670" y2="170"/>
+    <line x1="775" y1="106" x2="710" y2="170"/>
+    <line x1="255" y1="197" x2="392" y2="300"/>
+    <line x1="635" y1="197" x2="508" y2="300"/>
+    <line x1="450" y1="376" x2="450" y2="440"/>
+    <line x1="450" y1="498" x2="450" y2="560"/>
+    <line x1="530" y1="589" x2="640" y2="589"/>
+  </g>
+
+  <!-- 链路标注 -->
+  <g font-size="12" fill="#5b6b7a">
+    <text x="300" y="248">trunk（VLAN10,20）</text>
+    <text x="560" y="248" text-anchor="end">trunk（VLAN10,20）</text>
+    <text x="460" y="414">10.10.10.0/30</text>
+    <text x="460" y="536">100.64.0.0/30</text>
+    <text x="585" y="580" text-anchor="middle">203.0.113.0/24</text>
+  </g>
+
+  <!-- PC 主机 -->
+  <g>
+    <rect x="70" y="60" width="110" height="46" rx="8" fill="#eaf7ee" stroke="#34a853" stroke-width="2"/>
+    <text x="125" y="80" text-anchor="middle" font-size="14" font-weight="bold" fill="#1e6b34">PC1</text>
+    <text x="125" y="98" text-anchor="middle" font-size="11" fill="#3a7d4e">192.168.10.10</text>
+
+    <rect x="210" y="60" width="110" height="46" rx="8" fill="#eaf7ee" stroke="#34a853" stroke-width="2"/>
+    <text x="265" y="80" text-anchor="middle" font-size="14" font-weight="bold" fill="#1e6b34">PC2</text>
+    <text x="265" y="98" text-anchor="middle" font-size="11" fill="#3a7d4e">192.168.20.10</text>
+
+    <rect x="580" y="60" width="110" height="46" rx="8" fill="#eaf7ee" stroke="#34a853" stroke-width="2"/>
+    <text x="635" y="80" text-anchor="middle" font-size="14" font-weight="bold" fill="#1e6b34">PC3</text>
+    <text x="635" y="98" text-anchor="middle" font-size="11" fill="#3a7d4e">192.168.10.11</text>
+
+    <rect x="720" y="60" width="110" height="46" rx="8" fill="#eaf7ee" stroke="#34a853" stroke-width="2"/>
+    <text x="775" y="80" text-anchor="middle" font-size="14" font-weight="bold" fill="#1e6b34">PC4</text>
+    <text x="775" y="98" text-anchor="middle" font-size="11" fill="#3a7d4e">192.168.20.11</text>
+  </g>
+
+  <!-- 接入交换机 -->
+  <g>
+    <rect x="110" y="170" width="150" height="54" rx="8" fill="#e8f1fb" stroke="#1395eb" stroke-width="2"/>
+    <text x="185" y="193" text-anchor="middle" font-size="14" font-weight="bold" fill="#0b5c94">SW1（接入层）</text>
+    <text x="185" y="212" text-anchor="middle" font-size="11" fill="#2b6f9c">VLAN10 / VLAN20</text>
+
+    <rect x="630" y="170" width="150" height="54" rx="8" fill="#e8f1fb" stroke="#1395eb" stroke-width="2"/>
+    <text x="705" y="193" text-anchor="middle" font-size="14" font-weight="bold" fill="#0b5c94">SW2（接入层）</text>
+    <text x="705" y="212" text-anchor="middle" font-size="11" fill="#2b6f9c">VLAN10 / VLAN20</text>
+  </g>
+
+  <!-- 三层交换机 -->
+  <g>
+    <rect x="330" y="300" width="240" height="76" rx="10" fill="#e8f1fb" stroke="#1395eb" stroke-width="3"/>
+    <text x="450" y="326" text-anchor="middle" font-size="15" font-weight="bold" fill="#0b5c94">L3SW1　三层交换机</text>
+    <text x="450" y="346" text-anchor="middle" font-size="11" fill="#2b6f9c">汇聚 + 核心｜VLANIF10/20/100</text>
+    <text x="450" y="364" text-anchor="middle" font-size="11" fill="#2b6f9c">192.168.10.1 / 192.168.20.1 / 10.10.10.1</text>
+  </g>
+
+  <!-- 路由器 -->
+  <g>
+    <rect x="370" y="440" width="160" height="58" rx="8" fill="#f0ebfb" stroke="#7e57c2" stroke-width="2"/>
+    <text x="450" y="463" text-anchor="middle" font-size="14" font-weight="bold" fill="#5b3fa0">R1　出口路由器</text>
+    <text x="450" y="483" text-anchor="middle" font-size="11" fill="#6a55a8">NAT（easy-ip）</text>
+
+    <rect x="370" y="560" width="160" height="58" rx="8" fill="#f0ebfb" stroke="#7e57c2" stroke-width="2"/>
+    <text x="450" y="583" text-anchor="middle" font-size="14" font-weight="bold" fill="#5b3fa0">R2　互联网路由器</text>
+    <text x="450" y="603" text-anchor="middle" font-size="11" fill="#6a55a8">ISP 侧</text>
+  </g>
+
+  <!-- 服务器 -->
+  <g>
+    <rect x="640" y="556" width="180" height="66" rx="8" fill="#fdeee0" stroke="#e67e22" stroke-width="2"/>
+    <text x="730" y="579" text-anchor="middle" font-size="14" font-weight="bold" fill="#b5651d">SRV1　服务器</text>
+    <text x="730" y="597" text-anchor="middle" font-size="11" fill="#c07a2e">HTTP / FTP / DNS</text>
+    <text x="730" y="614" text-anchor="middle" font-size="11" fill="#c07a2e">203.0.113.10</text>
+  </g>
+
+  <!-- 图例 -->
+  <g font-size="11" fill="#5b6b7a">
+    <rect x="60" y="640" width="18" height="12" fill="#eaf7ee" stroke="#34a853"/>
+    <text x="84" y="651">终端主机</text>
+    <rect x="160" y="640" width="18" height="12" fill="#e8f1fb" stroke="#1395eb"/>
+    <text x="184" y="651">交换/三层设备</text>
+    <rect x="290" y="640" width="18" height="12" fill="#f0ebfb" stroke="#7e57c2"/>
+    <text x="314" y="651">路由器</text>
+    <rect x="380" y="640" width="18" height="12" fill="#fdeee0" stroke="#e67e22"/>
+    <text x="404" y="651">服务器</text>
+  </g>
+</svg>
