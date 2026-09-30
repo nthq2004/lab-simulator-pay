@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" width="900" height="520" font-family="Microsoft YaHei, PingFang SC, sans-serif">
+  <rect width="900" height="520" fill="#ffffff"/>
+  <text x="450" y="36" text-anchor="middle" font-size="21" font-weight="bold" fill="#1f2a33">图 5　三个操作流程总览</text>
+
+  <!-- 行1 钳形电流表 -->
+  <rect x="26" y="70" width="150" height="104" rx="12" fill="#fdf6ec" stroke="#e0a458" stroke-width="2"/>
+  <text x="101" y="112" text-anchor="middle" font-size="14" font-weight="bold" fill="#a86a1a">钳形电流表</text>
+  <text x="101" y="134" text-anchor="middle" font-size="11.5" fill="#8a6a3a">流程 1</text>
+  <text x="101" y="154" text-anchor="middle" font-size="11.5" fill="#8a6a3a">测线路电流</text>
+
+  <g>
+    <rect x="206" y="88" width="146" height="68" rx="9" fill="#ffffff" stroke="#e0a458" stroke-width="1.8"/>
+    <text x="279" y="116" text-anchor="middle" font-size="11.5" fill="#7a4a10">① 电动机与控制箱</text>
+    <text x="279" y="136" text-anchor="middle" font-size="11.5" fill="#7a4a10">接线并起动</text>
+  </g>
+  <g>
+    <rect x="382" y="88" width="146" height="68" rx="9" fill="#ffffff" stroke="#e0a458" stroke-width="1.8"/>
+    <text x="455" y="116" text-anchor="middle" font-size="11.5" fill="#7a4a10">② 量程旋至 100A</text>
+    <text x="455" y="136" text-anchor="middle" font-size="11.5" fill="#7a4a10">（接近额定 80A）</text>
+  </g>
+  <g>
+    <rect x="558" y="88" width="146" height="68" rx="9" fill="#ffffff" stroke="#e0a458" stroke-width="1.8"/>
+    <text x="631" y="116" text-anchor="middle" font-size="11.5" fill="#7a4a10">③ 钳口套入 U/V</text>
+    <text x="631" y="136" text-anchor="middle" font-size="11.5" fill="#7a4a10">相导线</text>
+  </g>
+  <g>
+    <rect x="734" y="88" width="140" height="68" rx="9" fill="#fdf6ec" stroke="#e0a458" stroke-width="1.8"/>
+    <text x="804" y="116" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#a86a1a">④ 读数 ≈ 76 A</text>
+    <text x="804" y="136" text-anchor="middle" font-size="11" fill="#8a6a3a">三相基本平衡</text>
+  </g>
+  <g stroke="#c98a3a" stroke-width="2" fill="#c98a3a">
+    <polygon points="376,122 368,117 368,127"/><line x1="352" y1="122" x2="368" y2="122"/>
+    <polygon points="552,122 544,117 544,127"/><line x1="528" y1="122" x2="544" y2="122"/>
+    <polygon points="728,122 720,117 720,127"/><line x1="704" y1="122" x2="720" y2="122"/>
+  </g>
+
+  <!-- 行2 兆欧表 -->
+  <rect x="26" y="212" width="150" height="104" rx="12" fill="#eef7f0" stroke="#5aa96f" stroke-width="2"/>
+  <text x="101" y="254" text-anchor="middle" font-size="14" font-weight="bold" fill="#2e7d46">手摇兆欧表</text>
+  <text x="101" y="276" text-anchor="middle" font-size="11.5" fill="#4a6b54">流程 2</text>
+  <text x="101" y="296" text-anchor="middle" font-size="11.5" fill="#4a6b54">测线路与电机绝缘</text>
+
+  <g>
+    <rect x="206" y="230" width="146" height="68" rx="9" fill="#ffffff" stroke="#5aa96f" stroke-width="1.8"/>
+    <text x="279" y="258" text-anchor="middle" font-size="11.5" fill="#2e7d46">① 断开电源</text>
+    <text x="279" y="278" text-anchor="middle" font-size="11.5" fill="#2e7d46">并充分放电</text>
+  </g>
+  <g>
+    <rect x="382" y="230" width="146" height="68" rx="9" fill="#ffffff" stroke="#5aa96f" stroke-width="1.8"/>
+    <text x="455" y="258" text-anchor="middle" font-size="11.5" fill="#2e7d46">② 开路/短路校验</text>
+    <text x="455" y="278" text-anchor="middle" font-size="11.5" fill="#2e7d46">（∞ 与 0）</text>
+  </g>
+  <g>
+    <rect x="558" y="230" width="146" height="68" rx="9" fill="#ffffff" stroke="#5aa96f" stroke-width="1.8"/>
+    <text x="631" y="258" text-anchor="middle" font-size="11.5" fill="#2e7d46">③ L 接导体、</text>
+    <text x="631" y="278" text-anchor="middle" font-size="11.5" fill="#2e7d46">E 接外壳/PE</text>
+  </g>
+  <g>
+    <rect x="734" y="230" width="140" height="68" rx="9" fill="#eef7f0" stroke="#5aa96f" stroke-width="1.8"/>
+    <text x="804" y="258" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#2e7d46">④ 摇测读数</text>
+    <text x="804" y="278" text-anchor="middle" font-size="11" fill="#4a6b54">80 MΩ / 50 MΩ</text>
+  </g>
+  <g stroke="#2e7d46" stroke-width="2" fill="#2e7d46">
+    <polygon points="376,264 368,259 368,269"/><line x1="352" y1="264" x2="368" y2="264"/>
+    <polygon points="552,264 544,259 544,269"/><line x1="528" y1="264" x2="544" y2="264"/>
+    <polygon points="728,264 720,259 720,269"/><line x1="704" y1="264" x2="720" y2="264"/>
+  </g>
+
+  <!-- 行3 万用表 -->
+  <rect x="26" y="354" width="150" height="130" rx="12" fill="#eef4fb" stroke="#3f7fbf" stroke-width="2"/>
+  <text x="101" y="392" text-anchor="middle" font-size="14" font-weight="bold" fill="#1d5185">数字万用表</text>
+  <text x="101" y="414" text-anchor="middle" font-size="11.5" fill="#3c5b7a">流程 3</text>
+  <text x="101" y="434" text-anchor="middle" font-size="11.5" fill="#3c5b7a">测绕组电阻 /</text>
+  <text x="101" y="452" text-anchor="middle" font-size="11.5" fill="#3c5b7a">电压 / 电流</text>
+
+  <g>
+    <rect x="206" y="372" width="146" height="94" rx="9" fill="#ffffff" stroke="#3f7fbf" stroke-width="1.8"/>
+    <text x="279" y="400" text-anchor="middle" font-size="11.5" fill="#1d5185">① 200Ω 档</text>
+    <text x="279" y="420" text-anchor="middle" font-size="11.5" fill="#1d5185">表笔短接自检</text>
+    <text x="279" y="440" text-anchor="middle" font-size="11" fill="#3c5b7a">（显示 ≈ 0Ω）</text>
+  </g>
+  <g>
+    <rect x="382" y="372" width="146" height="94" rx="9" fill="#ffffff" stroke="#3f7fbf" stroke-width="1.8"/>
+    <text x="455" y="400" text-anchor="middle" font-size="11.5" fill="#1d5185">② 测三相绕组</text>
+    <text x="455" y="420" text-anchor="middle" font-size="11" fill="#3c5b7a">U-V / V-W / W-U</text>
+    <text x="455" y="440" text-anchor="middle" font-size="11" fill="#3c5b7a">三值相等 ≈ 5.78Ω</text>
+  </g>
+  <g>
+    <rect x="558" y="372" width="146" height="94" rx="9" fill="#ffffff" stroke="#3f7fbf" stroke-width="1.8"/>
+    <text x="631" y="400" text-anchor="middle" font-size="11.5" fill="#1d5185">③ ~500V 档</text>
+    <text x="631" y="420" text-anchor="middle" font-size="11" fill="#3c5b7a">测线电压</text>
+    <text x="631" y="440" text-anchor="middle" font-size="11" fill="#3c5b7a">（≈ 380V）</text>
+  </g>
+  <g>
+    <rect x="734" y="372" width="140" height="94" rx="9" fill="#eef4fb" stroke="#3f7fbf" stroke-width="1.8"/>
+    <text x="804" y="400" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#1d5185">④ 断线串入</text>
+    <text x="804" y="420" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#1d5185">测 U 相电流</text>
+    <text x="804" y="440" text-anchor="middle" font-size="11" fill="#3c5b7a">（≈ 72 A）</text>
+  </g>
+  <g stroke="#3f7fbf" stroke-width="2" fill="#3f7fbf">
+    <polygon points="376,419 368,414 368,424"/><line x1="352" y1="419" x2="368" y2="419"/>
+    <polygon points="552,419 544,414 544,424"/><line x1="528" y1="419" x2="544" y2="419"/>
+    <polygon points="728,419 720,414 720,424"/><line x1="704" y1="419" x2="720" y2="419"/>
+  </g>
+
+  <text x="450" y="506" text-anchor="middle" font-size="12" fill="#5b6b7a">先在工具栏"操作项目"中选择流程，再点击"自动演示 / 单步演示 / 演练 / 评估"逐步完成</text>
+</svg>

@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 580" width="820" height="580" font-family="Microsoft YaHei, PingFang SC, sans-serif">
+  <rect width="820" height="580" fill="#ffffff"/>
+  <text x="410" y="34" text-anchor="middle" font-size="21" font-weight="bold" fill="#1f2a33">图 4　数字万用表的挡位、插孔与三种测量接法</text>
+
+  <!-- ============ 左：外观 ============ -->
+  <rect x="22" y="56" width="410" height="500" rx="12" fill="#f7f9fb" stroke="#3f7fbf" stroke-width="1.6"/>
+  <text x="227" y="82" text-anchor="middle" font-size="14.5" font-weight="bold" fill="#1d5185">外观：显示窗、挡位盘与三个插孔</text>
+
+  <rect x="120" y="96" width="214" height="410" rx="18" fill="#f2f4f7" stroke="#b8c2cc" stroke-width="2"/>
+  <!-- 显示窗 -->
+  <rect x="150" y="112" width="154" height="58" rx="6" fill="#dff2e4" stroke="#8a97a3" stroke-width="1.6"/>
+  <text x="227" y="150" text-anchor="middle" font-size="22" font-weight="bold" fill="#1f2a33">5.78</text>
+  <text x="292" y="150" text-anchor="middle" font-size="12" fill="#33414d">Ω</text>
+  <text x="227" y="186" text-anchor="middle" font-size="11" fill="#5b6b7a">液晶显示窗（超出量程显示 O.L）</text>
+
+  <!-- 挡位盘 -->
+  <circle cx="227" cy="300" r="66" fill="#e7edf4" stroke="#8a97a3" stroke-width="2"/>
+  <line x1="227" y1="300" x2="227" y2="240" stroke="#33414d" stroke-width="3.4"/>
+  <circle cx="227" cy="300" r="7" fill="#33414d"/>
+  <g font-size="10.5" fill="#33414d" text-anchor="middle">
+    <text x="227" y="200">OFF</text>
+    <text x="271" y="212">200mv</text>
+    <text x="303" y="244">20V</text>
+    <text x="315" y="300">200V</text>
+    <text x="303" y="356">~200V</text>
+    <text x="271" y="388">~500V</text>
+    <text x="227" y="400">▶|-))</text>
+    <text x="183" y="388">200Ω</text>
+    <text x="151" y="356">2kΩ</text>
+    <text x="139" y="300">200kΩ</text>
+    <text x="151" y="244">mA</text>
+    <text x="183" y="212">uF</text>
+  </g>
+
+  <!-- 三插孔 -->
+  <circle cx="172" cy="448" r="9" fill="#c0392b"/><text x="172" y="470" text-anchor="middle" font-size="11" fill="#33414d">mA</text>
+  <circle cx="227" cy="448" r="9" fill="#2b2f33"/><text x="227" y="470" text-anchor="middle" font-size="11" fill="#33414d">COM</text>
+  <circle cx="282" cy="448" r="9" fill="#c0392b"/><text x="282" y="470" text-anchor="middle" font-size="11" fill="#33414d">V·Ω</text>
+  <text x="227" y="500" text-anchor="middle" font-size="11" fill="#5b6b7a">红笔插 V·Ω 或 mA，黑笔插 COM</text>
+  <text x="227" y="522" text-anchor="middle" font-size="11" fill="#5b6b7a">电流测量务必用 mA 孔，切勿用 V·Ω 孔测电流</text>
+
+  <!-- ============ 右：三种测量接法 ============ -->
+  <rect x="452" y="56" width="346" height="500" rx="12" fill="#fbfaf7" stroke="#e0a458" stroke-width="1.6"/>
+  <text x="625" y="82" text-anchor="middle" font-size="14.5" font-weight="bold" fill="#a86a1a">三种测量接法</text>
+
+  <!-- A 测电压：并联 -->
+  <text x="625" y="112" text-anchor="middle" font-size="13" font-weight="bold" fill="#33414d">① 测电压 / 测电阻：表笔并联</text>
+  <line x1="500" y1="150" x2="760" y2="150" stroke="#c98a3a" stroke-width="2.4"/>
+  <line x1="500" y1="230" x2="760" y2="230" stroke="#c98a3a" stroke-width="2.4"/>
+  <rect x="596" y="166" width="60" height="48" fill="#ffffff" stroke="#c98a3a" stroke-width="2"/>
+  <text x="626" y="195" text-anchor="middle" font-size="11.5" fill="#7a4a10">被测元件</text>
+  <line x1="520" y1="150" x2="520" y2="230" stroke="#c98a3a" stroke-width="2"/>
+  <line x1="740" y1="150" x2="740" y2="230" stroke="#c98a3a" stroke-width="2"/>
+  <g stroke="#1d5185" stroke-width="2" fill="none">
+    <polyline points="520,150 500,150 500,270 626,270"/>
+    <polyline points="740,150 760,150 760,270 674,270"/>
+  </g>
+  <circle cx="650" cy="270" r="24" fill="#ffffff" stroke="#1d5185" stroke-width="2.2"/>
+  <text x="650" y="277" text-anchor="middle" font-size="15" font-weight="bold" fill="#1d5185">V</text>
+  <text x="625" y="316" text-anchor="middle" font-size="11" fill="#5b6b7a">表笔跨接在被测元件的两端（并联）</text>
+
+  <!-- B 测电流：串联 -->
+  <text x="625" y="352" text-anchor="middle" font-size="13" font-weight="bold" fill="#33414d">② 测电流：断开支路，表笔串联</text>
+  <g stroke="#c98a3a" stroke-width="2.4" fill="none">
+    <line x1="500" y1="410" x2="560" y2="410"/>
+    <line x1="640" y1="410" x2="700" y2="410"/>
+    <line x1="760" y1="410" x2="760" y2="470"/>
+    <line x1="500" y1="410" x2="500" y2="470"/>
+    <line x1="500" y1="470" x2="760" y2="470"/>
+  </g>
+  <circle cx="600" cy="410" r="24" fill="#ffffff" stroke="#1d5185" stroke-width="2.2"/>
+  <text x="600" y="417" text-anchor="middle" font-size="15" font-weight="bold" fill="#1d5185">A</text>
+  <rect x="700" y="392" width="60" height="36" fill="#ffffff" stroke="#c98a3a" stroke-width="2"/>
+  <text x="730" y="415" text-anchor="middle" font-size="11" fill="#7a4a10">负载</text>
+  <circle cx="560" cy="410" r="4" fill="#b23b3b"/><circle cx="640" cy="410" r="4" fill="#b23b3b"/>
+  <text x="600" y="452" text-anchor="middle" font-size="11" fill="#b23b3b">↑ 此处断开</text>
+  <text x="625" y="504" text-anchor="middle" font-size="11" fill="#5b6b7a">断开被测支路，把万用表串联接入，电流全部流过万用表</text>
+  <text x="625" y="526" text-anchor="middle" font-size="11" fill="#b23b3b">测电阻前必须断电；测电压/电流要按被测量选择交/直流挡</text>
+</svg>
