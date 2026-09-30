@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 600" width="980" height="600" font-family="Microsoft YaHei, PingFang SC, sans-serif">
+  <rect width="980" height="600" fill="#ffffff"/>
+  <text x="490" y="34" text-anchor="middle" font-size="21" font-weight="bold" fill="#1f2a33">图 3　控制回路与开关量 I/O 接线（DC 24V）</text>
+
+  <!-- PLC -->
+  <rect x="690" y="80" width="250" height="470" rx="10" fill="#eef4fb" stroke="#3f7fbf" stroke-width="2"/>
+  <text x="815" y="108" text-anchor="middle" font-size="15" font-weight="bold" fill="#1d5185">CPU SR40</text>
+  <!-- 端子 -->
+  <g font-size="12.5" fill="#1d5185">
+    <text x="666" y="145" text-anchor="end">24V</text>
+    <text x="666" y="185" text-anchor="end">I0.2</text>
+    <text x="666" y="265" text-anchor="end">I0.1</text>
+    <text x="666" y="345" text-anchor="end">I0.0</text>
+    <text x="666" y="415" text-anchor="end">1M</text>
+    <text x="666" y="455" text-anchor="end">1L+</text>
+    <text x="666" y="495" text-anchor="end">Q0.0</text>
+    <text x="666" y="540" text-anchor="end">0V</text>
+  </g>
+  <g fill="#3f7fbf">
+    <circle cx="690" cy="141" r="4"/><circle cx="690" cy="181" r="4"/><circle cx="690" cy="261" r="4"/>
+    <circle cx="690" cy="341" r="4"/><circle cx="690" cy="411" r="4"/><circle cx="690" cy="451" r="4"/>
+    <circle cx="690" cy="491" r="4"/><circle cx="690" cy="536" r="4"/>
+  </g>
+
+  <!-- +24V 母线 -->
+  <line x1="300" y1="120" x2="640" y2="120" stroke="#e03030" stroke-width="3"/>
+  <line x1="360" y1="120" x2="360" y2="345" stroke="#e03030" stroke-width="3"/>
+  <text x="300" y="110" font-size="12.5" fill="#b3261e">+24V（电位端子 pterm-24）</text>
+
+  <!-- 0V 母线 -->
+  <line x1="300" y1="540" x2="690" y2="540" stroke="#333" stroke-width="3"/>
+  <text x="300" y="565" font-size="12.5" fill="#333">0V（直流电源负极）</text>
+
+  <!-- 输入支路 -->
+  <g stroke="#e03030" stroke-width="2.6" fill="none">
+    <line x1="360" y1="181" x2="420" y2="181"/>
+    <line x1="520" y1="181" x2="690" y2="181"/>
+    <line x1="360" y1="261" x2="420" y2="261"/>
+    <line x1="520" y1="261" x2="690" y2="261"/>
+    <line x1="360" y1="341" x2="420" y2="341"/>
+    <line x1="520" y1="341" x2="690" y2="341"/>
+  </g>
+  <!-- 开关符号 -->
+  <g stroke="#b3261e" stroke-width="2.4" fill="none">
+    <line x1="420" y1="181" x2="452" y2="166"/><circle cx="420" cy="181" r="3.2" fill="#b3261e"/><circle cx="520" cy="181" r="3.2" fill="#b3261e"/>
+    <line x1="420" y1="261" x2="452" y2="246"/><circle cx="420" cy="261" r="3.2" fill="#b3261e"/><circle cx="520" cy="261" r="3.2" fill="#b3261e"/>
+    <line x1="420" y1="341" x2="452" y2="326"/><circle cx="420" cy="341" r="3.2" fill="#b3261e"/><circle cx="520" cy="341" r="3.2" fill="#b3261e"/>
+  </g>
+  <g font-size="12.5" fill="#7a1f1a">
+    <text x="470" y="172" text-anchor="middle">FR 常闭</text>
+    <text x="470" y="252" text-anchor="middle">SB2 停止</text>
+    <text x="470" y="332" text-anchor="middle">SB1 起动</text>
+  </g>
+
+  <!-- 1M → 0V -->
+  <line x1="690" y1="411" x2="640" y2="411" stroke="#333" stroke-width="2.6"/>
+  <line x1="640" y1="411" x2="640" y2="540" stroke="#333" stroke-width="2.6"/>
+  <text x="630" y="430" text-anchor="end" font-size="11.5" fill="#333">1M/2M → 0V</text>
+
+  <!-- 1L+ → +24V -->
+  <line x1="690" y1="451" x2="660" y2="451" stroke="#e03030" stroke-width="2.6"/>
+  <line x1="660" y1="451" x2="660" y2="120" stroke="#e03030" stroke-width="2.6"/>
+  <text x="630" y="470" text-anchor="end" font-size="11.5" fill="#b3261e">1L+ → 24V</text>
+
+  <!-- 24V 供电 -->
+  <line x1="300" y1="120" x2="300" y2="141" stroke="#e03030" stroke-width="2.6"/>
+  <line x1="300" y1="141" x2="690" y2="141" stroke="#e03030" stroke-width="2.6"/>
+  <text x="200" y="145" font-size="11.5" fill="#b3261e">DC24V 电源 +</text>
+
+  <!-- 输出：Q0.0 → KM1 线圈 → 0V -->
+  <line x1="690" y1="491" x2="600" y2="491" stroke="#e03030" stroke-width="2.6"/>
+  <rect x="500" y="472" width="100" height="38" rx="6" fill="#fff" stroke="#b3261e" stroke-width="2"/>
+  <text x="550" y="496" text-anchor="middle" font-size="12.5" fill="#7a1f1a">KM1 线圈</text>
+  <line x1="500" y1="491" x2="360" y2="491" stroke="#333" stroke-width="2.6"/>
+  <line x1="360" y1="491" x2="360" y2="540" stroke="#333" stroke-width="2.6"/>
+  <text x="420" y="512" text-anchor="middle" font-size="11.5" fill="#333">线圈 A2 → 0V</text>
+
+  <!-- 说明 -->
+  <text x="490" y="588" text-anchor="middle" font-size="12.5" fill="#5b6b7a">输入源型接法：+24V → 开关 → I0.x，公共端 1M/2M 接 0V；输出：Q0.0 → KM1 线圈 A1，A2 接 0V</text>
+</svg>

@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600" font-family="Microsoft YaHei, PingFang SC, sans-serif">
+  <rect width="960" height="600" fill="#ffffff"/>
+  <text x="480" y="34" text-anchor="middle" font-size="21" font-weight="bold" fill="#1f2a33">图 6　PLC 程序的上传与下载流程（STEP7 上位机）</text>
+
+  <!-- 流程 -->
+  <g font-size="12" text-anchor="middle">
+    <rect x="30" y="70" width="140" height="64" rx="8" fill="#eef4fb" stroke="#3f7fbf" stroke-width="1.8"/>
+    <text x="100" y="96" font-weight="bold" fill="#1d5185">① 自动接线</text>
+    <text x="100" y="116" fill="#4a5b6b">并插入 4 个模块</text>
+
+    <rect x="190" y="70" width="140" height="64" rx="8" fill="#eef4fb" stroke="#3f7fbf" stroke-width="1.8"/>
+    <text x="260" y="96" font-weight="bold" fill="#1d5185">② 转 RUN + 起动</text>
+    <text x="260" y="116" fill="#4a5b6b">电机运行</text>
+
+    <rect x="350" y="70" width="140" height="64" rx="8" fill="#eef4fb" stroke="#3f7fbf" stroke-width="1.8"/>
+    <text x="420" y="96" font-weight="bold" fill="#1d5185">③ 连接 + 上传</text>
+    <text x="420" y="116" fill="#4a5b6b">读回梯形图</text>
+
+    <rect x="510" y="70" width="140" height="64" rx="8" fill="#fdf6ec" stroke="#e0a458" stroke-width="1.8"/>
+    <text x="580" y="96" font-weight="bold" fill="#a86a1a">④ 删自锁 + 下载</text>
+    <text x="580" y="116" fill="#8a5a10">写入新程序</text>
+
+    <rect x="670" y="70" width="140" height="64" rx="8" fill="#eefaf1" stroke="#34a853" stroke-width="1.8"/>
+    <text x="740" y="96" font-weight="bold" fill="#1e6b34">⑤ 验证</text>
+    <text x="740" y="116" fill="#3a4b5b">松起动即停</text>
+
+    <rect x="830" y="70" width="100" height="64" rx="8" fill="#eefaf1" stroke="#34a853" stroke-width="1.8"/>
+    <text x="880" y="96" font-weight="bold" fill="#1e6b34">⑥ 监控</text>
+    <text x="880" y="116" fill="#3a4b5b">在线状态</text>
+  </g>
+  <g stroke="#4a5b6b" stroke-width="2.2" fill="none">
+    <line x1="170" y1="102" x2="190" y2="102"/>
+    <line x1="330" y1="102" x2="350" y2="102"/>
+    <line x1="490" y1="102" x2="510" y2="102"/>
+    <line x1="650" y1="102" x2="670" y2="102"/>
+    <line x1="810" y1="102" x2="830" y2="102"/>
+  </g>
+
+  <!-- 上传前程序 -->
+  <rect x="40" y="176" width="420" height="250" rx="8" fill="#0d1117" stroke="#30363d"/>
+  <text x="60" y="200" font-size="13" font-weight="bold" fill="#7ee787">上传前（PLC 中的当前程序）</text>
+  <text x="60" y="228" font-size="13" fill="#c9d1d9">LD     I0.0        ; 起动</text>
+  <text x="60" y="250" font-size="13" fill="#ff7b72">O      Q0.0        ; ← 自锁（待删除）</text>
+  <text x="60" y="272" font-size="13" fill="#c9d1d9">AN     I0.1        ; 停止</text>
+  <text x="60" y="294" font-size="13" fill="#c9d1d9">A      I0.2        ; FR 未动作</text>
+  <text x="60" y="316" font-size="13" fill="#c9d1d9">=      Q0.0        ; → KM1 线圈</text>
+  <text x="60" y="338" font-size="13" fill="#c9d1d9">LD     SM0.0</text>
+  <text x="60" y="360" font-size="13" fill="#79c0ff">MOV_W  AIW0, AQW0  ; 模拟量直通</text>
+  <text x="60" y="382" font-size="13" fill="#c9d1d9">END</text>
+
+  <!-- 下载后程序 -->
+  <rect x="500" y="176" width="420" height="250" rx="8" fill="#0d1117" stroke="#30363d"/>
+  <text x="520" y="200" font-size="13" font-weight="bold" fill="#7ee787">下载后（删除自锁触点）</text>
+  <text x="520" y="228" font-size="13" fill="#c9d1d9">LD     I0.0        ; 起动</text>
+  <text x="520" y="250" font-size="13" fill="#8b949e">;（Q0.0 自锁触点已删除）</text>
+  <text x="520" y="272" font-size="13" fill="#c9d1d9">AN     I0.1        ; 停止</text>
+  <text x="520" y="294" font-size="13" fill="#c9d1d9">A      I0.2        ; FR 未动作</text>
+  <text x="520" y="316" font-size="13" fill="#c9d1d9">=      Q0.0        ; → KM1 线圈</text>
+  <text x="520" y="338" font-size="13" fill="#c9d1d9">LD     SM0.0</text>
+  <text x="520" y="360" font-size="13" fill="#79c0ff">MOV_W  AIW0, AQW0  ; 模拟量直通</text>
+  <text x="520" y="382" font-size="13" fill="#c9d1d9">END</text>
+
+  <!-- 结论 -->
+  <rect x="40" y="446" width="880" height="60" rx="8" fill="#f2f2f6" stroke="#c8c8d6" stroke-width="1.6"/>
+  <text x="58" y="472" font-size="13" fill="#3a3a4a">删除自锁后：Q0.0 = I0.0 · ¬I0.1 · I0.2（点动）—— 按住 SB1 电机运转，松开 SB1 电机立即停转，</text>
+  <text x="58" y="494" font-size="13" fill="#3a3a4a">说明下载的新程序已生效；进入「监控」后，梯形图触点 / 线圈将按 PLC 实时状态着色。</text>
+
+  <text x="480" y="536" text-anchor="middle" font-size="12" fill="#5b6b7a">要点：连接后不会自动读取程序，必须点击「上传」才从 PLC 读回；修改后点击「下载」写入并立即执行。</text>
+</svg>

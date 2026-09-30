@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" width="900" height="480" font-family="Microsoft YaHei, PingFang SC, sans-serif">
+  <rect width="900" height="480" fill="#ffffff"/>
+  <text x="450" y="34" text-anchor="middle" font-size="21" font-weight="bold" fill="#1f2a33">图 5　扩展模块的级联与起始地址</text>
+
+  <!-- SR40 -->
+  <rect x="40" y="110" width="180" height="250" rx="8" fill="#eef4fb" stroke="#3f7fbf" stroke-width="2"/>
+  <text x="130" y="160" text-anchor="middle" font-size="15" font-weight="bold" fill="#1d5185">CPU SR40</text>
+  <text x="130" y="184" text-anchor="middle" font-size="12" fill="#4a5b6b">本体：</text>
+  <text x="130" y="204" text-anchor="middle" font-size="12" fill="#4a5b6b">DI  I0.0~I2.7</text>
+  <text x="130" y="224" text-anchor="middle" font-size="12" fill="#4a5b6b">DQ  Q0.0~Q1.7</text>
+  <text x="130" y="244" text-anchor="middle" font-size="12" fill="#4a5b6b">AI  AIW16 / AIW18</text>
+  <text x="130" y="264" text-anchor="middle" font-size="12" fill="#4a5b6b">AQ  AQW16</text>
+  <!-- 凹口 -->
+  <rect x="220" y="150" width="12" height="60" rx="2" fill="#0c1013" stroke="#1c2126"/>
+
+  <!-- 模块 -->
+  <g>
+    <rect x="232" y="110" width="120" height="250" rx="6" fill="#f4f6f8" stroke="#8a97a3" stroke-width="1.6"/>
+    <rect x="232" y="150" width="10" height="60" fill="#c8b040"/>
+    <text x="292" y="160" text-anchor="middle" font-size="13" font-weight="bold" fill="#1d5185">EM AI04</text>
+    <text x="292" y="182" text-anchor="middle" font-size="11.5" fill="#4a5b6b">4 路模拟量输入</text>
+    <text x="292" y="330" text-anchor="middle" font-size="13" font-weight="bold" fill="#b3261e">AIW0 ~ AIW6</text>
+    <rect x="342" y="150" width="12" height="60" rx="2" fill="#0c1013" stroke="#1c2126"/>
+  </g>
+  <g>
+    <rect x="354" y="110" width="120" height="250" rx="6" fill="#f4f6f8" stroke="#8a97a3" stroke-width="1.6"/>
+    <rect x="354" y="150" width="10" height="60" fill="#c8b040"/>
+    <text x="414" y="160" text-anchor="middle" font-size="13" font-weight="bold" fill="#1d5185">EM AQ04</text>
+    <text x="414" y="182" text-anchor="middle" font-size="11.5" fill="#4a5b6b">4 路模拟量输出</text>
+    <text x="414" y="330" text-anchor="middle" font-size="13" font-weight="bold" fill="#b3261e">AQW0 ~ AQW6</text>
+    <rect x="464" y="150" width="12" height="60" rx="2" fill="#0c1013" stroke="#1c2126"/>
+  </g>
+  <g>
+    <rect x="476" y="110" width="120" height="250" rx="6" fill="#f4f6f8" stroke="#8a97a3" stroke-width="1.6"/>
+    <rect x="476" y="150" width="10" height="60" fill="#c8b040"/>
+    <text x="536" y="160" text-anchor="middle" font-size="13" font-weight="bold" fill="#1d5185">EM DI08</text>
+    <text x="536" y="182" text-anchor="middle" font-size="11.5" fill="#4a5b6b">8 路开关量输入</text>
+    <text x="536" y="330" text-anchor="middle" font-size="13" font-weight="bold" fill="#b3261e">I3.0 ~ I3.7</text>
+    <rect x="586" y="150" width="12" height="60" rx="2" fill="#0c1013" stroke="#1c2126"/>
+  </g>
+  <g>
+    <rect x="598" y="110" width="120" height="250" rx="6" fill="#f4f6f8" stroke="#8a97a3" stroke-width="1.6"/>
+    <rect x="598" y="150" width="10" height="60" fill="#c8b040"/>
+    <text x="658" y="160" text-anchor="middle" font-size="13" font-weight="bold" fill="#1d5185">EM DQ08</text>
+    <text x="658" y="182" text-anchor="middle" font-size="11.5" fill="#4a5b6b">8 路开关量输出</text>
+    <text x="658" y="330" text-anchor="middle" font-size="13" font-weight="bold" fill="#b3261e">Q2.0 ~ Q2.7</text>
+  </g>
+
+  <!-- 总线说明 -->
+  <text x="450" y="96" text-anchor="middle" font-size="12" fill="#1d5185">CPU 右侧扩展接口（凹口）→ 模块左凸口对准自动吸附 → 模块右凹口可继续级联</text>
+
+  <!-- 规则 -->
+  <rect x="40" y="390" width="820" height="66" rx="8" fill="#fff7e6" stroke="#f0d9a8" stroke-width="1.6"/>
+  <text x="58" y="414" font-size="12.5" fill="#8a5a10">编址规则（按类型顺序，各类分别从 0 起）：第 k 个 AI04 → AIW{k×8}；第 k 个 AQ04 → AQW{k×8}；</text>
+  <text x="58" y="436" font-size="12.5" fill="#8a5a10">第 k 个 DI08 → 输入字节 3+k（本项目 I3.0）；第 k 个 DQ08 → 输出字节 2+k（本项目 Q2.0）。</text>
+</svg>

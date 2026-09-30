@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" width="960" height="560" font-family="Microsoft YaHei, PingFang SC, sans-serif">
+  <rect width="960" height="560" fill="#ffffff"/>
+  <text x="480" y="34" text-anchor="middle" font-size="21" font-weight="bold" fill="#1f2a33">图 4　模拟量 4~20mA 回路（转速采集 → PLC 运算 → 转速显示）</text>
+
+  <!-- 流程框 -->
+  <g font-size="12.5" text-anchor="middle">
+    <rect x="30" y="80" width="130" height="74" rx="8" fill="#fff7e6" stroke="#e0a458" stroke-width="2"/>
+    <text x="95" y="112" font-weight="bold" fill="#8a5a10">DC 24V</text>
+    <text x="95" y="133" fill="#8a5a10">回路电源</text>
+
+    <rect x="180" y="80" width="140" height="74" rx="8" fill="#eefaf1" stroke="#34a853" stroke-width="2"/>
+    <text x="250" y="106" font-weight="bold" fill="#1e6b34">转速变送器</text>
+    <text x="250" y="126" fill="#3a4b5b">0~2000 r/min</text>
+    <text x="250" y="144" fill="#3a4b5b">两线制</text>
+
+    <rect x="340" y="80" width="140" height="74" rx="8" fill="#eefaf1" stroke="#34a853" stroke-width="2"/>
+    <text x="410" y="106" font-weight="bold" fill="#1e6b34">AI04 ch0</text>
+    <text x="410" y="126" fill="#3a4b5b">内部 250Ω 采样</text>
+    <text x="410" y="144" fill="#3a4b5b">I = V / 250Ω</text>
+
+    <rect x="500" y="80" width="140" height="74" rx="8" fill="#eef4fb" stroke="#3f7fbf" stroke-width="2"/>
+    <text x="570" y="106" font-weight="bold" fill="#1d5185">CPU SR40</text>
+    <text x="570" y="126" fill="#4a5b6b">MOV_W</text>
+    <text x="570" y="144" fill="#4a5b6b">AIW0 → AQW0</text>
+
+    <rect x="660" y="80" width="140" height="74" rx="8" fill="#eefaf1" stroke="#34a853" stroke-width="2"/>
+    <text x="730" y="106" font-weight="bold" fill="#1e6b34">AQ04 ch0</text>
+    <text x="730" y="126" fill="#3a4b5b">电流源输出</text>
+    <text x="730" y="144" fill="#3a4b5b">4~20mA</text>
+
+    <rect x="820" y="80" width="120" height="74" rx="8" fill="#eefaf1" stroke="#34a853" stroke-width="2"/>
+    <text x="880" y="106" font-weight="bold" fill="#1e6b34">数字转速表</text>
+    <text x="880" y="126" fill="#3a4b5b">250Ω 采样</text>
+    <text x="880" y="144" fill="#3a4b5b">显示 r/min</text>
+  </g>
+  <!-- 箭头 -->
+  <g stroke="#4a5b6b" stroke-width="2.4" fill="none">
+    <line x1="160" y1="117" x2="180" y2="117"/>
+    <line x1="320" y1="117" x2="340" y2="117"/>
+    <line x1="480" y1="117" x2="500" y2="117"/>
+    <line x1="640" y1="117" x2="660" y2="117"/>
+    <line x1="800" y1="117" x2="820" y2="117"/>
+  </g>
+  <g font-size="11" fill="#1e6b34" text-anchor="middle">
+    <text x="330" y="72">4~20mA</text>
+    <text x="490" y="72">V(≈1~5V)</text>
+    <text x="650" y="72">AIW0</text>
+    <text x="810" y="72">4~20mA</text>
+  </g>
+
+  <!-- 采集回路（回路1） -->
+  <rect x="30" y="186" width="900" height="66" rx="8" fill="#f7fbf8" stroke="#8fd0a3" stroke-width="1.6"/>
+  <text x="48" y="212" font-size="12.5" fill="#1e6b34">采集回路：</text>
+  <text x="120" y="212" font-size="12.5" fill="#3a4b5b">24V＋ → 变送器 P；变送器 N → AI04 ch0＋；AI04 ch0− → 0V（回路串接，电流经 250Ω 采样）</text>
+  <text x="120" y="236" font-size="12.5" fill="#3a4b5b">输出回路：AQ04 ch0V → 数字转速表 sig；转速表 com → AQ04 ch0M（由 AQ04 电流源驱动）</text>
+
+  <!-- 数值换算表 -->
+  <text x="40" y="292" font-size="14" font-weight="bold" fill="#1f2a33">信号换算（量程 0~2000 r/min，4~20mA）</text>
+  <g font-size="13">
+    <rect x="40" y="306" width="880" height="36" fill="#eef1f4" stroke="#c8d0d8"/>
+    <line x1="260" y1="306" x2="260" y2="430" stroke="#c8d0d8"/>
+    <line x1="480" y1="306" x2="480" y2="430" stroke="#c8d0d8"/>
+    <line x1="700" y1="306" x2="700" y2="430" stroke="#c8d0d8"/>
+    <text x="150" y="329" text-anchor="middle" font-weight="bold">转速</text>
+    <text x="370" y="329" text-anchor="middle" font-weight="bold">回路电流</text>
+    <text x="590" y="329" text-anchor="middle" font-weight="bold">AIW0 原始值</text>
+    <text x="790" y="329" text-anchor="middle" font-weight="bold">数字转速表</text>
+
+    <rect x="40" y="342" width="880" height="30" fill="#ffffff" stroke="#e2e7ec"/>
+    <text x="150" y="362" text-anchor="middle">0 r/min（电机停转）</text>
+    <text x="370" y="362" text-anchor="middle">4.00 mA</text>
+    <text x="590" y="362" text-anchor="middle">0</text>
+    <text x="790" y="362" text-anchor="middle">0</text>
+
+    <rect x="40" y="372" width="880" height="30" fill="#f6f9fc" stroke="#e2e7ec"/>
+    <text x="150" y="392" text-anchor="middle">1440 r/min（额定运行）</text>
+    <text x="370" y="392" text-anchor="middle">15.52 mA</text>
+    <text x="590" y="392" text-anchor="middle">19907</text>
+    <text x="790" y="392" text-anchor="middle">1440</text>
+
+    <rect x="40" y="402" width="880" height="30" fill="#ffffff" stroke="#e2e7ec"/>
+    <text x="150" y="422" text-anchor="middle">2000 r/min（满量程）</text>
+    <text x="370" y="422" text-anchor="middle">20.00 mA</text>
+    <text x="590" y="422" text-anchor="middle">27648</text>
+    <text x="790" y="422" text-anchor="middle">2000</text>
+  </g>
+  <text x="40" y="462" font-size="12" fill="#5b6b7a">近似关系：AIW0 ≈ (I − 4mA) / 16mA × 27648；转速表 n ≈ (I − 4mA) / 16mA × 2000 r/min</text>
+
+  <rect x="40" y="486" width="880" height="52" rx="8" fill="#fff7e6" stroke="#f0d9a8" stroke-width="1.6"/>
+  <text x="58" y="510" font-size="12.5" fill="#8a5a10">说明：AI04 电流档内部并接 250Ω 采样电阻，将 4~20mA 转为 1~5V 电压差后换算；</text>
+  <text x="58" y="530" font-size="12.5" fill="#8a5a10">AQ04 电流档以电流源形式输出，外部负载（数字转速表采样电阻）经 chM 回流形成闭合回路。</text>
+</svg>
