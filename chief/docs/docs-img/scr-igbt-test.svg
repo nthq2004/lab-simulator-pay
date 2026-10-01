@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" font-family="Microsoft YaHei, Arial, sans-serif">
+  <rect width="760" height="430" fill="#ffffff"/>
+  <text x="380" y="28" text-anchor="middle" font-size="19" font-weight="bold" fill="#1a3a5a">图 5  晶闸管 / IGBT 万用表检测（二极管档）</text>
+
+  <!-- 左：晶闸管 -->
+  <text x="190" y="62" text-anchor="middle" font-size="15" font-weight="bold" fill="#2c3e50">晶闸管 SCR（A / K / G）</text>
+  <rect x="110" y="90" width="160" height="120" fill="#f4f6f8" stroke="#666" stroke-width="2" rx="4"/>
+  <text x="190" y="130" text-anchor="middle" font-size="13" fill="#333">A（阳极）</text>
+  <text x="190" y="156" text-anchor="middle" font-size="13" fill="#333">K（阴极）</text>
+  <text x="190" y="182" text-anchor="middle" font-size="13" fill="#333">G（门极）</text>
+
+  <!-- 测量 1 -->
+  <line x1="270" y1="176" x2="380" y2="176" stroke="#c0392b" stroke-width="2"/>
+  <text x="300" y="170" font-size="11" fill="#c0392b">红（V）→ G</text>
+  <line x1="270" y1="150" x2="380" y2="150" stroke="#333" stroke-width="2"/>
+  <text x="300" y="144" font-size="11" fill="#333">黑（COM）→ K</text>
+  <text x="388" y="166" font-size="13" font-weight="bold" fill="#1e8449">≈ 0.7V 导通</text>
+
+  <!-- 测量 2 -->
+  <line x1="270" y1="290" x2="380" y2="290" stroke="#333" stroke-width="2"/>
+  <text x="300" y="284" font-size="11" fill="#333">黑（COM）→ G</text>
+  <line x1="270" y1="316" x2="380" y2="316" stroke="#c0392b" stroke-width="2"/>
+  <text x="300" y="310" font-size="11" fill="#c0392b">红（V）→ K</text>
+  <text x="388" y="306" font-size="13" font-weight="bold" fill="#922b21">OL（反向截止）</text>
+  <text x="190" y="240" text-anchor="middle" font-size="11" fill="#888">门极—阴极 PN 结</text>
+
+  <!-- 右：IGBT -->
+  <text x="570" y="62" text-anchor="middle" font-size="15" font-weight="bold" fill="#2c3e50">IGBT（C / E / G）</text>
+  <rect x="490" y="90" width="160" height="120" fill="#f4f6f8" stroke="#666" stroke-width="2" rx="4"/>
+  <text x="570" y="130" text-anchor="middle" font-size="13" fill="#333">C（集电极）</text>
+  <text x="570" y="156" text-anchor="middle" font-size="13" fill="#333">E（发射极）</text>
+  <text x="570" y="182" text-anchor="middle" font-size="13" fill="#333">G（门极·高阻）</text>
+
+  <!-- 测量 3 -->
+  <line x1="650" y1="150" x2="720" y2="150" stroke="#c0392b" stroke-width="2"/>
+  <text x="656" y="144" font-size="10" fill="#c0392b">红→E</text>
+  <line x1="650" y1="176" x2="720" y2="176" stroke="#333" stroke-width="2"/>
+  <text x="656" y="198" font-size="10" fill="#333">黑→C</text>
+  <text x="560" y="240" text-anchor="middle" font-size="13" font-weight="bold" fill="#1e8449">体二极管 ≈ 0.6V</text>
+  <text x="560" y="260" text-anchor="middle" font-size="11" fill="#922b21">反接 → OL</text>
+
+  <!-- 说明 -->
+  <rect x="80" y="330" width="600" height="76" fill="#f8f9fa" stroke="#ccc"/>
+  <text x="94" y="354" font-size="12.5" fill="#333">• 门极 G-E 为 MOS 高阻输入：正反向测量均显示 OL（无 PN 结）。</text>
+  <text x="94" y="376" font-size="12.5" fill="#333">• IGBT C-E 集成体二极管：E→C 正向可测 ≈0.6V，C→E 反向 OL。</text>
+  <text x="94" y="398" font-size="12.5" fill="#333">• 晶闸管 G-K 为 PN 结：G→K 正向 ≈0.7V，K→G 反向 OL。</text>
+</svg>

@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 560" font-family="Microsoft YaHei, Arial, sans-serif">
+  <rect width="760" height="560" fill="#ffffff"/>
+  <text x="380" y="28" text-anchor="middle" font-size="19" font-weight="bold" fill="#1a3a5a">图 3  PLC 调节阀驱动程序结构（扫描周期）</text>
+
+  <defs>
+    <marker id="ar" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#2c3e50"/>
+    </marker>
+  </defs>
+
+  <!-- 读取输入 -->
+  <rect x="270" y="48" width="220" height="46" fill="#eaf4fb" stroke="#2980b9" stroke-width="2" rx="6"/>
+  <text x="380" y="70" text-anchor="middle" font-size="14" font-weight="bold" fill="#1a5276">① 读取物理输入 → 过程映像 I</text>
+  <text x="380" y="87" text-anchor="middle" font-size="11" fill="#555">I0.0 / I0.1（按钮状态）</text>
+
+  <!-- 边沿检测 -->
+  <rect x="220" y="120" width="320" height="66" fill="#fef9e7" stroke="#d4ac0d" stroke-width="2" rx="6"/>
+  <text x="380" y="143" text-anchor="middle" font-size="14" font-weight="bold" fill="#7d6608">② 上升沿检测（M2.0 / M2.1 记忆）</text>
+  <text x="230" y="164" font-size="11.5" fill="#333">LD I0.0 / AN M2.0 / = M0.1（脉冲）</text>
+  <text x="230" y="180" font-size="11.5" fill="#333">LD I0.0 / = M2.0（更新记忆）</text>
+
+  <!-- 长按脉冲 -->
+  <rect x="200" y="212" width="360" height="80" fill="#fdedec" stroke="#c0392b" stroke-width="2" rx="6"/>
+  <text x="380" y="235" text-anchor="middle" font-size="14" font-weight="bold" fill="#922b21">③ 长按连加/连减脉冲（T32~T35）</text>
+  <text x="212" y="256" font-size="11.5" fill="#333">TON T32,2000 → 按住 2s；TON T33,200 →</text>
+  <text x="212" y="272" font-size="11.5" fill="#333">每 0.2s 脉冲；R T33,1 自复位 → M0.4/M0.5</text>
+
+  <!-- 合并/互斥 -->
+  <rect x="240" y="318" width="280" height="60" fill="#eafaf1" stroke="#1e8449" stroke-width="2" rx="6"/>
+  <text x="380" y="342" text-anchor="middle" font-size="14" font-weight="bold" fill="#145a32">④ 脉冲合并 + 增/减互斥</text>
+  <text x="380" y="363" text-anchor="middle" font-size="11.5" fill="#333">M0.6 / M0.7 → M1.0（+）/ M1.1（−）</text>
+
+  <!-- 限幅 -->
+  <rect x="200" y="404" width="360" height="66" fill="#f4ecf7" stroke="#8e44ad" stroke-width="2" rx="6"/>
+  <text x="380" y="427" text-anchor="middle" font-size="14" font-weight="bold" fill="#6c3483">⑤ 限幅累加 VW0（0~100%）</text>
+  <text x="212" y="448" font-size="11.5" fill="#333">&lt;I VW0,100 → +I 1,VW0</text>
+  <text x="212" y="464" font-size="11.5" fill="#333">&gt;I VW0,0 → +I -1,VW0</text>
+
+  <!-- 输出 -->
+  <rect x="240" y="496" width="280" height="48" fill="#fdebd0" stroke="#e67e22" stroke-width="2" rx="6"/>
+  <text x="380" y="518" text-anchor="middle" font-size="14" font-weight="bold" fill="#935116">⑥ AQW0 = VW0 × 276 → AQ04</text>
+  <text x="380" y="536" text-anchor="middle" font-size="11" fill="#555">4~20mA 输出 → 调节阀开度</text>
+
+  <!-- 箭头 -->
+  <line x1="380" y1="94" x2="380" y2="118" stroke="#2c3e50" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="380" y1="186" x2="380" y2="210" stroke="#2c3e50" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="380" y1="292" x2="380" y2="316" stroke="#2c3e50" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="380" y1="378" x2="380" y2="402" stroke="#2c3e50" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="380" y1="470" x2="380" y2="494" stroke="#2c3e50" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- 侧注 -->
+  <text x="600" y="160" font-size="11" fill="#8e44ad">↑ 每扫描周期执行</text>
+  <text x="600" y="176" font-size="11" fill="#8e44ad">END 后回到 ①</text>
+</svg>

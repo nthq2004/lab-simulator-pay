@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 520" font-family="Microsoft YaHei, Arial, sans-serif">
+  <rect width="760" height="520" fill="#ffffff"/>
+  <text x="380" y="28" text-anchor="middle" font-size="19" font-weight="bold" fill="#1a3a5a">图 1  电磁阀驱动电路（NPN 三极管开关 + 续流回路）</text>
+
+  <!-- 主回路：24V 母线 -->
+  <line x1="120" y1="90" x2="430" y2="90" stroke="#c0392b" stroke-width="3"/>
+  <circle cx="120" cy="90" r="7" fill="#f1c40f" stroke="#8a6d00" stroke-width="1.5"/>
+  <text x="86" y="84" font-size="15" font-weight="bold" fill="#c0392b">+24V</text>
+  <text x="86" y="112" font-size="12" fill="#666">PT1 电位端子</text>
+
+  <!-- 节点 a -->
+  <circle cx="430" cy="90" r="4" fill="#c0392b"/>
+  <text x="438" y="84" font-size="13" fill="#333">a</text>
+  <line x1="430" y1="90" x2="430" y2="140" stroke="#2c3e50" stroke-width="2.5"/>
+
+  <!-- 电磁阀线圈 SV -->
+  <rect x="404" y="140" width="52" height="86" fill="#ffffff" stroke="#000" stroke-width="2.5"/>
+  <text x="430" y="188" text-anchor="middle" font-size="15" font-weight="bold" fill="#2c3e50">SV</text>
+  <text x="470" y="170" font-size="12" fill="#555">电磁阀线圈</text>
+  <text x="470" y="188" font-size="12" fill="#555">500Ω</text>
+  <line x1="430" y1="226" x2="430" y2="286" stroke="#2c3e50" stroke-width="2.5"/>
+  <circle cx="430" cy="286" r="4" fill="#2c3e50"/>
+  <text x="438" y="282" font-size="13" fill="#333">b</text>
+
+  <!-- 三极管 Q1 -->
+  <circle cx="430" cy="340" r="44" fill="#ffffff" stroke="#000" stroke-width="2.5"/>
+  <line x1="415" y1="322" x2="415" y2="358" stroke="#000" stroke-width="4"/>
+  <line x1="430" y1="286" x2="430" y2="322" stroke="#000" stroke-width="2.5"/>
+  <line x1="415" y1="330" x2="430" y2="322" stroke="#000" stroke-width="2.5"/>
+  <line x1="415" y1="350" x2="430" y2="358" stroke="#000" stroke-width="2.5"/>
+  <line x1="430" y1="358" x2="430" y2="400" stroke="#000" stroke-width="2.5"/>
+  <polygon points="430,358 418,358 425,346" fill="#000"/>
+  <text x="468" y="330" font-size="13" fill="#333">C 集电极</text>
+  <text x="468" y="386" font-size="13" fill="#333">E 发射极</text>
+  <text x="446" y="352" font-size="14" font-weight="bold" fill="#2c3e50">Q1</text>
+  <text x="446" y="370" font-size="11" fill="#555">NPN β=100</text>
+
+  <!-- 基极支路 -->
+  <line x1="415" y1="340" x2="300" y2="340" stroke="#2c3e50" stroke-width="2.5"/>
+  <rect x="250" y="326" width="50" height="28" fill="#babd8f" stroke="#7a7a5a" stroke-width="2"/>
+  <text x="275" y="345" text-anchor="middle" font-size="12" fill="#333">RL</text>
+  <text x="275" y="372" text-anchor="middle" font-size="11" fill="#555">1kΩ</text>
+  <line x1="200" y1="340" x2="250" y2="340" stroke="#2c3e50" stroke-width="2.5"/>
+  <!-- 开关 SB -->
+  <circle cx="188" cy="340" r="4" fill="#333"/>
+  <circle cx="212" cy="340" r="4" fill="#333"/>
+  <line x1="188" y1="340" x2="212" y2="322" stroke="#333" stroke-width="2.5"/>
+  <text x="200" y="372" text-anchor="middle" font-size="12" fill="#333">SB</text>
+  <line x1="140" y1="340" x2="188" y2="340" stroke="#2c3e50" stroke-width="2.5"/>
+  <circle cx="140" cy="340" r="7" fill="#f1c40f" stroke="#8a6d00" stroke-width="1.5"/>
+  <text x="112" y="333" font-size="14" font-weight="bold" fill="#c0392b">+3V</text>
+  <text x="102" y="356" font-size="11" fill="#666">PT2</text>
+
+  <!-- 发射极到地 -->
+  <line x1="430" y1="400" x2="430" y2="450" stroke="#2c3e50" stroke-width="2.5"/>
+  <line x1="404" y1="450" x2="456" y2="450" stroke="#333" stroke-width="2.5"/>
+  <line x1="412" y1="458" x2="448" y2="458" stroke="#333" stroke-width="2.5"/>
+  <line x1="420" y1="466" x2="440" y2="466" stroke="#333" stroke-width="2.5"/>
+  <text x="466" y="462" font-size="12" fill="#555">GND</text>
+
+  <!-- 续流回路：二极管 + 电阻，反并联线圈两端 -->
+  <line x1="404" y1="160" x2="330" y2="160" stroke="#8e44ad" stroke-width="2.5"/>
+  <line x1="330" y1="160" x2="330" y2="252" stroke="#8e44ad" stroke-width="2.5"/>
+  <line x1="330" y1="252" x2="404" y2="252" stroke="#8e44ad" stroke-width="2.5"/>
+  <!-- 电阻 RFW（上段） -->
+  <rect x="272" y="146" width="28" height="28" fill="#babd8f" stroke="#7a7a5a" stroke-width="2"/>
+  <line x1="300" y1="160" x2="330" y2="160" stroke="#8e44ad" stroke-width="2.5"/>
+  <line x1="272" y1="160" x2="246" y2="160" stroke="#8e44ad" stroke-width="2.5"/>
+  <text x="286" y="138" text-anchor="middle" font-size="12" fill="#8e44ad">RFW 100Ω</text>
+  <!-- 二极管 DFW（竖放，阳极在下→b 端，阴极朝上） -->
+  <line x1="246" y1="160" x2="246" y2="204" stroke="#8e44ad" stroke-width="2.5"/>
+  <polygon points="246,204 232,226 260,226" fill="#8e44ad"/>
+  <line x1="232" y1="204" x2="260" y2="204" stroke="#8e44ad" stroke-width="3"/>
+  <line x1="246" y1="226" x2="246" y2="252" stroke="#8e44ad" stroke-width="2.5"/>
+  <line x1="246" y1="252" x2="404" y2="252" stroke="#8e44ad" stroke-width="2.5"/>
+  <text x="150" y="214" text-anchor="end" font-size="12" fill="#8e44ad">DFW 续流二极管</text>
+  <text x="150" y="232" text-anchor="end" font-size="11" fill="#8e44ad">阳极→b 端</text>
+
+  <!-- b 端节点 -->
+  <circle cx="404" cy="252" r="4" fill="#2c3e50"/>
+  <text x="390" y="270" font-size="12" fill="#555">b</text>
+
+  <!-- 图例 -->
+  <rect x="500" y="420" width="240" height="80" fill="#f8f9fa" stroke="#ccc"/>
+  <text x="512" y="442" font-size="12" fill="#333">主回路：24V→线圈→C-E→地</text>
+  <text x="512" y="462" font-size="12" fill="#8e44ad">续流：DFW+RFW 反并联线圈</text>
+  <text x="512" y="482" font-size="12" fill="#c0392b">控制：3V→SB→RL→基极</text>
+</svg>
