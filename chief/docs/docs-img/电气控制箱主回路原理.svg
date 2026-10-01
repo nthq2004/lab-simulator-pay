@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 600" width="520" height="600" font-family="Microsoft YaHei, SimHei, sans-serif">
+  <rect width="520" height="600" fill="#ffffff"/>
+
+  <!-- 标题 -->
+  <text x="260" y="24" text-anchor="middle" font-size="15" font-weight="bold" fill="#2b6cb0">主回路</text>
+
+  <!-- 三相电源 -->
+  <rect x="110" y="36" width="300" height="64" rx="10" fill="#eaf3ff" stroke="#2b6cb0" stroke-width="2"/>
+  <text x="260" y="64" text-anchor="middle" font-size="16" font-weight="bold" fill="#1a202c">三相交流电源</text>
+  <text x="260" y="86" text-anchor="middle" font-size="13" fill="#4a5568">AC 380 V / 50 Hz</text>
+
+  <!-- 电源出线 -->
+  <line x1="170" y1="100" x2="170" y2="150" stroke="#2b6cb0" stroke-width="2"/>
+  <line x1="260" y1="100" x2="260" y2="150" stroke="#2b6cb0" stroke-width="2"/>
+  <line x1="350" y1="100" x2="350" y2="150" stroke="#2b6cb0" stroke-width="2"/>
+  <circle cx="170" cy="100" r="3" fill="#2b6cb0"/>
+  <circle cx="260" cy="100" r="3" fill="#2b6cb0"/>
+  <circle cx="350" cy="100" r="3" fill="#2b6cb0"/>
+  <text x="164" y="124" text-anchor="end" font-size="12" fill="#2b6cb0">L1</text>
+  <text x="254" y="124" text-anchor="end" font-size="12" fill="#2b6cb0">L2</text>
+  <text x="344" y="124" text-anchor="end" font-size="12" fill="#2b6cb0">L3</text>
+
+  <!-- QF -->
+  <rect x="110" y="150" width="300" height="64" rx="10" fill="#eaf3ff" stroke="#2b6cb0" stroke-width="2"/>
+  <text x="260" y="176" text-anchor="middle" font-size="15" font-weight="bold" fill="#1a202c">QF 空气开关（三相断路器）</text>
+  <text x="260" y="198" text-anchor="middle" font-size="12" fill="#4a5568">额定 380 V / 100 A · 过流瞬时脱扣</text>
+
+  <!-- QF 出线 -->
+  <line x1="170" y1="214" x2="170" y2="260" stroke="#2b6cb0" stroke-width="2"/>
+  <line x1="260" y1="214" x2="260" y2="260" stroke="#2b6cb0" stroke-width="2"/>
+  <line x1="350" y1="214" x2="350" y2="260" stroke="#2b6cb0" stroke-width="2"/>
+
+  <!-- KM1 / KM2 主触头 -->
+  <rect x="90" y="260" width="340" height="100" rx="10" fill="#eaf3ff" stroke="#2b6cb0" stroke-width="2"/>
+  <text x="260" y="288" text-anchor="middle" font-size="15" font-weight="bold" fill="#1a202c">KM1 / KM2 主触头（并联）</text>
+  <text x="260" y="314" text-anchor="middle" font-size="13" fill="#2b6cb0">KM1：U-V-W 相序 → 电动机正转</text>
+  <text x="260" y="338" text-anchor="middle" font-size="13" fill="#c05621">KM2：调换 U、W 两相 → 电动机反转</text>
+
+  <!-- 主触头出线 -->
+  <line x1="170" y1="360" x2="170" y2="404" stroke="#2b6cb0" stroke-width="2"/>
+  <line x1="260" y1="360" x2="260" y2="404" stroke="#2b6cb0" stroke-width="2"/>
+  <line x1="350" y1="360" x2="350" y2="404" stroke="#2b6cb0" stroke-width="2"/>
+
+  <!-- FR 热继电器 -->
+  <rect x="110" y="404" width="300" height="64" rx="10" fill="#eaf3ff" stroke="#2b6cb0" stroke-width="2"/>
+  <text x="260" y="430" text-anchor="middle" font-size="15" font-weight="bold" fill="#1a202c">FR 热继电器 发热元件</text>
+  <text x="260" y="452" text-anchor="middle" font-size="12" fill="#4a5568">整定 22 A · 过载反时限保护</text>
+
+  <!-- FR 出线 -->
+  <line x1="170" y1="468" x2="170" y2="506" stroke="#2b6cb0" stroke-width="2"/>
+  <line x1="260" y1="468" x2="260" y2="506" stroke="#2b6cb0" stroke-width="2"/>
+  <line x1="350" y1="468" x2="350" y2="506" stroke="#2b6cb0" stroke-width="2"/>
+
+  <!-- 电动机 -->
+  <rect x="110" y="506" width="300" height="84" rx="10" fill="#eaf3ff" stroke="#2b6cb0" stroke-width="2"/>
+  <text x="260" y="536" text-anchor="middle" font-size="16" font-weight="bold" fill="#1a202c">三相异步电动机 M</text>
+  <text x="260" y="560" text-anchor="middle" font-size="13" fill="#4a5568">10 kW / 1440 r/min</text>
+  <text x="260" y="580" text-anchor="middle" font-size="12" fill="#4a5568">U1 V1 W1 ／ U2 V2 W2（Y 接）</text>
+</svg>
