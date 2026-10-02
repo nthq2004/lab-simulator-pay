@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="520" viewBox="0 0 820 520" font-family="Microsoft YaHei,PingFang SC,sans-serif">
+  <rect width="820" height="520" fill="#fbfcfe"/>
+  <text x="24" y="34" font-size="20" font-weight="bold" fill="#1a3a5c">两线制压力变送器 4~20mA 传输特性</text>
+
+  <!-- 网格 -->
+  <g stroke="#e3e8ef" stroke-width="1">
+    <line x1="120" y1="100" x2="740" y2="100"/>
+    <line x1="120" y1="166" x2="740" y2="166"/>
+    <line x1="120" y1="232" x2="740" y2="232"/>
+    <line x1="120" y1="298" x2="740" y2="298"/>
+    <line x1="120" y1="364" x2="740" y2="364"/>
+    <line x1="120" y1="430" x2="740" y2="430"/>
+    <line x1="275" y1="60" x2="275" y2="430"/>
+    <line x1="430" y1="60" x2="430" y2="430"/>
+    <line x1="585" y1="60" x2="585" y2="430"/>
+    <line x1="740" y1="60" x2="740" y2="430"/>
+  </g>
+
+  <!-- 坐标轴 -->
+  <g stroke="#333" stroke-width="2">
+    <line x1="120" y1="430" x2="760" y2="430"/>
+    <line x1="120" y1="430" x2="120" y2="50"/>
+  </g>
+  <g font-size="13" fill="#333" text-anchor="end">
+    <text x="112" y="435">0</text>
+    <text x="112" y="369">4</text>
+    <text x="112" y="303">8</text>
+    <text x="112" y="237">12</text>
+    <text x="112" y="171">16</text>
+    <text x="112" y="105">20</text>
+  </g>
+  <g font-size="13" fill="#333" text-anchor="middle">
+    <text x="120" y="452">0</text>
+    <text x="275" y="452">25%</text>
+    <text x="430" y="452">50%</text>
+    <text x="585" y="452">75%</text>
+    <text x="740" y="452">100%</text>
+  </g>
+  <text x="440" y="486" font-size="15" fill="#333" text-anchor="middle">输入压力（占量程百分比）</text>
+  <text x="34" y="240" font-size="15" fill="#333" text-anchor="middle" transform="rotate(-90 34,240)">输出电流 I (mA)</text>
+
+  <!-- 特性线 -->
+  <line x1="120" y1="364" x2="740" y2="100" stroke="#c0392b" stroke-width="3.5"/>
+  <circle cx="120" cy="364" r="7" fill="#fff" stroke="#c0392b" stroke-width="3"/>
+  <circle cx="275" cy="298" r="7" fill="#fff" stroke="#c0392b" stroke-width="3"/>
+  <circle cx="430" cy="232" r="7" fill="#fff" stroke="#c0392b" stroke-width="3"/>
+  <circle cx="585" cy="166" r="7" fill="#fff" stroke="#c0392b" stroke-width="3"/>
+  <circle cx="740" cy="100" r="7" fill="#fff" stroke="#c0392b" stroke-width="3"/>
+
+  <!-- 点标注 -->
+  <g font-size="13" font-weight="bold" fill="#922b21">
+    <text x="132" y="386">0 MPa → 4 mA（零点）</text>
+    <text x="275" y="326">0.25 量程 → 8 mA</text>
+    <text x="432" y="254">0.5 量程 → 12 mA</text>
+    <text x="588" y="188">0.75 量程 → 16 mA</text>
+    <text x="600" y="92">满量程 → 20 mA（满度）</text>
+  </g>
+
+  <!-- 说明 -->
+  <rect x="430" y="300" width="330" height="86" rx="10" fill="#fdf2e9" stroke="#e67e22"/>
+  <text x="446" y="326" font-size="14" fill="#7e5109">换算关系：I = 4 + 16 × (p / 量程) mA</text>
+  <text x="446" y="350" font-size="14" fill="#7e5109">测得电流：p = (I − 4) / 16 × 量程</text>
+  <text x="446" y="374" font-size="13" fill="#7e5109">示例：0.5 量程 ↔ 12 mA</text>
+</svg>

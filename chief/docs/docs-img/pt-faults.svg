@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="470" viewBox="0 0 980 470" font-family="Microsoft YaHei,PingFang SC,sans-serif">
+  <rect width="980" height="470" fill="#fbfcfe"/>
+  <line x1="490" y1="20" x2="490" y2="450" stroke="#ccd4dd" stroke-width="2" stroke-dasharray="6 6"/>
+
+  <!-- ===== 故障一：回路断路 ===== -->
+  <text x="30" y="40" font-size="19" font-weight="bold" fill="#922b21">故障一：压力变送器回路断路</text>
+  <g fill="#fdedec" stroke="#c0392b" stroke-width="2">
+    <rect x="40" y="90" width="120" height="60" rx="9"/>
+    <rect x="210" y="90" width="110" height="60" rx="9"/>
+    <rect x="360" y="90" width="100" height="60" rx="9"/>
+  </g>
+  <g font-size="14" fill="#7b241c" text-anchor="middle">
+    <text x="100" y="126">24V 电源</text>
+    <text x="265" y="126">可变电阻</text>
+    <text x="410" y="126">电流表</text>
+  </g>
+  <!-- 下方变送器 -->
+  <rect x="210" y="240" width="170" height="80" rx="9" fill="#fdedec" stroke="#c0392b" stroke-width="2"/>
+  <text x="295" y="275" font-size="14" fill="#7b241c" text-anchor="middle">压力变送器</text>
+  <text x="295" y="297" font-size="12" fill="#c0392b" text-anchor="middle">P(+) / N(−)</text>
+  <!-- 连线 -->
+  <g stroke="#c0392b" stroke-width="2.6" fill="none">
+    <line x1="160" y1="120" x2="210" y2="120"/>
+    <line x1="320" y1="120" x2="360" y2="120"/>
+    <line x1="410" y1="150" x2="410" y2="280" />
+    <line x1="410" y1="280" x2="380" y2="280"/>
+    <line x1="210" y1="280" x2="120" y2="280"/>
+    <line x1="120" y1="280" x2="100" y2="280"/>
+    <line x1="100" y1="280" x2="100" y2="150"/>
+  </g>
+  <!-- 断点 -->
+  <g stroke="#e74c3c" stroke-width="5" stroke-linecap="round">
+    <line x1="196" y1="266" x2="224" y2="294"/>
+    <line x1="224" y1="266" x2="196" y2="294"/>
+  </g>
+  <text x="150" y="240" font-size="13" fill="#e74c3c">断点</text>
+  <!-- 电压表 -->
+  <circle cx="410" cy="200" r="22" fill="#fff" stroke="#2c3e50" stroke-width="2"/>
+  <text x="410" y="207" font-size="18" text-anchor="middle" fill="#2c3e50">V</text>
+  <text x="445" y="196" font-size="13" fill="#2c3e50">跨接测电压</text>
+  <text x="445" y="216" font-size="13" fill="#2c3e50">判断断点位置</text>
+  <text x="30" y="380" font-size="13.5" fill="#555">现象：回路电流为 0mA。电源两端电压正常（24V）、</text>
+  <text x="30" y="404" font-size="13.5" fill="#555">变送器两端出现电源电压 → 断点在变送器内部；</text>
+  <text x="30" y="428" font-size="13.5" fill="#555">电源两端无电压 → 电源断线。</text>
+
+  <!-- ===== 故障二：气路漏气 ===== -->
+  <text x="520" y="40" font-size="19" font-weight="bold" fill="#0e6655">故障二：压力变送器气路漏气</text>
+  <g fill="#e8f6f3" stroke="#16a085" stroke-width="2">
+    <rect x="520" y="110" width="110" height="60" rx="9"/>
+    <rect x="670" y="120" width="110" height="50" rx="9"/>
+    <rect x="820" y="120" width="110" height="50" rx="9"/>
+    <rect x="560" y="280" width="120" height="60" rx="9"/>
+    <rect x="820" y="280" width="120" height="60" rx="9"/>
+  </g>
+  <g stroke="#16a085" stroke-width="2.6" fill="none">
+    <line x1="630" y1="140" x2="670" y2="145"/>
+    <line x1="780" y1="145" x2="820" y2="145"/>
+    <line x1="875" y1="170" x2="875" y2="280"/>
+    <line x1="820" y1="310" x2="680" y2="310"/>
+  </g>
+  <g font-size="13.5" fill="#0b5345" text-anchor="middle">
+    <text x="575" y="145">调节阀</text>
+    <text x="725" y="150">三通</text>
+    <text x="875" y="150">压力表</text>
+    <text x="620" y="316">压力变送器</text>
+    <text x="880" y="316">气压口</text>
+    <text x="880" y="334" font-size="11" fill="#16a085">漏点</text>
+  </g>
+  <!-- 漏点气泡 -->
+  <g stroke="#2c8fd8" stroke-width="1.6" fill="rgba(52,152,219,0.22)">
+    <circle cx="884" cy="252" r="9"/><circle cx="906" cy="236" r="6"/>
+    <circle cx="872" cy="228" r="5"/><circle cx="898" cy="212" r="8"/>
+  </g>
+  <text x="975" y="262" text-anchor="end" font-size="13" fill="#2471a3">肥皂水冒泡</text>
+  <text x="520" y="380" font-size="13.5" fill="#555">现象：压力表与变送器读数出现偏差、输出电流偏离理论值。</text>
+  <text x="520" y="404" font-size="13.5" fill="#555">用肥皂水（检漏瓶）涂各接口，冒泡处即为漏点；</text>
+  <text x="520" y="428" font-size="13.5" fill="#555">修复后重新加压，两表读数应恢复一致。</text>
+</svg>
