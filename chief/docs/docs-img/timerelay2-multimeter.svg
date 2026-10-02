@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 430" font-family="Microsoft YaHei, SimHei, sans-serif">
+  <rect width="660" height="430" fill="#ffffff"/>
+  <text x="330" y="28" text-anchor="middle" font-size="18" font-weight="bold" fill="#1a252f">图 4  用万用表（200Ω 档）检测时间继电器触头</text>
+
+  <!-- ================= 卡片 1 ================= -->
+  <rect x="20" y="50" width="194" height="300" rx="8" fill="#f7f9fb" stroke="#c8d2dc"/>
+  <text x="117" y="74" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#2f6f3f">① 测 NC（端子 5-8）</text>
+  <text x="117" y="92" text-anchor="middle" font-size="11" fill="#888">延时到达前</text>
+  <!-- 表笔端 -->
+  <circle cx="85" cy="120" r="7" fill="#c0392b"/>
+  <text x="85" y="110" text-anchor="middle" font-size="10" fill="#c0392b">红 V</text>
+  <circle cx="149" cy="120" r="7" fill="#333"/>
+  <text x="149" y="110" text-anchor="middle" font-size="10" fill="#333">黑 COM</text>
+  <text x="117" y="146" text-anchor="middle" font-size="11" fill="#2d3436">5（NC） — 8（COM）</text>
+  <!-- 显示 -->
+  <rect x="45" y="162" width="144" height="58" rx="5" fill="#15301f" stroke="#0a1a10"/>
+  <text x="117" y="202" text-anchor="middle" font-size="30" font-family="Consolas, monospace" fill="#5df08a">0.0</text>
+  <text x="185" y="188" text-anchor="end" font-size="12" fill="#7fe0a0">Ω</text>
+  <text x="117" y="244" text-anchor="middle" font-size="11.5" fill="#2f6f3f">NC 触头闭合</text>
+  <text x="117" y="264" text-anchor="middle" font-size="11.5" fill="#2f6f3f">读数 ≈ 0 Ω（正常）</text>
+  <text x="117" y="296" text-anchor="middle" font-size="10.5" fill="#888">表示触头完好、回路导通</text>
+  <text x="117" y="320" text-anchor="middle" font-size="10.5" fill="#888">测量须在断电状态进行</text>
+  <text x="117" y="338" text-anchor="middle" font-size="10.5" fill="#888">用电阻档验证通断</text>
+
+  <!-- ================= 卡片 2 ================= -->
+  <rect x="233" y="50" width="194" height="300" rx="8" fill="#fdf6f4" stroke="#e2c8c0"/>
+  <text x="330" y="74" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#b0361f">② 测 NC（端子 5-8）</text>
+  <text x="330" y="92" text-anchor="middle" font-size="11" fill="#888">延时到达后</text>
+  <circle cx="298" cy="120" r="7" fill="#c0392b"/>
+  <text x="298" y="110" text-anchor="middle" font-size="10" fill="#c0392b">红 V</text>
+  <circle cx="362" cy="120" r="7" fill="#333"/>
+  <text x="362" y="110" text-anchor="middle" font-size="10" fill="#333">黑 COM</text>
+  <text x="330" y="146" text-anchor="middle" font-size="11" fill="#2d3436">5（NC） — 8（COM）</text>
+  <rect x="258" y="162" width="144" height="58" rx="5" fill="#301513" stroke="#1a0a08"/>
+  <text x="330" y="203" text-anchor="middle" font-size="30" font-family="Consolas, monospace" fill="#ff7a5c">O.L</text>
+  <text x="330" y="244" text-anchor="middle" font-size="11.5" fill="#b0361f">NC 触头已断开</text>
+  <text x="330" y="264" text-anchor="middle" font-size="11.5" fill="#b0361f">超量程，显示 O.L</text>
+  <text x="330" y="296" text-anchor="middle" font-size="10.5" fill="#888">说明延时到达、触头动作</text>
+  <text x="330" y="320" text-anchor="middle" font-size="10.5" fill="#888">保护/控制功能正常</text>
+  <text x="330" y="338" text-anchor="middle" font-size="10.5" fill="#888">O.L = Over Load（超量程）</text>
+
+  <!-- ================= 卡片 3 ================= -->
+  <rect x="446" y="50" width="194" height="300" rx="8" fill="#f7f9f7" stroke="#c8dcc8"/>
+  <text x="543" y="74" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#2f6f3f">③ 测 NO（端子 6-8）</text>
+  <text x="543" y="92" text-anchor="middle" font-size="11" fill="#888">延时到达后</text>
+  <circle cx="511" cy="120" r="7" fill="#c0392b"/>
+  <text x="511" y="110" text-anchor="middle" font-size="10" fill="#c0392b">红 V</text>
+  <circle cx="575" cy="120" r="7" fill="#333"/>
+  <text x="575" y="110" text-anchor="middle" font-size="10" fill="#333">黑 COM</text>
+  <text x="543" y="146" text-anchor="middle" font-size="11" fill="#2d3436">6（NO） — 8（COM）</text>
+  <rect x="471" y="162" width="144" height="58" rx="5" fill="#15301f" stroke="#0a1a10"/>
+  <text x="543" y="202" text-anchor="middle" font-size="30" font-family="Consolas, monospace" fill="#5df08a">0.0</text>
+  <text x="611" y="188" text-anchor="end" font-size="12" fill="#7fe0a0">Ω</text>
+  <text x="543" y="244" text-anchor="middle" font-size="11.5" fill="#2f6f3f">NO 触头已闭合</text>
+  <text x="543" y="264" text-anchor="middle" font-size="11.5" fill="#2f6f3f">读数 ≈ 0 Ω（正常）</text>
+  <text x="543" y="296" text-anchor="middle" font-size="10.5" fill="#888">与 NC 状态互补</text>
+  <text x="543" y="320" text-anchor="middle" font-size="10.5" fill="#888">证明触头切换正确</text>
+  <text x="543" y="338" text-anchor="middle" font-size="10.5" fill="#888">红表笔由 5 移到 6</text>
+
+  <!-- 底部说明 -->
+  <text x="330" y="382" text-anchor="middle" font-size="11.5" fill="#555">先测冷态 NC（≈0 Ω）→ 通电延时 → NC 变为 O.L，改接 6 测 NO（≈0 Ω），即可判断触头通断是否正常</text>
+  <text x="330" y="406" text-anchor="middle" font-size="11" fill="#888">注意：万用表须拨到 200Ω 电阻档；测电阻务必断电，跳闸/延时状态下触头位置会改变读数</text>
+</svg>

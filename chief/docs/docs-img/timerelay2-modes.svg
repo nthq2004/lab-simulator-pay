@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 520" font-family="Microsoft YaHei, SimHei, sans-serif">
+  <rect width="660" height="520" fill="#ffffff"/>
+  <text x="330" y="28" text-anchor="middle" font-size="18" font-weight="bold" fill="#1a252f">图 2  通电延时（JSZ3）与断电延时（JSZ3N）动作时序对比</text>
+
+  <!-- ==================== (a) JSZ3 ==================== -->
+  <rect x="30" y="44" width="600" height="216" rx="8" fill="#f7f9fb" stroke="#c8d2dc"/>
+  <text x="46" y="66" font-size="13.5" font-weight="bold" fill="#2f6f3f">(a) 通电延时型 JSZ3 —— 得电后延时动作，失电瞬时复位</text>
+
+  <!-- 行标签 -->
+  <text x="40" y="120" font-size="12" fill="#2d3436">线圈电压</text>
+  <text x="40" y="212" font-size="12" fill="#2d3436">触头 NO</text>
+
+  <!-- 线圈波形 -->
+  <line x1="120" y1="140" x2="620" y2="140" stroke="#dfe6ec" stroke-width="1"/>
+  <!-- low 120-170, high 170-450, low 450-620 -->
+  <polyline points="120,138 170,138 170,108 450,108 450,138 620,138"
+    fill="none" stroke="#1a6fb5" stroke-width="2.6"/>
+  <text x="310" y="100" text-anchor="middle" font-size="11.5" fill="#1a6fb5">线圈得电（220V）</text>
+
+  <!-- 触头 NO 波形：断开(低) 直到 350 闭合(高) 到 450，然后复位 -->
+  <line x1="120" y1="232" x2="620" y2="232" stroke="#dfe6ec" stroke-width="1"/>
+  <polyline points="120,230 350,230 350,200 450,200 450,230 620,230"
+    fill="none" stroke="#d04020" stroke-width="2.6"/>
+  <text x="240" y="258" text-anchor="middle" font-size="11.5" fill="#888">NO 断开（NC 闭合）</text>
+  <text x="400" y="192" text-anchor="middle" font-size="11.5" fill="#d04020">NO 闭合</text>
+
+  <!-- 时刻标注 -->
+  <line x1="170" y1="80" x2="170" y2="240" stroke="#2f6f3f" stroke-width="1.2" stroke-dasharray="4 4"/>
+  <text x="170" y="76" text-anchor="middle" font-size="11" fill="#2f6f3f">①得电计时</text>
+  <line x1="350" y1="80" x2="350" y2="240" stroke="#2f6f3f" stroke-width="1.2" stroke-dasharray="4 4"/>
+  <text x="350" y="76" text-anchor="middle" font-size="11" fill="#2f6f3f">②延时 t 到达→触头动作</text>
+  <line x1="450" y1="80" x2="450" y2="240" stroke="#2f6f3f" stroke-width="1.2" stroke-dasharray="4 4"/>
+  <text x="462" y="76" text-anchor="middle" font-size="11" fill="#2f6f3f">③失电瞬时复位</text>
+
+  <!-- ==================== (b) JSZ3N ==================== -->
+  <rect x="30" y="274" width="600" height="216" rx="8" fill="#fdf6f4" stroke="#e2c8c0"/>
+  <text x="46" y="296" font-size="13.5" font-weight="bold" fill="#b0361f">(b) 断电延时型 JSZ3N —— 得电瞬时动作，失电后延时复位</text>
+
+  <text x="40" y="350" font-size="12" fill="#2d3436">线圈电压</text>
+  <text x="40" y="442" font-size="12" fill="#2d3436">触头 NO</text>
+
+  <!-- 线圈波形：low 120-170, high 170-420, low 420-620 -->
+  <line x1="120" y1="370" x2="620" y2="370" stroke="#dfe6ec" stroke-width="1"/>
+  <polyline points="120,368 170,368 170,338 420,338 420,368 620,368"
+    fill="none" stroke="#1a6fb5" stroke-width="2.6"/>
+  <text x="295" y="330" text-anchor="middle" font-size="11.5" fill="#1a6fb5">线圈得电</text>
+
+  <!-- 触头 NO：得电瞬时闭合 170-580，然后复位 -->
+  <line x1="120" y1="462" x2="620" y2="462" stroke="#dfe6ec" stroke-width="1"/>
+  <polyline points="120,460 170,460 170,430 580,430 580,460 620,460"
+    fill="none" stroke="#d04020" stroke-width="2.6"/>
+  <text x="140" y="488" text-anchor="middle" font-size="11.5" fill="#888">NC</text>
+  <text x="375" y="422" text-anchor="middle" font-size="11.5" fill="#d04020">NO 闭合并保持</text>
+  <text x="600" y="488" text-anchor="middle" font-size="11.5" fill="#888">复位</text>
+
+  <!-- 时刻标注 -->
+  <line x1="170" y1="310" x2="170" y2="470" stroke="#b0361f" stroke-width="1.2" stroke-dasharray="4 4"/>
+  <text x="176" y="326" font-size="11" fill="#b0361f">①得电瞬时动作</text>
+  <line x1="420" y1="310" x2="420" y2="470" stroke="#b0361f" stroke-width="1.2" stroke-dasharray="4 4"/>
+  <text x="426" y="326" font-size="11" fill="#b0361f">②失电，进入断电延时保持</text>
+  <line x1="580" y1="310" x2="580" y2="470" stroke="#b0361f" stroke-width="1.2" stroke-dasharray="4 4"/>
+  <text x="566" y="344" text-anchor="end" font-size="11" fill="#b0361f">③延时 t 结束→复位</text>
+
+  <text x="330" y="510" text-anchor="middle" font-size="11.5" fill="#888">JSZ3 的延时发生在“得电之后”，JSZ3N 的延时发生在“失电之后”，二者时序正好相反</text>
+</svg>
