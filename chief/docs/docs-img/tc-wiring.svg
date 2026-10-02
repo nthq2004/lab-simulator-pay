@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="700" viewBox="0 0 1000 700" font-family="Microsoft YaHei,PingFang SC,sans-serif">
+  <rect width="1000" height="700" fill="#fbfcfe"/>
+  <text x="24" y="34" font-size="20" font-weight="bold" fill="#1a3a5c">温控器最小系统 接线与端口对照（共 19 根）</text>
+
+  <!-- ① 电源与共地 -->
+  <g fill="#fef9e7" stroke="#b7950b" stroke-width="2">
+    <rect x="30" y="52" width="940" height="94" rx="10"/>
+  </g>
+  <text x="48" y="76" font-size="15" font-weight="bold" fill="#7d6608">① 电源与共地（3 根）</text>
+  <g font-size="13.5" fill="#333">
+    <text x="48" y="100">① pid_wire_vcc → dcpower_wire_p　　PID 电源正（VCC）→ 24V 电源正端</text>
+    <text x="520" y="100">② pid_wire_gnd → dcpower_wire_n　　PID 电源负 → 24V 电源负端</text>
+    <text x="48" y="126">③ gnd_wire_gnd → dcpower_wire_n　　接地端子 → 24V 电源负端（共地）</text>
+  </g>
+
+  <!-- ② 温度检测 -->
+  <g fill="#e8f6f3" stroke="#16a085" stroke-width="2">
+    <rect x="30" y="160" width="940" height="150" rx="10"/>
+  </g>
+  <text x="48" y="184" font-size="15" font-weight="bold" fill="#0e6655">② 温度检测回路（6 根）　烘箱 PT100 → 温度变送器 → 电流表 → PID 4~20mA 输入</text>
+  <g font-size="13.5" fill="#333">
+    <text x="48" y="208">④ oven_wire_l → ttrans_wire_l　　　PT100(L) → 变送器 L</text>
+    <text x="520" y="208">⑤ oven_wire_r → ttrans_wire_m　　　PT100(R) → 变送器 M</text>
+    <text x="48" y="234">⑥ oven_wire_r → ttrans_wire_r　　　变送器 M、R 短接（三线制）</text>
+    <text x="520" y="234">⑦ pid_wire_pi1 → ampmeter_wire_p　PID 输入(+) → 电流表 P(+)</text>
+    <text x="48" y="260">⑧ ampmeter_wire_n → ttrans_wire_p　电流表 N(−) → 变送器 P(+)</text>
+    <text x="520" y="260">⑨ ttrans_wire_n → pid_wire_ni1　　变送器 N(−) → PID 输入(−)</text>
+    <text x="48" y="292" font-size="12.5" fill="#0e6655">要点：变送器把 PT100 阻值转换为 4~20mA（0% ↔ 4mA，100% ↔ 20mA），电流表串联显示回路电流。</text>
+  </g>
+
+  <!-- ③ CH1 加热 -->
+  <g fill="#fdedec" stroke="#c0392b" stroke-width="2">
+    <rect x="30" y="326" width="940" height="118" rx="10"/>
+  </g>
+  <text x="48" y="350" font-size="15" font-weight="bold" fill="#922b21">③ CH1 加热输出（4 根）　PID CH1 → 加继电器 → 烘箱加热器</text>
+  <g font-size="13.5" fill="#333">
+    <text x="48" y="374">⑩ pid_wire_po1 → rplus_wire_l　　　CH1 输出(+) → 加继电器线圈左端</text>
+    <text x="520" y="374">⑪ pid_wire_no1 → rplus_wire_r　　　CH1 输出(−) → 加继电器线圈右端</text>
+    <text x="48" y="400">⑫ rplus_wire_COM → oven_wire_heaterl　加继电器 COM → 加热器左端</text>
+    <text x="520" y="400">⑬ rplus_wire_NO → oven_wire_heaterr　加继电器 NO → 加热器右端</text>
+    <text x="48" y="430" font-size="12.5" fill="#922b21">要点：CH1 为 PWM 输出，继电器按占空比通断，加热器随之脉宽调制。</text>
+  </g>
+
+  <!-- ④ CH2 冷却 -->
+  <g fill="#eaf2fb" stroke="#2471a3" stroke-width="2">
+    <rect x="30" y="460" width="940" height="118" rx="10"/>
+  </g>
+  <text x="48" y="484" font-size="15" font-weight="bold" fill="#154360">④ CH2 冷却输出（4 根）　PID CH2 → 减继电器 → 烘箱散热风扇</text>
+  <g font-size="13.5" fill="#333">
+    <text x="48" y="508">⑭ pid_wire_po2 → rminus_wire_l　　　CH2 输出(+) → 减继电器线圈左端</text>
+    <text x="520" y="508">⑮ pid_wire_no2 → rminus_wire_r　　　CH2 输出(−) → 减继电器线圈右端</text>
+    <text x="48" y="534">⑯ rminus_wire_COM → oven_wire_fanl　减继电器 COM → 风扇左端</text>
+    <text x="520" y="534">⑰ rminus_wire_NO → oven_wire_fanr　减继电器 NO → 风扇右端</text>
+    <text x="48" y="564" font-size="12.5" fill="#154360">要点：CH2 同样为 PWM 输出；当测量值高于设定值时加大冷却占空比。</text>
+  </g>
+
+  <!-- ⑤ RS485 -->
+  <g fill="#f4ecf7" stroke="#8e44ad" stroke-width="2">
+    <rect x="30" y="594" width="940" height="86" rx="10"/>
+  </g>
+  <text x="48" y="618" font-size="15" font-weight="bold" fill="#6c3483">⑤ RS485 通信（2 根）　PID → 监控主机</text>
+  <g font-size="13.5" fill="#333">
+    <text x="48" y="642">⑱ pid_wire_b1 → monitor_wire_b1　　PID RS485 B → 监控主机 B</text>
+    <text x="520" y="642">⑲ pid_wire_a1 → monitor_wire_a1　　PID RS485 A → 监控主机 A</text>
+    <text x="48" y="668" font-size="12.5" fill="#6c3483">点击工具栏【自动接线】可一键完成全部 19 根；自动演示时每接一根线前，箭头会先圈出对应端口再逐根动画接线。</text>
+  </g>
+</svg>

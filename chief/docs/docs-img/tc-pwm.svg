@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="560" viewBox="0 0 900 560" font-family="Microsoft YaHei,PingFang SC,sans-serif">
+  <rect width="900" height="560" fill="#fbfcfe"/>
+  <text x="24" y="34" font-size="20" font-weight="bold" fill="#1a3a5c">PID 分程 PWM 输出特性（偏差 → 占空比）</text>
+
+  <!-- 左：映射曲线 -->
+  <text x="60" y="66" font-size="15" font-weight="bold" fill="#333">一、PID 输出 → 占空比 映射</text>
+  <g stroke="#e3e8ef" stroke-width="1">
+    <line x1="90" y1="90" x2="430" y2="90"/>
+    <line x1="90" y1="150" x2="430" y2="150"/>
+    <line x1="90" y1="210" x2="430" y2="210"/>
+    <line x1="90" y1="270" x2="430" y2="270"/>
+    <line x1="90" y1="330" x2="430" y2="330"/>
+    <line x1="158" y1="80" x2="158" y2="330"/>
+    <line x1="226" y1="80" x2="226" y2="330"/>
+    <line x1="294" y1="80" x2="294" y2="330"/>
+    <line x1="362" y1="80" x2="362" y2="330"/>
+  </g>
+  <g stroke="#333" stroke-width="2">
+    <line x1="90" y1="330" x2="440" y2="330"/>
+    <line x1="90" y1="330" x2="90" y2="80"/>
+  </g>
+  <g font-size="12" fill="#333" text-anchor="end">
+    <text x="82" y="334">0</text>
+    <text x="82" y="274">25</text>
+    <text x="82" y="214">50</text>
+    <text x="82" y="154">75</text>
+    <text x="82" y="94">100</text>
+  </g>
+  <g font-size="12" fill="#333" text-anchor="middle">
+    <text x="90" y="350">0</text>
+    <text x="158" y="350">20</text>
+    <text x="226" y="350">40</text>
+    <text x="260" y="350" font-weight="bold" fill="#7d3c98">50</text>
+    <text x="294" y="350">60</text>
+    <text x="362" y="350">80</text>
+    <text x="430" y="350">100</text>
+  </g>
+  <text x="265" y="374" font-size="13" fill="#333" text-anchor="middle">PID 输出 OUT (%)　← 冷却 | 加热 →</text>
+  <text x="30" y="210" font-size="13" fill="#333" text-anchor="middle" transform="rotate(-90 30,210)">输出占空比 (%)</text>
+
+  <!-- 中性线 -->
+  <line x1="260" y1="80" x2="260" y2="330" stroke="#7d3c98" stroke-width="1.5" stroke-dasharray="6 5"/>
+  <text x="260" y="76" font-size="11" fill="#7d3c98" text-anchor="middle">中性 50%</text>
+
+  <!-- 加热 / 冷却特性线 -->
+  <line x1="260" y1="330" x2="430" y2="90" stroke="#c0392b" stroke-width="3.5"/>
+  <line x1="90" y1="90" x2="260" y2="330" stroke="#2471a3" stroke-width="3.5"/>
+  <circle cx="260" cy="330" r="6" fill="#fff" stroke="#333" stroke-width="2"/>
+  <circle cx="430" cy="90" r="6" fill="#fff" stroke="#c0392b" stroke-width="3"/>
+  <circle cx="90" cy="90" r="6" fill="#fff" stroke="#2471a3" stroke-width="3"/>
+  <text x="360" y="200" font-size="13" font-weight="bold" fill="#c0392b">CH1 加热</text>
+  <text x="130" y="200" font-size="13" font-weight="bold" fill="#2471a3">CH2 冷却</text>
+  <text x="150" y="420" font-size="13" fill="#555">heatPWM = (OUT−50)/50　　coolPWM = (50−OUT)/50</text>
+
+  <!-- 右：方波示意 -->
+  <text x="500" y="66" font-size="15" font-weight="bold" fill="#333">二、偏差大小与输出波形</text>
+
+  <!-- 100% -->
+  <line x1="500" y1="150" x2="820" y2="150" stroke="#ddd" stroke-width="1"/>
+  <polyline points="500,150 500,90 820,90" fill="none" stroke="#c0392b" stroke-width="3"/>
+  <text x="500" y="82" font-size="13" font-weight="bold" fill="#c0392b">偏差大：100% 连续输出</text>
+
+  <!-- 60% -->
+  <line x1="500" y1="290" x2="820" y2="290" stroke="#ddd" stroke-width="1"/>
+  <polyline points="500,290 500,230 592,230 592,290 660,290 660,230 752,230 752,290 820,290" fill="none" stroke="#c0392b" stroke-width="3"/>
+  <text x="500" y="222" font-size="13" font-weight="bold" fill="#c0392b">偏差中：约 60% 脉宽调制</text>
+
+  <!-- 25% -->
+  <line x1="500" y1="440" x2="820" y2="440" stroke="#ddd" stroke-width="1"/>
+  <polyline points="500,440 500,380 548,380 548,440 660,440 660,380 708,380 708,440 820,440" fill="none" stroke="#c0392b" stroke-width="3"/>
+  <text x="500" y="372" font-size="13" font-weight="bold" fill="#c0392b">偏差小：约 25% 脉宽调制</text>
+
+  <rect x="500" y="466" width="360" height="74" rx="10" fill="#fdf2e9" stroke="#e67e22"/>
+  <text x="516" y="492" font-size="13" fill="#7e5109">① 偏差大 → 占空比大（100% 时连续输出）；</text>
+  <text x="516" y="514" font-size="13" fill="#7e5109">② 偏差变小 → 占空比按比例减小，呈脉宽调制（PWM）；</text>
+  <text x="516" y="536" font-size="13" fill="#7e5109">③ 到设定值（OUT≈50%）时，加热/冷却输出均趋近 0。</text>
+</svg>
