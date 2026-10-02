@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 400" font-family="Microsoft YaHei, SimHei, sans-serif">
+  <rect width="660" height="400" fill="#ffffff"/>
+  <text x="330" y="28" text-anchor="middle" font-size="18" font-weight="bold" fill="#1a252f">图 4  用万用表检测热继电器（200Ω 档）</text>
+
+  <!-- ============ 步骤 ① 测发热元件 ============ -->
+  <rect x="20" y="50" width="196" height="292" rx="8" fill="#f7f9fb" stroke="#c8d2dc"/>
+  <text x="118" y="74" text-anchor="middle" font-size="13" font-weight="bold" fill="#2f6f3f">① 测热元件电阻</text>
+  <!-- 万用表 -->
+  <rect x="52" y="90" width="132" height="76" rx="7" fill="#2f3a45" stroke="#1a252f" stroke-width="1.6"/>
+  <rect x="66" y="102" width="104" height="34" rx="3" fill="#9fd8b0" stroke="#5a8a6a"/>
+  <text x="118" y="127" text-anchor="middle" font-size="17" font-weight="bold" fill="#12321c">0.01</text>
+  <text x="118" y="158" text-anchor="middle" font-size="10" fill="#dfe6ee">红 V · 黑 COM</text>
+  <!-- 表笔接端子 -->
+  <g font-size="10.5">
+    <circle cx="72" cy="206" r="7" fill="#e03030" stroke="#7a1a12" stroke-width="1.2"/>
+    <text x="72" y="196" text-anchor="middle" fill="#c0392b" font-weight="bold">L1</text>
+    <circle cx="164" cy="206" r="7" fill="#d4aa52" stroke="#6a5a28" stroke-width="1.2"/>
+    <text x="164" y="196" text-anchor="middle" fill="#8a7030" font-weight="bold">T1</text>
+  </g>
+  <line x1="72" y1="213" x2="80" y2="228" stroke="#c0392b" stroke-width="2"/>
+  <line x1="164" y1="213" x2="156" y2="228" stroke="#333" stroke-width="2"/>
+  <rect x="80" y="228" width="76" height="30" rx="4" fill="#f0ece3" stroke="#8a7a5a" stroke-width="1.4"/>
+  <text x="118" y="248" text-anchor="middle" font-size="10.5" fill="#555">发热元件（约 0.01Ω）</text>
+  <text x="118" y="300" text-anchor="middle" font-size="11" fill="#2f6f3f">红表笔接 L1、黑表笔接 T1</text>
+  <text x="118" y="320" text-anchor="middle" font-size="11" fill="#2f6f3f">通电前先断开三相电源</text>
+
+  <!-- ============ 步骤 ② 测常闭触头 ============ -->
+  <rect x="232" y="50" width="196" height="292" rx="8" fill="#f7f9fb" stroke="#c8d2dc"/>
+  <text x="330" y="74" text-anchor="middle" font-size="13" font-weight="bold" fill="#2f6f3f">② 测常闭触头</text>
+  <rect x="264" y="90" width="132" height="76" rx="7" fill="#2f3a45" stroke="#1a252f" stroke-width="1.6"/>
+  <rect x="278" y="102" width="104" height="34" rx="3" fill="#9fd8b0" stroke="#5a8a6a"/>
+  <text x="330" y="127" text-anchor="middle" font-size="17" font-weight="bold" fill="#12321c">0.00</text>
+  <text x="330" y="158" text-anchor="middle" font-size="10" fill="#dfe6ee">红 V · 黑 COM</text>
+  <g font-size="10.5">
+    <circle cx="284" cy="206" r="7" fill="#e06020" stroke="#a04010" stroke-width="1.2"/>
+    <text x="284" y="196" text-anchor="middle" fill="#a04010" font-weight="bold">95</text>
+    <circle cx="376" cy="206" r="7" fill="#8a5a30" stroke="#5a3a18" stroke-width="1.2"/>
+    <text x="376" y="196" text-anchor="middle" fill="#8a5a30" font-weight="bold">96</text>
+  </g>
+  <line x1="284" y1="213" x2="292" y2="228" stroke="#c0392b" stroke-width="2"/>
+  <line x1="376" y1="213" x2="368" y2="228" stroke="#333" stroke-width="2"/>
+  <rect x="292" y="228" width="76" height="30" rx="4" fill="#f0ece3" stroke="#8a7a5a" stroke-width="1.4"/>
+  <text x="330" y="248" text-anchor="middle" font-size="10.5" fill="#555">NC 常闭（≈ 0Ω）</text>
+  <circle cx="330" cy="280" r="5" fill="#8a5a30"/>
+  <text x="330" y="300" text-anchor="middle" font-size="11" fill="#2f6f3f">红接 95、黑接 96</text>
+  <text x="330" y="320" text-anchor="middle" font-size="11" fill="#2f6f3f">未跳闸时触头闭合</text>
+
+  <!-- ============ 步骤 ③ 跳闸后 ============ -->
+  <rect x="444" y="50" width="196" height="292" rx="8" fill="#fdf6f4" stroke="#e2c8c0"/>
+  <text x="542" y="74" text-anchor="middle" font-size="13" font-weight="bold" fill="#b0361f">③ 过载跳闸后</text>
+  <rect x="476" y="90" width="132" height="76" rx="7" fill="#2f3a45" stroke="#1a252f" stroke-width="1.6"/>
+  <rect x="490" y="102" width="104" height="34" rx="3" fill="#9fd8b0" stroke="#5a8a6a"/>
+  <text x="542" y="128" text-anchor="middle" font-size="17" font-weight="bold" fill="#8a2410">O.L</text>
+  <text x="542" y="158" text-anchor="middle" font-size="10" fill="#dfe6ee">红 V · 黑 COM</text>
+  <g font-size="10.5">
+    <circle cx="496" cy="206" r="7" fill="#e06020" stroke="#a04010" stroke-width="1.2"/>
+    <text x="496" y="196" text-anchor="middle" fill="#a04010" font-weight="bold">95</text>
+    <circle cx="588" cy="206" r="7" fill="#8a5a30" stroke="#5a3a18" stroke-width="1.2"/>
+    <text x="588" y="196" text-anchor="middle" fill="#8a5a30" font-weight="bold">96</text>
+  </g>
+  <line x1="496" y1="213" x2="510" y2="240" stroke="#c0392b" stroke-width="2"/>
+  <line x1="588" y1="213" x2="578" y2="240" stroke="#333" stroke-width="2"/>
+  <!-- 断开的触头 -->
+  <line x1="512" y1="243" x2="544" y2="232" stroke="#8a5a30" stroke-width="2.6" stroke-linecap="round"/>
+  <line x1="570" y1="243" x2="576" y2="240" stroke="#e06020" stroke-width="2.6" stroke-linecap="round"/>
+  <text x="542" y="270" text-anchor="middle" font-size="10.5" fill="#b0361f">NC 已断开</text>
+  <text x="542" y="300" text-anchor="middle" font-size="11" fill="#b0361f">过载（约 1.35 倍）延时跳闸</text>
+  <text x="542" y="320" text-anchor="middle" font-size="11" fill="#b0361f">万用表显示 O.L（超量程）</text>
+
+  <!-- 底部说明 -->
+  <rect x="36" y="354" width="588" height="34" rx="6" fill="#fbfbf3" stroke="#ddd"/>
+  <text x="330" y="376" text-anchor="middle" font-size="12" fill="#2d3436">测量电阻前必须断电并测冷态；跳闸后应断开电源、待双金属片冷却后再按 RESET 复位</text>
+</svg>

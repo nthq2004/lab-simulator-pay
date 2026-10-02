@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660 470" font-family="Microsoft YaHei, SimHei, sans-serif">
+  <rect width="660" height="470" fill="#ffffff"/>
+  <text x="330" y="28" text-anchor="middle" font-size="18" font-weight="bold" fill="#1a252f">图 2  双金属片过载动作原理与反时限特性</text>
+
+  <!-- ============ (a) 正常 ============ -->
+  <rect x="24" y="48" width="196" height="356" rx="8" fill="#f7f9fb" stroke="#c8d2dc"/>
+  <text x="122" y="70" text-anchor="middle" font-size="13" font-weight="bold" fill="#2f6f3f">(a) 正常工作</text>
+
+  <!-- 固定端 -->
+  <rect x="104" y="86" width="36" height="10" fill="#8090a8"/>
+  <text x="76" y="94" text-anchor="middle" font-size="10" fill="#607080">固定端</text>
+  <!-- 直立的双金属片 -->
+  <rect x="114" y="96" width="8" height="190" fill="#4a5060"/>
+  <rect x="122" y="96" width="8" height="190" fill="#8a7040"/>
+  <!-- 加热线圈 -->
+  <polyline points="106,120 138,130 106,140 138,150 106,160 138,170 106,180 138,190 106,200 138,210 106,220 138,230 106,240 138,250 106,260 138,270"
+    fill="none" stroke="#c89020" stroke-width="2.2" stroke-linecap="round"/>
+  <!-- 自由端 + 挡板 -->
+  <rect x="98" y="286" width="48" height="8" rx="2" fill="#90a0b8" stroke="#607080" stroke-width="0.8"/>
+  <!-- 触点臂（竖直）与闭合的 NC -->
+  <line x1="160" y1="120" x2="160" y2="250" stroke="#6070a0" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="160" cy="120" r="5" fill="#e06020"/>
+  <circle cx="190" cy="120" r="5" fill="#8a5a30"/>
+  <line x1="160" y1="120" x2="190" y2="120" stroke="#e06020" stroke-width="4"/>
+  <line x1="190" y1="120" x2="204" y2="120" stroke="#8a5a30" stroke-width="1.6"/>
+  <text x="184" y="108" text-anchor="middle" font-size="10" fill="#8a5a30">NC 闭合</text>
+  <text x="122" y="330" text-anchor="middle" font-size="11" fill="#2f6f3f">电流正常，双金属片直立</text>
+  <text x="122" y="348" text-anchor="middle" font-size="11" fill="#2f6f3f">常闭触头保持闭合</text>
+  <text x="122" y="386" text-anchor="middle" font-size="11" fill="#888">电流 I ≤ 整定值 Iₙ</text>
+
+  <!-- ============ (b) 过载 ============ -->
+  <rect x="232" y="48" width="196" height="356" rx="8" fill="#fdf6f4" stroke="#e2c8c0"/>
+  <text x="330" y="70" text-anchor="middle" font-size="13" font-weight="bold" fill="#b0361f">(b) 过载动作</text>
+
+  <rect x="312" y="86" width="36" height="10" fill="#8090a8"/>
+  <text x="284" y="94" text-anchor="middle" font-size="10" fill="#607080">固定端</text>
+  <!-- 弯曲的双金属片（向右弯） -->
+  <path d="M322 96 Q322 190 352 286 L368 286 Q340 190 338 96 Z" fill="#4a5060"/>
+  <path d="M330 96 Q330 190 360 286 L368 286 Q340 190 338 96 Z" fill="#8a7040"/>
+  <!-- 受热符号 -->
+  <g stroke="#e08020" stroke-width="1.6" fill="none">
+    <path d="M300 170 q-8 -10 0 -20 q8 -10 0 -20"/>
+    <path d="M288 170 q-8 -10 0 -20 q8 -10 0 -20"/>
+  </g>
+  <text x="286" y="222" text-anchor="middle" font-size="10" fill="#c06010">受热弯曲</text>
+  <!-- 挡板右移 -->
+  <rect x="366" y="284" width="44" height="8" rx="2" fill="#90a0b8" stroke="#607080" stroke-width="0.8"/>
+  <text x="388" y="308" text-anchor="middle" font-size="10" fill="#607080">挡板右移</text>
+  <!-- 触点臂转动，NC 断开 -->
+  <line x1="404" y1="140" x2="404" y2="250" stroke="#6070a0" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="404" cy="140" r="5" fill="#e06020"/>
+  <circle cx="422" cy="122" r="5" fill="#8a5a30"/>
+  <line x1="422" y1="122" x2="422" y2="96" stroke="#8a5a30" stroke-width="1.6"/>
+  <line x1="404" y1="140" x2="422" y2="122" stroke="#e06020" stroke-width="4" stroke-dasharray="6 4"/>
+  <path d="M404 140 l14 -10" stroke="#e74c3c" stroke-width="1.4"/>
+  <text x="404" y="112" text-anchor="middle" font-size="10" fill="#b0361f">NC 断开</text>
+  <text x="330" y="330" text-anchor="middle" font-size="11" fill="#b0361f">过载发热，弯曲加剧 → 推动挡板/推杆</text>
+  <text x="330" y="348" text-anchor="middle" font-size="11" fill="#b0361f">常闭触头断开，切断控制回路</text>
+  <text x="330" y="386" text-anchor="middle" font-size="11" fill="#888">电流 I &gt; 整定值 Iₙ，延时 t 后动作</text>
+
+  <!-- ============ 反时限曲线 ============ -->
+  <rect x="442" y="48" width="196" height="356" rx="8" fill="#fafbf7" stroke="#d8ddc8"/>
+  <text x="540" y="70" text-anchor="middle" font-size="13" font-weight="bold" fill="#6a6a2f">反时限特性</text>
+  <!-- 坐标轴 -->
+  <line x1="480" y1="330" x2="620" y2="330" stroke="#555" stroke-width="1.6"/>
+  <line x1="480" y1="330" x2="480" y2="110" stroke="#555" stroke-width="1.6"/>
+  <text x="625" y="334" text-anchor="end" font-size="11" fill="#555">I/Iₙ</text>
+  <text x="474" y="116" text-anchor="end" font-size="11" fill="#555">t</text>
+  <!-- 刻度 -->
+  <line x1="500" y1="330" x2="500" y2="336" stroke="#555" stroke-width="1.2"/>
+  <text x="500" y="350" text-anchor="middle" font-size="10" fill="#555">1.0</text>
+  <line x1="545" y1="330" x2="545" y2="336" stroke="#555" stroke-width="1.2"/>
+  <text x="545" y="350" text-anchor="middle" font-size="10" fill="#555">1.2</text>
+  <line x1="595" y1="330" x2="595" y2="336" stroke="#555" stroke-width="1.2"/>
+  <text x="595" y="350" text-anchor="middle" font-size="10" fill="#555">1.5</text>
+  <!-- 曲线 -->
+  <path d="M486 130 Q500 180 520 240 Q545 300 600 322" fill="none" stroke="#d35400" stroke-width="2.6"/>
+  <!-- 标注 -->
+  <text x="536" y="150" text-anchor="middle" font-size="10.5" fill="#d35400">过载倍数越大</text>
+  <text x="536" y="166" text-anchor="middle" font-size="10.5" fill="#d35400">动作时间越短</text>
+  <text x="540" y="240" text-anchor="middle" font-size="10.5" fill="#888">热惯性 → 热态锁</text>
+  <text x="540" y="386" text-anchor="middle" font-size="11" fill="#888">跳闸后需冷却方可复位</text>
+</svg>
