@@ -11,6 +11,9 @@ build/
 codegraph-analysis.md
 skills-lock.json
 .codegraph/
+__pycache__/
+*.pyc
+
 # docView 注入脚本生成的备份（同名 + _bak）
 *_bak.html
 .playwright-mcp/page-2026-08-10T09-39-37-230Z.yml
