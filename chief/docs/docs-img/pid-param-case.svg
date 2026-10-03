@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="620" viewBox="0 0 940 620" font-family="Microsoft YaHei,PingFang SC,sans-serif">
+  <rect width="940" height="620" fill="#fbfcfe"/>
+  <text x="470" y="34" text-anchor="middle" font-size="22" font-weight="bold" fill="#1a3a5c">图 4　案例一：PID 调节器参数失调故障诊断流程</text>
+
+  <defs>
+    <marker id="fa" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#2874a6"/></marker>
+  </defs>
+
+  <!-- 步骤框 -->
+  <g font-size="13" fill="#1f2d3d">
+    <rect x="60" y="58" width="360" height="66" rx="9" fill="#d6eaf8" stroke="#2874a6" stroke-width="2"/>
+    <text x="76" y="84" font-weight="bold" fill="#1b4f72">① 识别部件</text>
+    <text x="76" y="108">PID 调节器、三通调节阀</text>
+
+    <rect x="60" y="148" width="360" height="66" rx="9" fill="#eafaf1" stroke="#1e8449" stroke-width="2"/>
+    <text x="76" y="174" font-weight="bold" fill="#145a32">② 启动系统，正常运行</text>
+    <text x="76" y="198">接线、上电、开泵、PID 投自动，偏差 &lt;10℃</text>
+
+    <rect x="60" y="238" width="360" height="66" rx="9" fill="#fdebd0" stroke="#e67e22" stroke-width="2"/>
+    <text x="76" y="264" font-weight="bold" fill="#7e5109">③ 设故障：PID 参数失调</text>
+    <text x="76" y="288">故障界面勾选并应用（P→0.05、I→0）</text>
+
+    <rect x="60" y="328" width="360" height="66" rx="9" fill="#fadbd8" stroke="#c0392b" stroke-width="2"/>
+    <text x="76" y="354" font-weight="bold" fill="#922b21">④ 改 SV=85℃，观察异常</text>
+    <text x="76" y="378">阀门开度几乎不变，温度波动、偏差拉大</text>
+
+    <rect x="60" y="418" width="360" height="66" rx="9" fill="#fef9e7" stroke="#b7950b" stroke-width="2"/>
+    <text x="76" y="444" font-weight="bold" fill="#7d6608">⑤ 切手动，验证输出回路</text>
+    <text x="76" y="468">手调阀位到 60~70% 正常 → 回路无故障</text>
+
+    <rect x="60" y="508" width="360" height="66" rx="9" fill="#eafaf1" stroke="#1e8449" stroke-width="2"/>
+    <text x="76" y="534" font-weight="bold" fill="#145a32">⑥ 重新整定 PID 参数</text>
+    <text x="76" y="558">配置界面设 P≈4、I≈30、D=0，点击保存</text>
+  </g>
+
+  <line x1="420" y1="91" x2="452" y2="91" stroke="#2874a6" stroke-width="2"/>
+  <line x1="452" y1="91" x2="452" y2="181" stroke="#2874a6" stroke-width="2" marker-end="url(#fa)"/>
+  <line x1="420" y1="181" x2="452" y2="181" stroke="#2874a6" stroke-width="2"/>
+  <line x1="420" y1="271" x2="452" y2="271" stroke="#2874a6" stroke-width="2"/>
+  <line x1="420" y1="361" x2="452" y2="361" stroke="#2874a6" stroke-width="2"/>
+  <line x1="420" y1="451" x2="452" y2="451" stroke="#2874a6" stroke-width="2"/>
+  <line x1="420" y1="541" x2="452" y2="541" stroke="#2874a6" stroke-width="2"/>
+  <line x1="452" y1="181" x2="452" y2="271" stroke="#2874a6" stroke-width="2" marker-end="url(#fa)"/>
+  <line x1="452" y1="271" x2="452" y2="361" stroke="#2874a6" stroke-width="2" marker-end="url(#fa)"/>
+  <line x1="452" y1="361" x2="452" y2="451" stroke="#2874a6" stroke-width="2" marker-end="url(#fa)"/>
+  <line x1="452" y1="451" x2="452" y2="541" stroke="#2874a6" stroke-width="2" marker-end="url(#fa)"/>
+
+  <!-- 机理说明 -->
+  <rect x="500" y="150" width="410" height="424" rx="12" fill="#fff8f0" stroke="#e8a87c" stroke-width="2"/>
+  <text x="705" y="182" text-anchor="middle" font-size="15" font-weight="bold" fill="#a0522d">故障机理与判别要点</text>
+  <text x="522" y="216" font-size="13" fill="#5b3a1a">· P 过小 → 输出对偏差不敏感，SV 变化时</text>
+  <text x="536" y="238" font-size="13" fill="#5b3a1a">阀门开度几乎不变；</text>
+  <text x="522" y="266" font-size="13" fill="#5b3a1a">· I = 0 → 无法消除稳态误差，温度长期偏离；</text>
+  <text x="522" y="294" font-size="13" fill="#5b3a1a">· 手动能正常调节阀位，说明从 PID 输出到</text>
+  <text x="536" y="316" font-size="13" fill="#5b3a1a">执行机构（含输出回路、阀门）均正常；</text>
+  <text x="522" y="344" font-size="13" fill="#5b3a1a">· 故障只在自动运算环节，属“参数失调”而非</text>
+  <text x="536" y="366" font-size="13" fill="#5b3a1a">硬件回路故障。</text>
+
+  <line x1="522" y1="386" x2="888" y2="386" stroke="#e8a87c"/>
+  <text x="705" y="416" text-anchor="middle" font-size="14" font-weight="bold" fill="#a0522d">口诀</text>
+  <text x="705" y="450" text-anchor="middle" font-size="14" fill="#c0392b">手动正常、自动失灵 → 先查参数</text>
+  <text x="705" y="486" text-anchor="middle" font-size="13" fill="#5b3a1a">重新整定后投自动，确认 PV 跟踪 SV</text>
+  <text x="705" y="516" text-anchor="middle" font-size="13" fill="#5b3a1a">偏差 &lt;10℃、报警消除，方为排除</text>
+</svg>

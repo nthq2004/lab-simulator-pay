@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="700" viewBox="0 0 940 700" font-family="Microsoft YaHei,PingFang SC,sans-serif">
+  <rect width="940" height="700" fill="#fbfcfe"/>
+  <text x="470" y="34" text-anchor="middle" font-size="22" font-weight="bold" fill="#1a3a5c">图 6　案例二：PID 调节器输出回路断路故障诊断流程</text>
+
+  <defs>
+    <marker id="fb" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#2874a6"/></marker>
+  </defs>
+
+  <g font-size="13" fill="#1f2d3d">
+    <rect x="56" y="56" width="376" height="56" rx="9" fill="#d6eaf8" stroke="#2874a6" stroke-width="2"/>
+    <text x="72" y="80" font-weight="bold" fill="#1b4f72">① 识别部件</text>
+    <text x="72" y="100">PID、三通阀、输出电流表、万用表</text>
+
+    <rect x="56" y="128" width="376" height="56" rx="9" fill="#eafaf1" stroke="#1e8449" stroke-width="2"/>
+    <text x="72" y="152" font-weight="bold" fill="#145a32">② 启动系统并正常运行</text>
+    <text x="72" y="172">接线、上电、开泵、PID 投自动</text>
+
+    <rect x="56" y="200" width="376" height="56" rx="9" fill="#fdebd0" stroke="#e67e22" stroke-width="2"/>
+    <text x="72" y="224" font-weight="bold" fill="#7e5109">③ 设故障：PID 输出回路断路</text>
+    <text x="72" y="244">故障界面勾选并应用</text>
+
+    <rect x="56" y="272" width="376" height="56" rx="9" fill="#fadbd8" stroke="#c0392b" stroke-width="2"/>
+    <text x="72" y="296" font-weight="bold" fill="#922b21">④ 查看报警、消音、确认</text>
+    <text x="72" y="316">监控主机报输出回路故障</text>
+
+    <rect x="56" y="344" width="376" height="56" rx="9" fill="#fef9e7" stroke="#b7950c" stroke-width="2"/>
+    <text x="72" y="368" font-weight="bold" fill="#7d6608">⑤ 阀门切本地手动到 60~70%</text>
+    <text x="72" y="388">排除阀门卡死对判断的干扰</text>
+
+    <rect x="56" y="416" width="376" height="56" rx="9" fill="#e8daef" stroke="#7d3c98" stroke-width="2"/>
+    <text x="72" y="440" font-weight="bold" fill="#5b2c6f">⑥ 串入电流表（免拆回路）</text>
+    <text x="72" y="460">输出(+)→mA表(+)；mA表(−)→阀；OUT 有值</text>
+
+    <rect x="56" y="488" width="376" height="56" rx="9" fill="#e8daef" stroke="#7d3c98" stroke-width="2"/>
+    <text x="72" y="512" font-weight="bold" fill="#5b2c6f">⑦ 观察：电流表始终 0mA</text>
+    <text x="72" y="532">OUT 有显示但回路无电流</text>
+
+    <rect x="56" y="560" width="376" height="56" rx="9" fill="#d4efdf" stroke="#1e8449" stroke-width="2"/>
+    <text x="72" y="584" font-weight="bold" fill="#145a32">⑧ 断电测回阻≈250Ω（正常）</text>
+    <text x="72" y="604">确认执行机构线圈正常 → 断点在回路</text>
+
+    <rect x="56" y="632" width="376" height="56" rx="9" fill="#eafaf1" stroke="#1e8449" stroke-width="2"/>
+    <text x="72" y="656" font-weight="bold" fill="#145a32">⑨ 修复后恢复电流 &gt;4mA，投自动</text>
+    <text x="72" y="676">阀门回遥控，系统重新稳定</text>
+  </g>
+
+  <line x1="432" y1="84" x2="464" y2="84" stroke="#2874a6" stroke-width="2"/>
+  <line x1="464" y1="84" x2="464" y2="660" stroke="#2874a6" stroke-width="2"/>
+  <line x1="432" y1="156" x2="464" y2="156" stroke="#2874a6" stroke-width="2"/>
+  <line x1="432" y1="228" x2="464" y2="228" stroke="#2874a6" stroke-width="2"/>
+  <line x1="432" y1="300" x2="464" y2="300" stroke="#2874a6" stroke-width="2"/>
+  <line x1="432" y1="372" x2="464" y2="372" stroke="#2874a6" stroke-width="2"/>
+  <line x1="432" y1="444" x2="464" y2="444" stroke="#2874a6" stroke-width="2"/>
+  <line x1="432" y1="516" x2="464" y2="516" stroke="#2874a6" stroke-width="2"/>
+  <line x1="432" y1="588" x2="464" y2="588" stroke="#2874a6" stroke-width="2"/>
+  <line x1="464" y1="660" x2="432" y2="660" stroke="#2874a6" stroke-width="2" marker-end="url(#fb)"/>
+
+  <!-- 右侧要点 -->
+  <rect x="500" y="120" width="410" height="520" rx="12" fill="#fff8f0" stroke="#e8a87c" stroke-width="2"/>
+  <text x="705" y="152" text-anchor="middle" font-size="15" font-weight="bold" fill="#a0522d">故障机理与判别要点</text>
+  <text x="522" y="188" font-size="13" fill="#5b3a1a">· PID 的 OUT 显示的是内部运算结果，并不代表</text>
+  <text x="536" y="210" font-size="13" fill="#5b3a1a">电流真正流过执行机构；</text>
+  <text x="522" y="240" font-size="13" fill="#5b3a1a">· 输出回路某处断开 → 电流无法流过阀线圈，</text>
+  <text x="536" y="262" font-size="13" fill="#5b3a1a">电流表读数为 0、阀门不动作；</text>
+  <text x="522" y="292" font-size="13" fill="#5b3a1a">· 回路电阻约 250Ω 正常，说明执行机构（阀</text>
+  <text x="536" y="314" font-size="13" fill="#5b3a1a">门线圈）本身完好，故障在接线断点；</text>
+  <text x="522" y="344" font-size="13" fill="#5b3a1a">· 用电流表“串入法”可现场判断回路是否通断，</text>
+  <text x="536" y="366" font-size="13" fill="#5b3a1a">用电阻法可区分“断线”与“线圈损坏”。</text>
+
+  <line x1="522" y1="388" x2="888" y2="388" stroke="#e8a87c"/>
+  <text x="705" y="418" text-anchor="middle" font-size="14" font-weight="bold" fill="#a0522d">口诀</text>
+  <text x="705" y="452" text-anchor="middle" font-size="14" fill="#c0392b">有显示、无电流 → 查输出回路</text>
+  <text x="705" y="490" text-anchor="middle" font-size="13" fill="#5b3a1a">回阻正常再找断点，修复后电流应恢复</text>
+  <text x="705" y="518" text-anchor="middle" font-size="13" fill="#5b3a1a">4~20mA（&gt;4mA），阀门随即动作</text>
+
+  <text x="705" y="560" text-anchor="middle" font-size="13" font-weight="bold" fill="#7e5109">与案例一的关键区别</text>
+  <text x="522" y="590" font-size="12.5" fill="#5b3a1a">案例一手动正常、回路完好；案例二手动设输出</text>
+  <text x="522" y="612" font-size="12.5" fill="#5b3a1a">但电流仍为 0，故障在输出回路硬件。</text>
+</svg>

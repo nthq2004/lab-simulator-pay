@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="440" viewBox="0 0 900 440" font-family="Microsoft YaHei,PingFang SC,sans-serif">
+  <rect width="900" height="440" fill="#fbfcfe"/>
+  <text x="450" y="32" text-anchor="middle" font-size="21" font-weight="bold" fill="#1a3a5c">图 5　PID 参数整定前（上）与整定后（下）响应对比</text>
+
+  <!-- 坐标轴（上：失调） -->
+  <g>
+    <line x1="80" y1="190" x2="860" y2="190" stroke="#888"/>
+    <line x1="80" y1="70" x2="80" y2="190" stroke="#888"/>
+    <text x="66" y="60" font-size="12" fill="#555">T</text>
+    <text x="845" y="208" font-size="12" fill="#555">t</text>
+    <line x1="80" y1="120" x2="860" y2="120" stroke="#e74c3c" stroke-width="1.5" stroke-dasharray="6,4"/>
+    <text x="812" y="114" font-size="11" fill="#c0392b">SV</text>
+    <path d="M80,170 C160,168 240,166 340,166 C440,166 540,162 640,166 C740,170 820,168 858,167"
+          fill="none" stroke="#2c7be5" stroke-width="3"/>
+    <text x="360" y="156" font-size="12" fill="#c0392b">P 过小、I=0：响应迟钝、长期偏差大</text>
+  </g>
+
+  <!-- 坐标轴（下：整定后） -->
+  <g>
+    <line x1="80" y1="410" x2="860" y2="410" stroke="#888"/>
+    <line x1="80" y1="280" x2="80" y2="410" stroke="#888"/>
+    <text x="66" y="272" font-size="12" fill="#555">T</text>
+    <text x="845" y="428" font-size="12" fill="#555">t</text>
+    <line x1="80" y1="320" x2="860" y2="320" stroke="#e74c3c" stroke-width="1.5" stroke-dasharray="6,4"/>
+    <text x="812" y="314" font-size="11" fill="#c0392b">SV</text>
+    <path d="M80,398 C120,352 150,322 200,320 C280,318 300,323 380,321 C500,318 640,321 858,320"
+          fill="none" stroke="#1e8449" stroke-width="3"/>
+    <text x="430" y="308" font-size="12" fill="#145a32">P≈4、I≈30：快速跟踪、偏差收敛 &lt;10℃</text>
+  </g>
+
+</svg>

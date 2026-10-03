@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" font-family="Microsoft YaHei,PingFang SC,sans-serif">
+  <rect width="960" height="540" fill="#fbfcfe"/>
+  <text x="480" y="34" text-anchor="middle" font-size="22" font-weight="bold" fill="#1a3a5c">图 3　调节器常见故障分类</text>
+
+  <!-- 根节点 -->
+  <rect x="380" y="56" width="200" height="52" rx="10" fill="#2874a6" stroke="#1b4f72" stroke-width="2"/>
+  <text x="480" y="88" text-anchor="middle" font-size="16" font-weight="bold" fill="#fff">调节器故障</text>
+
+  <!-- 四大分支 -->
+  <g>
+    <!-- 参数/运算类 -->
+    <rect x="40" y="160" width="200" height="52" rx="9" fill="#d6eaf8" stroke="#2874a6" stroke-width="2"/>
+    <text x="140" y="192" text-anchor="middle" font-size="15" font-weight="bold" fill="#1b4f72">一、参数与运算</text>
+    <line x1="480" y1="108" x2="480" y2="134" stroke="#555" stroke-width="2"/>
+    <line x1="140" y1="134" x2="820" y2="134" stroke="#555" stroke-width="2"/>
+    <line x1="140" y1="134" x2="140" y2="160" stroke="#555" stroke-width="2"/>
+    <line x1="366" y1="134" x2="366" y2="160" stroke="#555" stroke-width="2"/>
+    <line x1="594" y1="134" x2="594" y2="160" stroke="#555" stroke-width="2"/>
+    <line x1="820" y1="134" x2="820" y2="160" stroke="#555" stroke-width="2"/>
+
+    <!-- 回路/接线类 -->
+    <rect x="266" y="160" width="200" height="52" rx="9" fill="#fdebd0" stroke="#e67e22" stroke-width="2"/>
+    <text x="366" y="192" text-anchor="middle" font-size="15" font-weight="bold" fill="#7e5109">二、回路与接线</text>
+
+    <!-- 电源/通信类 -->
+    <rect x="494" y="160" width="200" height="52" rx="9" fill="#e8daef" stroke="#7d3c98" stroke-width="2"/>
+    <text x="594" y="192" text-anchor="middle" font-size="15" font-weight="bold" fill="#5b2c6f">三、电源与通信</text>
+
+    <!-- 面板/人机类 -->
+    <rect x="720" y="160" width="200" height="52" rx="9" fill="#d4efdf" stroke="#1e8449" stroke-width="2"/>
+    <text x="820" y="192" text-anchor="middle" font-size="15" font-weight="bold" fill="#145a32">四、面板与人机</text>
+  </g>
+
+  <!-- 叶子项 -->
+  <g font-size="12.5" fill="#333">
+    <text x="52" y="248">• P / I / D 整定不当</text>
+    <text x="52" y="274">• 设定值 SV 偏置</text>
+    <text x="52" y="300">• 正/反作用 DIR·REV 接反</text>
+    <text x="52" y="326">• 输出限幅 OL/OH 设置过窄</text>
+    <text x="52" y="352">• 积分饱和、稳态误差大</text>
+
+    <text x="278" y="248">• 输出回路断路（★本工程案例二）</text>
+    <text x="278" y="274">• 输入回路断路/短路</text>
+    <text x="278" y="300">• 端子松动、接触不良</text>
+    <text x="278" y="326">• 信号线屏蔽、接地不良</text>
+    <text x="278" y="352">• 执行机构回路虚接</text>
+
+    <text x="506" y="248">• 24V 电源失电或电压偏低</text>
+    <text x="506" y="274">• 电源极性接反</text>
+    <text x="506" y="300">• RS485 极性接反</text>
+    <text x="506" y="326">• 通信地址/波特率不匹配</text>
+    <text x="506" y="352">• 共地不良</text>
+
+    <text x="732" y="248">• 按键失灵（A/M、SET、▲▼）</text>
+    <text x="732" y="274">• LCD 显示异常/缺划</text>
+    <text x="732" y="300">• 菜单参数被误改</text>
+    <text x="732" y="326">• 报警值设置不当</text>
+    <text x="732" y="352">• 看门狗复位、死机</text>
+  </g>
+
+  <!-- 底部诊断原则 -->
+  <rect x="40" y="392" width="880" height="122" rx="12" fill="#fdf2e9" stroke="#e67e22"/>
+  <text x="60" y="422" font-size="15" font-weight="bold" fill="#7e5109">诊断总原则：先看现象 → 分段隔离 → 手动/自动对比 → 测量验证 → 修复确认</text>
+  <text x="60" y="452" font-size="13" fill="#7e5109">· 自动异常、手动正常 → 优先查参数与运算（案例一）；输出有值、电流为零 → 优先查输出回路（案例二）。</text>
+  <text x="60" y="478" font-size="13" fill="#7e5109">· 仪表测量牢记“先断电后接线、量程合适、读数稳定再判断”，避免误判、扩大故障。</text>
+  <text x="60" y="504" font-size="13" fill="#7e5109">· 修复后必须重新投入自动运行，确认偏差收敛、阀门动作正常、报警消除，才算排除故障。</text>
+</svg>

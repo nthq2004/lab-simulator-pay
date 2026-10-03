@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="560" viewBox="0 0 960 560" font-family="Microsoft YaHei,PingFang SC,sans-serif">
+  <rect width="960" height="560" fill="#fbfcfe"/>
+  <text x="480" y="38" text-anchor="middle" font-size="22" font-weight="bold" fill="#1a3a5c">图 1　调节器（PID）在冷却水温度闭环中的组成与信号链</text>
+
+  <!-- 被控对象区 -->
+  <rect x="28" y="66" width="410" height="240" rx="12" fill="#f1f8ff" stroke="#8bb8e8" stroke-width="2"/>
+  <text x="233" y="92" text-anchor="middle" font-size="15" fill="#2c5d94">被控对象：冷却水回路（水路）</text>
+
+  <rect x="56" y="118" width="112" height="66" rx="8" fill="#95a5a6" stroke="#2c3e50" stroke-width="2"/>
+  <text x="112" y="147" text-anchor="middle" font-size="14" fill="#1f2d3d">柴油机</text>
+  <text x="112" y="167" text-anchor="middle" font-size="11" fill="#555">热源</text>
+
+  <rect x="196" y="118" width="96" height="66" rx="8" fill="#aed6f1" stroke="#2c3e50" stroke-width="2"/>
+  <text x="244" y="147" text-anchor="middle" font-size="14" fill="#1f2d3d">淡水泵</text>
+  <text x="244" y="167" text-anchor="middle" font-size="11" fill="#555">动力</text>
+
+  <rect x="320" y="118" width="96" height="66" rx="8" fill="#f9e79f" stroke="#b7950b" stroke-width="2"/>
+  <text x="368" y="143" text-anchor="middle" font-size="14" fill="#7d6608">三通</text>
+  <text x="368" y="163" text-anchor="middle" font-size="14" fill="#7d6608">调节阀</text>
+
+  <rect x="196" y="216" width="150" height="56" rx="8" fill="#d5dbdb" stroke="#2c3e50" stroke-width="2"/>
+  <text x="271" y="250" text-anchor="middle" font-size="14" fill="#1f2d3d">冷却器</text>
+
+  <defs>
+    <marker id="a1" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#2c5d94"/></marker>
+    <marker id="a1r" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#c0392b"/></marker>
+    <marker id="a1g" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#1e8449"/></marker>
+    <marker id="a1o" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#b7950b"/></marker>
+    <marker id="a1p" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#7d3c98"/></marker>
+  </defs>
+
+  <line x1="168" y1="151" x2="192" y2="151" stroke="#2c5d94" stroke-width="3" marker-end="url(#a1)"/>
+  <line x1="292" y1="151" x2="316" y2="151" stroke="#2c5d94" stroke-width="3" marker-end="url(#a1)"/>
+  <line x1="368" y1="184" x2="332" y2="214" stroke="#2c5d94" stroke-width="3" marker-end="url(#a1)"/>
+  <line x1="196" y1="244" x2="172" y2="244" stroke="#2c5d94" stroke-width="3" marker-end="url(#a1)"/>
+  <line x1="172" y1="244" x2="172" y2="168" stroke="#2c5d94" stroke-width="3" marker-end="url(#a1)"/>
+  <text x="292" y="300" font-size="11" fill="#666" text-anchor="middle">旁通/冷却水量由阀开度决定</text>
+
+  <!-- 检测与调节区 -->
+  <rect x="470" y="66" width="462" height="240" rx="12" fill="#fff8f0" stroke="#e8a87c" stroke-width="2"/>
+  <text x="701" y="92" text-anchor="middle" font-size="15" fill="#a0522d">检测、变送与调节（信号回路）</text>
+
+  <rect x="492" y="118" width="86" height="64" rx="8" fill="#fadbd8" stroke="#c0392b" stroke-width="2"/>
+  <text x="535" y="145" text-anchor="middle" font-size="13" fill="#922b21">PT100</text>
+  <text x="535" y="165" text-anchor="middle" font-size="10" fill="#a94442">测温元件</text>
+
+  <rect x="606" y="118" width="104" height="64" rx="8" fill="#d4efdf" stroke="#1e8449" stroke-width="2"/>
+  <text x="658" y="143" text-anchor="middle" font-size="12" fill="#145a32">温度变送器</text>
+  <text x="658" y="163" text-anchor="middle" font-size="10" fill="#1e8449">电阻→4~20mA</text>
+
+  <!-- PID 主体突出 -->
+  <rect x="738" y="108" width="164" height="86" rx="9" fill="#d6eaf8" stroke="#2874a6" stroke-width="3"/>
+  <text x="820" y="136" text-anchor="middle" font-size="16" font-weight="bold" fill="#1b4f72">PID 调节器</text>
+  <text x="820" y="160" text-anchor="middle" font-size="11" fill="#1b4f72">PV / SV 比较运算</text>
+  <text x="820" y="180" text-anchor="middle" font-size="11" fill="#1b4f72">P·I·D → 4~20mA</text>
+
+  <rect x="606" y="224" width="200" height="56" rx="8" fill="#e8daef" stroke="#7d3c98" stroke-width="2"/>
+  <text x="706" y="257" text-anchor="middle" font-size="13" fill="#5b2c6f">监控主机（RS485 采集/报警）</text>
+
+  <line x1="578" y1="150" x2="602" y2="150" stroke="#c0392b" stroke-width="3" marker-end="url(#a1r)"/>
+  <line x1="710" y1="150" x2="734" y2="150" stroke="#1e8449" stroke-width="3" marker-end="url(#a1g)"/>
+  <text x="657" y="112" font-size="10" fill="#1e8449" text-anchor="middle">4~20mA</text>
+  <line x1="772" y1="194" x2="772" y2="222" stroke="#7d3c98" stroke-width="2" stroke-dasharray="4,3" marker-end="url(#a1p)"/>
+
+  <!-- PID 输出回到阀 -->
+  <path d="M800,194 Q560,430 372,188" fill="none" stroke="#b7950b" stroke-width="3" marker-end="url(#a1o)"/>
+  <text x="560" y="378" font-size="12" fill="#7d6608" text-anchor="middle">输出 4~20mA 驱动三通阀电机</text>
+
+  <!-- 底部说明 -->
+  <rect x="28" y="326" width="904" height="210" rx="12" fill="#f8f9fa" stroke="#ccc"/>
+  <text x="50" y="356" font-size="15" font-weight="bold" fill="#1f2d3d">控制原理</text>
+  <text x="50" y="388" font-size="13.5" fill="#333">1. PT100 铂电阻随冷却水温度变化，把温度转换为电阻信号；</text>
+  <text x="50" y="416" font-size="13.5" fill="#333">2. 温度变送器把电阻线性转换为 4~20mA 标准电流（对应 0~100℃）；</text>
+  <text x="50" y="444" font-size="13.5" fill="#333">3. PID 调节器比较测量值 PV 与设定值 SV，按 P、I、D 规律运算后输出 4~20mA；</text>
+  <text x="50" y="472" font-size="13.5" fill="#333">4. 输出电流经三通调节阀执行机构，改变旁通与冷却水量，构成闭环温度控制；</text>
+  <text x="50" y="500" font-size="13.5" fill="#333">5. 监控主机经 RS485 采集 PID 数据，实现集中监视与报警。</text>
+</svg>
