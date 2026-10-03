@@ -1,0 +1,275 @@
+<!-- Markdown 实验文档预览层 -->
+<div id="docView" style="position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:99999;background:#f8f5ee;overflow-y:auto;color:#333a42;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
+  <style>
+    /* ===== 浅色护目 · 文档预览样式 ===== */
+    #docContent{flex:1;min-width:0;}
+    #docContent h1{color:#1a5276;border-bottom:3px solid #d4a937;padding-bottom:12px;margin:0 0 24px;font-size:26px;line-height:1.5;}
+    #docContent h2{color:#1c6e5a;border-bottom:1px solid #cdc19c;padding-bottom:8px;margin:38px 0 14px;font-size:21px;}
+    #docContent h3{color:#7d6608;margin:24px 0 10px;font-size:17px;}
+    #docContent p{color:#333a42;margin:12px 0;font-size:15px;line-height:1.9;}
+    #docContent img{max-width:100%;border-radius:8px;margin:16px 0;border:1px solid #e2d9bd;background:#fff;box-shadow:0 2px 10px rgba(120,105,60,.14);}
+    #docContent strong{color:#a04000;font-weight:700;}
+    #docContent em{color:#148f77;font-style:italic;}
+    #docContent a{color:#21618c;}
+    #docContent code{background:#efe9d8;color:#7d3a1c;padding:2px 6px;border-radius:4px;font-size:13px;}
+    #docContent pre{background:#f2ecdb;border:1px solid #e0d8b6;padding:16px;border-radius:8px;overflow:auto;}
+    #docContent pre code{background:transparent;padding:0;}
+    #docContent table{width:100%;border-collapse:collapse;margin:16px 0;}
+    #docContent td,#docContent th{border:1px solid #d5cdb8;padding:10px 14px;text-align:left;font-size:14px;}
+    #docContent th{background:#efe9da;color:#4a4a3a;font-weight:600;}
+    #docContent ul,#docContent ol{padding-left:26px;margin:12px 0;color:#333a42;}
+    #docContent li{margin:6px 0;line-height:1.8;}
+    #docContent blockquote{border-left:4px solid #c8a95c;padding:12px 20px;background:#f3ecdb;border-radius:0 8px 8px 0;margin:16px 0;color:#5c5542;}
+    #docContent hr{border:none;border-top:1px solid #e0d8c0;margin:28px 0;}
+    #docContent h1[id],#docContent h2[id]{scroll-margin-top:74px;}
+    /* ===== 轻量公式渲染（\frac、上下标、\sqrt、希腊字母等）===== */
+    .mblock{display:block;text-align:center;margin:18px 0;font-size:1.12em;line-height:2;}
+    .mf{display:inline-flex;flex-direction:column;vertical-align:middle;text-align:center;margin:0 3px;font-size:.94em;}
+    .mf-n{border-bottom:1.5px solid currentColor;padding:0 5px;line-height:1.2;}
+    .mf-d{padding:0 5px;line-height:1.2;}
+    .msqrt-a{border-top:1.5px solid currentColor;padding:0 3px;margin-left:1px;}
+    .msup{font-size:.76em;vertical-align:super;line-height:0;}
+    .msub{font-size:.76em;vertical-align:sub;line-height:0;}
+
+    /* 左侧目录 */
+    #docToc{position:sticky;top:76px;width:248px;flex-shrink:0;background:#fff;border:1px solid #e8e1cc;border-radius:10px;padding:16px 14px;max-height:calc(100vh - 110px);overflow-y:auto;box-shadow:0 2px 10px rgba(120,105,60,.08);}
+    #docToc .toc-title{font-size:15px;font-weight:700;color:#1a5276;margin:0 0 10px;padding-bottom:9px;border-bottom:2px solid #d4a937;}
+    #docToc ul{list-style:none;margin:0;padding:0;}
+    #docToc a{display:block;padding:6px 10px;border-radius:6px;color:#5b5340;text-decoration:none;font-size:14px;line-height:1.5;transition:background .15s,color .15s;}
+    #docToc a:hover{background:#f3ecdb;color:#1a5276;}
+    #docToc a.toc-l1{font-weight:600;color:#333a42;}
+    #docToc a.toc-l2{padding-left:22px;font-size:13px;}
+    #docToc a.toc-active{background:#e7ecd9;color:#1c6e5a;font-weight:600;}
+
+    @media (max-width:900px){ #docToc{display:none;} }
+  </style>
+  <!-- 顶部工具栏 -->
+  <div style="position:sticky;top:0;z-index:10;background:rgba(255,255,255,.93);backdrop-filter:blur(8px);padding:12px 24px;display:flex;align-items:center;gap:16px;border-bottom:1px solid #e0d8c0;box-shadow:0 1px 6px rgba(120,105,60,.08);">
+    <button id="btnReturnToSim" style="background:#27ae60;color:#fff;border:none;padding:8px 20px;border-radius:6px;font-size:15px;font-weight:600;cursor:pointer;transition:background .2s;">
+      &#9654; 返回实验
+    </button>
+    <span style="color:#8a8270;font-size:14px;">实验文档预览</span>
+  </div>
+  <!-- 两栏布局：左侧目录 + 右侧内容 -->
+  <div style="display:flex;align-items:flex-start;max-width:1200px;margin:0 auto;padding:28px 28px 80px;gap:32px;">
+    <nav id="docToc">
+      <div class="toc-title">目 录</div>
+      <ul id="docTocList"></ul>
+    </nav>
+    <div id="docContent">
+      <p style="text-align:center;color:#9a937f;padding:60px 0;font-size:15px;">加载实验文档中...</p>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var docView = document.getElementById('docView');
+  var btnReturn = document.getElementById('btnReturnToSim');
+  var docContent = document.getElementById('docContent');
+  var tocList = document.getElementById('docTocList');
+  var btnShowDoc = null;
+  var docLoaded = false;
+
+  // 工具栏"实验文档"按钮：重新打开文档预览层
+  function showDocView(){
+    docView.style.display = 'block';
+    docView.style.opacity = '1';
+    docView.scrollTop = 0;
+  }
+
+  // 工具栏按钮位于文档层之后，需等 DOM 解析完成后再绑定
+  document.addEventListener('DOMContentLoaded', function(){
+    btnShowDoc = document.getElementById('btnShowDoc');
+    if(btnShowDoc){
+      btnShowDoc.addEventListener('click', showDocView);
+      // 文档已加载成功则显示按钮
+      if(docLoaded) btnShowDoc.style.display = '';
+    }
+  });
+
+  // 返回实验：关闭文档层，显示仿真
+  btnReturn.addEventListener('click', function(){
+    docView.style.transition = 'opacity 0.3s';
+    docView.style.opacity = '0';
+    setTimeout(function(){
+      docView.style.display = 'none';
+      // 触发 resize 让 Konva 舞台适应容器尺寸
+      window.dispatchEvent(new Event('resize'));
+    }, 300);
+  });
+
+  // 点击目录项：平滑滚动到对应标题
+  tocList.addEventListener('click', function(e){
+    var a = e.target.closest('a');
+    if(!a) return;
+    var el = document.getElementById(a.getAttribute('href').slice(1));
+    if(el){
+      e.preventDefault();
+      el.scrollIntoView({behavior:'smooth', block:'start'});
+      tocList.querySelectorAll('a').forEach(function(x){ x.classList.remove('toc-active'); });
+      a.classList.add('toc-active');
+    }
+  });
+
+  function escapeHtml(s){
+    return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+
+  // marked 缺陷修复：把残留的 **内容** 转为 <strong>（避开 pre/code 内文本）
+  // ===== 轻量 LaTeX 公式渲染 =====
+  var TEX_SYM = {'Delta':'\u0394','delta':'\u03b4','omega':'\u03c9','Omega':'\u03a9','alpha':'\u03b1','beta':'\u03b2','gamma':'\u03b3','theta':'\u03b8','lambda':'\u03bb','mu':'\u03bc','pi':'\u03c0','rho':'\u03c1','sigma':'\u03c3','tau':'\u03c4','phi':'\u03c6','varphi':'\u03c6','eta':'\u03b7','nu':'\u03bd','xi':'\u03be','zeta':'\u03b6','psi':'\u03c8','epsilon':'\u03b5','times':'\u00d7','cdot':'\u00b7','div':'\u00f7','pm':'\u00b1','le':'\u2264','leq':'\u2264','ge':'\u2265','geq':'\u2265','ne':'\u2260','neq':'\u2260','approx':'\u2248','equiv':'\u2261','propto':'\u221d','infty':'\u221e','sum':'\u2211','int':'\u222b','angle':'\u2220','perp':'\u22a5','parallel':'\u2225','degree':'\u00b0','circ':'\u00b0','to':'\u2192','rightarrow':'\u2192','leftarrow':'\u2190','Rightarrow':'\u21d2','Leftarrow':'\u21d0','leftrightarrow':'\u2194','in':'\u2208','notin':'\u2209','cup':'\u222a','cap':'\u2229','subset':'\u2282','ldots':'\u2026','cdots':'\u22ef'};
+  function texArg(s, i){
+    if(s.charAt(i) !== '{') return null;
+    var d = 0;
+    for(var j = i; j < s.length; j++){
+      var c = s.charAt(j);
+      if(c === '{') d++;
+      else if(c === '}'){ d--; if(d === 0) return { arg: s.slice(i+1, j), end: j+1 }; }
+    }
+    return null;
+  }
+  function texRender(src){
+    var out = '', i = 0;
+    while(i < src.length){
+      var c = src.charAt(i);
+      if(c === '\\'){
+        var m = /^\\([a-zA-Z]+)/.exec(src.slice(i));
+        if(m){
+          var name = m[1], p = i + m[0].length;
+          if(name === 'frac'){
+            var a1 = texArg(src, p);
+            if(a1){ var a2 = texArg(src, a1.end);
+              if(a2){ out += '<span class="mf"><span class="mf-n">' + texRender(a1.arg) + '</span><span class="mf-d">' + texRender(a2.arg) + '</span></span>'; i = a2.end; continue; }
+            }
+            out += '\\frac'; i = p; continue;
+          }
+          if(name === 'sqrt'){
+            var a3 = texArg(src, p);
+            if(a3){ out += '<span class="msqrt">\u221a<span class="msqrt-a">' + texRender(a3.arg) + '</span></span>'; i = a3.end; continue; }
+            out += '\u221a'; i = p; continue;
+          }
+          if(name === 'text' || name === 'mathrm'){
+            var a4 = texArg(src, p);
+            if(a4){ out += escapeHtml(a4.arg); i = a4.end; continue; }
+          }
+          if(TEX_SYM[name] !== undefined){ out += TEX_SYM[name]; i = p; continue; }
+          out += m[0]; i = p; continue;
+        }
+        out += '\\'; i++; continue;
+      }
+      if(c === '^' || c === '_'){
+        var cls = c === '^' ? 'msup' : 'msub', np = i + 1, arg = null;
+        if(src.charAt(np) === '{'){ var a5 = texArg(src, np); if(a5){ arg = a5.arg; np = a5.end; } }
+        if(arg === null){ arg = src.charAt(np); np = np + 1; }
+        out += '<span class="' + cls + '">' + texRender(arg) + '</span>'; i = np; continue;
+      }
+      out += escapeHtml(c); i++;
+    }
+    return out;
+  }
+  // 把 $$...$$（行间）与 $...$（行内）提取为占位符，避免被 marked 误解析
+  function extractFormulas(md, store){
+    md = md.replace(/\$\$([\s\S]+?)\$\$/g, function(all, tex){
+      store.push({ tex: tex, block: true });
+      return '\n\nFMLPH' + (store.length - 1) + 'PH\n\n';
+    });
+    md = md.replace(/\$([^\$\n]+?)\$/g, function(all, tex){
+      store.push({ tex: tex, block: false });
+      return 'FMLPH' + (store.length - 1) + 'PH';
+    });
+    return md;
+  }
+  // 把占位符替换为渲染后的公式
+  function renderFormulas(root, store){
+    if(!store || !store.length) return;
+    root.innerHTML = root.innerHTML.replace(/FMLPH(\d+)PH/g, function(all, n){
+      var f = store[+n];
+      if(!f) return all;
+      var body = texRender(f.tex.trim());
+      return f.block ? '<span class="mblock">' + body + '</span>' : body;
+    });
+  }
+
+  function fixStarEmphasis(root){
+    var codeNodes = new Set();
+    var list = root.querySelectorAll('pre code');
+    for(var i = 0; i < list.length; i++) codeNodes.add(list[i]);
+    var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+    var texts = [];
+    while(walker.nextNode()){
+      var n = walker.currentNode;
+      if(codeNodes.has(n.parentNode)) continue;
+      if(/\*\*/.test(n.textContent)) texts.push(n);
+    }
+    texts.forEach(function(tn){
+      var re = /\*\*([^*]+)\*\*/g;
+      var parent = tn.parentNode;
+      var frag = document.createDocumentFragment();
+      var last = 0, m, first = true;
+      re.lastIndex = 0;
+      while((m = re.exec(tn.textContent))){
+        if(m.index < last) { first = false; break; }
+        frag.appendChild(document.createTextNode(tn.textContent.slice(last, m.index)));
+        var s = document.createElement('strong');
+        s.textContent = m[1];
+        frag.appendChild(s);
+        last = m.index + m[0].length;
+        first = false;
+      }
+      if(first) return;
+      frag.appendChild(document.createTextNode(tn.textContent.slice(last)));
+      parent.replaceChild(frag, tn);
+    });
+  }
+
+  // 根据文档最高两级标题（h1/h2）生成目录
+  function buildToc(){
+    var headings = docContent.querySelectorAll('h1, h2');
+    if(headings.length === 0) return;
+    var html = '';
+    headings.forEach(function(h, i){
+      var id = 'doc-sec-' + i;
+      h.id = id;
+      var cls = h.tagName.toLowerCase() === 'h1' ? 'toc-l1' : 'toc-l2';
+      html += '<li><a class="' + cls + '" href="#' + id + '">' + escapeHtml(h.textContent.trim()) + '</a></li>';
+    });
+    tocList.innerHTML = html;
+  }
+
+  // 加载文档
+  async function loadDoc(){
+    var title = document.title.trim();
+    try {
+      var resp = await fetch('docs/' + encodeURIComponent(title) + '.md');
+      if(!resp.ok) throw new Error('not found');
+      var md = await resp.text();
+      // 修正图片路径：docs-img/ → docs/docs-img/
+      md = md.replace(/]\(docs-img\//g, '](docs/docs-img/').replace(/]\(images\//g, '](docs/docs-img/');
+      // 提取 LaTeX 公式为占位符（避免被 marked 误解析）
+      var formulas = [];
+      md = extractFormulas(md, formulas);
+      // 解析 Markdown
+      if(typeof marked !== 'undefined'){
+        docContent.innerHTML = marked.parse(md);
+      renderFormulas(docContent, formulas);
+        // 修复 marked 对含括号强调（如 **变极调速**）不解析的缺陷
+        fixStarEmphasis(docContent);
+      } else {
+        docContent.textContent = md;
+      }
+      // 生成两级目录
+      buildToc();
+      // 文档加载成功，显示工具栏"实验文档"按钮
+      docLoaded = true;
+      if(btnShowDoc) btnShowDoc.style.display = '';
+    } catch(e){
+      // 文档不存在，直接进入仿真
+      docView.style.display = 'none';
+      console.log('[DocLoader] 文档不存在或加载失败，直接进入仿真:', e.message);
+    }
+  }
+
+  loadDoc();
+})();
+</script>
