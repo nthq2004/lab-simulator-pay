@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="620" viewBox="0 0 940 620" font-family="Microsoft YaHei, sans-serif">
+  <rect width="940" height="620" fill="#ffffff"/>
+  <text x="470" y="36" text-anchor="middle" font-size="24" font-weight="bold" fill="#1f2d3d">图 4　故障二：三通调节阀信号输入回路断路</text>
+
+  <defs>
+    <marker id="w4" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#c0392b"/>
+    </marker>
+    <marker id="w4b" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#2c5d94"/>
+    </marker>
+  </defs>
+
+  <!-- 回路图 -->
+  <rect x="30" y="60" width="880" height="200" rx="12" fill="#f7fbff" stroke="#aed6f1" stroke-width="2"/>
+  <text x="470" y="88" text-anchor="middle" font-size="15" font-weight="bold" fill="#1b4f72">信号回路：PID 输出 → 电流表 → 阀输入端子</text>
+
+  <!-- PID -->
+  <rect x="70" y="115" width="130" height="90" rx="8" fill="#d6eaf8" stroke="#2874a6" stroke-width="2"/>
+  <text x="135" y="150" text-anchor="middle" font-size="15" fill="#1b4f72">PID</text>
+  <text x="135" y="172" text-anchor="middle" font-size="12" fill="#1b4f72">输出通道</text>
+  <text x="135" y="190" text-anchor="middle" font-size="11" fill="#c0392b">OUT 有指示</text>
+
+  <!-- 电流表 -->
+  <circle cx="330" cy="160" r="46" fill="#f0f0f0" stroke="#555" stroke-width="2"/>
+  <text x="330" y="155" text-anchor="middle" font-size="12" fill="#333">20mA</text>
+  <text x="330" y="175" text-anchor="middle" font-size="14" font-weight="bold" fill="#c0392b">0.00</text>
+
+  <!-- 阀 -->
+  <rect x="500" y="115" width="130" height="90" rx="8" fill="#f9e79f" stroke="#b7950b" stroke-width="2"/>
+  <text x="565" y="152" text-anchor="middle" font-size="14" fill="#7d6608">三通调节阀</text>
+  <text x="565" y="176" text-anchor="middle" font-size="12" fill="#7d6608">输入端子 l / r</text>
+
+  <!-- 连线 -->
+  <line x1="200" y1="145" x2="284" y2="145" stroke="#c0392b" stroke-width="3" marker-end="url(#w4)"/>
+  <line x1="376" y1="145" x2="496" y2="145" stroke="#c0392b" stroke-width="3" marker-end="url(#w4)"/>
+  <line x1="565" y1="205" x2="565" y2="250" stroke="#2c5d94" stroke-width="3" marker-end="url(#w4b)"/>
+  <line x1="200" y1="190" x2="130" y2="250" stroke="#2c5d94" stroke-width="3"/>
+  <text x="640" y="160" font-size="12" fill="#c0392b">回路电流 = 0mA（断路）</text>
+  <text x="565" y="270" text-anchor="middle" font-size="12" fill="#2c5d94">万用表测端子电阻 → 无穷大（O.L）</text>
+
+  <!-- 步骤 -->
+  <rect x="30" y="285" width="880" height="315" rx="12" fill="#f4f9f4" stroke="#a9dfbf" stroke-width="2"/>
+  <text x="470" y="314" text-anchor="middle" font-size="16" font-weight="bold" fill="#145a32">排查与处理步骤</text>
+
+  <g font-size="13.5" fill="#1f2d3d">
+    <text x="55" y="348">① 设置「三通调节阀信号输入回路断路」故障，查看监视面板报警并消音、消闪。</text>
+    <text x="55" y="376">② 阀门切到本地(MANUAL)，转动手轮把阀位调到 60~70%。</text>
+    <text x="55" y="404">③ 断开 PID 输出(+)→阀的接线，串入 20mA 电流表；PID 切手动输出 50%</text>
+    <text x="55" y="426" fill="#922b21">　 → OUT 有输出，但回路电流表始终为 0mA。</text>
+    <text x="55" y="454">④ 关闭 24V 电源，万用表置电阻档测阀输入端子 l / r</text>
+    <text x="55" y="476" fill="#922b21">　 → 读数溢出（无穷大），确认阀门信号输入回路断路。</text>
+    <text x="55" y="504">⑤ 在「故障设置」界面取消勾选并应用，修复断路；重新接通 24V 电源；</text>
+    <text x="55" y="526" fill="#145a32">　 → 输出回路电流恢复到 4mA 以上。</text>
+    <text x="55" y="554">⑥ 阀门切回 REMOTE（遥控），系统切回自动，确认偏差小于 10℃、报警消闪。</text>
+    <text x="55" y="582" fill="#6b5300">判断要点：PID 输出有指示、输出回路电阻约 250Ω 正常，但阀门输入端子电阻无穷大 → 阀内引线/线圈断路</text>
+  </g>
+</svg>

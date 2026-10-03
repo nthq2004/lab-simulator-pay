@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="560" viewBox="0 0 940 560" font-family="Microsoft YaHei, sans-serif">
+  <rect width="940" height="560" fill="#ffffff"/>
+  <text x="470" y="36" text-anchor="middle" font-size="24" font-weight="bold" fill="#1f2d3d">图 3　故障一：三通调节阀执行机构卡死</text>
+
+  <defs>
+    <marker id="fa" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#c0392b"/>
+    </marker>
+    <marker id="fg" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#1e8449"/>
+    </marker>
+  </defs>
+
+  <!-- 左侧：现象示意 -->
+  <rect x="30" y="70" width="270" height="330" rx="12" fill="#fdf2f0" stroke="#e6b0aa" stroke-width="2"/>
+  <text x="165" y="100" text-anchor="middle" font-size="16" font-weight="bold" fill="#922b21">故障现象</text>
+
+  <!-- PID 输出变化 -->
+  <rect x="60" y="120" width="210" height="48" rx="6" fill="#d6eaf8" stroke="#2874a6"/>
+  <text x="165" y="150" text-anchor="middle" font-size="13" fill="#1b4f72">PID 输出 25% → 50% → 75%</text>
+
+  <!-- 阀门 -->
+  <g transform="translate(165,255)">
+    <circle r="70" fill="none" stroke="#2c3e50" stroke-width="18"/>
+    <path d="M0,0 L0,-55 A55,55 0 0 1 48,-27 Z" fill="#e67e22" stroke="#a04000"/>
+    <circle r="24" fill="none" stroke="#95a5a6" stroke-width="6"/>
+    <text x="0" y="-62" text-anchor="middle" font-size="34" fill="#c0392b" font-weight="bold">✕</text>
+  </g>
+  <text x="165" y="350" text-anchor="middle" font-size="13" fill="#922b21">阀开度始终不变（卡死）</text>
+  <text x="165" y="375" text-anchor="middle" font-size="12" fill="#555">本地转手轮也不动作</text>
+
+  <!-- 右侧：排查步骤 -->
+  <rect x="330" y="70" width="580" height="450" rx="12" fill="#f4f9f4" stroke="#a9dfbf" stroke-width="2"/>
+  <text x="620" y="100" text-anchor="middle" font-size="16" font-weight="bold" fill="#145a32">排查与处理步骤</text>
+
+  <g font-size="13.5" fill="#1f2d3d">
+    <text x="355" y="140">① 系统运行中把设定值 SV 改为 85℃，观察阀开度</text>
+    <text x="355" y="162" fill="#922b21">　 → 阀门开度完全不变，温度波动。</text>
+
+    <text x="355" y="200">② 把 PID 切换到手动(MAN)，手动增大输出到 30%</text>
+    <text x="355" y="222" fill="#922b21">　 → 阀门开度仍不变（排除自动参数问题）。</text>
+
+    <text x="355" y="260">③ 把阀门控制开关拨到 MANUAL（本地），转动手轮</text>
+    <text x="355" y="282" fill="#922b21">　 → 阀门仍不动作，确定执行机构卡死。</text>
+
+    <text x="355" y="320">④ 关闭柴油机、淡水泵和 24V 电源，停机检修。</text>
+    <text x="355" y="342" fill="#145a32">　 → 安全停机，隔离电源后方可拆检。</text>
+
+    <text x="355" y="380">⑤ 在「故障设置」界面取消勾选并应用，修复卡死；</text>
+    <text x="355" y="402">　 在本地模式转动手轮，把阀门调到约 50% 开度。</text>
+
+    <text x="355" y="440">⑥ 阀门切回 REMOTE（遥控），重新启动系统；</text>
+    <text x="355" y="462">　 系统切回自动模式，确认偏差小于 10℃、报警消闪。</text>
+  </g>
+
+  <!-- 判断依据框 -->
+  <rect x="340" y="478" width="560" height="34" rx="8" fill="#fffbe6" stroke="#e8c547"/>
+  <text x="620" y="500" text-anchor="middle" font-size="13" fill="#6b5300">判断要点：自动、手动模式改变输出阀位均不动，本地手轮也转不动 → 机械卡死</text>
+</svg>

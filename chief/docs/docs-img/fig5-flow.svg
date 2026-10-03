@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="480" viewBox="0 0 960 480" font-family="Microsoft YaHei, sans-serif">
+  <rect width="960" height="480" fill="#ffffff"/>
+  <text x="480" y="36" text-anchor="middle" font-size="24" font-weight="bold" fill="#1f2d3d">图 5　电动调节阀故障诊断通用流程</text>
+
+  <defs>
+    <marker id="fl" markerWidth="11" markerHeight="11" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L9,4 L0,8 Z" fill="#5d6d7e"/>
+    </marker>
+  </defs>
+
+  <!-- 流程节点 -->
+  <g font-size="14">
+    <!-- 步骤1 -->
+    <rect x="40" y="80" width="180" height="70" rx="10" fill="#d6eaf8" stroke="#2874a6" stroke-width="2"/>
+    <text x="130" y="110" text-anchor="middle" fill="#1b4f72" font-weight="bold">① 观察现象</text>
+    <text x="130" y="132" text-anchor="middle" font-size="12" fill="#1b4f72">阀不动作 / 温度失控</text>
+
+    <!-- 步骤2 -->
+    <rect x="280" y="80" width="180" height="70" rx="10" fill="#d4efdf" stroke="#1e8449" stroke-width="2"/>
+    <text x="370" y="110" text-anchor="middle" fill="#145a32" font-weight="bold">② 判断故障类</text>
+    <text x="370" y="132" text-anchor="middle" font-size="12" fill="#145a32">卡死 or 信号断路</text>
+
+    <!-- 步骤3 -->
+    <rect x="520" y="80" width="180" height="70" rx="10" fill="#fdebd0" stroke="#b9770e" stroke-width="2"/>
+    <text x="610" y="110" text-anchor="middle" fill="#7d6608" font-weight="bold">③ 分段检测</text>
+    <text x="610" y="132" text-anchor="middle" font-size="12" fill="#7d6608">手动/本地 + 万用表</text>
+
+    <!-- 步骤4 -->
+    <rect x="760" y="80" width="170" height="70" rx="10" fill="#e8daef" stroke="#7d3c98" stroke-width="2"/>
+    <text x="845" y="110" text-anchor="middle" fill="#5b2c6f" font-weight="bold">④ 定位并修复</text>
+    <text x="845" y="132" text-anchor="middle" font-size="12" fill="#5b2c6f">停机检修 / 恢复接线</text>
+  </g>
+
+  <!-- 箭头 -->
+  <line x1="220" y1="115" x2="275" y2="115" stroke="#5d6d7e" stroke-width="2.5" marker-end="url(#fl)"/>
+  <line x1="460" y1="115" x2="515" y2="115" stroke="#5d6d7e" stroke-width="2.5" marker-end="url(#fl)"/>
+  <line x1="700" y1="115" x2="755" y2="115" stroke="#5d6d7e" stroke-width="2.5" marker-end="url(#fl)"/>
+
+  <!-- 分支：卡死 -->
+  <rect x="120" y="230" width="320" height="210" rx="12" fill="#fdf2f0" stroke="#e6b0aa" stroke-width="2"/>
+  <text x="280" y="260" text-anchor="middle" font-size="15" font-weight="bold" fill="#922b21">分支 A：执行机构卡死</text>
+  <g font-size="13" fill="#333">
+    <text x="145" y="292">· 自动、手动改变输出，阀位都不动</text>
+    <text x="145" y="318">· 本地转动手轮，阀门也不动作</text>
+    <text x="145" y="344">· 机械传动部分卡涩/损坏</text>
+    <text x="145" y="376" fill="#922b21">处理：停机、断电隔离 → 检修或更换</text>
+    <text x="145" y="400" fill="#922b21">执行机构 → 恢复手轮动作 → 切遥控</text>
+    <text x="145" y="424" fill="#922b21">重新启动系统</text>
+  </g>
+
+  <!-- 分支：断路 -->
+  <rect x="520" y="230" width="410" height="210" rx="12" fill="#f4f9f4" stroke="#a9dfbf" stroke-width="2"/>
+  <text x="725" y="260" text-anchor="middle" font-size="15" font-weight="bold" fill="#145a32">分支 B：信号输入回路断路</text>
+  <g font-size="13" fill="#333">
+    <text x="545" y="292">· PID 输出有指示，回路电流始终 0mA</text>
+    <text x="545" y="318">· 万用表测阀输入端子电阻无穷大</text>
+    <text x="545" y="344">· 输出回路电阻约 250Ω 正常（阀内断路）</text>
+    <text x="545" y="376" fill="#145a32">处理：检查阀内线圈/引线 → 修复接线或</text>
+    <text x="545" y="400" fill="#145a32">更换执行机构 → 电流恢复 4~20mA →</text>
+    <text x="545" y="424" fill="#145a32">切遥控并重新投入自动</text>
+  </g>
+
+  <!-- 汇集 -->
+  <line x1="280" y1="150" x2="280" y2="228" stroke="#922b21" stroke-width="2.5" marker-end="url(#fl)"/>
+  <line x1="610" y1="150" x2="610" y2="228" stroke="#145a32" stroke-width="2.5" marker-end="url(#fl)"/>
+</svg>
