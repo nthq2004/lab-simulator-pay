@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="540" viewBox="0 0 800 540" font-family="Microsoft YaHei,PingFang SC,sans-serif">
+  <rect width="800" height="540" fill="#fbfcfe"/>
+  <text x="24" y="34" font-size="20" font-weight="bold" fill="#1a3a5c">温度变送器面板：接线端子与 Z / S 调校旋钮</text>
+
+  <!-- 机身 -->
+  <rect x="110" y="60" width="580" height="400" rx="18" fill="#eef7f1" stroke="#27ae60" stroke-width="3"/>
+
+  <!-- 顶部接线仓 P/N -->
+  <rect x="300" y="60" width="200" height="72" rx="10" fill="#f1f2f6" stroke="#a4b0be" stroke-width="2"/>
+  <circle cx="350" cy="96" r="13" fill="#c0392b"/><text x="350" y="101" font-size="13" fill="#fff" text-anchor="middle" font-weight="bold">P</text>
+  <circle cx="450" cy="96" r="13" fill="#2c3e50"/><text x="450" y="101" font-size="13" fill="#fff" text-anchor="middle" font-weight="bold">N</text>
+  <text x="400" y="126" font-size="11" fill="#555" text-anchor="middle">4~20mA 两线制（供电 + 信号）</text>
+
+  <!-- 圆形表头 -->
+  <circle cx="400" cy="300" r="128" fill="#2f3542"/>
+  <circle cx="400" cy="300" r="120" fill="#27ae60" stroke="#1e8449" stroke-width="6"/>
+  <circle cx="400" cy="300" r="84" fill="#000"/>
+  <text x="400" y="296" font-size="40" font-family="Digital-7,Consolas,monospace" font-weight="bold" fill="#00ff66" text-anchor="middle">100.0</text>
+  <text x="400" y="330" font-size="20" fill="#00ff66" text-anchor="middle">°C</text>
+  <text x="400" y="416" font-size="12" fill="#eafaf1" text-anchor="middle">就地 LCD：显示传感器测温值</text>
+
+  <!-- Z 旋钮 -->
+  <g transform="translate(200,180)">
+    <circle r="34" fill="#dfe4ea" stroke="#747d8c" stroke-width="2"/>
+    <circle r="24" fill="#f1f2f6" stroke="#2f3542" stroke-width="2"/>
+    <line x1="0" y1="22" x2="0" y2="-22" stroke="#2f3542" stroke-width="5" transform="rotate(35)"/>
+    <text x="0" y="58" font-size="14" font-weight="bold" fill="#2c3e50" text-anchor="middle">Z 零点</text>
+  </g>
+
+  <!-- S 旋钮 -->
+  <g transform="translate(600,180)">
+    <circle r="34" fill="#dfe4ea" stroke="#747d8c" stroke-width="2"/>
+    <circle r="24" fill="#f1f2f6" stroke="#2f3542" stroke-width="2"/>
+    <line x1="0" y1="22" x2="0" y2="-22" stroke="#2f3542" stroke-width="5" transform="rotate(-40)"/>
+    <text x="0" y="58" font-size="14" font-weight="bold" fill="#2c3e50" text-anchor="middle">S 量程</text>
+  </g>
+
+  <!-- 底部 PT100 端子 L M R -->
+  <rect x="270" y="444" width="260" height="40" rx="6" fill="#747d8c"/>
+  <circle cx="320" cy="464" r="11" fill="#2c7be5"/><text x="320" y="469" font-size="12" fill="#fff" text-anchor="middle" font-weight="bold">L</text>
+  <circle cx="400" cy="464" r="11" fill="#f1c40f"/><text x="400" y="469" font-size="12" fill="#333" text-anchor="middle" font-weight="bold">M</text>
+  <circle cx="480" cy="464" r="11" fill="#2c7be5"/><text x="480" y="469" font-size="12" fill="#fff" text-anchor="middle" font-weight="bold">R</text>
+  <text x="400" y="502" font-size="11" fill="#555" text-anchor="middle">PT100 三线制输入（M、R 短接）</text>
+
+  <!-- 引出说明 -->
+  <line x1="200" y1="180" x2="70" y2="120" stroke="#e67e22" stroke-width="2"/>
+  <rect x="12" y="86" width="150" height="60" rx="8" fill="#fdf2e9" stroke="#e67e22"/>
+  <text x="87" y="110" font-size="12" fill="#7e5109" text-anchor="middle">调零点：使下限点</text>
+  <text x="87" y="130" font-size="12" fill="#7e5109" text-anchor="middle">输出 4mA / 指示下限</text>
+
+  <line x1="600" y1="180" x2="730" y2="120" stroke="#e67e22" stroke-width="2"/>
+  <rect x="638" y="86" width="150" height="60" rx="8" fill="#fdf2e9" stroke="#e67e22"/>
+  <text x="713" y="110" font-size="12" fill="#7e5109" text-anchor="middle">调量程：使上限点</text>
+  <text x="713" y="130" font-size="12" fill="#7e5109" text-anchor="middle">输出 20mA / 指示上限</text>
+
+  <!-- 提示 -->
+  <text x="400" y="530" font-size="12.5" fill="#1a3a5c" text-anchor="middle" font-weight="bold">先调零点 Z，再调量程 S，并反复 2~3 次，直至下限与上限两点都准确</text>
+</svg>

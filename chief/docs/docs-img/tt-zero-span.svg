@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="560" viewBox="0 0 900 560" font-family="Microsoft YaHei,PingFang SC,sans-serif">
+  <rect width="900" height="560" fill="#fbfcfe"/>
+  <text x="24" y="34" font-size="20" font-weight="bold" fill="#1a3a5c">零点偏移与量程偏差的输入—输出特性对比</text>
+  <text x="24" y="58" font-size="13" fill="#667">纵轴＝二次仪表（控制室）指示温度，反映变送器输出的 4~20mA 信号</text>
+
+  <!-- 图例 -->
+  <g>
+    <line x1="140" y1="92" x2="176" y2="92" stroke="#2c3e50" stroke-width="3.5"/>
+    <text x="184" y="97" font-size="13" fill="#2c3e50">理想</text>
+    <line x1="270" y1="92" x2="306" y2="92" stroke="#2c7be5" stroke-width="3"/>
+    <text x="314" y="97" font-size="13" fill="#2c7be5">零点偏移（整体平移 +2.5℃）</text>
+    <line x1="590" y1="92" x2="626" y2="92" stroke="#c0392b" stroke-width="3"/>
+    <text x="634" y="97" font-size="13" fill="#c0392b">量程偏差（斜率 ×1.125）</text>
+  </g>
+
+  <!-- 网格 -->
+  <g stroke="#e3e8ef" stroke-width="1">
+    <line x1="110" y1="130" x2="780" y2="130"/>
+    <line x1="110" y1="190" x2="780" y2="190"/>
+    <line x1="110" y1="250" x2="780" y2="250"/>
+    <line x1="110" y1="310" x2="780" y2="310"/>
+    <line x1="110" y1="370" x2="780" y2="370"/>
+    <line x1="277" y1="70" x2="277" y2="430"/>
+    <line x1="445" y1="70" x2="445" y2="430"/>
+    <line x1="612" y1="70" x2="612" y2="430"/>
+    <line x1="780" y1="70" x2="780" y2="430"/>
+  </g>
+
+  <!-- 坐标轴 -->
+  <g stroke="#333" stroke-width="2">
+    <line x1="110" y1="430" x2="800" y2="430"/>
+    <line x1="110" y1="430" x2="110" y2="110"/>
+  </g>
+  <g font-size="13" fill="#333" text-anchor="end">
+    <text x="102" y="435">0</text>
+    <text x="102" y="375">20</text>
+    <text x="102" y="315">40</text>
+    <text x="102" y="255">60</text>
+    <text x="102" y="195">80</text>
+    <text x="102" y="135">100</text>
+  </g>
+  <g font-size="13" fill="#333" text-anchor="middle">
+    <text x="110" y="452">0</text>
+    <text x="277" y="452">25</text>
+    <text x="445" y="452">50</text>
+    <text x="612" y="452">75</text>
+    <text x="780" y="452">100</text>
+  </g>
+  <text x="455" y="492" font-size="15" fill="#333" text-anchor="middle">输入温度 T (℃) ／ 标准电阻对应温度</text>
+  <text x="34" y="270" font-size="15" fill="#333" text-anchor="middle" transform="rotate(-90 34,270)">二次仪表指示值 (℃)</text>
+
+  <!-- 特性线 -->
+  <line x1="110" y1="430" x2="780" y2="130" stroke="#2c3e50" stroke-width="3.5"/>
+  <line x1="110" y1="422.5" x2="780" y2="122.5" stroke="#2c7be5" stroke-width="3"/>
+  <line x1="110" y1="430" x2="724" y2="120.6" stroke="#c0392b" stroke-width="3"/>
+  <line x1="724" y1="120.6" x2="780" y2="120.6" stroke="#c0392b" stroke-width="3" stroke-dasharray="6 5"/>
+  <text x="742" y="112" font-size="11" fill="#c0392b" text-anchor="middle">输出钳位 20.5mA</text>
+
+  <!-- 偏差示意 -->
+  <line x1="300" y1="345" x2="300" y2="337.5" stroke="#2c7be5" stroke-width="2"/>
+  <text x="330" y="360" font-size="12" fill="#2c7be5">零点 Δ≈+2.5℃</text>
+  <line x1="620" y1="205" x2="620" y2="161" stroke="#c0392b" stroke-width="2" marker-start="url(#up)" marker-end="url(#dn)"/>
+  <text x="632" y="190" font-size="12" fill="#c0392b">量程偏差越往满度越大</text>
+
+  <!-- 关键点 -->
+  <g fill="#fff" stroke-width="3">
+    <circle cx="110" cy="430" r="6" stroke="#2c3e50"/>
+    <circle cx="780" cy="130" r="6" stroke="#2c3e50"/>
+    <circle cx="110" cy="422.5" r="6" stroke="#2c7be5"/>
+    <circle cx="780" cy="122.5" r="6" stroke="#2c7be5"/>
+    <circle cx="780" cy="120.6" r="6" stroke="#c0392b"/>
+  </g>
+  <text x="772" y="148" font-size="12" fill="#2c3e50" text-anchor="end">理想 100℃</text>
+
+  <!-- 说明卡 -->
+  <rect x="130" y="150" width="300" height="120" rx="10" fill="#fdf2e9" stroke="#e67e22"/>
+  <text x="148" y="176" font-size="13.5" fill="#7e5109" font-weight="bold">零点偏移（调 Z）</text>
+  <text x="148" y="200" font-size="12.5" fill="#7e5109">曲线整体平移，斜率不变；</text>
+  <text x="148" y="222" font-size="12.5" fill="#7e5109">各点指示都偏高（低）同一固定量；</text>
+  <text x="148" y="244" font-size="12.5" fill="#7e5109">每 3.85Ω 的增量仍是 10℃；</text>
+  <text x="148" y="264" font-size="12.5" fill="#7e5109">100Ω 时输出偏离 4mA（示例 4.4mA）。</text>
+
+  <rect x="480" y="300" width="320" height="120" rx="10" fill="#fdecea" stroke="#c0392b"/>
+  <text x="498" y="326" font-size="13.5" fill="#922b21" font-weight="bold">量程偏差（调 S）</text>
+  <text x="498" y="350" font-size="12.5" fill="#922b21">曲线斜率改变，零点可能仍接近正确；</text>
+  <text x="498" y="372" font-size="12.5" fill="#922b21">每 3.85Ω 的增量不再是 10℃；</text>
+  <text x="498" y="394" font-size="12.5" fill="#922b21">138.51Ω 时输出偏离 20mA；</text>
+  <text x="498" y="414" font-size="12.5" fill="#922b21">示例增量 11.25℃/10℃，满度提前钳位。</text>
+
+  <defs>
+    <marker id="up" markerWidth="9" markerHeight="9" refX="3" refY="5" orient="auto"><path d="M3,0 L3,10 L-2,5 z" fill="#c0392b"/></marker>
+    <marker id="dn" markerWidth="9" markerHeight="9" refX="3" refY="5" orient="auto"><path d="M3,0 L3,10 L8,5 z" fill="#c0392b"/></marker>
+  </defs>
+</svg>
