@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="560" viewBox="0 0 1000 560" font-family="Microsoft YaHei,PingFang SC,sans-serif">
+  <defs>
+    <marker id="f" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#2471a3"/></marker>
+  </defs>
+  <rect width="1000" height="560" fill="#fbfcfe"/>
+  <text x="24" y="36" font-size="20" font-weight="bold" fill="#1a3a5c">图 2　传感器 / 变送器故障诊断通用流程</text>
+
+  <g font-size="14">
+    <rect x="30" y="70" width="180" height="80" rx="10" fill="#fdedec" stroke="#c0392b" stroke-width="2"/>
+    <text x="120" y="102" font-size="15" font-weight="bold" fill="#922b21" text-anchor="middle">1. 观察现象</text>
+    <text x="120" y="126" fill="#922b21" text-anchor="middle">监控报警 / PID 显示</text>
+    <text x="120" y="144" fill="#922b21" text-anchor="middle">电流表读数</text>
+
+    <rect x="250" y="70" width="180" height="80" rx="10" fill="#fef9e7" stroke="#b7950b" stroke-width="2"/>
+    <text x="340" y="102" font-size="15" font-weight="bold" fill="#7d6608" text-anchor="middle">2. 安全隔离</text>
+    <text x="340" y="126" fill="#7d6608" text-anchor="middle">断电、停机</text>
+    <text x="340" y="144" fill="#7d6608" text-anchor="middle">先停加热 / 关闭主机</text>
+
+    <rect x="470" y="70" width="180" height="80" rx="10" fill="#eaf2fb" stroke="#2471a3" stroke-width="2"/>
+    <text x="560" y="102" font-size="15" font-weight="bold" fill="#154360" text-anchor="middle">3. 目视查线</text>
+    <text x="560" y="126" fill="#2471a3" text-anchor="middle">接线是否松动 / 脱落</text>
+    <text x="560" y="144" fill="#2471a3" text-anchor="middle">供电是否正常</text>
+
+    <rect x="690" y="70" width="180" height="80" rx="10" fill="#eafaf1" stroke="#27ae60" stroke-width="2"/>
+    <text x="780" y="102" font-size="15" font-weight="bold" fill="#1e8449" text-anchor="middle">4. 分段测量</text>
+    <text x="780" y="126" fill="#1e8449" text-anchor="middle">万用表测传感器阻值</text>
+    <text x="780" y="144" fill="#1e8449" text-anchor="middle">测回路电流 / 电压</text>
+
+    <rect x="690" y="220" width="180" height="80" rx="10" fill="#f5eef8" stroke="#8e44ad" stroke-width="2"/>
+    <text x="780" y="252" font-size="15" font-weight="bold" fill="#6c3483" text-anchor="middle">5. 定位故障</text>
+    <text x="780" y="276" fill="#8e44ad" text-anchor="middle">短路 / 断路 / 接线</text>
+    <text x="780" y="294" fill="#8e44ad" text-anchor="middle">供电丢失</text>
+
+    <rect x="470" y="220" width="180" height="80" rx="10" fill="#eafaf1" stroke="#27ae60" stroke-width="2"/>
+    <text x="560" y="252" font-size="15" font-weight="bold" fill="#1e8449" text-anchor="middle">6. 更换 / 修复</text>
+    <text x="560" y="276" fill="#1e8449" text-anchor="middle">更换合格传感器</text>
+    <text x="560" y="294" fill="#1e8449" text-anchor="middle">修复变送器 / 接线</text>
+
+    <rect x="250" y="220" width="180" height="80" rx="10" fill="#eaf2fb" stroke="#2471a3" stroke-width="2"/>
+    <text x="340" y="252" font-size="15" font-weight="bold" fill="#154360" text-anchor="middle">7. 恢复回路</text>
+    <text x="340" y="276" fill="#2471a3" text-anchor="middle">按三线制复接</text>
+    <text x="340" y="294" fill="#2471a3" text-anchor="middle">复电、观察电流恢复</text>
+
+    <rect x="30" y="220" width="180" height="80" rx="10" fill="#fef9e7" stroke="#b7950b" stroke-width="2"/>
+    <text x="120" y="252" font-size="15" font-weight="bold" fill="#7d6608" text-anchor="middle">8. 消音确认</text>
+    <text x="120" y="276" fill="#7d6608" text-anchor="middle">监控报警消音、确认</text>
+    <text x="120" y="294" fill="#7d6608" text-anchor="middle">清除已恢复报警</text>
+
+    <rect x="250" y="360" width="500" height="80" rx="10" fill="#e8f6f3" stroke="#16a085" stroke-width="2"/>
+    <text x="500" y="392" font-size="15" font-weight="bold" fill="#0b5345" text-anchor="middle">9. 投入自动运行并验证</text>
+    <text x="500" y="416" fill="#0b5345" text-anchor="middle">PID 切回 AUTO，确认 PV 跟随 SV（偏差 &lt; 10℃）、报警已消闪</text>
+  </g>
+
+  <g stroke="#2471a3" stroke-width="2.5" fill="none" marker-end="url(#f)">
+    <line x1="210" y1="110" x2="248" y2="110"/>
+    <line x1="430" y1="110" x2="468" y2="110"/>
+    <line x1="650" y1="110" x2="688" y2="110"/>
+    <path d="M780,150 L780,218"/>
+    <line x1="690" y1="260" x2="652" y2="260"/>
+    <line x1="470" y1="260" x2="432" y2="260"/>
+    <line x1="250" y1="260" x2="212" y2="260"/>
+    <path d="M120,300 L120,400 L248,400"/>
+  </g>
+
+  <text x="24" y="500" font-size="13" fill="#555">核心思路：先判断、后动手——用现象缩小范围，用万用表分段验证，先隔离再测量，修复后必须复核回路电流并确认报警，最后才投入自动。</text>
+  <text x="24" y="528" font-size="13" fill="#555">三种典型故障的快速判据：回路电流 0mA（输出断路）｜3.6mA（PT100 短路）｜21.6mA（PT100 断路）。</text>
+</svg>

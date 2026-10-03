@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500" font-family="Microsoft YaHei,PingFang SC,sans-serif">
+  <rect width="1000" height="500" fill="#fbfcfe"/>
+  <text x="24" y="36" font-size="20" font-weight="bold" fill="#1a3a5c">图 1　4~20mA 回路电流与故障判据</text>
+  <text x="24" y="62" font-size="13" fill="#666">万用表串联/电流表测得回路电流后，按下列区间判断故障类型（本系统 PID 判据）</text>
+
+  <!-- 正常信号区 3.8~20.5 -->
+  <rect x="171" y="250" width="401" height="90" fill="#eafaf1" stroke="#27ae60" stroke-width="1.5"/>
+  <text x="371" y="286" font-size="16" font-weight="bold" fill="#1e8449" text-anchor="middle">正常信号区</text>
+  <text x="371" y="312" font-size="13" fill="#1e8449" text-anchor="middle">3.8mA（低温饱和）～ 20.5mA（超温最大）</text>
+
+  <!-- 断路上冲区 -->
+  <rect x="598" y="250" width="322" height="90" fill="#f5eef8" stroke="#8e44ad" stroke-width="1.5"/>
+  <text x="759" y="286" font-size="16" font-weight="bold" fill="#6c3483" text-anchor="middle">断路上冲区</text>
+  <text x="759" y="312" font-size="13" fill="#6c3483" text-anchor="middle">PT100 断路 → 变送器输出 21.6mA</text>
+
+  <!-- 短路/欠量程区（很窄，用引出标注） -->
+  <rect x="88" y="250" width="82" height="90" fill="#fdf2e9" stroke="#e67e22" stroke-width="1.5"/>
+  <rect x="80" y="250" width="8" height="90" fill="#fdedec" stroke="#c0392b" stroke-width="1"/>
+
+  <!-- 轴 -->
+  <line x1="80" y1="360" x2="930" y2="360" stroke="#34495e" stroke-width="3" marker-end="url(#ax)"/>
+  <defs><marker id="ax" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#34495e"/></marker></defs>
+  <g font-size="12" fill="#34495e" text-anchor="middle">
+    <line x1="80" y1="360" x2="80" y2="368" stroke="#34495e" stroke-width="2"/><text x="80" y="386">0</text>
+    <line x1="200" y1="360" x2="200" y2="368" stroke="#34495e" stroke-width="2"/><text x="200" y="386">5</text>
+    <line x1="320" y1="360" x2="320" y2="368" stroke="#34495e" stroke-width="2"/><text x="320" y="386">10</text>
+    <line x1="440" y1="360" x2="440" y2="368" stroke="#34495e" stroke-width="2"/><text x="440" y="386">15</text>
+    <line x1="560" y1="360" x2="560" y2="368" stroke="#34495e" stroke-width="2"/><text x="560" y="386">20</text>
+    <line x1="680" y1="360" x2="680" y2="368" stroke="#34495e" stroke-width="2"/><text x="680" y="386">25</text>
+    <line x1="800" y1="360" x2="800" y2="368" stroke="#34495e" stroke-width="2"/><text x="800" y="386">30</text>
+    <line x1="920" y1="360" x2="920" y2="368" stroke="#34495e" stroke-width="2"/><text x="920" y="386">35</text>
+  </g>
+  <text x="930" y="392" font-size="13" fill="#34495e" text-anchor="end">回路电流 / mA</text>
+
+  <!-- 判据阈值虚线 -->
+  <line x1="169" y1="235" x2="169" y2="360" stroke="#c0392b" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="169" y="228" font-size="12" fill="#c0392b" text-anchor="middle">判据 &lt;3.7mA</text>
+  <line x1="584" y1="235" x2="584" y2="360" stroke="#c0392b" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="584" y="228" font-size="12" fill="#c0392b" text-anchor="middle">判据 &gt;21.0mA</text>
+
+  <!-- 关键点 -->
+  <g font-size="13">
+    <circle cx="80" cy="360" r="6" fill="#c0392b"/>
+    <circle cx="166" cy="360" r="6" fill="#e67e22"/>
+    <circle cx="598" cy="360" r="6" fill="#8e44ad"/>
+  </g>
+  <text x="80" y="416" font-size="14" font-weight="bold" fill="#c0392b" text-anchor="middle">0mA</text>
+  <text x="80" y="436" font-size="12" fill="#c0392b" text-anchor="middle">输出断路</text>
+  <text x="166" y="416" font-size="14" font-weight="bold" fill="#e67e22" text-anchor="middle">3.6mA</text>
+  <text x="166" y="436" font-size="12" fill="#e67e22" text-anchor="middle">PT100 短路</text>
+  <text x="598" y="416" font-size="14" font-weight="bold" fill="#8e44ad" text-anchor="middle">21.6mA</text>
+  <text x="598" y="436" font-size="12" fill="#6c3483" text-anchor="middle">PT100 断路</text>
+
+  <!-- 三线接线错误上冲同样落入断路上冲区 -->
+  <text x="850" y="416" font-size="12" fill="#6c3483" text-anchor="middle">（l/m/r 接线错误也落入此区）</text>
+
+  <text x="24" y="480" font-size="13" fill="#555">要点：4mA 为零点、20mA 为满量程；低于零点判短路、高于满量程判断路、回路电流为 0 判输出断路——用同一根电流轴即可区分三种故障。</text>
+</svg>
