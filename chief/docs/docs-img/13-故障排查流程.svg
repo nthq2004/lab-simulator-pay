@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="620" viewBox="0 0 940 620" font-family="Microsoft YaHei, PingFang SC, sans-serif">
+  <rect width="940" height="620" fill="#f7fafc"/>
+  <text x="470" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#1a365d">PLC 控制系统故障排查流程</text>
+  <text x="470" y="52" text-anchor="middle" font-size="11" fill="#718096">由"现象 → 输入 → 程序 → 输出 → 负载 → 主电路"逐级缩小范围</text>
+
+  <defs>
+    <marker id="ar" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#4a5568"/>
+    </marker>
+  </defs>
+
+  <!-- 开始 -->
+  <rect x="370" y="70" width="200" height="38" rx="19" fill="#2c5282"/>
+  <text x="470" y="94" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#fff">起动设备，观察故障现象</text>
+  <line x1="470" y1="108" x2="470" y2="132" stroke="#4a5568" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- D1 -->
+  <polygon points="470,134 590,170 470,206 350,170" fill="#fffbea" stroke="#d69e2e" stroke-width="1.6"/>
+  <text x="470" y="175" text-anchor="middle" font-size="11.5" fill="#744210">PLC 是否 RUN？</text>
+  <line x1="590" y1="170" x2="700" y2="170" stroke="#4a5568" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="640" y="162" font-size="10" fill="#c53030">否</text>
+  <rect x="700" y="151" width="180" height="38" rx="6" fill="#fff5f5" stroke="#fc8181" stroke-width="1.4"/>
+  <text x="790" y="168" text-anchor="middle" font-size="10.5" fill="#9b2c2c">查供电/电源、转 RUN、下载程序</text>
+  <text x="790" y="182" text-anchor="middle" font-size="9" fill="#a0aec0">（PLC 本体/程序故障）</text>
+  <line x1="470" y1="206" x2="470" y2="230" stroke="#4a5568" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="482" y="222" font-size="10" fill="#2f855a">是</text>
+
+  <!-- D2 -->
+  <polygon points="470,232 600,268 470,304 340,268" fill="#fffbea" stroke="#d69e2e" stroke-width="1.6"/>
+  <text x="470" y="266" text-anchor="middle" font-size="11.5" fill="#744210">PLC 输入状态是否正确？</text>
+  <text x="470" y="282" text-anchor="middle" font-size="9.5" fill="#a0aec0">（I0.0/I0.1/I0.2）</text>
+  <line x1="340" y1="268" x2="230" y2="268" stroke="#4a5568" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="285" y="260" font-size="10" fill="#c53030">否</text>
+  <rect x="50" y="249" width="180" height="38" rx="6" fill="#fff5f5" stroke="#fc8181" stroke-width="1.4"/>
+  <text x="140" y="266" text-anchor="middle" font-size="10.5" fill="#9b2c2c">查输入回路：24V、触点</text>
+  <text x="140" y="280" text-anchor="middle" font-size="9" fill="#a0aec0">接触不良、接线断路</text>
+  <line x1="470" y1="304" x2="470" y2="328" stroke="#4a5568" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="482" y="320" font-size="10" fill="#2f855a">是</text>
+
+  <!-- D3 -->
+  <polygon points="470,330 600,366 470,402 340,366" fill="#fffbea" stroke="#d69e2e" stroke-width="1.6"/>
+  <text x="470" y="364" text-anchor="middle" font-size="11.5" fill="#744210">PLC 输出状态是否正确？</text>
+  <text x="470" y="380" text-anchor="middle" font-size="9.5" fill="#a0aec0">（Q0.0/Q0.1/Q0.2）</text>
+  <line x1="600" y1="366" x2="700" y2="366" stroke="#4a5568" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="648" y="358" font-size="10" fill="#c53030">否</text>
+  <rect x="700" y="347" width="180" height="38" rx="6" fill="#fff5f5" stroke="#fc8181" stroke-width="1.4"/>
+  <text x="790" y="364" text-anchor="middle" font-size="10.5" fill="#9b2c2c">查程序逻辑（触点用反、</text>
+  <text x="790" y="378" text-anchor="middle" font-size="9" fill="#a0aec0">定时器、地址）</text>
+  <line x1="470" y1="402" x2="470" y2="426" stroke="#4a5568" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="482" y="418" font-size="10" fill="#2f855a">是</text>
+
+  <!-- D4 -->
+  <polygon points="470,428 600,464 470,500 340,464" fill="#fffbea" stroke="#d69e2e" stroke-width="1.6"/>
+  <text x="470" y="462" text-anchor="middle" font-size="11.5" fill="#744210">输出端电压/负载是否正常？</text>
+  <text x="470" y="478" text-anchor="middle" font-size="9.5" fill="#a0aec0">（1L+、线圈、线路）</text>
+  <line x1="340" y1="464" x2="230" y2="464" stroke="#4a5568" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="285" y="456" font-size="10" fill="#c53030">否</text>
+  <rect x="50" y="445" width="180" height="38" rx="6" fill="#fff5f5" stroke="#fc8181" stroke-width="1.4"/>
+  <text x="140" y="462" text-anchor="middle" font-size="10.5" fill="#9b2c2c">查输出回路：1L+ 电源、</text>
+  <text x="140" y="476" text-anchor="middle" font-size="9" fill="#a0aec0">线圈断线、端子接触</text>
+  <line x1="470" y1="500" x2="470" y2="524" stroke="#4a5568" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="482" y="516" font-size="10" fill="#2f855a">是</text>
+
+  <!-- 主电路 -->
+  <rect x="330" y="526" width="280" height="36" rx="6" fill="#fff5f5" stroke="#fc8181" stroke-width="1.4"/>
+  <text x="470" y="549" text-anchor="middle" font-size="10.5" fill="#9b2c2c">查主电路：主触头、热继电器、电机、电源</text>
+  <line x1="470" y1="562" x2="470" y2="580" stroke="#4a5568" stroke-width="2" marker-end="url(#ar)"/>
+  <rect x="350" y="580" width="240" height="30" rx="15" fill="#2f855a"/>
+  <text x="470" y="600" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">定位故障 → 修复 → 重新验证</text>
+
+  <!-- 右侧工具提示 -->
+  <rect x="580" y="70" width="330" height="60" rx="8" fill="#ebf8ff" stroke="#63b3ed" stroke-width="1.4"/>
+  <text x="596" y="92" font-size="10.5" fill="#2b6cb0">工具：万用表（电压/电阻/电流档）、</text>
+  <text x="596" y="110" font-size="10.5" fill="#2b6cb0">PLC 输入/输出指示灯、在线程序监控与状态表</text>
+</svg>

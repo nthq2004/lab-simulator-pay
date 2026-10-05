@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="560" viewBox="0 0 940 560" font-family="Microsoft YaHei, PingFang SC, sans-serif">
+  <rect width="940" height="560" fill="#f7fafc"/>
+  <text x="470" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#1a365d">数字量输出回路故障判断（晶体管源型）</text>
+  <text x="470" y="52" text-anchor="middle" font-size="11" fill="#718096">输出负载电源 1L+ 接 +24V；Q=1 时输出端与 1L+ 内部导通，线圈得电</text>
+
+  <!-- 1L+ / +24V -->
+  <circle cx="330" cy="80" r="6" fill="#c53030"/>
+  <text x="330" y="68" text-anchor="middle" font-size="11" font-weight="bold" fill="#c53030">1L+ → +24V</text>
+
+  <!-- PLC 本体 -->
+  <rect x="60" y="100" width="270" height="250" rx="10" fill="#2b3138" stroke="#12161a" stroke-width="2"/>
+  <text x="195" y="128" text-anchor="middle" font-size="13" font-weight="bold" fill="#e2e8f0">CPU ST20（晶体管输出）</text>
+  <text x="195" y="147" text-anchor="middle" font-size="9.5" fill="#a0aec0">数字量输出 DQ</text>
+  <line x1="300" y1="110" x2="300" y2="160" stroke="#c53030" stroke-width="2"/>
+  <line x1="300" y1="160" x2="330" y2="160" stroke="#c53030" stroke-width="2"/>
+  <text x="308" y="176" font-size="9.5" fill="#ffb0b0">1L+</text>
+  <g font-size="11" fill="#e2e8f0">
+    <text x="80" y="212">Q0.0 → KM1 主</text>
+    <text x="80" y="262">Q0.1 → KM2 星</text>
+    <text x="80" y="312">Q0.2 → KM3 角</text>
+  </g>
+  <circle cx="280" cy="208" r="5" fill="#4df08a"/>
+  <circle cx="280" cy="258" r="5" fill="#4df08a"/>
+  <circle cx="280" cy="308" r="5" fill="#ff5a5a"/>
+
+  <!-- 输出线 → 线圈 -->
+  <line x1="300" y1="208" x2="560" y2="208" stroke="#2d3748" stroke-width="2"/>
+  <line x1="300" y1="258" x2="560" y2="258" stroke="#2d3748" stroke-width="2"/>
+  <line x1="300" y1="308" x2="560" y2="308" stroke="#2d3748" stroke-width="2"/>
+
+  <!-- KM 线圈 -->
+  <g>
+    <rect x="560" y="186" width="140" height="44" rx="6" fill="#fffaf0" stroke="#dd6b20" stroke-width="1.8"/>
+    <text x="630" y="206" text-anchor="middle" font-size="12" fill="#9c4221">KM1 线圈</text>
+    <text x="630" y="221" text-anchor="middle" font-size="9" fill="#a0aec0">A1 — A2（DC24V）</text>
+  </g>
+  <g>
+    <rect x="560" y="236" width="140" height="44" rx="6" fill="#fffaf0" stroke="#dd6b20" stroke-width="1.8"/>
+    <text x="630" y="256" text-anchor="middle" font-size="12" fill="#9c4221">KM2 线圈</text>
+    <text x="630" y="271" text-anchor="middle" font-size="9" fill="#a0aec0">A1 — A2（DC24V）</text>
+  </g>
+  <g>
+    <rect x="560" y="286" width="140" height="44" rx="6" fill="#fffaf0" stroke="#dd6b20" stroke-width="1.8"/>
+    <text x="630" y="306" text-anchor="middle" font-size="12" fill="#9c4221">KM3 线圈</text>
+    <text x="630" y="321" text-anchor="middle" font-size="9" fill="#a0aec0">A1 — A2（DC24V）</text>
+  </g>
+
+  <!-- 线圈 A2 → 0V -->
+  <line x1="700" y1="208" x2="820" y2="208" stroke="#2d3748" stroke-width="2"/>
+  <line x1="700" y1="258" x2="820" y2="258" stroke="#2d3748" stroke-width="2"/>
+  <line x1="700" y1="308" x2="820" y2="308" stroke="#2d3748" stroke-width="2"/>
+  <line x1="820" y1="180" x2="820" y2="330" stroke="#2d3748" stroke-width="2.5"/>
+  <text x="828" y="345" font-size="10" fill="#2d3748">0V（PLC 0V）</text>
+
+  <!-- 测量点 -->
+  <circle cx="440" cy="208" r="7" fill="#fff" stroke="#c53030" stroke-width="2"/>
+  <text x="440" y="212" text-anchor="middle" font-size="9" fill="#c53030">V</text>
+  <circle cx="745" cy="258" r="7" fill="#fff" stroke="#c53030" stroke-width="2"/>
+  <text x="745" y="262" text-anchor="middle" font-size="9" fill="#c53030">V</text>
+
+  <!-- 判断方法 -->
+  <rect x="60" y="368" width="820" height="176" rx="8" fill="#fff5f5" stroke="#fc8181" stroke-width="1.5"/>
+  <text x="78" y="392" font-size="12" font-weight="bold" fill="#9b2c2c">判断方法（Q=1 但负载不动作时）</text>
+  <text x="78" y="414" font-size="11" fill="#742a2a">① 测输出端对 0V 电压：Q=1 时应≈24V。若无电压，问题在 PLC 输出或 1L+ 电源（本体侧）。</text>
+  <text x="78" y="436" font-size="11" fill="#742a2a">② 测线圈 A1-A2 两端电压：有电压但接触器不吸合 → 线圈断线或规格不符；无电压 → 输出线/端子断路。</text>
+  <text x="78" y="458" font-size="11" fill="#742a2a">③ 断电后用电阻档测线圈电阻：正常约几百 Ω（本实验 240Ω）；无穷大 = 线圈断线。</text>
+  <text x="78" y="480" font-size="11" fill="#742a2a">④ 检查 1L+ 是否接 +24V、线圈 A2 是否可靠接 0V（公共端）——这两处最易被忽略。</text>
+  <text x="78" y="502" font-size="11" fill="#c53030">⑤ 主触头随线圈动作：KM1/KM2/KM3 主触头分别接在电机主回路、星点、角接回路中，</text>
+  <text x="88" y="520" font-size="11" fill="#c53030">   若线圈得电而主回路仍不通，应检查主触头是否烧蚀、卡涩或接线松脱。</text>
+  <text x="78" y="538" font-size="10.5" fill="#718096">提示：可在程序监控中同时观察 Q0.0/Q0.1/Q0.2 与线圈得电状态，快速区分"程序没输出"还是"外围不执行"。</text>
+</svg>

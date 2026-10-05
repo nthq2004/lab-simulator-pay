@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="560" viewBox="0 0 940 560" font-family="Microsoft YaHei, PingFang SC, sans-serif">
+  <rect width="940" height="560" fill="#f7fafc"/>
+  <text x="470" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#1a365d">星三角降压起动 PLC 控制系统组成</text>
+  <text x="470" y="52" text-anchor="middle" font-size="11" fill="#718096">上位机 + PLC + 数字量输入/输出 + 星三角主电路 + 模拟量采集/显示回路</text>
+
+  <defs>
+    <marker id="a" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#4a5568"/>
+    </marker>
+  </defs>
+
+  <!-- 上位机 -->
+  <rect x="40" y="80" width="180" height="70" rx="8" fill="#805ad5" stroke="#553c9a" stroke-width="2"/>
+  <text x="130" y="110" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">上位机（STEP7）</text>
+  <text x="130" y="132" text-anchor="middle" font-size="10" fill="#e9d8fd">编程 / 上传下载 / 在线监控</text>
+  <line x1="220" y1="115" x2="330" y2="115" stroke="#4a5568" stroke-width="2" marker-end="url(#a)"/>
+  <text x="275" y="107" text-anchor="middle" font-size="9.5" fill="#4a5568">以太网</text>
+
+  <!-- PLC 本体 -->
+  <rect x="330" y="70" width="290" height="290" rx="10" fill="#2b3138" stroke="#12161a" stroke-width="2"/>
+  <text x="475" y="98" text-anchor="middle" font-size="14" font-weight="bold" fill="#e2e8f0">S7-200 SMART CPU ST20</text>
+  <text x="475" y="117" text-anchor="middle" font-size="9.5" fill="#a0aec0">12 DI / 8 DO · 晶体管源型</text>
+  <rect x="348" y="128" width="120" height="34" rx="5" fill="#3182ce"/>
+  <text x="408" y="150" text-anchor="middle" font-size="10.5" fill="#fff">EM AI04</text>
+  <rect x="480" y="128" width="120" height="34" rx="5" fill="#2f855a"/>
+  <text x="540" y="150" text-anchor="middle" font-size="10.5" fill="#fff">EM AQ04</text>
+  <text x="475" y="186" text-anchor="middle" font-size="10" fill="#9fe0b8">用户程序：起保停 + 星三角延时 + 模拟量直通</text>
+  <text x="362" y="214" font-size="10" fill="#e2e8f0">输入 I0.0 起动 / I0.1 停止(常闭) / I0.2 FR(常闭)</text>
+  <text x="362" y="234" font-size="10" fill="#e2e8f0">输出 Q0.0→KM1  Q0.1→KM2  Q0.2→KM3</text>
+  <text x="362" y="254" font-size="10" fill="#e2e8f0">模拟量 AIW0（转速）→ AQW0（转速表）</text>
+  <text x="362" y="278" font-size="9.5" fill="#a0aec0">供电：外部 24V；1M→0V；1L+→24V</text>
+
+  <!-- 输入回路 -->
+  <rect x="40" y="200" width="230" height="150" rx="8" fill="#fff5f5" stroke="#fc8181" stroke-width="1.6"/>
+  <text x="155" y="224" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#9b2c2c">数字量输入（DC24V）</text>
+  <text x="58" y="248" font-size="10" fill="#742a2a">+24V 电位端子 →</text>
+  <text x="66" y="270" font-size="10" fill="#742a2a">FR 常闭 → I0.2</text>
+  <text x="66" y="292" font-size="10" fill="#742a2a">停止按钮(常闭) → I0.1</text>
+  <text x="66" y="314" font-size="10" fill="#742a2a">起动按钮(常开) → I0.0</text>
+  <text x="66" y="338" font-size="9.5" fill="#a0aec0">公共端 1M → 0V（源型）</text>
+  <line x1="270" y1="275" x2="330" y2="275" stroke="#4a5568" stroke-width="2" marker-end="url(#a)"/>
+
+  <!-- 输出回路 -->
+  <rect x="660" y="200" width="240" height="150" rx="8" fill="#fffaf0" stroke="#f6ad55" stroke-width="1.6"/>
+  <text x="780" y="224" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#9c4221">数字量输出（DC24V）</text>
+  <text x="678" y="248" font-size="10" fill="#744210">Q0.0 → KM1 线圈（主）</text>
+  <text x="678" y="270" font-size="10" fill="#744210">Q0.1 → KM2 线圈（星）</text>
+  <text x="678" y="292" font-size="10" fill="#744210">Q0.2 → KM3 线圈（角）</text>
+  <text x="678" y="316" font-size="9.5" fill="#a0aec0">线圈另一端 → PLC 0V</text>
+  <text x="678" y="338" font-size="9.5" fill="#a0aec0">1L+ → +24V</text>
+  <line x1="620" y1="275" x2="660" y2="275" stroke="#4a5568" stroke-width="2" marker-end="url(#a)"/>
+
+  <!-- 主电路 -->
+  <rect x="40" y="380" width="560" height="150" rx="8" fill="#f0fff4" stroke="#68d391" stroke-width="1.6"/>
+  <text x="60" y="404" font-size="11.5" font-weight="bold" fill="#22543d">星三角降压起动主电路（AC 380V）</text>
+  <text x="60" y="430" font-size="10.5" fill="#276749">三相电源 → QF → KM1 主触头 → FR 发热元件 → 电动机 U1/V1/W1</text>
+  <text x="60" y="454" font-size="10.5" fill="#276749">星形 KM2：尾端 U2/V2/W2 短接成中性点（起动时吸合）</text>
+  <text x="60" y="478" font-size="10.5" fill="#276749">三角形 KM3：U1↔W2、V1↔U2、W1↔V2 换接（运行时吸合）</text>
+  <text x="60" y="506" font-size="9.5" fill="#a0aec0">KM1/KM2/KM3 主触头随各自线圈吸合而闭合</text>
+
+  <!-- 模拟量回路 -->
+  <rect x="620" y="380" width="280" height="150" rx="8" fill="#ebf8ff" stroke="#63b3ed" stroke-width="1.6"/>
+  <text x="640" y="404" font-size="11.5" font-weight="bold" fill="#2b6cb0">模拟量回路（4~20mA）</text>
+  <text x="640" y="430" font-size="10.5" fill="#2c5282">24V → 转速变送器 P，N → AI04 ch0</text>
+  <text x="640" y="454" font-size="10.5" fill="#2c5282">AIW0 →(程序)→ AQW0 → AQ04 ch0</text>
+  <text x="640" y="478" font-size="10.5" fill="#2c5282">AQ04 ch0 → 数字转速表显示转速</text>
+  <text x="640" y="506" font-size="9.5" fill="#a0aec0">采集电机实际转速（0~2000 r/min）</text>
+
+  <!-- 总线连接标注 -->
+  <line x1="475" y1="360" x2="320" y2="380" stroke="#4a5568" stroke-width="1.6" stroke-dasharray="5 3"/>
+  <line x1="475" y1="360" x2="760" y2="380" stroke="#4a5568" stroke-width="1.6" stroke-dasharray="5 3"/>
+</svg>

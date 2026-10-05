@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="560" viewBox="0 0 940 560" font-family="Microsoft YaHei, PingFang SC, sans-serif">
+  <rect width="940" height="560" fill="#f7fafc"/>
+  <text x="470" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#1a365d">PLC 控制系统故障分类</text>
+  <text x="470" y="52" text-anchor="middle" font-size="11" fill="#718096">按"供电 → 外围电路 → 本体 → 程序 → 通信"由外向内逐层排查，可覆盖绝大多数故障</text>
+
+  <!-- 根节点 -->
+  <rect x="350" y="70" width="240" height="46" rx="8" fill="#2c5282" stroke="#1a365d" stroke-width="2"/>
+  <text x="470" y="99" text-anchor="middle" font-size="15" font-weight="bold" fill="#fff">PLC 控制系统故障</text>
+  <line x1="470" y1="116" x2="470" y2="140" stroke="#4a5568" stroke-width="2"/>
+  <line x1="100" y1="140" x2="840" y2="140" stroke="#4a5568" stroke-width="2"/>
+
+  <!-- 五个分支 -->
+  <g>
+    <line x1="100" y1="140" x2="100" y2="164" stroke="#4a5568" stroke-width="2"/>
+    <rect x="20" y="164" width="160" height="40" rx="6" fill="#c53030" stroke="#9b2c2c" stroke-width="1.5"/>
+    <text x="100" y="189" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">① 电源与供电</text>
+  </g>
+  <g>
+    <line x1="285" y1="140" x2="285" y2="164" stroke="#4a5568" stroke-width="2"/>
+    <rect x="205" y="164" width="160" height="40" rx="6" fill="#dd6b20" stroke="#c05621" stroke-width="1.5"/>
+    <text x="285" y="189" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">② 外围电路</text>
+  </g>
+  <g>
+    <line x1="470" y1="140" x2="470" y2="164" stroke="#4a5568" stroke-width="2"/>
+    <rect x="390" y="164" width="160" height="40" rx="6" fill="#3182ce" stroke="#2b6cb0" stroke-width="1.5"/>
+    <text x="470" y="189" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">③ PLC 本体</text>
+  </g>
+  <g>
+    <line x1="655" y1="140" x2="655" y2="164" stroke="#4a5568" stroke-width="2"/>
+    <rect x="575" y="164" width="160" height="40" rx="6" fill="#2f855a" stroke="#22543d" stroke-width="1.5"/>
+    <text x="655" y="189" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">④ 程序与参数</text>
+  </g>
+  <g>
+    <line x1="840" y1="140" x2="840" y2="164" stroke="#4a5568" stroke-width="2"/>
+    <rect x="760" y="164" width="160" height="40" rx="6" fill="#805ad5" stroke="#553c9a" stroke-width="1.5"/>
+    <text x="840" y="189" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">⑤ 通信与网络</text>
+  </g>
+
+  <!-- 各分支说明 -->
+  <g font-size="10.5" fill="#2d3748">
+    <text x="24" y="226">· 电源未上电 / 熔断器烧断</text>
+    <text x="24" y="244">· 24V 电压不足、纹波大</text>
+    <text x="24" y="262">· 0V 公共端开路、接地不良</text>
+    <text x="24" y="280">· 输出负载电源 1L+ 缺失</text>
+
+    <text x="209" y="226">· 输入：按钮/触点接触不良</text>
+    <text x="209" y="244">· 输入：接线松脱、断路</text>
+    <text x="209" y="262">· 输出：线圈断线、负载短路</text>
+    <text x="209" y="280">· 热继电器、接触器故障</text>
+
+    <text x="394" y="226">· CPU 损坏、进入 STOP</text>
+    <text x="394" y="244">· 扩展模块未挂接</text>
+    <text x="394" y="262">· I/O 端子松动、模块烧毁</text>
+    <text x="394" y="280">· 电池/存储卡故障</text>
+
+    <text x="579" y="226">· 逻辑错误、触点用反</text>
+    <text x="579" y="244">· 定时器/计数器设定错</text>
+    <text x="579" y="262">· 程序未下载、未转 RUN</text>
+    <text x="579" y="280">· 模拟量量程/地址错</text>
+
+    <text x="764" y="226">· 网线/接头松动</text>
+    <text x="764" y="244">· IP 地址冲突</text>
+    <text x="764" y="262">· 上位机未连接</text>
+    <text x="764" y="280">· 通信协议不匹配</text>
+  </g>
+
+  <!-- 底部提示 -->
+  <rect x="60" y="330" width="820" height="66" rx="8" fill="#fffbea" stroke="#ecc94b" stroke-width="1.5"/>
+  <text x="80" y="356" font-size="12" font-weight="bold" fill="#975a16">排查总原则：先电源、后信号；先外围、后本体；先硬件、后软件。</text>
+  <text x="80" y="378" font-size="11" fill="#744210">借助 PLC 的输入/输出状态指示与在线监控，可快速把故障范围缩小到"外围电路"或"程序逻辑"。</text>
+
+  <!-- 占比示意 -->
+  <text x="70" y="440" font-size="12" font-weight="bold" fill="#1a365d">现场故障大致分布</text>
+  <rect x="70" y="455" width="800" height="26" rx="4" fill="#e2e8f0"/>
+  <rect x="70" y="455" width="400" height="26" rx="4" fill="#dd6b20"/>
+  <rect x="470" y="455" width="240" height="26" fill="#3182ce"/>
+  <rect x="710" y="455" width="100" height="26" fill="#2f855a"/>
+  <rect x="810" y="455" width="60" height="26" rx="4" fill="#805ad5"/>
+  <text x="270" y="473" text-anchor="middle" font-size="11" fill="#fff">外围电路 ≈ 50%</text>
+  <text x="590" y="473" text-anchor="middle" font-size="11" fill="#fff">PLC 本体 ≈ 30%</text>
+  <text x="760" y="473" text-anchor="middle" font-size="10.5" fill="#fff">程序 12%</text>
+  <text x="840" y="473" text-anchor="middle" font-size="10" fill="#fff">通信</text>
+</svg>

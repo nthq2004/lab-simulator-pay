@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="560" viewBox="0 0 940 560" font-family="Microsoft YaHei, PingFang SC, sans-serif">
+  <rect width="940" height="560" fill="#f7fafc"/>
+  <text x="470" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#1a365d">模拟量（4~20mA）回路故障判断</text>
+  <text x="470" y="52" text-anchor="middle" font-size="11" fill="#718096">转速变送器 → AI04 ch0 → PLC(AIW0→AQW0) → AQ04 ch0 → 数字转速表</text>
+
+  <!-- 采集回路 -->
+  <text x="70" y="92" font-size="12" font-weight="bold" fill="#2b6cb0">① 采集回路（输入）</text>
+  <circle cx="80" cy="130" r="6" fill="#c53030"/>
+  <text x="80" y="118" text-anchor="middle" font-size="11" fill="#c53030">24V+</text>
+  <line x1="86" y1="130" x2="180" y2="130" stroke="#2d3748" stroke-width="2"/>
+  <!-- 变送器 -->
+  <rect x="180" y="100" width="170" height="60" rx="6" fill="#2b3138" stroke="#12161a" stroke-width="1.5"/>
+  <text x="265" y="126" text-anchor="middle" font-size="12" fill="#4df08a">转速变送器</text>
+  <text x="265" y="146" text-anchor="middle" font-size="9.5" fill="#a0aec0">两线制 P / N</text>
+  <line x1="350" y1="130" x2="470" y2="130" stroke="#2d3748" stroke-width="2"/>
+  <text x="410" y="122" text-anchor="middle" font-size="9.5" fill="#2d3748">4~20mA</text>
+  <!-- AI04 -->
+  <rect x="470" y="92" width="150" height="76" rx="6" fill="#2b3138" stroke="#12161a" stroke-width="1.5"/>
+  <text x="545" y="118" text-anchor="middle" font-size="12" fill="#e2e8f0">EM AI04</text>
+  <text x="545" y="136" text-anchor="middle" font-size="9.5" fill="#9fe0b8">ch0+ / ch0−</text>
+  <text x="545" y="154" text-anchor="middle" font-size="9.5" fill="#a0aec0">AIW0</text>
+  <line x1="620" y1="130" x2="720" y2="130" stroke="#2d3748" stroke-width="2"/>
+  <line x1="720" y1="130" x2="720" y2="180" stroke="#2d3748" stroke-width="2"/>
+  <text x="760" y="126" font-size="10" fill="#2d3748">0V（回路返回）</text>
+
+  <!-- 万用表串入 -->
+  <circle cx="410" cy="165" r="14" fill="#fff" stroke="#c53030" stroke-width="2"/>
+  <text x="410" y="163" text-anchor="middle" font-size="10" fill="#c53030">mA</text>
+  <text x="410" y="176" text-anchor="middle" font-size="8" fill="#c53030">表</text>
+  <text x="352" y="185" font-size="9.5" fill="#c53030">串入测电流</text>
+
+  <!-- PLC -->
+  <rect x="330" y="230" width="280" height="90" rx="10" fill="#2b3138" stroke="#12161a" stroke-width="2"/>
+  <text x="470" y="258" text-anchor="middle" font-size="13" font-weight="bold" fill="#e2e8f0">CPU ST20</text>
+  <text x="470" y="282" text-anchor="middle" font-size="11" fill="#9fe0b8">程序：MOV_W  AIW0 , AQW0</text>
+  <text x="470" y="304" text-anchor="middle" font-size="9.5" fill="#a0aec0">模拟量直通（读取值 → 输出值）</text>
+  <line x1="545" y1="168" x2="545" y2="230" stroke="#4a5568" stroke-width="2" stroke-dasharray="4 3"/>
+  <text x="600" y="205" font-size="9.5" fill="#4a5568">AIW0（采集）</text>
+
+  <!-- 输出回路 -->
+  <text x="70" y="356" font-size="12" font-weight="bold" fill="#2f855a">② 输出回路（输出）</text>
+  <line x1="470" y1="320" x2="470" y2="380" stroke="#4a5568" stroke-width="2" stroke-dasharray="4 3"/>
+  <text x="500" y="345" font-size="9.5" fill="#4a5568">AQW0（输出）</text>
+  <!-- AQ04 -->
+  <rect x="330" y="380" width="150" height="76" rx="6" fill="#2b3138" stroke="#12161a" stroke-width="1.5"/>
+  <text x="405" y="406" text-anchor="middle" font-size="12" fill="#e2e8f0">EM AQ04</text>
+  <text x="405" y="424" text-anchor="middle" font-size="9.5" fill="#9fe0b8">ch0V / ch0M</text>
+  <text x="405" y="442" text-anchor="middle" font-size="9.5" fill="#a0aec0">AQW0</text>
+  <line x1="480" y1="418" x2="600" y2="418" stroke="#2d3748" stroke-width="2"/>
+  <text x="540" y="410" text-anchor="middle" font-size="9.5" fill="#2d3748">4~20mA</text>
+  <!-- 数字转速表 -->
+  <rect x="600" y="380" width="180" height="76" rx="6" fill="#2b3138" stroke="#12161a" stroke-width="1.5"/>
+  <text x="690" y="406" text-anchor="middle" font-size="12" fill="#cfd6dd">数字转速表</text>
+  <text x="690" y="426" text-anchor="middle" font-size="15" font-weight="bold" fill="#4df08a">1498 r/min</text>
+  <text x="690" y="444" text-anchor="middle" font-size="9.5" fill="#9fe0b8">sig / com</text>
+
+  <!-- 判断表 -->
+  <rect x="70" y="482" width="800" height="64" rx="8" fill="#f0fff4" stroke="#68d391" stroke-width="1.5"/>
+  <text x="88" y="504" font-size="12" font-weight="bold" fill="#22543d">判断要点</text>
+  <text x="88" y="523" font-size="11" fill="#276749">· 串万用表测回路电流：正常 4~20mA；&lt;3.6mA（断线/变送器失电）→ 表显 LLLL；&gt;21mA（超量程/短路）→ 表显 HHHH。</text>
+  <text x="88" y="540" font-size="11" fill="#276749">· 变送器为两线制：P 端必须接 24V，N 端接 AI 的 +，AI 的 − 回 0V；任一处断路都会使电流为 0。</text>
+</svg>

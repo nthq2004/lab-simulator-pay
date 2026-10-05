@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="560" viewBox="0 0 940 560" font-family="Microsoft YaHei, PingFang SC, sans-serif">
+  <rect width="940" height="560" fill="#f7fafc"/>
+  <text x="470" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#1a365d">数字量输入回路故障判断（源型接法）</text>
+  <text x="470" y="52" text-anchor="middle" font-size="11" fill="#718096">+24V → 触点/按钮 → DI 端子，公共端 1M 接 0V；DI 为高电平（≈24V）时输入为 1</text>
+
+  <!-- +24V 母线 -->
+  <circle cx="90" cy="110" r="6" fill="#c53030"/>
+  <text x="90" y="98" text-anchor="middle" font-size="12" font-weight="bold" fill="#c53030">+24V</text>
+  <line x1="90" y1="116" x2="90" y2="400" stroke="#c53030" stroke-width="2.5"/>
+  <text x="92" y="418" font-size="10" fill="#c53030">电位端子/24V 电源正极</text>
+
+  <!-- 0V 母线 -->
+  <line x1="150" y1="430" x2="880" y2="430" stroke="#2d3748" stroke-width="2.5"/>
+  <text x="150" y="450" font-size="10" fill="#2d3748">0V（电源负极 / PLC 0V 端子）</text>
+
+  <!-- 支路1：FR 常闭 -->
+  <line x1="90" y1="150" x2="200" y2="150" stroke="#2d3748" stroke-width="2"/>
+  <rect x="200" y="128" width="150" height="44" rx="6" fill="#fff5f5" stroke="#c53030" stroke-width="1.8"/>
+  <text x="275" y="150" text-anchor="middle" font-size="12" fill="#9b2c2c">FR 常闭 (95-96)</text>
+  <text x="275" y="166" text-anchor="middle" font-size="9.5" fill="#a0aec0">过载时断开</text>
+  <line x1="350" y1="150" x2="560" y2="150" stroke="#2d3748" stroke-width="2"/>
+  <text x="430" y="143" text-anchor="middle" font-size="10" fill="#2d3748">I0.2</text>
+
+  <!-- 支路2：SB1 停止常闭 -->
+  <line x1="90" y1="250" x2="200" y2="250" stroke="#2d3748" stroke-width="2"/>
+  <rect x="200" y="228" width="150" height="44" rx="6" fill="#fff5f5" stroke="#c53030" stroke-width="1.8"/>
+  <text x="275" y="250" text-anchor="middle" font-size="12" fill="#9b2c2c">SB1 停止（常闭）</text>
+  <text x="275" y="266" text-anchor="middle" font-size="9.5" fill="#a0aec0">按下断开</text>
+  <line x1="350" y1="250" x2="560" y2="250" stroke="#2d3748" stroke-width="2"/>
+  <text x="430" y="243" text-anchor="middle" font-size="10" fill="#2d3748">I0.1</text>
+
+  <!-- 支路3：SB2 起动常开 -->
+  <line x1="90" y1="350" x2="200" y2="350" stroke="#2d3748" stroke-width="2"/>
+  <rect x="200" y="328" width="150" height="44" rx="6" fill="#f0fff4" stroke="#2f855a" stroke-width="1.8"/>
+  <text x="275" y="350" text-anchor="middle" font-size="12" fill="#22543d">SB2 起动（常开）</text>
+  <text x="275" y="366" text-anchor="middle" font-size="9.5" fill="#a0aec0">按下闭合</text>
+  <line x1="350" y1="350" x2="560" y2="350" stroke="#2d3748" stroke-width="2"/>
+  <text x="430" y="343" text-anchor="middle" font-size="10" fill="#2d3748">I0.0</text>
+
+  <!-- PLC 本体 -->
+  <rect x="560" y="90" width="300" height="310" rx="10" fill="#2b3138" stroke="#12161a" stroke-width="2"/>
+  <text x="710" y="118" text-anchor="middle" font-size="14" font-weight="bold" fill="#e2e8f0">S7-200 SMART CPU ST20</text>
+  <text x="710" y="138" text-anchor="middle" font-size="10" fill="#a0aec0">数字量输入 DI（公共端 1M）</text>
+  <g font-size="10.5" fill="#e2e8f0">
+    <text x="600" y="176">I0.0</text><text x="600" y="226">I0.1</text><text x="600" y="276">I0.2</text>
+  </g>
+  <circle cx="640" cy="172" r="5" fill="#4df08a"/>
+  <circle cx="640" cy="222" r="5" fill="#4df08a"/>
+  <circle cx="640" cy="272" r="5" fill="#ff5a5a"/>
+  <text x="656" y="176" font-size="9.5" fill="#9fe0b8">=1 接通</text>
+  <text x="656" y="226" font-size="9.5" fill="#9fe0b8">=1 接通</text>
+  <text x="656" y="276" font-size="9.5" fill="#ffb0b0">=0 断开</text>
+  <line x1="600" y1="310" x2="860" y2="310" stroke="#4a5568" stroke-width="1"/>
+  <text x="600" y="332" font-size="10.5" fill="#e2e8f0">1M（输入公共端）</text>
+  <line x1="710" y1="340" x2="710" y2="430" stroke="#2d3748" stroke-width="2"/>
+  <text x="722" y="368" font-size="9.5" fill="#a0aec0">1M → 0V</text>
+
+  <!-- 测量示意 -->
+  <rect x="60" y="470" width="820" height="76" rx="8" fill="#ebf8ff" stroke="#63b3ed" stroke-width="1.5"/>
+  <text x="78" y="494" font-size="12" font-weight="bold" fill="#2b6cb0">判断方法（万用表直流电压档）</text>
+  <text x="78" y="506" font-size="11" fill="#2c5282">① 先测 +24V 与 0V 之间：应为 ≈24V，否则电源/公共端故障。</text>
+  <text x="78" y="524" font-size="11" fill="#2c5282">② 测 PLC 输入端子对 0V 电压：常闭回路应为 ≈24V；按下 SB2 时 I0.0 应变为 ≈24V，否则查触点/接线。</text>
+  <text x="78" y="542" font-size="11" fill="#c53030">③ 也可观察 PLC 输入状态指示灯：灯与程序读到的 I 状态应一致；灯亮而程序读 0，需在线监控排查。</text>
+</svg>
