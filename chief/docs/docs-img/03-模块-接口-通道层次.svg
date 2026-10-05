@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="470" viewBox="0 0 920 470" font-family="Microsoft YaHei, PingFang SC, sans-serif">
+  <rect width="920" height="470" fill="#f7fafc"/>
+  <text x="460" y="26" text-anchor="middle" font-size="17" font-weight="bold" fill="#1a365d">模块 / 接口 / 通道 —— 三个层次的概念划分</text>
+  <text x="460" y="46" text-anchor="middle" font-size="11" fill="#718096">以 AI 输入模块（节点地址 1）为例</text>
+
+  <!-- 第一层：模块 -->
+  <rect x="40" y="66" width="840" height="96" rx="8" fill="#ebf8ff" stroke="#2b6cb0" stroke-width="2.5"/>
+  <text x="66" y="90" font-size="15" font-weight="bold" fill="#2b6cb0">① 模块（Module）—— 一个独立的 CAN 从站设备</text>
+  <text x="66" y="114" font-size="12" fill="#2c5282">AI 输入模块　nodeAddress = 1　具备自己的地址、状态机、指示灯与故障标志</text>
+  <text x="66" y="136" font-size="12" fill="#2c5282">在总线网络中 = 一个节点：可被「网络诊断」页单独列出、单独复位、单独判定在线/离线</text>
+  <text x="716" y="90" font-size="11" fill="#2b6cb0" font-weight="bold">故障粒度：节点级</text>
+  <text x="700" y="114" font-size="11" fill="#2b6cb0">如「DPU 通信线路故障」</text>
+
+  <!-- 箭头 -->
+  <line x1="460" y1="162" x2="460" y2="186" stroke="#4a5568" stroke-width="2.5" marker-end="url(#a1)"/>
+  <defs><marker id="a1" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 z" fill="#4a5568"/></marker></defs>
+
+  <!-- 第二层：接口 -->
+  <rect x="40" y="190" width="840" height="96" rx="8" fill="#f0fff4" stroke="#2f855a" stroke-width="2.5"/>
+  <text x="66" y="214" font-size="15" font-weight="bold" fill="#22543d">② 接口（Interface）—— 模块对外的物理连接面，按功能分组</text>
+  <g font-size="12" fill="#276749">
+    <rect x="66" y="228" width="176" height="42" rx="5" fill="#fff" stroke="#2f855a"/>
+    <text x="154" y="246" text-anchor="middle" font-weight="bold">电源接口</text>
+    <text x="154" y="263" text-anchor="middle" font-size="11">VCC / GND（24V）</text>
+
+    <rect x="254" y="228" width="200" height="42" rx="5" fill="#fff" stroke="#2f855a"/>
+    <text x="354" y="246" text-anchor="middle" font-weight="bold">通信接口</text>
+    <text x="354" y="263" text-anchor="middle" font-size="11">CAN1（CANH/CANL）· CAN2 冗余</text>
+
+    <rect x="466" y="228" width="176" height="42" rx="5" fill="#fff" stroke="#2f855a"/>
+    <text x="554" y="246" text-anchor="middle" font-weight="bold">信号接口</text>
+    <text x="554" y="263" text-anchor="middle" font-size="11">CH1+ / CH1− …</text>
+
+    <rect x="654" y="228" width="202" height="42" rx="5" fill="#fff" stroke="#2f855a"/>
+    <text x="755" y="246" text-anchor="middle" font-weight="bold">配置接口</text>
+    <text x="755" y="263" text-anchor="middle" font-size="11">地址拨码 SW1~SW4 · 终端电阻 120Ω</text>
+  </g>
+
+  <!-- 箭头 -->
+  <line x1="460" y1="286" x2="460" y2="310" stroke="#4a5568" stroke-width="2.5" marker-end="url(#a1)"/>
+  <text x="474" y="302" font-size="11" fill="#718096">信号接口细分为</text>
+
+  <!-- 第三层：通道 -->
+  <rect x="40" y="314" width="840" height="96" rx="8" fill="#fffaf0" stroke="#c05621" stroke-width="2.5"/>
+  <text x="66" y="338" font-size="15" font-weight="bold" fill="#7b341e">③ 通道（Channel）—— 模块内的一个独立采集/输出回路</text>
+  <g font-size="11.5" fill="#7b341e">
+    <rect x="66" y="350" width="190" height="46" rx="5" fill="#fff" stroke="#c05621"/>
+    <text x="161" y="368" text-anchor="middle" font-weight="bold">CH1　4-20mA</text>
+    <text x="161" y="386" text-anchor="middle" font-size="10.5">量程 0~10 bar　模式 normal</text>
+
+    <rect x="266" y="350" width="190" height="46" rx="5" fill="#fff" stroke="#c05621"/>
+    <text x="361" y="368" text-anchor="middle" font-weight="bold">CH2　4-20mA（备用）</text>
+    <text x="361" y="386" text-anchor="middle" font-size="10.5">量程 0~1.0 MPa　模式 disable</text>
+
+    <rect x="466" y="350" width="190" height="46" rx="5" fill="#fff" stroke="#c05621"/>
+    <text x="561" y="368" text-anchor="middle" font-weight="bold">CH3　RTD（PT100）</text>
+    <text x="561" y="386" text-anchor="middle" font-size="10.5">温度测量　模式 normal</text>
+
+    <rect x="666" y="350" width="190" height="46" rx="5" fill="#fff" stroke="#c05621"/>
+    <text x="761" y="368" text-anchor="middle" font-weight="bold">CH4　TC（K 型热电偶）</text>
+    <text x="761" y="386" text-anchor="middle" font-size="10.5">温度测量　模式 disable</text>
+  </g>
+
+  <!-- 底部要点 -->
+  <rect x="40" y="422" width="840" height="36" rx="5" fill="#fff3cd" stroke="#d69e2e"/>
+  <text x="460" y="445" text-anchor="middle" font-size="12" fill="#975a16">通道粒度：单个通道故障（如 CH1 输入开路）不必然导致整个模块离线 —— 可「禁用故障通道 + 启用备用通道」在线处理</text>
+</svg>

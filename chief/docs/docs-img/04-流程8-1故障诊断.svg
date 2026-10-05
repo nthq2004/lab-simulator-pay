@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="660" viewBox="0 0 920 660" font-family="Microsoft YaHei, PingFang SC, sans-serif">
+  <defs>
+    <marker id="m4" markerWidth="10" markerHeight="10" refX="7.5" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#4a5568"/></marker>
+  </defs>
+  <rect width="920" height="660" fill="#f7fafc"/>
+  <text x="460" y="28" text-anchor="middle" font-size="17" font-weight="bold" fill="#1a365d">流程 8.1　监测系统通信总线状态检测和故障判定</text>
+  <text x="460" y="48" text-anchor="middle" font-size="11" fill="#718096">教学目标：定位"节点离线"类故障 —— 从总线层判断，落实到具体模块</text>
+
+  <!-- 1 -->
+  <rect x="60" y="66" width="380" height="64" rx="7" fill="#ebf8ff" stroke="#2b6cb0" stroke-width="2"/>
+  <text x="76" y="88" font-size="12.5" font-weight="bold" fill="#2b6cb0">第 1 步　识别部件</text>
+  <text x="76" y="110" font-size="11" fill="#2c5282">CAN 总线 · AI 模块 · 中央监控计算机</text>
+
+  <rect x="480" y="66" width="380" height="64" rx="7" fill="#f0fff4" stroke="#2f855a" stroke-width="2"/>
+  <text x="496" y="88" font-size="12.5" font-weight="bold" fill="#22543d">第 2 步　一键起动系统</text>
+  <text x="496" y="110" font-size="11" fill="#276749">自动接线 → 上电 → 泵/阀遥控 → 控制器自动</text>
+  <text x="496" y="126" font-size="11" fill="#276749">目标：CAN BUS ONLINE、无报警</text>
+
+  <line x1="440" y1="95" x2="480" y2="95" stroke="#4a5568" stroke-width="2" marker-end="url(#m4)"/>
+
+  <!-- 3 -->
+  <rect x="60" y="150" width="800" height="60" rx="7" fill="#fff5f5" stroke="#c53030" stroke-width="2"/>
+  <text x="76" y="172" font-size="12.5" font-weight="bold" fill="#c53030">第 3 步　注入故障：打开「故障设置」界面 → 勾选「DPU 通信线路故障」→ 点击「应用设置」</text>
+  <text x="76" y="194" font-size="11" fill="#742a2a">故障本质：AI 模块与总线之间的通信链路被切断，模块仍上电但无法收发</text>
+  <line x1="440" y1="130" x2="440" y2="150" stroke="#4a5568" stroke-width="2" marker-end="url(#m4)"/>
+
+  <!-- 4 -->
+  <rect x="60" y="236" width="800" height="58" rx="7" fill="#fffaf0" stroke="#c05621" stroke-width="2"/>
+  <text x="76" y="258" font-size="12.5" font-weight="bold" fill="#7b341e">第 4 步　查看报警并消音、确认</text>
+  <text x="76" y="280" font-size="11" fill="#975a16">监控主机「监测报警」页出现报警记录 → 点击「消音」→ 点击「确认」</text>
+  <line x1="440" y1="210" x2="440" y2="236" stroke="#4a5568" stroke-width="2" marker-end="url(#m4)"/>
+
+  <!-- 5 核心 -->
+  <rect x="60" y="310" width="800" height="132" rx="8" fill="#e9d8fd" stroke="#805ad5" stroke-width="2.5"/>
+  <text x="76" y="334" font-size="13" font-weight="bold" fill="#553c9a">第 5 步（核心）　定位通信故障模块</text>
+  <text x="76" y="358" font-size="11.5" fill="#44337a">① 观察 AI 模块面板指示灯：</text>
+  <text x="96" y="378" font-size="11.5" fill="#2d3748">PWR 电源常亮　·　RUN 运行熄灭　·　FLT 故障点亮　·　COM 通信熄灭</text>
+  <text x="76" y="400" font-size="11.5" fill="#44337a">② 打开监控主机「网络诊断」页：AI 节点显示<b>离线</b>、通信超时，TX/RX 计数停止增长</text>
+  <text x="76" y="422" font-size="11.5" fill="#44337a">③ 比对其余三个模块：AI/AO/DI/DO 中<b>只有 AI 掉线</b> → 故障点锁定在 AI 模块侧</text>
+  <text x="76" y="438" font-size="11" fill="#553c9a">判据：电源在、运行停、故障亮、通信灭 + 节点离线 = 模块自身供电正常、通信链路断</text>
+  <line x1="440" y1="294" x2="440" y2="310" stroke="#805ad5" stroke-width="2.5" marker-end="url(#m4)"/>
+
+  <!-- 6 -->
+  <rect x="60" y="468" width="800" height="60" rx="7" fill="#f0fff4" stroke="#2f855a" stroke-width="2"/>
+  <text x="76" y="490" font-size="12.5" font-weight="bold" fill="#22543d">第 6 步　修复故障并验证恢复</text>
+  <text x="76" y="512" font-size="11" fill="#276749">「故障设置」界面取消勾选 → 应用设置 → 清除报警 → 确认 CAN BUS ONLINE、节点重新上线</text>
+  <line x1="440" y1="442" x2="440" y2="468" stroke="#4a5568" stroke-width="2" marker-end="url(#m4)"/>
+
+  <!-- 7 -->
+  <rect x="60" y="554" width="800" height="56" rx="7" fill="#e6fffa" stroke="#319795" stroke-width="2"/>
+  <text x="76" y="576" font-size="12.5" font-weight="bold" fill="#234e52">第 7 步　知识测验</text>
+  <text x="76" y="598" font-size="11" fill="#285e61">节点显示通信超时、电源灯不亮，应优先检查什么？</text>
+  <line x1="440" y1="528" x2="440" y2="554" stroke="#4a5568" stroke-width="2" marker-end="url(#m4)"/>
+
+  <!-- 底部：诊断要诀 -->
+  <rect x="60" y="620" width="800" height="30" rx="5" fill="#fff3cd" stroke="#d69e2e"/>
+  <text x="460" y="640" text-anchor="middle" font-size="11.5" fill="#975a16" font-weight="bold">诊断要诀：先看总线（在线/离线）→ 再看指示灯（电源/运行/故障/通信）→ 最后定位到具体节点</text>
+</svg>

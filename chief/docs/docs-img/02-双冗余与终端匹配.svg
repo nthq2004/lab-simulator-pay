@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="430" viewBox="0 0 920 430" font-family="Microsoft YaHei, PingFang SC, sans-serif">
+  <rect width="920" height="430" fill="#f7fafc"/>
+  <text x="460" y="26" text-anchor="middle" font-size="17" font-weight="bold" fill="#1a365d">双冗余 CAN 总线特征与终端阻抗匹配</text>
+  <text x="460" y="46" text-anchor="middle" font-size="11" fill="#718096">每个模块提供 CAN1、CAN2 两路独立接口；总线两端各 120Ω，等效 60Ω</text>
+
+  <!-- 双路总线 -->
+  <line x1="80" y1="112" x2="840" y2="112" stroke="#2b6cb0" stroke-width="6"/>
+  <text x="96" y="104" font-size="12" font-weight="bold" fill="#2b6cb0">CAN1 通道（A 路）—— CANH₁ / CANL₁</text>
+
+  <line x1="80" y1="168" x2="840" y2="168" stroke="#805ad5" stroke-width="6"/>
+  <text x="96" y="160" font-size="12" font-weight="bold" fill="#805ad5">CAN2 通道（B 路）—— CANH₂ / CANL₂</text>
+
+  <!-- 节点挂接 -->
+  <g font-size="11">
+    <rect x="150" y="76" width="96" height="34" rx="5" fill="#fff" stroke="#2b6cb0" stroke-width="2"/>
+    <text x="198" y="97" text-anchor="middle" fill="#2b6cb0">CC 主站</text>
+    <line x1="198" y1="110" x2="198" y2="168" stroke="#805ad5" stroke-width="3" stroke-dasharray="6,4"/>
+    <text x="206" y="146" font-size="10" fill="#805ad5">冗余挂接</text>
+
+    <rect x="360" y="76" width="96" height="34" rx="5" fill="#fff" stroke="#2b6cb0" stroke-width="2"/>
+    <text x="408" y="97" text-anchor="middle" fill="#2b6cb0">AI（地址1）</text>
+    <line x1="408" y1="110" x2="408" y2="168" stroke="#805ad5" stroke-width="3" stroke-dasharray="6,4"/>
+
+    <rect x="540" y="76" width="96" height="34" rx="5" fill="#fff" stroke="#2b6cb0" stroke-width="2"/>
+    <text x="588" y="97" text-anchor="middle" fill="#2b6cb0">DI（地址3）</text>
+    <line x1="588" y1="110" x2="588" y2="168" stroke="#805ad5" stroke-width="3" stroke-dasharray="6,4"/>
+
+    <rect x="720" y="76" width="96" height="34" rx="5" fill="#fff" stroke="#2b6cb0" stroke-width="2"/>
+    <text x="768" y="97" text-anchor="middle" fill="#2b6cb0">AO/DO</text>
+    <line x1="768" y1="110" x2="768" y2="168" stroke="#805ad5" stroke-width="3" stroke-dasharray="6,4"/>
+  </g>
+
+  <!-- 终端电阻 -->
+  <rect x="70" y="94" width="40" height="36" rx="4" fill="#fff" stroke="#c05621" stroke-width="2"/>
+  <text x="90" y="110" text-anchor="middle" font-size="10" fill="#c05621">120Ω</text>
+  <text x="90" y="123" text-anchor="middle" font-size="9" fill="#c05621">左端</text>
+  <rect x="812" y="150" width="40" height="36" rx="4" fill="#fff" stroke="#c05621" stroke-width="2"/>
+  <text x="832" y="166" text-anchor="middle" font-size="10" fill="#c05621">120Ω</text>
+  <text x="832" y="179" text-anchor="middle" font-size="9" fill="#c05621">右端</text>
+  <line x1="80" y1="112" x2="70" y2="112" stroke="#c05621" stroke-width="2"/>
+
+  <!-- 双冗余特征卡片 -->
+  <text x="460" y="214" text-anchor="middle" font-size="14" font-weight="bold" fill="#1a365d">双冗余系统的特征</text>
+  <g font-size="11.5">
+    <rect x="40" y="228" width="270" height="92" rx="6" fill="#ebf8ff" stroke="#2b6cb0"/>
+    <text x="175" y="250" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#2b6cb0">① 物理双路</text>
+    <text x="175" y="272" text-anchor="middle" fill="#2c5282">每个模块同时引出 CAN1、CAN2 两组端子</text>
+    <text x="175" y="292" text-anchor="middle" fill="#2c5282">（can1p/can1n、can2p/can2n）</text>
+    <text x="175" y="312" text-anchor="middle" fill="#2c5282">两路布线彼此独立、可分别敷设</text>
+
+    <rect x="325" y="228" width="270" height="92" rx="6" fill="#f0fff4" stroke="#2f855a"/>
+    <text x="460" y="250" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#22543d">② 故障隔离</text>
+    <text x="460" y="272" text-anchor="middle" fill="#276749">单路断线/短路不影响另一路通信</text>
+    <text x="460" y="292" text-anchor="middle" fill="#276749">从站可无扰切换到存活链路</text>
+    <text x="460" y="312" text-anchor="middle" fill="#276749">主站持续监测两路状态并报警</text>
+
+    <rect x="610" y="228" width="270" height="92" rx="6" fill="#fffaf0" stroke="#c05621"/>
+    <text x="745" y="250" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#7b341e">③ 阻抗匹配</text>
+    <text x="745" y="272" text-anchor="middle" fill="#975a16">每路两端各接 120Ω 终端电阻</text>
+    <text x="745" y="292" text-anchor="middle" fill="#975a16">两电阻并联 → R = 120//120 = 60Ω</text>
+    <text x="745" y="312" text-anchor="middle" fill="#975a16">消除反射、抑制误码</text>
+  </g>
+
+  <!-- 故障判据 -->
+  <rect x="40" y="334" width="840" height="80" rx="6" fill="#fff" stroke="#c53030" stroke-width="1.5"/>
+  <text x="56" y="356" font-size="12.5" font-weight="bold" fill="#c53030">终端电阻故障判据（本仿真）</text>
+  <text x="56" y="378" font-size="11.5" fill="#2d3748">断开任一终端 → 等效电阻变为 120Ω（失配）→ 错误计数累积，约 30 s 后：AI/AO/DI/DO 进入通信错误状态并停止发送（锁存，需复位）；CC 进入 CAN BUS OFF。</text>
+  <text x="56" y="400" font-size="11.5" fill="#2d3748">电阻恢复 → CC 自动回到 CAN BUS ONLINE；四个从站模块不自动恢复，须由主站下发 NMT RESET→START 复位后才重新入网。</text>
+</svg>

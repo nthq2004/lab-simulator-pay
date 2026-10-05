@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="540" viewBox="0 0 920 540" font-family="Microsoft YaHei, PingFang SC, sans-serif">
+  <rect width="920" height="540" fill="#f7fafc"/>
+  <text x="460" y="26" text-anchor="middle" font-size="17" font-weight="bold" fill="#1a365d">CAN 总线监测报警系统组成与总线拓扑</text>
+  <text x="460" y="46" text-anchor="middle" font-size="11" fill="#718096">中央监控计算机（主站） + AI/AO/DI/DO 四个现场模块（从站）+ 终端匹配电阻</text>
+
+  <!-- 中央监控计算机 -->
+  <rect x="330" y="62" width="260" height="74" rx="6" fill="#2b6cb0" stroke="#1a4971" stroke-width="2"/>
+  <text x="460" y="86" text-anchor="middle" font-size="14" font-weight="bold" fill="#fff">中央监控计算机 CC</text>
+  <text x="460" y="106" text-anchor="middle" font-size="11" fill="#bee3f8">CAN 主站 · 报警/参数/网络诊断</text>
+  <text x="460" y="126" text-anchor="middle" font-size="11" fill="#bee3f8">监测报警 | 网络诊断 | AI/AO 设置 | 液位控制</text>
+
+  <!-- CC 下行到总线 -->
+  <line x1="460" y1="136" x2="460" y2="176" stroke="#2b6cb0" stroke-width="3"/>
+  <text x="470" y="160" font-size="10" fill="#2b6cb0">CANH / CANL</text>
+
+  <!-- CC 侧终端电阻 -->
+  <rect x="300" y="164" width="44" height="34" rx="4" fill="#fff" stroke="#c05621" stroke-width="2"/>
+  <text x="322" y="178" text-anchor="middle" font-size="10" fill="#c05621">120Ω</text>
+  <text x="322" y="192" text-anchor="middle" font-size="9" fill="#c05621">CC 侧</text>
+  <line x1="344" y1="181" x2="430" y2="181" stroke="#c05621" stroke-width="2"/>
+
+  <!-- 主干总线 -->
+  <line x1="70" y1="181" x2="850" y2="181" stroke="#2d3748" stroke-width="5"/>
+  <line x1="70" y1="193" x2="850" y2="193" stroke="#4a5568" stroke-width="5"/>
+  <text x="460" y="176" text-anchor="middle" font-size="11" fill="#2d3748" font-weight="bold">CANH（上）　CANL（下）　250 kbps</text>
+
+  <!-- DI 侧终端电阻 -->
+  <rect x="792" y="200" width="46" height="34" rx="4" fill="#fff" stroke="#c05621" stroke-width="2"/>
+  <text x="815" y="214" text-anchor="middle" font-size="10" fill="#c05621">120Ω</text>
+  <text x="815" y="228" text-anchor="middle" font-size="9" fill="#c05621">DI 侧</text>
+  <line x1="815" y1="200" x2="815" y2="193" stroke="#c05621" stroke-width="2"/>
+
+  <!-- 等效电阻标注 -->
+  <rect x="380" y="240" width="160" height="40" rx="5" fill="#fff3cd" stroke="#d69e2e" stroke-width="1.5"/>
+  <text x="460" y="257" text-anchor="middle" font-size="12" font-weight="bold" fill="#975a16">两端 120Ω 并联</text>
+  <text x="460" y="273" text-anchor="middle" font-size="12" font-weight="bold" fill="#975a16">等效电阻 R = 60Ω</text>
+
+  <!-- 总线连接器 -->
+  <g>
+    <rect x="96" y="196" width="44" height="30" rx="3" fill="#2f855a"/>
+    <text x="118" y="215" text-anchor="middle" font-size="9" fill="#fff">连接器</text>
+    <rect x="274" y="196" width="44" height="30" rx="3" fill="#2f855a"/>
+    <text x="296" y="215" text-anchor="middle" font-size="9" fill="#fff">连接器</text>
+    <rect x="476" y="196" width="44" height="30" rx="3" fill="#2f855a"/>
+    <text x="498" y="215" text-anchor="middle" font-size="9" fill="#fff">连接器</text>
+    <rect x="664" y="196" width="44" height="30" rx="3" fill="#2f855a"/>
+    <text x="686" y="215" text-anchor="middle" font-size="9" fill="#fff">连接器</text>
+  </g>
+  <line x1="118" y1="193" x2="118" y2="196" stroke="#2d3748" stroke-width="3"/>
+  <line x1="296" y1="193" x2="296" y2="196" stroke="#2d3748" stroke-width="3"/>
+  <line x1="498" y1="193" x2="498" y2="196" stroke="#2d3748" stroke-width="3"/>
+  <line x1="686" y1="193" x2="686" y2="196" stroke="#2d3748" stroke-width="3"/>
+
+  <!-- 四个模块 -->
+  <g font-size="11">
+    <!-- AI -->
+    <line x1="118" y1="226" x2="118" y2="266" stroke="#3182ce" stroke-width="3"/>
+    <rect x="48" y="266" width="140" height="112" rx="6" fill="#ebf8ff" stroke="#3182ce" stroke-width="2"/>
+    <text x="118" y="288" text-anchor="middle" font-size="13" font-weight="bold" fill="#2b6cb0">AI 输入模块</text>
+    <text x="118" y="306" text-anchor="middle" font-size="10" fill="#2c5282">节点地址 1 · NODE:01</text>
+    <text x="58" y="324" font-size="10" fill="#2d3748">CH1 4-20mA（压力）</text>
+    <text x="58" y="340" font-size="10" fill="#2d3748">CH2 4-20mA（备用）</text>
+    <text x="58" y="356" font-size="10" fill="#2d3748">CH3 RTD　PT100</text>
+    <text x="58" y="372" font-size="10" fill="#2d3748">CH4 TC　K型热电偶</text>
+
+    <!-- AO -->
+    <line x1="296" y1="226" x2="296" y2="266" stroke="#3182ce" stroke-width="3"/>
+    <rect x="226" y="266" width="140" height="112" rx="6" fill="#faf5ff" stroke="#805ad5" stroke-width="2"/>
+    <text x="296" y="288" text-anchor="middle" font-size="13" font-weight="bold" fill="#553c9a">AO 输出模块</text>
+    <text x="296" y="306" text-anchor="middle" font-size="10" fill="#553c9a">节点地址 2 · NODE:02</text>
+    <text x="236" y="324" font-size="10" fill="#2d3748">CH1 4-20mA（阀门）</text>
+    <text x="236" y="340" font-size="10" fill="#2d3748">CH2 4-20mA</text>
+    <text x="236" y="356" font-size="10" fill="#2d3748">CH3 PWM</text>
+    <text x="236" y="372" font-size="10" fill="#2d3748">CH4 PWM</text>
+
+    <!-- DO -->
+    <line x1="498" y1="226" x2="498" y2="266" stroke="#3182ce" stroke-width="3"/>
+    <rect x="428" y="266" width="140" height="112" rx="6" fill="#f0fff4" stroke="#2f855a" stroke-width="2"/>
+    <text x="498" y="288" text-anchor="middle" font-size="13" font-weight="bold" fill="#22543d">DO 输出模块</text>
+    <text x="498" y="306" text-anchor="middle" font-size="10" fill="#276749">节点地址 4 · NODE:04</text>
+    <text x="438" y="324" font-size="10" fill="#2d3748">CH1 RELAY 继电器 NO</text>
+    <text x="438" y="340" font-size="10" fill="#2d3748">CH2 RELAY 继电器 NO</text>
+    <text x="438" y="356" font-size="10" fill="#2d3748">CH3 WET24 24V PNP</text>
+    <text x="438" y="372" font-size="10" fill="#2d3748">CH4 WET24 24V PNP</text>
+
+    <!-- DI -->
+    <line x1="686" y1="226" x2="686" y2="266" stroke="#3182ce" stroke-width="3"/>
+    <rect x="616" y="266" width="140" height="112" rx="6" fill="#fffaf0" stroke="#c05621" stroke-width="2"/>
+    <text x="686" y="288" text-anchor="middle" font-size="13" font-weight="bold" fill="#7b341e">DI 输入模块</text>
+    <text x="686" y="306" text-anchor="middle" font-size="10" fill="#975a16">节点地址 3 · NODE:03</text>
+    <text x="626" y="324" font-size="10" fill="#2d3748">CH1 DRY 干接点 NC</text>
+    <text x="626" y="340" font-size="10" fill="#2d3748">CH2 DRY 干接点 NC</text>
+    <text x="626" y="356" font-size="10" fill="#2d3748">CH3 WET 湿接点 24V</text>
+    <text x="626" y="372" font-size="10" fill="#2d3748">CH4 WET 湿接点 24V</text>
+  </g>
+
+  <!-- 现场设备 -->
+  <g font-size="10">
+    <rect x="48" y="404" width="140" height="54" rx="5" fill="#edf2f7" stroke="#a0aec0" stroke-width="1.5"/>
+    <text x="118" y="424" text-anchor="middle" font-size="11" font-weight="bold" fill="#2d3748">现场仪表</text>
+    <text x="118" y="442" text-anchor="middle" fill="#4a5568">压力/温度变送器</text>
+    <line x1="118" y1="404" x2="118" y2="378" stroke="#a0aec0" stroke-width="2" stroke-dasharray="5,3"/>
+    <text x="126" y="394" fill="#a0aec0">AI 采集</text>
+
+    <rect x="428" y="404" width="140" height="54" rx="5" fill="#edf2f7" stroke="#a0aec0" stroke-width="1.5"/>
+    <text x="498" y="424" text-anchor="middle" font-size="11" font-weight="bold" fill="#2d3748">执行机构</text>
+    <text x="498" y="442" text-anchor="middle" fill="#4a5568">调节阀 / 泵 / 报警器</text>
+    <line x1="498" y1="404" x2="498" y2="378" stroke="#a0aec0" stroke-width="2" stroke-dasharray="5,3"/>
+    <text x="506" y="394" fill="#a0aec0">DO 驱动</text>
+
+    <rect x="616" y="404" width="140" height="54" rx="5" fill="#edf2f7" stroke="#a0aec0" stroke-width="1.5"/>
+    <text x="686" y="424" text-anchor="middle" font-size="11" font-weight="bold" fill="#2d3748">开关量输入</text>
+    <text x="686" y="442" text-anchor="middle" fill="#4a5568">限位/压力继电器</text>
+    <line x1="686" y1="404" x2="686" y2="378" stroke="#a0aec0" stroke-width="2" stroke-dasharray="5,3"/>
+    <text x="694" y="394" fill="#a0aec0">DI 采集</text>
+  </g>
+
+  <!-- 数据流说明 -->
+  <rect x="70" y="474" width="780" height="52" rx="6" fill="#fff" stroke="#cbd5e0"/>
+  <text x="460" y="494" text-anchor="middle" font-size="11" fill="#2d3748" font-weight="bold">上行：模块按周期把采集值/状态打包成 PDO 帧 → 总线 → CC；下行：CC 下发控制量/配置（PDO、NMT、参数帧）</text>
+  <text x="460" y="514" text-anchor="middle" font-size="11" fill="#4a5568">现场信号 → 模块通道 → 接口 → 总线 → 主站；主站报警/控制 → 总线 → 模块通道 → 执行机构</text>
+</svg>
