@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="430" viewBox="0 0 940 430" font-family="Microsoft YaHei, PingFang SC, sans-serif">
+  <rect width="940" height="430" fill="#f7fafc"/>
+  <text x="470" y="28" text-anchor="middle" font-size="18" font-weight="bold" fill="#1a365d">采样、量化与量化误差</text>
+  <text x="470" y="50" text-anchor="middle" font-size="11" fill="#718096">ADC 把连续的时间与幅值都变成离散值：时间上“采样”，幅值上“量化”</text>
+
+  <!-- 左：采样 -->
+  <rect x="20" y="70" width="430" height="300" rx="6" fill="#fff" stroke="#cbd5e0"/>
+  <text x="235" y="94" text-anchor="middle" font-size="13" font-weight="bold" fill="#2b6cb0">① 时间离散：按采样周期 T 取值</text>
+  <line x1="50" y1="120" x2="50" y2="330" stroke="#718096" stroke-width="1.5"/>
+  <line x1="50" y1="225" x2="440" y2="225" stroke="#718096" stroke-width="1.5"/>
+  <text x="34" y="128" font-size="10" fill="#718096">幅值</text>
+  <text x="430" y="252" font-size="10" fill="#718096">时间</text>
+  <!-- 连续信号 -->
+  <polyline points="50,225.0 55,210.6 60,196.8 65,184.1 70,173.1 75,164.1 80,157.7 85,153.9 90,153.1 95,155.1 100,160.0 105,167.4 110,177.3 115,189.0 120,202.2 125,216.3 130,230.8 135,245.0 140,258.5 145,270.5 150,280.8 155,288.8 160,294.2 165,296.8 170,296.5 175,293.3 180,287.4 185,278.9 190,268.3 195,255.9 200,242.2 205,227.9 210,213.5 215,199.5 220,186.5 225,175.1 230,165.7 235,158.8 240,154.5 245,153.0 250,154.5 255,158.8 260,165.7 265,175.1 270,186.5 275,199.5 280,213.5 285,227.9 290,242.2 295,255.9 300,268.3 305,278.9 310,287.4 315,293.3 320,296.5 325,296.8 330,294.2 335,288.8 340,280.8 345,270.5 350,258.5 355,245.0 360,230.8 365,216.3 370,202.2 375,189.0 380,177.3 385,167.4 390,160.0 395,155.1 400,153.1 405,153.9 410,157.7 415,164.1 420,173.1 425,184.1 430,196.8 435,210.6 440,225.0"
+        fill="none" stroke="#3182ce" stroke-width="2.5"/>
+  <!-- 采样点 -->
+  <g fill="#e53e3e">
+    <circle cx="50" cy="225" r="4"/><circle cx="89" cy="153" r="4"/><circle cx="128" cy="225" r="4"/>
+    <circle cx="167" cy="297" r="4"/><circle cx="206" cy="225" r="4"/><circle cx="245" cy="153" r="4"/>
+    <circle cx="284" cy="225" r="4"/><circle cx="323" cy="297" r="4"/><circle cx="362" cy="225" r="4"/>
+    <circle cx="401" cy="153" r="4"/><circle cx="440" cy="225" r="4"/>
+  </g>
+  <g stroke="#e53e3e" stroke-width="1" stroke-dasharray="3,3">
+    <line x1="89" y1="153" x2="89" y2="330"/><line x1="167" y1="297" x2="167" y2="330"/>
+    <line x1="245" y1="153" x2="245" y2="330"/><line x1="323" y1="297" x2="323" y2="330"/>
+    <line x1="401" y1="153" x2="401" y2="330"/>
+  </g>
+  <text x="245" y="352" text-anchor="middle" font-size="11" fill="#4a5568">采样周期 T = 1/fs（本仿真 100ms，即 10Hz）</text>
+  <text x="245" y="368" text-anchor="middle" font-size="11" fill="#c53030">采样定理：fs ≥ 2·fmax，否则波形“混叠”失真</text>
+
+  <!-- 右：量化 -->
+  <rect x="490" y="70" width="430" height="300" rx="6" fill="#fff" stroke="#cbd5e0"/>
+  <text x="705" y="94" text-anchor="middle" font-size="13" font-weight="bold" fill="#553c9a">② 幅值离散：量化成有限个电平</text>
+  <line x1="530" y1="120" x2="530" y2="330" stroke="#718096" stroke-width="1.5"/>
+  <line x1="530" y1="330" x2="900" y2="330" stroke="#718096" stroke-width="1.5"/>
+  <text x="514" y="128" font-size="10" fill="#718096">数字码</text>
+  <text x="875" y="352" font-size="10" fill="#718096">模拟输入</text>
+  <!-- 量化阶梯 -->
+  <path d="M540,330 L600,330 L600,290 L660,290 L660,250 L720,250 L720,210 L780,210 L780,170 L840,170 L840,130 L895,130"
+        fill="none" stroke="#805ad5" stroke-width="2.5"/>
+  <!-- 理想直线 -->
+  <line x1="540" y1="330" x2="895" y2="130" stroke="#3182ce" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <text x="812" y="300" font-size="10" fill="#3182ce">理想直线</text>
+  <!-- LSB -->
+  <line x1="545" y1="290" x2="545" y2="330" stroke="#c53030" stroke-width="2"/>
+  <line x1="540" y1="290" x2="555" y2="290" stroke="#c53030" stroke-width="2"/>
+  <line x1="540" y1="330" x2="555" y2="330" stroke="#c53030" stroke-width="2"/>
+  <text x="560" y="316" font-size="11" font-weight="bold" fill="#c53030">1 LSB</text>
+  <text x="705" y="378" text-anchor="middle" font-size="11" fill="#4a5568">相邻码之间只能取一个电平，差值 1 LSB = 满量程 / 2ⁿ</text>
+  <text x="705" y="394" text-anchor="middle" font-size="11" fill="#c53030">量化误差 |误差| ≤ ½ LSB，只能减小不能消除（位数越多越小）</text>
+
+  <!-- 底部小结 -->
+  <rect x="20" y="384" width="900" height="36" rx="6" fill="#faf5ff" stroke="#d6bcfa"/>
+  <text x="470" y="407" text-anchor="middle" font-size="11" fill="#553c9a">采样周期决定“多久测一次”，量化位数决定“测得有多细”；两者共同决定数字测控系统的精度与响应速度。</text>
+</svg>

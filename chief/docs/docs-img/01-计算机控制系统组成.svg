@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="560" viewBox="0 0 940 560" font-family="Microsoft YaHei, PingFang SC, sans-serif">
+  <rect width="940" height="560" fill="#f7fafc"/>
+  <text x="470" y="28" text-anchor="middle" font-size="18" font-weight="bold" fill="#1a365d">计算机控制系统的组成与工作原理</text>
+  <text x="470" y="50" text-anchor="middle" font-size="11" fill="#718096">设定值 → 数字控制器 → 输出通道(DAC) → 执行器 → 被控对象 → 传感器/变送器 → 输入通道(ADC) → 反馈</text>
+
+  <!-- 设定值 + 比较点 -->
+  <rect x="24" y="150" width="88" height="40" rx="5" fill="#e2e8f0" stroke="#4a5568" stroke-width="1.5"/>
+  <text x="68" y="175" text-anchor="middle" font-size="12" fill="#2d3748">设定值 r</text>
+  <circle cx="156" cy="170" r="14" fill="#fff" stroke="#2d3748" stroke-width="2"/>
+  <text x="156" y="175" text-anchor="middle" font-size="14" fill="#2d3748">＋</text>
+  <text x="150" y="200" text-anchor="middle" font-size="12" fill="#c53030">－</text>
+  <line x1="112" y1="170" x2="142" y2="170" stroke="#2d3748" stroke-width="2"/>
+
+  <!-- 数字控制器 -->
+  <rect x="196" y="140" width="150" height="60" rx="6" fill="#3182ce" stroke="#2b6cb0" stroke-width="2"/>
+  <text x="271" y="164" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">数字控制器</text>
+  <text x="271" y="184" text-anchor="middle" font-size="10" fill="#bee3f8">CPU + 控制算法程序 D(z)</text>
+  <line x1="170" y1="170" x2="196" y2="170" stroke="#2d3748" stroke-width="2"/>
+  <text x="183" y="160" text-anchor="middle" font-size="10" fill="#c53030">e(k)</text>
+
+  <!-- 输出通道 DAC -->
+  <rect x="376" y="140" width="140" height="60" rx="6" fill="#805ad5" stroke="#553c9a" stroke-width="2"/>
+  <text x="446" y="164" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">输出通道</text>
+  <text x="446" y="184" text-anchor="middle" font-size="10" fill="#e9d8fd">DAC → 4-20mA / PWM</text>
+  <line x1="346" y1="170" x2="376" y2="170" stroke="#2d3748" stroke-width="2"/>
+  <text x="361" y="160" text-anchor="middle" font-size="10" fill="#4a5568">u(k)</text>
+
+  <!-- 执行器 -->
+  <rect x="546" y="140" width="110" height="60" rx="6" fill="#dd6b20" stroke="#c05621" stroke-width="2"/>
+  <text x="601" y="166" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">执行器</text>
+  <text x="601" y="185" text-anchor="middle" font-size="10" fill="#feebc8">水泵 / 调节阀</text>
+  <line x1="516" y1="170" x2="546" y2="170" stroke="#2d3748" stroke-width="2"/>
+
+  <!-- 被控对象 -->
+  <rect x="686" y="140" width="150" height="60" rx="6" fill="#2f855a" stroke="#22543d" stroke-width="2"/>
+  <text x="761" y="164" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">被控对象</text>
+  <text x="761" y="184" text-anchor="middle" font-size="10" fill="#c6f6d5">水箱 / 加热器</text>
+  <line x1="656" y1="170" x2="686" y2="170" stroke="#2d3748" stroke-width="2"/>
+
+  <!-- 被控量输出 -->
+  <line x1="836" y1="170" x2="892" y2="170" stroke="#2d3748" stroke-width="2"/>
+  <text x="908" y="174" text-anchor="middle" font-size="11" fill="#2d3748">y</text>
+
+  <!-- 反馈：被控量 -->
+  <line x1="892" y1="170" x2="892" y2="420" stroke="#2d3748" stroke-width="2"/>
+  <line x1="892" y1="420" x2="700" y2="420" stroke="#2d3748" stroke-width="2"/>
+  <text x="800" y="440" text-anchor="middle" font-size="11" fill="#2d3748">被控量（温度 / 液位 / 压力）</text>
+
+  <!-- 传感器/变送器 -->
+  <rect x="548" y="390" width="150" height="60" rx="6" fill="#edf2f7" stroke="#a0aec0" stroke-width="2"/>
+  <text x="623" y="414" text-anchor="middle" font-size="13" font-weight="bold" fill="#2d3748">传感器 / 变送器</text>
+  <text x="623" y="434" text-anchor="middle" font-size="10" fill="#4a5568">PT100 · 液位变送器 4-20mA</text>
+
+  <!-- 输入通道 ADC -->
+  <rect x="376" y="390" width="140" height="60" rx="6" fill="#805ad5" stroke="#553c9a" stroke-width="2"/>
+  <text x="446" y="414" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">输入通道</text>
+  <text x="446" y="434" text-anchor="middle" font-size="10" fill="#e9d8fd">ADC → 工程量</text>
+  <line x1="548" y1="420" x2="516" y2="420" stroke="#2d3748" stroke-width="2"/>
+
+  <!-- 反馈回到比较点 -->
+  <line x1="376" y1="420" x2="156" y2="420" stroke="#2d3748" stroke-width="2"/>
+  <line x1="156" y1="420" x2="156" y2="184" stroke="#2d3748" stroke-width="2"/>
+  <text x="270" y="440" text-anchor="middle" font-size="11" fill="#2d3748">反馈量（数字量）</text>
+
+  <!-- 采样-计算-输出 说明 -->
+  <rect x="196" y="230" width="470" height="82" rx="6" fill="#fff" stroke="#cbd5e0"/>
+  <text x="431" y="254" text-anchor="middle" font-size="12" font-weight="bold" fill="#2b6cb0">数字控制的核心节拍：采样 → 计算 → 输出</text>
+  <text x="431" y="276" text-anchor="middle" font-size="11" fill="#4a5568">① 每个采样周期 T 读入 ADC 结果，得到反馈量 y(k)；</text>
+  <text x="431" y="295" text-anchor="middle" font-size="11" fill="#4a5568">② 计算偏差 e(k)=r(k)−y(k)，按控制算法求输出 u(k)；</text>
+  <text x="431" y="314" text-anchor="middle" font-size="11" fill="#4a5568">③ 把 u(k) 送入 DAC，保持到下一个周期，驱动执行器。</text>
+
+  <!-- 被控对象与计算机物理连接说明 -->
+  <rect x="24" y="470" width="892" height="72" rx="6" fill="#fff5f5" stroke="#fc8181"/>
+  <text x="470" y="492" text-anchor="middle" font-size="11" font-weight="bold" fill="#c53030">控制系统的三大环节</text>
+  <text x="470" y="512" text-anchor="middle" font-size="11" fill="#4a5568">① 输入环节（传感器/变送器 + ADC）：把连续物理量变成计算机能处理的数字量；</text>
+  <text x="470" y="530" text-anchor="middle" font-size="11" fill="#4a5568">② 运算环节（数字控制器）：按程序执行控制算法，是系统“大脑”；</text>
+  <text x="470" y="548" text-anchor="middle" font-size="11" fill="#4a5568">③ 输出环节（DAC + 执行器）：把运算结果还原为连续量，推动被控对象动作。</text>
+</svg>

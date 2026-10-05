@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="580" viewBox="0 0 940 580" font-family="Microsoft YaHei, PingFang SC, sans-serif">
+  <rect width="940" height="580" fill="#f7fafc"/>
+  <text x="470" y="28" text-anchor="middle" font-size="18" font-weight="bold" fill="#1a365d">模拟量输出模块（AO）与 DAC 原理</text>
+  <text x="470" y="50" text-anchor="middle" font-size="11" fill="#718096">主站数字量 u(k) → CAN → 模块 → DAC 还原为连续量 → 4-20mA / PWM → 执行器</text>
+
+  <!-- 信号链 -->
+  <g font-size="11">
+    <rect x="26" y="86" width="120" height="64" rx="6" fill="#2b6cb0" stroke="#1a4971" stroke-width="2"/>
+    <text x="86" y="112" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">CC 主站</text>
+    <text x="86" y="132" text-anchor="middle" fill="#bee3f8">算出输出 u(k)</text>
+
+    <rect x="176" y="86" width="110" height="64" rx="6" fill="#2f855a" stroke="#22543d" stroke-width="1.5"/>
+    <text x="231" y="110" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">CAN 总线</text>
+    <text x="231" y="130" text-anchor="middle" fill="#c6f6d5">下发指令帧</text>
+
+    <rect x="316" y="86" width="130" height="64" rx="6" fill="#3182ce" stroke="#2b6cb0" stroke-width="2"/>
+    <text x="381" y="110" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">AO 模块 MCU</text>
+    <text x="381" y="130" text-anchor="middle" fill="#bee3f8">解析 0~100%</text>
+
+    <rect x="476" y="86" width="120" height="64" rx="6" fill="#805ad5" stroke="#553c9a" stroke-width="2"/>
+    <text x="536" y="110" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">DAC</text>
+    <text x="536" y="130" text-anchor="middle" fill="#e9d8fd">数字 → 模拟</text>
+
+    <rect x="626" y="86" width="130" height="64" rx="6" fill="#dd6b20" stroke="#c05621" stroke-width="2"/>
+    <text x="691" y="110" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">输出驱动</text>
+    <text x="691" y="130" text-anchor="middle" fill="#feebc8">V/I 转换</text>
+
+    <rect x="786" y="86" width="128" height="64" rx="6" fill="#2f855a" stroke="#22543d" stroke-width="1.5"/>
+    <text x="850" y="110" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">执行器</text>
+    <text x="850" y="130" text-anchor="middle" fill="#c6f6d5">调节阀/加热器</text>
+  </g>
+  <g stroke="#2d3748" stroke-width="2" marker-end="url(#ar2)">
+    <line x1="146" y1="118" x2="174" y2="118"/>
+    <line x1="286" y1="118" x2="314" y2="118"/>
+    <line x1="446" y1="118" x2="474" y2="118"/>
+    <line x1="596" y1="118" x2="624" y2="118"/>
+    <line x1="756" y1="118" x2="784" y2="118"/>
+  </g>
+  <defs>
+    <marker id="ar2" markerWidth="9" markerHeight="9" refX="7" refY="3.2" orient="auto">
+      <path d="M0,0 L7,3.2 L0,6.4 z" fill="#2d3748"/>
+    </marker>
+  </defs>
+
+  <!-- DAC 三种实现 -->
+  <rect x="20" y="172" width="440" height="200" rx="6" fill="#faf5ff" stroke="#805ad5" stroke-width="1.5"/>
+  <text x="240" y="196" text-anchor="middle" font-size="13" font-weight="bold" fill="#553c9a">DAC 的三种常见实现</text>
+  <g font-size="11" fill="#2d3748">
+    <rect x="36" y="210" width="408" height="46" rx="4" fill="#fff" stroke="#d6bcfa"/>
+    <text x="48" y="229" font-weight="bold">① 权电阻网络</text>
+    <text x="48" y="246">各位对应不同权值电阻，按位通断求和，简单但高位数下电阻比太大</text>
+
+    <rect x="36" y="264" width="408" height="46" rx="4" fill="#fff" stroke="#d6bcfa"/>
+    <text x="48" y="283" font-weight="bold">② R-2R 梯形网络</text>
+    <text x="48" y="300">只用 R 与 2R 两种阻值，便于集成、精度高，是最常用的 DAC 结构</text>
+
+    <rect x="36" y="318" width="408" height="46" rx="4" fill="#fff" stroke="#d6bcfa"/>
+    <text x="48" y="337" font-weight="bold">③ 脉宽调制 PWM（间接 DAC）</text>
+    <text x="48" y="354">用占空比等效模拟量，配合惯性负载滤波即可得到连续输出，效率高</text>
+  </g>
+
+  <!-- 本仿真 AO 输出 -->
+  <rect x="480" y="172" width="442" height="200" rx="6" fill="#fffaf0" stroke="#dd6b20" stroke-width="1.5"/>
+  <text x="701" y="196" text-anchor="middle" font-size="13" font-weight="bold" fill="#c05621">本仿真 AO 模块（节点地址 2）的两类输出</text>
+  <g font-size="11" fill="#2d3748">
+    <rect x="496" y="210" width="410" height="66" rx="4" fill="#fff" stroke="#f6ad55"/>
+    <text x="508" y="230" font-weight="bold">CH1 / CH2　4~20mA 电流输出</text>
+    <text x="508" y="249">actual = 4 + (percent / 100) × 16（mA）</text>
+    <text x="508" y="267">0% ↔ 4mA（活零点），100% ↔ 20mA，驱动调节阀、变频器给定</text>
+
+    <rect x="496" y="286" width="410" height="78" rx="4" fill="#fff" stroke="#f6ad55"/>
+    <text x="508" y="306" font-weight="bold">CH3 / CH4　PWM 脉宽输出</text>
+    <text x="508" y="325">以占空比表达 0~100%，用于电加热、比例控制</text>
+    <text x="508" y="344">周期内导通时间 = 占空比 × 周期，平均值即为等效模拟量</text>
+  </g>
+
+  <!-- 执行器动作 + 安全输出 -->
+  <rect x="20" y="392" width="440" height="160" rx="6" fill="#f0fff4" stroke="#2f855a" stroke-width="1.5"/>
+  <text x="240" y="416" text-anchor="middle" font-size="13" font-weight="bold" fill="#22543d">输出如何推动执行器（以调节阀为例）</text>
+  <text x="36" y="442" font-size="11" fill="#2d3748">主站算出阀门开度 30% → AO 输出 4+0.3×16 = 8.8mA</text>
+  <text x="36" y="464" font-size="11" fill="#2d3748">阀门定位器把 8.8mA 转换为阀杆位置，阀开度即为 30%</text>
+  <text x="36" y="486" font-size="11" fill="#2d3748">本仿真温度控制回路：输出通过 AO CH1 改变蒸汽调节阀开度，</text>
+  <text x="36" y="506" font-size="11" fill="#2d3748">从而改变加热量，使出口温度逐步逼近设定值 SV。</text>
+  <text x="36" y="532" font-size="11" fill="#c05621">典型：0~100% 对应 4~20mA，线性的“数字量↔模拟量”映射。</text>
+
+  <rect x="480" y="392" width="442" height="160" rx="6" fill="#fff5f5" stroke="#fc8181"/>
+  <text x="701" y="416" text-anchor="middle" font-size="13" font-weight="bold" fill="#c53030">安全输出（Safe Output）：失联不失控</text>
+  <text x="496" y="442" font-size="11" fill="#4a5568">当模块检测到通信超时（CAN 长时间无报文）时，不能把执行器</text>
+  <text x="496" y="462" font-size="11" fill="#4a5568">停在任意位置，而应按预设策略动作：</text>
+  <text x="496" y="486" font-size="11" fill="#2d3748">· hold　保持当前值不变；</text>
+  <text x="496" y="506" font-size="11" fill="#2d3748">· preset 输出到预设安全值；　· zero　输出归零。</text>
+  <text x="496" y="532" font-size="11" fill="#c53030">要点：通信故障时 AO 的设置页仍应显示，只是工程值切换为安全值。</text>
+</svg>

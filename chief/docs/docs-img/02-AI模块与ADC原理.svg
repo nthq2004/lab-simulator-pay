@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="580" viewBox="0 0 940 580" font-family="Microsoft YaHei, PingFang SC, sans-serif">
+  <rect width="940" height="580" fill="#f7fafc"/>
+  <text x="470" y="28" text-anchor="middle" font-size="18" font-weight="bold" fill="#1a365d">模拟量输入模块（AI）与 ADC 原理</text>
+  <text x="470" y="50" text-anchor="middle" font-size="11" fill="#718096">现场连续信号 → 采样 → 保持 → 量化 → 编码 → 工程量换算 → 越限判断 → CAN 上报</text>
+
+  <!-- 信号链 -->
+  <g font-size="11">
+    <rect x="20" y="86" width="118" height="64" rx="6" fill="#edf2f7" stroke="#a0aec0" stroke-width="1.5"/>
+    <text x="79" y="110" text-anchor="middle" font-size="12" font-weight="bold" fill="#2d3748">传感器/变送器</text>
+    <text x="79" y="130" text-anchor="middle" fill="#4a5568">液位→4~20mA</text>
+
+    <rect x="160" y="86" width="110" height="64" rx="6" fill="#ebf8ff" stroke="#3182ce" stroke-width="1.5"/>
+    <text x="215" y="110" text-anchor="middle" font-size="12" font-weight="bold" fill="#2b6cb0">输入调理</text>
+    <text x="215" y="130" text-anchor="middle" fill="#4a5568">滤波/保护</text>
+
+    <rect x="292" y="86" width="110" height="64" rx="6" fill="#ebf8ff" stroke="#3182ce" stroke-width="1.5"/>
+    <text x="347" y="110" text-anchor="middle" font-size="12" font-weight="bold" fill="#2b6cb0">采样保持</text>
+    <text x="347" y="130" text-anchor="middle" fill="#4a5568">S/H</text>
+
+    <rect x="424" y="86" width="120" height="64" rx="6" fill="#805ad5" stroke="#553c9a" stroke-width="2"/>
+    <text x="484" y="110" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">量化 / 编码</text>
+    <text x="484" y="130" text-anchor="middle" fill="#e9d8fd">ADC 核心</text>
+
+    <rect x="566" y="86" width="130" height="64" rx="6" fill="#3182ce" stroke="#2b6cb0" stroke-width="2"/>
+    <text x="631" y="110" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">微处理器 MCU</text>
+    <text x="631" y="130" text-anchor="middle" fill="#bee3f8">工程量换算</text>
+
+    <rect x="718" y="86" width="96" height="64" rx="6" fill="#2f855a" stroke="#22543d" stroke-width="1.5"/>
+    <text x="766" y="110" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">CAN 控制器</text>
+    <text x="766" y="130" text-anchor="middle" fill="#c6f6d5">打包上报</text>
+
+    <rect x="836" y="86" width="86" height="64" rx="6" fill="#2b6cb0" stroke="#1a4971" stroke-width="2"/>
+    <text x="879" y="110" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">CC 主站</text>
+    <text x="879" y="130" text-anchor="middle" fill="#bee3f8">显示/报警</text>
+  </g>
+  <g stroke="#2d3748" stroke-width="2" marker-end="url(#ar)">
+    <line x1="138" y1="118" x2="158" y2="118"/>
+    <line x1="270" y1="118" x2="290" y2="118"/>
+    <line x1="402" y1="118" x2="422" y2="118"/>
+    <line x1="544" y1="118" x2="564" y2="118"/>
+    <line x1="696" y1="118" x2="716" y2="118"/>
+    <line x1="814" y1="118" x2="834" y2="118"/>
+  </g>
+  <defs>
+    <marker id="ar" markerWidth="9" markerHeight="9" refX="7" refY="3.2" orient="auto">
+      <path d="M0,0 L7,3.2 L0,6.4 z" fill="#2d3748"/>
+    </marker>
+  </defs>
+
+  <!-- 四个步骤说明 -->
+  <rect x="20" y="172" width="902" height="86" rx="6" fill="#fff" stroke="#cbd5e0"/>
+  <text x="470" y="194" text-anchor="middle" font-size="12" font-weight="bold" fill="#2b6cb0">ADC 的四个基本步骤</text>
+  <text x="30" y="218" font-size="11" fill="#2d3748">① 采样：按采样周期 T（本仿真 100ms）对连续信号取值，得到离散序列；</text>
+  <text x="30" y="238" font-size="11" fill="#2d3748">② 保持：用采样保持电路把该瞬间的值保持住，供转换期间使用，避免转换结果跳变；</text>
+  <text x="30" y="254" font-size="11" fill="#2d3748">③ 量化：把保持的幅值归入有限个离散电平（阶梯），幅值只能取整；  ④ 编码：把电平换成二进制码输出。</text>
+
+  <!-- 本仿真 AI 通道 -->
+  <rect x="20" y="276" width="440" height="264" rx="6" fill="#ebf8ff" stroke="#3182ce" stroke-width="1.5"/>
+  <text x="240" y="300" text-anchor="middle" font-size="13" font-weight="bold" fill="#2b6cb0">本仿真 AI 模块（节点地址 1）的 4 路通道</text>
+  <g font-size="11" fill="#2d3748">
+    <rect x="36" y="314" width="408" height="46" rx="4" fill="#fff" stroke="#bee3f8"/>
+    <text x="48" y="333" font-weight="bold">CH1 / CH2　4~20mA</text>
+    <text x="48" y="350">电流经采样电阻变为电压：4mA↔量程下限，20mA↔量程上限</text>
+
+    <rect x="36" y="368" width="408" height="46" rx="4" fill="#fff" stroke="#bee3f8"/>
+    <text x="48" y="387" font-weight="bold">CH3　RTD（PT100 热电阻）</text>
+    <text x="48" y="404">测电阻换算温度：0℃↔100Ω，约 0.385Ω/℃（线性近似）</text>
+
+    <rect x="36" y="422" width="408" height="46" rx="4" fill="#fff" stroke="#bee3f8"/>
+    <text x="48" y="441" font-weight="bold">CH4　TC（K 型热电偶）</text>
+    <text x="48" y="458">测热电动势（mV）换算温度：约 0.041mV/℃</text>
+
+    <rect x="36" y="476" width="408" height="52" rx="4" fill="#fffaf0" stroke="#f6ad55"/>
+    <text x="48" y="495" font-weight="bold" fill="#c05621">断线检测（信号质量）</text>
+    <text x="48" y="512" fill="#7b341e">4~20mA 低于约 3.8mA 判 OPEN（断线），高于 20.5mA 判 SHORT/超量程</text>
+  </g>
+
+  <!-- 工程量换算公式 -->
+  <rect x="480" y="276" width="442" height="264" rx="6" fill="#faf5ff" stroke="#805ad5" stroke-width="1.5"/>
+  <text x="701" y="300" text-anchor="middle" font-size="13" font-weight="bold" fill="#553c9a">线性换算：从原始码到工程量</text>
+  <rect x="500" y="316" width="402" height="66" rx="4" fill="#fff" stroke="#d6bcfa"/>
+  <text x="701" y="340" text-anchor="middle" font-size="12" fill="#553c9a">value = LRV + (raw − 4) / (20 − 4) × (URV − LRV)</text>
+  <text x="701" y="362" text-anchor="middle" font-size="11" fill="#718096">CH1 液位：LRV=0%，URV=100%（量程 0~100%）</text>
+
+  <text x="701" y="404" text-anchor="middle" font-size="12" font-weight="bold" fill="#553c9a">举例：液位 50%</text>
+  <text x="701" y="426" text-anchor="middle" font-size="11" fill="#4a5568">变送器输出 12.0mA → value = 0 + (12−4)/16×100 = 50%</text>
+  <text x="701" y="448" text-anchor="middle" font-size="11" fill="#4a5568">AI 模块把 50% 连同状态打包成帧，经 CAN 上报 CC</text>
+
+  <rect x="500" y="466" width="402" height="62" rx="4" fill="#fff5f5" stroke="#fc8181"/>
+  <text x="701" y="486" text-anchor="middle" font-size="11" font-weight="bold" fill="#c53030">ADC 主要指标</text>
+  <text x="701" y="504" text-anchor="middle" font-size="10" fill="#4a5568">分辨率=满量程/2ⁿ（n 为位数）　量化误差=±½LSB</text>
+  <text x="701" y="520" text-anchor="middle" font-size="10" fill="#4a5568">采样定理：fs ≥ 2·fmax，否则发生混叠</text>
+</svg>

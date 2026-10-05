@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="480" viewBox="0 0 940 480" font-family="Microsoft YaHei, PingFang SC, sans-serif">
+  <rect width="940" height="480" fill="#f7fafc"/>
+  <text x="470" y="28" text-anchor="middle" font-size="18" font-weight="bold" fill="#1a365d">流程 9.1　计算机控制单元线路、接口、继电器板故障判定和处理</text>
+  <text x="470" y="50" text-anchor="middle" font-size="11" fill="#718096">典型故障：继电器板输出触头烧蚀 / 接触不良 —— 线圈得电但 NO-COM 无法闭合，声光报警器不动作</text>
+
+  <defs>
+    <marker id="ar3" markerWidth="9" markerHeight="9" refX="7" refY="3.2" orient="auto">
+      <path d="M0,0 L7,3.2 L0,6.4 z" fill="#4a5568"/>
+    </marker>
+  </defs>
+
+  <!-- 第一行 5 个步骤 -->
+  <g font-size="11">
+    <rect x="20" y="80" width="164" height="92" rx="6" fill="#ebf8ff" stroke="#3182ce" stroke-width="1.5"/>
+    <text x="102" y="102" text-anchor="middle" font-size="12" font-weight="bold" fill="#2b6cb0">① 识别部件</text>
+    <text x="102" y="124" text-anchor="middle" fill="#2d3748">报警测试按钮 / 电压继电器</text>
+    <text x="102" y="142" text-anchor="middle" fill="#2d3748">声光报警器 / DI / DO / CC</text>
+    <text x="102" y="162" text-anchor="middle" fill="#718096">建立系统对象认知</text>
+
+    <rect x="204" y="80" width="164" height="92" rx="6" fill="#e2e8f0" stroke="#4a5568" stroke-width="1.5"/>
+    <text x="286" y="105" text-anchor="middle" font-size="12" font-weight="bold" fill="#2d3748">② 起动系统</text>
+    <text x="286" y="127" text-anchor="middle" fill="#4a5568">自动接线 → 上电 → 遥控</text>
+    <text x="286" y="145" text-anchor="middle" fill="#4a5568">→ 控制器自动</text>
+    <text x="286" y="164" text-anchor="middle" fill="#718096">建立无报警基线</text>
+
+    <rect x="388" y="80" width="164" height="92" rx="6" fill="#f0fff4" stroke="#2f855a" stroke-width="1.5"/>
+    <text x="470" y="105" text-anchor="middle" font-size="12" font-weight="bold" fill="#22543d">③ 基线测试</text>
+    <text x="470" y="127" text-anchor="middle" fill="#4a5568">按下报警测试按钮</text>
+    <text x="470" y="145" text-anchor="middle" fill="#4a5568">报警器应正常鸣响闪亮</text>
+    <text x="470" y="164" text-anchor="middle" fill="#718096">确认回路本身完好</text>
+
+    <rect x="572" y="80" width="164" height="92" rx="6" fill="#fff5f5" stroke="#fc8181" stroke-width="1.5"/>
+    <text x="654" y="105" text-anchor="middle" font-size="12" font-weight="bold" fill="#c53030">④ 设置故障</text>
+    <text x="654" y="127" text-anchor="middle" fill="#4a5568">故障设置界面勾选</text>
+    <text x="654" y="145" text-anchor="middle" fill="#4a5568">「继电器板 触头故障」</text>
+    <text x="654" y="164" text-anchor="middle" fill="#718096">应用设置</text>
+
+    <rect x="756" y="80" width="164" height="92" rx="6" fill="#fffaf0" stroke="#f6ad55" stroke-width="1.5"/>
+    <text x="838" y="105" text-anchor="middle" font-size="12" font-weight="bold" fill="#c05621">⑤ 再现故障</text>
+    <text x="838" y="127" text-anchor="middle" fill="#4a5568">再次按下按钮</text>
+    <text x="838" y="145" text-anchor="middle" fill="#4a5568">报警器毫无反应</text>
+    <text x="838" y="164" text-anchor="middle" fill="#718096">初步判断触头故障</text>
+  </g>
+  <g stroke="#4a5568" stroke-width="2" marker-end="url(#ar3)">
+    <line x1="184" y1="126" x2="202" y2="126"/>
+    <line x1="368" y1="126" x2="386" y2="126"/>
+    <line x1="552" y1="126" x2="570" y2="126"/>
+    <line x1="736" y1="126" x2="754" y2="126"/>
+  </g>
+
+  <!-- 折返 -->
+  <line x1="838" y1="172" x2="838" y2="206" stroke="#4a5568" stroke-width="2"/>
+  <line x1="838" y1="206" x2="40" y2="206" stroke="#4a5568" stroke-width="2"/>
+  <line x1="40" y1="206" x2="40" y2="226" stroke="#4a5568" stroke-width="2" marker-end="url(#ar3)"/>
+
+  <!-- 第二行 4 个步骤 -->
+  <g font-size="11">
+    <rect x="20" y="228" width="200" height="100" rx="6" fill="#faf5ff" stroke="#805ad5" stroke-width="1.5"/>
+    <text x="120" y="252" text-anchor="middle" font-size="12" font-weight="bold" fill="#553c9a">⑥ 万用表测量确认</text>
+    <text x="120" y="274" text-anchor="middle" fill="#4a5568">调出数字万用表 → 200Ω 档</text>
+    <text x="120" y="292" text-anchor="middle" fill="#4a5568">测输出触头 NO-COM</text>
+    <text x="120" y="312" text-anchor="middle" fill="#c53030">电阻 O.L（无穷大）→ 触头不通</text>
+
+    <rect x="252" y="228" width="200" height="100" rx="6" fill="#f0fff4" stroke="#2f855a" stroke-width="1.5"/>
+    <text x="352" y="252" text-anchor="middle" font-size="12" font-weight="bold" fill="#22543d">⑦ 修复故障</text>
+    <text x="352" y="274" text-anchor="middle" fill="#4a5568">移除表笔、万用表回 OFF</text>
+    <text x="352" y="292" text-anchor="middle" fill="#4a5568">故障界面取消勾选</text>
+    <text x="352" y="312" text-anchor="middle" fill="#718096">应用设置 = 更换/修复继电器板</text>
+
+    <rect x="484" y="228" width="200" height="100" rx="6" fill="#f0fff4" stroke="#2f855a" stroke-width="1.5"/>
+    <text x="584" y="252" text-anchor="middle" font-size="12" font-weight="bold" fill="#22543d">⑧ 验证恢复</text>
+    <text x="584" y="274" text-anchor="middle" fill="#4a5568">再次按下报警测试按钮</text>
+    <text x="584" y="292" text-anchor="middle" fill="#4a5568">报警器应恢复鸣响闪亮</text>
+    <text x="584" y="312" text-anchor="middle" fill="#718096">确认触头已修复</text>
+
+    <rect x="716" y="228" width="204" height="100" rx="6" fill="#ebf8ff" stroke="#3182ce" stroke-width="1.5"/>
+    <text x="818" y="252" text-anchor="middle" font-size="12" font-weight="bold" fill="#2b6cb0">⑨ 处理报警 + 测验</text>
+    <text x="818" y="274" text-anchor="middle" fill="#4a5568">消音 → 确认 → 清除记录</text>
+    <text x="818" y="292" text-anchor="middle" fill="#4a5568">系统恢复正常运行</text>
+    <text x="818" y="312" text-anchor="middle" fill="#718096">继电器板故障诊断知识测验</text>
+  </g>
+  <g stroke="#4a5568" stroke-width="2" marker-end="url(#ar3)">
+    <line x1="220" y1="278" x2="250" y2="278"/>
+    <line x1="452" y1="278" x2="482" y2="278"/>
+    <line x1="684" y1="278" x2="714" y2="278"/>
+  </g>
+
+  <!-- 判据条 -->
+  <rect x="20" y="356" width="900" height="104" rx="6" fill="#fff" stroke="#cbd5e0"/>
+  <text x="470" y="380" text-anchor="middle" font-size="12" font-weight="bold" fill="#c53030">诊断要点</text>
+  <text x="36" y="404" font-size="11" fill="#2d3748">· 现象：按钮按下后 DI 采集正常，但声光报警器不动作；故障前后唯一变化是继电器板触头。</text>
+  <text x="36" y="424" font-size="11" fill="#2d3748">· 判据：万用表电阻档测得 NO-COM 为 O.L，确认触头未闭合；线圈及驱动回路均正常。</text>
+  <text x="36" y="444" font-size="11" fill="#2d3748">· 处理：更换/修复继电器板，重新按按钮验证报警器恢复；再消音、确认、清除报警记录。</text>
+</svg>
