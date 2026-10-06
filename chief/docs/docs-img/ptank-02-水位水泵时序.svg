@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="560" viewBox="0 0 940 560" font-family="Microsoft YaHei, PingFang SC, sans-serif">
+  <rect width="940" height="560" fill="#f7fafc"/>
+  <text x="470" y="30" text-anchor="middle" font-size="19" font-weight="bold" fill="#1a365d">水位—水泵时序：正常双位控制 vs 删除自锁后</text>
+  <text x="470" y="52" text-anchor="middle" font-size="11" fill="#718096">左：M0.0 自锁存在时，水泵在 30%~70% 之间"低启高停"；右：删除 M0.0 后，水泵只能在下限附近脉冲式起停</text>
+
+  <defs>
+    <marker id="a2" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#4a5568"/></marker>
+  </defs>
+
+  <!-- ═══ 左图：正常双位控制 ═══ -->
+  <text x="265" y="82" text-anchor="middle" font-size="13" font-weight="bold" fill="#22543d">① 有自锁（M0.0）：双位控制</text>
+  <!-- 纵轴 -->
+  <line x1="70" y1="90" x2="70" y2="250" stroke="#4a5568" stroke-width="1.4"/>
+  <line x1="70" y1="250" x2="470" y2="250" stroke="#4a5568" stroke-width="1.4"/>
+  <text x="52" y="94" font-size="9" fill="#718096">100%</text>
+  <text x="58" y="142" font-size="9" fill="#cc3333">70%</text>
+  <text x="58" y="206" font-size="9" fill="#2a8acc">30%</text>
+  <text x="58" y="253" font-size="9" fill="#718096">0%</text>
+  <!-- 阈值线 -->
+  <line x1="70" y1="138" x2="470" y2="138" stroke="#cc3333" stroke-width="1.2" stroke-dasharray="5 4"/>
+  <line x1="70" y1="202" x2="470" y2="202" stroke="#2a8acc" stroke-width="1.2" stroke-dasharray="5 4"/>
+  <!-- 液位曲线 -->
+  <polyline points="70,170 187,202 226,138 343,202 382,138 460,181" fill="none" stroke="#2b6cb0" stroke-width="2.6"/>
+  <text x="150" y="230" font-size="9.5" fill="#2b6cb0">排空下降</text>
+  <text x="196" y="160" font-size="9.5" fill="#22543d">注水上升</text>
+  <!-- 水泵脉冲 -->
+  <text x="70" y="276" font-size="10" fill="#4a5568">水泵 Q0.0</text>
+  <line x1="70" y1="300" x2="470" y2="300" stroke="#cbd5e0" stroke-width="1"/>
+  <polyline points="70,300 187,300 187,282 226,282 226,300 343,300 343,282 382,282 382,300 460,300"
+            fill="none" stroke="#1f9d55" stroke-width="2.4"/>
+  <text x="196" y="278" font-size="9" fill="#1f9d55">运行</text>
+  <text x="196" y="316" font-size="9" fill="#718096">液位到下限起动，到上限停止（一个完整来回约数十秒）</text>
+
+  <!-- ═══ 右图：删除自锁后 ═══ -->
+  <text x="718" y="82" text-anchor="middle" font-size="13" font-weight="bold" fill="#7b341e">② 删除自锁 M0.0：仅下限附近脉冲</text>
+  <line x1="540" y1="90" x2="540" y2="250" stroke="#4a5568" stroke-width="1.4"/>
+  <line x1="540" y1="250" x2="900" y2="250" stroke="#4a5568" stroke-width="1.4"/>
+  <text x="522" y="142" font-size="9" fill="#cc3333">70%</text>
+  <text x="522" y="206" font-size="9" fill="#2a8acc">30%</text>
+  <line x1="540" y1="138" x2="900" y2="138" stroke="#cc3333" stroke-width="1.2" stroke-dasharray="5 4"/>
+  <line x1="540" y1="202" x2="900" y2="202" stroke="#2a8acc" stroke-width="1.2" stroke-dasharray="5 4"/>
+  <!-- 液位：先排到30，然后小锯齿 -->
+  <polyline points="540,170 660,202 672,196 700,202 712,196 740,202 752,196 780,202 792,196 820,202 832,196 860,202 900,204"
+            fill="none" stroke="#2b6cb0" stroke-width="2.6"/>
+  <text x="600" y="230" font-size="9.5" fill="#2b6cb0">排到下限</text>
+  <text x="760" y="188" font-size="9.5" fill="#7b341e">在下限附近来回振荡（幅度很小）</text>
+  <!-- 水泵脉冲 -->
+  <text x="540" y="276" font-size="10" fill="#4a5568">水泵 Q0.0</text>
+  <line x1="540" y1="300" x2="900" y2="300" stroke="#cbd5e0" stroke-width="1"/>
+  <polyline points="540,300 660,300 660,282 672,282 672,300 700,300 700,282 712,282 712,300 740,300 740,282 752,282 752,300 780,300 780,282 792,282 792,300 820,300 820,282 832,282 832,300 860,300 860,282 872,282 872,300 900,300"
+            fill="none" stroke="#1f9d55" stroke-width="2.2"/>
+  <text x="690" y="316" font-size="9" fill="#718096">液位高于下限即停 → 排到下限又启（无自锁保持，仅瞬时脉冲）</text>
+
+  <!-- 底部小结 -->
+  <rect x="40" y="380" width="870" height="150" rx="8" fill="#fffaf0" stroke="#f0d9a8" stroke-width="1.5"/>
+  <text x="60" y="406" font-size="12.5" font-weight="bold" fill="#7b341e">为什么自锁触点是关键？</text>
+  <text x="60" y="430" font-size="11.5" fill="#5b4636">· 两位式控制要求：一旦由下限起动，就要一直运行到上限才停。若没有 M0.0 自锁，低压触头在液位刚升过 30% 时就断开，</text>
+  <text x="72" y="452" font-size="11.5" fill="#5b4636">  PLC 立即失去起动条件，电机/水泵马上停 → 液位又落到下限以下 → 再次起动……于是水泵只能在下限附近"一闪一闪"地动作；</text>
+  <text x="60" y="476" font-size="11.5" fill="#5b4636">· 加上 M0.0 自锁后：起动的条件被"记住"下来，直到停止条件（停止按钮或高压触头断开）出现才解除，</text>
+  <text x="72" y="498" font-size="11.5" fill="#5b4636">  液位才能在 30%~70% 的较大区间内往复，电机也不会频繁启停。</text>
+  <text x="60" y="522" font-size="11" fill="#8a6d00">提示：本实验第 6 步"删除自锁 M0.0 后再下载"，正是为直观展示自锁点在起保停程序中的作用。</text>
+</svg>

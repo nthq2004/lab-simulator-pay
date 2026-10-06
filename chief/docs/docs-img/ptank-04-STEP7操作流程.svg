@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="470" viewBox="0 0 940 470" font-family="Microsoft YaHei, PingFang SC, sans-serif">
+  <rect width="940" height="470" fill="#f7fafc"/>
+  <text x="470" y="30" text-anchor="middle" font-size="19" font-weight="bold" fill="#1a365d">STEP 7-Micro/WIN SMART 操作流程</text>
+  <text x="470" y="52" text-anchor="middle" font-size="11" fill="#718096">连接 → 上传 → 监控 → 修改（删除自锁触点）→ 下载，工具栏按钮一一对应</text>
+
+  <defs>
+    <marker id="fa" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#2f6fb0"/></marker>
+  </defs>
+
+  <!-- 工具栏示意 -->
+  <rect x="60" y="68" width="820" height="34" rx="6" fill="#e4e7ea" stroke="#c3c9cf"/>
+  <g font-size="10.5" text-anchor="middle">
+    <rect x="74" y="73" width="76" height="24" rx="3" fill="#3182ce"/><text x="112" y="89" fill="#fff">🔗 连接</text>
+    <rect x="158" y="73" width="76" height="24" rx="3" fill="#38a169"/><text x="196" y="89" fill="#fff">⬆ 上传</text>
+    <rect x="242" y="73" width="76" height="24" rx="3" fill="#805ad5"/><text x="280" y="89" fill="#fff">👁 监控</text>
+    <rect x="326" y="73" width="86" height="24" rx="3" fill="#dd6b20"/><text x="369" y="89" fill="#fff">✎ 程序编辑器</text>
+    <rect x="420" y="73" width="76" height="24" rx="3" fill="#dd6b20"/><text x="458" y="89" fill="#fff">⬇ 下载</text>
+  </g>
+  <text x="560" y="89" font-size="10.5" fill="#4b5563">（下载在未监控、已连接时可用；监控中程序只读）</text>
+
+  <!-- 五个流程框 -->
+  <!-- 1 连接 -->
+  <rect x="30" y="128" width="164" height="150" rx="8" fill="#ebf8ff" stroke="#3182ce" stroke-width="1.8"/>
+  <circle cx="52" cy="150" r="12" fill="#3182ce"/><text x="52" y="154" text-anchor="middle" font-size="12" fill="#fff">1</text>
+  <text x="72" y="155" font-size="12.5" font-weight="bold" fill="#2c5282">连接</text>
+  <text x="42" y="182" font-size="10.5" fill="#2d3748">· 「查找设备」搜索同网段 PLC</text>
+  <text x="42" y="202" font-size="10.5" fill="#2d3748">· 选中设备 → 点「连接」</text>
+  <text x="42" y="222" font-size="10.5" fill="#2d3748">· 直连显示 1 台；经交换机</text>
+  <text x="42" y="242" font-size="10.5" fill="#2d3748">  可发现多台</text>
+  <text x="42" y="264" font-size="10" fill="#3182ce">前提：网线 PC↔PLC，IP 同网段</text>
+
+  <line x1="194" y1="203" x2="224" y2="203" stroke="#2f6fb0" stroke-width="2.4" marker-end="url(#fa)"/>
+
+  <!-- 2 上传 -->
+  <rect x="226" y="128" width="164" height="150" rx="8" fill="#f0fff4" stroke="#38a169" stroke-width="1.8"/>
+  <circle cx="248" cy="150" r="12" fill="#38a169"/><text x="248" y="154" text-anchor="middle" font-size="12" fill="#fff">2</text>
+  <text x="268" y="155" font-size="12.5" font-weight="bold" fill="#22543d">上传</text>
+  <text x="238" y="182" font-size="10.5" fill="#2d3748">· 点「上传」从 PLC 读回程序</text>
+  <text x="238" y="202" font-size="10.5" fill="#2d3748">· 显示为可读梯形图</text>
+  <text x="238" y="222" font-size="10.5" fill="#2d3748">· 可核对逻辑、查看网络数</text>
+  <text x="238" y="242" font-size="10.5" fill="#2d3748">· 连接后不会自动读取，须点</text>
+  <text x="238" y="262" font-size="10.5" fill="#2d3748">  「上传」</text>
+
+  <line x1="390" y1="203" x2="420" y2="203" stroke="#2f6fb0" stroke-width="2.4" marker-end="url(#fa)"/>
+
+  <!-- 3 监控 -->
+  <rect x="422" y="128" width="164" height="150" rx="8" fill="#faf5ff" stroke="#805ad5" stroke-width="1.8"/>
+  <circle cx="444" cy="150" r="12" fill="#805ad5"/><text x="444" y="154" text-anchor="middle" font-size="12" fill="#fff">3</text>
+  <text x="464" y="155" font-size="12.5" font-weight="bold" fill="#553c9a">监控</text>
+  <text x="434" y="182" font-size="10.5" fill="#2d3748">· 点「监控」进入在线监控</text>
+  <text x="434" y="202" font-size="10.5" fill="#2d3748">· 梯形图触点/线圈按实时通/断</text>
+  <text x="434" y="222" font-size="10.5" fill="#2d3748">  着色（绿=通）</text>
+  <text x="434" y="242" font-size="10.5" fill="#2d3748">· 状态表读 I/Q/M/T/C/VW</text>
+  <text x="434" y="264" font-size="10" fill="#805ad5">监控中程序只读，不可编辑</text>
+
+  <line x1="586" y1="203" x2="616" y2="203" stroke="#2f6fb0" stroke-width="2.4" marker-end="url(#fa)"/>
+
+  <!-- 4 修改 -->
+  <rect x="618" y="128" width="140" height="150" rx="8" fill="#fff5f5" stroke="#e53e3e" stroke-width="1.8"/>
+  <circle cx="640" cy="150" r="12" fill="#e53e3e"/><text x="640" y="154" text-anchor="middle" font-size="12" fill="#fff">4</text>
+  <text x="660" y="155" font-size="12.5" font-weight="bold" fill="#822727">修改</text>
+  <text x="630" y="182" font-size="10.5" fill="#2d3748">· 先点「停止监控」退出</text>
+  <text x="630" y="202" font-size="10.5" fill="#2d3748">· 点击 M0.0 自锁触点芯片</text>
+  <text x="630" y="222" font-size="10.5" fill="#2d3748">· 编辑框点「删除」</text>
+  <text x="630" y="242" font-size="10.5" fill="#2d3748">· 或删除该并联支路</text>
+
+  <line x1="758" y1="203" x2="788" y2="203" stroke="#2f6fb0" stroke-width="2.4" marker-end="url(#fa)"/>
+
+  <!-- 5 下载 -->
+  <rect x="790" y="128" width="120" height="150" rx="8" fill="#fffaf0" stroke="#dd6b20" stroke-width="1.8"/>
+  <circle cx="812" cy="150" r="12" fill="#dd6b20"/><text x="812" y="154" text-anchor="middle" font-size="12" fill="#fff">5</text>
+  <text x="832" y="155" font-size="12.5" font-weight="bold" fill="#7b341e">下载</text>
+  <text x="802" y="182" font-size="10.5" fill="#2d3748">· 点「下载」下发</text>
+  <text x="802" y="202" font-size="10.5" fill="#2d3748">· 程序热加载，</text>
+  <text x="802" y="222" font-size="10.5" fill="#2d3748">  RUN 下立即生效</text>
+  <text x="802" y="244" font-size="10" fill="#dd6b20">观察运行效果</text>
+
+  <!-- 底部说明 -->
+  <rect x="30" y="300" width="880" height="150" rx="8" fill="#ebf8ff" stroke="#63b3ed" stroke-width="1.5"/>
+  <text x="48" y="326" font-size="12.5" font-weight="bold" fill="#2c5282">本实验对应操作（自动演示 6 步 / 演练判定）</text>
+  <text x="48" y="350" font-size="11" fill="#2c5282">第3步：打开 STEP7 → 连接 → 上传，查看 PLC 中的程序；          第4步：点「监控」，观察双位自动控制（监控后再延时 30s 判定）；</text>
+  <text x="48" y="374" font-size="11" fill="#2c5282">第5步：点「停止监控」→ 在梯形图中删除自锁触点 M0.0；            第6步：点「下载」，观察删除自锁后水位在下限附近振荡 2 个来回。</text>
+  <text x="48" y="402" font-size="11" fill="#2c5282">要点：①「上传」是"从 PLC 读到软件"，用于核对与修改；「下载」是"从软件写到 PLC"，用于下发生效，方向不能混淆。</text>
+  <text x="48" y="424" font-size="11" fill="#2c5282">      ② 监控时程序只读，必须先「停止监控」才能编辑；下载前程序会自动编译为 S7-200 语句表(STL)。</text>
+  <text x="48" y="446" font-size="11" fill="#2c5282">      ③ 连接不修改 PLC 程序；下载才会覆盖 PLC 内的运行程序。</text>
+</svg>

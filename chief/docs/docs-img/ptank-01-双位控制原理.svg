@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="560" viewBox="0 0 940 560" font-family="Microsoft YaHei, PingFang SC, sans-serif">
+  <rect width="940" height="560" fill="#f7fafc"/>
+  <text x="470" y="30" text-anchor="middle" font-size="19" font-weight="bold" fill="#1a365d">压力水柜双位（ON/OFF）自动控制原理</text>
+  <text x="470" y="52" text-anchor="middle" font-size="11.5" fill="#718096">水柜液位经两个压力触头反馈给 PLC，PLC 控制 KM1 起停水泵电机，形成闭环——两设定值、无回差</text>
+
+  <!-- ── 闭环方块图 ── -->
+  <!-- 水柜 -->
+  <rect x="40" y="86" width="150" height="120" rx="8" fill="#e6f0f5" stroke="#2c5a7a" stroke-width="2"/>
+  <text x="115" y="112" text-anchor="middle" font-size="14" font-weight="bold" fill="#1a365d">压力水柜</text>
+  <rect x="60" y="126" width="110" height="64" fill="#e6f0f5" stroke="#9abed4"/>
+  <rect x="62" y="150" width="106" height="38" fill="#3788cc"/>
+  <line x1="60" y1="140" x2="170" y2="140" stroke="#cc3333" stroke-width="1.6" stroke-dasharray="5 3"/>
+  <text x="174" y="143" font-size="9" fill="#cc3333">高压70%</text>
+  <line x1="60" y1="170" x2="170" y2="170" stroke="#2a8acc" stroke-width="1.6" stroke-dasharray="5 3"/>
+  <text x="174" y="173" font-size="9" fill="#2a8acc">低压30%</text>
+
+  <!-- 压力开关 -->
+  <rect x="250" y="86" width="160" height="120" rx="8" fill="#f2f0ea" stroke="#8a8578" stroke-width="2"/>
+  <text x="330" y="110" text-anchor="middle" font-size="13" font-weight="bold" fill="#444">压力开关（两个触头）</text>
+  <text x="262" y="136" font-size="10.5" fill="#cc3333">高压 NC：液位&gt;70% 断开</text>
+  <text x="262" y="158" font-size="10.5" fill="#2a8acc">低压 NO：液位&lt;30% 闭合</text>
+  <text x="262" y="184" font-size="10" fill="#666">（均无回差；中间区段保持）</text>
+  <text x="262" y="200" font-size="10" fill="#666">→ I0.3（高压）、I0.4（低压）</text>
+
+  <!-- PLC -->
+  <rect x="470" y="86" width="130" height="120" rx="8" fill="#464d55" stroke="#1c2126" stroke-width="2"/>
+  <text x="535" y="112" text-anchor="middle" font-size="13" font-weight="bold" fill="#e8ecf0">S7-200 SMART</text>
+  <text x="535" y="134" text-anchor="middle" font-size="11" fill="#c9d1d9">CPU ST20</text>
+  <text x="482" y="160" font-size="10" fill="#a6e3a1">I0.3←高压  I0.4←低压</text>
+  <text x="482" y="178" font-size="10" fill="#f0a020">Q0.0→KM1 线圈</text>
+  <text x="482" y="196" font-size="10" fill="#9aa2aa">RUN/STOP、以太网口</text>
+
+  <!-- KM1 -->
+  <rect x="660" y="100" width="100" height="90" rx="8" fill="#fafaf5" stroke="#888" stroke-width="2"/>
+  <text x="710" y="128" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">KM1</text>
+  <text x="710" y="150" text-anchor="middle" font-size="10" fill="#666">主接触器</text>
+  <text x="710" y="170" text-anchor="middle" font-size="10" fill="#666">主触头</text>
+
+  <!-- 电机 -->
+  <rect x="800" y="100" width="110" height="90" rx="8" fill="#eef2f7" stroke="#4a6a8a" stroke-width="2"/>
+  <text x="855" y="130" text-anchor="middle" font-size="13" font-weight="bold" fill="#27496d">三相电机 M</text>
+  <text x="855" y="152" text-anchor="middle" font-size="10" fill="#555">星形直接起动</text>
+
+  <!-- 水泵 -->
+  <rect x="800" y="300" width="110" height="80" rx="8" fill="#e8f0f7" stroke="#5a7a9a" stroke-width="2"/>
+  <text x="855" y="332" text-anchor="middle" font-size="13" font-weight="bold" fill="#27496d">水泵</text>
+  <text x="855" y="354" text-anchor="middle" font-size="10" fill="#555">叶轮抽水</text>
+
+  <!-- 方框箭头：水柜→压力开关 -->
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#4a5568"/>
+    </marker>
+    <marker id="arrB" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#2b6cb0"/>
+    </marker>
+  </defs>
+  <line x1="190" y1="146" x2="248" y2="146" stroke="#4a5568" stroke-width="2.4" marker-end="url(#arr)"/>
+  <text x="196" y="140" font-size="10" fill="#4a5568">液位 h</text>
+  <line x1="410" y1="146" x2="468" y2="146" stroke="#4a5568" stroke-width="2.4" marker-end="url(#arr)"/>
+  <text x="414" y="140" font-size="10" fill="#4a5568">开关量</text>
+  <line x1="600" y1="146" x2="658" y2="146" stroke="#4a5568" stroke-width="2.4" marker-end="url(#arr)"/>
+  <text x="606" y="140" font-size="10" fill="#4a5568">Q0.0</text>
+  <line x1="760" y1="146" x2="798" y2="146" stroke="#4a5568" stroke-width="2.4" marker-end="url(#arr)"/>
+  <text x="762" y="140" font-size="10" fill="#4a5568">得电</text>
+  <line x1="855" y1="190" x2="855" y2="298" stroke="#4a5568" stroke-width="2.4" marker-end="url(#arr)"/>
+  <text x="862" y="250" font-size="10" fill="#4a5568">同轴联动</text>
+  <line x1="800" y1="340" x2="115" y2="340" stroke="#2b6cb0" stroke-width="3"/>
+  <line x1="115" y1="340" x2="115" y2="210" stroke="#2b6cb0" stroke-width="3" marker-end="url(#arrB)"/>
+  <text x="430" y="332" font-size="11" fill="#2b6cb0">水泵向水柜注水（电机转→泵转→液位升）</text>
+
+  <!-- 动作逻辑说明 -->
+  <rect x="40" y="400" width="870" height="132" rx="8" fill="#ebf8ff" stroke="#63b3ed" stroke-width="1.5"/>
+  <text x="60" y="426" font-size="12.5" font-weight="bold" fill="#2c5282">两位式自动控制动作逻辑（自动开关 SA1 闭合时）</text>
+  <text x="60" y="450" font-size="11.5" fill="#2c5282">① 液位下降到下限（&lt;30%）：低压常开触头闭合 → I0.4=1 → PLC 输出 Q0.0=1 → KM1 吸合 → 电机/水泵起动，液位上升；</text>
+  <text x="60" y="474" font-size="11.5" fill="#2c5282">② 运行位 M0.0 自锁，液位升过下限后触头虽断开，电机仍继续运行（否则会刚一起动就停）；</text>
+  <text x="60" y="498" font-size="11.5" fill="#2c5282">③ 液位上升到上限（&gt;70%）：高压常闭触头断开 → I0.3=0 → 运行位复位 → Q0.0=0 → 电机/水泵停止，液位下降；</text>
+  <text x="60" y="522" font-size="11.5" fill="#2c5282">④ 如此往复：液位始终在上下限之间波动，实现"低启高停"的自动补水（双位控制）。</text>
+</svg>

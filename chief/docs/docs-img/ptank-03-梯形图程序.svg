@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="660" viewBox="0 0 940 660" font-family="Microsoft YaHei, PingFang SC, sans-serif">
+  <rect width="940" height="660" fill="#f7fafc"/>
+  <text x="470" y="30" text-anchor="middle" font-size="19" font-weight="bold" fill="#1a365d">压力水柜液位控制——PLC 梯形图程序</text>
+  <text x="470" y="52" text-anchor="middle" font-size="11" fill="#718096">I0.0 起动  I0.1 停止(常闭)  I0.2 热继电器(常闭)  I0.3 高压触头(常闭)  I0.4 低压触头(常开)  I0.5 自动开关</text>
+
+  <defs></defs>
+
+  <!-- ================= 网络1 ================= -->
+  <rect x="50" y="70" width="850" height="96" rx="6" fill="#ffffff" stroke="#cbd5e0"/>
+  <text x="64" y="90" font-size="10.5" fill="#718096">Network 1：自动模式——低压触头起动位</text>
+  <line x1="130" y1="126" x2="180" y2="126" stroke="#2f855a" stroke-width="2.4"/>
+  <!-- NO I0.5 -->
+  <line x1="180" y1="116" x2="180" y2="136" stroke="#2f855a" stroke-width="2"/>
+  <line x1="188" y1="116" x2="188" y2="136" stroke="#2f855a" stroke-width="2"/>
+  <line x1="188" y1="126" x2="300" y2="126" stroke="#2f855a" stroke-width="2.4"/>
+  <text x="170" y="154" font-size="11" fill="#2f855a">I0.5 自动</text>
+  <!-- NO I0.4 -->
+  <line x1="300" y1="116" x2="300" y2="136" stroke="#2f855a" stroke-width="2"/>
+  <line x1="308" y1="116" x2="308" y2="136" stroke="#2f855a" stroke-width="2"/>
+  <line x1="308" y1="126" x2="600" y2="126" stroke="#2f855a" stroke-width="2.4"/>
+  <text x="292" y="154" font-size="11" fill="#2f855a">I0.4 低压(常开)</text>
+  <!-- coil M0.1 -->
+  <path d="M600 116 A12 12 0 0 1 600 136" fill="none" stroke="#c53030" stroke-width="2.4"/>
+  <path d="M624 116 A12 12 0 0 0 624 136" fill="none" stroke="#c53030" stroke-width="2.4"/>
+  <line x1="624" y1="126" x2="660" y2="126" stroke="#c53030" stroke-width="2.4"/>
+  <text x="628" y="154" font-size="11" fill="#c53030">( M0.1 )</text>
+  <text x="690" y="130" font-size="10.5" fill="#4a5568">= I0.5 且 I0.4（低压闭合才允许自动起动）</text>
+
+  <!-- ================= 网络2 ================= -->
+  <rect x="50" y="176" width="850" height="96" rx="6" fill="#ffffff" stroke="#cbd5e0"/>
+  <text x="64" y="196" font-size="10.5" fill="#718096">Network 2：自动模式——高压触头停止位</text>
+  <line x1="130" y1="232" x2="180" y2="232" stroke="#2f855a" stroke-width="2.4"/>
+  <line x1="180" y1="222" x2="180" y2="242" stroke="#2f855a" stroke-width="2"/>
+  <line x1="188" y1="222" x2="188" y2="242" stroke="#2f855a" stroke-width="2"/>
+  <line x1="188" y1="232" x2="300" y2="232" stroke="#2f855a" stroke-width="2.4"/>
+  <text x="170" y="260" font-size="11" fill="#2f855a">I0.5 自动</text>
+  <!-- NC I0.3 -->
+  <line x1="300" y1="222" x2="300" y2="242" stroke="#2f855a" stroke-width="2"/>
+  <line x1="308" y1="222" x2="308" y2="242" stroke="#2f855a" stroke-width="2"/>
+  <line x1="296" y1="244" x2="312" y2="220" stroke="#2f855a" stroke-width="1.6"/>
+  <line x1="308" y1="232" x2="600" y2="232" stroke="#2f855a" stroke-width="2.4"/>
+  <text x="290" y="260" font-size="11" fill="#2f855a">I0.3 高压(常闭)</text>
+  <path d="M600 222 A12 12 0 0 1 600 242" fill="none" stroke="#c53030" stroke-width="2.4"/>
+  <path d="M624 222 A12 12 0 0 0 624 242" fill="none" stroke="#c53030" stroke-width="2.4"/>
+  <line x1="624" y1="232" x2="660" y2="232" stroke="#c53030" stroke-width="2.4"/>
+  <text x="628" y="260" font-size="11" fill="#c53030">( M0.2 )</text>
+  <text x="690" y="236" font-size="10.5" fill="#4a5568">= I0.5 且"非"I0.3（高压断开→M0.2=1，用于停止）</text>
+
+  <!-- ================= 网络3 ================= -->
+  <rect x="50" y="282" width="850" height="230" rx="6" fill="#ffffff" stroke="#cbd5e0"/>
+  <text x="64" y="302" font-size="10.5" fill="#718096">Network 3：起保停运行位 M0.0（含自锁触点）</text>
+  <!-- 左母线 -->
+  <line x1="90" y1="360" x2="130" y2="360" stroke="#2f855a" stroke-width="2.4"/>
+  <!-- 三支路进线（并联） -->
+  <line x1="130" y1="360" x2="130" y2="330" stroke="#2f855a" stroke-width="2"/>
+  <line x1="130" y1="360" x2="130" y2="390" stroke="#2f855a" stroke-width="2"/>
+  <line x1="130" y1="360" x2="130" y2="420" stroke="#2f855a" stroke-width="2"/>
+  <!-- 支路1 I0.0 -->
+  <line x1="130" y1="330" x2="160" y2="330" stroke="#2f855a" stroke-width="2.4"/>
+  <line x1="160" y1="320" x2="160" y2="340" stroke="#2f855a" stroke-width="2"/>
+  <line x1="168" y1="320" x2="168" y2="340" stroke="#2f855a" stroke-width="2"/>
+  <line x1="168" y1="330" x2="280" y2="330" stroke="#2f855a" stroke-width="2.4"/>
+  <text x="146" y="318" font-size="10.5" fill="#2f855a">I0.0 起动(常开)</text>
+  <!-- 支路2 M0.0 自锁（红色强调） -->
+  <line x1="130" y1="390" x2="160" y2="390" stroke="#c53030" stroke-width="2.6"/>
+  <line x1="160" y1="380" x2="160" y2="400" stroke="#c53030" stroke-width="2.4"/>
+  <line x1="168" y1="380" x2="168" y2="400" stroke="#c53030" stroke-width="2.4"/>
+  <line x1="168" y1="390" x2="280" y2="390" stroke="#c53030" stroke-width="2.6"/>
+  <text x="140" y="410" font-size="10.5" font-weight="bold" fill="#c53030">M0.0 自锁触点（第5步删除此触点）</text>
+  <!-- 支路3 M0.1 -->
+  <line x1="130" y1="420" x2="160" y2="420" stroke="#2f855a" stroke-width="2.4"/>
+  <line x1="160" y1="410" x2="160" y2="430" stroke="#2f855a" stroke-width="2"/>
+  <line x1="168" y1="410" x2="168" y2="430" stroke="#2f855a" stroke-width="2"/>
+  <line x1="168" y1="420" x2="280" y2="420" stroke="#2f855a" stroke-width="2.4"/>
+  <text x="146" y="444" font-size="10.5" fill="#2f855a">M0.1 自动低压</text>
+  <!-- 合并点 -->
+  <line x1="280" y1="330" x2="280" y2="420" stroke="#2f855a" stroke-width="2"/>
+  <line x1="280" y1="360" x2="340" y2="360" stroke="#2f855a" stroke-width="2.4"/>
+  <!-- 串联 I0.1 -->
+  <line x1="340" y1="350" x2="340" y2="370" stroke="#2f855a" stroke-width="2"/>
+  <line x1="348" y1="350" x2="348" y2="370" stroke="#2f855a" stroke-width="2"/>
+  <line x1="348" y1="360" x2="430" y2="360" stroke="#2f855a" stroke-width="2.4"/>
+  <text x="326" y="386" font-size="10.5" fill="#2f855a">I0.1 停止(常闭)</text>
+  <!-- 串联 I0.2 -->
+  <line x1="430" y1="350" x2="430" y2="370" stroke="#2f855a" stroke-width="2"/>
+  <line x1="438" y1="350" x2="438" y2="370" stroke="#2f855a" stroke-width="2"/>
+  <line x1="438" y1="360" x2="520" y2="360" stroke="#2f855a" stroke-width="2.4"/>
+  <text x="418" y="386" font-size="10.5" fill="#2f855a">I0.2 FR(常闭)</text>
+  <!-- 串联 NC M0.2 -->
+  <line x1="520" y1="350" x2="520" y2="370" stroke="#2f855a" stroke-width="2"/>
+  <line x1="528" y1="350" x2="528" y2="370" stroke="#2f855a" stroke-width="2"/>
+  <line x1="516" y1="372" x2="532" y2="348" stroke="#2f855a" stroke-width="1.6"/>
+  <line x1="528" y1="360" x2="650" y2="360" stroke="#2f855a" stroke-width="2.4"/>
+  <text x="506" y="386" font-size="10.5" fill="#2f855a">I0.3 高压停止(常闭)</text>
+  <!-- 线圈 M0.0 -->
+  <path d="M650 350 A12 12 0 0 1 650 370" fill="none" stroke="#c53030" stroke-width="2.4"/>
+  <path d="M674 350 A12 12 0 0 0 674 370" fill="none" stroke="#c53030" stroke-width="2.4"/>
+  <line x1="674" y1="360" x2="710" y2="360" stroke="#c53030" stroke-width="2.4"/>
+  <text x="678" y="388" font-size="11" fill="#c53030">( M0.0 运行位 )</text>
+  <text x="724" y="356" font-size="10.5" fill="#4a5568">运行位 =（I0.0 或 M0.0 或 M0.1）</text>
+  <text x="724" y="374" font-size="10.5" fill="#4a5568">且 I0.1 且 I0.2 且 非 M0.2</text>
+
+  <!-- ================= 网络4 ================= -->
+  <rect x="50" y="522" width="850" height="96" rx="6" fill="#ffffff" stroke="#cbd5e0"/>
+  <text x="64" y="542" font-size="10.5" fill="#718096">Network 4：输出——驱动 KM1 主接触器（水泵电机）</text>
+  <line x1="130" y1="578" x2="180" y2="578" stroke="#2f855a" stroke-width="2.4"/>
+  <line x1="180" y1="568" x2="180" y2="588" stroke="#2f855a" stroke-width="2"/>
+  <line x1="188" y1="568" x2="188" y2="588" stroke="#2f855a" stroke-width="2"/>
+  <line x1="188" y1="578" x2="600" y2="578" stroke="#2f855a" stroke-width="2.4"/>
+  <text x="168" y="606" font-size="11" fill="#2f855a">M0.0 运行位</text>
+  <path d="M600 568 A12 12 0 0 1 600 588" fill="none" stroke="#c53030" stroke-width="2.4"/>
+  <path d="M624 568 A12 12 0 0 0 624 588" fill="none" stroke="#c53030" stroke-width="2.4"/>
+  <line x1="624" y1="578" x2="660" y2="578" stroke="#c53030" stroke-width="2.4"/>
+  <text x="628" y="606" font-size="11" fill="#c53030">( Q0.0 → KM1 )</text>
+  <text x="670" y="582" font-size="10.5" fill="#4a5568">Q0.0=1 → KM1 得电 → 主触头闭合 → 电机转</text>
+</svg>
