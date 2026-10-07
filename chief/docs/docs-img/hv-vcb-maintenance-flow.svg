@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="620" viewBox="0 0 940 620" font-family="Microsoft YaHei, SimHei, sans-serif">
+  <rect width="940" height="620" fill="#ffffff"/>
+  <text x="470" y="28" font-size="19" font-weight="bold" text-anchor="middle" fill="#1a252f">高压真空断路器检修流程</text>
+
+  <!-- 左侧：检修（停电）流程 -->
+  <text x="250" y="58" font-size="14" font-weight="bold" text-anchor="middle" fill="#c0392b">检修（由运行转检修）</text>
+
+  <g font-size="12.5" fill="#1a252f">
+    <!-- 步骤框：x=80,w=340,h=32, 起始 y=70, 间距 46 -->
+    <rect x="80" y="70"  width="340" height="32" rx="5" fill="#fdeaea" stroke="#c0392b"/>
+    <text x="96" y="91">① 断开断路器（分闸），确认已无负荷</text>
+
+    <rect x="80" y="116" width="340" height="32" rx="5" fill="#fdeaea" stroke="#c0392b"/>
+    <text x="96" y="137">② 用高压验电器逐相验电，确认无电压</text>
+
+    <rect x="80" y="162" width="340" height="32" rx="5" fill="#fdeaea" stroke="#c0392b"/>
+    <text x="96" y="183">③ 用放电棒对地放电，泄放残余电荷</text>
+
+    <rect x="80" y="208" width="340" height="32" rx="5" fill="#eef2f5" stroke="#5a6a75"/>
+    <text x="96" y="229">④ 将手车由工作位摇到试验位（一次隔离断开）</text>
+
+    <rect x="80" y="254" width="340" height="32" rx="5" fill="#eef2f5" stroke="#5a6a75"/>
+    <text x="96" y="275">⑤ 打开接地开关电磁锁（解锁）</text>
+
+    <rect x="80" y="300" width="340" height="32" rx="5" fill="#eef2f5" stroke="#5a6a75"/>
+    <text x="96" y="321">⑥ 插入手柄顺时针摇 5 圈，合上接地开关</text>
+
+    <rect x="80" y="346" width="340" height="32" rx="5" fill="#eef2f5" stroke="#5a6a75"/>
+    <text x="96" y="367">⑦ 打开柜门（接地后方可开门）</text>
+
+    <rect x="80" y="392" width="340" height="32" rx="5" fill="#eef2f5" stroke="#5a6a75"/>
+    <text x="96" y="413">⑧ 拔掉二次插头，切断控制/信号回路</text>
+
+    <rect x="80" y="438" width="340" height="32" rx="5" fill="#eef2f5" stroke="#5a6a75"/>
+    <text x="96" y="459">⑨ 将手车摇到检修位（一、二次全断）</text>
+
+    <rect x="80" y="484" width="340" height="32" rx="5" fill="#eaf3ea" stroke="#20a030"/>
+    <text x="96" y="505">⑩ 拉出断路器小车，进行检修作业</text>
+  </g>
+
+  <!-- 竖直箭头 -->
+  <g stroke="#7a8494" stroke-width="2" fill="#7a8494">
+    <line x1="250" y1="102" x2="250" y2="116"/><polygon points="250,118 245,108 255,108"/>
+    <line x1="250" y1="148" x2="250" y2="162"/><polygon points="250,164 245,154 255,154"/>
+    <line x1="250" y1="194" x2="250" y2="208"/><polygon points="250,210 245,200 255,200"/>
+    <line x1="250" y1="240" x2="250" y2="254"/><polygon points="250,256 245,246 255,246"/>
+    <line x1="250" y1="286" x2="250" y2="300"/><polygon points="250,302 245,292 255,292"/>
+    <line x1="250" y1="332" x2="250" y2="346"/><polygon points="250,348 245,338 255,338"/>
+    <line x1="250" y1="378" x2="250" y2="392"/><polygon points="250,394 245,384 255,384"/>
+    <line x1="250" y1="424" x2="250" y2="438"/><polygon points="250,440 245,430 255,430"/>
+    <line x1="250" y1="470" x2="250" y2="484"/><polygon points="250,486 245,476 255,476"/>
+  </g>
+
+  <!-- 右侧：五防/安全要点 -->
+  <g>
+    <rect x="470" y="70" width="440" height="446" rx="6" fill="#f7f9fb" stroke="#b0bcc4"/>
+    <text x="490" y="96" font-size="14" font-weight="bold" fill="#1a252f">检修中的安全要点</text>
+    <g font-size="12.5" fill="#333">
+      <text x="490" y="124">· 停电 → 验电 → 放电 → 接地：顺序不可颠倒</text>
+      <text x="490" y="150">· 验电应逐相进行，先在有电设备上验证验电器良好</text>
+      <text x="490" y="176">· 合接地开关后，断路器无法合闸、手车无法摇回工作位（五防④）</text>
+      <text x="490" y="202">· 柜门与接地开关联锁，未接地不得开门（五防⑤）</text>
+      <text x="490" y="228">· 拔掉二次插头后方可移动手车，避免二次回路带电拉弧</text>
+      <text x="490" y="254">· 检修应两人及以上进行，设专人监护，悬挂标示牌、装设遮栏</text>
+      <text x="490" y="280">· 严禁带负荷拉合隔离开关；严禁带电挂接地线</text>
+    </g>
+
+    <rect x="490" y="302" width="400" height="196" rx="6" fill="#eef7ee" stroke="#20a030"/>
+    <text x="510" y="326" font-size="13.5" font-weight="bold" fill="#1b7a1b">复役（由检修转运行，逆顺序）</text>
+    <g font-size="12" fill="#333">
+      <text x="510" y="352">① 装回手车并插入二次插头</text>
+      <text x="510" y="374">② 关闭柜门</text>
+      <text x="510" y="396">③ 逆时针摇 5 圈，断开接地开关、拆除接地</text>
+      <text x="510" y="418">④ 将手车摇到试验位（二次接通，可做试验）</text>
+      <text x="510" y="440">⑤ 将手车摇到工作位（一次接通）</text>
+      <text x="510" y="462">⑥ 检查绝缘、保护正常后，方可合闸送电</text>
+      <text x="510" y="486" fill="#c0392b">注：接地开关未断开、柜门未关闭前，禁止摇回工作位</text>
+    </g>
+  </g>
+</svg>

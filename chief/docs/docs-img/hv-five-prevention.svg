@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="470" viewBox="0 0 960 470" font-family="Microsoft YaHei, SimHei, sans-serif">
+  <rect width="960" height="470" fill="#ffffff"/>
+  <text x="480" y="28" font-size="19" font-weight="bold" text-anchor="middle" fill="#1a252f">高压电气“五防”及具体实现措施</text>
+
+  <!-- 表头 -->
+  <rect x="20" y="46" width="60"  height="34" fill="#2c3a45"/>
+  <rect x="80" y="46" width="250" height="34" fill="#2c3a45"/>
+  <rect x="330" y="46" width="300" height="34" fill="#2c3a45"/>
+  <rect x="630" y="46" width="310" height="34" fill="#2c3a45"/>
+  <g fill="#ffffff" font-size="13" font-weight="bold" text-anchor="middle">
+    <text x="50"  y="68">序号</text>
+    <text x="205" y="68">“五防”内容</text>
+    <text x="480" y="68">开关柜上的具体措施</text>
+    <text x="785" y="68">本仿真中的互锁表现</text>
+  </g>
+
+  <!-- 行 1 -->
+  <rect x="20" y="80" width="60"  height="70" fill="#eef2f5" stroke="#b0bcc4"/>
+  <rect x="80" y="80" width="250" height="70" fill="#ffffff" stroke="#b0bcc4"/>
+  <rect x="330" y="80" width="300" height="70" fill="#ffffff" stroke="#b0bcc4"/>
+  <rect x="630" y="80" width="310" height="70" fill="#f7fbf7" stroke="#b0bcc4"/>
+  <g font-size="12.5" fill="#1a252f">
+    <text x="50" y="120" text-anchor="middle" font-weight="bold" fill="#c0392b">①</text>
+    <text x="92" y="110">防止误分、误合</text><text x="92" y="128">断路器</text>
+    <text x="342" y="104">核对操作票与设备状态；合闸前确认</text>
+    <text x="342" y="122">储能弹簧已储能、控制回路正确；</text>
+    <text x="342" y="140">采用“合闸/分闸”双按钮、防误碰</text>
+    <text x="642" y="104">断路器合闸要求储能到位（弹簧未</text>
+    <text x="642" y="122">储能不动作）；手动/自动转换开关</text>
+    <text x="642" y="140">决定是否由保护/自动装置控制</text>
+  </g>
+
+  <!-- 行 2 -->
+  <rect x="20" y="150" width="60"  height="78" fill="#eef2f5" stroke="#b0bcc4"/>
+  <rect x="80" y="150" width="250" height="78" fill="#ffffff" stroke="#b0bcc4"/>
+  <rect x="330" y="150" width="300" height="78" fill="#ffffff" stroke="#b0bcc4"/>
+  <rect x="630" y="150" width="310" height="78" fill="#f7fbf7" stroke="#b0bcc4"/>
+  <g font-size="12.5" fill="#1a252f">
+    <text x="50" y="194" text-anchor="middle" font-weight="bold" fill="#c0392b">②</text>
+    <text x="92" y="186">防止带负荷拉、合</text><text x="92" y="204">隔离开关（手车）</text>
+    <text x="342" y="180">断路器必须在分闸状态才能摇动手车</text>
+    <text x="342" y="198">或拉合隔离开关；手车与断路器之间</text>
+    <text x="342" y="216">设机械/电气联锁</text>
+    <text x="642" y="180">合闸供电（带负荷）时，手车被联锁，</text>
+    <text x="642" y="198">无法由工作位摇到试验位；</text>
+    <text x="642" y="216">→ 对应演示流程 2 第 3 题</text>
+  </g>
+
+  <!-- 行 3 -->
+  <rect x="20" y="228" width="60"  height="78" fill="#eef2f5" stroke="#b0bcc4"/>
+  <rect x="80" y="228" width="250" height="78" fill="#ffffff" stroke="#b0bcc4"/>
+  <rect x="330" y="228" width="300" height="78" fill="#ffffff" stroke="#b0bcc4"/>
+  <rect x="630" y="228" width="310" height="78" fill="#f7fbf7" stroke="#b0bcc4"/>
+  <g font-size="12.5" fill="#1a252f">
+    <text x="50" y="272" text-anchor="middle" font-weight="bold" fill="#c0392b">③</text>
+    <text x="92" y="264">防止带电挂（合）</text><text x="92" y="282">接地线（接地开关）</text>
+    <text x="342" y="258">验明确无电压后才能合接地开关；</text>
+    <text x="342" y="276">接地开关电磁锁与手车位置、线路</text>
+    <text x="342" y="294">带电检测联锁</text>
+    <text x="642" y="258">手车在工作位（一次接通、线路可能</text>
+    <text x="642" y="276">带电）时，接地开关电磁锁闭锁，无法</text>
+    <text x="642" y="294">合上接地开关 → 对应流程 2 第 6 题</text>
+  </g>
+
+  <!-- 行 4 -->
+  <rect x="20" y="306" width="60"  height="78" fill="#eef2f5" stroke="#b0bcc4"/>
+  <rect x="80" y="306" width="250" height="78" fill="#ffffff" stroke="#b0bcc4"/>
+  <rect x="330" y="306" width="300" height="78" fill="#ffffff" stroke="#b0bcc4"/>
+  <rect x="630" y="306" width="310" height="78" fill="#f7fbf7" stroke="#b0bcc4"/>
+  <g font-size="12.5" fill="#1a252f">
+    <text x="50" y="350" text-anchor="middle" font-weight="bold" fill="#c0392b">④</text>
+    <text x="92" y="342">防止带接地线（接地</text><text x="92" y="360">开关）合断路器</text>
+    <text x="342" y="336">接地开关合上后，断路器合闸回路被</text>
+    <text x="342" y="354">闭锁，手车也不能摇回工作位</text>
+    <text x="642" y="336">接地开关合上后，手车无法由试验位</text>
+    <text x="642" y="354">摇回工作位、断路器拒绝合闸</text>
+    <text x="642" y="372">→ 对应流程 2 第 10 题</text>
+  </g>
+
+  <!-- 行 5 -->
+  <rect x="20" y="384" width="60"  height="70" fill="#eef2f5" stroke="#b0bcc4"/>
+  <rect x="80" y="384" width="250" height="70" fill="#ffffff" stroke="#b0bcc4"/>
+  <rect x="330" y="384" width="300" height="70" fill="#ffffff" stroke="#b0bcc4"/>
+  <rect x="630" y="384" width="310" height="70" fill="#f7fbf7" stroke="#b0bcc4"/>
+  <g font-size="12.5" fill="#1a252f">
+    <text x="50" y="424" text-anchor="middle" font-weight="bold" fill="#c0392b">⑤</text>
+    <text x="92" y="416">防止误入带电间隔</text>
+    <text x="342" y="410">柜门与接地开关联锁：未可靠接地时</text>
+    <text x="342" y="428">柜门闭锁，禁止开门进入柜内</text>
+    <text x="642" y="410">接地开关未合（未接地）时，柜门被</text>
+    <text x="642" y="428">闭锁打不开 → 对应流程 2 第 8 题</text>
+  </g>
+</svg>
