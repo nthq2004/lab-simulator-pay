@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="480" viewBox="0 0 940 480" font-family="Microsoft YaHei, PingFang SC, sans-serif">
+  <rect width="940" height="480" fill="#f7fafc"/>
+  <text x="470" y="32" text-anchor="middle" font-size="19" font-weight="bold" fill="#1a365d">电磁制动器（失电制动型）结构原理</text>
+  <text x="470" y="54" text-anchor="middle" font-size="11.5" fill="#718096">失电：弹簧施力 → 摩擦片抱闸（安全）；得电：电磁吸力克服弹簧 → 松闸（运行）</text>
+
+  <defs>
+    <marker id="a3" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#4a5568"/>
+    </marker>
+    <marker id="a3r" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#c0392b"/>
+    </marker>
+    <marker id="a3g" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#2a8a4a"/>
+    </marker>
+  </defs>
+
+  <!-- ── 左：失电抱闸 ── -->
+  <rect x="30" y="86" width="410" height="300" rx="8" fill="#fdeaea" stroke="#c0392b" stroke-width="1.8"/>
+  <text x="235" y="112" text-anchor="middle" font-size="14" font-weight="bold" fill="#922b21">① 失电状态：弹簧抱闸</text>
+
+  <!-- 电机轴 -->
+  <line x1="70" y1="230" x2="400" y2="230" stroke="#555" stroke-width="8"/>
+  <text x="70" y="260" font-size="10" fill="#666">电机轴 / 卷筒轴</text>
+
+  <!-- 制动鼓 -->
+  <rect x="150" y="196" width="70" height="68" rx="6" fill="#cfd8e0" stroke="#555" stroke-width="1.8"/>
+  <text x="185" y="236" text-anchor="middle" font-size="10" fill="#333">制动鼓</text>
+
+  <!-- 摩擦片 -->
+  <rect x="220" y="188" width="20" height="84" rx="3" fill="#8a6a3a" stroke="#5a4520" stroke-width="1.4"/>
+  <text x="248" y="184" font-size="10" fill="#5a4520">摩擦片</text>
+
+  <!-- 衔铁 -->
+  <rect x="240" y="188" width="24" height="84" rx="3" fill="#b9c2cc" stroke="#555" stroke-width="1.6"/>
+  <text x="268" y="290" font-size="10" fill="#555">衔铁</text>
+
+  <!-- 弹簧 -->
+  <path d="M300 230 q8 -10 16 0 q8 10 16 0 q8 -10 16 0" fill="none" stroke="#c0392b" stroke-width="2.4"/>
+  <text x="300" y="205" font-size="10" fill="#c0392b">制动弹簧</text>
+
+  <!-- 线圈（失电） -->
+  <rect x="360" y="176" width="60" height="108" rx="6" fill="#e8e8e8" stroke="#888" stroke-width="1.6"/>
+  <text x="390" y="172" text-anchor="middle" font-size="10" fill="#666">电磁线圈</text>
+  <text x="390" y="236" text-anchor="middle" font-size="10" fill="#999">失电</text>
+
+  <line x1="330" y1="230" x2="230" y2="230" stroke="#c0392b" stroke-width="2.6" marker-end="url(#a3r)"/>
+  <text x="250" y="330" text-anchor="middle" font-size="11.5" fill="#c0392b">弹簧力 &gt; 电磁力 → 摩擦片抱紧 → 制动</text>
+
+  <!-- ── 右：得电松闸 ── -->
+  <rect x="500" y="86" width="410" height="300" rx="8" fill="#eaf5ec" stroke="#2a8a4a" stroke-width="1.8"/>
+  <text x="705" y="112" text-anchor="middle" font-size="14" font-weight="bold" fill="#205a30">② 得电状态：电磁松闸</text>
+
+  <line x1="540" y1="230" x2="870" y2="230" stroke="#555" stroke-width="8"/>
+  <text x="540" y="260" font-size="10" fill="#666">电机轴 / 卷筒轴</text>
+
+  <rect x="620" y="196" width="70" height="68" rx="6" fill="#cfd8e0" stroke="#555" stroke-width="1.8"/>
+  <text x="655" y="236" text-anchor="middle" font-size="10" fill="#333">制动鼓</text>
+
+  <rect x="700" y="188" width="20" height="84" rx="3" fill="#8a6a3a" stroke="#5a4520" stroke-width="1.4"/>
+  <rect x="744" y="188" width="24" height="84" rx="3" fill="#b9c2cc" stroke="#555" stroke-width="1.6"/>
+  <text x="756" y="290" font-size="10" fill="#555">衔铁（吸合）</text>
+
+  <!-- 弹簧被压缩 -->
+  <path d="M790 230 q5 -7 10 0 q5 7 10 0 q5 -7 10 0 q5 7 10 0 q5 -7 10 0" fill="none" stroke="#c0392b" stroke-width="2.4"/>
+  <text x="790" y="205" font-size="10" fill="#c0392b">弹簧压缩</text>
+
+  <!-- 线圈得电 -->
+  <rect x="836" y="176" width="60" height="108" rx="6" fill="#ffdede" stroke="#e03030" stroke-width="3"/>
+  <text x="866" y="172" text-anchor="middle" font-size="10" fill="#c0392b">电磁线圈</text>
+  <text x="866" y="236" text-anchor="middle" font-size="11" font-weight="bold" fill="#c0392b">得电</text>
+
+  <line x1="744" y1="230" x2="826" y2="230" stroke="#2a8a4a" stroke-width="2.6" marker-end="url(#a3g)"/>
+  <text x="705" y="330" text-anchor="middle" font-size="11.5" fill="#2a8a4a">电磁力 &gt; 弹簧力 → 衔铁吸合 → 松闸，可自由转动</text>
+
+  <!-- 底部要点 -->
+  <rect x="30" y="404" width="880" height="62" rx="8" fill="#ebf8ff" stroke="#63b3ed" stroke-width="1.5"/>
+  <text x="50" y="430" font-size="11.5" font-weight="bold" fill="#2c5282">要点：</text>
+  <text x="95" y="430" font-size="11" fill="#2c5282">① "失电制动"是安全设计——一旦断电或控制回路故障，重物不会自行下坠；</text>
+  <text x="95" y="452" font-size="11" fill="#2c5282">② 吸合气隙、弹簧力、摩擦片状态决定制动/松闸性能，是检修重点。</text>
+</svg>

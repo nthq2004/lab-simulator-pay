@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="680" viewBox="0 0 940 680" font-family="Microsoft YaHei, PingFang SC, sans-serif">
+  <rect width="940" height="680" fill="#f7fafc"/>
+  <text x="470" y="32" text-anchor="middle" font-size="19" font-weight="bold" fill="#1a365d">电磁制动器故障判断流程</text>
+  <text x="470" y="54" text-anchor="middle" font-size="11.5" fill="#718096">以"制动器松不开"为例：先查电气（得电—电压—线圈电阻），再查机械（气隙、卡涩、弹簧）</text>
+
+  <defs>
+    <marker id="f5" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#4a5568"/>
+    </marker>
+  </defs>
+
+  <!-- 起点 -->
+  <rect x="300" y="80" width="340" height="46" rx="23" fill="#c0392b" stroke="#7b241c" stroke-width="1.5"/>
+  <text x="470" y="108" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#fff">现象：手柄离零、电机通电，制动器不松、机构不动</text>
+  <line x1="470" y1="126" x2="470" y2="156" stroke="#4a5568" stroke-width="2.2" marker-end="url(#f5)"/>
+
+  <!-- 判断1：ZDC 是否得电 -->
+  <polygon points="470,158 620,206 470,254 320,206" fill="#fff5e6" stroke="#d69e2e" stroke-width="1.8"/>
+  <text x="470" y="202" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#8a6a1a">ZDC 制动接触器是否得电（吸合）？</text>
+  <text x="470" y="220" text-anchor="middle" font-size="10" fill="#8a6a1a">观察吸合指示 / 触点状态</text>
+
+  <!-- 否 → 查控制回路 -->
+  <line x1="320" y1="206" x2="210" y2="206" stroke="#4a5568" stroke-width="2.2" marker-end="url(#f5)"/>
+  <text x="255" y="198" font-size="11" fill="#c0392b">否</text>
+  <rect x="30" y="176" width="180" height="60" rx="6" fill="#fdeaea" stroke="#c0392b" stroke-width="1.6"/>
+  <text x="120" y="200" text-anchor="middle" font-size="10.5" fill="#922b21">查 ZDC 控制回路：</text>
+  <text x="120" y="220" text-anchor="middle" font-size="10" fill="#922b21">LK7、ZC/FC 常开、线圈、电压</text>
+
+  <!-- 是 → 判断2 -->
+  <line x1="470" y1="254" x2="470" y2="284" stroke="#4a5568" stroke-width="2.2" marker-end="url(#f5)"/>
+  <text x="482" y="274" font-size="11" fill="#2a8a4a">是</text>
+
+  <!-- 判断2：线圈电压 -->
+  <polygon points="470,286 620,334 470,382 320,334" fill="#fff5e6" stroke="#d69e2e" stroke-width="1.8"/>
+  <text x="470" y="330" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#8a6a1a">测量 ZDQ 线圈两端有无电压？</text>
+  <text x="470" y="348" text-anchor="middle" font-size="10" fill="#8a6a1a">（得电后应接近直流额定电压）</text>
+
+  <!-- 无电压 → 回路断线 -->
+  <line x1="320" y1="334" x2="210" y2="334" stroke="#4a5568" stroke-width="2.2" marker-end="url(#f5)"/>
+  <text x="255" y="326" font-size="11" fill="#c0392b">无</text>
+  <rect x="30" y="304" width="180" height="60" rx="6" fill="#fdeaea" stroke="#c0392b" stroke-width="1.6"/>
+  <text x="120" y="328" text-anchor="middle" font-size="10.5" fill="#922b21">查制动回路：ZDC 触点、</text>
+  <text x="120" y="348" text-anchor="middle" font-size="10" fill="#922b21">Rdc、接线端子是否松脱</text>
+
+  <!-- 有电压 → 查线圈 -->
+  <line x1="470" y1="382" x2="470" y2="412" stroke="#4a5568" stroke-width="2.2" marker-end="url(#f5)"/>
+  <text x="482" y="402" font-size="11" fill="#2a8a4a">有</text>
+
+  <!-- 断电测阻 -->
+  <rect x="330" y="414" width="280" height="52" rx="6" fill="#eef2f7" stroke="#4a6a8a" stroke-width="1.8"/>
+  <text x="470" y="436" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#27496d">断电，用万用表电阻档测线圈 a1–a2</text>
+  <text x="470" y="455" text-anchor="middle" font-size="10" fill="#4a6a8a">建议 2kΩ 档（线圈约 1kΩ）</text>
+  <line x1="470" y1="466" x2="470" y2="496" stroke="#4a5568" stroke-width="2.2" marker-end="url(#f5)"/>
+
+  <!-- 三种结果 -->
+  <rect x="120" y="498" width="180" height="76" rx="6" fill="#fdeaea" stroke="#c0392b" stroke-width="1.8"/>
+  <text x="210" y="522" text-anchor="middle" font-size="11" font-weight="bold" fill="#922b21">O.L（无穷大）</text>
+  <text x="210" y="542" text-anchor="middle" font-size="10" fill="#922b21">线圈内部断线</text>
+  <text x="210" y="560" text-anchor="middle" font-size="10" fill="#922b21">→ 更换线圈</text>
+
+  <rect x="380" y="498" width="180" height="76" rx="6" fill="#f7f3e8" stroke="#b08a3a" stroke-width="1.8"/>
+  <text x="470" y="522" text-anchor="middle" font-size="11" font-weight="bold" fill="#8a6a1a">接近 0Ω</text>
+  <text x="470" y="542" text-anchor="middle" font-size="10" fill="#8a6a1a">线圈短路</text>
+  <text x="470" y="560" text-anchor="middle" font-size="10" fill="#8a6a1a">→ 查电源是否过流</text>
+
+  <rect x="640" y="498" width="180" height="76" rx="6" fill="#eaf5ec" stroke="#2a8a4a" stroke-width="1.8"/>
+  <text x="730" y="522" text-anchor="middle" font-size="11" font-weight="bold" fill="#205a30">约 1kΩ（正常）</text>
+  <text x="730" y="542" text-anchor="middle" font-size="10" fill="#205a30">电气正常 → 查机械：</text>
+  <text x="730" y="560" text-anchor="middle" font-size="10" fill="#205a30">气隙过大 / 卡涩 / 弹簧</text>
+
+  <line x1="470" y1="466" x2="210" y2="498" stroke="#4a5568" stroke-width="1.6"/>
+  <line x1="470" y1="466" x2="730" y2="498" stroke="#4a5568" stroke-width="1.6"/>
+
+  <!-- 补充：其它常见故障 -->
+  <rect x="30" y="596" width="880" height="70" rx="8" fill="#ebf8ff" stroke="#63b3ed" stroke-width="1.5"/>
+  <text x="50" y="622" font-size="11.5" font-weight="bold" fill="#2c5282">其它常见故障：</text>
+  <text x="50" y="644" font-size="10.5" fill="#2c5282">刹不住（弹簧疲劳/摩擦片磨损油污/气隙过大）；线圈过热或烧毁（3SJ 触点粘连使经济电阻长期被短接）；</text>
+  <text x="50" y="662" font-size="10.5" fill="#2c5282">抱闸迟缓（二极管击穿、放电回路开路）——均应先断电、验电、机械固定负载后再检修。</text>
+</svg>

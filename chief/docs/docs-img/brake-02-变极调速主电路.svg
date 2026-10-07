@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="560" viewBox="0 0 940 560" font-family="Microsoft YaHei, PingFang SC, sans-serif">
+  <rect width="940" height="560" fill="#f7fafc"/>
+  <text x="470" y="32" text-anchor="middle" font-size="19" font-weight="bold" fill="#1a365d">三速变极锚机主电路（变极调速拖动）</text>
+  <text x="470" y="54" text-anchor="middle" font-size="11.5" fill="#718096">改变定子绕组极数获得低/中/高三档转速：16 极低速、8 极中速、4 极高速，逐级起动以限制起动电流</text>
+
+  <!-- 三相电源 -->
+  <text x="60" y="96" font-size="12" font-weight="bold" fill="#333">AC380V</text>
+  <line x1="60" y1="110" x2="60" y2="430" stroke="#c0392b" stroke-width="2.2"/>
+  <line x1="100" y1="110" x2="100" y2="430" stroke="#f0a020" stroke-width="2.2"/>
+  <line x1="140" y1="110" x2="140" y2="430" stroke="#2a8acc" stroke-width="2.2"/>
+  <text x="66" y="124" font-size="10" fill="#c0392b">L1</text>
+  <text x="106" y="124" font-size="10" fill="#b8860b">L2</text>
+  <text x="146" y="124" font-size="10" fill="#2a8acc">L3</text>
+
+  <!-- QF 空气开关 -->
+  <rect x="40" y="140" width="130" height="34" rx="4" fill="#fafaf5" stroke="#666" stroke-width="1.8"/>
+  <text x="105" y="162" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#333">Q  空气开关</text>
+  <line x1="60" y1="174" x2="60" y2="200" stroke="#c0392b" stroke-width="2.2"/>
+  <line x1="100" y1="174" x2="100" y2="200" stroke="#f0a020" stroke-width="2.2"/>
+  <line x1="140" y1="174" x2="140" y2="200" stroke="#2a8acc" stroke-width="2.2"/>
+
+  <!-- 电流互感器 -->
+  <rect x="40" y="200" width="130" height="30" rx="4" fill="#eef2f7" stroke="#4a6a8a" stroke-width="1.6"/>
+  <text x="105" y="220" text-anchor="middle" font-size="10.5" fill="#27496d">2LH 电流互感器 → GLJ</text>
+  <line x1="60" y1="230" x2="60" y2="256" stroke="#c0392b" stroke-width="2.2"/>
+  <line x1="100" y1="230" x2="100" y2="256" stroke="#f0a020" stroke-width="2.2"/>
+  <line x1="140" y1="230" x2="140" y2="256" stroke="#2a8acc" stroke-width="2.2"/>
+
+  <!-- ZC / FC 正反转 -->
+  <rect x="40" y="256" width="130" height="34" rx="4" fill="#fdeaea" stroke="#c0392b" stroke-width="1.8"/>
+  <text x="105" y="278" text-anchor="middle" font-size="11" font-weight="bold" fill="#922b21">ZC（正转）∥ FC（反转）</text>
+  <line x1="60" y1="290" x2="60" y2="310" stroke="#c0392b" stroke-width="2.2"/>
+  <line x1="100" y1="290" x2="100" y2="316" stroke="#f0a020" stroke-width="2.2"/>
+  <line x1="140" y1="290" x2="140" y2="322" stroke="#2a8acc" stroke-width="2.2"/>
+
+  <!-- 公共母线 -->
+  <line x1="60" y1="310" x2="500" y2="310" stroke="#c0392b" stroke-width="2.2"/>
+  <line x1="100" y1="316" x2="500" y2="316" stroke="#f0a020" stroke-width="2.2"/>
+  <line x1="140" y1="322" x2="500" y2="322" stroke="#2a8acc" stroke-width="2.2"/>
+  <text x="300" y="340" text-anchor="middle" font-size="10" fill="#666">方向接触器出口 → 公共母线</text>
+
+  <!-- 低速支路 -->
+  <text x="600" y="120" font-size="12" font-weight="bold" fill="#205a30">低速：16 极</text>
+  <text x="600" y="140" font-size="10.5" fill="#444">母线 → 1KR 热继电器 → 1C</text>
+  <text x="600" y="158" font-size="10.5" fill="#444">→ 电机 16D1/2/3</text>
+  <text x="600" y="176" font-size="10" fill="#888">转速最低，力矩大，用于起锚重载</text>
+
+  <!-- 中速支路 -->
+  <text x="600" y="230" font-size="12" font-weight="bold" fill="#8a6a1a">中速：8 极</text>
+  <text x="600" y="250" font-size="10.5" fill="#444">母线 → 2KR → 2C1 → 电机 8D1/2/3</text>
+  <text x="600" y="268" font-size="10.5" fill="#444">同时 2C2 短接 16D1/2/3 成星点</text>
+  <text x="600" y="286" font-size="10" fill="#888">先 2C2 短接，后 2C1 通电（次序固定）</text>
+
+  <!-- 高速支路 -->
+  <text x="600" y="340" font-size="12" font-weight="bold" fill="#922b21">高速：4 极</text>
+  <text x="600" y="360" font-size="10.5" fill="#444">母线 → 3C → 电机 4D1/2/3</text>
+  <text x="600" y="378" font-size="10" fill="#888">1SJ 断电延时后接通，保证逐级起动</text>
+
+  <!-- 变极电机 -->
+  <circle cx="480" cy="440" r="70" fill="#eef2f7" stroke="#4a6a8a" stroke-width="2.5"/>
+  <circle cx="480" cy="440" r="24" fill="#dfe7ef" stroke="#4a6a8a" stroke-width="1.5"/>
+  <text x="480" y="446" text-anchor="middle" font-size="15" font-weight="bold" fill="#27496d">M</text>
+  <text x="480" y="524" text-anchor="middle" font-size="11.5" fill="#27496d">变极三相异步电动机</text>
+  <text x="480" y="542" text-anchor="middle" font-size="10" fill="#666">16 / 8 / 4 极 → 低 / 中 / 高 三档</text>
+  <line x1="500" y1="316" x2="540" y2="400" stroke="#c0392b" stroke-width="2" marker-end="url(#a1)"/>
+  <line x1="480" y1="370" x2="480" y2="412" stroke="#666" stroke-width="2" marker-end="url(#a1)"/>
+  <text x="505" y="390" font-size="10" fill="#888">三速绕组</text>
+
+  <rect x="40" y="460" width="360" height="72" rx="8" fill="#ebf8ff" stroke="#63b3ed" stroke-width="1.5"/>
+  <text x="60" y="486" font-size="11.5" font-weight="bold" fill="#2c5282">变极调速特点</text>
+  <text x="60" y="508" font-size="10.5" fill="#2c5282">结构简单、可靠、维护方便；有级调速（三档），配合逐级起动，</text>
+  <text x="60" y="526" font-size="10.5" fill="#2c5282">广泛用于锚机、绞缆机等甲板机械。</text>
+</svg>
