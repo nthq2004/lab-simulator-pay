@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 400" font-family="Microsoft YaHei, SimHei, sans-serif">
+  <rect width="780" height="400" fill="#ffffff"/>
+  <text x="390" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#1a252f">图 5　灯光旋转法（三灯）原理</text>
+
+  <!-- 圆与旋转方向 -->
+  <circle cx="250" cy="210" r="120" fill="none" stroke="#c8d0d8" stroke-width="2" stroke-dasharray="6 6"/>
+  <path d="M 250 60 A 150 150 0 0 1 400 210" fill="none" stroke="#2e7d32" stroke-width="2.5"/>
+  <polygon points="400,210 391,198 406,198" fill="#2e7d32"/>
+
+  <!-- 三灯（亮度沿圆周旋转） -->
+  <circle cx="250" cy="90" r="26" fill="#2eff3e" stroke="#1a252f" stroke-width="2"/>
+  <text x="250" y="96" text-anchor="middle" font-size="13" fill="#0a2a0a" font-weight="bold">L1</text>
+
+  <circle cx="354" cy="270" r="26" fill="#3fbf5a" stroke="#1a252f" stroke-width="2"/>
+  <text x="354" y="276" text-anchor="middle" font-size="13" fill="#0a2a0a" font-weight="bold">L2</text>
+
+  <circle cx="146" cy="270" r="26" fill="#123a15" stroke="#1a252f" stroke-width="2"/>
+  <text x="146" y="276" text-anchor="middle" font-size="13" fill="#bfe8c4" font-weight="bold">L3</text>
+
+  <text x="250" y="216" text-anchor="middle" font-size="13" fill="#1a252f">明暗旋转</text>
+
+  <!-- 说明 -->
+  <text x="470" y="90" font-size="14" font-weight="bold" fill="#1a252f">原理</text>
+  <text x="470" y="118" font-size="13" fill="#333">• 三只灯跨接在待并机与电网之间，</text>
+  <text x="470" y="140" font-size="13" fill="#333">　分别对应三相电压差</text>
+  <text x="470" y="168" font-size="13" fill="#333">• 频差使灯亮度按顺序明暗交替，</text>
+  <text x="470" y="190" font-size="13" fill="#333">　形成“灯光旋转”效果</text>
+  <text x="470" y="218" font-size="13" fill="#333">• 旋转方向指示频差方向（快/慢）</text>
+  <text x="470" y="246" font-size="13" fill="#333">• 三灯同时最暗的瞬间 = 同相位</text>
+
+  <rect x="470" y="268" width="290" height="70" rx="8" fill="#fff7e6" stroke="#e0a020" stroke-width="1.5"/>
+  <text x="482" y="292" font-size="13" fill="#7a6028">当频差很小时，灯光旋转缓慢，</text>
+  <text x="482" y="314" font-size="13" fill="#7a6028">此时最易捕捉合闸时机；</text>
+  <text x="482" y="332" font-size="12" fill="#7a6028">频差为零则灯光静止不旋转。</text>
+</svg>

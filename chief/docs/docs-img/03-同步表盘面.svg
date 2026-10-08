@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 400" font-family="Microsoft YaHei, SimHei, sans-serif">
+  <rect width="780" height="400" fill="#ffffff"/>
+  <text x="390" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#1a252f">图 3　同步表（整步表）盘面与指针含义</text>
+
+  <!-- 表盘 -->
+  <circle cx="250" cy="205" r="125" fill="#f7f9fb" stroke="#2c3a45" stroke-width="3"/>
+  <circle cx="250" cy="205" r="112" fill="none" stroke="#c8d0d8" stroke-width="1"/>
+
+  <!-- 刻度（每 30°，用旋转复制） -->
+  <g stroke="#2c3a45" stroke-width="2">
+    <line x1="250" y1="80" x2="250" y2="100" transform="rotate(0 250 205)"/>
+    <line x1="250" y1="80" x2="250" y2="92" transform="rotate(30 250 205)"/>
+    <line x1="250" y1="80" x2="250" y2="92" transform="rotate(60 250 205)"/>
+    <line x1="250" y1="80" x2="250" y2="100" transform="rotate(90 250 205)"/>
+    <line x1="250" y1="80" x2="250" y2="92" transform="rotate(120 250 205)"/>
+    <line x1="250" y1="80" x2="250" y2="92" transform="rotate(150 250 205)"/>
+    <line x1="250" y1="80" x2="250" y2="100" transform="rotate(180 250 205)"/>
+    <line x1="250" y1="80" x2="250" y2="92" transform="rotate(210 250 205)"/>
+    <line x1="250" y1="80" x2="250" y2="92" transform="rotate(240 250 205)"/>
+    <line x1="250" y1="80" x2="250" y2="100" transform="rotate(270 250 205)"/>
+    <line x1="250" y1="80" x2="250" y2="92" transform="rotate(300 250 205)"/>
+    <line x1="250" y1="80" x2="250" y2="92" transform="rotate(330 250 205)"/>
+  </g>
+
+  <!-- 指针（指 12 点 = 同相位） -->
+  <line x1="250" y1="205" x2="250" y2="95" stroke="#d02020" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="250" cy="205" r="8" fill="#c8a24a" stroke="#7a6028" stroke-width="2"/>
+
+  <!-- 方位文字 -->
+  <text x="250" y="116" text-anchor="middle" font-size="14" fill="#0d47a1" font-weight="bold">12</text>
+  <text x="368" y="210" font-size="14" fill="#d02020" font-weight="bold">快</text>
+  <text x="120" y="210" font-size="14" fill="#1565c0" font-weight="bold">慢</text>
+  <text x="250" y="342" text-anchor="middle" font-size="13" fill="#1a252f">6</text>
+
+  <!-- 旋转方向弧 -->
+  <path d="M 250 55 A 150 150 0 0 1 400 205" fill="none" stroke="#2e7d32" stroke-width="2.5"/>
+  <polygon points="400,205 392,193 406,193" fill="#2e7d32"/>
+
+  <!-- 右侧说明 -->
+  <text x="470" y="90" font-size="14" font-weight="bold" fill="#1a252f">指针含义</text>
+  <text x="470" y="118" font-size="13" fill="#333">• 指针指 12 点：两电压同相位，是合闸时机</text>
+  <text x="470" y="146" font-size="13" fill="#333">• 指针顺时针转：待并机频率偏高（快）</text>
+  <text x="470" y="174" font-size="13" fill="#333">• 指针逆时针转：待并机频率偏低（慢）</text>
+  <text x="470" y="202" font-size="13" fill="#333">• 转速 = 频差：转得越快，Δf 越大</text>
+  <text x="470" y="230" font-size="13" fill="#333">• 频差 Δf = f待并 − f电网</text>
+
+  <rect x="470" y="252" width="280" height="72" rx="8" fill="#fff7e6" stroke="#e0a020" stroke-width="1.5"/>
+  <text x="482" y="276" font-size="13" fill="#7a6028">旋转一周的时间 T = 1/|Δf|</text>
+  <text x="482" y="300" font-size="13" fill="#7a6028">Δf = 0.2Hz → 约 5s 转一圈</text>
+  <text x="482" y="320" font-size="12" fill="#7a6028">指针越慢越易捕捉合闸时机</text>
+</svg>

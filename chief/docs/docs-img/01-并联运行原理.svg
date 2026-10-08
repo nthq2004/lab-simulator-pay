@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 400" font-family="Microsoft YaHei, SimHei, sans-serif">
+  <rect width="780" height="400" fill="#ffffff"/>
+  <text x="390" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#1a252f">图 1　同步发电机并联运行原理</text>
+
+  <!-- 汇流排 -->
+  <line x1="70" y1="95" x2="710" y2="95" stroke="#d02020" stroke-width="6" stroke-linecap="round"/>
+  <text x="770" y="100" text-anchor="end" font-size="13" fill="#d02020" font-weight="bold">主汇流排</text>
+
+  <!-- 发电机 G1 -->
+  <line x1="170" y1="95" x2="170" y2="150" stroke="#d02020" stroke-width="4"/>
+  <rect x="140" y="150" width="60" height="34" rx="4" fill="#eef3f7" stroke="#2c3a45" stroke-width="2"/>
+  <text x="170" y="172" text-anchor="middle" font-size="13" fill="#1a252f">QF1</text>
+  <line x1="170" y1="184" x2="170" y2="240" stroke="#d02020" stroke-width="4"/>
+  <circle cx="170" cy="272" r="32" fill="#e8f7e8" stroke="#2e7d32" stroke-width="2.5"/>
+  <text x="170" y="279" text-anchor="middle" font-size="18" font-weight="bold" fill="#2e7d32">G1</text>
+  <text x="170" y="326" text-anchor="middle" font-size="13" fill="#1a252f">U₁　f₁　φ₁</text>
+
+  <!-- 发电机 G2 -->
+  <line x1="610" y1="95" x2="610" y2="150" stroke="#d02020" stroke-width="4"/>
+  <rect x="580" y="150" width="60" height="34" rx="4" fill="#eef3f7" stroke="#2c3a45" stroke-width="2"/>
+  <text x="610" y="172" text-anchor="middle" font-size="13" fill="#1a252f">QF2</text>
+  <line x1="610" y1="184" x2="610" y2="240" stroke="#d02020" stroke-width="4"/>
+  <circle cx="610" cy="272" r="32" fill="#e8f7e8" stroke="#2e7d32" stroke-width="2.5"/>
+  <text x="610" y="279" text-anchor="middle" font-size="18" font-weight="bold" fill="#2e7d32">G2</text>
+  <text x="610" y="326" text-anchor="middle" font-size="13" fill="#1a252f">U₂　f₂　φ₂</text>
+
+  <!-- 负载 -->
+  <line x1="390" y1="95" x2="390" y2="160" stroke="#d02020" stroke-width="4"/>
+  <rect x="330" y="160" width="120" height="70" rx="6" fill="#fff7e6" stroke="#e0a020" stroke-width="2"/>
+  <text x="390" y="192" text-anchor="middle" font-size="14" fill="#1a252f">负载</text>
+  <text x="390" y="214" text-anchor="middle" font-size="12" fill="#7a6028">电动机 / 照明</text>
+
+  <!-- 条件框 -->
+  <rect x="120" y="348" width="540" height="40" rx="8" fill="#eaf4ff" stroke="#1565c0" stroke-width="1.5"/>
+  <text x="390" y="373" text-anchor="middle" font-size="14" fill="#0d47a1">
+    并联条件：U₁≈U₂　f₁≈f₂　相序一致　合闸瞬间 φ₁≈φ₂
+  </text>
+</svg>

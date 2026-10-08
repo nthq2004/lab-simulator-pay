@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 340" font-family="Microsoft YaHei, SimHei, sans-serif">
+  <rect width="780" height="340" fill="#ffffff"/>
+  <text x="390" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#1a252f">图 4　同步表指针位置与合闸时机</text>
+
+  <!-- 表盘 1：12 点 -->
+  <circle cx="140" cy="165" r="78" fill="#f7f9fb" stroke="#2c3a45" stroke-width="2.5"/>
+  <line x1="140" y1="95" x2="140" y2="110" stroke="#2c3a45" stroke-width="2"/>
+  <line x1="140" y1="165" x2="140" y2="103" stroke="#d02020" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="140" cy="165" r="5" fill="#c8a24a" stroke="#7a6028"/>
+  <text x="140" y="268" text-anchor="middle" font-size="14" font-weight="bold" fill="#2e7d32">指针在 12 点</text>
+  <text x="140" y="290" text-anchor="middle" font-size="12" fill="#333">同相位，最佳合闸</text>
+
+  <!-- 表盘 2：11 点 -->
+  <circle cx="390" cy="165" r="78" fill="#f7f9fb" stroke="#2c3a45" stroke-width="2.5"/>
+  <line x1="390" y1="95" x2="390" y2="110" stroke="#2c3a45" stroke-width="2"/>
+  <line x1="390" y1="165" x2="351" y2="112" stroke="#d02020" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="390" cy="165" r="5" fill="#c8a24a" stroke="#7a6028"/>
+  <text x="390" y="268" text-anchor="middle" font-size="14" font-weight="bold" fill="#e0a020">指针在 11 点</text>
+  <text x="390" y="290" text-anchor="middle" font-size="12" fill="#333">同相点提前，提前合闸</text>
+
+  <!-- 表盘 3：3 点 -->
+  <circle cx="640" cy="165" r="78" fill="#f7f9fb" stroke="#2c3a45" stroke-width="2.5"/>
+  <line x1="640" y1="95" x2="640" y2="110" stroke="#2c3a45" stroke-width="2"/>
+  <line x1="640" y1="165" x2="700" y2="165" stroke="#d02020" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="640" cy="165" r="5" fill="#c8a24a" stroke="#7a6028"/>
+  <text x="640" y="268" text-anchor="middle" font-size="14" font-weight="bold" fill="#c62828">指针在 3 点附近</text>
+  <text x="640" y="290" text-anchor="middle" font-size="12" fill="#333">相位差大，禁止合闸</text>
+
+  <rect x="60" y="306" width="660" height="26" rx="6" fill="#eaf4ff" stroke="#1565c0" stroke-width="1.2"/>
+  <text x="390" y="324" text-anchor="middle" font-size="12" fill="#0d47a1">
+    说明：断路器从发出合闸命令到主触头真正闭合有几十毫秒延时，因此实际在指针略早于 12 点（约 11 点）时发出合闸命令。
+  </text>
+</svg>

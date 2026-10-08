@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 460" font-family="Microsoft YaHei, SimHei, sans-serif">
+  <rect width="780" height="460" fill="#ffffff"/>
+  <text x="390" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#1a252f">图 7　发电机解列（退出并联）操作流程</text>
+
+  <g font-size="14" fill="#1a252f">
+    <rect x="170" y="52" width="440" height="50" rx="8" fill="#eaf4ff" stroke="#1565c0" stroke-width="1.5"/>
+    <text x="390" y="74" text-anchor="middle">① 确认 2# 与 1# 并联运行，负荷已基本均分</text>
+    <text x="390" y="93" text-anchor="middle" font-size="12" fill="#555">（并列运行、频率稳定在额定）</text>
+
+    <rect x="170" y="127" width="440" height="50" rx="8" fill="#fff7e6" stroke="#e0a020" stroke-width="1.5"/>
+    <text x="390" y="149" text-anchor="middle">② 连续点击「2# 调速」降速，把 2# 负荷转移给 1#</text>
+    <text x="390" y="168" text-anchor="middle" font-size="12" fill="#555">（2# 出力逐渐减小，1# 出力相应增大）</text>
+
+    <rect x="170" y="202" width="440" height="50" rx="8" fill="#fff7e6" stroke="#e0a020" stroke-width="1.5"/>
+    <text x="390" y="224" text-anchor="middle">③ 当 2# 仅剩约 5%（≈50kW）时停止转移</text>
+    <text x="390" y="243" text-anchor="middle" font-size="12" fill="#555">（留少量负荷，避免逆功率与剧烈扰动）</text>
+
+    <rect x="170" y="277" width="440" height="50" rx="8" fill="#ffe9e9" stroke="#d02020" stroke-width="1.8"/>
+    <text x="390" y="299" text-anchor="middle" font-weight="bold" fill="#a11212">④ 按下 2# 主开关「分闸」按钮，2# 解列</text>
+    <text x="390" y="318" text-anchor="middle" font-size="12" fill="#a11212">（此时 1# 已承担全部负荷，分闸无冲击）</text>
+
+    <rect x="170" y="352" width="440" height="50" rx="8" fill="#e8f7e8" stroke="#2e7d32" stroke-width="1.5"/>
+    <text x="390" y="374" text-anchor="middle">⑤ 按下 2# 机组「停止」按钮，2# 停机</text>
+    <text x="390" y="393" text-anchor="middle" font-size="12" fill="#555">（解列后确认 2# 主开关在分位、机组已停）</text>
+  </g>
+
+  <!-- 箭头 -->
+  <g fill="#1565c0">
+    <polygon points="390,105 382,95 398,95"/>
+    <polygon points="390,180 382,170 398,170"/>
+    <polygon points="390,255 382,245 398,245"/>
+    <polygon points="390,330 382,320 398,320"/>
+  </g>
+
+  <rect x="120" y="416" width="540" height="34" rx="8" fill="#eaf4ff" stroke="#1565c0" stroke-width="1.2"/>
+  <text x="390" y="438" text-anchor="middle" font-size="13" fill="#0d47a1">口诀：先转移负荷、后分闸解列、再停机，切忌带大负荷直接分闸。</text>
+</svg>

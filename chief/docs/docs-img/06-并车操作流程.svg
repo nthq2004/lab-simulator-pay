@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 620" font-family="Microsoft YaHei, SimHei, sans-serif">
+  <rect width="780" height="620" fill="#ffffff"/>
+  <text x="390" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#1a252f">图 6　手动准同步并车操作流程</text>
+
+  <g font-size="14" fill="#1a252f">
+    <rect x="170" y="50" width="440" height="42" rx="8" fill="#eaf4ff" stroke="#1565c0" stroke-width="1.5"/>
+    <text x="390" y="77" text-anchor="middle">① 检查并车条件：模式“手动”、机组遥控且无故障</text>
+
+    <rect x="170" y="105" width="440" height="42" rx="8" fill="#e8f7e8" stroke="#2e7d32" stroke-width="1.5"/>
+    <text x="390" y="132" text-anchor="middle">② 单机起动 1# 机组，建压建频至额定</text>
+
+    <rect x="170" y="160" width="440" height="42" rx="8" fill="#e8f7e8" stroke="#2e7d32" stroke-width="1.5"/>
+    <text x="390" y="187" text-anchor="middle">③ 合上 1# 主开关，1# 单机向汇流排供电</text>
+
+    <rect x="170" y="215" width="440" height="42" rx="8" fill="#fff7e6" stroke="#e0a020" stroke-width="1.5"/>
+    <text x="390" y="242" text-anchor="middle">④ 投入负载，等待负荷稳定（频率略降）</text>
+
+    <rect x="170" y="270" width="440" height="42" rx="8" fill="#e8f7e8" stroke="#2e7d32" stroke-width="1.5"/>
+    <text x="390" y="297" text-anchor="middle">⑤ 起动 2# 待并机组，建压建频</text>
+
+    <rect x="170" y="325" width="440" height="42" rx="8" fill="#eaf4ff" stroke="#1565c0" stroke-width="1.5"/>
+    <text x="390" y="352" text-anchor="middle">⑥ “同步选择”转 2#，观察同步表指针旋转</text>
+
+    <rect x="170" y="380" width="440" height="42" rx="8" fill="#fff7e6" stroke="#e0a020" stroke-width="1.5"/>
+    <text x="390" y="407" text-anchor="middle">⑦ 微调 2# 调速，使频差约 0.2Hz（指针缓转）</text>
+
+    <rect x="170" y="435" width="440" height="42" rx="8" fill="#ffe9e9" stroke="#d02020" stroke-width="1.8"/>
+    <text x="390" y="462" text-anchor="middle" font-weight="bold" fill="#a11212">⑧ 指针过 11 点（同相点提前）瞬间合闸并车</text>
+
+    <rect x="170" y="490" width="440" height="42" rx="8" fill="#e8f7e8" stroke="#2e7d32" stroke-width="1.5"/>
+    <text x="390" y="517" text-anchor="middle">⑨ 分功（调速转移负荷使两机均分）、调频至 60Hz</text>
+  </g>
+
+  <!-- 箭头 -->
+  <g fill="#1565c0">
+    <polygon points="390,98 382,88 398,88"/>
+    <polygon points="390,153 382,143 398,143"/>
+    <polygon points="390,208 382,198 398,198"/>
+    <polygon points="390,263 382,253 398,253"/>
+    <polygon points="390,318 382,308 398,308"/>
+    <polygon points="390,373 382,363 398,363"/>
+    <polygon points="390,428 382,418 398,418"/>
+    <polygon points="390,483 382,473 398,473"/>
+  </g>
+
+  <rect x="120" y="548" width="540" height="56" rx="8" fill="#eaf4ff" stroke="#1565c0" stroke-width="1.2"/>
+  <text x="390" y="570" text-anchor="middle" font-size="13" fill="#0d47a1">核心要点：先建压建频、再选机观察同步表、</text>
+  <text x="390" y="592" text-anchor="middle" font-size="13" fill="#0d47a1">调频至小频差，最后在接近同相位时合闸。</text>
+</svg>
