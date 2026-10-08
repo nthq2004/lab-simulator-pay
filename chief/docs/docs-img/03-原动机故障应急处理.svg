@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 360" font-family="'Microsoft YaHei','PingFang SC',sans-serif">
+  <rect width="980" height="360" fill="#f7f9fb"/>
+  <text x="490" y="36" text-anchor="middle" font-size="20" font-weight="bold" fill="#1a252f">图 3　原动机故障导致主开关跳闸的应急处理流程</text>
+
+  <defs>
+    <marker id="ar" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#7a8494"/>
+    </marker>
+  </defs>
+
+  <g font-size="13">
+    <rect x="30" y="80" width="150" height="72" rx="8" fill="#e8eef4" stroke="#4a5a66"/>
+    <text x="105" y="110" text-anchor="middle" font-weight="bold" fill="#1a252f">1# 单机运行</text>
+    <text x="105" y="132" text-anchor="middle" font-size="12" fill="#555">建压建频、合闸供电</text>
+
+    <rect x="215" y="80" width="150" height="72" rx="8" fill="#fdecea" stroke="#c0392b"/>
+    <text x="290" y="110" text-anchor="middle" font-weight="bold" fill="#a5281b">原动机故障</text>
+    <text x="290" y="132" text-anchor="middle" font-size="12" fill="#555">冷却水温高 / 滑油低</text>
+
+    <rect x="400" y="80" width="150" height="72" rx="8" fill="#fdecea" stroke="#c0392b"/>
+    <text x="475" y="110" text-anchor="middle" font-weight="bold" fill="#a5281b">立即停机跳闸</text>
+    <text x="475" y="132" text-anchor="middle" font-size="12" fill="#555">主开关失压分断</text>
+
+    <rect x="585" y="80" width="150" height="72" rx="8" fill="#fff8e1" stroke="#e08a00"/>
+    <text x="660" y="110" text-anchor="middle" font-weight="bold" fill="#8a5200">观察确认</text>
+    <text x="660" y="132" text-anchor="middle" font-size="12" fill="#555">故障复位灯亮、汇流排失电</text>
+
+    <rect x="770" y="80" width="180" height="72" rx="8" fill="#e8f5e9" stroke="#2e7d32"/>
+    <text x="860" y="110" text-anchor="middle" font-weight="bold" fill="#1b5e20">起动备用 2#</text>
+    <text x="860" y="132" text-anchor="middle" font-size="12" fill="#555">建压建频后合闸恢复供电</text>
+
+    <line x1="180" y1="116" x2="213" y2="116" stroke="#7a8494" stroke-width="2" marker-end="url(#ar)"/>
+    <line x1="365" y1="116" x2="398" y2="116" stroke="#7a8494" stroke-width="2" marker-end="url(#ar)"/>
+    <line x1="550" y1="116" x2="583" y2="116" stroke="#7a8494" stroke-width="2" marker-end="url(#ar)"/>
+    <line x1="735" y1="116" x2="768" y2="116" stroke="#7a8494" stroke-width="2" marker-end="url(#ar)"/>
+  </g>
+
+  <!-- 第二行：排障复位 -->
+  <g font-size="13">
+    <rect x="400" y="230" width="150" height="72" rx="8" fill="#eaf1fb" stroke="#1565c0"/>
+    <text x="475" y="260" text-anchor="middle" font-weight="bold" fill="#0d47a1">排除原动机故障</text>
+    <text x="475" y="282" text-anchor="middle" font-size="12" fill="#555">故障设置界面取消故障</text>
+
+    <rect x="585" y="230" width="150" height="72" rx="8" fill="#eaf1fb" stroke="#1565c0"/>
+    <text x="660" y="260" text-anchor="middle" font-weight="bold" fill="#0d47a1">按「故障复位」</text>
+    <text x="660" y="282" text-anchor="middle" font-size="12" fill="#555">熄灭故障复位灯</text>
+
+    <rect x="770" y="230" width="180" height="72" rx="8" fill="#e8f5e9" stroke="#2e7d32"/>
+    <text x="860" y="260" text-anchor="middle" font-weight="bold" fill="#1b5e20">1# 恢复备用</text>
+    <text x="860" y="282" text-anchor="middle" font-size="12" fill="#555">「准备好」灯恢复</text>
+
+    <line x1="860" y1="152" x2="860" y2="200" stroke="#7a8494" stroke-width="2"/>
+    <line x1="860" y1="200" x2="475" y2="200" stroke="#7a8494" stroke-width="2"/>
+    <line x1="475" y1="200" x2="475" y2="228" stroke="#7a8494" stroke-width="2" marker-end="url(#ar)"/>
+    <line x1="550" y1="266" x2="583" y2="266" stroke="#7a8494" stroke-width="2" marker-end="url(#ar)"/>
+    <line x1="735" y1="266" x2="768" y2="266" stroke="#7a8494" stroke-width="2" marker-end="url(#ar)"/>
+  </g>
+</svg>

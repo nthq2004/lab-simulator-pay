@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 380" font-family="'Microsoft YaHei','PingFang SC',sans-serif">
+  <rect width="980" height="380" fill="#f7f9fb"/>
+  <text x="490" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#1a252f">图 1　船舶非自动化电站主配电板组成与一次接线</text>
+
+  <!-- 8 个配电板屏 -->
+  <g font-size="12">
+    <g>
+      <rect x="30" y="70" width="104" height="86" rx="5" fill="#e8eef4" stroke="#4a5a66"/>
+      <text x="82" y="118" text-anchor="middle" font-size="13" font-weight="bold" fill="#1a252f">左组合</text>
+      <text x="82" y="136" text-anchor="middle" font-size="13" font-weight="bold" fill="#1a252f">起动屏</text>
+    </g>
+    <g>
+      <rect x="142" y="70" width="104" height="86" rx="5" fill="#e8eef4" stroke="#4a5a66"/>
+      <text x="194" y="118" text-anchor="middle" font-size="13" font-weight="bold" fill="#1a252f">左动力</text>
+      <text x="194" y="136" text-anchor="middle" font-size="13" font-weight="bold" fill="#1a252f">负载屏</text>
+    </g>
+    <g>
+      <rect x="254" y="70" width="104" height="86" rx="5" fill="#e6f2e6" stroke="#2e7d32"/>
+      <text x="306" y="118" text-anchor="middle" font-size="13" font-weight="bold" fill="#1b5e20">1# 发电机</text>
+      <text x="306" y="136" text-anchor="middle" font-size="13" font-weight="bold" fill="#1b5e20">控制屏</text>
+    </g>
+    <g>
+      <rect x="366" y="70" width="104" height="86" rx="5" fill="#e6f2e6" stroke="#2e7d32"/>
+      <text x="418" y="118" text-anchor="middle" font-size="13" font-weight="bold" fill="#1b5e20">2# 发电机</text>
+      <text x="418" y="136" text-anchor="middle" font-size="13" font-weight="bold" fill="#1b5e20">控制屏</text>
+    </g>
+    <g>
+      <rect x="478" y="70" width="104" height="86" rx="5" fill="#fdf3e6" stroke="#e08a00"/>
+      <text x="530" y="118" text-anchor="middle" font-size="13" font-weight="bold" fill="#8a5200">并车屏</text>
+    </g>
+    <g>
+      <rect x="590" y="70" width="104" height="86" rx="5" fill="#e6f2e6" stroke="#2e7d32"/>
+      <text x="642" y="118" text-anchor="middle" font-size="13" font-weight="bold" fill="#1b5e20">3# 发电机</text>
+      <text x="642" y="136" text-anchor="middle" font-size="13" font-weight="bold" fill="#1b5e20">控制屏</text>
+    </g>
+    <g>
+      <rect x="702" y="70" width="104" height="86" rx="5" fill="#e8eef4" stroke="#4a5a66"/>
+      <text x="754" y="118" text-anchor="middle" font-size="13" font-weight="bold" fill="#1a252f">右动力</text>
+      <text x="754" y="136" text-anchor="middle" font-size="13" font-weight="bold" fill="#1a252f">负载屏</text>
+    </g>
+    <g>
+      <rect x="814" y="70" width="104" height="86" rx="5" fill="#e8eef4" stroke="#4a5a66"/>
+      <text x="866" y="118" text-anchor="middle" font-size="13" font-weight="bold" fill="#1a252f">右组合</text>
+      <text x="866" y="136" text-anchor="middle" font-size="13" font-weight="bold" fill="#1a252f">起动屏</text>
+    </g>
+  </g>
+
+  <!-- 汇流排 -->
+  <line x1="30" y1="210" x2="900" y2="210" stroke="#c0392b" stroke-width="4"/>
+  <text x="908" y="205" font-size="13" font-weight="bold" fill="#c0392b">主汇流排</text>
+
+  <!-- 发电机 -->
+  <g>
+    <circle cx="306" cy="272" r="26" fill="#dff0df" stroke="#2e7d32" stroke-width="2"/>
+    <text x="306" y="278" text-anchor="middle" font-size="15" font-weight="bold" fill="#1b5e20">G1</text>
+    <line x1="306" y1="246" x2="306" y2="212" stroke="#2e7d32" stroke-width="3"/>
+    <text x="306" y="320" text-anchor="middle" font-size="12" fill="#333">1# 发电机 1000kW/450V/60Hz</text>
+  </g>
+  <g>
+    <circle cx="530" cy="272" r="26" fill="#dff0df" stroke="#2e7d32" stroke-width="2"/>
+    <text x="530" y="278" text-anchor="middle" font-size="15" font-weight="bold" fill="#1b5e20">G2</text>
+    <line x1="530" y1="246" x2="530" y2="212" stroke="#2e7d32" stroke-width="3"/>
+    <text x="530" y="320" text-anchor="middle" font-size="12" fill="#333">2# 发电机 1000kW/450V/60Hz</text>
+  </g>
+  <g>
+    <circle cx="642" cy="272" r="26" fill="#dff0df" stroke="#2e7d32" stroke-width="2"/>
+    <text x="642" y="278" text-anchor="middle" font-size="15" font-weight="bold" fill="#1b5e20">G3</text>
+    <line x1="642" y1="246" x2="642" y2="212" stroke="#2e7d32" stroke-width="3"/>
+    <text x="642" y="320" text-anchor="middle" font-size="12" fill="#333">3# 发电机 1000kW/450V/60Hz</text>
+  </g>
+
+  <!-- 主开关标注 -->
+  <g font-size="12" fill="#c0392b">
+    <rect x="296" y="196" width="20" height="16" fill="#fff" stroke="#c0392b"/>
+    <rect x="520" y="196" width="20" height="16" fill="#fff" stroke="#c0392b"/>
+    <rect x="632" y="196" width="20" height="16" fill="#fff" stroke="#c0392b"/>
+  </g>
+  <text x="490" y="360" text-anchor="middle" font-size="12" fill="#555">每台发电机组经主开关（框架式空气断路器 ACB）接入汇流排；组合起动屏经 SQ 顺序自动起动船用辅机</text>
+</svg>

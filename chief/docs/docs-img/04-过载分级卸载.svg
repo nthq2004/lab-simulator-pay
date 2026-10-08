@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 380" font-family="'Microsoft YaHei','PingFang SC',sans-serif">
+  <rect width="980" height="380" fill="#f7f9fb"/>
+  <text x="490" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#1a252f">图 4　发电机过载保护的分级卸载与跳闸（反时限）</text>
+
+  <!-- 时间轴 -->
+  <line x1="80" y1="250" x2="900" y2="250" stroke="#4a5a66" stroke-width="3"/>
+  <text x="80" y="276" text-anchor="middle" font-size="12" fill="#333">0s</text>
+  <text x="290" y="276" text-anchor="middle" font-size="12" fill="#333">5s</text>
+  <text x="500" y="276" text-anchor="middle" font-size="12" fill="#333">10s</text>
+  <text x="710" y="276" text-anchor="middle" font-size="12" fill="#333">15s</text>
+
+  <!-- 阶段框 -->
+  <rect x="80" y="90" width="200" height="120" rx="8" fill="#fdecea" stroke="#c0392b"/>
+  <text x="185" y="120" text-anchor="middle" font-size="14" font-weight="bold" fill="#a5281b">P &gt; 120% Pe</text>
+  <text x="185" y="146" text-anchor="middle" font-size="12" fill="#555">持续 5s</text>
+  <text x="185" y="172" text-anchor="middle" font-size="13" font-weight="bold" fill="#a5281b">一级卸载 PT-1</text>
+  <text x="185" y="194" text-anchor="middle" font-size="12" fill="#555">分励脱扣非重要负载</text>
+
+  <rect x="290" y="90" width="200" height="120" rx="8" fill="#fff3e0" stroke="#e08a00"/>
+  <text x="395" y="120" text-anchor="middle" font-size="14" font-weight="bold" fill="#8a5200">仍 &gt; 110% Pe</text>
+  <text x="395" y="146" text-anchor="middle" font-size="12" fill="#555">再延时 5s</text>
+  <text x="395" y="172" text-anchor="middle" font-size="13" font-weight="bold" fill="#8a5200">二级卸载 PT-2</text>
+  <text x="395" y="194" text-anchor="middle" font-size="12" fill="#555">继续切除次要负载</text>
+
+  <rect x="500" y="90" width="200" height="120" rx="8" fill="#e8eaf6" stroke="#3949ab"/>
+  <text x="605" y="120" text-anchor="middle" font-size="14" font-weight="bold" fill="#283593">仍 &gt; 100% Pe</text>
+  <text x="605" y="146" text-anchor="middle" font-size="12" fill="#555">再延时 5s</text>
+  <text x="605" y="172" text-anchor="middle" font-size="13" font-weight="bold" fill="#283593">主开关跳闸</text>
+  <text x="605" y="194" text-anchor="middle" font-size="12" fill="#555">保护发电机不被烧损</text>
+
+  <!-- 连线 -->
+  <line x1="290" y1="250" x2="290" y2="210" stroke="#7a8494" stroke-width="2"/>
+  <line x1="500" y1="250" x2="500" y2="210" stroke="#7a8494" stroke-width="2"/>
+  <line x1="710" y1="250" x2="710" y2="210" stroke="#7a8494" stroke-width="2"/>
+  <circle cx="290" cy="250" r="5" fill="#c0392b"/>
+  <circle cx="500" cy="250" r="5" fill="#e08a00"/>
+  <circle cx="710" cy="250" r="5" fill="#3949ab"/>
+
+  <text x="490" y="330" text-anchor="middle" font-size="13" fill="#333">测试负载（400kW + 600kW）不带 PT-1 / PT-2 铭牌标签，分级卸载对其无效，最终必然跳闸</text>
+  <text x="490" y="356" text-anchor="middle" font-size="12" fill="#777">处置：先分断测试负载消除过载 → 按「故障复位」→ 重新合上主开关恢复供电</text>
+</svg>

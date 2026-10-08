@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 430" font-family="'Microsoft YaHei','PingFang SC',sans-serif">
+  <rect width="980" height="430" fill="#f7f9fb"/>
+  <text x="490" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#1a252f">图 5　并联机组调速器故障引起的逆功率与保护</text>
+
+  <!-- 汇流排 -->
+  <line x1="120" y1="180" x2="860" y2="180" stroke="#c0392b" stroke-width="4"/>
+  <text x="880" y="185" font-size="13" font-weight="bold" fill="#c0392b">汇流排</text>
+
+  <!-- G1 -->
+  <g>
+    <circle cx="300" cy="290" r="34" fill="#fdecea" stroke="#c0392b" stroke-width="2"/>
+    <text x="300" y="296" text-anchor="middle" font-size="16" font-weight="bold" fill="#a5281b">G1</text>
+    <line x1="300" y1="256" x2="300" y2="182" stroke="#c0392b" stroke-width="3"/>
+    <text x="300" y="345" text-anchor="middle" font-size="13" font-weight="bold" fill="#a5281b">调速器故障 → 原动机停机</text>
+    <text x="300" y="366" text-anchor="middle" font-size="12" fill="#555">主开关不跳闸，转为同步电动机</text>
+    <text x="300" y="390" text-anchor="middle" font-size="14" font-weight="bold" fill="#c0392b">P = −100kW（逆功率）</text>
+  </g>
+
+  <!-- G2 -->
+  <g>
+    <circle cx="680" cy="290" r="34" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+    <text x="680" y="296" text-anchor="middle" font-size="16" font-weight="bold" fill="#1b5e20">G2</text>
+    <line x1="680" y1="256" x2="680" y2="182" stroke="#2e7d32" stroke-width="3"/>
+    <text x="680" y="345" text-anchor="middle" font-size="13" font-weight="bold" fill="#1b5e20">继续驱动，独自带全部负荷</text>
+    <text x="680" y="366" text-anchor="middle" font-size="12" fill="#555">→ 严重过载，分级卸载后跳闸</text>
+    <text x="680" y="390" text-anchor="middle" font-size="14" font-weight="bold" fill="#2e7d32">P 骤增至额定以上</text>
+  </g>
+
+  <!-- 能量流箭头 -->
+  <defs>
+    <marker id="ar2" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#c0392b"/>
+    </marker>
+  </defs>
+  <path d="M355,290 L620,290" stroke="#c0392b" stroke-width="3" marker-end="url(#ar2)"/>
+  <text x="490" y="278" text-anchor="middle" font-size="12" font-weight="bold" fill="#c0392b">G2 拖动 G1（能量反向）</text>
+
+  <!-- 保护框 -->
+  <rect x="120" y="60" width="360" height="90" rx="8" fill="#eaf1fb" stroke="#1565c0"/>
+  <text x="300" y="88" text-anchor="middle" font-size="15" font-weight="bold" fill="#0d47a1">逆功率保护</text>
+  <text x="300" y="112" text-anchor="middle" font-size="13" fill="#333">判据：逆功率 &gt; 10% 额定（100kW）</text>
+  <text x="300" y="136" text-anchor="middle" font-size="13" font-weight="bold" fill="#c0392b">延时 8s → G1 主开关跳闸</text>
+
+  <rect x="500" y="60" width="360" height="90" rx="8" fill="#f1f8e9" stroke="#558b2f"/>
+  <text x="680" y="88" text-anchor="middle" font-size="15" font-weight="bold" fill="#33691e">处置要点</text>
+  <text x="520" y="112" font-size="12.5" fill="#333">· 卸载（分断测试负载）消除 G2 过载</text>
+  <text x="520" y="136" font-size="12.5" fill="#333">· 故障复位后恢复 G2 供电，排除 G1 调速器故障</text>
+</svg>

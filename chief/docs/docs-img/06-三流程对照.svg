@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 520" font-family="'Microsoft YaHei','PingFang SC',sans-serif">
+  <rect width="980" height="520" fill="#f7f9fb"/>
+  <text x="490" y="36" text-anchor="middle" font-size="20" font-weight="bold" fill="#1a252f">图 6　三种主开关跳闸的应急处理对照</text>
+
+  <!-- 表头 -->
+  <g font-size="14">
+    <rect x="30" y="60" width="150" height="52" fill="#2c3e50"/>
+    <text x="105" y="92" text-anchor="middle" font-weight="bold" fill="#fff">项目</text>
+    <rect x="180" y="60" width="250" height="52" fill="#b71c1c"/>
+    <text x="305" y="92" text-anchor="middle" font-weight="bold" fill="#fff">原动机故障跳闸</text>
+    <rect x="430" y="60" width="250" height="52" fill="#e08a00"/>
+    <text x="555" y="92" text-anchor="middle" font-weight="bold" fill="#fff">过载跳闸</text>
+    <rect x="680" y="60" width="270" height="52" fill="#1565c0"/>
+    <text x="815" y="92" text-anchor="middle" font-weight="bold" fill="#fff">逆功率跳闸</text>
+  </g>
+
+  <!-- 行1 触发 -->
+  <g font-size="13">
+    <rect x="30" y="112" width="150" height="80" fill="#eef2f6" stroke="#cbd5dd"/>
+    <text x="105" y="146" text-anchor="middle" font-weight="bold" fill="#1a252f">触发原因</text>
+    <text x="105" y="168" text-anchor="middle" font-size="12" fill="#555">一次原因</text>
+    <rect x="180" y="112" width="250" height="80" fill="#fff" stroke="#cbd5dd"/>
+    <text x="305" y="146" text-anchor="middle" fill="#333">冷却水温高 / 滑油低 / 超速</text>
+    <text x="305" y="170" text-anchor="middle" font-size="12" fill="#777">原动机保护</text>
+    <rect x="430" y="112" width="250" height="80" fill="#fff" stroke="#cbd5dd"/>
+    <text x="555" y="146" text-anchor="middle" fill="#333">负荷超过额定容量</text>
+    <text x="555" y="170" text-anchor="middle" font-size="12" fill="#777">400kW + 600kW 测试负载</text>
+    <rect x="680" y="112" width="270" height="80" fill="#fff" stroke="#cbd5dd"/>
+    <text x="815" y="146" text-anchor="middle" fill="#333">并联时机组失去原动力</text>
+    <text x="815" y="170" text-anchor="middle" font-size="12" fill="#777">调速器故障</text>
+  </g>
+
+  <!-- 行2 现象 -->
+  <g font-size="13">
+    <rect x="30" y="192" width="150" height="80" fill="#eef2f6" stroke="#cbd5dd"/>
+    <text x="105" y="236" text-anchor="middle" font-weight="bold" fill="#1a252f">跳闸现象</text>
+    <rect x="180" y="192" width="250" height="80" fill="#fff" stroke="#cbd5dd"/>
+    <text x="305" y="226" text-anchor="middle" fill="#333">机组立即停机、失压跳闸</text>
+    <text x="305" y="250" text-anchor="middle" font-size="12" fill="#777">单机时汇流排失电</text>
+    <rect x="430" y="192" width="250" height="80" fill="#fff" stroke="#cbd5dd"/>
+    <text x="555" y="226" text-anchor="middle" fill="#333">分级卸载后延时跳闸</text>
+    <text x="555" y="250" text-anchor="middle" font-size="12" fill="#777">优先脱扣报警</text>
+    <rect x="680" y="192" width="270" height="80" fill="#fff" stroke="#cbd5dd"/>
+    <text x="815" y="226" text-anchor="middle" fill="#333">PPU 显示 P 为负（约 −100kW）</text>
+    <text x="815" y="250" text-anchor="middle" font-size="12" fill="#777">延时 8s 逆功率保护跳闸</text>
+  </g>
+
+  <!-- 行3 处置 -->
+  <g font-size="13">
+    <rect x="30" y="272" width="150" height="120" fill="#eef2f6" stroke="#cbd5dd"/>
+    <text x="105" y="336" text-anchor="middle" font-weight="bold" fill="#1a252f">应急处理</text>
+    <rect x="180" y="272" width="250" height="120" fill="#fff" stroke="#cbd5dd"/>
+    <text x="305" y="302" text-anchor="middle" fill="#333">① 确认跳闸机组</text>
+    <text x="305" y="326" text-anchor="middle" fill="#333">② 起动备用机组恢复供电</text>
+    <text x="305" y="350" text-anchor="middle" fill="#333">③ 排除故障、故障复位</text>
+    <text x="305" y="374" text-anchor="middle" font-size="12" fill="#777">④ 1# 恢复备用</text>
+    <rect x="430" y="272" width="250" height="120" fill="#fff" stroke="#cbd5dd"/>
+    <text x="555" y="302" text-anchor="middle" fill="#333">① 消音 / 报警确认</text>
+    <text x="555" y="326" text-anchor="middle" fill="#333">② 分断测试负载卸载</text>
+    <text x="555" y="350" text-anchor="middle" fill="#333">③ 故障复位</text>
+    <text x="555" y="374" text-anchor="middle" font-size="12" fill="#777">④ 重新合闸恢复供电</text>
+    <rect x="680" y="272" width="270" height="120" fill="#fff" stroke="#cbd5dd"/>
+    <text x="815" y="302" text-anchor="middle" fill="#333">① 卸载消除 2# 过载</text>
+    <text x="815" y="326" text-anchor="middle" fill="#333">② 2# 故障复位、重新合闸</text>
+    <text x="815" y="350" text-anchor="middle" fill="#333">③ 排除 1# 调速器故障</text>
+    <text x="815" y="374" text-anchor="middle" font-size="12" fill="#777">④ 1# 恢复备用</text>
+  </g>
+
+  <rect x="30" y="420" width="920" height="74" rx="8" fill="#f1f8e9" stroke="#558b2f"/>
+  <text x="490" y="448" text-anchor="middle" font-size="14" font-weight="bold" fill="#33691e">共同目标：尽快恢复对汇流排的连续供电，同时保护发电机组不被损坏</text>
+  <text x="490" y="474" text-anchor="middle" font-size="12" fill="#555">处置顺序：判断原因 → 卸载 / 投备用 → 复位 → 恢复供电 → 隔离并排除故障</text>
+</svg>
