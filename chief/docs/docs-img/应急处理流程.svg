@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="770" viewBox="0 0 920 770" font-family="Microsoft YaHei, SimHei, sans-serif">
+  <defs>
+    <marker id="a2" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 z" fill="#7a8494"/>
+    </marker>
+  </defs>
+  <rect width="920" height="770" fill="#f7f9fb"/>
+  <text x="460" y="32" text-anchor="middle" font-size="21" font-weight="bold" fill="#1a252f">自动化电站主开关跳闸的应急处理流程</text>
+
+  <!-- 列标题 -->
+  <text x="240" y="66" text-anchor="middle" font-size="15" font-weight="bold" fill="#8a4b00">流程 1：原动机组冷却水温高（应急处理）</text>
+  <text x="680" y="66" text-anchor="middle" font-size="15" font-weight="bold" fill="#8a1a1a">流程 2：汇流排短路（硬件处理）</text>
+
+  <!-- ===== 流程1 ===== -->
+  <g font-size="13">
+    <rect x="40" y="82" width="400" height="54" rx="8" fill="#fff8ec" stroke="#d9822b" stroke-width="1.4"/>
+    <text x="240" y="105" text-anchor="middle" fill="#1a252f">① 手动模式起动 1# 机组、建压建频后合闸供电</text>
+    <text x="240" y="124" text-anchor="middle" font-size="11.5" fill="#8a4b00">「模式选择」在手动位 → 1# 起动 → 1# 合闸</text>
+
+    <rect x="40" y="156" width="400" height="54" rx="8" fill="#fff8ec" stroke="#d9822b" stroke-width="1.4"/>
+    <text x="240" y="179" text-anchor="middle" fill="#1a252f">② 电站转入「自动」运行模式</text>
+    <text x="240" y="198" text-anchor="middle" font-size="11.5" fill="#8a4b00">点击「模式选择」→ 自动档</text>
+
+    <rect x="40" y="230" width="400" height="54" rx="8" fill="#fdecea" stroke="#d02020" stroke-width="1.4"/>
+    <text x="240" y="253" text-anchor="middle" fill="#1a252f">③ 设置「1#原动机冷却水温高」故障</text>
+    <text x="240" y="272" text-anchor="middle" font-size="11.5" fill="#8a1a1a">柴油机立即停机 → 1# 主开关失压跳闸、汇流排失电</text>
+
+    <rect x="40" y="304" width="400" height="54" rx="8" fill="#e9f7ef" stroke="#1e8449" stroke-width="1.4"/>
+    <text x="240" y="327" text-anchor="middle" fill="#1a252f">④ 自动化电站失电自动恢复供电</text>
+    <text x="240" y="346" text-anchor="middle" font-size="11.5" fill="#14532d">按备用顺序跳过故障的 1# → 自动起动 2# → 自动合闸</text>
+
+    <rect x="40" y="378" width="400" height="54" rx="8" fill="#fff8ec" stroke="#d9822b" stroke-width="1.4"/>
+    <text x="240" y="401" text-anchor="middle" fill="#1a252f">⑤ 排除原动机故障</text>
+    <text x="240" y="420" text-anchor="middle" font-size="11.5" fill="#8a4b00">「故障设置」取消勾选并应用</text>
+
+    <rect x="40" y="452" width="400" height="54" rx="8" fill="#fff8ec" stroke="#d9822b" stroke-width="1.4"/>
+    <text x="240" y="475" text-anchor="middle" fill="#1a252f">⑥ 故障复位，1# 恢复备用待命</text>
+    <text x="240" y="494" text-anchor="middle" font-size="11.5" fill="#8a4b00">按 1#「故障复位」→「准备好」灯恢复</text>
+  </g>
+
+  <!-- 流程1 向下箭头 -->
+  <line x1="240" y1="136" x2="240" y2="156" stroke="#7a8494" stroke-width="1.5" marker-end="url(#a2)"/>
+  <line x1="240" y1="210" x2="240" y2="230" stroke="#7a8494" stroke-width="1.5" marker-end="url(#a2)"/>
+  <line x1="240" y1="284" x2="240" y2="304" stroke="#7a8494" stroke-width="1.5" marker-end="url(#a2)"/>
+  <line x1="240" y1="358" x2="240" y2="378" stroke="#7a8494" stroke-width="1.5" marker-end="url(#a2)"/>
+  <line x1="240" y1="432" x2="240" y2="452" stroke="#7a8494" stroke-width="1.5" marker-end="url(#a2)"/>
+
+  <!-- ===== 流程2 ===== -->
+  <g font-size="13">
+    <rect x="480" y="82" width="400" height="54" rx="8" fill="#fff8ec" stroke="#d9822b" stroke-width="1.4"/>
+    <text x="680" y="105" text-anchor="middle" fill="#1a252f">① 手动模式起动 1# 机组、合闸供电</text>
+    <text x="680" y="124" text-anchor="middle" font-size="11.5" fill="#8a4b00">同流程 1 第 ① 步</text>
+
+    <rect x="480" y="156" width="400" height="54" rx="8" fill="#fff8ec" stroke="#d9822b" stroke-width="1.4"/>
+    <text x="680" y="179" text-anchor="middle" fill="#1a252f">② 电站转入「自动」运行模式</text>
+    <text x="680" y="198" text-anchor="middle" font-size="11.5" fill="#8a4b00">点击「模式选择」→ 自动档</text>
+
+    <rect x="480" y="230" width="400" height="54" rx="8" fill="#fdecea" stroke="#d02020" stroke-width="1.4"/>
+    <text x="680" y="253" text-anchor="middle" fill="#1a252f">③ 设置「汇流排短路故障」</text>
+    <text x="680" y="272" text-anchor="middle" font-size="11.5" fill="#8a1a1a">1# 主开关短路保护瞬时跳闸、失电、短路报警</text>
+
+    <rect x="480" y="304" width="400" height="54" rx="8" fill="#eef6ff" stroke="#1565c0" stroke-width="1.4"/>
+    <text x="680" y="327" text-anchor="middle" fill="#1a252f">④ 观察自动模式阻塞 → 消音 → 转手动</text>
+    <text x="680" y="346" text-anchor="middle" font-size="11.5" fill="#0a2a5a">PPU 显示 BLOCKED；先「消音」，再转「手动」</text>
+
+    <rect x="480" y="378" width="400" height="54" rx="8" fill="#e9f7ef" stroke="#1e8449" stroke-width="1.4"/>
+    <text x="680" y="401" text-anchor="middle" fill="#1a252f">⑤ 排除短路故障</text>
+    <text x="680" y="420" text-anchor="middle" font-size="11.5" fill="#14532d">隔离短路点、确认绝缘正常 →「故障设置」取消勾选</text>
+
+    <rect x="480" y="452" width="400" height="54" rx="8" fill="#eef6ff" stroke="#1565c0" stroke-width="1.4"/>
+    <text x="680" y="475" text-anchor="middle" fill="#1a252f">⑥ 故障修复后报警确认</text>
+    <text x="680" y="494" text-anchor="middle" font-size="11.5" fill="#0a2a5a">报警条件消失后按「报警确认」熄灭报警灯</text>
+
+    <rect x="480" y="526" width="400" height="54" rx="8" fill="#fff8ec" stroke="#d9822b" stroke-width="1.4"/>
+    <text x="680" y="549" text-anchor="middle" fill="#1a252f">⑦ 故障复位</text>
+    <text x="680" y="568" text-anchor="middle" font-size="11.5" fill="#8a4b00">按 1#「故障复位」，熄灭故障复位灯</text>
+
+    <rect x="480" y="600" width="400" height="54" rx="8" fill="#e9f7ef" stroke="#1e8449" stroke-width="1.4"/>
+    <text x="680" y="623" text-anchor="middle" fill="#1a252f">⑧ 手动合上 1# 主开关恢复供电</text>
+    <text x="680" y="642" text-anchor="middle" font-size="11.5" fill="#14532d">短路已排除，手动模式下重新合闸</text>
+  </g>
+
+  <!-- 流程2 向下箭头 -->
+  <line x1="680" y1="136" x2="680" y2="156" stroke="#7a8494" stroke-width="1.5" marker-end="url(#a2)"/>
+  <line x1="680" y1="210" x2="680" y2="230" stroke="#7a8494" stroke-width="1.5" marker-end="url(#a2)"/>
+  <line x1="680" y1="284" x2="680" y2="304" stroke="#7a8494" stroke-width="1.5" marker-end="url(#a2)"/>
+  <line x1="680" y1="358" x2="680" y2="378" stroke="#7a8494" stroke-width="1.5" marker-end="url(#a2)"/>
+  <line x1="680" y1="432" x2="680" y2="452" stroke="#7a8494" stroke-width="1.5" marker-end="url(#a2)"/>
+  <line x1="680" y1="506" x2="680" y2="526" stroke="#7a8494" stroke-width="1.5" marker-end="url(#a2)"/>
+  <line x1="680" y1="580" x2="680" y2="600" stroke="#7a8494" stroke-width="1.5" marker-end="url(#a2)"/>
+
+  <text x="460" y="700" text-anchor="middle" font-size="12.5" fill="#4a5a66">核心区别：原动机故障 → 失电后自动恢复供电；汇流排短路 → 阻塞自动模式，必须人工隔离短路后手动恢复。</text>
+  <text x="460" y="722" text-anchor="middle" font-size="12.5" fill="#4a5a66">共同原则：先确认现象与跳闸原因，再排除故障、复位、恢复供电，禁止故障未排除强行合闸。</text>
+</svg>

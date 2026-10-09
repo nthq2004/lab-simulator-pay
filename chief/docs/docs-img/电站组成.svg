@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="560" viewBox="0 0 920 560" font-family="Microsoft YaHei, SimHei, sans-serif">
+  <defs>
+    <marker id="ar" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 z" fill="#4a5a66"/>
+    </marker>
+  </defs>
+  <rect width="920" height="560" fill="#f7f9fb"/>
+  <text x="460" y="34" text-anchor="middle" font-size="21" font-weight="bold" fill="#1a252f">自动化电站系统组成与主开关跳闸保护</text>
+
+  <!-- 三台发电机组 -->
+  <g>
+    <rect x="40" y="78" width="200" height="66" rx="8" fill="#e8f4ff" stroke="#2b6cb0" stroke-width="1.6"/>
+    <text x="140" y="106" text-anchor="middle" font-size="15" font-weight="bold" fill="#1a365d">1# 发电机组</text>
+    <text x="140" y="128" text-anchor="middle" font-size="12" fill="#2b6cb0">柴油机 + 同步发电机</text>
+  </g>
+  <g>
+    <rect x="360" y="78" width="200" height="66" rx="8" fill="#e8f4ff" stroke="#2b6cb0" stroke-width="1.6"/>
+    <text x="460" y="106" text-anchor="middle" font-size="15" font-weight="bold" fill="#1a365d">2# 发电机组</text>
+    <text x="460" y="128" text-anchor="middle" font-size="12" fill="#2b6cb0">柴油机 + 同步发电机</text>
+  </g>
+  <g>
+    <rect x="680" y="78" width="200" height="66" rx="8" fill="#e8f4ff" stroke="#2b6cb0" stroke-width="1.6"/>
+    <text x="780" y="106" text-anchor="middle" font-size="15" font-weight="bold" fill="#1a365d">3# 发电机组</text>
+    <text x="780" y="128" text-anchor="middle" font-size="12" fill="#2b6cb0">柴油机 + 同步发电机</text>
+  </g>
+
+  <!-- 原动机保护 -->
+  <rect x="40" y="162" width="840" height="26" rx="6" fill="#fff4e6" stroke="#d9822b" stroke-width="1.2" stroke-dasharray="5 3"/>
+  <text x="460" y="180" text-anchor="middle" font-size="12.5" fill="#8a4b00">原动机保护：冷却水温高 / 滑油压力低 / 超速 → 柴油机立即停机、主开关失压跳闸</text>
+
+  <!-- 箭头 发电机→主开关 -->
+  <line x1="140" y1="144" x2="140" y2="212" stroke="#4a5a66" stroke-width="1.6" marker-end="url(#ar)"/>
+  <line x1="460" y1="144" x2="460" y2="212" stroke="#4a5a66" stroke-width="1.6" marker-end="url(#ar)"/>
+  <line x1="780" y1="144" x2="780" y2="212" stroke="#4a5a66" stroke-width="1.6" marker-end="url(#ar)"/>
+
+  <!-- 三台主开关 -->
+  <g>
+    <rect x="60" y="214" width="160" height="52" rx="8" fill="#e9f7ef" stroke="#1e8449" stroke-width="1.6"/>
+    <text x="140" y="245" text-anchor="middle" font-size="14" font-weight="bold" fill="#14532d">1# 主开关</text>
+  </g>
+  <g>
+    <rect x="380" y="214" width="160" height="52" rx="8" fill="#e9f7ef" stroke="#1e8449" stroke-width="1.6"/>
+    <text x="460" y="245" text-anchor="middle" font-size="14" font-weight="bold" fill="#14532d">2# 主开关</text>
+  </g>
+  <g>
+    <rect x="700" y="214" width="160" height="52" rx="8" fill="#e9f7ef" stroke="#1e8449" stroke-width="1.6"/>
+    <text x="780" y="245" text-anchor="middle" font-size="14" font-weight="bold" fill="#14532d">3# 主开关</text>
+  </g>
+
+  <!-- 短路保护 -->
+  <rect x="40" y="278" width="840" height="26" rx="6" fill="#fdecea" stroke="#d02020" stroke-width="1.2" stroke-dasharray="5 3"/>
+  <text x="460" y="296" text-anchor="middle" font-size="12.5" fill="#8a1a1a">短路保护：I &gt; 5Ie 瞬时跳闸 / I &gt; 2Ie 延时 0.4s 跳闸（汇流排短路 → 主开关瞬时跳闸）</text>
+
+  <!-- 箭头 主开关→汇流排 -->
+  <line x1="140" y1="266" x2="140" y2="330" stroke="#4a5a66" stroke-width="1.6" marker-end="url(#ar)"/>
+  <line x1="460" y1="266" x2="460" y2="330" stroke="#4a5a66" stroke-width="1.6" marker-end="url(#ar)"/>
+  <line x1="780" y1="266" x2="780" y2="330" stroke="#4a5a66" stroke-width="1.6" marker-end="url(#ar)"/>
+
+  <!-- 主汇流排 -->
+  <rect x="40" y="332" width="840" height="42" rx="6" fill="#ff5a5a" stroke="#a00" stroke-width="1.6"/>
+  <text x="460" y="359" text-anchor="middle" font-size="15" font-weight="bold" fill="#ffffff">主汇流排（450 V / 60 Hz，任一机组合闸即带电）</text>
+
+  <!-- 箭头 汇流排→负载 -->
+  <line x1="460" y1="374" x2="460" y2="424" stroke="#4a5a66" stroke-width="1.6" marker-end="url(#ar)"/>
+
+  <!-- 负载 -->
+  <rect x="270" y="426" width="380" height="58" rx="8" fill="#f4ecff" stroke="#6b3fa0" stroke-width="1.6"/>
+  <text x="460" y="450" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#3d1f66">动力负载 / 组合起动屏 / 重要配电装置</text>
+  <text x="460" y="471" text-anchor="middle" font-size="12" fill="#6b3fa0">日用变压器 · 辅机 · 应急配电板 · 岸电 · 重载</text>
+
+  <!-- 自动化电站控制模块 -->
+  <rect x="40" y="410" width="200" height="110" rx="8" fill="#eef6ff" stroke="#1565c0" stroke-width="1.6" stroke-dasharray="6 3"/>
+  <text x="140" y="434" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#0a2a5a">自动化电站控制模块</text>
+  <text x="140" y="456" text-anchor="middle" font-size="11.5" fill="#1565c0">· 汇流排失电检测</text>
+  <text x="140" y="475" text-anchor="middle" font-size="11.5" fill="#1565c0">· 按备用顺序自动起机并网</text>
+  <text x="140" y="494" text-anchor="middle" font-size="11.5" fill="#c0392b">· 短路 → 阻塞自动模式</text>
+  <line x1="240" y1="465" x2="268" y2="465" stroke="#1565c0" stroke-width="1.4" stroke-dasharray="4 3" marker-end="url(#ar)"/>
+</svg>
