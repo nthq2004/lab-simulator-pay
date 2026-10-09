@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="520" viewBox="0 0 920 520" font-family="Microsoft YaHei, SimHei, sans-serif">
+  <defs>
+    <marker id="a3" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 z" fill="#4a5a66"/>
+    </marker>
+  </defs>
+  <rect width="920" height="520" fill="#f7f9fb"/>
+  <text x="460" y="32" text-anchor="middle" font-size="21" font-weight="bold" fill="#1a252f">应急配电板自动转电（ATS）时序</text>
+
+  <!-- ===== 时序 1：失电转电 ===== -->
+  <text x="40" y="72" font-size="15" font-weight="bold" fill="#8a1a1a">① 主电失电（或联络开关打“试验”位）→ 应急发电机自动投入</text>
+  <!-- 时间轴 -->
+  <line x1="70" y1="150" x2="860" y2="150" stroke="#7a8494" stroke-width="2" marker-end="url(#a3)"/>
+  <text x="70" y="176" text-anchor="middle" font-size="11" fill="#5a6a75">0s</text>
+  <text x="200" y="176" text-anchor="middle" font-size="11" fill="#5a6a75">3s</text>
+  <text x="400" y="176" text-anchor="middle" font-size="11" fill="#5a6a75">8s</text>
+  <text x="640" y="176" text-anchor="middle" font-size="11" fill="#5a6a75">18s</text>
+
+  <!-- 事件1：联络分闸 -->
+  <line x1="70" y1="150" x2="70" y2="118" stroke="#d02020" stroke-width="1.6"/>
+  <rect x="12" y="86" width="130" height="32" rx="6" fill="#fdecea" stroke="#d02020" stroke-width="1.4"/>
+  <text x="77" y="107" text-anchor="middle" font-size="12" font-weight="bold" fill="#8a1a1a">联络开关自动分闸</text>
+  <!-- 事件2：应发起动 -->
+  <line x1="200" y1="150" x2="200" y2="118" stroke="#c0392b" stroke-width="1.6"/>
+  <rect x="148" y="86" width="130" height="32" rx="6" fill="#fff0f0" stroke="#c0392b" stroke-width="1.4"/>
+  <text x="213" y="107" text-anchor="middle" font-size="12" font-weight="bold" fill="#7a1a12">应急发电机自动起动</text>
+  <!-- 事件3：建压完成 -->
+  <line x1="400" y1="150" x2="400" y2="118" stroke="#1e8449" stroke-width="1.6"/>
+  <rect x="345" y="86" width="130" height="32" rx="6" fill="#e9f7ef" stroke="#1e8449" stroke-width="1.4"/>
+  <text x="410" y="107" text-anchor="middle" font-size="12" font-weight="bold" fill="#14532d">建压建频完成 450V/60Hz</text>
+  <!-- 事件4：应急主开关合闸 -->
+  <line x1="640" y1="150" x2="640" y2="118" stroke="#1e8449" stroke-width="1.6"/>
+  <rect x="575" y="86" width="230" height="32" rx="6" fill="#2ecc40" stroke="#178a2a" stroke-width="1.4"/>
+  <text x="690" y="107" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">应急主开关自动合闸 → 应发供电</text>
+
+  <!-- 各段延时标注 -->
+  <rect x="70" y="192" width="130" height="26" rx="5" fill="#fff4e6" stroke="#d9822b" stroke-width="1.1"/>
+  <text x="135" y="210" text-anchor="middle" font-size="11" fill="#8a4b00">起动延时 3s</text>
+  <rect x="200" y="192" width="200" height="26" rx="5" fill="#fff4e6" stroke="#d9822b" stroke-width="1.1"/>
+  <text x="300" y="210" text-anchor="middle" font-size="11" fill="#8a4b00">建压建频约 5s</text>
+  <rect x="400" y="192" width="240" height="26" rx="5" fill="#fff4e6" stroke="#d9822b" stroke-width="1.1"/>
+  <text x="520" y="210" text-anchor="middle" font-size="11" fill="#8a4b00">合闸延时 10s</text>
+
+  <!-- ===== 时序 2：主电恢复 ===== -->
+  <text x="40" y="286" font-size="15" font-weight="bold" fill="#14532d">② 主电恢复（联络开关转回“正常”位）→ 恢复主电供电、应发延时停机</text>
+  <line x1="70" y1="364" x2="860" y2="364" stroke="#7a8494" stroke-width="2" marker-end="url(#a3)"/>
+  <text x="70" y="390" text-anchor="middle" font-size="11" fill="#5a6a75">0s</text>
+  <text x="260" y="390" text-anchor="middle" font-size="11" fill="#5a6a75">3s</text>
+  <text x="620" y="390" text-anchor="middle" font-size="11" fill="#5a6a75">13s</text>
+
+  <!-- 事件1：应急主开关分闸 -->
+  <line x1="70" y1="364" x2="70" y2="332" stroke="#d02020" stroke-width="1.6"/>
+  <rect x="18" y="300" width="140" height="32" rx="6" fill="#fdecea" stroke="#d02020" stroke-width="1.4"/>
+  <text x="88" y="321" text-anchor="middle" font-size="12" font-weight="bold" fill="#8a1a1a">应急主开关立即分闸</text>
+  <!-- 事件2：联络合闸 -->
+  <line x1="260" y1="364" x2="260" y2="332" stroke="#1e8449" stroke-width="1.6"/>
+  <rect x="190" y="300" width="150" height="32" rx="6" fill="#e9f7ef" stroke="#1e8449" stroke-width="1.4"/>
+  <text x="265" y="321" text-anchor="middle" font-size="12" font-weight="bold" fill="#14532d">联络开关自动合闸</text>
+  <!-- 事件3：应发停机 -->
+  <line x1="620" y1="364" x2="620" y2="332" stroke="#7a8494" stroke-width="1.6"/>
+  <rect x="540" y="300" width="220" height="32" rx="6" fill="#eef6ff" stroke="#1565c0" stroke-width="1.4"/>
+  <text x="650" y="321" text-anchor="middle" font-size="12" font-weight="bold" fill="#0a2a5a">应急发电机自动停机 → 待机</text>
+
+  <rect x="70" y="406" width="190" height="26" rx="5" fill="#fff4e6" stroke="#d9822b" stroke-width="1.1"/>
+  <text x="165" y="424" text-anchor="middle" font-size="11" fill="#8a4b00">合联络延时 3s</text>
+  <rect x="260" y="406" width="360" height="26" rx="5" fill="#fff4e6" stroke="#d9822b" stroke-width="1.1"/>
+  <text x="440" y="424" text-anchor="middle" font-size="11" fill="#8a4b00">应发延时停机 10s</text>
+
+  <rect x="30" y="452" width="860" height="52" rx="8" fill="#eef6ff" stroke="#1565c0" stroke-width="1.4"/>
+  <text x="460" y="474" text-anchor="middle" font-size="12.5" fill="#0a2a5a">若主电在“起动 / 建压 / 合闸延时”过程中提前恢复，ATS 会立即中断本次起动流程、转入延时停机，</text>
+  <text x="460" y="494" text-anchor="middle" font-size="12.5" fill="#0a2a5a">不会误合应急主开关；控制模式为“手动”时 ATS 自动功能退出，需人工操作。</text>
+</svg>

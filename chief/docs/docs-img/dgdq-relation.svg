@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="680" viewBox="0 0 920 680" font-family="Microsoft YaHei, SimHei, sans-serif">
+  <defs>
+    <marker id="ar" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L7,3 L0,6 z" fill="#4a5a66"/>
+    </marker>
+  </defs>
+  <rect width="920" height="680" fill="#f7f9fb"/>
+  <text x="460" y="32" text-anchor="middle" font-size="21" font-weight="bold" fill="#1a252f">主电网与应急电网的关系（单线图）</text>
+
+  <!-- ===== 主配电板区域 ===== -->
+  <rect x="20" y="50" width="880" height="210" rx="10" fill="#eef6ff" stroke="#1565c0" stroke-width="1.4" stroke-dasharray="7 4"/>
+  <text x="34" y="70" font-size="14" font-weight="bold" fill="#0a2a5a">主配电板（主电网）</text>
+
+  <!-- 岸电箱 -->
+  <rect x="40" y="84" width="150" height="50" rx="8" fill="#f4ecff" stroke="#6b3fa0" stroke-width="1.5"/>
+  <text x="115" y="106" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#3d1f66">岸电箱 / 岸电</text>
+  <text x="115" y="124" text-anchor="middle" font-size="11" fill="#6b3fa0">靠港时接入</text>
+
+  <!-- 三台主发电机组 -->
+  <g>
+    <rect x="230" y="84" width="150" height="50" rx="8" fill="#e8f4ff" stroke="#2b6cb0" stroke-width="1.5"/>
+    <text x="305" y="106" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#1a365d">1# 发电机组</text>
+    <text x="305" y="124" text-anchor="middle" font-size="11" fill="#2b6cb0">柴油机 + 同步发电机</text>
+  </g>
+  <g>
+    <rect x="400" y="84" width="150" height="50" rx="8" fill="#e8f4ff" stroke="#2b6cb0" stroke-width="1.5"/>
+    <text x="475" y="106" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#1a365d">2# 发电机组</text>
+    <text x="475" y="124" text-anchor="middle" font-size="11" fill="#2b6cb0">柴油机 + 同步发电机</text>
+  </g>
+  <g>
+    <rect x="570" y="84" width="150" height="50" rx="8" fill="#e8f4ff" stroke="#2b6cb0" stroke-width="1.5"/>
+    <text x="645" y="106" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#1a365d">3# 发电机组</text>
+    <text x="645" y="124" text-anchor="middle" font-size="11" fill="#2b6cb0">柴油机 + 同步发电机</text>
+  </g>
+
+  <!-- 主开关 -->
+  <g font-size="11.5" fill="#14532d">
+    <rect x="230" y="150" width="150" height="26" rx="6" fill="#e9f7ef" stroke="#1e8449" stroke-width="1.3"/>
+    <text x="305" y="168" text-anchor="middle">1# 主开关</text>
+    <rect x="400" y="150" width="150" height="26" rx="6" fill="#e9f7ef" stroke="#1e8449" stroke-width="1.3"/>
+    <text x="475" y="168" text-anchor="middle">2# 主开关</text>
+    <rect x="570" y="150" width="150" height="26" rx="6" fill="#e9f7ef" stroke="#1e8449" stroke-width="1.3"/>
+    <text x="645" y="168" text-anchor="middle">3# 主开关</text>
+  </g>
+  <line x1="305" y1="134" x2="305" y2="150" stroke="#4a5a66" stroke-width="1.5" marker-end="url(#ar)"/>
+  <line x1="475" y1="134" x2="475" y2="150" stroke="#4a5a66" stroke-width="1.5" marker-end="url(#ar)"/>
+  <line x1="645" y1="134" x2="645" y2="150" stroke="#4a5a66" stroke-width="1.5" marker-end="url(#ar)"/>
+  <line x1="115" y1="134" x2="115" y2="190" stroke="#4a5a66" stroke-width="1.5"/>
+  <line x1="115" y1="190" x2="800" y2="190" stroke="#4a5a66" stroke-width="1.5"/>
+  <line x1="305" y1="176" x2="305" y2="190" stroke="#4a5a66" stroke-width="1.5"/>
+  <line x1="475" y1="176" x2="475" y2="190" stroke="#4a5a66" stroke-width="1.5"/>
+  <line x1="645" y1="176" x2="645" y2="190" stroke="#4a5a66" stroke-width="1.5"/>
+
+  <!-- 主汇流排 -->
+  <rect x="40" y="190" width="840" height="30" rx="5" fill="#ff5a5a" stroke="#a00" stroke-width="1.5"/>
+  <text x="460" y="211" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">主汇流排（450 V / 60 Hz，任一电源合闸即带电）</text>
+
+  <!-- 主电网负载 -->
+  <line x1="200" y1="220" x2="200" y2="240" stroke="#4a5a66" stroke-width="1.5" marker-end="url(#ar)"/>
+  <rect x="40" y="240" width="320" height="44" rx="8" fill="#f4ecff" stroke="#6b3fa0" stroke-width="1.4"/>
+  <text x="200" y="259" text-anchor="middle" font-size="13" font-weight="bold" fill="#3d1f66">动力负载 / 组合起动屏 / 重要负载</text>
+  <text x="200" y="276" text-anchor="middle" font-size="11" fill="#6b3fa0">日用变压器 · 辅机 · 机舱风机 · 岸电</text>
+
+  <!-- 应急配电板馈线开关 + 联络开关（主网→应急网） -->
+  <rect x="405" y="240" width="150" height="30" rx="6" fill="#e9f7ef" stroke="#1e8449" stroke-width="1.4"/>
+  <text x="480" y="260" text-anchor="middle" font-size="12" font-weight="bold" fill="#14532d">应急配电板开关（常合）</text>
+  <line x1="480" y1="220" x2="480" y2="240" stroke="#4a5a66" stroke-width="1.5" marker-end="url(#ar)"/>
+  <line x1="480" y1="270" x2="480" y2="300" stroke="#4a5a66" stroke-width="1.5"/>
+
+  <!-- ===== 联络开关 ===== -->
+  <rect x="425" y="300" width="110" height="46" rx="8" fill="#fff4e6" stroke="#d9822b" stroke-width="1.8"/>
+  <text x="480" y="322" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#8a4b00">联络开关</text>
+  <text x="480" y="339" text-anchor="middle" font-size="10.5" fill="#8a4b00">正常位合 / 试验位分</text>
+  <line x1="480" y1="346" x2="480" y2="368" stroke="#4a5a66" stroke-width="1.5"/>
+
+  <!-- ===== 应急配电板区域 ===== -->
+  <rect x="20" y="290" width="880" height="360" rx="10" fill="#e9f7ef" stroke="#1e8449" stroke-width="1.4" stroke-dasharray="7 4"/>
+  <text x="34" y="312" font-size="14" font-weight="bold" fill="#14532d">应急配电板（应急电网）</text>
+
+  <!-- 应急汇流排 -->
+  <rect x="40" y="368" width="840" height="30" rx="5" fill="#2ecc40" stroke="#178a2a" stroke-width="1.5"/>
+  <text x="460" y="389" text-anchor="middle" font-size="14" font-weight="bold" fill="#ffffff">应急汇流排（正常由主电网经联络开关供电，主电失电由应急发电机供电）</text>
+
+  <!-- 应急负载 -->
+  <line x1="200" y1="398" x2="200" y2="420" stroke="#4a5a66" stroke-width="1.5" marker-end="url(#ar)"/>
+  <rect x="40" y="420" width="340" height="56" rx="8" fill="#f4ecff" stroke="#6b3fa0" stroke-width="1.4"/>
+  <text x="210" y="443" text-anchor="middle" font-size="13" font-weight="bold" fill="#3d1f66">应急负载（保证船舶安全的关键负载）</text>
+  <text x="210" y="462" text-anchor="middle" font-size="11" fill="#6b3fa0">应急照明 · 导航设备 · 舵机 · 消防泵 · 通信</text>
+
+  <!-- 应急发电机 + 应急主开关 -->
+  <rect x="560" y="440" width="240" height="56" rx="8" fill="#fff0f0" stroke="#c0392b" stroke-width="1.6"/>
+  <text x="680" y="463" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#7a1a12">应急发电机组 + 机旁控制箱</text>
+  <text x="680" y="482" text-anchor="middle" font-size="11" fill="#c0392b">独立备用电源，450 V / 60 Hz</text>
+  <rect x="615" y="406" width="130" height="26" rx="6" fill="#e9f7ef" stroke="#1e8449" stroke-width="1.3"/>
+  <text x="680" y="424" text-anchor="middle" font-size="11.5" fill="#14532d">应急主开关</text>
+  <line x1="680" y1="440" x2="680" y2="432" stroke="#4a5a66" stroke-width="1.5"/>
+  <line x1="680" y1="406" x2="680" y2="398" stroke="#4a5a66" stroke-width="1.5" marker-end="url(#ar)"/>
+
+  <!-- ATS 控制模块 -->
+  <rect x="560" y="510" width="300" height="120" rx="8" fill="#eef6ff" stroke="#1565c0" stroke-width="1.4" stroke-dasharray="6 3"/>
+  <text x="710" y="532" text-anchor="middle" font-size="13" font-weight="bold" fill="#0a2a5a">自动转电装置（ATS）</text>
+  <text x="710" y="554" text-anchor="middle" font-size="11.5" fill="#1565c0">· 检测主电有电 / 失电</text>
+  <text x="710" y="573" text-anchor="middle" font-size="11.5" fill="#1565c0">· 自动分合联络开关与应急主开关</text>
+  <text x="710" y="592" text-anchor="middle" font-size="11.5" fill="#1565c0">· 自动起停应急发电机（3s 起动 / 5s 建压 / 10s 合闸）</text>
+  <text x="710" y="613" text-anchor="middle" font-size="11.5" fill="#c0392b">· 联络开关打“试验”位 = 模拟主电失电</text>
+  <line x1="560" y1="360" x2="560" y2="570" stroke="#1565c0" stroke-width="1.2" stroke-dasharray="4 3"/>
+  <line x1="420" y1="322" x2="420" y2="570" stroke="#d9822b" stroke-width="1.2" stroke-dasharray="4 3"/>
+  <line x1="420" y1="570" x2="560" y2="570" stroke="#d9822b" stroke-width="1.2" stroke-dasharray="4 3" marker-end="url(#ar)"/>
+
+  <text x="460" y="650" text-anchor="middle" font-size="12.5" fill="#4a5a66">正常：主电网经联络开关向应急配电板供电、应急发电机备用；主电失电或联络打“试验”：联络分闸、应急发电机自动投入。</text>
+</svg>
