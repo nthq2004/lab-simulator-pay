@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 400" font-family="Microsoft YaHei, Arial, sans-serif">
+  <defs>
+    <marker id="ar" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 z" fill="#34495e"/>
+    </marker>
+  </defs>
+  <rect width="920" height="400" fill="#f7f9fb"/>
+  <text x="20" y="28" font-size="18" font-weight="bold" fill="#2c3e50">图 1　空压机起停控制系统组成与气路</text>
+
+  <!-- 1# compressor -->
+  <rect x="30" y="50" width="130" height="60" rx="6" fill="#d1d8dd" stroke="#556"/>
+  <text x="95" y="85" font-size="15" text-anchor="middle" fill="#222">1# 空压机</text>
+  <!-- 1# valve -->
+  <rect x="215" y="50" width="90" height="60" rx="6" fill="#eef3f7" stroke="#556"/>
+  <text x="260" y="78" font-size="14" text-anchor="middle" fill="#222">截止阀</text>
+  <text x="260" y="98" font-size="12" text-anchor="middle" fill="#0a8f4d">导通</text>
+  <!-- tee -->
+  <rect x="370" y="130" width="80" height="60" rx="6" fill="#e8eef3" stroke="#556"/>
+  <text x="410" y="166" font-size="14" text-anchor="middle" fill="#222">三通</text>
+  <!-- bottle -->
+  <rect x="520" y="70" width="110" height="150" rx="16" fill="#7ec2e8" stroke="#1a5276"/>
+  <text x="575" y="150" font-size="15" text-anchor="middle" fill="#08324a">空气瓶</text>
+  <text x="575" y="172" font-size="12" text-anchor="middle" fill="#08324a">0~3.0 MPa</text>
+  <!-- outlet tee -->
+  <rect x="690" y="130" width="80" height="60" rx="6" fill="#e8eef3" stroke="#556"/>
+  <text x="730" y="166" font-size="13" text-anchor="middle" fill="#222">出口三通</text>
+  <!-- relay -->
+  <rect x="680" y="30" width="150" height="56" rx="6" fill="#fdecea" stroke="#c0392b"/>
+  <text x="755" y="55" font-size="14" text-anchor="middle" fill="#7b241c">双位压力继电器</text>
+  <text x="755" y="74" font-size="12" text-anchor="middle" fill="#7b241c">起动 1.5 / 停机 3.0 MPa</text>
+  <!-- meter -->
+  <rect x="690" y="230" width="120" height="56" rx="6" fill="#eef7ee" stroke="#2e7d32"/>
+  <text x="750" y="264" font-size="14" text-anchor="middle" fill="#1b5e20">压力表</text>
+
+  <!-- 2# compressor -->
+  <rect x="30" y="280" width="130" height="60" rx="6" fill="#d1d8dd" stroke="#556"/>
+  <text x="95" y="315" font-size="15" text-anchor="middle" fill="#222">2# 空压机</text>
+  <rect x="215" y="280" width="90" height="60" rx="6" fill="#eef3f7" stroke="#556"/>
+  <text x="260" y="308" font-size="14" text-anchor="middle" fill="#222">截止阀</text>
+  <text x="260" y="328" font-size="12" text-anchor="middle" fill="#0a8f4d">导通</text>
+
+  <!-- arrows -->
+  <line x1="160" y1="80" x2="212" y2="80" stroke="#34495e" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="305" y1="80" x2="368" y2="140" stroke="#34495e" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="160" y1="310" x2="212" y2="310" stroke="#34495e" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="305" y1="310" x2="368" y2="185" stroke="#34495e" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="450" y1="160" x2="518" y2="160" stroke="#34495e" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="630" y1="145" x2="688" y2="145" stroke="#34495e" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="730" y1="130" x2="750" y2="88" stroke="#c0392b" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="730" y1="190" x2="748" y2="228" stroke="#2e7d32" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="470" y="152" font-size="11" fill="#34495e">汇集</text>
+</svg>

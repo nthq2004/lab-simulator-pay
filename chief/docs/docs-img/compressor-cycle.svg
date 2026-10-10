@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 470" font-family="Microsoft YaHei, Arial, sans-serif">
+  <rect width="900" height="470" fill="#f7f9fb"/>
+  <text x="20" y="28" font-size="18" font-weight="bold" fill="#2c3e50">图 2　双位（两位）压力自动起停循环</text>
+
+  <!-- axes -->
+  <line x1="110" y1="400" x2="820" y2="400" stroke="#455a64" stroke-width="2"/>
+  <line x1="110" y1="60" x2="110" y2="400" stroke="#455a64" stroke-width="2"/>
+  <text x="60" y="70" font-size="12" fill="#455a64">P/MPa</text>
+  <text x="820" y="425" font-size="12" fill="#455a64">t</text>
+  <!-- y ticks -->
+  <line x1="104" y1="145" x2="110" y2="145" stroke="#455a64" stroke-width="1"/>
+  <text x="76" y="149" font-size="12" fill="#455a64">3.0</text>
+  <line x1="104" y1="272" x2="110" y2="272" stroke="#455a64" stroke-width="1"/>
+  <text x="76" y="276" font-size="12" fill="#455a64">1.5</text>
+  <line x1="104" y1="60" x2="110" y2="60" stroke="#455a64" stroke-width="1"/>
+  <text x="76" y="64" font-size="12" fill="#455a64">4.0</text>
+
+  <!-- thresholds -->
+  <line x1="110" y1="145" x2="820" y2="145" stroke="#2e7d32" stroke-width="1.6" stroke-dasharray="7 5"/>
+  <text x="810" y="139" text-anchor="end" font-size="13" fill="#1b5e20">自动停机压力 ≈ 3.0 MPa（动作上限，NC 断开）</text>
+  <line x1="110" y1="272" x2="820" y2="272" stroke="#c0392b" stroke-width="1.6" stroke-dasharray="7 5"/>
+  <text x="810" y="266" text-anchor="end" font-size="13" fill="#7b241c">自动起动压力 ≈ 1.5 MPa（动作下限，NC 闭合）</text>
+
+  <!-- sawtooth -->
+  <polyline points="130,128 300,272 430,145 600,272 720,145 800,272"
+            fill="none" stroke="#1565c0" stroke-width="3"/>
+  <circle cx="300" cy="272" r="4" fill="#c0392b"/>
+  <circle cx="430" cy="145" r="4" fill="#2e7d32"/>
+  <circle cx="600" cy="272" r="4" fill="#c0392b"/>
+
+  <!-- running bands -->
+  <rect x="300" y="60" width="130" height="13" fill="#dff5df"/>
+  <text x="305" y="71" font-size="11" fill="#1b5e20">空压机运行（充气）</text>
+  <rect x="430" y="60" width="170" height="13" fill="#fdecea"/>
+  <text x="437" y="71" font-size="11" fill="#7b241c">空压机停止（耗气降压）</text>
+  <rect x="600" y="60" width="120" height="13" fill="#dff5df"/>
+  <text x="605" y="71" font-size="11" fill="#1b5e20">运行</text>
+
+  <!-- notes -->
+  <text x="130" y="345" font-size="13" fill="#263238">瓶压 ≥ 上限（3.0 MPa）：压力继电器释放 → NC 断开 → PLC 输入 I0.4=0 → 自动停机</text>
+  <text x="130" y="372" font-size="13" fill="#263238">瓶压 ≤ 下限（1.5 MPa）：压力继电器励磁 → NC 闭合 → PLC 输入 I0.4=1 → 自动起动</text>
+  <text x="130" y="432" font-size="12" fill="#607d8b">上下限之间压力继电器保持原状态（切换差/滞回），避免在阈值附近频繁起停。</text>
+</svg>

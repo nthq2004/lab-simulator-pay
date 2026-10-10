@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 520" font-family="Microsoft YaHei, Arial, sans-serif">
+  <defs>
+    <marker id="ab" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 z" fill="#1565c0"/>
+    </marker>
+    <marker id="ar2" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 z" fill="#c0392b"/>
+    </marker>
+  </defs>
+  <rect width="940" height="520" fill="#f7f9fb"/>
+  <text x="20" y="28" font-size="18" font-weight="bold" fill="#2c3e50">图 3　PLC 输入/输出与接触器控制回路</text>
+
+  <!-- 输入信号（左） -->
+  <rect x="24" y="60" width="220" height="52" rx="6" fill="#e3f2fd" stroke="#1565c0"/>
+  <text x="134" y="82" font-size="13" text-anchor="middle" fill="#0d47a1">1#/2# 遥控面板</text>
+  <text x="134" y="101" font-size="12" text-anchor="middle" fill="#0d47a1">自动 / 点动起动 / 点动停止</text>
+
+  <rect x="24" y="130" width="220" height="52" rx="6" fill="#e3f2fd" stroke="#1565c0"/>
+  <text x="134" y="152" font-size="13" text-anchor="middle" fill="#0d47a1">1#/2# 机旁面板</text>
+  <text x="134" y="171" font-size="12" text-anchor="middle" fill="#0d47a1">遥控触点（0.5/0.6）</text>
+
+  <rect x="24" y="200" width="220" height="46" rx="6" fill="#e3f2fd" stroke="#1565c0"/>
+  <text x="134" y="221" font-size="13" text-anchor="middle" fill="#0d47a1">备用顺序选择开关</text>
+  <text x="134" y="238" font-size="12" text-anchor="middle" fill="#0d47a1">1-2 / 2-1</text>
+
+  <rect x="24" y="264" width="220" height="52" rx="6" fill="#e3f2fd" stroke="#1565c0"/>
+  <text x="134" y="286" font-size="13" text-anchor="middle" fill="#0d47a1">双位压力继电器</text>
+  <text x="134" y="305" font-size="12" text-anchor="middle" fill="#0d47a1">NC 触头（0.4）</text>
+
+  <rect x="24" y="334" width="220" height="66" rx="6" fill="#e3f2fd" stroke="#1565c0"/>
+  <text x="134" y="356" font-size="13" text-anchor="middle" fill="#0d47a1">EM DI08 扩展</text>
+  <text x="134" y="375" font-size="12" text-anchor="middle" fill="#0d47a1">过电流 / 温度 / 油压</text>
+  <text x="134" y="392" font-size="12" text-anchor="middle" fill="#0d47a1">1#（0~2） 2#（4~6）</text>
+
+  <!-- PLC -->
+  <rect x="340" y="120" width="230" height="270" rx="10" fill="#cfd8dc" stroke="#37474f" stroke-width="2"/>
+  <text x="455" y="160" font-size="18" font-weight="bold" text-anchor="middle" fill="#263238">SR20 PLC</text>
+  <text x="455" y="185" font-size="13" text-anchor="middle" fill="#37474f">（S7-200 SMART 指令表程序）</text>
+  <text x="455" y="230" font-size="13" text-anchor="middle" fill="#1565c0">数字量输入 DI</text>
+  <text x="455" y="252" font-size="13" text-anchor="middle" fill="#c0392b">数字量输出 DQ</text>
+  <line x1="360" y1="270" x2="550" y2="270" stroke="#90a4ae" stroke-dasharray="4 4"/>
+  <text x="455" y="300" font-size="12" text-anchor="middle" fill="#37474f">综合故障 / 备用顺序 Duty</text>
+  <text x="455" y="322" font-size="12" text-anchor="middle" fill="#37474f">起保停 / 双位自动</text>
+
+  <!-- 输出（右） -->
+  <rect x="690" y="120" width="226" height="60" rx="6" fill="#fdecea" stroke="#c0392b"/>
+  <text x="803" y="145" font-size="14" text-anchor="middle" fill="#7b241c">KM1 / KM2 接触器线圈</text>
+  <text x="803" y="166" font-size="12" text-anchor="middle" fill="#7b241c">Q0.0 / Q0.1 驱动（24V）</text>
+
+  <rect x="690" y="210" width="226" height="60" rx="6" fill="#fdecea" stroke="#c0392b"/>
+  <text x="803" y="235" font-size="14" text-anchor="middle" fill="#7b241c">接触器辅助常开触点</text>
+  <text x="803" y="256" font-size="12" text-anchor="middle" fill="#7b241c">桥接空压机遥控端 L/R</text>
+
+  <rect x="690" y="300" width="226" height="60" rx="6" fill="#fdecea" stroke="#c0392b"/>
+  <text x="803" y="325" font-size="14" text-anchor="middle" fill="#7b241c">报警灯输出</text>
+  <text x="803" y="346" font-size="12" text-anchor="middle" fill="#7b241c">Q0.2~Q0.7（1#/2# 三灯）</text>
+
+  <!-- 机旁手动硬线 -->
+  <rect x="340" y="440" width="230" height="56" rx="6" fill="#fff8e1" stroke="#f9a825"/>
+  <text x="455" y="464" font-size="13" text-anchor="middle" fill="#7f6000">机旁「手动」触点直接驱动线圈</text>
+  <text x="455" y="483" font-size="12" text-anchor="middle" fill="#7f6000">（不经 PLC，硬线并联）</text>
+
+  <!-- arrows in -->
+  <line x1="244" y1="86" x2="338" y2="150" stroke="#1565c0" stroke-width="2" marker-end="url(#ab)"/>
+  <line x1="244" y1="156" x2="338" y2="180" stroke="#1565c0" stroke-width="2" marker-end="url(#ab)"/>
+  <line x1="244" y1="223" x2="338" y2="215" stroke="#1565c0" stroke-width="2" marker-end="url(#ab)"/>
+  <line x1="244" y1="290" x2="338" y2="250" stroke="#1565c0" stroke-width="2" marker-end="url(#ab)"/>
+  <line x1="244" y1="367" x2="338" y2="285" stroke="#1565c0" stroke-width="2" marker-end="url(#ab)"/>
+
+  <!-- arrows out -->
+  <line x1="570" y1="180" x2="688" y2="150" stroke="#c0392b" stroke-width="2" marker-end="url(#ar2)"/>
+  <line x1="570" y1="220" x2="688" y2="240" stroke="#c0392b" stroke-width="2" marker-end="url(#ar2)"/>
+  <line x1="570" y1="280" x2="688" y2="330" stroke="#c0392b" stroke-width="2" marker-end="url(#ar2)"/>
+  <line x1="455" y1="390" x2="455" y2="438" stroke="#f9a825" stroke-width="2" marker-end="url(#ar2)"/>
+  <text x="470" y="418" font-size="12" fill="#7f6000">机旁手动/关</text>
+</svg>

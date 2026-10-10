@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 540" font-family="Microsoft YaHei, Arial, sans-serif">
+  <rect width="900" height="540" fill="#f7f9fb"/>
+  <text x="20" y="28" font-size="18" font-weight="bold" fill="#2c3e50">图 5　SR20 PLC 输入 / 输出（I/O）分配</text>
+
+  <!-- DI -->
+  <rect x="24" y="48" width="420" height="470" rx="8" fill="#ffffff" stroke="#1565c0"/>
+  <text x="234" y="74" font-size="15" font-weight="bold" text-anchor="middle" fill="#0d47a1">数字量输入 DI</text>
+  <g font-size="13" fill="#263238">
+    <text x="44" y="104">I0.0　1# 遥控面板 · 自动</text>
+    <text x="44" y="132">I0.1　1# 遥控面板 · 起动（点动）</text>
+    <text x="44" y="160">I0.2　1# 遥控面板 · 停止（点动）</text>
+    <text x="44" y="188">I0.3　备用顺序选择（0=1-2，1=2-1）</text>
+    <text x="44" y="216">I0.4　双位压力继电器 NC 触头</text>
+    <text x="44" y="244">I0.5　1# 机旁面板 · 遥控</text>
+    <text x="44" y="272">I0.6　2# 机旁面板 · 遥控</text>
+    <text x="44" y="300">I1.0　2# 遥控面板 · 自动</text>
+    <text x="44" y="328">I1.1　2# 遥控面板 · 起动（点动）</text>
+    <text x="44" y="356">I1.2　2# 遥控面板 · 停止（点动）</text>
+    <text x="44" y="392" fill="#7b241c">I2.0 / I2.1 / I2.2　1# 过电流 / 温度 / 油压</text>
+    <text x="44" y="420" fill="#7b241c">I2.4 / I2.5 / I2.6　2# 过电流 / 温度 / 油压</text>
+  </g>
+  <text x="44" y="456" font-size="12" fill="#607d8b">I2.0~I2.6 来自 EM DI08 扩展模块（槽0，地址 I2.0~I2.7）</text>
+  <text x="44" y="478" font-size="12" fill="#607d8b">DI 均以 24V 电位经触点接入；未动作时悬空为 0。</text>
+
+  <!-- DQ -->
+  <rect x="456" y="48" width="420" height="470" rx="8" fill="#ffffff" stroke="#c0392b"/>
+  <text x="666" y="74" font-size="15" font-weight="bold" text-anchor="middle" fill="#7b241c">数字量输出 DQ</text>
+  <g font-size="13" fill="#263238">
+    <text x="476" y="110">Q0.0　KM1 接触器线圈（1#）</text>
+    <text x="476" y="146">Q0.1　KM2 接触器线圈（2#）</text>
+    <text x="476" y="196">Q0.2　1# 过电流报警灯</text>
+    <text x="476" y="224">Q0.3　1# 温度报警灯</text>
+    <text x="476" y="252">Q0.4　1# 油压报警灯</text>
+    <text x="476" y="300">Q0.5　2# 过电流报警灯</text>
+    <text x="476" y="328">Q0.6　2# 温度报警灯</text>
+    <text x="476" y="356">Q0.7　2# 油压报警灯</text>
+  </g>
+  <text x="476" y="404" font-size="12" fill="#607d8b">Q0.0/Q0.1 为源型输出：置 1 时输出端与 1L+（24V）内部</text>
+  <text x="476" y="424" font-size="12" fill="#607d8b">导通，驱动接触器线圈；线圈另一端接地。</text>
+  <text x="476" y="456" font-size="12" fill="#607d8b">Q0.2~Q0.7 驱动机旁面板上的过电流/温度/油压指示灯。</text>
+</svg>
