@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 420" font-family="Microsoft YaHei, Arial, sans-serif">
+  <rect width="1040" height="420" fill="#fbfcfd"/>
+  <text x="520" y="32" font-size="21" font-weight="bold" text-anchor="middle" fill="#1a3a5c">图 2　滑油泵压力模型与压力开关动作</text>
+
+  <!-- 泵压力模型 -->
+  <rect x="40" y="70" width="420" height="300" rx="10" fill="#f4f7f9" stroke="#cfd8dc" stroke-width="1.5"/>
+  <text x="250" y="100" font-size="16" font-weight="bold" text-anchor="middle" fill="#2c3e50">泵的进出口压力模型</text>
+
+  <rect x="90" y="150" width="140" height="110" rx="10" fill="#ecf0f1" stroke="#34495e" stroke-width="2"/>
+  <circle cx="160" cy="205" r="30" fill="#fff" stroke="#34495e" stroke-width="2"/>
+  <path d="M160,205 L160,181 M160,205 L181,217 M160,205 L139,217" stroke="#34495e" stroke-width="3" stroke-linecap="round"/>
+  <text x="160" y="250" font-size="13" font-weight="bold" text-anchor="middle" fill="#2c3e50">滑油泵</text>
+
+  <text x="80" y="190" font-size="12" fill="#c0392b">入口</text>
+  <text x="80" y="206" font-size="12" font-weight="bold" fill="#c0392b">−0.1 MPa</text>
+  <text x="238" y="180" font-size="12" fill="#27ae60">加压</text>
+  <text x="238" y="196" font-size="12" font-weight="bold" fill="#27ae60">+0.6 MPa</text>
+  <text x="238" y="240" font-size="12" fill="#2e7d32">出口</text>
+  <text x="238" y="256" font-size="12" font-weight="bold" fill="#2e7d32">0.5 MPa</text>
+
+  <text x="250" y="320" font-size="13" fill="#546e7a" text-anchor="middle">运行：出口 = 入口 + 加压 = −0.1 + 0.6 = 0.5 MPa</text>
+  <text x="250" y="344" font-size="13" fill="#546e7a" text-anchor="middle">停止：出口 = 0 MPa</text>
+
+  <!-- 压力开关阈值 -->
+  <rect x="500" y="70" width="500" height="300" rx="10" fill="#f4f7f9" stroke="#cfd8dc" stroke-width="1.5"/>
+  <text x="750" y="100" font-size="16" font-weight="bold" text-anchor="middle" fill="#2c3e50">压力开关（双位压力继电器 yt）</text>
+
+  <!-- 压力轴 -->
+  <line x1="580" y1="300" x2="960" y2="300" stroke="#607d8b" stroke-width="2"/>
+  <line x1="580" y1="300" x2="580" y2="130" stroke="#607d8b" stroke-width="2"/>
+  <text x="560" y="320" font-size="12" fill="#607d8b">0</text>
+  <text x="596" y="322" font-size="11" fill="#607d8b">0.2</text>
+  <text x="676" y="322" font-size="11" fill="#607d8b">0.3</text>
+  <text x="812" y="322" font-size="11" fill="#607d8b">0.5</text>
+
+  <!-- 阈值刻度 -->
+  <line x1="636" y1="300" x2="636" y2="140" stroke="#c0392b" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="600" y="134" font-size="12" font-weight="bold" fill="#c0392b">下限 0.2</text>
+  <line x1="716" y1="300" x2="716" y2="140" stroke="#e67e22" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="700" y="134" font-size="12" font-weight="bold" fill="#e67e22">上限 0.3</text>
+
+  <!-- 区域 -->
+  <rect x="580" y="150" width="56" height="150" fill="#fdecea"/>
+  <rect x="636" y="150" width="80" height="150" fill="#fff8e1"/>
+  <rect x="716" y="150" width="244" height="150" fill="#eef7ee"/>
+
+  <text x="608" y="232" font-size="11" fill="#c0392b" text-anchor="middle">低</text>
+  <text x="676" y="232" font-size="11" fill="#8a6d00" text-anchor="middle">保持</text>
+  <text x="838" y="232" font-size="12" font-weight="bold" fill="#2e7d32" text-anchor="middle">正常（> 0.3）</text>
+
+  <text x="580" y="362" font-size="13" fill="#546e7a">P &lt; 0.2：常闭触点 NC 闭合 → 判「滑油压力低」</text>
+  <text x="580" y="384" font-size="13" fill="#546e7a">P &gt; 0.3：常闭触点 NC 断开 → 正常，不投入备用</text>
+  <text x="580" y="406" font-size="13" fill="#546e7a">0.2 ～ 0.3：保持前一状态（切换差，防抖）</text>
+</svg>

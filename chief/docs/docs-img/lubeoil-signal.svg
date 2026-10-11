@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 440" font-family="Microsoft YaHei, Arial, sans-serif">
+  <defs>
+    <marker id="a4" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#2c3e50"/>
+    </marker>
+  </defs>
+  <rect width="1080" height="440" fill="#fbfcfd"/>
+  <text x="540" y="30" font-size="21" font-weight="bold" text-anchor="middle" fill="#1a3a5c">图 3　信号链路：面板 → PLC → 接触器 → 滑油泵</text>
+
+  <!-- 第一行：控制信号上行 -->
+  <rect x="40" y="70" width="200" height="72" rx="8" fill="#e8edf2" stroke="#455a64" stroke-width="2"/>
+  <text x="140" y="98" font-size="13.5" font-weight="bold" text-anchor="middle" fill="#1a3a5c">机旁面板 lp1/lp2</text>
+  <text x="140" y="118" font-size="11.5" text-anchor="middle" fill="#546e7a">本地/遥控、起动、停止</text>
+  <text x="140" y="134" font-size="11.5" text-anchor="middle" fill="#546e7a">过载触头</text>
+
+  <rect x="320" y="70" width="180" height="72" rx="8" fill="#c9d3cd" stroke="#7d8a83" stroke-width="2"/>
+  <text x="410" y="98" font-size="13.5" font-weight="bold" text-anchor="middle" fill="#1a252f">遥控面板 rp1/rp2</text>
+  <text x="410" y="118" font-size="11.5" text-anchor="middle" fill="#37474f">自动/手动、启动</text>
+  <text x="410" y="134" font-size="11.5" text-anchor="middle" fill="#37474f">停/复位</text>
+
+  <rect x="600" y="60" width="200" height="92" rx="10" fill="#e8eef2" stroke="#34495e" stroke-width="2"/>
+  <text x="700" y="92" font-size="14" font-weight="bold" text-anchor="middle" fill="#1a252f">PLC 程序</text>
+  <text x="700" y="114" font-size="11.5" text-anchor="middle" fill="#546e7a">判断/延时/锁存/主备选择</text>
+  <text x="700" y="134" font-size="11.5" text-anchor="middle" fill="#546e7a">Q0.0 / Q0.1 输出</text>
+
+  <rect x="880" y="60" width="160" height="92" rx="10" fill="#fff" stroke="#6b7280" stroke-width="2"/>
+  <text x="960" y="92" font-size="13.5" font-weight="bold" text-anchor="middle" fill="#2c3e50">接触器</text>
+  <text x="960" y="114" font-size="12" text-anchor="middle" fill="#607d8b">KM1 / KM2</text>
+  <text x="960" y="134" font-size="11.5" text-anchor="middle" fill="#607d8b">线圈 + 辅助常开</text>
+
+  <line x1="240" y1="106" x2="320" y2="106" stroke="#2c3e50" stroke-width="2.2" marker-end="url(#a4)"/>
+  <line x1="500" y1="106" x2="600" y2="106" stroke="#2c3e50" stroke-width="2.2" marker-end="url(#a4)"/>
+  <line x1="800" y1="106" x2="880" y2="106" stroke="#2c3e50" stroke-width="2.2" marker-end="url(#a4)"/>
+
+  <!-- 第二行：动力/状态下行 -->
+  <rect x="880" y="230" width="160" height="80" rx="10" fill="#ecf0f1" stroke="#34495e" stroke-width="2"/>
+  <text x="960" y="260" font-size="13" font-weight="bold" text-anchor="middle" fill="#2c3e50">辅助常开触头</text>
+  <text x="960" y="282" font-size="11.5" text-anchor="middle" fill="#607d8b">桥接泵遥控端 L / R</text>
+  <text x="960" y="300" font-size="11.5" text-anchor="middle" fill="#607d8b">吸合即运转</text>
+
+  <rect x="580" y="230" width="240" height="80" rx="10" fill="#f4f7f9" stroke="#455a64" stroke-width="2"/>
+  <text x="700" y="260" font-size="14" font-weight="bold" text-anchor="middle" fill="#1a3a5c">滑油泵 p1 / p2</text>
+  <text x="700" y="282" font-size="11.5" text-anchor="middle" fill="#607d8b">遥控端接通 → 叶轮旋转</text>
+  <text x="700" y="300" font-size="11.5" text-anchor="middle" fill="#607d8b">出口 0.5 MPa</text>
+
+  <line x1="880" y1="270" x2="820" y2="270" stroke="#c0392b" stroke-width="2.4" marker-end="url(#a4)"/>
+
+  <!-- 反馈 -->
+  <rect x="200" y="230" width="300" height="80" rx="10" fill="#fff8e1" stroke="#c9a227" stroke-width="2"/>
+  <text x="350" y="258" font-size="13" font-weight="bold" text-anchor="middle" fill="#8a6d00">压力继电器 yt</text>
+  <text x="350" y="280" font-size="11.5" text-anchor="middle" fill="#8a6d00">测系统油压 → NC 触点</text>
+  <text x="350" y="298" font-size="11.5" text-anchor="middle" fill="#8a6d00">送 PLC I1.0</text>
+
+  <line x1="580" y1="270" x2="500" y2="270" stroke="#2c3e50" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#a4)"/>
+  <text x="540" y="262" font-size="11" fill="#607d8b" text-anchor="middle">取压</text>
+  <line x1="200" y1="270" x2="600" y2="152" stroke="#c9a227" stroke-width="1.8" stroke-dasharray="6 4" marker-end="url(#a4)"/>
+  <text x="330" y="210" font-size="11" fill="#8a6d00">压力信号（跨页 A6）</text>
+
+  <!-- 反馈到遥控面板 -->
+  <line x1="600" y1="152" x2="500" y2="142" stroke="#c0392b" stroke-width="1.8" marker-end="url(#a4)"/>
+  <text x="545" y="174" text-anchor="middle" font-size="11" fill="#c0392b">Q0.2/0.3 故障灯</text>
+
+  <text x="540" y="400" font-size="12.5" text-anchor="middle" fill="#546e7a">控制链：面板 → PLC 输入 → 程序逻辑 → PLC 输出 → 接触器 → 泵遥控端 → 泵运转；油压经压力继电器反馈回 PLC。</text>
+</svg>
