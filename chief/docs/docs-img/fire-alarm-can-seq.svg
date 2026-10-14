@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="600" viewBox="0 0 960 600" font-family="Microsoft YaHei, Arial, sans-serif">
+  <rect width="960" height="600" fill="#fbfcfd"/>
+  <text x="480" y="32" font-size="22" font-weight="bold" text-anchor="middle" fill="#1f3b4d">CAN 报文的交互时序与节点状态机</text>
+
+  <!-- ============ 时序图 ============ -->
+  <text x="30" y="66" font-size="15" font-weight="bold" fill="#0d47a1">一、控制器与探测器的报文交互时序</text>
+
+  <!-- 两条生命线 -->
+  <rect x="60" y="86" width="150" height="34" rx="6" fill="#4a4f55"/>
+  <text x="135" y="108" font-size="13" fill="#fff" text-anchor="middle" font-weight="bold">火灾报警控制器</text>
+  <line x1="135" y1="120" x2="135" y2="470" stroke="#607d8b" stroke-width="2" stroke-dasharray="6 4"/>
+
+  <rect x="620" y="86" width="150" height="34" rx="6" fill="#e8f0f6" stroke="#607d8b" stroke-width="2"/>
+  <text x="695" y="108" font-size="13" fill="#263238" text-anchor="middle" font-weight="bold">#1 感烟探测器</text>
+  <line x1="695" y1="120" x2="695" y2="470" stroke="#607d8b" stroke-width="2" stroke-dasharray="6 4"/>
+
+  <!-- 报文箭头 -->
+  <!-- 1 自检 -->
+  <rect x="150" y="130" width="520" height="26" rx="4" fill="#eceff1" stroke="#90a4ae"/>
+  <text x="410" y="148" font-size="11" fill="#455a64" text-anchor="middle">① 上电自检（内部，约 7.2s）：7 灯 → 5 功能键 → 声光报警器</text>
+
+  <!-- 2 NMT START -->
+  <line x1="135" y1="180" x2="693" y2="180" stroke="#e53935" stroke-width="2" marker-end="url(#a2)"/>
+  <text x="150" y="174" font-size="11" fill="#c62828">② NMT START（ID 0x000，data = 01 00）</text>
+
+  <!-- 3 探测进入 RUN -->
+  <rect x="200" y="192" width="520" height="24" rx="4" fill="#e8f5e9" stroke="#2e7d32"/>
+  <text x="460" y="209" font-size="11" fill="#1b5e20" text-anchor="middle">节点状态：INIT/PREOP → RUN（开始周期上报）</text>
+
+  <!-- 4 心跳 -->
+  <line x1="135" y1="240" x2="693" y2="240" stroke="#7b1fa2" stroke-width="2" marker-end="url(#a2b)"/>
+  <text x="150" y="234" font-size="11" fill="#6a1b9a">③ 运行广播心跳（ID 0x780，data[0] = 0x05）— 平台机制，本工程以“周期 NMT START”等效保活</text>
+
+  <!-- 5 周期上报 -->
+  <line x1="695" y1="286" x2="137" y2="286" stroke="#2e7d32" stroke-width="2" marker-end="url(#a2g)"/>
+  <text x="705" y="280" font-size="11" fill="#1b5e20" text-anchor="end">④ 周期上报（ID 0x081，每 200ms）</text>
+  <text x="705" y="296" font-size="10" fill="#546e7a" text-anchor="end">data = 00 01 01 01 00 00 00 00（正常：状态字节 0x00）</text>
+
+  <!-- 6 火警上报 -->
+  <line x1="695" y1="336" x2="137" y2="336" stroke="#c62828" stroke-width="2.5" marker-end="url(#a2r)"/>
+  <text x="705" y="330" font-size="11" fill="#c62828" text-anchor="end">⑤ 火警上报（状态字节 bit0 = 1）</text>
+  <text x="705" y="346" font-size="10" fill="#546e7a" text-anchor="end">data = 01 01 01 01 … → 控制器点亮 FIRE、驱动声光报警器</text>
+
+  <!-- 7 隔离 -->
+  <line x1="135" y1="392" x2="693" y2="392" stroke="#6a1b9a" stroke-width="2" marker-end="url(#a2b)"/>
+  <text x="150" y="386" font-size="11" fill="#6a1b9a">⑥ 隔离命令（ID 0x103，data[0] = 0x30）</text>
+    <text x="150" y="404" font-size="10" fill="#546e7a">探测器置 isolated 位 → 后续上报状态字节 bit1 = 1（0x02）</text>
+
+  <!-- 8 reset -->
+  <line x1="135" y1="444" x2="693" y2="444" stroke="#6a1b9a" stroke-width="2" marker-end="url(#a2b)"/>
+  <text x="150" y="438" font-size="11" fill="#6a1b9a">⑦ 复位火警（ID 0x103，data[0] = 0x32）或 NMT RESET（0x81）</text>
+
+  <!-- ============ 状态机 ============ -->
+  <text x="30" y="504" font-size="15" font-weight="bold" fill="#0d47a1">二、探测器节点状态机（CANopen 风格）</text>
+
+  <g font-size="12">
+    <rect x="60" y="520" width="150" height="44" rx="22" fill="#eceff1" stroke="#607d8b" stroke-width="2"/>
+    <text x="135" y="547" text-anchor="middle" font-weight="bold">INIT 初始化</text>
+
+    <rect x="290" y="520" width="150" height="44" rx="22" fill="#fff8e1" stroke="#f9a825" stroke-width="2"/>
+    <text x="365" y="547" text-anchor="middle" font-weight="bold">PREOP 预运行</text>
+
+    <rect x="520" y="520" width="150" height="44" rx="22" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+    <text x="595" y="547" text-anchor="middle" font-weight="bold">RUN 运行</text>
+
+    <rect x="760" y="520" width="150" height="44" rx="22" fill="#ffebee" stroke="#c62828" stroke-width="2"/>
+    <text x="835" y="547" text-anchor="middle" font-weight="bold">STOP 停止</text>
+
+    <line x1="210" y1="542" x2="286" y2="542" stroke="#546e7a" stroke-width="1.8" marker-end="url(#a2)"/>
+    <line x1="440" y1="542" x2="516" y2="542" stroke="#2e7d32" stroke-width="1.8" marker-end="url(#a2g)"/>
+    <line x1="670" y1="542" x2="756" y2="542" stroke="#c62828" stroke-width="1.8" marker-end="url(#a2r)"/>
+
+    <text x="248" y="534" font-size="10" text-anchor="middle" fill="#546e7a">上电</text>
+    <text x="478" y="534" font-size="10" text-anchor="middle" fill="#1b5e20">NMT START</text>
+    <text x="713" y="534" font-size="10" text-anchor="middle" fill="#c62828">NMT STOP</text>
+
+    <!-- 返回 -->
+    <path d="M 595 566 L 595 582 L 135 582 L 135 566" fill="none" stroke="#6a1b9a" stroke-width="1.6" marker-end="url(#a2b)"/>
+    <text x="365" y="596" font-size="10" fill="#6a1b9a" text-anchor="middle">NMT RESET (0x81)：任何状态 → INIT（清通信故障与报警）</text>
+  </g>
+
+  <g font-size="11" font-weight="bold">
+    <text x="60" y="480" fill="#546e7a">心跳超时（&gt; 5s 未收到 0x780 心跳）：RUN → PREOP（停止上报，但节点仍在线）</text>
+  </g>
+
+  <defs>
+    <marker id="a2" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 z" fill="#e53935"/></marker>
+    <marker id="a2r" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 z" fill="#c62828"/></marker>
+    <marker id="a2g" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 z" fill="#2e7d32"/></marker>
+    <marker id="a2b" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 z" fill="#6a1b9a"/></marker>
+  </defs>
+</svg>

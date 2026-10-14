@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="480" viewBox="0 0 940 480" font-family="Microsoft YaHei, Arial, sans-serif">
+  <rect width="940" height="480" fill="#f7f9fa"/>
+  <text x="470" y="32" font-size="22" font-weight="bold" text-anchor="middle" fill="#1f3b4d">火灾探测器的功能测试方法与判定标准</text>
+
+  <!-- 表头 -->
+  <g font-size="12">
+    <rect x="30" y="52" width="150" height="32" fill="#37474f"/>
+    <rect x="180" y="52" width="150" height="32" fill="#37474f"/>
+    <rect x="330" y="52" width="120" height="32" fill="#37474f"/>
+    <rect x="450" y="52" width="110" height="32" fill="#37474f"/>
+    <rect x="560" y="52" width="350" height="32" fill="#37474f"/>
+    <text x="105" y="73" fill="#fff" text-anchor="middle" font-weight="bold">被检探测器</text>
+    <text x="255" y="73" fill="#fff" text-anchor="middle" font-weight="bold">模拟火源工具</text>
+    <text x="390" y="73" fill="#fff" text-anchor="middle" font-weight="bold">持续作用</text>
+    <text x="505" y="73" fill="#fff" text-anchor="middle" font-weight="bold">合格判定</text>
+    <text x="735" y="73" fill="#fff" text-anchor="middle" font-weight="bold">操作要点</text>
+
+    <!-- 行1 感烟 -->
+    <rect x="30" y="84" width="150" height="62" fill="#e3f2fd" stroke="#90a4ae"/>
+    <rect x="180" y="84" width="150" height="62" fill="#fff" stroke="#90a4ae"/>
+    <rect x="330" y="84" width="120" height="62" fill="#fff" stroke="#90a4ae"/>
+    <rect x="450" y="84" width="110" height="62" fill="#fff" stroke="#90a4ae"/>
+    <rect x="560" y="84" width="350" height="62" fill="#fff" stroke="#90a4ae"/>
+    <text x="105" y="108" text-anchor="middle" font-weight="bold" fill="#0d47a1">感烟探测器 #1</text>
+    <text x="105" y="126" text-anchor="middle" font-size="10" fill="#546e7a">LOOP1 · ZONE1</text>
+    <text x="255" y="108" text-anchor="middle">烟雾发生器</text>
+    <text x="255" y="126" text-anchor="middle" font-size="10" fill="#546e7a">对准探头，烟雾进入暗室</text>
+    <text x="390" y="118" text-anchor="middle" fill="#c62828" font-weight="bold">5 秒</text>
+    <text x="505" y="110" text-anchor="middle" font-size="11">探测器指示灯</text>
+    <text x="505" y="126" text-anchor="middle" font-size="11">转红闪烁</text>
+    <text x="735" y="106" text-anchor="middle" font-size="11">工具状态栏显示作用进度百分比，达 100% 即触发；</text>
+    <text x="735" y="124" text-anchor="middle" font-size="11">探头与工具距离须在有效作用距离（150px）内</text>
+
+    <!-- 行2 感温 -->
+    <rect x="30" y="146" width="150" height="62" fill="#fff3e0" stroke="#90a4ae"/>
+    <rect x="180" y="146" width="150" height="62" fill="#fff" stroke="#90a4ae"/>
+    <rect x="330" y="146" width="120" height="62" fill="#fff" stroke="#90a4ae"/>
+    <rect x="450" y="146" width="110" height="62" fill="#fff" stroke="#90a4ae"/>
+    <rect x="560" y="146" width="350" height="62" fill="#fff" stroke="#90a4ae"/>
+    <text x="105" y="170" text-anchor="middle" font-weight="bold" fill="#bf360c">感温探测器 #6</text>
+    <text x="105" y="188" text-anchor="middle" font-size="10" fill="#546e7a">LOOP2 · ZONE3</text>
+    <text x="255" y="170" text-anchor="middle">电吹风</text>
+    <text x="255" y="188" text-anchor="middle" font-size="10" fill="#546e7a">热风持续吹向探头</text>
+    <text x="390" y="180" text-anchor="middle" fill="#c62828" font-weight="bold">8 秒</text>
+    <text x="505" y="172" text-anchor="middle" font-size="11">探测器指示灯</text>
+    <text x="505" y="188" text-anchor="middle" font-size="11">转红闪烁</text>
+    <text x="735" y="168" text-anchor="middle" font-size="11">感温元件需热量累积，故作用时间最长；</text>
+    <text x="735" y="186" text-anchor="middle" font-size="11">测试中不可中断，中断后计时重新开始</text>
+
+    <!-- 行3 感光 -->
+    <rect x="30" y="208" width="150" height="62" fill="#f3e5f5" stroke="#90a4ae"/>
+    <rect x="180" y="208" width="150" height="62" fill="#fff" stroke="#90a4ae"/>
+    <rect x="330" y="208" width="120" height="62" fill="#fff" stroke="#90a4ae"/>
+    <rect x="450" y="208" width="110" height="62" fill="#fff" stroke="#90a4ae"/>
+    <rect x="560" y="208" width="350" height="62" fill="#fff" stroke="#90a4ae"/>
+    <text x="105" y="232" text-anchor="middle" font-weight="bold" fill="#6a1b9a">感光探测器 #2</text>
+    <text x="105" y="250" text-anchor="middle" font-size="10" fill="#546e7a">LOOP1 · ZONE1</text>
+    <text x="255" y="232" text-anchor="middle">专用打火机</text>
+    <text x="255" y="250" text-anchor="middle" font-size="10" fill="#546e7a">火焰正对探头窗口</text>
+    <text x="390" y="242" text-anchor="middle" fill="#c62828" font-weight="bold">3 秒</text>
+    <text x="505" y="234" text-anchor="middle" font-size="11">探测器指示灯</text>
+    <text x="505" y="250" text-anchor="middle" font-size="11">转红闪烁</text>
+    <text x="735" y="230" text-anchor="middle" font-size="11">火焰探测器响应最快（秒级）；</text>
+    <text x="735" y="248" text-anchor="middle" font-size="11">注意避免强光直射造成误触发</text>
+
+    <!-- 行4 手报 -->
+    <rect x="30" y="270" width="150" height="62" fill="#e8f5e9" stroke="#90a4ae"/>
+    <rect x="180" y="270" width="150" height="62" fill="#fff" stroke="#90a4ae"/>
+    <rect x="330" y="270" width="120" height="62" fill="#fff" stroke="#90a4ae"/>
+    <rect x="450" y="270" width="110" height="62" fill="#fff" stroke="#90a4ae"/>
+    <rect x="560" y="270" width="350" height="62" fill="#fff" stroke="#90a4ae"/>
+    <text x="105" y="294" text-anchor="middle" font-weight="bold" fill="#1b5e20">手动报警按钮 #4</text>
+    <text x="105" y="312" text-anchor="middle" font-size="10" fill="#546e7a">LOOP1 · ZONE2</text>
+    <text x="255" y="294" text-anchor="middle">人工按下</text>
+    <text x="255" y="312" text-anchor="middle" font-size="10" fill="#546e7a">按下按钮玻璃片</text>
+    <text x="390" y="304" text-anchor="middle" fill="#c62828" font-weight="bold">瞬时</text>
+    <text x="505" y="296" text-anchor="middle" font-size="11">按钮报警灯亮</text>
+    <text x="505" y="312" text-anchor="middle" font-size="11">+ 控制器火警</text>
+    <text x="735" y="292" text-anchor="middle" font-size="11">按下即报警，无需等待；复位须用专用钥匙</text>
+    <text x="735" y="310" text-anchor="middle" font-size="11">（仿真中再次点击按钮的测试部件即复位）</text>
+  </g>
+
+  <!-- 通用判定 -->
+  <rect x="30" y="348" width="880" height="112" rx="10" fill="#fffde7" stroke="#f9a825" stroke-width="2"/>
+  <text x="50" y="374" font-size="14" font-weight="bold" fill="#f57f17">统一的合格判定（四项均须同时满足）</text>
+  <g font-size="12" fill="#33691e">
+    <text x="50" y="398">① 探测器本体：指示灯由绿色转红色并闪烁，状态文字显示「火警」；</text>
+    <text x="50" y="420">② 控制器面板：LCD 事件列表出现对应的火警记录，FIRE 键变亮红并闪烁，防区报警灯点亮；</text>
+    <text x="50" y="442">③ 声光报警器：由控制器报警输出驱动，声光报警启动（按 MUTE 可消音）；</text>
+  </g>
+  <text x="620" y="398" font-size="12" fill="#33691e">④ 消防联动：面板自动模式时</text>
+  <text x="620" y="420" font-size="12" fill="#33691e">   对应防区电磁阀开启、喷淋泵起动</text>
+  <text x="620" y="442" font-size="12" fill="#b71c1c">测试结束务必：移开工具 → 复位探测器 → RESET</text>
+</svg>

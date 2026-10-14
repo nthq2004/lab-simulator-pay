@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="430" viewBox="0 0 940 430" font-family="Microsoft YaHei, Arial, sans-serif">
+  <rect width="940" height="430" fill="#f7f9fa"/>
+  <text x="470" y="32" font-size="22" font-weight="bold" text-anchor="middle" fill="#1f3b4d">火灾探测器更换与地址写入流程</text>
+
+  <!-- 步骤 1 -->
+  <g>
+    <rect x="30" y="58" width="200" height="150" rx="10" fill="#fff" stroke="#1565c0" stroke-width="2"/>
+    <circle cx="52" cy="80" r="13" fill="#1565c0"/>
+    <text x="52" y="85" font-size="13" fill="#fff" text-anchor="middle" font-weight="bold">1</text>
+    <text x="72" y="85" font-size="14" font-weight="bold" fill="#0d47a1">读取旧探测器地址</text>
+    <rect x="50" y="100" width="160" height="42" rx="5" fill="#eceff1" stroke="#607d8b"/>
+    <text x="130" y="118" font-size="11" fill="#263238" text-anchor="middle">地址写入器</text>
+    <text x="130" y="134" font-size="10" fill="#546e7a" text-anchor="middle">按「读地址」</text>
+    <rect x="86" y="152" width="88" height="34" rx="5" fill="#e8f0f6" stroke="#607d8b"/>
+    <text x="130" y="174" font-size="11" fill="#263238" text-anchor="middle">旧探测器</text>
+    <text x="130" y="198" font-size="10" fill="#1565c0" text-anchor="middle">须接 rw_p/rw_n ↔ can1p/can1n</text>
+  </g>
+  <path d="M 236 133 L 268 133" stroke="#78909c" stroke-width="2.5" marker-end="url(#a3)"/>
+
+  <!-- 步骤 2 -->
+  <g>
+    <rect x="274" y="58" width="200" height="150" rx="10" fill="#fff" stroke="#1565c0" stroke-width="2"/>
+    <circle cx="296" cy="80" r="13" fill="#1565c0"/>
+    <text x="296" y="85" font-size="13" fill="#fff" text-anchor="middle" font-weight="bold">2</text>
+    <text x="316" y="85" font-size="14" font-weight="bold" fill="#0d47a1">记录地址与回路防区</text>
+    <rect x="294" y="100" width="160" height="42" rx="5" fill="#0d47a1"/>
+    <text x="374" y="120" font-size="12" fill="#e3f2fd" text-anchor="middle" font-family="Consolas">#1  LOOP1  ZONE1</text>
+    <text x="374" y="136" font-size="10" fill="#90caf9" text-anchor="middle">LCD 显示读到的节点地址</text>
+    <text x="374" y="168" font-size="11" fill="#263238" text-anchor="middle">同时记录：</text>
+    <text x="374" y="188" font-size="11" fill="#546e7a" text-anchor="middle">回路号 / 防区号 / 器件类型</text>
+  </g>
+  <path d="M 480 133 L 512 133" stroke="#78909c" stroke-width="2.5" marker-end="url(#a3)"/>
+
+  <!-- 步骤 3 -->
+  <g>
+    <rect x="518" y="58" width="200" height="150" rx="10" fill="#fff" stroke="#1565c0" stroke-width="2"/>
+    <circle cx="540" cy="80" r="13" fill="#1565c0"/>
+    <text x="540" y="85" font-size="13" fill="#fff" text-anchor="middle" font-weight="bold">3</text>
+    <text x="560" y="85" font-size="14" font-weight="bold" fill="#0d47a1">写入新探测器地址</text>
+    <rect x="538" y="100" width="160" height="42" rx="5" fill="#eceff1" stroke="#607d8b"/>
+    <text x="618" y="118" font-size="11" fill="#263238" text-anchor="middle">地址写入器</text>
+    <text x="618" y="134" font-size="10" fill="#c62828" text-anchor="middle">按「写地址」</text>
+    <rect x="574" y="152" width="88" height="34" rx="5" fill="#e8f5e9" stroke="#2e7d32"/>
+    <text x="618" y="174" font-size="11" fill="#263238" text-anchor="middle">备用探测器</text>
+    <text x="618" y="198" font-size="10" fill="#2e7d32" text-anchor="middle">出厂无地址 → 写入 #1</text>
+  </g>
+  <path d="M 724 133 L 756 133" stroke="#78909c" stroke-width="2.5" marker-end="url(#a3)"/>
+
+  <!-- 步骤 4 -->
+  <g>
+    <rect x="762" y="58" width="150" height="150" rx="10" fill="#fff" stroke="#2e7d32" stroke-width="2"/>
+    <circle cx="784" cy="80" r="13" fill="#2e7d32"/>
+    <text x="784" y="85" font-size="13" fill="#fff" text-anchor="middle" font-weight="bold">4</text>
+    <text x="760" y="112" font-size="13" font-weight="bold" fill="#1b5e20" text-anchor="middle">接入总线验证</text>
+    <rect x="790" y="128" width="96" height="34" rx="5" fill="#e8f5e9" stroke="#2e7d32"/>
+    <text x="838" y="150" font-size="11" fill="#263238" text-anchor="middle">接入 LOOP1</text>
+    <text x="838" y="184" font-size="10" fill="#2e7d32" text-anchor="middle">指示灯转绿「正常」</text>
+    <text x="838" y="200" font-size="10" fill="#2e7d32" text-anchor="middle">控制器无通信故障</text>
+  </g>
+
+  <!-- 关键提示 -->
+  <rect x="30" y="230" width="880" height="180" rx="10" fill="#fffde7" stroke="#f9a825" stroke-width="2"/>
+  <text x="50" y="256" font-size="15" font-weight="bold" fill="#f57f17">更换作业的注意事项（考点）</text>
+  <g font-size="12" fill="#33691e">
+    <text x="50" y="282">① 地址唯一性：同一回路上地址不得重复。若漏写地址，探测器接入总线后不通信，控制器按“节点离线”报出通信故障；</text>
+    <text x="50" y="306">② 型号一致：更换件必须与原器件类型相同（感烟换感烟、感温换感温）。类型码由器件本身决定，写地址不会改变类型；</text>
+    <text x="50" y="330">③ 断电作业：实际船上更换前应先隔离该防区或断开回路，避免产生虚假火警；仿真中可直接带电更换并观察在线/离线过程；</text>
+    <text x="50" y="354">④ 更换后必测：新探测器须按第四章方法做一次功能测试（模拟火源），确认报警链路完整；</text>
+    <text x="50" y="378">⑤ 记录与复位：更换完成、测试通过后，按 RESET 清除过程中的故障与火警指示，并在值班日志中记录更换时间与器件编号；</text>
+    <text x="50" y="402" fill="#b71c1c">⑥ 严禁用“短接/屏蔽”方式替代故障探测器；隔离只能作为临时措施，且必须在日志中说明。</text>
+  </g>
+
+  <defs>
+    <marker id="a3" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 z" fill="#78909c"/></marker>
+  </defs>
+</svg>

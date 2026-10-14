@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="420" viewBox="0 0 960 420" font-family="Microsoft YaHei, Arial, sans-serif">
+  <rect width="960" height="420" fill="#f7f9fa"/>
+  <text x="480" y="34" font-size="20" font-weight="bold" text-anchor="middle" fill="#1f3b4d">消防喷淋系统流程与面板联动</text>
+
+  <!-- 水源与泵阀 -->
+  <g font-size="13" fill="#fff" text-anchor="middle">
+    <rect x="30" y="180" width="110" height="70" rx="6" fill="#c9a227" stroke="#8d6e00" stroke-width="2"/><text x="85" y="222" fill="#3a2a00" font-weight="bold">淡水柜</text>
+    <rect x="185" y="180" width="120" height="70" rx="6" fill="#607d8b" stroke="#37474f" stroke-width="2"/><text x="245" y="212">应急消防泵</text><text x="245" y="232" font-size="11">(泵起动/停止)</text>
+    <rect x="350" y="190" width="110" height="50" rx="6" fill="#eceff1" stroke="#455a64" stroke-width="2"/><text x="405" y="222" fill="#263238" font-weight="bold">单向截止阀</text>
+  </g>
+  <g stroke="#1565c0" stroke-width="4" fill="none">
+    <line x1="140" y1="215" x2="185" y2="215"/>
+    <line x1="305" y1="215" x2="350" y2="215"/>
+    <line x1="460" y1="215" x2="500" y2="215"/>
+  </g>
+
+  <!-- 三个三通 -->
+  <g fill="#b0bec5" stroke="#546e7a" stroke-width="2">
+    <circle cx="520" cy="215" r="14"/><circle cx="650" cy="215" r="14"/><circle cx="780" cy="215" r="14"/>
+  </g>
+  <text x="520" y="256" font-size="12" fill="#455a64" text-anchor="middle">三通1</text>
+  <text x="650" y="256" font-size="12" fill="#455a64" text-anchor="middle">三通2</text>
+  <text x="780" y="256" font-size="12" fill="#455a64" text-anchor="middle">三通3</text>
+  <g stroke="#1565c0" stroke-width="4" fill="none">
+    <line x1="534" y1="215" x2="636" y2="215"/>
+    <line x1="664" y1="215" x2="766" y2="215"/>
+  </g>
+
+  <!-- 四条支路 -->
+  <g font-size="11" text-anchor="middle">
+    <!-- 支路1 主机 -->
+    <line x1="520" y1="201" x2="520" y2="140" stroke="#1565c0" stroke-width="4"/>
+    <rect x="498" y="105" width="44" height="34" rx="4" fill="#2f6fd8" stroke="#1a237e" stroke-width="1.5"/><text x="520" y="127" fill="#fff" font-size="10">阀1</text>
+    <line x1="520" y1="105" x2="520" y2="70" stroke="#1565c0" stroke-width="4"/>
+    <rect x="488" y="40" width="64" height="30" rx="5" fill="#90a4ae" stroke="#546e7a"/><text x="520" y="60" fill="#263238">主机喷头</text>
+
+    <!-- 支路2 发电机 -->
+    <line x1="650" y1="201" x2="650" y2="140" stroke="#1565c0" stroke-width="4"/>
+    <rect x="628" y="105" width="44" height="34" rx="4" fill="#2f6fd8" stroke="#1a237e" stroke-width="1.5"/><text x="650" y="127" fill="#fff" font-size="10">阀2</text>
+    <line x1="650" y1="105" x2="650" y2="70" stroke="#1565c0" stroke-width="4"/>
+    <rect x="610" y="40" width="80" height="30" rx="5" fill="#90a4ae" stroke="#546e7a"/><text x="650" y="60" fill="#263238">发电机喷头</text>
+
+    <!-- 支路3 分油机间 -->
+    <line x1="780" y1="201" x2="780" y2="140" stroke="#1565c0" stroke-width="4"/>
+    <rect x="758" y="105" width="44" height="34" rx="4" fill="#2f6fd8" stroke="#1a237e" stroke-width="1.5"/><text x="780" y="127" fill="#fff" font-size="10">阀3</text>
+    <line x1="780" y1="105" x2="780" y2="70" stroke="#1565c0" stroke-width="4"/>
+    <rect x="730" y="40" width="100" height="30" rx="5" fill="#90a4ae" stroke="#546e7a"/><text x="780" y="60" fill="#263238">分油机间喷头</text>
+
+    <!-- 支路4 锅炉 -->
+    <line x1="794" y1="215" x2="860" y2="215" stroke="#1565c0" stroke-width="4"/>
+    <rect x="860" y="198" width="34" height="34" rx="4" fill="#2f6fd8" stroke="#1a237e" stroke-width="1.5"/><text x="877" y="219" fill="#fff" font-size="10">阀4</text>
+    <line x1="894" y1="215" x2="920" y2="215" stroke="#1565c0" stroke-width="4"/>
+    <line x1="920" y1="215" x2="920" y2="150" stroke="#1565c0" stroke-width="4"/>
+    <rect x="880" y="118" width="80" height="30" rx="5" fill="#90a4ae" stroke="#546e7a"/><text x="920" y="138" fill="#263238">锅炉喷头</text>
+  </g>
+
+  <!-- 控制关系 -->
+  <rect x="60" y="320" width="840" height="76" rx="8" fill="#3f8f86"/>
+  <text x="480" y="346" font-size="14" font-weight="bold" fill="#fff" text-anchor="middle">消防控制面板（自动模式）</text>
+  <text x="480" y="370" font-size="12" fill="#eafaf7" text-anchor="middle">某 ZONE 火警 → 自动起动应急消防泵 + 开启该区电磁阀 → 对应喷头喷淋</text>
+  <text x="480" y="388" font-size="11" fill="#d7f0ec" text-anchor="middle">手动模式：按绿色按钮开阀 / 红色按钮关阀；绿灯亮=阀开，红灯亮=该区火警</text>
+</svg>

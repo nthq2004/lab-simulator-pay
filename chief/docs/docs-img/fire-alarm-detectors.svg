@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="580" viewBox="0 0 960 580" font-family="Microsoft YaHei, Arial, sans-serif">
+  <rect width="960" height="580" fill="#f7f9fa"/>
+  <text x="480" y="32" font-size="22" font-weight="bold" text-anchor="middle" fill="#1f3b4d">四类火灾探测器件的工作原理与适用场所</text>
+
+  <!-- ================= ① 感烟 ================= -->
+  <rect x="20" y="50" width="440" height="240" rx="10" fill="#fff" stroke="#90a4ae" stroke-width="1.5"/>
+  <text x="40" y="78" font-size="15" font-weight="bold" fill="#0d47a1">① 感烟探测器（光电散射式）</text>
+  <text x="40" y="97" font-size="10.5" fill="#546e7a">节点 #1 #3 #5 #7 ｜ 类型码 0x01 ｜ LOOP1/2 各两个</text>
+
+  <!-- 图 -->
+  <rect x="40" y="110" width="150" height="120" rx="8" fill="#eceff1" stroke="#607d8b"/>
+  <text x="115" y="128" font-size="10" fill="#455a64" text-anchor="middle">迷宫式光学暗室</text>
+  <rect x="56" y="152" width="22" height="12" rx="2" fill="#1565c0"/>
+  <rect x="152" y="152" width="22" height="12" rx="2" fill="#2e7d32"/>
+  <text x="67" y="178" font-size="8.5" fill="#1565c0" text-anchor="middle">红外LED</text>
+  <text x="163" y="178" font-size="8.5" fill="#2e7d32" text-anchor="middle">光敏管</text>
+  <circle cx="100" cy="146" r="4" fill="#9e9e9e"/>
+  <circle cx="116" cy="154" r="5" fill="#bdbdbd"/>
+  <circle cx="86" cy="158" r="3.5" fill="#9e9e9e"/>
+  <path d="M 78 158 L 104 142" stroke="#e53935" stroke-width="1.4"/>
+  <path d="M 104 142 L 152 158" stroke="#e53935" stroke-width="1.4" marker-end="url(#ar1)"/>
+  <text x="115" y="200" font-size="9" fill="#c62828" text-anchor="middle">烟雾散射光 → 光敏管收到</text>
+  <text x="115" y="216" font-size="9" fill="#c62828" text-anchor="middle">→ 超过阈值即报警</text>
+
+  <!-- 文字 -->
+  <g font-size="11">
+    <text x="206" y="130" fill="#263238" font-weight="bold">触发条件：</text>
+    <text x="206" y="148" fill="#555">烟雾进入暗室，遮光率超阈值</text>
+    <text x="206" y="172" fill="#263238" font-weight="bold">适用场所：</text>
+    <text x="206" y="190" fill="#555">舱室、走廊、控制室、电缆间</text>
+    <text x="206" y="214" fill="#263238" font-weight="bold">不适用：</text>
+    <text x="206" y="232" fill="#555">正常有烟尘处（厨房、锅炉间）</text>
+    <text x="206" y="256" fill="#263238" font-weight="bold">特点：</text>
+    <text x="206" y="274" fill="#555">应用最广，误报率相对较高</text>
+  </g>
+
+  <!-- ================= ② 感温 ================= -->
+  <rect x="480" y="50" width="460" height="240" rx="10" fill="#fff" stroke="#90a4ae" stroke-width="1.5"/>
+  <text x="500" y="78" font-size="15" font-weight="bold" fill="#bf360c">② 感温探测器（定温 / 差温式）</text>
+  <text x="500" y="97" font-size="10.5" fill="#546e7a">节点 #6 ｜ 类型码 0x03 ｜ LOOP2 · ZONE3 锅炉</text>
+
+  <rect x="500" y="110" width="150" height="120" rx="8" fill="#fff3e0" stroke="#e64a19"/>
+  <text x="575" y="128" font-size="10" fill="#bf360c" text-anchor="middle">双金属片 / 热敏电阻</text>
+  <path d="M 520 150 q 12 -14 24 0 q 12 14 24 0 q 12 -14 24 0" fill="none" stroke="#e64a19" stroke-width="2.5"/>
+  <text x="575" y="168" font-size="9" fill="#bf360c" text-anchor="middle">受热变形 → 触点闭合</text>
+  <polyline points="518,208 540,208 556,200 572,203 588,190 604,194 620,182 640,184"
+    fill="none" stroke="#ff6f00" stroke-width="2"/>
+  <line x1="518" y1="192" x2="640" y2="192" stroke="#c62828" stroke-width="1" stroke-dasharray="4 3"/>
+  <text x="575" y="222" font-size="9" fill="#c62828" text-anchor="middle">温度升至整定值 → 动作</text>
+
+  <g font-size="11">
+    <text x="666" y="130" fill="#263238" font-weight="bold">触发条件：</text>
+    <text x="666" y="148" fill="#555">环境温度升至整定值（定温）</text>
+    <text x="666" y="166" fill="#555">或温升速率超限（差温）</text>
+    <text x="666" y="190" fill="#263238" font-weight="bold">适用场所：</text>
+    <text x="666" y="208" fill="#555">锅炉间、厨房、烘干间</text>
+    <text x="666" y="232" fill="#263238" font-weight="bold">特点：</text>
+    <text x="666" y="250" fill="#555">抗烟尘、抗干扰，响应较慢</text>
+    <text x="666" y="274" fill="#555">（热量需累积）</text>
+  </g>
+
+  <!-- ================= ③ 感光 ================= -->
+  <rect x="20" y="310" width="440" height="240" rx="10" fill="#fff" stroke="#90a4ae" stroke-width="1.5"/>
+  <text x="40" y="338" font-size="15" font-weight="bold" fill="#6a1b9a">③ 感光探测器（紫外 / 红外火焰式）</text>
+  <text x="40" y="357" font-size="10.5" fill="#546e7a">节点 #2 ｜ 类型码 0x02 ｜ LOOP1 · ZONE1 发电机</text>
+
+  <rect x="40" y="370" width="150" height="120" rx="8" fill="#f3e5f5" stroke="#8e24aa"/>
+  <text x="115" y="388" font-size="10" fill="#6a1b9a" text-anchor="middle">紫外 / 红外光电探头</text>
+  <circle cx="70" cy="428" r="15" fill="#37474f"/>
+  <circle cx="70" cy="428" r="7" fill="#7e57c2"/>
+  <text x="70" y="458" font-size="8.5" fill="#6a1b9a" text-anchor="middle">紫外管</text>
+  <path d="M 140 452 q -13 -20 0 -34 q 6 9 11 4 q 7 -9 2 -20 q 20 15 15 34 q -4 15 -28 16 z"
+    fill="#ff6d00" stroke="#e65100"/>
+  <text x="150" y="466" font-size="8.5" fill="#e65100" text-anchor="middle">火焰</text>
+  <line x1="128" y1="424" x2="90" y2="424" stroke="#e53935" stroke-width="1.5" marker-end="url(#ar1)"/>
+  <text x="115" y="478" font-size="9" fill="#c62828" text-anchor="middle">火焰辐射 → 探头报警</text>
+
+  <g font-size="11">
+    <text x="206" y="390" fill="#263238" font-weight="bold">触发条件：</text>
+    <text x="206" y="408" fill="#555">探测到火焰的 UV/IR 特征辐射</text>
+    <text x="206" y="432" fill="#263238" font-weight="bold">适用场所：</text>
+    <text x="206" y="450" fill="#555">燃油舱、机舱、油泵间</text>
+    <text x="206" y="474" fill="#263238" font-weight="bold">特点：</text>
+    <text x="206" y="492" fill="#555">响应最快（秒级）</text>
+    <text x="206" y="510" fill="#555">须避免阳光/弧光直射误触发</text>
+  </g>
+
+  <!-- ================= ④ 手报 ================= -->
+  <rect x="480" y="310" width="460" height="240" rx="10" fill="#fff" stroke="#90a4ae" stroke-width="1.5"/>
+  <text x="500" y="338" font-size="15" font-weight="bold" fill="#1b5e20">④ 手动报警按钮（人工触发）</text>
+  <text x="500" y="357" font-size="10.5" fill="#546e7a">节点 #4 #8 ｜ 类型码 0x04 ｜ ZONE2 主机 / ZONE4 分油机</text>
+
+  <rect x="500" y="370" width="150" height="120" rx="8" fill="#e8f5e9" stroke="#2e7d32"/>
+  <rect x="522" y="382" width="106" height="60" rx="5" fill="#c62828" stroke="#8e0000" stroke-width="2"/>
+  <circle cx="575" cy="408" r="15" fill="#ef5350" stroke="#7f1d1d" stroke-width="2"/>
+  <text x="575" y="412" font-size="8.5" fill="#fff" text-anchor="middle">按下</text>
+  <text x="575" y="462" font-size="9" fill="#1b5e20" text-anchor="middle">玻璃片 / 复位钥匙</text>
+  <text x="575" y="478" font-size="9" fill="#1b5e20" text-anchor="middle">按下即报火警</text>
+
+  <g font-size="11">
+    <text x="666" y="390" fill="#263238" font-weight="bold">触发条件：</text>
+    <text x="666" y="408" fill="#555">人工按下（无需物理量累积）</text>
+    <text x="666" y="432" fill="#263238" font-weight="bold">适用场所：</text>
+    <text x="666" y="450" fill="#555">走廊、出入口、逃生通道、机舱梯口</text>
+    <text x="666" y="474" fill="#263238" font-weight="bold">特点：</text>
+    <text x="666" y="492" fill="#555">属“人工确认”火警</text>
+    <text x="666" y="510" fill="#555">复位须用专用钥匙</text>
+  </g>
+
+  <defs>
+    <marker id="ar1" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 z" fill="#e53935"/>
+    </marker>
+  </defs>
+</svg>
