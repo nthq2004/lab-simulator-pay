@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520">
+  <rect width="900" height="520" fill="#ffffff"/>
+  <text x="450" y="28" text-anchor="middle" font-family="Microsoft YaHei, sans-serif" font-size="19" font-weight="bold" fill="#102a43">压缩机自动起停原理（入口压力继电器双位控制 + 延时）</text>
+
+  <!-- 坐标轴 -->
+  <line x1="90" y1="60" x2="90" y2="330" stroke="#37474f" stroke-width="2"/>
+  <line x1="90" y1="330" x2="830" y2="330" stroke="#37474f" stroke-width="2"/>
+  <text x="18" y="72" font-family="Microsoft YaHei, sans-serif" font-size="13" fill="#37474f">入口压力</text>
+  <text x="24" y="104" font-family="Microsoft YaHei, sans-serif" font-size="12" fill="#37474f">3.0</text>
+  <text x="24" y="176" font-family="Microsoft YaHei, sans-serif" font-size="12" fill="#37474f">2.1</text>
+  <text x="24" y="228" font-family="Microsoft YaHei, sans-serif" font-size="12" fill="#37474f">1.8</text>
+  <text x="24" y="262" font-family="Microsoft YaHei, sans-serif" font-size="12" fill="#37474f">1.5</text>
+  <text x="24" y="312" font-family="Microsoft YaHei, sans-serif" font-size="12" fill="#37474f">0.2</text>
+
+  <!-- 参考线：启动压力 1.8 / 停机点 1.5 -->
+  <line x1="90" y1="228" x2="830" y2="228" stroke="#e53935" stroke-width="2" stroke-dasharray="8,5"/>
+  <text x="834" y="224" text-anchor="end" font-family="Microsoft YaHei, sans-serif" font-size="13" fill="#e53935" dx="-4">启动压力 1.8 bar</text>
+  <line x1="90" y1="262" x2="830" y2="262" stroke="#1565c0" stroke-width="2" stroke-dasharray="8,5"/>
+  <text x="834" y="258" text-anchor="end" font-family="Microsoft YaHei, sans-serif" font-size="13" fill="#1565c0" dx="-4">停机点 = 启动压力 − 压差(0.3) = 1.5 bar</text>
+
+  <!-- 压力曲线 -->
+  <polyline points="90,262 250,228 330,228 500,262 580,262 740,228 820,228"
+            fill="none" stroke="#8e3fb5" stroke-width="3.5"/>
+
+  <text x="112" y="252" font-family="Microsoft YaHei, sans-serif" font-size="12" fill="#8e3fb5">回气压力升到启动值</text>
+  <text x="352" y="290" font-family="Microsoft YaHei, sans-serif" font-size="12" fill="#8e3fb5">运行抽气 → 压力降到停机点</text>
+
+  <!-- 延时标注 -->
+  <line x1="330" y1="60" x2="330" y2="330" stroke="#90a4ae" stroke-width="1.6" stroke-dasharray="4,4"/>
+  <line x1="580" y1="60" x2="580" y2="330" stroke="#90a4ae" stroke-width="1.6" stroke-dasharray="4,4"/>
+  <rect x="252" y="66" width="156" height="26" fill="#fff3e0" stroke="#f57c00" stroke-width="1.5" rx="4"/>
+  <text x="330" y="84" text-anchor="middle" font-family="Microsoft YaHei, sans-serif" font-size="12" fill="#e65100">高于启动压力延时 5s</text>
+  <rect x="502" y="66" width="156" height="26" fill="#e3f2fd" stroke="#1976d2" stroke-width="1.5" rx="4"/>
+  <text x="580" y="84" text-anchor="middle" font-family="Microsoft YaHei, sans-serif" font-size="12" fill="#0d47a1">低于停机点延时 6s</text>
+
+  <!-- 运行状态带 -->
+  <text x="20" y="372" font-family="Microsoft YaHei, sans-serif" font-size="13" fill="#37474f">压缩机</text>
+  <rect x="90" y="352" width="240" height="40" fill="#eceff1" stroke="#90a4ae" stroke-width="2"/>
+  <text x="210" y="378" text-anchor="middle" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#607d8b">停机</text>
+  <rect x="330" y="352" width="250" height="40" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="455" y="378" text-anchor="middle" font-family="Microsoft YaHei, sans-serif" font-size="14" font-weight="bold" fill="#2e7d32">运行（抽气）</text>
+  <rect x="580" y="352" width="250" height="40" fill="#eceff1" stroke="#90a4ae" stroke-width="2"/>
+  <text x="705" y="378" text-anchor="middle" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#607d8b">停机</text>
+
+  <!-- 说明 -->
+  <rect x="90" y="410" width="740" height="96" fill="#f7fbff" stroke="#b3d4f0" stroke-width="1.5" rx="6"/>
+  <text x="104" y="434" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#102a43">① 自动方式下：入口（回气）压力 <tspan fill="#e53935" font-weight="bold">高于启动压力</tspan> 并延时约 5s → 自动起动；</text>
+  <text x="104" y="458" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#102a43">② 入口压力 <tspan fill="#1565c0" font-weight="bold">低于（启动压力 − 压差）</tspan> 并延时约 6s → 自动停机；</text>
+  <text x="104" y="482" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#102a43">③ 两值之间为滞环区，保持原状态；压力继电器为高低压继电器中的低压部分，</text>
+  <text x="104" y="502" font-family="Microsoft YaHei, sans-serif" font-size="13" fill="#607d8b">　　高压部分（排出压力过高）仅作保护，动作后锁存停机，必须复位后才能再起动。</text>
+</svg>

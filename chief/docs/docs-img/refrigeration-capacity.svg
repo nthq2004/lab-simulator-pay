@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520">
+  <rect width="900" height="520" fill="#ffffff"/>
+  <text x="450" y="28" text-anchor="middle" font-family="Microsoft YaHei, sans-serif" font-size="19" font-weight="bold" fill="#102a43">压缩机能力调节：负荷率随制冷库数变化（每库折算 18%）</text>
+
+  <!-- 柱状图 -->
+  <line x1="100" y1="70" x2="100" y2="330" stroke="#37474f" stroke-width="2"/>
+  <line x1="100" y1="330" x2="700" y2="330" stroke="#37474f" stroke-width="2"/>
+  <text x="24" y="82" font-family="Microsoft YaHei, sans-serif" font-size="13" fill="#37474f">负荷率</text>
+  <text x="60" y="86" font-family="Microsoft YaHei, sans-serif" font-size="12" fill="#37474f">90%</text>
+  <text x="60" y="134" font-family="Microsoft YaHei, sans-serif" font-size="12" fill="#37474f">72%</text>
+  <text x="60" y="184" font-family="Microsoft YaHei, sans-serif" font-size="12" fill="#37474f">54%</text>
+  <text x="60" y="234" font-family="Microsoft YaHei, sans-serif" font-size="12" fill="#37474f">36%</text>
+  <text x="60" y="284" font-family="Microsoft YaHei, sans-serif" font-size="12" fill="#37474f">18%</text>
+  <line x1="100" y1="80" x2="700" y2="80" stroke="#cfd8dc" stroke-width="1" stroke-dasharray="5,4"/>
+  <line x1="100" y1="130" x2="700" y2="130" stroke="#cfd8dc" stroke-width="1" stroke-dasharray="5,4"/>
+  <line x1="100" y1="180" x2="700" y2="180" stroke="#cfd8dc" stroke-width="1" stroke-dasharray="5,4"/>
+  <line x1="100" y1="230" x2="700" y2="230" stroke="#cfd8dc" stroke-width="1" stroke-dasharray="5,4"/>
+
+  <rect x="130" y="280" width="72" height="50" fill="#90caf9" stroke="#1565c0" stroke-width="1.5"/>
+  <text x="166" y="270" text-anchor="middle" font-family="Microsoft YaHei, sans-serif" font-size="13" font-weight="bold" fill="#0d47a1">18%</text>
+  <text x="166" y="352" text-anchor="middle" font-family="Microsoft YaHei, sans-serif" font-size="12" fill="#37474f">1 库</text>
+
+  <rect x="240" y="230" width="72" height="100" fill="#90caf9" stroke="#1565c0" stroke-width="1.5"/>
+  <text x="276" y="220" text-anchor="middle" font-family="Microsoft YaHei, sans-serif" font-size="13" font-weight="bold" fill="#0d47a1">36%</text>
+  <text x="276" y="352" text-anchor="middle" font-family="Microsoft YaHei, sans-serif" font-size="12" fill="#37474f">2 库</text>
+
+  <rect x="350" y="180" width="72" height="150" fill="#90caf9" stroke="#1565c0" stroke-width="1.5"/>
+  <text x="386" y="170" text-anchor="middle" font-family="Microsoft YaHei, sans-serif" font-size="13" font-weight="bold" fill="#0d47a1">54%</text>
+  <text x="386" y="352" text-anchor="middle" font-family="Microsoft YaHei, sans-serif" font-size="12" fill="#37474f">3 库</text>
+
+  <rect x="460" y="130" width="72" height="200" fill="#90caf9" stroke="#1565c0" stroke-width="1.5"/>
+  <text x="496" y="120" text-anchor="middle" font-family="Microsoft YaHei, sans-serif" font-size="13" font-weight="bold" fill="#0d47a1">72%</text>
+  <text x="496" y="352" text-anchor="middle" font-family="Microsoft YaHei, sans-serif" font-size="12" fill="#37474f">4 库</text>
+
+  <rect x="570" y="80" width="72" height="250" fill="#90caf9" stroke="#1565c0" stroke-width="1.5"/>
+  <text x="606" y="70" text-anchor="middle" font-family="Microsoft YaHei, sans-serif" font-size="13" font-weight="bold" fill="#0d47a1">90%</text>
+  <text x="606" y="352" text-anchor="middle" font-family="Microsoft YaHei, sans-serif" font-size="12" fill="#37474f">5 库</text>
+
+  <!-- 右侧：接收器液位随负荷变化 -->
+  <rect x="730" y="80" width="150" height="250" fill="#f7fbff" stroke="#b3d4f0" stroke-width="1.5" rx="6"/>
+  <text x="805" y="106" text-anchor="middle" font-family="Microsoft YaHei, sans-serif" font-size="13" font-weight="bold" fill="#102a43">接收器液位</text>
+  <rect x="765" y="130" width="80" height="170" fill="#eceff1" stroke="#90a4ae" stroke-width="1.5" rx="6"/>
+  <rect x="765" y="130" width="80" height="85" fill="#f2a30f" stroke="#b8860b" stroke-width="1"/>
+  <line x1="765" y1="130" x2="845" y2="130" stroke="#e53935" stroke-width="2"/>
+  <text x="852" y="128" font-family="Microsoft YaHei, sans-serif" font-size="12" fill="#e53935">50%</text>
+  <line x1="765" y1="249" x2="845" y2="249" stroke="#1565c0" stroke-width="2"/>
+  <text x="852" y="247" font-family="Microsoft YaHei, sans-serif" font-size="12" fill="#1565c0">30%</text>
+  <text x="805" y="322" text-anchor="middle" font-family="Microsoft YaHei, sans-serif" font-size="11" fill="#37474f">负荷越高，液位越低</text>
+
+  <!-- 说明 -->
+  <rect x="90" y="378" width="750" height="126" fill="#f7fbff" stroke="#b3d4f0" stroke-width="1.5" rx="6"/>
+  <text x="104" y="402" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#102a43"><tspan font-weight="bold">热负荷检测：</tspan>某冷库「温度开关接通 + 出口截止阀开启 + 蒸发器风机运行」即为一个制冷中的库，每个折算 18% 负荷。</text>
+  <text x="104" y="426" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#102a43"><tspan font-weight="bold">加载：</tspan>制冷库增多 → 负荷率提高 → 压缩机容量输出增大（滑阀/能量调节机构加载），蒸发温度降低、制冷量增大；</text>
+  <text x="104" y="450" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#102a43"><tspan font-weight="bold">卸载：</tspan>各库先后达到停止温度 → 供液电磁阀关闭 → 负荷率下降 → 压缩机容量减小（卸载），避免频繁起停；</text>
+  <text x="104" y="474" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#102a43"><tspan font-weight="bold">双机运行：</tspan>两台机同时运行时总负荷由两机平均分担；负荷反映到接收器液位：50% − 0.2 × 负荷率。</text>
+  <text x="104" y="496" font-family="Microsoft YaHei, sans-serif" font-size="13" fill="#607d8b">本仿真：单机 1 库 18%、2 库 36%、3 库 54%、4 库 72%、5 库 90%（满载）。</text>
+</svg>

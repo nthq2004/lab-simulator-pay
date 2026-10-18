@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520">
+  <rect width="900" height="520" fill="#ffffff"/>
+  <text x="450" y="28" text-anchor="middle" font-family="Microsoft YaHei, sans-serif" font-size="19" font-weight="bold" fill="#102a43">排出压力过高保护原理（以 1# 冷却水进口阀关闭为例）</text>
+
+  <!-- 流程链条 -->
+  <rect x="40" y="56" width="184" height="78" fill="#e3f2fd" stroke="#1976d2" stroke-width="2" rx="8"/>
+  <text x="132" y="84" text-anchor="middle" font-family="Microsoft YaHei, sans-serif" font-size="13" font-weight="bold" fill="#0d47a1">关闭 1# 冷却水</text>
+  <text x="132" y="106" text-anchor="middle" font-family="Microsoft YaHei, sans-serif" font-size="13" font-weight="bold" fill="#0d47a1">进口截止阀</text>
+  <text x="132" y="126" text-anchor="middle" font-family="Microsoft YaHei, sans-serif" font-size="11" fill="#1565c0">冷却水中断</text>
+
+  <path d="M226 95 L266 95" stroke="#37474f" stroke-width="3" marker-end="url(#ar)"/>
+  <defs>
+    <marker id="ar" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#37474f"/>
+    </marker>
+  </defs>
+
+  <rect x="270" y="56" width="184" height="78" fill="#fff3e0" stroke="#f57c00" stroke-width="2" rx="8"/>
+  <text x="362" y="84" text-anchor="middle" font-family="Microsoft YaHei, sans-serif" font-size="13" font-weight="bold" fill="#e65100">冷凝器换热恶化</text>
+  <text x="362" y="106" text-anchor="middle" font-family="Microsoft YaHei, sans-serif" font-size="12" fill="#e65100">冷凝温度、冷凝压力升高</text>
+  <text x="362" y="126" text-anchor="middle" font-family="Microsoft YaHei, sans-serif" font-size="11" fill="#bf360c">排出压力随之持续上升</text>
+
+  <path d="M456 95 L496 95" stroke="#37474f" stroke-width="3" marker-end="url(#ar)"/>
+
+  <rect x="500" y="56" width="184" height="78" fill="#ffebee" stroke="#c62828" stroke-width="2" rx="8"/>
+  <text x="592" y="80" text-anchor="middle" font-family="Microsoft YaHei, sans-serif" font-size="13" font-weight="bold" fill="#b71c1c">排出压力 &gt; 停止压力</text>
+  <text x="592" y="102" text-anchor="middle" font-family="Microsoft YaHei, sans-serif" font-size="12" fill="#b71c1c">（本仿真 22 bar）</text>
+  <text x="592" y="124" text-anchor="middle" font-family="Microsoft YaHei, sans-serif" font-size="11" fill="#c62828">延时 3s 防误动</text>
+
+  <path d="M686 95 L726 95" stroke="#37474f" stroke-width="3" marker-end="url(#ar)"/>
+
+  <rect x="730" y="56" width="130" height="78" fill="#eceff1" stroke="#455a64" stroke-width="2" rx="8"/>
+  <text x="795" y="84" text-anchor="middle" font-family="Microsoft YaHei, sans-serif" font-size="13" font-weight="bold" fill="#263238">保护跳闸</text>
+  <text x="795" y="106" text-anchor="middle" font-family="Microsoft YaHei, sans-serif" font-size="12" fill="#263238">压缩机停机</text>
+  <text x="795" y="126" text-anchor="middle" font-family="Microsoft YaHei, sans-serif" font-size="11" fill="#455a64">锁存，需复位</text>
+
+  <!-- 压力-时间曲线 -->
+  <line x1="90" y1="180" x2="90" y2="400" stroke="#37474f" stroke-width="2"/>
+  <line x1="90" y1="400" x2="830" y2="400" stroke="#37474f" stroke-width="2"/>
+  <text x="18" y="192" font-family="Microsoft YaHei, sans-serif" font-size="13" fill="#37474f">排出压力</text>
+  <text x="26" y="216" font-family="Microsoft YaHei, sans-serif" font-size="12" fill="#37474f">30</text>
+  <text x="26" y="266" font-family="Microsoft YaHei, sans-serif" font-size="12" fill="#37474f">22</text>
+  <text x="26" y="356" font-family="Microsoft YaHei, sans-serif" font-size="12" fill="#37474f">17</text>
+  <line x1="90" y1="260" x2="830" y2="260" stroke="#e53935" stroke-width="2" stroke-dasharray="8,5"/>
+  <text x="834" y="256" text-anchor="end" font-family="Microsoft YaHei, sans-serif" font-size="12" fill="#e53935" dx="-4">停止压力 22 bar</text>
+
+  <polyline points="90,354 150,356 200,360 250,330 300,290 350,258 400,240"
+            fill="none" stroke="#e600e6" stroke-width="3.5"/>
+  <line x1="400" y1="180" x2="400" y2="400" stroke="#90a4ae" stroke-width="1.6" stroke-dasharray="4,4"/>
+  <text x="404" y="200" font-family="Microsoft YaHei, sans-serif" font-size="12" fill="#e65100">越限计时 3s</text>
+  <polyline points="400,240 460,225 520,214 600,212 660,230 720,270 780,320 830,352"
+            fill="none" stroke="#8e3fb5" stroke-width="3.5" stroke-dasharray="7,4"/>
+  <text x="620" y="200" font-family="Microsoft YaHei, sans-serif" font-size="12" fill="#8e3fb5">保护动作 → 停机，压力回落</text>
+  <text x="150" y="330" font-family="Microsoft YaHei, sans-serif" font-size="12" fill="#e600e6">冷却水断流后排压上升</text>
+
+  <!-- 说明 -->
+  <rect x="90" y="418" width="740" height="88" fill="#f7fbff" stroke="#b3d4f0" stroke-width="1.5" rx="6"/>
+  <text x="104" y="442" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#102a43"><tspan font-weight="bold">要点 1：</tspan>关闭冷却水只先报「淡水压力过低」，<tspan fill="#c62828" font-weight="bold">不会立即停机</tspan>；</text>
+  <text x="104" y="466" font-family="Microsoft YaHei, sans-serif" font-size="14" fill="#102a43"><tspan font-weight="bold">要点 2：</tspan>真正导致停机的是排压升高后由「排出压力过高」保护动作——这是二级保护（先报警、后保护）；</text>
+  <text x="104" y="490" font-family="Microsoft YaHei, sans-serif" font-size="13" fill="#607d8b">要点 3：保护动作后压缩机锁存停机，必须排除故障（合上冷却水阀）并按「复位」才能重新起动。</text>
+</svg>
