@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 440" font-family="Microsoft YaHei, Arial, sans-serif">
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 z" fill="#34495e"/>
+    </marker>
+    <marker id="ab" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 z" fill="#1565c0"/>
+    </marker>
+    <marker id="ag" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 z" fill="#2e7d32"/>
+    </marker>
+  </defs>
+  <rect width="960" height="440" fill="#f7f9fb"/>
+  <text x="20" y="30" font-size="18" font-weight="bold" fill="#2c3e50">图 2　中央空调自动控制回路（检测 → 控制器 → 执行器）</text>
+
+  <!-- 检测层 -->
+  <text x="24" y="62" font-size="13" font-weight="bold" fill="#1565c0">① 检测</text>
+  <rect x="24" y="72" width="180" height="46" rx="6" fill="#fdecea" stroke="#c0392b"/>
+  <text x="114" y="92" font-size="13" text-anchor="middle" fill="#7b241c">温度传感器（亮红）</text>
+  <text x="114" y="109" font-size="11" text-anchor="middle" fill="#7b241c">送风 / 舱室温度</text>
+
+  <rect x="24" y="132" width="180" height="46" rx="6" fill="#e3f2fd" stroke="#1565c0"/>
+  <text x="114" y="152" font-size="13" text-anchor="middle" fill="#0d47a1">湿度传感器（亮蓝）</text>
+  <text x="114" y="169" font-size="11" text-anchor="middle" fill="#0d47a1">送风 / 舱室相对湿度</text>
+
+  <rect x="24" y="192" width="180" height="46" rx="6" fill="#eceff1" stroke="#546e7a"/>
+  <text x="114" y="212" font-size="13" text-anchor="middle" fill="#263238">温度继电器</text>
+  <text x="114" y="229" font-size="11" text-anchor="middle" fill="#263238">启动 / 停止温度触点</text>
+
+  <!-- 控制器层 -->
+  <text x="300" y="62" font-size="13" font-weight="bold" fill="#2e7d32">② 控制器（中央空调控制组件）</text>
+  <rect x="300" y="72" width="240" height="166" rx="8" fill="#e8f5e9" stroke="#2e7d32"/>
+  <text x="420" y="96" font-size="13" text-anchor="middle" fill="#1b5e20">工况：关 / 制冷 / 制热</text>
+  <text x="420" y="122" font-size="13" text-anchor="middle" fill="#1b5e20">温度双位控制（滞环）</text>
+  <text x="420" y="141" font-size="11" text-anchor="middle" fill="#2e7d32">舱温 ≥ 启动温度 → 制冷投入</text>
+  <text x="420" y="158" font-size="11" text-anchor="middle" fill="#2e7d32">舱温 ≤ 停止温度 → 制冷停止</text>
+  <text x="420" y="184" font-size="13" text-anchor="middle" fill="#1b5e20">加热控制器（串级）</text>
+  <text x="420" y="203" font-size="13" text-anchor="middle" fill="#1b5e20">加湿控制器（串级）</text>
+  <text x="420" y="224" font-size="11" text-anchor="middle" fill="#2e7d32">设定值 ▲▼ 可现场整定</text>
+
+  <!-- 执行器层 -->
+  <text x="640" y="62" font-size="13" font-weight="bold" fill="#7b241c">③ 执行器</text>
+  <rect x="640" y="72" width="290" height="40" rx="6" fill="#e3f2fd" stroke="#1565c0"/>
+  <text x="785" y="97" font-size="13" text-anchor="middle" fill="#0d47a1">供液电磁阀通 / 断</text>
+
+  <rect x="640" y="120" width="290" height="40" rx="6" fill="#dce9f5" stroke="#1a5276"/>
+  <text x="785" y="145" font-size="13" text-anchor="middle" fill="#0b3049">压缩机投入 / 退出（双位起停）</text>
+
+  <rect x="640" y="168" width="290" height="40" rx="6" fill="#e8f5e9" stroke="#2e7d32"/>
+  <text x="785" y="193" font-size="13" text-anchor="middle" fill="#1b5e20">两路膨胀阀 A / B 按负荷投切</text>
+
+  <rect x="640" y="216" width="290" height="40" rx="6" fill="#fdecea" stroke="#c0392b"/>
+  <text x="785" y="241" font-size="13" text-anchor="middle" fill="#7b241c">蒸汽加热比例阀 0~100%</text>
+
+  <rect x="640" y="264" width="290" height="40" rx="6" fill="#e8eaf6" stroke="#3949ab"/>
+  <text x="785" y="289" font-size="13" text-anchor="middle" fill="#283593">蒸汽加湿比例阀 0~100%</text>
+
+  <!-- 信号连线 -->
+  <path d="M204,95 L300,95" fill="none" stroke="#34495e" stroke-width="1.6" marker-end="url(#a)"/>
+  <path d="M204,155 L300,155" fill="none" stroke="#34495e" stroke-width="1.6" marker-end="url(#a)"/>
+  <path d="M204,215 L300,215" fill="none" stroke="#34495e" stroke-width="1.6" marker-end="url(#a)"/>
+
+  <path d="M540,95 L640,92" fill="none" stroke="#1565c0" stroke-width="1.6" marker-end="url(#ab)"/>
+  <path d="M540,140 L640,140" fill="none" stroke="#1565c0" stroke-width="1.6" marker-end="url(#ab)"/>
+  <path d="M540,188 L640,188" fill="none" stroke="#2e7d32" stroke-width="1.6" marker-end="url(#ag)"/>
+  <path d="M540,236 L640,236" fill="none" stroke="#c0392b" stroke-width="1.6" marker-end="url(#a)"/>
+  <path d="M540,264 L640,284" fill="none" stroke="#3949ab" stroke-width="1.6" marker-end="url(#a)"/>
+
+  <!-- 反馈 -->
+  <path d="M785,304 L785,415 L596,415 L596,250 L114,250 L114,238" fill="none" stroke="#90a4ae" stroke-width="1.4" stroke-dasharray="6 4" marker-end="url(#a)"/>
+  <text x="360" y="432" font-size="12" text-anchor="middle" fill="#607d8b">被调量（舱室温度 / 湿度）反馈比较 → 偏差决定执行器动作</text>
+
+  <!-- 说明 -->
+  <rect x="24" y="300" width="560" height="92" rx="8" fill="#fffde7" stroke="#f9a825"/>
+  <text x="40" y="322" font-size="12" font-weight="bold" fill="#795548">制冷 / 制热工况下的控制器联动</text>
+  <text x="40" y="343" font-size="12" fill="#5d4037">• 制冷工况：制冷控制器工作，加热 / 加湿控制器退出（互锁），控制器锁定不可手动切换</text>
+  <text x="40" y="363" font-size="12" fill="#5d4037">• 制热工况：加热 / 加湿控制器工作，制冷退出；此时才允许改工况</text>
+  <text x="40" y="383" font-size="12" fill="#5d4037">• 关工况：三个控制器均可手动投入，制冷与加热 / 加湿之间互锁</text>
+</svg>

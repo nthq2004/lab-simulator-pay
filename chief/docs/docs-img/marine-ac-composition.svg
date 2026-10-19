@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 520" font-family="Microsoft YaHei, Arial, sans-serif">
+  <defs>
+    <marker id="ar" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 z" fill="#34495e"/>
+    </marker>
+    <marker id="arb" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 z" fill="#1a5276"/>
+    </marker>
+    <marker id="arr" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 z" fill="#7b241c"/>
+    </marker>
+  </defs>
+  <rect width="960" height="520" fill="#f7f9fb"/>
+  <text x="20" y="30" font-size="18" font-weight="bold" fill="#2c3e50">图 1　船舶中央空调系统组成与工艺流程</text>
+
+  <!-- ================= 空气侧 ================= -->
+  <text x="24" y="66" font-size="14" font-weight="bold" fill="#1565c0">空气侧（服务对象：船员舱室）</text>
+
+  <!-- 回风虚线：舱室顶部 → 混风筒顶部 -->
+  <path d="M775,76 L775,54 L221,54 L221,74" fill="none" stroke="#1565c0" stroke-width="1.6" stroke-dasharray="6 4" marker-end="url(#arb)"/>
+  <text x="470" y="48" font-size="12" fill="#1565c0">回风（舱室排风再循环）</text>
+
+  <rect x="60" y="76" width="90" height="52" rx="6" fill="#e3f2fd" stroke="#1565c0"/>
+  <text x="105" y="107" font-size="13" text-anchor="middle" fill="#0d47a1">新风风门</text>
+
+  <rect x="176" y="76" width="90" height="52" rx="6" fill="#eceff1" stroke="#546e7a"/>
+  <text x="221" y="107" font-size="13" text-anchor="middle" fill="#263238">混风筒</text>
+
+  <rect x="292" y="76" width="80" height="52" rx="6" fill="#eceff1" stroke="#546e7a"/>
+  <text x="332" y="107" font-size="13" text-anchor="middle" fill="#263238">过滤段</text>
+
+  <rect x="398" y="76" width="90" height="52" rx="6" fill="#d7ecff" stroke="#1565c0"/>
+  <text x="443" y="100" font-size="13" text-anchor="middle" fill="#0d47a1">蒸发器</text>
+  <text x="443" y="118" font-size="11" text-anchor="middle" fill="#0d47a1">（冷却除湿）</text>
+
+  <rect x="514" y="76" width="90" height="52" rx="6" fill="#eceff1" stroke="#546e7a"/>
+  <text x="559" y="107" font-size="13" text-anchor="middle" fill="#263238">离心风机</text>
+
+  <rect x="690" y="76" width="170" height="52" rx="6" fill="#e8f5e9" stroke="#2e7d32"/>
+  <text x="775" y="100" font-size="13" text-anchor="middle" fill="#1b5e20">船员舱室</text>
+  <text x="775" y="118" font-size="11" text-anchor="middle" fill="#1b5e20">温度 / 湿度 被调量</text>
+
+  <path d="M150,102 L176,102" fill="none" stroke="#34495e" stroke-width="1.6" marker-end="url(#ar)"/>
+  <path d="M266,102 L292,102" fill="none" stroke="#34495e" stroke-width="1.6" marker-end="url(#ar)"/>
+  <path d="M372,102 L398,102" fill="none" stroke="#34495e" stroke-width="1.6" marker-end="url(#ar)"/>
+  <path d="M488,102 L514,102" fill="none" stroke="#34495e" stroke-width="1.6" marker-end="url(#ar)"/>
+  <path d="M604,102 L690,102" fill="none" stroke="#34495e" stroke-width="1.6" marker-end="url(#ar)"/>
+  <text x="647" y="94" font-size="11" text-anchor="middle" fill="#546e7a">送风</text>
+
+  <!-- ================= 蒸汽侧 ================= -->
+  <text x="24" y="168" font-size="14" font-weight="bold" fill="#7b241c">蒸汽侧（加热 / 加湿）</text>
+  <text x="330" y="200" font-size="12" text-anchor="middle" fill="#7b241c">船舶蒸汽源 →</text>
+  <path d="M400,194 L600,194" fill="none" stroke="#7b241c" stroke-width="1.4" stroke-dasharray="6 4" marker-end="url(#arr)"/>
+
+  <rect x="600" y="172" width="150" height="44" rx="6" fill="#fdecea" stroke="#c0392b"/>
+  <text x="675" y="191" font-size="12" text-anchor="middle" fill="#7b241c">蒸汽加热盘管</text>
+  <text x="675" y="207" font-size="11" text-anchor="middle" fill="#7b241c">比例电磁阀（连续调节）</text>
+  <path d="M675,172 L675,132" fill="none" stroke="#c0392b" stroke-width="1.4" stroke-dasharray="5 4" marker-end="url(#arr)"/>
+
+  <rect x="770" y="172" width="150" height="44" rx="6" fill="#e8eaf6" stroke="#3949ab"/>
+  <text x="845" y="191" font-size="12" text-anchor="middle" fill="#283593">蒸汽加湿器</text>
+  <text x="845" y="207" font-size="11" text-anchor="middle" fill="#283593">比例电磁阀（连续调节）</text>
+  <path d="M845,172 L845,132" fill="none" stroke="#3949ab" stroke-width="1.4" stroke-dasharray="5 4" marker-end="url(#ar)"/>
+
+  <!-- ================= 制冷剂侧 ================= -->
+  <text x="24" y="252" font-size="14" font-weight="bold" fill="#1a5276">制冷剂侧（压缩式制冷循环，单机 + 双路膨胀阀）</text>
+  <text x="24" y="274" font-size="12" fill="#546e7a">高压侧：排气 → 油分离 → 冷凝 → 储液 → 干燥 → 双路节流　　低压侧：蒸发 → 回热 → 回气</text>
+
+  <rect x="60" y="310" width="100" height="52" rx="6" fill="#dce9f5" stroke="#1a5276"/>
+  <text x="110" y="341" font-size="13" text-anchor="middle" fill="#0b3049">压缩机</text>
+
+  <rect x="190" y="310" width="90" height="52" rx="6" fill="#eceff1" stroke="#546e7a"/>
+  <text x="235" y="341" font-size="13" text-anchor="middle" fill="#263238">油分离器</text>
+
+  <rect x="310" y="310" width="100" height="52" rx="6" fill="#ffcdd2" stroke="#c0392b"/>
+  <text x="360" y="334" font-size="13" text-anchor="middle" fill="#7b241c">冷凝器</text>
+  <text x="360" y="351" font-size="11" text-anchor="middle" fill="#7b241c">低温冷却淡水</text>
+
+  <rect x="440" y="310" width="90" height="52" rx="6" fill="#eceff1" stroke="#546e7a"/>
+  <text x="485" y="341" font-size="13" text-anchor="middle" fill="#263238">储液罐</text>
+
+  <rect x="560" y="310" width="80" height="52" rx="6" fill="#eceff1" stroke="#546e7a"/>
+  <text x="600" y="341" font-size="13" text-anchor="middle" fill="#263238">干燥器</text>
+
+  <rect x="670" y="310" width="120" height="52" rx="6" fill="#e8f5e9" stroke="#2e7d32"/>
+  <text x="730" y="334" font-size="13" text-anchor="middle" fill="#1b5e20">膨胀阀 A / B</text>
+  <text x="730" y="351" font-size="11" text-anchor="middle" fill="#1b5e20">两路，按负荷投切</text>
+
+  <path d="M160,336 L190,336" fill="none" stroke="#34495e" stroke-width="1.6" marker-end="url(#ar)"/>
+  <path d="M280,336 L310,336" fill="none" stroke="#34495e" stroke-width="1.6" marker-end="url(#ar)"/>
+  <path d="M410,336 L440,336" fill="none" stroke="#34495e" stroke-width="1.6" marker-end="url(#ar)"/>
+  <path d="M530,336 L560,336" fill="none" stroke="#34495e" stroke-width="1.6" marker-end="url(#ar)"/>
+  <path d="M640,336 L670,336" fill="none" stroke="#34495e" stroke-width="1.6" marker-end="url(#ar)"/>
+  <path d="M730,362 L730,400" fill="none" stroke="#34495e" stroke-width="1.6" marker-end="url(#ar)"/>
+
+  <rect x="670" y="400" width="120" height="52" rx="6" fill="#d7ecff" stroke="#1565c0"/>
+  <text x="730" y="431" font-size="13" text-anchor="middle" fill="#0d47a1">蒸发器</text>
+
+  <rect x="440" y="400" width="100" height="52" rx="6" fill="#eceff1" stroke="#546e7a"/>
+  <text x="490" y="431" font-size="13" text-anchor="middle" fill="#263238">回热器</text>
+
+  <path d="M670,426 L540,426" fill="none" stroke="#34495e" stroke-width="1.6" marker-end="url(#ar)"/>
+  <path d="M440,426 L110,426 L110,362" fill="none" stroke="#34495e" stroke-width="1.6" marker-end="url(#ar)"/>
+  <text x="565" y="452" font-size="11" text-anchor="middle" fill="#546e7a">回气</text>
+  <text x="730" y="392" font-size="11" text-anchor="middle" fill="#2e7d32">两路液管</text>
+
+  <!-- 蒸发器 ↔ 空气侧 的换热关系 -->
+  <path d="M443,128 L443,300" fill="none" stroke="#90a4ae" stroke-width="1.2" stroke-dasharray="4 4"/>
+  <text x="24" y="238" font-size="11.5" fill="#607d8b">蒸发器是空气侧与制冷剂侧的换热界面：制冷剂在管内蒸发吸热 → 送风被冷却、除湿</text>
+</svg>
