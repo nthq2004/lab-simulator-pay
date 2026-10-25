@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="560" viewBox="0 0 900 560" font-family="Microsoft YaHei, Arial, sans-serif">
+  <rect x="0" y="0" width="900" height="560" fill="#fbfbf8"/>
+  <text x="450" y="28" font-size="18" font-weight="bold" text-anchor="middle" fill="#263238">图 5  操舵失灵故障排查流程</text>
+
+  <defs>
+    <marker id="a4" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 z" fill="#455a64"/>
+    </marker>
+  </defs>
+
+  <rect x="330" y="50" width="240" height="46" rx="8" fill="#e8f1fb" stroke="#1565c0" stroke-width="2"/>
+  <text x="450" y="79" font-size="13" font-weight="bold" text-anchor="middle" fill="#0d47a1">遥控操舵时舵角不变化</text>
+
+  <!-- 分支1 -->
+  <line x1="450" y1="96" x2="450" y2="122" stroke="#455a64" stroke-width="2" marker-end="url(#a4)"/>
+  <rect x="300" y="124" width="300" height="44" rx="6" fill="#eef0ed" stroke="#455a64" stroke-width="1.8"/>
+  <text x="450" y="152" font-size="12" text-anchor="middle" fill="#263238">① 该机泵是否运行？压力 &gt; 3 MPa？</text>
+  <line x1="300" y1="146" x2="196" y2="146" stroke="#b71c1c" stroke-width="2" marker-end="url(#a4)"/>
+  <rect x="40" y="124" width="150" height="44" rx="6" fill="#fdecea" stroke="#c62828" stroke-width="1.6"/>
+  <text x="115" y="142" font-size="11" text-anchor="middle" fill="#b71c1c">否：检查电源开关</text>
+  <text x="115" y="160" font-size="11" text-anchor="middle" fill="#b71c1c">起动泵 / 复位跳闸</text>
+
+  <!-- 分支2 -->
+  <line x1="450" y1="168" x2="450" y2="194" stroke="#455a64" stroke-width="2" marker-end="url(#a4)"/>
+  <rect x="300" y="196" width="300" height="44" rx="6" fill="#eef0ed" stroke="#455a64" stroke-width="1.8"/>
+  <text x="450" y="224" font-size="12" text-anchor="middle" fill="#263238">② 该机是否在“遥控”位（非机旁）？</text>
+  <line x1="300" y1="218" x2="196" y2="218" stroke="#b71c1c" stroke-width="2" marker-end="url(#a4)"/>
+  <rect x="40" y="196" width="150" height="44" rx="6" fill="#fdecea" stroke="#c62828" stroke-width="1.6"/>
+  <text x="115" y="214" font-size="11" text-anchor="middle" fill="#b71c1c">否：拨到“遥控”</text>
+  <text x="115" y="232" font-size="11" text-anchor="middle" fill="#b71c1c">（或改用机旁应急）</text>
+
+  <!-- 分支3 -->
+  <line x1="450" y1="240" x2="450" y2="266" stroke="#455a64" stroke-width="2" marker-end="url(#a4)"/>
+  <rect x="300" y="268" width="300" height="44" rx="6" fill="#eef0ed" stroke="#455a64" stroke-width="1.8"/>
+  <text x="450" y="296" font-size="12" text-anchor="middle" fill="#263238">③ 卸荷阀是否动作（四通阀右位）？</text>
+  <line x1="300" y1="290" x2="196" y2="290" stroke="#b71c1c" stroke-width="2" marker-end="url(#a4)"/>
+  <rect x="40" y="268" width="150" height="44" rx="6" fill="#fdecea" stroke="#c62828" stroke-width="1.6"/>
+  <text x="115" y="286" font-size="11" text-anchor="middle" fill="#b71c1c">否：按下卸荷阀手柄</text>
+  <text x="115" y="304" font-size="11" text-anchor="middle" fill="#b71c1c">或检查线圈/联锁</text>
+
+  <!-- 分支4 -->
+  <line x1="450" y1="312" x2="450" y2="338" stroke="#455a64" stroke-width="2" marker-end="url(#a4)"/>
+  <rect x="300" y="340" width="300" height="44" rx="6" fill="#eef0ed" stroke="#455a64" stroke-width="1.8"/>
+  <text x="450" y="368" font-size="12" text-anchor="middle" fill="#263238">④ 隔离阀是否动作（串联阀截止）？</text>
+  <line x1="300" y1="362" x2="196" y2="362" stroke="#b71c1c" stroke-width="2" marker-end="url(#a4)"/>
+  <rect x="40" y="340" width="150" height="44" rx="6" fill="#fdecea" stroke="#c62828" stroke-width="1.6"/>
+  <text x="115" y="358" font-size="11" text-anchor="middle" fill="#b71c1c">是：复位隔离阀</text>
+  <text x="115" y="376" font-size="11" text-anchor="middle" fill="#b71c1c">检查低油位联锁</text>
+
+  <!-- 分支5 -->
+  <line x1="450" y1="384" x2="450" y2="410" stroke="#455a64" stroke-width="2" marker-end="url(#a4)"/>
+  <rect x="300" y="412" width="300" height="44" rx="6" fill="#eef0ed" stroke="#455a64" stroke-width="1.8"/>
+  <text x="450" y="440" font-size="12" text-anchor="middle" fill="#263238">⑤ 舵角反馈值是否异常（偏差 3°）？</text>
+  <line x1="300" y1="434" x2="196" y2="434" stroke="#b71c1c" stroke-width="2" marker-end="url(#a4)"/>
+  <rect x="40" y="412" width="150" height="44" rx="6" fill="#fdecea" stroke="#c62828" stroke-width="1.6"/>
+  <text x="115" y="430" font-size="11" text-anchor="middle" fill="#b71c1c">是：排查反馈装置</text>
+  <text x="115" y="448" font-size="11" text-anchor="middle" fill="#b71c1c">（机旁显示正常）</text>
+
+  <!-- 右侧并联故障 -->
+  <rect x="640" y="124" width="230" height="330" rx="8" fill="#fff8e1" stroke="#f9a825" stroke-width="1.6"/>
+  <text x="755" y="148" font-size="12" font-weight="bold" text-anchor="middle" fill="#6d4c41">其它常见故障与处置</text>
+  <text x="656" y="174" font-size="11" fill="#8d6e63">· 泵过载跳闸：复位后延时 3 s</text>
+  <text x="656" y="196" font-size="11" fill="#8d6e63">  备用机自动起动</text>
+  <text x="656" y="222" font-size="11" fill="#8d6e63">· 油位 &lt;20%：3 s 后停机并联动</text>
+  <text x="668" y="244" font-size="11" fill="#8d6e63">对方隔离阀</text>
+  <text x="656" y="270" font-size="11" fill="#8d6e63">· 油温 &gt;85℃：检查冷却与泄漏</text>
+  <text x="656" y="296" font-size="11" fill="#8d6e63">· 舵机振荡：减小 P、增大 D</text>
+  <text x="656" y="322" font-size="11" fill="#8d6e63">· 舵角不到位：检查反馈与限位</text>
+  <text x="656" y="348" font-size="11" fill="#8d6e63">· 两机抢舵：确认机旁/遥控位置</text>
+  <text x="656" y="374" font-size="11" fill="#8d6e63">· 油位下降快：卸油阀是否未关</text>
+  <text x="656" y="400" font-size="11" fill="#8d6e63">· 噪声/压力波动：溢流阀整定</text>
+  <text x="656" y="426" font-size="11" fill="#8d6e63">· 隔离阀误动：检查线圈与联锁</text>
+
+  <text x="450" y="500" font-size="11" text-anchor="middle" fill="#546e7a">排查原则：先“电”、后“液”、再“反馈”；先单机、后并联</text>
+  <text x="450" y="524" font-size="11" text-anchor="middle" fill="#546e7a">任何一步不满足，均可能导致遥控舵令无法执行（画面无流动效果）</text>
+</svg>
