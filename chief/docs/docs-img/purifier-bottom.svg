@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="560" viewBox="0 0 960 560">
+  <rect width="960" height="560" fill="#f7f9f8"/>
+  <text x="480" y="32" font-family="Microsoft YaHei, Arial" font-size="19" font-weight="bold" fill="#263238" text-anchor="middle">活动排渣底盘（可变形底盘）与水力驱动</text>
+  <rect x="24" y="96" width="284" height="336" rx="8" fill="#ffffff" stroke="#b0bec5" stroke-width="1.5"/>
+  <text x="166" y="122" font-family="Microsoft YaHei, Arial" font-size="12" font-weight="bold" fill="#263238" text-anchor="middle">(a) 无密封水：底盘平直，排渣口打开</text>
+  <polyline points="90,154 90,352" fill="none" stroke="#455a64" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="242,154 242,352" fill="none" stroke="#455a64" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="90,376 90,396" fill="none" stroke="#455a64" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="242,376 242,396" fill="none" stroke="#455a64" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="108,180 224,180" fill="none" stroke="#cfd8dc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="112,202 220,202" fill="none" stroke="#cfd8dc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="116,224 216,224" fill="none" stroke="#cfd8dc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="120,246 212,246" fill="none" stroke="#cfd8dc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="90" y="396" width="152" height="14" rx="0" fill="#cfd8dc" stroke="#455a64" stroke-width="1.5"/>
+  <polyline points="94,350 238,350" fill="none" stroke="#37474f" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="166" y="330" font-family="Microsoft YaHei, Arial" font-size="10.5" font-weight="normal" fill="#78909c" text-anchor="middle">底盘与筒壁脱开</text>
+  <polyline points="88,364 46,380" fill="none" stroke="#6d4c41" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <polygon points="46,380 59.3498,381.335 55.0779,370.121" fill="#6d4c41"/>
+  <polyline points="244,364 286,380" fill="none" stroke="#6d4c41" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <polygon points="286,380 276.922,370.121 272.65,381.335" fill="#6d4c41"/>
+  <text x="166" y="428" font-family="Microsoft YaHei, Arial" font-size="11" font-weight="bold" fill="#6d4c41" text-anchor="middle">污渣被离心力甩出</text>
+  <rect x="338" y="96" width="284" height="336" rx="8" fill="#ffffff" stroke="#b0bec5" stroke-width="1.5"/>
+  <text x="480" y="122" font-family="Microsoft YaHei, Arial" font-size="12" font-weight="bold" fill="#263238" text-anchor="middle">(b) SV16 通电：密封水使底盘变形</text>
+  <polyline points="404,154 404,352" fill="none" stroke="#455a64" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="556,154 556,352" fill="none" stroke="#455a64" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="404,376 404,396" fill="none" stroke="#455a64" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="556,376 556,396" fill="none" stroke="#455a64" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="422,180 538,180" fill="none" stroke="#cfd8dc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="426,202 534,202" fill="none" stroke="#cfd8dc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="430,224 530,224" fill="none" stroke="#cfd8dc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="434,246 526,246" fill="none" stroke="#cfd8dc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="404" y="396" width="152" height="14" rx="0" fill="#cfd8dc" stroke="#455a64" stroke-width="1.5"/>
+  <polygon points="404,356 404,306 442,350 442,356" fill="#4fc3f7" stroke="#1565c0" stroke-width="1"/>
+  <polygon points="556,356 556,306 518,350 518,356" fill="#4fc3f7" stroke="#1565c0" stroke-width="1"/>
+  <polyline points="404,302 442,348 518,348 556,302" fill="none" stroke="#37474f" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="410,308 444,351 516,351 550,308" fill="none" stroke="#90a4ae" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="422,362 422,332" fill="none" stroke="#1565c0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <polygon points="422,332 417.5,341 426.5,341" fill="#1565c0"/>
+  <polyline points="538,362 538,332" fill="none" stroke="#1565c0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <polygon points="538,332 533.5,341 542.5,341" fill="#1565c0"/>
+  <text x="480" y="298" font-family="Microsoft YaHei, Arial" font-size="10.5" font-weight="bold" fill="#1565c0" text-anchor="middle">密封水进入外缘（约 5 s）</text>
+  <text x="480" y="428" font-family="Microsoft YaHei, Arial" font-size="11" font-weight="bold" fill="#2e7d32" text-anchor="middle">底盘翘起压紧 → 排渣口关闭</text>
+  <rect x="652" y="96" width="284" height="336" rx="8" fill="#ffffff" stroke="#b0bec5" stroke-width="1.5"/>
+  <text x="794" y="122" font-family="Microsoft YaHei, Arial" font-size="12" font-weight="bold" fill="#263238" text-anchor="middle">(c) SV15 通电：开启水泄掉密封水</text>
+  <polyline points="718,154 718,352" fill="none" stroke="#455a64" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="870,154 870,352" fill="none" stroke="#455a64" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="718,376 718,396" fill="none" stroke="#455a64" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="870,376 870,396" fill="none" stroke="#455a64" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="736,180 852,180" fill="none" stroke="#cfd8dc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="740,202 848,202" fill="none" stroke="#cfd8dc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="744,224 844,224" fill="none" stroke="#cfd8dc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="748,246 840,246" fill="none" stroke="#cfd8dc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="718" y="396" width="152" height="14" rx="0" fill="#cfd8dc" stroke="#455a64" stroke-width="1.5"/>
+  <polyline points="722,350 866,350" fill="none" stroke="#37474f" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="764" y="310" width="60" height="40" rx="0" fill="#4fc3f7" stroke="#1565c0" stroke-width="1"/>
+  <polyline points="732,282 732,306" fill="none" stroke="#1565c0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <polygon points="732,306 736.5,297 727.5,297" fill="#1565c0"/>
+  <text x="794" y="142" font-family="Microsoft YaHei, Arial" font-size="10.5" font-weight="bold" fill="#1565c0" text-anchor="middle">开启水进上部中央（约 3 s）</text>
+  <text x="742" y="292" font-family="Microsoft YaHei, Arial" font-size="10.5" font-weight="bold" fill="#1565c0" text-anchor="start">开启水</text>
+  <polyline points="738,346 738,360" fill="none" stroke="#1565c0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 4"/>
+  <polygon points="738,360 742,352 734,352" fill="#1565c0"/>
+  <polyline points="850,346 850,360" fill="none" stroke="#1565c0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 4"/>
+  <polygon points="850,360 854,352 846,352" fill="#1565c0"/>
+  <polyline points="716,364 674,380" fill="none" stroke="#6d4c41" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <polygon points="674,380 687.35,381.335 683.078,370.121" fill="#6d4c41"/>
+  <polyline points="872,364 914,380" fill="none" stroke="#6d4c41" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <polygon points="914,380 904.922,370.121 900.65,381.335" fill="#6d4c41"/>
+  <text x="794" y="428" font-family="Microsoft YaHei, Arial" font-size="11" font-weight="bold" fill="#6d4c41" text-anchor="middle">底盘复位 → 排渣口打开，瞬时排渣</text>
+  <rect x="24" y="452" width="912" height="88" rx="6" fill="#e8f5e9" stroke="#a5d6a7" stroke-width="1.5"/>
+  <text x="44" y="474" font-family="Microsoft YaHei, Arial" font-size="12" font-weight="bold" fill="#1b5e20" text-anchor="start">① SV16（密封及补偿水阀）通电 → 密封水进入底盘下部外缘，约 5 s 聚满，底盘两端翘起压紧密封面，排渣口关闭；</text>
+  <text x="44" y="496" font-family="Microsoft YaHei, Arial" font-size="12" font-weight="bold" fill="#1b5e20" text-anchor="start">② SV15（开启水阀）通电 → 开启水进入底盘上部中央，约 3 s 泄掉外缘密封水，底盘复位、排渣口打开，污渣甩入排渣柜；</text>
+  <text x="44" y="522" font-family="Microsoft YaHei, Arial" font-size="12" font-weight="bold" fill="#1b5e20" text-anchor="start">③ SV15 断电 → 上部开启水约 5 s 泄完，为下一次密封做准备；分油期间 SV16 还会按间隔脉冲补入补偿水，维持密封。</text>
+</svg>

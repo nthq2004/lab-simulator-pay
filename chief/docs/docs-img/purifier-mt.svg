@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="480" viewBox="0 0 900 480">
+  <rect width="900" height="480" fill="#f7f9f8"/>
+  <text x="450" y="32" font-family="Microsoft YaHei, Arial" font-size="19" font-weight="bold" fill="#263238" text-anchor="middle">净油水分传感器（MT / ALCAP）工作原理</text>
+  <rect x="28" y="56" width="396" height="322" rx="8" fill="#ffffff" stroke="#b0bec5" stroke-width="1.5"/>
+  <text x="226" y="82" font-family="Microsoft YaHei, Arial" font-size="13" font-weight="bold" fill="#263238" text-anchor="middle">测量腔结构（同轴电容）</text>
+  <rect x="46" y="196" width="360" height="46" rx="4" fill="#eef2f4" stroke="#78909c" stroke-width="1.5"/>
+  <rect x="170" y="150" width="116" height="138" rx="6" fill="#eceff1" stroke="#455a64" stroke-width="2"/>
+  <rect x="186" y="186" width="84" height="66" rx="0" fill="#ffffff" stroke="#546e7a" stroke-width="1.5"/>
+  <rect x="206" y="186" width="44" height="66" rx="0" fill="#e8a33d" stroke="#c05600" stroke-width="1" opacity="0.45"/>
+  <rect x="222" y="182" width="12" height="74" rx="0" fill="#546e7a" stroke="#37474f" stroke-width="1"/>
+  <polyline points="248,150 300,118" fill="none" stroke="#37474f" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="304" y="114" font-family="Microsoft YaHei, Arial" font-size="10.5" font-weight="bold" fill="#263238" text-anchor="start">外电极（接管体）</text>
+  <polyline points="234,262 300,292" fill="none" stroke="#37474f" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="304" y="296" font-family="Microsoft YaHei, Arial" font-size="10.5" font-weight="bold" fill="#263238" text-anchor="start">内电极（中心杆）</text>
+  <polyline points="196,200 150,176" fill="none" stroke="#c05600" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="146" y="172" font-family="Microsoft YaHei, Arial" font-size="10.5" font-weight="bold" fill="#c05600" text-anchor="end">油样进入</text>
+  <polyline points="60,219 120,219" fill="none" stroke="#c05600" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <polygon points="120,219 110,214 110,224" fill="#c05600"/>
+  <text x="46" y="262" font-family="Microsoft YaHei, Arial" font-size="10" font-weight="bold" fill="#c05600" text-anchor="start">净油（含微量水分）→</text>
+  <text x="226" y="330" font-family="Microsoft YaHei, Arial" font-size="12" font-weight="bold" fill="#0d47a1" text-anchor="middle">C = 2π·ε<tspan font-size="8" dy="3">0</tspan><tspan font-size="12" dy="-3">·ε</tspan><tspan font-size="8" dy="3">r</tspan><tspan font-size="12" dy="-3">·L / ln(R/r)</tspan></text>
+  <text x="226" y="352" font-family="Microsoft YaHei, Arial" font-size="10.5" font-weight="normal" fill="#78909c" text-anchor="middle">含水率变化 → εr 变化 → 电容量变化</text>
+  <rect x="448" y="96" width="424" height="282" rx="8" fill="#ffffff" stroke="#b0bec5" stroke-width="1.5"/>
+  <text x="660" y="120" font-family="Microsoft YaHei, Arial" font-size="13" font-weight="bold" fill="#263238" text-anchor="middle">从电容量到控制器动作</text>
+  <rect x="468" y="140" width="384" height="56" rx="6" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.4"/>
+  <text x="484" y="164" font-family="Microsoft YaHei, Arial" font-size="12.5" font-weight="bold" fill="#1565c0" text-anchor="start">电容 C</text>
+  <text x="484" y="184" font-family="Microsoft YaHei, Arial" font-size="11" font-weight="normal" fill="#263238" text-anchor="start">读数单位 pF</text>
+  <rect x="468" y="212" width="384" height="56" rx="6" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.4"/>
+  <text x="484" y="236" font-family="Microsoft YaHei, Arial" font-size="12.5" font-weight="bold" fill="#2e7d32" text-anchor="start">ALCAP 变送</text>
+  <text x="484" y="256" font-family="Microsoft YaHei, Arial" font-size="11" font-weight="normal" fill="#263238" text-anchor="start">→ EPC-60 LCD「MT」</text>
+  <rect x="468" y="284" width="384" height="56" rx="6" fill="#fff8e1" stroke="#ef6c00" stroke-width="1.4"/>
+  <text x="484" y="308" font-family="Microsoft YaHei, Arial" font-size="12.5" font-weight="bold" fill="#ef6c00" text-anchor="start">判断与动作</text>
+  <text x="484" y="328" font-family="Microsoft YaHei, Arial" font-size="11" font-weight="normal" fill="#263238" text-anchor="start">&gt; 12 pF 开 V5 排水</text>
+  <polyline points="660,196 660,210" fill="none" stroke="#607d8b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <polygon points="660,210 664.5,201 655.5,201" fill="#607d8b"/>
+  <polyline points="660,268 660,282" fill="none" stroke="#607d8b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <polygon points="660,282 664.5,273 655.5,273" fill="#607d8b"/>
+  <text x="472" y="360" font-family="Microsoft YaHei, Arial" font-size="10.5" font-weight="normal" fill="#78909c" text-anchor="start">≤ 6 pF 关 V5；Ti65 之前不采样（显示 0.0）；传感器故障显示 NC</text>
+  <rect x="28" y="392" width="844" height="66" rx="6" fill="#e8f5e9" stroke="#a5d6a7" stroke-width="1.5"/>
+  <text x="48" y="414" font-family="Microsoft YaHei, Arial" font-size="12" font-weight="bold" fill="#1b5e20" text-anchor="start">油的相对介电常数 εr ≈ 2.1，水 ≈ 80：油中只要含千分之几的水，混合介电常数就明显变化，</text>
+  <text x="48" y="434" font-family="Microsoft YaHei, Arial" font-size="12" font-weight="bold" fill="#1b5e20" text-anchor="start">电容随之变化并被换算成 pF 读数。EPC-60 用 12 pF / 6 pF 两个门槛决定“开 V5 排水”与“关 V5”，</text>
+  <text x="48" y="452" font-family="Microsoft YaHei, Arial" font-size="12" font-weight="bold" fill="#1b5e20" text-anchor="start">水分持续偏高时还会缩短排渣间隔（Ti63 递减），从而用排渣把乳化层彻底排出。</text>
+</svg>

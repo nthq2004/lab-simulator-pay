@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="700" viewBox="0 0 1000 700">
+  <rect width="1000" height="700" fill="#f7f9f8"/>
+  <text x="500" y="32" font-family="Microsoft YaHei, Arial" font-size="19" font-weight="bold" fill="#263238" text-anchor="middle">分油机完整工作时序（EPC-60 六个阶段，Ti50～Ti89）</text>
+  <rect x="24" y="60" width="952" height="92" rx="6" fill="#ffffff" stroke="#cfd8dc" stroke-width="1.2"/>
+  <rect x="24" y="60" width="128" height="92" rx="6" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.4"/>
+  <text x="88" y="100" font-family="Microsoft YaHei, Arial" font-size="14" font-weight="bold" fill="#1565c0" text-anchor="middle">阶段一</text>
+  <text x="88" y="122" font-family="Microsoft YaHei, Arial" font-size="12" font-weight="bold" fill="#1565c0" text-anchor="middle">起动准备</text>
+  <rect x="164" y="72" width="90" height="44" rx="5" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.2"/>
+  <text x="209" y="90" font-family="Microsoft YaHei, Arial" font-size="10.5" font-weight="bold" fill="#1565c0" text-anchor="middle">Ti50</text>
+  <text x="209" y="108" font-family="Microsoft YaHei, Arial" font-size="10.5" font-weight="normal" fill="#263238" text-anchor="middle">起动供油泵</text>
+  <rect x="260" y="72" width="90" height="44" rx="5" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.2"/>
+  <text x="305" y="90" font-family="Microsoft YaHei, Arial" font-size="10.5" font-weight="bold" fill="#1565c0" text-anchor="middle">Ti51</text>
+  <text x="305" y="108" font-family="Microsoft YaHei, Arial" font-size="10.5" font-weight="normal" fill="#263238" text-anchor="middle">压力确认</text>
+  <rect x="356" y="72" width="90" height="44" rx="5" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.2"/>
+  <text x="401" y="90" font-family="Microsoft YaHei, Arial" font-size="10.5" font-weight="bold" fill="#1565c0" text-anchor="middle">Ti52</text>
+  <text x="401" y="108" font-family="Microsoft YaHei, Arial" font-size="10.5" font-weight="normal" fill="#263238" text-anchor="middle">起动电机</text>
+  <rect x="452" y="72" width="90" height="44" rx="5" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.2"/>
+  <text x="497" y="90" font-family="Microsoft YaHei, Arial" font-size="10.5" font-weight="bold" fill="#1565c0" text-anchor="middle">Ti53</text>
+  <text x="497" y="108" font-family="Microsoft YaHei, Arial" font-size="10.5" font-weight="normal" fill="#263238" text-anchor="middle">起动加热器</text>
+  <rect x="548" y="72" width="90" height="44" rx="5" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.2"/>
+  <text x="593" y="90" font-family="Microsoft YaHei, Arial" font-size="10.5" font-weight="bold" fill="#1565c0" text-anchor="middle">Ti55</text>
+  <text x="593" y="108" font-family="Microsoft YaHei, Arial" font-size="10.5" font-weight="normal" fill="#263238" text-anchor="middle">待命</text>
+  <text x="164" y="136" font-family="Microsoft YaHei, Arial" font-size="11" font-weight="normal" fill="#78909c" text-anchor="start">STANDSTILL → STARTING：确认工作水、控制空气、油温，电机升速到额定转速 10680 r/min</text>
+  <rect x="24" y="160" width="952" height="92" rx="6" fill="#ffffff" stroke="#cfd8dc" stroke-width="1.2"/>
+  <rect x="24" y="160" width="128" height="92" rx="6" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.4"/>
+  <text x="88" y="200" font-family="Microsoft YaHei, Arial" font-size="14" font-weight="bold" fill="#2e7d32" text-anchor="middle">阶段二</text>
+  <text x="88" y="222" font-family="Microsoft YaHei, Arial" font-size="12" font-weight="bold" fill="#2e7d32" text-anchor="middle">起动程序</text>
+  <rect x="164" y="172" width="90" height="44" rx="5" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.2"/>
+  <text x="209" y="190" font-family="Microsoft YaHei, Arial" font-size="10.5" font-weight="bold" fill="#2e7d32" text-anchor="middle">Ti56</text>
+  <text x="209" y="208" font-family="Microsoft YaHei, Arial" font-size="10.5" font-weight="normal" fill="#263238" text-anchor="middle">排渣</text>
+  <rect x="260" y="172" width="90" height="44" rx="5" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.2"/>
+  <text x="305" y="190" font-family="Microsoft YaHei, Arial" font-size="10.5" font-weight="bold" fill="#2e7d32" text-anchor="middle">Ti57</text>
+  <text x="305" y="208" font-family="Microsoft YaHei, Arial" font-size="10.5" font-weight="normal" fill="#263238" text-anchor="middle">放残</text>
+  <rect x="356" y="172" width="90" height="44" rx="5" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.2"/>
+  <text x="401" y="190" font-family="Microsoft YaHei, Arial" font-size="10.5" font-weight="bold" fill="#2e7d32" text-anchor="middle">Ti58</text>
+  <text x="401" y="208" font-family="Microsoft YaHei, Arial" font-size="10.5" font-weight="normal" fill="#263238" text-anchor="middle">密封</text>
+  <rect x="452" y="172" width="90" height="44" rx="5" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.2"/>
+  <text x="497" y="190" font-family="Microsoft YaHei, Arial" font-size="10.5" font-weight="bold" fill="#2e7d32" text-anchor="middle">Ti59</text>
+  <text x="497" y="208" font-family="Microsoft YaHei, Arial" font-size="10.5" font-weight="normal" fill="#263238" text-anchor="middle">流量校验</text>
+  <rect x="548" y="172" width="90" height="44" rx="5" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.2"/>
+  <text x="593" y="190" font-family="Microsoft YaHei, Arial" font-size="10.5" font-weight="bold" fill="#2e7d32" text-anchor="middle">Ti60</text>
+  <text x="593" y="208" font-family="Microsoft YaHei, Arial" font-size="10.5" font-weight="normal" fill="#263238" text-anchor="middle">排渣</text>
+  <rect x="644" y="172" width="90" height="44" rx="5" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.2"/>
+  <text x="689" y="190" font-family="Microsoft YaHei, Arial" font-size="10.5" font-weight="bold" fill="#2e7d32" text-anchor="middle">Ti61</text>
+  <text x="689" y="208" font-family="Microsoft YaHei, Arial" font-size="10.5" font-weight="normal" fill="#263238" text-anchor="middle">放残</text>
+  <rect x="740" y="172" width="90" height="44" rx="5" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.2"/>
+  <text x="785" y="190" font-family="Microsoft YaHei, Arial" font-size="10.5" font-weight="bold" fill="#2e7d32" text-anchor="middle">Ti62</text>
+  <text x="785" y="208" font-family="Microsoft YaHei, Arial" font-size="10.5" font-weight="normal" fill="#263238" text-anchor="middle">密封</text>
+  <rect x="836" y="172" width="90" height="44" rx="5" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.2"/>
+  <text x="881" y="190" font-family="Microsoft YaHei, Arial" font-size="10.5" font-weight="bold" fill="#2e7d32" text-anchor="middle">Ti63</text>
+  <text x="881" y="208" font-family="Microsoft YaHei, Arial" font-size="10.5" font-weight="normal" fill="#263238" text-anchor="middle">水封</text>
+  <text x="164" y="236" font-family="Microsoft YaHei, Arial" font-size="11" font-weight="normal" fill="#78909c" text-anchor="start">START_SEQ：先排掉上次残留的渣与水 → 用密封水关闭分离筒 → 建立水封，为进油做准备</text>
+  <rect x="24" y="260" width="952" height="92" rx="6" fill="#ffffff" stroke="#cfd8dc" stroke-width="1.2"/>
+  <rect x="24" y="260" width="128" height="92" rx="6" fill="#fff8e1" stroke="#ef6c00" stroke-width="1.4"/>
+  <text x="88" y="300" font-family="Microsoft YaHei, Arial" font-size="14" font-weight="bold" fill="#ef6c00" text-anchor="middle">阶段三</text>
+  <text x="88" y="322" font-family="Microsoft YaHei, Arial" font-size="12" font-weight="bold" fill="#ef6c00" text-anchor="middle">正常分油</text>
+  <rect x="164" y="272" width="90" height="44" rx="5" fill="#fff8e1" stroke="#ef6c00" stroke-width="1.2"/>
+  <text x="209" y="290" font-family="Microsoft YaHei, Arial" font-size="10.5" font-weight="bold" fill="#ef6c00" text-anchor="middle">Ti64</text>
+  <text x="209" y="308" font-family="Microsoft YaHei, Arial" font-size="10.5" font-weight="normal" fill="#263238" text-anchor="middle">进油</text>
+  <rect x="260" y="272" width="90" height="44" rx="5" fill="#fff8e1" stroke="#ef6c00" stroke-width="1.2"/>
+  <text x="305" y="290" font-family="Microsoft YaHei, Arial" font-size="10.5" font-weight="bold" fill="#ef6c00" text-anchor="middle">Ti65</text>
+  <text x="305" y="308" font-family="Microsoft YaHei, Arial" font-size="10.5" font-weight="normal" fill="#263238" text-anchor="middle">含水量检查</text>
+  <rect x="356" y="272" width="90" height="44" rx="5" fill="#fff8e1" stroke="#ef6c00" stroke-width="1.2"/>
+  <text x="401" y="290" font-family="Microsoft YaHei, Arial" font-size="10.5" font-weight="bold" fill="#ef6c00" text-anchor="middle">Ti66</text>
+  <text x="401" y="308" font-family="Microsoft YaHei, Arial" font-size="10.5" font-weight="normal" fill="#263238" text-anchor="middle">检漏</text>
+  <rect x="452" y="272" width="90" height="44" rx="5" fill="#fff8e1" stroke="#ef6c00" stroke-width="1.2"/>
+  <text x="497" y="290" font-family="Microsoft YaHei, Arial" font-size="10.5" font-weight="bold" fill="#ef6c00" text-anchor="middle">Ti67</text>
+  <text x="497" y="308" font-family="Microsoft YaHei, Arial" font-size="10.5" font-weight="normal" fill="#263238" text-anchor="middle">水分基准</text>
+  <rect x="548" y="272" width="90" height="44" rx="5" fill="#fff8e1" stroke="#ef6c00" stroke-width="1.2"/>
+  <text x="593" y="290" font-family="Microsoft YaHei, Arial" font-size="10.5" font-weight="bold" fill="#ef6c00" text-anchor="middle">Ti68</text>
+  <text x="593" y="308" font-family="Microsoft YaHei, Arial" font-size="10.5" font-weight="normal" fill="#263238" text-anchor="middle">分油</text>
+  <text x="164" y="336" font-family="Microsoft YaHei, Arial" font-size="11" font-weight="normal" fill="#78909c" text-anchor="start">SEPARATION：Ti68 长时间分油（默认 5 min），期间 SV16 定时补补偿水，水分 &gt; 12 pF 开 V5 排水</text>
+  <rect x="24" y="360" width="952" height="92" rx="6" fill="#ffffff" stroke="#cfd8dc" stroke-width="1.2"/>
+  <rect x="24" y="360" width="128" height="92" rx="6" fill="#fbe9e7" stroke="#c62828" stroke-width="1.4"/>
+  <text x="88" y="400" font-family="Microsoft YaHei, Arial" font-size="14" font-weight="bold" fill="#c62828" text-anchor="middle">阶段四</text>
+  <text x="88" y="422" font-family="Microsoft YaHei, Arial" font-size="12" font-weight="bold" fill="#c62828" text-anchor="middle">排渣</text>
+  <rect x="164" y="372" width="90" height="44" rx="5" fill="#fbe9e7" stroke="#c62828" stroke-width="1.2"/>
+  <text x="209" y="390" font-family="Microsoft YaHei, Arial" font-size="10.5" font-weight="bold" fill="#c62828" text-anchor="middle">Ti70</text>
+  <text x="209" y="408" font-family="Microsoft YaHei, Arial" font-size="10.5" font-weight="normal" fill="#263238" text-anchor="middle">断油</text>
+  <rect x="260" y="372" width="90" height="44" rx="5" fill="#fbe9e7" stroke="#c62828" stroke-width="1.2"/>
+  <text x="305" y="390" font-family="Microsoft YaHei, Arial" font-size="10.5" font-weight="bold" fill="#c62828" text-anchor="middle">Ti71</text>
+  <text x="305" y="408" font-family="Microsoft YaHei, Arial" font-size="10.5" font-weight="normal" fill="#263238" text-anchor="middle">置换水</text>
+  <rect x="356" y="372" width="90" height="44" rx="5" fill="#fbe9e7" stroke="#c62828" stroke-width="1.2"/>
+  <text x="401" y="390" font-family="Microsoft YaHei, Arial" font-size="10.5" font-weight="bold" fill="#c62828" text-anchor="middle">Ti72</text>
+  <text x="401" y="408" font-family="Microsoft YaHei, Arial" font-size="10.5" font-weight="normal" fill="#263238" text-anchor="middle">置换出油</text>
+  <rect x="452" y="372" width="90" height="44" rx="5" fill="#fbe9e7" stroke="#c62828" stroke-width="1.2"/>
+  <text x="497" y="390" font-family="Microsoft YaHei, Arial" font-size="10.5" font-weight="bold" fill="#c62828" text-anchor="middle">Ti73</text>
+  <text x="497" y="408" font-family="Microsoft YaHei, Arial" font-size="10.5" font-weight="normal" fill="#263238" text-anchor="middle">冲洗向心管</text>
+  <rect x="548" y="372" width="90" height="44" rx="5" fill="#fbe9e7" stroke="#c62828" stroke-width="1.2"/>
+  <text x="593" y="390" font-family="Microsoft YaHei, Arial" font-size="10.5" font-weight="bold" fill="#c62828" text-anchor="middle">Ti74</text>
+  <text x="593" y="408" font-family="Microsoft YaHei, Arial" font-size="10.5" font-weight="normal" fill="#263238" text-anchor="middle">排渣</text>
+  <rect x="644" y="372" width="90" height="44" rx="5" fill="#fbe9e7" stroke="#c62828" stroke-width="1.2"/>
+  <text x="689" y="390" font-family="Microsoft YaHei, Arial" font-size="10.5" font-weight="bold" fill="#c62828" text-anchor="middle">Ti75</text>
+  <text x="689" y="408" font-family="Microsoft YaHei, Arial" font-size="10.5" font-weight="normal" fill="#263238" text-anchor="middle">放残</text>
+  <text x="164" y="436" font-family="Microsoft YaHei, Arial" font-size="11" font-weight="normal" fill="#78909c" text-anchor="start">DISCHARGE：先用置换水把筒内油顶出再排渣，减少随渣损失的油；结束后回到 Ti68 继续分油</text>
+  <rect x="24" y="460" width="952" height="92" rx="6" fill="#ffffff" stroke="#cfd8dc" stroke-width="1.2"/>
+  <rect x="24" y="460" width="128" height="92" rx="6" fill="#f3e5f5" stroke="#6a1b9a" stroke-width="1.4"/>
+  <text x="88" y="500" font-family="Microsoft YaHei, Arial" font-size="14" font-weight="bold" fill="#6a1b9a" text-anchor="middle">阶段五</text>
+  <text x="88" y="522" font-family="Microsoft YaHei, Arial" font-size="12" font-weight="bold" fill="#6a1b9a" text-anchor="middle">停机置换</text>
+  <rect x="164" y="472" width="90" height="44" rx="5" fill="#f3e5f5" stroke="#6a1b9a" stroke-width="1.2"/>
+  <text x="209" y="490" font-family="Microsoft YaHei, Arial" font-size="10.5" font-weight="bold" fill="#6a1b9a" text-anchor="middle">Ti81</text>
+  <text x="209" y="508" font-family="Microsoft YaHei, Arial" font-size="10.5" font-weight="normal" fill="#263238" text-anchor="middle">关闭分离筒</text>
+  <rect x="260" y="472" width="90" height="44" rx="5" fill="#f3e5f5" stroke="#6a1b9a" stroke-width="1.2"/>
+  <text x="305" y="490" font-family="Microsoft YaHei, Arial" font-size="10.5" font-weight="bold" fill="#6a1b9a" text-anchor="middle">Ti82</text>
+  <text x="305" y="508" font-family="Microsoft YaHei, Arial" font-size="10.5" font-weight="normal" fill="#263238" text-anchor="middle">置换出油</text>
+  <rect x="356" y="472" width="90" height="44" rx="5" fill="#f3e5f5" stroke="#6a1b9a" stroke-width="1.2"/>
+  <text x="401" y="490" font-family="Microsoft YaHei, Arial" font-size="10.5" font-weight="bold" fill="#6a1b9a" text-anchor="middle">Ti83</text>
+  <text x="401" y="508" font-family="Microsoft YaHei, Arial" font-size="10.5" font-weight="normal" fill="#263238" text-anchor="middle">冲洗向心管</text>
+  <text x="164" y="536" font-family="Microsoft YaHei, Arial" font-size="11" font-weight="normal" fill="#78909c" text-anchor="start">STOPPING：密封分离筒 → 用置换水把筒内净油顶出 → 冲洗出油通道，减少残油</text>
+  <rect x="24" y="560" width="952" height="92" rx="6" fill="#ffffff" stroke="#cfd8dc" stroke-width="1.2"/>
+  <rect x="24" y="560" width="128" height="92" rx="6" fill="#eceff1" stroke="#37474f" stroke-width="1.4"/>
+  <text x="88" y="600" font-family="Microsoft YaHei, Arial" font-size="14" font-weight="bold" fill="#37474f" text-anchor="middle">阶段六</text>
+  <text x="88" y="622" font-family="Microsoft YaHei, Arial" font-size="12" font-weight="bold" fill="#37474f" text-anchor="middle">自动停机</text>
+  <rect x="164" y="572" width="90" height="44" rx="5" fill="#eceff1" stroke="#37474f" stroke-width="1.2"/>
+  <text x="209" y="590" font-family="Microsoft YaHei, Arial" font-size="10.5" font-weight="bold" fill="#37474f" text-anchor="middle">Ti85</text>
+  <text x="209" y="608" font-family="Microsoft YaHei, Arial" font-size="10.5" font-weight="normal" fill="#263238" text-anchor="middle">停电机</text>
+  <rect x="260" y="572" width="90" height="44" rx="5" fill="#eceff1" stroke="#37474f" stroke-width="1.2"/>
+  <text x="305" y="590" font-family="Microsoft YaHei, Arial" font-size="10.5" font-weight="bold" fill="#37474f" text-anchor="middle">Ti86</text>
+  <text x="305" y="608" font-family="Microsoft YaHei, Arial" font-size="10.5" font-weight="normal" fill="#263238" text-anchor="middle">降速</text>
+  <rect x="356" y="572" width="90" height="44" rx="5" fill="#eceff1" stroke="#37474f" stroke-width="1.2"/>
+  <text x="401" y="590" font-family="Microsoft YaHei, Arial" font-size="10.5" font-weight="bold" fill="#37474f" text-anchor="middle">Ti87</text>
+  <text x="401" y="608" font-family="Microsoft YaHei, Arial" font-size="10.5" font-weight="normal" fill="#263238" text-anchor="middle">停供油泵</text>
+  <rect x="452" y="572" width="90" height="44" rx="5" fill="#eceff1" stroke="#37474f" stroke-width="1.2"/>
+  <text x="497" y="590" font-family="Microsoft YaHei, Arial" font-size="10.5" font-weight="bold" fill="#37474f" text-anchor="middle">Ti89</text>
+  <text x="497" y="608" font-family="Microsoft YaHei, Arial" font-size="10.5" font-weight="normal" fill="#263238" text-anchor="middle">静止</text>
+  <text x="164" y="636" font-family="Microsoft YaHei, Arial" font-size="11" font-weight="normal" fill="#78909c" text-anchor="start">STOPPING → STANDSTILL：转速降到 0、程序结束，才能复位报警或重新起动</text>
+  <rect x="24" y="664" width="952" height="26" rx="5" fill="#e8f5e9" stroke="#a5d6a7" stroke-width="1.2"/>
+  <text x="44" y="682" font-family="Microsoft YaHei, Arial" font-size="11.5" font-weight="bold" fill="#1b5e20" text-anchor="start">时序名称、各段时长（Ti 参数）均可在 EPC-60 参数菜单中修改；仿真 1× 实时运行时，Ti68 默认 5 min 排渣一次。</text>
+</svg>

@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="700" viewBox="0 0 1000 700">
+  <rect width="1000" height="700" fill="#f7f9f8"/>
+  <text x="500" y="30" font-family="Microsoft YaHei, Arial" font-size="19" font-weight="bold" fill="#263238" text-anchor="middle">五种常见故障的原因、现象与处理</text>
+  <rect x="28" y="54" width="944" height="34" rx="4" fill="#37474f" stroke="#37474f" stroke-width="1"/>
+  <text x="38" y="77" font-family="Microsoft YaHei, Arial" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="start">故障 / 报警</text>
+  <text x="186" y="77" font-family="Microsoft YaHei, Arial" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="start">主要原因</text>
+  <text x="472" y="77" font-family="Microsoft YaHei, Arial" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="start">现象与报警</text>
+  <text x="672" y="77" font-family="Microsoft YaHei, Arial" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="start">处理措施</text>
+  <rect x="28" y="88" width="944" height="112" rx="0" fill="#ffffff" stroke="#cfd8dc" stroke-width="1"/>
+  <rect x="28" y="88" width="6" height="112" rx="0" fill="#c62828" stroke="#c62828" stroke-width="1"/>
+  <text x="44" y="122" font-family="Microsoft YaHei, Arial" font-size="13" font-weight="bold" fill="#c62828" text-anchor="start">跑油</text>
+  <text x="44" y="142" font-family="Microsoft YaHei, Arial" font-size="10" font-weight="normal" fill="#78909c" text-anchor="start">(分离筒密封失效)</text>
+  <rect x="44" y="154" width="56" height="22" rx="4" fill="#c62828" stroke="#c62828" stroke-width="1"/>
+  <text x="72" y="170" font-family="Microsoft YaHei, Arial" font-size="10" font-weight="bold" fill="#ffffff" text-anchor="middle">A03</text>
+  <text x="186" y="118" font-family="Microsoft YaHei, Arial" font-size="10" font-weight="normal" fill="#263238" text-anchor="start">· 密封水压力低，SV16 不动作或卡滞</text>
+  <text x="186" y="135" font-family="Microsoft YaHei, Arial" font-size="10" font-weight="normal" fill="#263238" text-anchor="start">· 活动底盘密封面、矩形密封圈磨损</text>
+  <text x="186" y="152" font-family="Microsoft YaHei, Arial" font-size="10" font-weight="normal" fill="#263238" text-anchor="start">· 开启水阀 SV15 内漏，密封被破坏</text>
+  <text x="186" y="169" font-family="Microsoft YaHei, Arial" font-size="10" font-weight="normal" fill="#263238" text-anchor="start">· 排渣口未关严就进油（时序异常）</text>
+  <text x="472" y="118" font-family="Microsoft YaHei, Arial" font-size="10" font-weight="normal" fill="#263238" text-anchor="start">PT4 净油出口压力骤降；</text>
+  <text x="472" y="135" font-family="Microsoft YaHei, Arial" font-size="10" font-weight="normal" fill="#263238" text-anchor="start">A03 OIL LEAKING FROM BOWL；</text>
+  <text x="472" y="152" font-family="Microsoft YaHei, Arial" font-size="10" font-weight="normal" fill="#263238" text-anchor="start">V1 立即切回流、V4 关闭，</text>
+  <text x="472" y="169" font-family="Microsoft YaHei, Arial" font-size="10" font-weight="normal" fill="#263238" text-anchor="start">程序转停机，渣口见油渣</text>
+  <text x="672" y="118" font-family="Microsoft YaHei, Arial" font-size="10" font-weight="normal" fill="#263238" text-anchor="start">· 停机后查工作水压力、SV16 动作与密封水流量</text>
+  <text x="672" y="135" font-family="Microsoft YaHei, Arial" font-size="10" font-weight="normal" fill="#263238" text-anchor="start">· 拆检活动底盘密封面、矩形密封圈与阀塞</text>
+  <text x="672" y="152" font-family="Microsoft YaHei, Arial" font-size="10" font-weight="normal" fill="#263238" text-anchor="start">· 检查 SV15 是否内漏，必要时更换</text>
+  <text x="672" y="169" font-family="Microsoft YaHei, Arial" font-size="10" font-weight="normal" fill="#263238" text-anchor="start">· 修复后复位报警，重新起动并监视 PT4</text>
+  <rect x="28" y="200" width="944" height="112" rx="0" fill="#fafafa" stroke="#cfd8dc" stroke-width="1"/>
+  <rect x="28" y="200" width="6" height="112" rx="0" fill="#ef6c00" stroke="#ef6c00" stroke-width="1"/>
+  <text x="44" y="234" font-family="Microsoft YaHei, Arial" font-size="13" font-weight="bold" fill="#ef6c00" text-anchor="start">燃油温度低</text>
+  <rect x="44" y="266" width="56" height="22" rx="4" fill="#ef6c00" stroke="#ef6c00" stroke-width="1"/>
+  <text x="72" y="282" font-family="Microsoft YaHei, Arial" font-size="10" font-weight="bold" fill="#ffffff" text-anchor="middle">A05</text>
+  <text x="186" y="230" font-family="Microsoft YaHei, Arial" font-size="10" font-weight="normal" fill="#263238" text-anchor="start">· 蒸汽截止阀未开或蒸汽压力低</text>
+  <text x="186" y="247" font-family="Microsoft YaHei, Arial" font-size="10" font-weight="normal" fill="#263238" text-anchor="start">· 电动调节阀、温度控制器故障</text>
+  <text x="186" y="264" font-family="Microsoft YaHei, Arial" font-size="10" font-weight="normal" fill="#263238" text-anchor="start">· 加热器结垢、疏水器堵塞</text>
+  <text x="186" y="281" font-family="Microsoft YaHei, Arial" font-size="10" font-weight="normal" fill="#263238" text-anchor="start">· 进油量过大，超出加热能力</text>
+  <text x="472" y="230" font-family="Microsoft YaHei, Arial" font-size="10" font-weight="normal" fill="#263238" text-anchor="start">TT1 低于 90 ℃；</text>
+  <text x="472" y="247" font-family="Microsoft YaHei, Arial" font-size="10" font-weight="normal" fill="#263238" text-anchor="start">A05 OIL FEED TEMP - LOW；</text>
+  <text x="472" y="264" font-family="Microsoft YaHei, Arial" font-size="10" font-weight="normal" fill="#263238" text-anchor="start">EPC 切断进油并自动投加热，</text>
+  <text x="472" y="281" font-family="Microsoft YaHei, Arial" font-size="10" font-weight="normal" fill="#263238" text-anchor="start">持续 30 s 触发停机</text>
+  <text x="672" y="230" font-family="Microsoft YaHei, Arial" font-size="10" font-weight="normal" fill="#263238" text-anchor="start">· 查蒸汽压力、截止阀开度与疏水是否畅通</text>
+  <text x="672" y="247" font-family="Microsoft YaHei, Arial" font-size="10" font-weight="normal" fill="#263238" text-anchor="start">· 校验温度控制器与调节阀，清洗加热器</text>
+  <text x="672" y="264" font-family="Microsoft YaHei, Arial" font-size="10" font-weight="normal" fill="#263238" text-anchor="start">· 核对分离温度设定（98 ℃）与进油流量</text>
+  <text x="672" y="281" font-family="Microsoft YaHei, Arial" font-size="10" font-weight="normal" fill="#263238" text-anchor="start">· 温度回到 97 ℃ 以上报警自动复位</text>
+  <rect x="28" y="312" width="944" height="112" rx="0" fill="#ffffff" stroke="#cfd8dc" stroke-width="1"/>
+  <rect x="28" y="312" width="6" height="112" rx="0" fill="#6a1b9a" stroke="#6a1b9a" stroke-width="1"/>
+  <text x="44" y="346" font-family="Microsoft YaHei, Arial" font-size="13" font-weight="bold" fill="#6a1b9a" text-anchor="start">水分传感器失效</text>
+  <rect x="44" y="378" width="56" height="22" rx="4" fill="#6a1b9a" stroke="#6a1b9a" stroke-width="1"/>
+  <text x="72" y="394" font-family="Microsoft YaHei, Arial" font-size="10" font-weight="bold" fill="#ffffff" text-anchor="middle">A11</text>
+  <text x="186" y="342" font-family="Microsoft YaHei, Arial" font-size="10" font-weight="normal" fill="#263238" text-anchor="start">· 电极污染、结焦或测量腔堵塞</text>
+  <text x="186" y="359" font-family="Microsoft YaHei, Arial" font-size="10" font-weight="normal" fill="#263238" text-anchor="start">· 接线断路、插头进水受潮</text>
+  <text x="186" y="376" font-family="Microsoft YaHei, Arial" font-size="10" font-weight="normal" fill="#263238" text-anchor="start">· 变送器电源或板卡故障</text>
+  <text x="472" y="342" font-family="Microsoft YaHei, Arial" font-size="10" font-weight="normal" fill="#263238" text-anchor="start">MT 显示 NC；</text>
+  <text x="472" y="359" font-family="Microsoft YaHei, Arial" font-size="10" font-weight="normal" fill="#263238" text-anchor="start">A11 TRANSDUCER - NO RESPONSE；</text>
+  <text x="472" y="376" font-family="Microsoft YaHei, Arial" font-size="10" font-weight="normal" fill="#263238" text-anchor="start">自动排水失去依据，</text>
+  <text x="472" y="393" font-family="Microsoft YaHei, Arial" font-size="10" font-weight="normal" fill="#263238" text-anchor="start">改按固定间隔排渣</text>
+  <text x="672" y="342" font-family="Microsoft YaHei, Arial" font-size="10" font-weight="normal" fill="#263238" text-anchor="start">· 清洗测量腔与电极，检查接线与接地</text>
+  <text x="672" y="359" font-family="Microsoft YaHei, Arial" font-size="10" font-weight="normal" fill="#263238" text-anchor="start">· 停用自动排水期间加强人工取样化验</text>
+  <text x="672" y="376" font-family="Microsoft YaHei, Arial" font-size="10" font-weight="normal" fill="#263238" text-anchor="start">· 需要时手动开 V5 排水或提前排渣</text>
+  <text x="672" y="393" font-family="Microsoft YaHei, Arial" font-size="10" font-weight="normal" fill="#263238" text-anchor="start">· 更换传感器后复位报警</text>
+  <rect x="28" y="424" width="944" height="112" rx="0" fill="#fafafa" stroke="#cfd8dc" stroke-width="1"/>
+  <rect x="28" y="424" width="6" height="112" rx="0" fill="#1565c0" stroke="#1565c0" stroke-width="1"/>
+  <text x="44" y="458" font-family="Microsoft YaHei, Arial" font-size="13" font-weight="bold" fill="#1565c0" text-anchor="start">分油机振动高</text>
+  <rect x="44" y="490" width="56" height="22" rx="4" fill="#1565c0" stroke="#1565c0" stroke-width="1"/>
+  <text x="72" y="506" font-family="Microsoft YaHei, Arial" font-size="10" font-weight="bold" fill="#ffffff" text-anchor="middle">A01/A02</text>
+  <text x="186" y="454" font-family="Microsoft YaHei, Arial" font-size="10" font-weight="normal" fill="#263238" text-anchor="start">· 渣层不均、排渣不彻底</text>
+  <text x="186" y="471" font-family="Microsoft YaHei, Arial" font-size="10" font-weight="normal" fill="#263238" text-anchor="start">· 分离盘组装配不正、碟片变形</text>
+  <text x="186" y="488" font-family="Microsoft YaHei, Arial" font-size="10" font-weight="normal" fill="#263238" text-anchor="start">· 主轴轴承磨损、减振弹簧失效</text>
+  <text x="186" y="505" font-family="Microsoft YaHei, Arial" font-size="10" font-weight="normal" fill="#263238" text-anchor="start">· 地脚螺栓松动、管路别劲</text>
+  <text x="472" y="454" font-family="Microsoft YaHei, Arial" font-size="10" font-weight="normal" fill="#263238" text-anchor="start">振动 &gt; 4.5 mm/s 报警（A02）；</text>
+  <text x="472" y="471" font-family="Microsoft YaHei, Arial" font-size="10" font-weight="normal" fill="#263238" text-anchor="start">&gt; 7.1 mm/s 跳闸停机（A01）；</text>
+  <text x="472" y="488" font-family="Microsoft YaHei, Arial" font-size="10" font-weight="normal" fill="#263238" text-anchor="start">停机后须完全静止</text>
+  <text x="472" y="505" font-family="Microsoft YaHei, Arial" font-size="10" font-weight="normal" fill="#263238" text-anchor="start">才允许复位</text>
+  <text x="672" y="454" font-family="Microsoft YaHei, Arial" font-size="10" font-weight="normal" fill="#263238" text-anchor="start">· 立即停机，待完全静止后手盘车检查</text>
+  <text x="672" y="471" font-family="Microsoft YaHei, Arial" font-size="10" font-weight="normal" fill="#263238" text-anchor="start">· 清洗并重新装配分离盘组，更换变形碟片</text>
+  <text x="672" y="488" font-family="Microsoft YaHei, Arial" font-size="10" font-weight="normal" fill="#263238" text-anchor="start">· 检查轴承、立轴减振件与地脚螺栓</text>
+  <text x="672" y="505" font-family="Microsoft YaHei, Arial" font-size="10" font-weight="normal" fill="#263238" text-anchor="start">· 空载试运转合格后再投油</text>
+  <rect x="28" y="536" width="944" height="112" rx="0" fill="#ffffff" stroke="#cfd8dc" stroke-width="1"/>
+  <rect x="28" y="536" width="6" height="112" rx="0" fill="#2e7d32" stroke="#2e7d32" stroke-width="1"/>
+  <text x="44" y="570" font-family="Microsoft YaHei, Arial" font-size="13" font-weight="bold" fill="#2e7d32" text-anchor="start">排渣失败</text>
+  <rect x="44" y="602" width="56" height="22" rx="4" fill="#2e7d32" stroke="#2e7d32" stroke-width="1"/>
+  <text x="72" y="618" font-family="Microsoft YaHei, Arial" font-size="10" font-weight="bold" fill="#ffffff" text-anchor="middle">A04</text>
+  <text x="186" y="566" font-family="Microsoft YaHei, Arial" font-size="10" font-weight="normal" fill="#263238" text-anchor="start">· 工作水压力低，SV15 堵塞</text>
+  <text x="186" y="583" font-family="Microsoft YaHei, Arial" font-size="10" font-weight="normal" fill="#263238" text-anchor="start">· 开启水量不足（节流孔堵）</text>
+  <text x="186" y="600" font-family="Microsoft YaHei, Arial" font-size="10" font-weight="normal" fill="#263238" text-anchor="start">· 排渣口被硬渣、异物堵塞</text>
+  <text x="186" y="617" font-family="Microsoft YaHei, Arial" font-size="10" font-weight="normal" fill="#263238" text-anchor="start">· 排渣反馈元件（压力/振动）失效</text>
+  <text x="472" y="566" font-family="Microsoft YaHei, Arial" font-size="10" font-weight="normal" fill="#263238" text-anchor="start">排渣后无反馈信号，</text>
+  <text x="472" y="583" font-family="Microsoft YaHei, Arial" font-size="10" font-weight="normal" fill="#263238" text-anchor="start">EPC 重试 1 次仍失败；</text>
+  <text x="472" y="600" font-family="Microsoft YaHei, Arial" font-size="10" font-weight="normal" fill="#263238" text-anchor="start">A04 DISCHARGE FEEDBACK</text>
+  <text x="472" y="617" font-family="Microsoft YaHei, Arial" font-size="10" font-weight="normal" fill="#263238" text-anchor="start">- ERROR，报警停机</text>
+  <text x="672" y="566" font-family="Microsoft YaHei, Arial" font-size="10" font-weight="normal" fill="#263238" text-anchor="start">· 查工作水压力与滤器，清洗 SV15 和节流孔</text>
+  <text x="672" y="583" font-family="Microsoft YaHei, Arial" font-size="10" font-weight="normal" fill="#263238" text-anchor="start">· 停机清理排渣口与活动底盘</text>
+  <text x="672" y="600" font-family="Microsoft YaHei, Arial" font-size="10" font-weight="normal" fill="#263238" text-anchor="start">· 检查排渣反馈开关与接线</text>
+  <text x="672" y="617" font-family="Microsoft YaHei, Arial" font-size="10" font-weight="normal" fill="#263238" text-anchor="start">· 适当缩短排渣间隔，避免渣层过厚</text>
+  <rect x="28" y="652" width="944" height="34" rx="5" fill="#e8f5e9" stroke="#a5d6a7" stroke-width="1.2"/>
+  <text x="48" y="673" font-family="Microsoft YaHei, Arial" font-size="11.5" font-weight="bold" fill="#1b5e20" text-anchor="start">处理原则：先查明原因再复位；故障未消除时反复按 ALARM RESET 没有意义。复位后应重新起动并观察各测点是否恢复正常。</text>
+</svg>

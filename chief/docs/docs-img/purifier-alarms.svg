@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="470" viewBox="0 0 860 470">
+  <rect width="860" height="470" fill="#f7f9f8"/>
+  <text x="430" y="28" text-anchor="middle" font-family="Microsoft YaHei, Arial" font-size="18" font-weight="bold" fill="#263238">报警与联锁</text>
+
+  <rect x="30" y="50" width="800" height="36" rx="4" fill="#b71c1c"/>
+  <g font-family="Microsoft YaHei, Arial" font-size="11" font-weight="bold" fill="#fff">
+    <text x="44" y="73">代码</text><text x="110" y="73">报警文本</text><text x="360" y="73">触发条件</text><text x="620" y="73">联锁动作</text>
+  </g>
+
+  <g font-family="Microsoft YaHei, Arial" font-size="10" fill="#263238">
+    <rect x="30" y="86" width="800" height="32" fill="#ffffff" stroke="#e0e0e0"/><text x="44" y="106">A01</text><text x="110" y="106">HIGH VIBRATION - SHUTDOWN</text><text x="360" y="106">振动 &gt; 7.1 mm/s</text><text x="620" y="106">停电机、停加热、停进油</text>
+    <rect x="30" y="118" width="800" height="32" fill="#fafafa" stroke="#e0e0e0"/><text x="44" y="138">A02</text><text x="110" y="138">HIGH VIBRATION - WARNING</text><text x="360" y="138">振动 &gt; 4.5 mm/s</text><text x="620" y="138">报警，加强监视</text>
+    <rect x="30" y="150" width="800" height="32" fill="#ffffff" stroke="#e0e0e0"/><text x="44" y="170">A03</text><text x="110" y="170">OIL LEAKING FROM BOWL</text><text x="360" y="170">PT4 骤降 / 密封失效</text><text x="620" y="170">关 V1、停机</text>
+    <rect x="30" y="182" width="800" height="32" fill="#fafafa" stroke="#e0e0e0"/><text x="44" y="202">A04</text><text x="110" y="202">DISCHARGE FEEDBACK - ERROR</text><text x="360" y="202">排渣无反馈（重试 1 次）</text><text x="620" y="202">报警、停机</text>
+    <rect x="30" y="214" width="800" height="32" fill="#ffffff" stroke="#e0e0e0"/><text x="44" y="234">A05</text><text x="110" y="234">OIL FEED TEMPERATURE - LOW</text><text x="360" y="234">TT1 &lt; 90 °C（分油中）</text><text x="620" y="234">关 V1、加热；超时停机</text>
+    <rect x="30" y="246" width="800" height="32" fill="#fafafa" stroke="#e0e0e0"/><text x="44" y="266">A08</text><text x="110" y="266">OPERATING WATER PRESSURE - LOW</text><text x="360" y="266">工作水 &lt; 2 bar</text><text x="620" y="266">禁止起动/密封，报警</text>
+    <rect x="30" y="278" width="800" height="32" fill="#ffffff" stroke="#e0e0e0"/><text x="44" y="298">A09</text><text x="110" y="298">CONTROL AIR PRESSURE - LOW</text><text x="360" y="298">控制空气 &lt; 5 bar</text><text x="620" y="298">气动阀失效，报警</text>
+    <rect x="30" y="310" width="800" height="32" fill="#fafafa" stroke="#e0e0e0"/><text x="44" y="330">A10</text><text x="110" y="330">SLUDGE TANK LEVEL - HIGH</text><text x="360" y="330">排渣柜 &gt; 90%</text><text x="620" y="330">报警，禁止排渣</text>
+    <rect x="30" y="342" width="800" height="32" fill="#ffffff" stroke="#e0e0e0"/><text x="44" y="362">A11</text><text x="110" y="362">TRANSDUCER - NO RESPONSE</text><text x="360" y="362">MT 显示 NC</text><text x="620" y="362">ALCAP 待机，固定 15 min 排渣</text>
+    <rect x="30" y="374" width="800" height="32" fill="#fafafa" stroke="#e0e0e0"/><text x="44" y="394">A12</text><text x="110" y="394">SEPARATOR MOTOR - FAILURE</text><text x="360" y="394">电机过载/主电源失电</text><text x="620" y="394">跳闸、停机</text>
+    <rect x="30" y="406" width="800" height="32" fill="#ffffff" stroke="#e0e0e0"/><text x="44" y="426">A14</text><text x="110" y="426">EMERGENCY STOP - BUTTON PUSHED</text><text x="360" y="426">应急停止按钮</text><text x="620" y="426">立即停机，静止后复位</text>
+  </g>
+
+  <text x="430" y="458" text-anchor="middle" font-family="Microsoft YaHei, Arial" font-size="10" fill="#78909c">报警需先查找原因再复位；未处理报警 30 min 后 EPC-60 自动执行停机程序（教学仿真按比例加速）。</text>
+</svg>
