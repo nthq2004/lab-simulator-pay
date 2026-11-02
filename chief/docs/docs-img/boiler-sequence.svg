@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="452" viewBox="0 0 980 452">
+  <rect width="980" height="452" fill="#ffffff"/>
+  <text x="16" y="26" font-family="Microsoft YaHei,Arial" font-size="16" font-weight="bold" fill="#1b3a4b">图 3  自动起动时序（预扫风 36 s → 点火位置 3 s → 点火准备 5 s → 点火 3 s → 小火稳定 20 s → 负荷）</text>
+
+  <!-- 阶段图例 -->
+  <text x="150" y="46" font-family="Microsoft YaHei" font-size="10.5" fill="#546e7a">① 预扫风（M0.3 置 1 结束）　② 点火位置（风门关到小风门）　③ 点火准备（点火变压器打火，不喷油）　④ 点火（开阀喷油）　⑤ 小火稳定　⑥ 负荷控制</text>
+
+  <!-- 阶段色带（时间轴线性：0 s→x150，100 s→x900，7.5 px/s） -->
+  <g font-family="Microsoft YaHei" font-size="10" text-anchor="middle">
+    <rect x="150" y="58" width="270" height="26" fill="#bbdefb" stroke="#64b5f6"/>
+    <text x="285" y="75" fill="#0d47a1">36 s（T101）</text>
+    <rect x="420" y="58" width="23" height="26" fill="#c8e6c9" stroke="#81c784"/>
+    <text x="431.5" y="75" fill="#1b5e20" font-size="9">3 s</text>
+    <rect x="443" y="58" width="37" height="26" fill="#fff9c4" stroke="#fdd835"/>
+    <text x="461.5" y="75" fill="#827717" font-size="9">5 s</text>
+    <rect x="480" y="58" width="23" height="26" fill="#ffe0b2" stroke="#ffb74d"/>
+    <text x="491.5" y="75" fill="#e65100" font-size="9">3 s</text>
+    <rect x="503" y="58" width="150" height="26" fill="#d7ccc8" stroke="#a1887f"/>
+    <text x="578" y="75" fill="#4e342e">20 s（T103）</text>
+    <rect x="653" y="58" width="247" height="26" fill="#c8e6c9" stroke="#66bb6a"/>
+    <text x="776.5" y="75" fill="#1b5e20">负荷控制（小火 / 大火）</text>
+  </g>
+
+  <!-- 信号行 -->
+  <g font-family="Microsoft YaHei" font-size="11" fill="#37474f" text-anchor="end">
+    <text x="140" y="122">Q0.4 风机</text>
+    <text x="140" y="162">Q1.4 风门衔铁</text>
+    <text x="140" y="202">Q0.5 油泵</text>
+    <text x="140" y="242">Q1.1 点火变压器</text>
+    <text x="140" y="282">Q1.2 / Q1.3 进油阀</text>
+    <text x="140" y="322">Q2.2 大火（2# 阀）</text>
+  </g>
+
+  <!-- 通断条（y 与左边标注对齐：条中心 = 标注基线 - 4） -->
+  <g stroke-width="0">
+    <!-- 风机：起动全程 -->
+    <rect x="150" y="112" width="750" height="14" fill="#4fc3f7"/>
+    <!-- 点火位置 36 s 起，负荷段随大小火切换（虚线段） -->
+    <rect x="420" y="152" width="233" height="14" fill="#ffb300"/>
+    <text x="662" y="150" font-family="Microsoft YaHei" font-size="9" fill="#8d6e63" text-anchor="start">负荷段：小火保持、大火断开</text>
+    <!-- 油泵：36 s 起全程 -->
+    <rect x="420" y="192" width="480" height="14" fill="#8d6e63"/>
+    <!-- 点火变压器：39~47 s（准备 5 s + 点火 3 s），47 s 后断 -->
+    <rect x="443" y="232" width="60" height="14" fill="#ff7043"/>
+    <line x1="480" y1="232" x2="480" y2="246" stroke="#ffffff" stroke-width="1.5"/>
+    <!-- 进油阀：44 s 起（点火段开始喷油） -->
+    <rect x="480" y="272" width="420" height="14" fill="#66bb6a"/>
+    <!-- 大火：67 s 后 -->
+    <rect x="653" y="312" width="247" height="14" fill="#43a047"/>
+  </g>
+
+  <!-- 时间轴 -->
+  <line x1="150" y1="366" x2="900" y2="366" stroke="#37474f" stroke-width="1.5"/>
+  <line x1="150" y1="366" x2="150" y2="371" stroke="#37474f" stroke-width="1.5"/>
+  <line x1="420" y1="366" x2="420" y2="371" stroke="#37474f" stroke-width="1.5"/>
+  <line x1="480" y1="366" x2="480" y2="371" stroke="#37474f" stroke-width="1.5"/>
+  <line x1="653" y1="366" x2="653" y2="371" stroke="#37474f" stroke-width="1.5"/>
+  <line x1="900" y1="366" x2="900" y2="371" stroke="#37474f" stroke-width="1.5"/>
+  <g font-family="Microsoft YaHei" font-size="10.5" fill="#607d8b" text-anchor="middle">
+    <text x="150" y="384">0</text>
+    <text x="420" y="384">36</text>
+    <text x="480" y="384">44</text>
+    <text x="653" y="384">67</text>
+    <text x="900" y="384">100</text>
+    <text x="928" y="384">t / s</text>
+  </g>
+
+  <!-- 阶段分隔虚线 -->
+  <g stroke="#b0bec5" stroke-width="1" stroke-dasharray="3,3">
+    <line x1="420" y1="84" x2="420" y2="366"/>
+    <line x1="443" y1="84" x2="443" y2="366"/>
+    <line x1="480" y1="84" x2="480" y2="366"/>
+    <line x1="503" y1="84" x2="503" y2="366"/>
+    <line x1="653" y1="84" x2="653" y2="366"/>
+  </g>
+
+  <!-- 标志位（上下错开，避免文字相撞） -->
+  <g font-family="Microsoft YaHei" font-size="9.5" fill="#c62828" text-anchor="middle">
+    <text x="420" y="400">M0.3</text>
+    <text x="480" y="400">M3.1</text>
+    <text x="653" y="400">M0.5</text>
+    <text x="443" y="414">M3.0</text>
+    <text x="503" y="414">M0.4</text>
+  </g>
+  <text x="150" y="436" font-family="Microsoft YaHei" font-size="10" fill="#c62828">M0.3 预扫风结束（36 s）　M3.0 点火位置结束（39 s）　M3.1 点火准备结束、开始喷油（44 s）　M0.4 点火结束（47 s）　M0.5 小火稳定结束（67 s）</text>
+</svg>
