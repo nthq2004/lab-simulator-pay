@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="544" viewBox="0 0 920 544">
+  <rect width="920" height="544" fill="#f7f9f8"/>
+  <text x="460" y="28" text-anchor="middle" font-family="Microsoft YaHei, Arial" font-size="18" font-weight="bold" fill="#263238">六种常用电子元器件的外观与识别要点</text>
+
+  <!-- 表头 -->
+  <g font-family="Microsoft YaHei, Arial" font-size="12" font-weight="bold" fill="#ffffff">
+    <rect x="24" y="48" width="110" height="30" rx="4" fill="#455a64"/>
+    <text x="79" y="68" text-anchor="middle">元器件</text>
+    <rect x="142" y="48" width="250" height="30" rx="4" fill="#455a64"/>
+    <text x="267" y="68" text-anchor="middle">外观特征（看什么）</text>
+    <rect x="400" y="48" width="244" height="30" rx="4" fill="#455a64"/>
+    <text x="505" y="68" text-anchor="middle">引脚与极性</text>
+    <rect x="648" y="48" width="248" height="30" rx="4" fill="#455a64"/>
+    <text x="757" y="68" text-anchor="middle">本工程元件参数 / 判据</text>
+  </g>
+
+  <!-- 行 1 电阻 -->
+  <rect x="24" y="88" width="110" height="66" rx="6" fill="#ffffff" stroke="#90a4ae" stroke-width="1.4"/>
+  <text x="79" y="126" text-anchor="middle" font-family="Microsoft YaHei, Arial" font-size="12" font-weight="bold" fill="#263238">电阻 R1</text>
+  <rect x="142" y="88" width="250" height="66" rx="6" fill="#ffffff" stroke="#90a4ae" stroke-width="1.4"/>
+  <text x="156" y="112" font-family="Microsoft YaHei, Arial" font-size="11" fill="#37474f">圆柱形瓷体 + 4 道色环（两端引线）</text>
+  <text x="156" y="134" font-family="Microsoft YaHei, Arial" font-size="11" fill="#546e7a">色环：棕黑红金 = 1kΩ ±5%</text>
+  <rect x="400" y="88" width="244" height="66" rx="6" fill="#ffffff" stroke="#90a4ae" stroke-width="1.4"/>
+  <text x="414" y="112" font-family="Microsoft YaHei, Arial" font-size="11" fill="#37474f">两脚，无极性，可正反接</text>
+  <text x="414" y="134" font-family="Microsoft YaHei, Arial" font-size="11" fill="#546e7a">接入电路不分方向</text>
+  <rect x="648" y="88" width="248" height="66" rx="6" fill="#e8f5e9" stroke="#43a047" stroke-width="1.4"/>
+  <text x="662" y="112" font-family="Microsoft YaHei, Arial" font-size="11" fill="#1b5e20">标称值 1000 Ω，色环被隐藏，须实测</text>
+  <text x="662" y="134" font-family="Microsoft YaHei, Arial" font-size="11" fill="#2e7d32">2kΩ 档读数 1.000 kΩ</text>
+
+  <!-- 行 2 电容 -->
+  <rect x="24" y="162" width="110" height="66" rx="6" fill="#ffffff" stroke="#90a4ae" stroke-width="1.4"/>
+  <text x="79" y="200" text-anchor="middle" font-family="Microsoft YaHei, Arial" font-size="12" font-weight="bold" fill="#263238">电容 C1</text>
+  <rect x="142" y="162" width="250" height="66" rx="6" fill="#ffffff" stroke="#90a4ae" stroke-width="1.4"/>
+  <text x="156" y="186" font-family="Microsoft YaHei, Arial" font-size="11" fill="#37474f">方块/圆柱壳体，表面印容量与耐压</text>
+  <text x="156" y="208" font-family="Microsoft YaHei, Arial" font-size="11" fill="#546e7a">如 104 = 10×10⁴ pF = 0.1μF</text>
+  <rect x="400" y="162" width="244" height="66" rx="6" fill="#ffffff" stroke="#90a4ae" stroke-width="1.4"/>
+  <text x="414" y="186" font-family="Microsoft YaHei, Arial" font-size="11" fill="#37474f">引脚在电容两端到底面</text>
+  <text x="414" y="208" font-family="Microsoft YaHei, Arial" font-size="11" fill="#546e7a">电解电容长脚为正极</text>
+  <rect x="648" y="162" width="248" height="66" rx="6" fill="#e8f5e9" stroke="#43a047" stroke-width="1.4"/>
+  <text x="662" y="186" font-family="Microsoft YaHei, Arial" font-size="11" fill="#1b5e20">本工程 100 μF</text>
+  <text x="662" y="208" font-family="Microsoft YaHei, Arial" font-size="11" fill="#2e7d32">μF 档读数约 100 μF</text>
+
+  <!-- 行 3 二极管 -->
+  <rect x="24" y="236" width="110" height="66" rx="6" fill="#ffffff" stroke="#90a4ae" stroke-width="1.4"/>
+  <text x="79" y="274" text-anchor="middle" font-family="Microsoft YaHei, Arial" font-size="12" font-weight="bold" fill="#263238">二极管 D1</text>
+  <rect x="142" y="236" width="250" height="66" rx="6" fill="#ffffff" stroke="#90a4ae" stroke-width="1.4"/>
+  <text x="156" y="260" font-family="Microsoft YaHei, Arial" font-size="11" fill="#37474f">黑色圆柱体，一端有一道白色/银色环</text>
+  <text x="156" y="282" font-family="Microsoft YaHei, Arial" font-size="11" fill="#546e7a">有环的一端 = 阴极 K</text>
+  <rect x="400" y="236" width="244" height="66" rx="6" fill="#ffffff" stroke="#90a4ae" stroke-width="1.4"/>
+  <text x="414" y="260" font-family="Microsoft YaHei, Arial" font-size="11" fill="#37474f">两脚有极性：阳极 A / 阴极 K</text>
+  <text x="414" y="282" font-family="Microsoft YaHei, Arial" font-size="11" fill="#546e7a">红笔 A、黑笔 K 为正向</text>
+  <rect x="648" y="236" width="248" height="66" rx="6" fill="#e8f5e9" stroke="#43a047" stroke-width="1.4"/>
+  <text x="662" y="260" font-family="Microsoft YaHei, Arial" font-size="11" fill="#1b5e20">正向压降 0.68 V，反向 O.L</text>
+  <text x="662" y="282" font-family="Microsoft YaHei, Arial" font-size="11" fill="#2e7d32">▶| 档：一次有读数、一次溢出即好管</text>
+
+  <!-- 行 4 三极管 -->
+  <rect x="24" y="310" width="110" height="66" rx="6" fill="#ffffff" stroke="#90a4ae" stroke-width="1.4"/>
+  <text x="79" y="348" text-anchor="middle" font-family="Microsoft YaHei, Arial" font-size="12" font-weight="bold" fill="#263238">三极管 T1</text>
+  <rect x="142" y="310" width="250" height="66" rx="6" fill="#ffffff" stroke="#90a4ae" stroke-width="1.4"/>
+  <text x="156" y="334" font-family="Microsoft YaHei, Arial" font-size="11" fill="#37474f">黑色半圆柱 + 散热平面，印 9013 等型号</text>
+  <text x="156" y="356" font-family="Microsoft YaHei, Arial" font-size="11" fill="#546e7a">平面一侧可印字，认字认脚</text>
+  <rect x="400" y="310" width="244" height="66" rx="6" fill="#ffffff" stroke="#90a4ae" stroke-width="1.4"/>
+  <text x="414" y="332" font-family="Microsoft YaHei, Arial" font-size="10.5" fill="#37474f">三脚：B 基极、C 集电极、</text>
+  <text x="414" y="350" font-family="Microsoft YaHei, Arial" font-size="10.5" fill="#37474f">E 发射极</text>
+  
+  <rect x="648" y="310" width="248" height="66" rx="6" fill="#e8f5e9" stroke="#43a047" stroke-width="1.4"/>
+  <text x="662" y="334" font-family="Microsoft YaHei, Arial" font-size="11" fill="#1b5e20">NPN 型，β=100</text>
+  <text x="662" y="356" font-family="Microsoft YaHei, Arial" font-size="11" fill="#2e7d32">黑笔接 B，红笔分别测 C、E 均导通</text>
+
+  <!-- 行 5 晶闸管 -->
+  <rect x="24" y="384" width="110" height="66" rx="6" fill="#ffffff" stroke="#90a4ae" stroke-width="1.4"/>
+  <text x="79" y="422" text-anchor="middle" font-family="Microsoft YaHei, Arial" font-size="12" font-weight="bold" fill="#263238">晶闸管 SCR1</text>
+  <rect x="142" y="384" width="250" height="66" rx="6" fill="#ffffff" stroke="#90a4ae" stroke-width="1.4"/>
+  <text x="156" y="408" font-family="Microsoft YaHei, Arial" font-size="11" fill="#37474f">TO-220 直插封装（带金属散热片），印 BT151</text>
+  <text x="156" y="430" font-family="Microsoft YaHei, Arial" font-size="11" fill="#546e7a">与三极管外形近似，看型号分辨</text>
+  <rect x="400" y="384" width="244" height="66" rx="6" fill="#ffffff" stroke="#90a4ae" stroke-width="1.4"/>
+  <text x="414" y="408" font-family="Microsoft YaHei, Arial" font-size="11" fill="#37474f">三极：A 阳极、K 阴极、G 门极</text>
+  <text x="414" y="430" font-family="Microsoft YaHei, Arial" font-size="11" fill="#546e7a">G 只控制触发，不控制电流大小</text>
+  <rect x="648" y="384" width="248" height="66" rx="6" fill="#e8f5e9" stroke="#43a047" stroke-width="1.4"/>
+  <text x="662" y="408" font-family="Microsoft YaHei, Arial" font-size="11" fill="#1b5e20">G–K 正向压降 0.68 V</text>
+  <text x="662" y="430" font-family="Microsoft YaHei, Arial" font-size="11" fill="#2e7d32">触发导通后撤去触发仍维持（自锁）</text>
+
+  <!-- 行 6 电感 -->
+  <rect x="24" y="458" width="110" height="66" rx="6" fill="#ffffff" stroke="#90a4ae" stroke-width="1.4"/>
+  <text x="79" y="496" text-anchor="middle" font-family="Microsoft YaHei, Arial" font-size="12" font-weight="bold" fill="#263238">电感 L</text>
+  <rect x="142" y="458" width="250" height="66" rx="6" fill="#ffffff" stroke="#90a4ae" stroke-width="1.4"/>
+  <text x="156" y="496" font-family="Microsoft YaHei, Arial" font-size="11" fill="#37474f">线圈绕在磁芯/磁环上，表面可套热缩管</text>
+  <rect x="400" y="458" width="244" height="66" rx="6" fill="#ffffff" stroke="#90a4ae" stroke-width="1.4"/>
+  <text x="414" y="496" font-family="Microsoft YaHei, Arial" font-size="11" fill="#37474f">两脚，无极性；直流电阻接近 0 Ω</text>
+  <rect x="648" y="458" width="248" height="66" rx="6" fill="#fff8e1" stroke="#f9a825" stroke-width="1.4"/>
+  <text x="662" y="496" font-family="Microsoft YaHei, Arial" font-size="11" fill="#8d6e00">属面板识别内容，本工程未设实物</text>
+</svg>

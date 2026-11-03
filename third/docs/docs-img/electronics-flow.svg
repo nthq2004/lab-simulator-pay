@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="360" viewBox="0 0 920 360">
+  <rect width="920" height="360" fill="#f7f9f8"/>
+  <text x="460" y="28" text-anchor="middle" font-family="Microsoft YaHei, Arial" font-size="18" font-weight="bold" fill="#263238">检测流程：从拿到元件到写出结论</text>
+
+  <!-- 5 步流程 -->
+  <g font-family="Microsoft YaHei, Arial">
+    <rect x="24" y="66" width="152" height="94" rx="8" fill="#ffffff" stroke="#1e88e5" stroke-width="1.6"/>
+    <circle cx="52" cy="92" r="13" fill="#1e88e5"/>
+    <text x="52" y="97" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffffff">1</text>
+    <text x="74" y="97" font-size="12" font-weight="bold" fill="#0d47a1">识别元件</text>
+    <text x="38" y="122" font-size="10.5" fill="#37474f">看外形、色环/印字、</text>
+    <text x="38" y="140" font-size="10.5" fill="#37474f">引脚数量，判断是哪一种</text>
+
+    <rect x="200" y="66" width="152" height="94" rx="8" fill="#ffffff" stroke="#1e88e5" stroke-width="1.6"/>
+    <circle cx="228" cy="92" r="13" fill="#1e88e5"/>
+    <text x="228" y="97" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffffff">2</text>
+    <text x="250" y="97" font-size="12" font-weight="bold" fill="#0d47a1">选择仪表</text>
+    <text x="214" y="122" font-size="10.5" fill="#37474f">工具栏「选择仪表」勾选</text>
+    <text x="214" y="140" font-size="10.5" fill="#37474f">数字表或指针表</text>
+
+    <rect x="376" y="66" width="152" height="94" rx="8" fill="#ffffff" stroke="#1e88e5" stroke-width="1.6"/>
+    <circle cx="404" cy="92" r="13" fill="#1e88e5"/>
+    <text x="404" y="97" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffffff">3</text>
+    <text x="426" y="97" font-size="12" font-weight="bold" fill="#0d47a1">接表笔</text>
+    <text x="390" y="122" font-size="10.5" fill="#37474f">红笔插 VΩ，黑笔插 COM，</text>
+    <text x="390" y="140" font-size="10.5" fill="#37474f">表笔接触元件两引脚</text>
+
+    <rect x="552" y="66" width="152" height="94" rx="8" fill="#ffffff" stroke="#1e88e5" stroke-width="1.6"/>
+    <circle cx="580" cy="92" r="13" fill="#1e88e5"/>
+    <text x="580" y="97" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffffff">4</text>
+    <text x="602" y="97" font-size="12" font-weight="bold" fill="#0d47a1">选量程</text>
+    <text x="566" y="122" font-size="10.5" fill="#37474f">先大后小，指针/数字</text>
+    <text x="566" y="140" font-size="10.5" fill="#37474f">落到便于读数的位置</text>
+
+    <rect x="728" y="66" width="168" height="94" rx="8" fill="#ffffff" stroke="#1e88e5" stroke-width="1.6"/>
+    <circle cx="756" cy="92" r="13" fill="#1e88e5"/>
+    <text x="756" y="97" text-anchor="middle" font-size="13" font-weight="bold" fill="#ffffff">5</text>
+    <text x="778" y="97" font-size="12" font-weight="bold" fill="#0d47a1">读数并判断</text>
+    <text x="742" y="122" font-size="10.5" fill="#37474f">读数 × 倍率、正反向对比，</text>
+    <text x="742" y="140" font-size="10.5" fill="#37474f">写出参数与好坏结论</text>
+  </g>
+
+  <!-- 箭头 -->
+  <g stroke="#90a4ae" stroke-width="2" fill="#90a4ae">
+    <line x1="178" y1="113" x2="196" y2="113"/>
+    <polygon points="196,113 190,109 190,117"/>
+    <line x1="354" y1="113" x2="372" y2="113"/>
+    <polygon points="372,113 366,109 366,117"/>
+    <line x1="530" y1="113" x2="548" y2="113"/>
+    <polygon points="548,113 542,109 542,117"/>
+    <line x1="706" y1="113" x2="724" y2="113"/>
+    <polygon points="724,113 718,109 718,117"/>
+  </g>
+
+  <!-- 底部：判定要点 -->
+  <rect x="24" y="186" width="872" height="150" rx="8" fill="#ffffff" stroke="#90a4ae" stroke-width="1.4"/>
+  <text x="44" y="212" font-family="Microsoft YaHei, Arial" font-size="13" font-weight="bold" fill="#263238">判定要点（三个“先”）</text>
+  <text x="44" y="240" font-family="Microsoft YaHei, Arial" font-size="11.5" fill="#37474f">① <tspan font-weight="bold">先断电</tspan>：测电阻、二极管、三极管、晶闸管一律断电进行，指针表欧姆档本身带电池，带电测量会损坏表头。</text>
+  <text x="44" y="264" font-family="Microsoft YaHei, Arial" font-size="11.5" fill="#37474f">② <tspan font-weight="bold">先看正反向</tspan>：二极管、三极管、晶闸管都是有 PN 结的器件，一个方向有读数、另一个方向溢出，才是正常；两向都通 = 击穿，两向都不通 = 断路。</text>
+  <text x="44" y="288" font-family="Microsoft YaHei, Arial" font-size="11.5" fill="#37474f">③ <tspan font-weight="bold">先定量再定性</tspan>：电阻读出 Ω、电容读出 μF、二极管读出 V、三极管读出脚序与类型，最后才下“好/坏”的结论。</text>
+  <text x="44" y="316" font-family="Microsoft YaHei, Arial" font-size="11" fill="#546e7a">工程内三个操作项目分别对应：①识别（点对面板格子）→ ②数字表检测（填参数）→ ③指针表测试（填参数），每项末尾配一道原理题。</text>
+</svg>

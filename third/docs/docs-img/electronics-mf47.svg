@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="430" viewBox="0 0 920 430">
+  <rect width="920" height="430" fill="#f7f9f8"/>
+  <text x="460" y="28" text-anchor="middle" font-family="Microsoft YaHei, Arial" font-size="18" font-weight="bold" fill="#263238">指针式万用表：欧姆调零与倍率读数</text>
+
+  <!-- 步骤 1：机械调零 -->
+  <g>
+    <rect x="26" y="50" width="204" height="150" rx="8" fill="#ffffff" stroke="#90a4ae" stroke-width="1.4"/>
+    <circle cx="52" cy="76" r="13" fill="#455a64"/>
+    <text x="52" y="81" text-anchor="middle" font-family="Microsoft YaHei, Arial" font-size="13" font-weight="bold" fill="#ffffff">1</text>
+    <text x="74" y="81" font-family="Microsoft YaHei, Arial" font-size="12" font-weight="bold" fill="#263238">机械调零</text>
+    <text x="40" y="108" font-family="Microsoft YaHei, Arial" font-size="11" fill="#37474f">表笔不接任何元件，</text>
+    <text x="40" y="128" font-family="Microsoft YaHei, Arial" font-size="11" fill="#37474f">用一字小改锥转动表盘</text>
+    <text x="40" y="148" font-family="Microsoft YaHei, Arial" font-size="11" fill="#37474f">下方螺钉，使指针指向</text>
+    <text x="40" y="168" font-family="Microsoft YaHei, Arial" font-size="11" font-weight="bold" fill="#c62828">左端“0”（电压零位）</text>
+    <text x="40" y="188" font-family="Microsoft YaHei, Arial" font-size="10" fill="#546e7a">每次使用前都要做这一步</text>
+  </g>
+
+  <!-- 步骤 2：欧姆调零 -->
+  <g>
+    <rect x="244" y="50" width="204" height="150" rx="8" fill="#ffffff" stroke="#90a4ae" stroke-width="1.4"/>
+    <circle cx="270" cy="76" r="13" fill="#455a64"/>
+    <text x="270" y="81" text-anchor="middle" font-family="Microsoft YaHei, Arial" font-size="13" font-weight="bold" fill="#ffffff">2</text>
+    <text x="292" y="81" font-family="Microsoft YaHei, Arial" font-size="12" font-weight="bold" fill="#263238">欧姆调零</text>
+    <text x="258" y="108" font-family="Microsoft YaHei, Arial" font-size="11" fill="#37474f">选好倍率（如 ×1k）后把</text>
+    <text x="258" y="128" font-family="Microsoft YaHei, Arial" font-size="11" fill="#37474f">两表笔短接，转动调零</text>
+    <text x="258" y="148" font-family="Microsoft YaHei, Arial" font-size="11" fill="#37474f">旋钮，使指针指向</text>
+    <text x="258" y="168" font-family="Microsoft YaHei, Arial" font-size="11" font-weight="bold" fill="#c62828">右端“0 Ω”（欧姆零位）</text>
+    <text x="258" y="188" font-family="Microsoft YaHei, Arial" font-size="10" fill="#546e7a">换档后必须重新调零</text>
+  </g>
+
+  <!-- 步骤 3：读数 -->
+  <g>
+    <rect x="462" y="50" width="432" height="150" rx="8" fill="#ffffff" stroke="#90a4ae" stroke-width="1.4"/>
+    <circle cx="488" cy="76" r="13" fill="#455a64"/>
+    <text x="488" y="81" text-anchor="middle" font-family="Microsoft YaHei, Arial" font-size="13" font-weight="bold" fill="#ffffff">3</text>
+    <text x="510" y="81" font-family="Microsoft YaHei, Arial" font-size="12" font-weight="bold" fill="#263238">读数 = 指针示值 × 倍率</text>
+    <text x="478" y="110" font-family="Microsoft YaHei, Arial" font-size="11" fill="#37474f">① 读最上面一条欧姆刻度线（右端为 0，左端为 ∞），指针尽量落在中段；</text>
+    <text x="478" y="132" font-family="Microsoft YaHei, Arial" font-size="11" fill="#37474f">② 例：×1k 档指针指在 1 → 1×1k = 1 kΩ；×100 档指在 10 → 10×100 = 1 kΩ；</text>
+    <text x="478" y="154" font-family="Microsoft YaHei, Arial" font-size="11" fill="#37474f">③ 指针偏转太小（靠 ∞）→ 换大倍率；偏转过大（靠 0）→ 换小倍率，换档后再调零；</text>
+    <text x="478" y="176" font-family="Microsoft YaHei, Arial" font-size="11" font-weight="bold" fill="#c62828">④ 欧姆档由表内电池供电，绝不能带电测电阻。</text>
+  </g>
+
+  <!-- 下方：指针表测元件对照 -->
+  <g font-family="Microsoft YaHei, Arial" font-size="12" font-weight="bold" fill="#ffffff">
+    <rect x="26" y="222" width="170" height="28" rx="4" fill="#455a64"/>
+    <text x="111" y="241" text-anchor="middle">被测元件</text>
+    <rect x="204" y="222" width="120" height="28" rx="4" fill="#455a64"/>
+    <text x="264" y="241" text-anchor="middle">倍率</text>
+    <rect x="332" y="222" width="250" height="28" rx="4" fill="#455a64"/>
+    <text x="457" y="241" text-anchor="middle">现象</text>
+    <rect x="590" y="222" width="304" height="28" rx="4" fill="#455a64"/>
+    <text x="742" y="241" text-anchor="middle">结论</text>
+  </g>
+
+  <g font-family="Microsoft YaHei, Arial" font-size="11">
+    <rect x="26" y="258" width="170" height="44" rx="5" fill="#ffffff" stroke="#90a4ae" stroke-width="1.3"/>
+    <text x="40" y="285" fill="#263238">电阻 R1</text>
+    <rect x="204" y="258" width="120" height="44" rx="5" fill="#e3f2fd" stroke="#1e88e5" stroke-width="1.3"/>
+    <text x="264" y="285" text-anchor="middle" font-weight="bold" fill="#0d47a1">×1k</text>
+    <rect x="332" y="258" width="250" height="44" rx="5" fill="#ffffff" stroke="#90a4ae" stroke-width="1.3"/>
+    <text x="346" y="285" fill="#37474f">指针指在 1 附近</text>
+    <rect x="590" y="258" width="304" height="44" rx="5" fill="#ffffff" stroke="#90a4ae" stroke-width="1.3"/>
+    <text x="604" y="285" fill="#2e7d32">1 kΩ，与色环一致即为好</text>
+
+    <rect x="26" y="310" width="170" height="44" rx="5" fill="#ffffff" stroke="#90a4ae" stroke-width="1.3"/>
+    <text x="40" y="337" fill="#263238">二极管 D1</text>
+    <rect x="204" y="310" width="120" height="44" rx="5" fill="#e3f2fd" stroke="#1e88e5" stroke-width="1.3"/>
+    <text x="264" y="337" text-anchor="middle" font-weight="bold" fill="#0d47a1">×100</text>
+    <rect x="332" y="310" width="250" height="44" rx="5" fill="#ffffff" stroke="#90a4ae" stroke-width="1.3"/>
+    <text x="346" y="337" fill="#37474f">正测约 1.6 kΩ，反测 ∞</text>
+    <rect x="590" y="310" width="304" height="44" rx="5" fill="#ffffff" stroke="#90a4ae" stroke-width="1.3"/>
+    <text x="604" y="337" fill="#2e7d32">单向导电性好；两次都小为击穿</text>
+
+    <rect x="26" y="362" width="170" height="44" rx="5" fill="#ffffff" stroke="#90a4ae" stroke-width="1.3"/>
+    <text x="40" y="389" fill="#263238">晶闸管 SCR1（G–K）</text>
+    <rect x="204" y="362" width="120" height="44" rx="5" fill="#e3f2fd" stroke="#1e88e5" stroke-width="1.3"/>
+    <text x="264" y="389" text-anchor="middle" font-weight="bold" fill="#0d47a1">×10</text>
+    <rect x="332" y="362" width="250" height="44" rx="5" fill="#ffffff" stroke="#90a4ae" stroke-width="1.3"/>
+    <text x="346" y="389" fill="#37474f">正测约 0.5 kΩ，反测 ∞</text>
+    <rect x="590" y="362" width="304" height="44" rx="5" fill="#ffffff" stroke="#90a4ae" stroke-width="1.3"/>
+    <text x="604" y="389" fill="#2e7d32">G–K 是 PN 结；A–K 两向均 ∞</text>
+  </g>
+</svg>
