@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="500" viewBox="0 0 920 500">
+  <rect width="920" height="500" fill="#f7f9f8"/>
+  <text x="460" y="28" text-anchor="middle" font-family="Microsoft YaHei, Arial" font-size="18" font-weight="bold" fill="#263238">从现象到断点：故障判断流程</text>
+
+  <!-- 表头 -->
+  <g font-family="Microsoft YaHei, Arial" font-size="12" font-weight="bold" fill="#ffffff">
+    <rect x="30" y="52" width="150" height="30" rx="4" fill="#455a64"/>
+    <text x="105" y="72" text-anchor="middle">观察到的现象</text>
+    <rect x="200" y="52" width="160" height="30" rx="4" fill="#455a64"/>
+    <text x="280" y="72" text-anchor="middle">初步判断</text>
+    <rect x="380" y="52" width="200" height="30" rx="4" fill="#455a64"/>
+    <text x="480" y="72" text-anchor="middle">采用的方法</text>
+    <rect x="600" y="52" width="290" height="30" rx="4" fill="#455a64"/>
+    <text x="745" y="72" text-anchor="middle">判据（怎样算找到断点）</text>
+  </g>
+
+  <!-- 行 1：缺相 -->
+  <rect x="30" y="96" width="150" height="86" rx="6" fill="#ffffff" stroke="#90a4ae" stroke-width="1.4"/>
+  <text x="105" y="122" text-anchor="middle" font-family="Microsoft YaHei, Arial" font-size="11" fill="#37474f">按下 SB2 后</text>
+  <text x="105" y="142" text-anchor="middle" font-family="Microsoft YaHei, Arial" font-size="11" fill="#37474f">电动机不转或</text>
+  <text x="105" y="162" text-anchor="middle" font-family="Microsoft YaHei, Arial" font-size="11" fill="#37474f">运转异常、发热</text>
+
+  <rect x="200" y="96" width="160" height="86" rx="6" fill="#fff8e1" stroke="#f9a825" stroke-width="1.4"/>
+  <text x="280" y="126" text-anchor="middle" font-family="Microsoft YaHei, Arial" font-size="11" font-weight="bold" fill="#8d6e00">主电路缺相</text>
+  <text x="280" y="150" text-anchor="middle" font-family="Microsoft YaHei, Arial" font-size="10" fill="#795548">接触器能吸合，控制回路正常</text>
+
+  <rect x="380" y="96" width="200" height="86" rx="6" fill="#e3f2fd" stroke="#1e88e5" stroke-width="1.4"/>
+  <text x="480" y="122" text-anchor="middle" font-family="Microsoft YaHei, Arial" font-size="11" font-weight="bold" fill="#0d47a1">断电测阻法（200Ω 档）</text>
+  <text x="480" y="146" text-anchor="middle" font-family="Microsoft YaHei, Arial" font-size="10" fill="#37474f">断电 → 强制闭合 KM1 → 测各段通断</text>
+  <text x="480" y="166" text-anchor="middle" font-family="Microsoft YaHei, Arial" font-size="10" fill="#37474f">先定断线相，再二分分段</text>
+
+  <rect x="600" y="96" width="290" height="86" rx="6" fill="#ffffff" stroke="#90a4ae" stroke-width="1.4"/>
+  <text x="616" y="120" font-family="Microsoft YaHei, Arial" font-size="11" fill="#37474f">· 正常段：接近 0Ω（导通）</text>
+  <text x="616" y="142" font-family="Microsoft YaHei, Arial" font-size="11" fill="#37474f">· 断点所在段：O.L（超量程）</text>
+  <text x="616" y="164" font-family="Microsoft YaHei, Arial" font-size="10" fill="#546e7a">读数 O.L 的那一段里的元件/导线即断点</text>
+
+  <!-- 行 2：控制回路 -->
+  <rect x="30" y="200" width="150" height="86" rx="6" fill="#ffffff" stroke="#90a4ae" stroke-width="1.4"/>
+  <text x="105" y="226" text-anchor="middle" font-family="Microsoft YaHei, Arial" font-size="11" fill="#37474f">按 SB2 后</text>
+  <text x="105" y="246" text-anchor="middle" font-family="Microsoft YaHei, Arial" font-size="11" fill="#37474f">无任何反应，</text>
+  <text x="105" y="266" text-anchor="middle" font-family="Microsoft YaHei, Arial" font-size="11" fill="#37474f">接触器不吸合</text>
+
+  <rect x="200" y="200" width="160" height="86" rx="6" fill="#fff8e1" stroke="#f9a825" stroke-width="1.4"/>
+  <text x="280" y="230" text-anchor="middle" font-family="Microsoft YaHei, Arial" font-size="11" font-weight="bold" fill="#8d6e00">控制回路断路</text>
+  <text x="280" y="254" text-anchor="middle" font-family="Microsoft YaHei, Arial" font-size="10" fill="#795548">主电路无故障，线圈不得电</text>
+
+  <rect x="380" y="200" width="200" height="86" rx="6" fill="#e3f2fd" stroke="#1e88e5" stroke-width="1.4"/>
+  <text x="480" y="226" text-anchor="middle" font-family="Microsoft YaHei, Arial" font-size="11" font-weight="bold" fill="#0d47a1">带电测压法（~500V 档）</text>
+  <text x="480" y="250" text-anchor="middle" font-family="Microsoft YaHei, Arial" font-size="10" fill="#37474f">按住 SB2 保持闭合 → 沿回路逐点</text>
+  <text x="480" y="270" text-anchor="middle" font-family="Microsoft YaHei, Arial" font-size="10" fill="#37474f">测各元件两端电压</text>
+
+  <rect x="600" y="200" width="290" height="86" rx="6" fill="#ffffff" stroke="#90a4ae" stroke-width="1.4"/>
+  <text x="616" y="224" font-family="Microsoft YaHei, Arial" font-size="11" fill="#37474f">· 正常导通段：两端电压≈0</text>
+  <text x="616" y="246" font-family="Microsoft YaHei, Arial" font-size="11" fill="#37474f">· 断点两端：≈220V（电源电压）</text>
+  <text x="616" y="268" font-family="Microsoft YaHei, Arial" font-size="10" fill="#546e7a">测到 220V 的两端之间即断点</text>
+
+  <!-- 行 3：点动 -->
+  <rect x="30" y="304" width="150" height="86" rx="6" fill="#ffffff" stroke="#90a4ae" stroke-width="1.4"/>
+  <text x="105" y="330" text-anchor="middle" font-family="Microsoft YaHei, Arial" font-size="11" fill="#37474f">按住 SB2 转动，</text>
+  <text x="105" y="350" text-anchor="middle" font-family="Microsoft YaHei, Arial" font-size="11" fill="#37474f">松开就停</text>
+  <text x="105" y="370" text-anchor="middle" font-family="Microsoft YaHei, Arial" font-size="11" fill="#37474f">（点动，不能自锁）</text>
+
+  <rect x="200" y="304" width="160" height="86" rx="6" fill="#fff8e1" stroke="#f9a825" stroke-width="1.4"/>
+  <text x="280" y="334" text-anchor="middle" font-family="Microsoft YaHei, Arial" font-size="11" font-weight="bold" fill="#8d6e00">自锁触头接触不良</text>
+  <text x="280" y="358" text-anchor="middle" font-family="Microsoft YaHei, Arial" font-size="10" fill="#795548">SB2 与 KM1 常开并联支路</text>
+
+  <rect x="380" y="304" width="200" height="86" rx="6" fill="#e3f2fd" stroke="#1e88e5" stroke-width="1.4"/>
+  <text x="480" y="330" text-anchor="middle" font-family="Microsoft YaHei, Arial" font-size="11" font-weight="bold" fill="#0d47a1">断电测阻法（200Ω 档）</text>
+  <text x="480" y="354" text-anchor="middle" font-family="Microsoft YaHei, Arial" font-size="10" fill="#37474f">断开 QF → 强制闭合 KM1（触头吸合）</text>
+  <text x="480" y="374" text-anchor="middle" font-family="Microsoft YaHei, Arial" font-size="10" fill="#37474f">→ 测 COM—NO 两端</text>
+
+  <rect x="600" y="304" width="290" height="86" rx="6" fill="#ffffff" stroke="#90a4ae" stroke-width="1.4"/>
+  <text x="616" y="328" font-family="Microsoft YaHei, Arial" font-size="11" fill="#37474f">· 触头吸合时应接近 0Ω</text>
+  <text x="616" y="350" font-family="Microsoft YaHei, Arial" font-size="11" fill="#37474f">· 实测 O.L（旁路经线圈仍超量程）</text>
+  <text x="616" y="372" font-family="Microsoft YaHei, Arial" font-size="10" fill="#546e7a">读数 O.L → 该常开触头即断点</text>
+
+  <!-- 箭头列 -->
+  <g stroke="#78909c" stroke-width="2" fill="none">
+    <path d="M182 139 L198 139"/><path d="M362 139 L378 139"/><path d="M582 139 L598 139"/>
+    <path d="M182 243 L198 243"/><path d="M362 243 L378 243"/><path d="M582 243 L598 243"/>
+    <path d="M182 347 L198 347"/><path d="M362 347 L378 347"/><path d="M582 347 L598 347"/>
+  </g>
+  <g fill="#78909c">
+    <polygon points="198,139 190,135 190,143"/><polygon points="378,139 370,135 370,143"/><polygon points="598,139 590,135 590,143"/>
+    <polygon points="198,243 190,239 190,247"/><polygon points="378,243 370,239 370,247"/><polygon points="598,243 590,239 590,247"/>
+    <polygon points="198,347 190,343 190,351"/><polygon points="378,347 370,343 370,351"/><polygon points="598,347 590,343 590,351"/>
+  </g>
+
+  <!-- 底部结论 -->
+  <rect x="30" y="410" width="860" height="70" rx="6" fill="#ffffff" stroke="#b0bec5" stroke-width="1.4"/>
+  <text x="46" y="434" font-family="Microsoft YaHei, Arial" font-size="12" font-weight="bold" fill="#263238">共同规律</text>
+  <text x="46" y="456" font-family="Microsoft YaHei, Arial" font-size="11" fill="#37474f">先由"现象"把故障锁定在某一条支路 → 再选对方法（断电测阻 / 带电测压）→ 用二分法逐段测量 → 读到异常的那一段即断点 → 修复后复测、试运行。</text>
+  <text x="46" y="474" font-family="Microsoft YaHei, Arial" font-size="11" fill="#546e7a">注意：测电阻必须断电（并让触头处于应有状态）；测电压必须带电（并让按钮保持按下），两者不可混用。</text>
+</svg>

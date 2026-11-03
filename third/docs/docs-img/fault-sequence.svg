@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="420" viewBox="0 0 920 420">
+  <rect width="920" height="420" fill="#f7f9f8"/>
+  <text x="460" y="28" text-anchor="middle" font-family="Microsoft YaHei, Arial" font-size="18" font-weight="bold" fill="#263238">断电查找法：七个操作步骤（主电路缺相为例）</text>
+
+  <!-- 第一行 -->
+  <g font-family="Microsoft YaHei, Arial">
+    <rect x="30" y="60" width="200" height="110" rx="8" fill="#ffffff" stroke="#1e88e5" stroke-width="1.6"/>
+    <circle cx="56" cy="86" r="14" fill="#1e88e5"/>
+    <text x="56" y="91" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">1</text>
+    <text x="78" y="91" font-size="12" font-weight="bold" fill="#0d47a1">设置故障</text>
+    <text x="46" y="118" font-size="11" fill="#37474f">工具栏「故障设置」→ 勾选</text>
+    <text x="46" y="138" font-size="11" fill="#37474f">「主电路缺相」→ 应用设置</text>
+    <text x="46" y="158" font-size="10" fill="#546e7a">故障原因随机：3 选 1</text>
+
+    <rect x="250" y="60" width="200" height="110" rx="8" fill="#ffffff" stroke="#1e88e5" stroke-width="1.6"/>
+    <circle cx="276" cy="86" r="14" fill="#1e88e5"/>
+    <text x="276" y="91" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">2</text>
+    <text x="298" y="91" font-size="12" font-weight="bold" fill="#0d47a1">接线、合闸、起动</text>
+    <text x="266" y="118" font-size="11" fill="#37474f">自动接线 → 合上 QF →</text>
+    <text x="266" y="138" font-size="11" fill="#37474f">按住 SB2 观察现象</text>
+    <text x="266" y="158" font-size="10" fill="#546e7a">不转 / 运转异常 → 缺相</text>
+
+    <rect x="470" y="60" width="200" height="110" rx="8" fill="#ffffff" stroke="#1e88e5" stroke-width="1.6"/>
+    <circle cx="496" cy="86" r="14" fill="#1e88e5"/>
+    <text x="496" y="91" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">3</text>
+    <text x="518" y="91" font-size="12" font-weight="bold" fill="#0d47a1">断电 + 强制闭合</text>
+    <text x="486" y="118" font-size="11" fill="#37474f">参数配置里把电源开关</text>
+    <text x="486" y="138" font-size="11" fill="#37474f">改为「关闭」；右键 KM1</text>
+    <text x="486" y="158" font-size="10" fill="#546e7a">主触头 → 模拟闭合</text>
+
+    <rect x="690" y="60" width="200" height="110" rx="8" fill="#ffffff" stroke="#1e88e5" stroke-width="1.6"/>
+    <circle cx="716" cy="86" r="14" fill="#1e88e5"/>
+    <text x="716" y="91" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">4</text>
+    <text x="738" y="91" font-size="12" font-weight="bold" fill="#0d47a1">先定断线相</text>
+    <text x="706" y="118" font-size="11" fill="#37474f">选择仪表 → 数字万用表</text>
+    <text x="706" y="138" font-size="11" fill="#37474f">→ 200Ω 档测三相通路</text>
+    <text x="706" y="158" font-size="10" fill="#546e7a">O.L 的那一相即断线相</text>
+  </g>
+
+  <!-- 第二行 -->
+  <g font-family="Microsoft YaHei, Arial">
+    <rect x="30" y="230" width="200" height="110" rx="8" fill="#ffffff" stroke="#43a047" stroke-width="1.6"/>
+    <circle cx="56" cy="256" r="14" fill="#43a047"/>
+    <text x="56" y="261" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">5</text>
+    <text x="78" y="261" font-size="12" font-weight="bold" fill="#1b5e20">二分法定位</text>
+    <text x="46" y="288" font-size="11" fill="#37474f">表笔移到中间元件两端</text>
+    <text x="46" y="308" font-size="11" fill="#37474f">分段测量，逐步缩小范围</text>
+    <text x="46" y="328" font-size="10" fill="#546e7a">O.L 的那一段即断点</text>
+
+    <rect x="250" y="230" width="200" height="110" rx="8" fill="#ffffff" stroke="#43a047" stroke-width="1.6"/>
+    <circle cx="276" cy="256" r="14" fill="#43a047"/>
+    <text x="276" y="261" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">6</text>
+    <text x="298" y="261" font-size="12" font-weight="bold" fill="#1b5e20">修复并复测</text>
+    <text x="266" y="288" font-size="11" fill="#37474f">「故障设置」取消勾选该故障</text>
+    <text x="266" y="308" font-size="11" fill="#37474f">→ 应用设置；表笔不动</text>
+    <text x="266" y="328" font-size="10" fill="#546e7a">读数应变为接近 0Ω</text>
+
+    <rect x="470" y="230" width="200" height="110" rx="8" fill="#ffffff" stroke="#43a047" stroke-width="1.6"/>
+    <circle cx="496" cy="256" r="14" fill="#43a047"/>
+    <text x="496" y="261" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">7</text>
+    <text x="518" y="261" font-size="12" font-weight="bold" fill="#1b5e20">复位试运行</text>
+    <text x="486" y="288" font-size="11" fill="#37474f">右键 KM1 → 模拟分闸；</text>
+    <text x="486" y="308" font-size="11" fill="#37474f">电源开关改「开启」→ 按 SB2</text>
+    <text x="486" y="328" font-size="10" fill="#546e7a">电动机正常连续运行</text>
+  </g>
+
+  <!-- 箭头 -->
+  <g stroke="#78909c" stroke-width="2" fill="none">
+    <path d="M232 115 L248 115"/><path d="M452 115 L468 115"/><path d="M672 115 L688 115"/>
+    <path d="M232 285 L248 285"/><path d="M452 285 L468 285"/>
+    <path d="M790 172 L790 200 L130 200 L130 228"/>
+  </g>
+  <g fill="#78909c">
+    <polygon points="248,115 240,111 240,119"/><polygon points="468,115 460,111 460,119"/><polygon points="688,115 680,111 680,119"/>
+    <polygon points="248,285 240,281 240,289"/><polygon points="468,285 460,281 460,289"/>
+    <polygon points="130,228 126,220 134,220"/>
+  </g>
+
+  <!-- 提示 -->
+  <rect x="690" y="230" width="200" height="110" rx="8" fill="#fff8e1" stroke="#f9a825" stroke-width="1.4"/>
+  <text x="704" y="254" font-family="Microsoft YaHei, Arial" font-size="11" font-weight="bold" fill="#8d6e00">易错点</text>
+  <text x="704" y="276" font-family="Microsoft YaHei, Arial" font-size="10" fill="#795548">· 未断电就测电阻 → 读数无意义</text>
+  <text x="704" y="296" font-family="Microsoft YaHei, Arial" font-size="10" fill="#795548">· 未强制闭合 KM1 → 整条通路断开</text>
+  <text x="704" y="316" font-family="Microsoft YaHei, Arial" font-size="10" fill="#795548">· 修复后忘记复位/通电就试车</text>
+
+  <text x="30" y="380" font-family="Microsoft YaHei, Arial" font-size="11" fill="#546e7a">带电测压法（控制回路断线）步骤更少：设置故障 → 起动观察无反应 → 按住 SB2 → ~500V 档测得 220V 的两端即断点 → 松开、修复、试车。</text>
+  <text x="30" y="402" font-family="Microsoft YaHei, Arial" font-size="11" fill="#546e7a">点动故障排查：断开 QF → 强制闭合 KM1 → 200Ω 档测自锁常开触头 COM—NO，O.L 即断点。</text>
+</svg>
