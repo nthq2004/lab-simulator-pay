@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="620" viewBox="0 0 1000 620" font-family="Microsoft YaHei, Arial">
+  <rect width="1000" height="620" fill="#f7f9f8"/>
+  <text x="500" y="32" text-anchor="middle" font-size="18" font-weight="bold" fill="#263238">短路故障的判断与排除流程</text>
+
+  <defs>
+    <marker id="fd" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0 0 L10 4 L0 8 z" fill="#37474f"/>
+    </marker>
+  </defs>
+
+  <!-- 步骤 1 -->
+  <rect x="60" y="56" width="420" height="52" rx="8" fill="#ffebee" stroke="#c62828" stroke-width="2"/>
+  <text x="80" y="78" font-size="13" font-weight="bold" fill="#b71c1c">① 主开关跳闸</text>
+  <text x="80" y="98" font-size="11.5" fill="#546e7a">电子脱扣器显示「短路脱扣」，电流达上千安</text>
+
+  <!-- 步骤 2 -->
+  <rect x="60" y="134" width="420" height="52" rx="8" fill="#ffffff" stroke="#455a64"/>
+  <text x="80" y="156" font-size="13" font-weight="bold" fill="#263238">② 在「故障设置」中确认短路故障</text>
+  <text x="80" y="176" font-size="11.5" fill="#546e7a">故障类型：主汇流排短路 / 重要负载短路</text>
+
+  <!-- 步骤 3 -->
+  <rect x="60" y="212" width="420" height="52" rx="8" fill="#ffffff" stroke="#455a64"/>
+  <text x="80" y="234" font-size="13" font-weight="bold" fill="#263238">③ 拉开配电箱三路开关，隔离负载</text>
+  <text x="80" y="254" font-size="11.5" fill="#546e7a">sw1 动力、sw2 照明、sw3 可调负载全部断开</text>
+
+  <!-- 步骤 4 -->
+  <rect x="60" y="290" width="420" height="52" rx="8" fill="#e8eaf6" stroke="#3949ab"/>
+  <text x="80" y="312" font-size="13" font-weight="bold" fill="#283593">④ 兆欧表测干线绝缘（停电测量）</text>
+  <text x="80" y="332" font-size="11.5" fill="#546e7a">L 接汇流排 L1 端子，E 接 L2 端子，摇动手柄</text>
+
+  <!-- 步骤 5 判断 -->
+  <rect x="60" y="368" width="420" height="76" rx="8" fill="#fff8e1" stroke="#f9a825" stroke-width="2"/>
+  <text x="80" y="392" font-size="13" font-weight="bold" fill="#f57f17">⑤ 读数为 0 MΩ？</text>
+  <text x="80" y="412" font-size="11.5" fill="#795548">是 → 本段确有短路，继续第 ⑥ 步逐路定位</text>
+  <text x="80" y="432" font-size="11.5" fill="#795548">否（读数很高/∞）→ 短路不在本段，向下一段查找</text>
+
+  <!-- 步骤 6 逐路定位 -->
+  <rect x="60" y="470" width="420" height="76" rx="8" fill="#e0f2f1" stroke="#00796b" stroke-width="2"/>
+  <text x="80" y="494" font-size="13" font-weight="bold" fill="#004d40">⑥ 逐路合/断分支开关，边断边测</text>
+  <text x="80" y="514" font-size="11.5" fill="#37474f">读数仍为 0 → 干线（母线）短路</text>
+  <text x="80" y="534" font-size="11.5" fill="#37474f">读数恢复 ∞ → 刚断开的那一路即短路支路</text>
+
+  <!-- 步骤 7 -->
+  <rect x="60" y="562" width="420" height="46" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="80" y="590" font-size="12.5" font-weight="bold" fill="#1b5e20">⑦ 取消故障 → 脱扣器复位 → 储能合闸 → 恢复负载</text>
+
+  <path d="M270 110 L270 130" stroke="#37474f" stroke-width="2" marker-end="url(#fd)"/>
+  <path d="M270 188 L270 208" stroke="#37474f" stroke-width="2" marker-end="url(#fd)"/>
+  <path d="M270 266 L270 286" stroke="#37474f" stroke-width="2" marker-end="url(#fd)"/>
+  <path d="M270 344 L270 364" stroke="#37474f" stroke-width="2" marker-end="url(#fd)"/>
+  <path d="M270 446 L270 466" stroke="#37474f" stroke-width="2" marker-end="url(#fd)"/>
+  <path d="M270 548 L270 558" stroke="#37474f" stroke-width="2" marker-end="url(#fd)"/>
+
+  <!-- 右侧说明 -->
+  <rect x="520" y="56" width="450" height="182" rx="8" fill="#ffffff" stroke="#6a1b9a" stroke-width="2"/>
+  <text x="540" y="82" font-size="13.5" font-weight="bold" fill="#4a148c">为什么要用兆欧表？</text>
+  <text x="540" y="108" font-size="11.8" fill="#37474f">· 短路本质是"绝缘被击穿、两点之间导通"，</text>
+  <text x="540" y="128" font-size="11.8" fill="#37474f">  只有测绝缘电阻才能直接判断。</text>
+  <text x="540" y="150" font-size="11.8" fill="#37474f">· 正常干线绝缘在数十 MΩ 以上；</text>
+  <text x="540" y="170" font-size="11.8" fill="#37474f">  短路点读数接近 0 MΩ。</text>
+  <text x="540" y="196" font-size="11.8" fill="#b71c1c">· 必须停电、拉掉负载后测量；带电测量</text>
+  <text x="540" y="214" font-size="11.8" fill="#b71c1c">  既危险，又会被负载回路"带偏"读数。</text>
+
+  <rect x="520" y="252" width="450" height="136" rx="8" fill="#ffffff" stroke="#1e88e5" stroke-width="2"/>
+  <text x="540" y="278" font-size="13.5" font-weight="bold" fill="#0d47a1">表笔接法与读数</text>
+  <text x="540" y="303" font-size="11.8" fill="#37474f">· L（线路端）→ 汇流排 L1 端子</text>
+  <text x="540" y="323" font-size="11.8" fill="#37474f">· E（接地端）→ 汇流排 L2 端子（测相间绝缘）</text>
+  <text x="540" y="343" font-size="11.8" fill="#37474f">· 摇动手柄，读数稳定后再记录（约 2~3 s）</text>
+  <text x="540" y="363" font-size="11.8" fill="#37474f">· 小于 0.5 MΩ 判定短路；∞ 表示绝缘良好</text>
+  <text x="540" y="380" font-size="11.5" fill="#546e7a">· 测完拔表笔、停止摇动，避免高压残留</text>
+
+  <rect x="520" y="402" width="450" height="206" rx="8" fill="#ffffff" stroke="#b0bec5"/>
+  <text x="540" y="428" font-size="13.5" font-weight="bold" fill="#263238">两个常见误区</text>
+  <text x="540" y="454" font-size="11.8" fill="#37474f">① 只测一次就下结论</text>
+  <text x="540" y="474" font-size="11.5" fill="#546e7a">负载（电机绕组、照明、可调负载）本身也提供</text>
+  <text x="540" y="492" font-size="11.5" fill="#546e7a">低阻通路，必须先拉开分支开关再测干线。</text>
+  <text x="540" y="520" font-size="11.8" fill="#37474f">② 修复后直接合闸</text>
+  <text x="540" y="540" font-size="11.5" fill="#546e7a">电子脱扣器仍处于脱扣锁存状态（t1/t2 输出 24 V），</text>
+  <text x="540" y="558" font-size="11.5" fill="#546e7a">必须按「复位」；跳闸后储能已释放，还要重新储能。</text>
+  <text x="540" y="578" font-size="11.5" fill="#546e7a">顺序：取消故障 → 复位 → 储能 → 合闸 → 合分支开关。</text>
+  <text x="540" y="596" font-size="11.5" fill="#546e7a">否则会出现"合上又立刻跳开"的假象。</text>
+</svg>

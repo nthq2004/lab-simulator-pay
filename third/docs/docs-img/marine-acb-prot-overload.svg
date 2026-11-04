@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="560" viewBox="0 0 1000 560" font-family="Microsoft YaHei, Arial">
+  <rect width="1000" height="560" fill="#f7f9f8"/>
+  <text x="500" y="32" text-anchor="middle" font-size="18" font-weight="bold" fill="#263238">过载保护与自动分级卸载过程（负荷 95 kW）</text>
+
+  <defs>
+    <marker id="ow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0 0 L10 4 L0 8 z" fill="#e65100"/>
+    </marker>
+    <marker id="og" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0 0 L10 4 L0 8 z" fill="#2e7d32"/>
+    </marker>
+  </defs>
+
+  <!-- 坐标区 -->
+  <rect x="80" y="70" width="840" height="250" rx="6" fill="#ffffff" stroke="#cfd8dc"/>
+
+  <!-- 150A 阈值线 -->
+  <line x1="80" y1="150" x2="920" y2="150" stroke="#c62828" stroke-width="1.6" stroke-dasharray="7 5"/>
+  <text x="86" y="144" font-size="11.5" fill="#c62828">过载整定值 1.5×In = 150 A</text>
+
+  <!-- 电流曲线（阶梯） -->
+  <polyline points="110,92 290,92 290,122 470,122 470,196 900,196"
+            fill="none" stroke="#1565c0" stroke-width="3"/>
+  <circle cx="110" cy="92" r="4" fill="#1565c0"/>
+  <circle cx="290" cy="122" r="4" fill="#1565c0"/>
+  <circle cx="470" cy="196" r="4" fill="#1565c0"/>
+
+  <text x="150" y="84" font-size="12" fill="#0d47a1">≈186 A（过载）</text>
+  <text x="300" y="114" font-size="12" fill="#0d47a1">≈160 A（仍过载）</text>
+  <text x="560" y="189" font-size="12" fill="#0d47a1">≈135 A（回到额定内，正常运行）</text>
+
+  <!-- 时间轴 -->
+  <line x1="110" y1="320" x2="900" y2="320" stroke="#37474f" stroke-width="2" marker-end="url(#og)"/>
+  <g font-size="11.5" fill="#546e7a">
+    <line x1="110" y1="314" x2="110" y2="326" stroke="#37474f"/>
+    <text x="104" y="342">0 s</text>
+    <line x1="290" y1="314" x2="290" y2="326" stroke="#37474f"/>
+    <text x="284" y="342">5 s</text>
+    <line x1="470" y1="314" x2="470" y2="326" stroke="#37474f"/>
+    <text x="464" y="342">10 s</text>
+    <line x1="650" y1="314" x2="650" y2="326" stroke="#37474f"/>
+    <text x="644" y="342">15 s</text>
+    <line x1="830" y1="314" x2="830" y2="326" stroke="#37474f"/>
+    <text x="824" y="342">20 s</text>
+  </g>
+  <text x="500" y="366" text-anchor="middle" font-size="11.5" fill="#78909c">时间轴为相对设定时刻；仿真中因电流稳定判定与求解步进，实际等待会比设定值略长</text>
+
+  <!-- 事件标注 -->
+  <text x="86" y="308" font-size="10.5" fill="#37474f">0 s：可调负载调至 95 kW，脱扣器判定过载</text>
+
+  <line x1="290" y1="250" x2="290" y2="132" stroke="#e65100" stroke-width="1.4" stroke-dasharray="3 3"/>
+  <rect x="212" y="250" width="156" height="34" rx="5" fill="#fff3e0" stroke="#ef6c00"/>
+  <text x="290" y="264" text-anchor="middle" font-size="11" font-weight="bold" fill="#e65100">第 1 路卸载：sw1 脱扣</text>
+  <text x="290" y="279" text-anchor="middle" font-size="10.5" fill="#795548">切除非重要动力负载（10 kW）</text>
+
+  <line x1="470" y1="250" x2="470" y2="132" stroke="#e65100" stroke-width="1.4" stroke-dasharray="3 3"/>
+  <rect x="392" y="250" width="156" height="34" rx="5" fill="#fff3e0" stroke="#ef6c00"/>
+  <text x="470" y="264" text-anchor="middle" font-size="11" font-weight="bold" fill="#e65100">第 2 路卸载：sw2 脱扣</text>
+  <text x="470" y="279" text-anchor="middle" font-size="10.5" fill="#795548">切除照明负载（30 kW）</text>
+
+  <rect x="700" y="262" width="230" height="44" rx="6" fill="#e8f5e9" stroke="#2e7d32"/>
+  <text x="815" y="280" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#1b5e20">过载消除，主开关保持合闸</text>
+  <text x="815" y="297" text-anchor="middle" font-size="10.5" fill="#546e7a">重要负载继续供电，避免全船失电</text>
+
+  <!-- 下方说明卡片 -->
+  <rect x="30" y="382" width="310" height="152" rx="8" fill="#ffffff" stroke="#ef6c00" stroke-width="2"/>
+  <text x="50" y="408" font-size="13" font-weight="bold" fill="#e65100">为什么"先卸载、后跳闸"？</text>
+  <text x="50" y="432" font-size="11.5" fill="#37474f">过载不一定是故障——大电机起动、</text>
+  <text x="50" y="450" font-size="11.5" fill="#37474f">短暂负荷冲击都会造成短时过流。</text>
+  <text x="50" y="472" font-size="11.5" fill="#37474f">反时限延时（15 s）先"等一等"，</text>
+  <text x="50" y="490" font-size="11.5" fill="#37474f">期间按 5 s / 10 s 两级卸载次要负载，</text>
+  <text x="50" y="508" font-size="11.5" fill="#37474f">负荷降下来就继续运行，不必停电。</text>
+
+  <rect x="352" y="382" width="310" height="152" rx="8" fill="#ffffff" stroke="#c62828" stroke-width="2"/>
+  <text x="372" y="408" font-size="13" font-weight="bold" fill="#b71c1c">卸载后仍过载会怎样？</text>
+  <text x="372" y="432" font-size="11.5" fill="#37474f">继续增大负载（如调到 125 kW），</text>
+  <text x="372" y="450" font-size="11.5" fill="#37474f">电流约 175 A，仍高于 150 A。</text>
+  <text x="372" y="472" font-size="11.5" fill="#37474f">15 s 反时限延时到，脱扣器输出脱扣</text>
+  <text x="372" y="490" font-size="11.5" fill="#37474f">信号 → 主开关跳闸，全船停电。</text>
+  <text x="372" y="512" font-size="11.5" fill="#546e7a">处理：减负荷、复位、重新储能合闸。</text>
+
+  <rect x="674" y="382" width="296" height="152" rx="8" fill="#ffffff" stroke="#1565c0" stroke-width="2"/>
+  <text x="694" y="408" font-size="13" font-weight="bold" fill="#0d47a1">看脱扣器上的三个数</text>
+  <text x="694" y="432" font-size="11.5" fill="#37474f">U：线电压，欠压保护判据（&lt;304 V）</text>
+  <text x="694" y="450" font-size="11.5" fill="#37474f">f：频率，区分调速器 / 调压器故障</text>
+  <text x="694" y="468" font-size="11.5" fill="#37474f">I：电流，过载 / 短路保护判据</text>
+  <text x="694" y="492" font-size="11.5" fill="#546e7a">P：三相有功功率，用于估算负荷率</text>
+  <text x="694" y="514" font-size="11.5" fill="#546e7a">状态行显示"过载延时 x.x s"与卸载路数</text>
+</svg>

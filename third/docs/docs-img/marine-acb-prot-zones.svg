@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="560" viewBox="0 0 1000 560" font-family="Microsoft YaHei, Arial">
+  <rect width="1000" height="560" fill="#f7f9f8"/>
+  <defs>
+    <marker id="ar-x" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0 0 L10 4 L0 8 z" fill="#455a64"/>
+    </marker>
+  </defs>
+  <text x="500" y="34" text-anchor="middle" font-size="18" font-weight="bold" fill="#263238">三类保护的分工与整定（本工程数值）</text>
+
+  <!-- 短路保护 -->
+  <rect x="30" y="60" width="300" height="250" rx="8" fill="#ffffff" stroke="#c62828" stroke-width="2"/>
+  <rect x="30" y="60" width="300" height="34" rx="8" fill="#ffebee"/>
+  <text x="180" y="84" text-anchor="middle" font-size="14" font-weight="bold" fill="#b71c1c">一、短路保护</text>
+  <text x="52" y="118" font-size="12.5" fill="#37474f">判据：I ≥ 4 × In（400 A）</text>
+  <text x="52" y="142" font-size="12.5" fill="#37474f">延时：0.2 s（特大短路瞬时）</text>
+  <text x="52" y="166" font-size="12.5" fill="#37474f">动作：脱扣输出 t1/t2 → 主开关跳闸</text>
+  <text x="52" y="190" font-size="12.5" fill="#37474f">对象：干线相间短路、负载支路短路</text>
+  <text x="52" y="222" font-size="12" fill="#b71c1c">特点：电流极大（实测 1300~1600 A），</text>
+  <text x="52" y="242" font-size="12" fill="#b71c1c">必须立即切除，否则电缆与触头烧损。</text>
+  <text x="52" y="272" font-size="12" fill="#546e7a">跳闸后应停电，用兆欧表查绝缘。</text>
+  <text x="52" y="292" font-size="12" fill="#546e7a">跳闸后储能释放，需重新储能才可合闸。</text>
+
+  <!-- 过载保护 -->
+  <rect x="350" y="60" width="300" height="250" rx="8" fill="#ffffff" stroke="#ef6c00" stroke-width="2"/>
+  <rect x="350" y="60" width="300" height="34" rx="8" fill="#fff3e0"/>
+  <text x="500" y="84" text-anchor="middle" font-size="14" font-weight="bold" fill="#e65100">二、过载保护（反时限）</text>
+  <text x="372" y="118" font-size="12.5" fill="#37474f">判据：I ≥ 1.5 × In（150 A）</text>
+  <text x="372" y="142" font-size="12.5" fill="#37474f">延时：15 s（过载越重动作越快）</text>
+  <text x="372" y="166" font-size="12.5" fill="#37474f">先卸载：过载 5 s 跳 sw1、10 s 跳 sw2</text>
+  <text x="372" y="190" font-size="12.5" fill="#37474f">后跳闸：负荷仍超限 → 脱扣主开关</text>
+  <text x="372" y="222" font-size="12" fill="#e65100">特点：短时过载允许运行，靠延时避开</text>
+  <text x="372" y="242" font-size="12" fill="#e65100">电动机起动电流；持续过载才切除。</text>
+  <text x="372" y="272" font-size="12" fill="#546e7a">卸载对象是"次要负载"，优先保住</text>
+  <text x="372" y="292" font-size="12" fill="#546e7a">重要负载供电，避免全船失电。</text>
+
+  <!-- 欠压保护 -->
+  <rect x="670" y="60" width="300" height="250" rx="8" fill="#ffffff" stroke="#1565c0" stroke-width="2"/>
+  <rect x="670" y="60" width="300" height="34" rx="8" fill="#e3f2fd"/>
+  <text x="820" y="84" text-anchor="middle" font-size="14" font-weight="bold" fill="#0d47a1">三、欠压（失压）保护</text>
+  <text x="692" y="118" font-size="12.5" fill="#37474f">判据：U &lt; 80% Un（304 V）</text>
+  <text x="692" y="142" font-size="12.5" fill="#37474f">延时：3 s（避开起动瞬时压降）</text>
+  <text x="692" y="166" font-size="12.5" fill="#37474f">动作：脱扣输出 → 主开关跳闸</text>
+  <text x="692" y="190" font-size="12.5" fill="#37474f">另有失压线圈：控制电压消失即分闸</text>
+  <text x="692" y="222" font-size="12" fill="#0d47a1">特点：电压过低时电动机电流增大、</text>
+  <text x="692" y="242" font-size="12" fill="#0d47a1">转矩下降，长期欠压会烧毁电机。</text>
+  <text x="692" y="272" font-size="12" fill="#546e7a">看频率可区分故障源：f 同时下降多为</text>
+  <text x="692" y="292" font-size="12" fill="#546e7a">调速器故障；f 正常多为调压器故障。</text>
+
+  <!-- 选择性 -->
+  <rect x="30" y="330" width="940" height="200" rx="8" fill="#ffffff" stroke="#2e7d32" stroke-width="2"/>
+  <text x="50" y="358" font-size="14" font-weight="bold" fill="#1b5e20">四、上、下级保护的选择性（保护配合）</text>
+
+  <!-- 层级示意 -->
+  <rect x="60" y="376" width="220" height="60" rx="6" fill="#e8f5e9" stroke="#2e7d32"/>
+  <text x="170" y="400" text-anchor="middle" font-size="13" font-weight="bold" fill="#1b5e20">上级：主开关 qf1</text>
+  <text x="170" y="421" text-anchor="middle" font-size="11.5" fill="#546e7a">短路 4×In / 0.2 s，过载 1.5×In / 15 s</text>
+
+  <rect x="360" y="376" width="240" height="60" rx="6" fill="#ffffff" stroke="#2e7d32"/>
+  <text x="480" y="400" text-anchor="middle" font-size="13" font-weight="bold" fill="#1b5e20">下级：配电箱塑壳开关 sw1~sw3</text>
+  <text x="480" y="421" text-anchor="middle" font-size="11.5" fill="#546e7a">过载 K=4 反时限 · 短路 0.2 s 定时限</text>
+
+  <rect x="660" y="376" width="280" height="60" rx="6" fill="#fffde7" stroke="#f9a825"/>
+  <text x="800" y="400" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#f57f17">要求：故障由最近的开关先切除</text>
+  <text x="800" y="421" text-anchor="middle" font-size="11.5" fill="#795548">整定不配合 → 上级越级跳闸</text>
+
+  <path d="M284 406 L356 406" stroke="#2e7d32" stroke-width="2" marker-end="url(#ar-x)"/>
+  <path d="M604 406 L656 406" stroke="#f9a825" stroke-width="2" marker-end="url(#ar-x)"/>
+
+  <text x="60" y="470" font-size="12.5" fill="#37474f">· 支路故障：sw1~sw3 先动作（切除一路负载），主开关保持合闸，其余负载不停电。</text>
+  <text x="60" y="492" font-size="12.5" fill="#37474f">· 母线故障：分支开关无法切除，必须由主开关 qf1 动作，此时"扩大停电"是正常的、必要的。</text>
+  <text x="60" y="514" font-size="12.5" fill="#37474f">· 若上、下级整定值或时间级差配合不当，支路故障时主开关也跳闸，就是"越级跳闸"，会造成全船失电。</text>
+</svg>
