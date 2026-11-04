@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="470" viewBox="0 0 960 470" font-family="Microsoft YaHei, Arial, sans-serif">
+  <defs>
+    <marker id="a2" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 z" fill="#2c6ea8"/>
+    </marker>
+    <marker id="a3" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 z" fill="#b04a4a"/>
+    </marker>
+  </defs>
+  <rect width="960" height="470" fill="#ffffff"/>
+  <text x="480" y="30" text-anchor="middle" font-size="19" font-weight="bold" fill="#1b3a5c">图 2  自动控制模块的处置流程</text>
+
+  <!-- 主开关跳闸 -->
+  <g>
+    <rect x="40" y="70" width="190" height="76" rx="10" fill="#fdf1f1" stroke="#b04a4a" stroke-width="2"/>
+    <text x="135" y="100" text-anchor="middle" font-size="14" font-weight="bold" fill="#7d2b2b">① 主开关跳闸 / 失电</text>
+    <text x="135" y="122" text-anchor="middle" font-size="11" fill="#8d4a4a">机械故障 / 欠压 / 短路</text>
+  </g>
+  <!-- 判定 -->
+  <g>
+    <rect x="300" y="70" width="230" height="76" rx="10" fill="#fdf7f0" stroke="#c9861a" stroke-width="2"/>
+    <text x="415" y="100" text-anchor="middle" font-size="14" font-weight="bold" fill="#8a5a00">② 检测母线失电 / 短路</text>
+    <text x="415" y="122" text-anchor="middle" font-size="11" fill="#8a6a3a">短路标记存在 → 闭锁自动模式</text>
+  </g>
+  <!-- 选机 -->
+  <g>
+    <rect x="600" y="70" width="320" height="76" rx="10" fill="#eaf3fb" stroke="#2c6ea8" stroke-width="2"/>
+    <text x="760" y="100" text-anchor="middle" font-size="14" font-weight="bold" fill="#1b3a5c">③ 按备用顺序找可用机组</text>
+    <text x="760" y="122" text-anchor="middle" font-size="11" fill="#446">跳过超速 / 滑油低压 / 水温高 / 欠压的机组</text>
+  </g>
+  <line x1="230" y1="108" x2="298" y2="108" stroke="#2c6ea8" stroke-width="2" marker-end="url(#a2)"/>
+  <line x1="530" y1="108" x2="598" y2="108" stroke="#2c6ea8" stroke-width="2" marker-end="url(#a2)"/>
+
+  <!-- 起动 -->
+  <g>
+    <rect x="600" y="190" width="320" height="76" rx="10" fill="#eef7ee" stroke="#2f8a4a" stroke-width="2"/>
+    <text x="760" y="220" text-anchor="middle" font-size="14" font-weight="bold" fill="#1d5c32">④ 自动起动备用机组</text>
+    <text x="760" y="242" text-anchor="middle" font-size="11" fill="#3a6b4a">经通信口给遥控面板发起动命令</text>
+  </g>
+  <line x1="760" y1="146" x2="760" y2="188" stroke="#2c6ea8" stroke-width="2" marker-end="url(#a2)"/>
+
+  <!-- 建压储能 -->
+  <g>
+    <rect x="600" y="300" width="320" height="76" rx="10" fill="#eef7ee" stroke="#2f8a4a" stroke-width="2"/>
+    <text x="760" y="330" text-anchor="middle" font-size="14" font-weight="bold" fill="#1d5c32">⑤ 建压 + 合闸弹簧储能</text>
+    <text x="760" y="352" text-anchor="middle" font-size="11" fill="#3a6b4a">电压 / 频率合格、储能到位后延时 3 s</text>
+  </g>
+  <line x1="760" y1="266" x2="760" y2="298" stroke="#2c6ea8" stroke-width="2" marker-end="url(#a2)"/>
+
+  <!-- 合闸恢复 -->
+  <g>
+    <rect x="230" y="300" width="300" height="76" rx="10" fill="#eaf3fb" stroke="#2c6ea8" stroke-width="2"/>
+    <text x="380" y="330" text-anchor="middle" font-size="14" font-weight="bold" fill="#1b3a5c">⑥ 自动合闸，恢复全船供电</text>
+    <text x="380" y="352" text-anchor="middle" font-size="11" fill="#446">优先恢复重要负载，无需人工干预</text>
+  </g>
+  <line x1="598" y1="338" x2="532" y2="338" stroke="#2c6ea8" stroke-width="2" marker-end="url(#a2)"/>
+
+  <!-- 短路分支 -->
+  <g>
+    <rect x="230" y="190" width="300" height="76" rx="10" fill="#fdf1f1" stroke="#b04a4a" stroke-width="2"/>
+    <text x="380" y="220" text-anchor="middle" font-size="14" font-weight="bold" fill="#7d2b2b">短路：闭锁，不自动恢复</text>
+    <text x="380" y="242" text-anchor="middle" font-size="11" fill="#8d4a4a">排除短路并隔离故障点后再合闸</text>
+  </g>
+  <line x1="415" y1="146" x2="415" y2="188" stroke="#b04a4a" stroke-width="2" marker-end="url(#a3)"/>
+
+  <text x="480" y="428" text-anchor="middle" font-size="11.5" fill="#555">核心：先由备用机组恢复供电 → 再排除故障 → 故障机组修复后重新并网；短路未排除前严禁合闸。</text>
+</svg>

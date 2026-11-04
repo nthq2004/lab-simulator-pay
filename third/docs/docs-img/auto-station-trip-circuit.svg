@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="520" viewBox="0 0 960 520" font-family="Microsoft YaHei, Arial, sans-serif">
+  <defs>
+    <marker id="ar" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 z" fill="#2c6ea8"/>
+    </marker>
+    <marker id="ag" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 z" fill="#2f8a4a"/>
+    </marker>
+    <marker id="ad" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 z" fill="#8a8a8a"/>
+    </marker>
+  </defs>
+  <rect width="960" height="520" fill="#ffffff"/>
+  <text x="480" y="32" text-anchor="middle" font-size="19" font-weight="bold" fill="#1b3a5c">图 1  自动化电站主开关跳闸仿真——组成原理</text>
+
+  <!-- 1# 机组 -->
+  <g>
+    <rect x="34" y="70" width="150" height="70" rx="8" fill="#eaf3fb" stroke="#2c6ea8" stroke-width="2"/>
+    <text x="109" y="98" text-anchor="middle" font-size="15" fill="#1b3a5c">1# 同步发电机</text>
+    <text x="109" y="120" text-anchor="middle" font-size="11" fill="#667">G1  80 kW / 400 V</text>
+  </g>
+  <g>
+    <rect x="222" y="70" width="126" height="70" rx="8" fill="#f7f9fb" stroke="#2c6ea8" stroke-width="2"/>
+    <text x="285" y="96" text-anchor="middle" font-size="14" fill="#1b3a5c">QF1 主开关</text>
+    <text x="285" y="118" text-anchor="middle" font-size="10.5" fill="#667">框架式空气断路器</text>
+  </g>
+  <line x1="184" y1="105" x2="220" y2="105" stroke="#2c6ea8" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="348" y1="105" x2="414" y2="105" stroke="#2c6ea8" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- 2# 机组 -->
+  <g>
+    <rect x="34" y="180" width="150" height="70" rx="8" fill="#eaf3fb" stroke="#2c6ea8" stroke-width="2"/>
+    <text x="109" y="208" text-anchor="middle" font-size="15" fill="#1b3a5c">2# 同步发电机</text>
+    <text x="109" y="230" text-anchor="middle" font-size="11" fill="#667">G2  80 kW / 400 V</text>
+  </g>
+  <g>
+    <rect x="222" y="180" width="126" height="70" rx="8" fill="#f7f9fb" stroke="#2c6ea8" stroke-width="2"/>
+    <text x="285" y="206" text-anchor="middle" font-size="14" fill="#1b3a5c">QF2 主开关</text>
+    <text x="285" y="228" text-anchor="middle" font-size="10.5" fill="#667">框架式空气断路器</text>
+  </g>
+  <line x1="184" y1="215" x2="220" y2="215" stroke="#2c6ea8" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="348" y1="215" x2="414" y2="215" stroke="#2c6ea8" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- 汇流排 -->
+  <g>
+    <rect x="416" y="70" width="112" height="180" rx="8" fill="#fff6e5" stroke="#c9861a" stroke-width="2"/>
+    <text x="472" y="132" text-anchor="middle" font-size="15" font-weight="bold" fill="#8a5a00">汇流排</text>
+    <text x="472" y="154" text-anchor="middle" font-size="12" fill="#8a5a00">BUS1</text>
+    <text x="472" y="176" text-anchor="middle" font-size="11" fill="#a8763a">L1 / L2 / L3</text>
+    <text x="472" y="198" text-anchor="middle" font-size="11" fill="#a8763a">400 V  50 Hz</text>
+  </g>
+
+  <!-- 负载 -->
+  <g>
+    <rect x="576" y="70" width="150" height="70" rx="8" fill="#f7f9fb" stroke="#2c6ea8" stroke-width="2"/>
+    <text x="651" y="96" text-anchor="middle" font-size="13" fill="#1b3a5c">三相可调负载</text>
+    <text x="651" y="118" text-anchor="middle" font-size="10.5" fill="#667">20 kW（可改）</text>
+  </g>
+  <line x1="528" y1="105" x2="574" y2="105" stroke="#2c6ea8" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- 照明支路 -->
+  <g>
+    <rect x="576" y="160" width="150" height="70" rx="8" fill="#f7f9fb" stroke="#2c6ea8" stroke-width="2"/>
+    <text x="651" y="186" text-anchor="middle" font-size="13" fill="#1b3a5c">QF3 → 照明灯</text>
+    <text x="651" y="208" text-anchor="middle" font-size="10.5" fill="#667">3 盏白炽灯</text>
+  </g>
+  <line x1="528" y1="195" x2="574" y2="195" stroke="#2c6ea8" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- 遥控面板 -->
+  <g>
+    <rect x="34" y="300" width="180" height="76" rx="8" fill="#eef7ee" stroke="#2f8a4a" stroke-width="2"/>
+    <text x="124" y="326" text-anchor="middle" font-size="13" fill="#1d5c32">1# / 2# 遥控面板</text>
+    <text x="124" y="346" text-anchor="middle" font-size="10.5" fill="#3a6b4a">起动·停止·调速</text>
+    <text x="124" y="364" text-anchor="middle" font-size="10.5" fill="#3a6b4a">合闸·分闸·LCD 读数</text>
+  </g>
+  <line x1="124" y1="300" x2="124" y2="254" stroke="#2f8a4a" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#ag)"/>
+  <text x="132" y="282" font-size="10" fill="#3a6b4a">遥控起动 / 合闸</text>
+
+  <!-- 自动控制模块 -->
+  <g>
+    <rect x="380" y="300" width="230" height="108" rx="8" fill="#f2ecfb" stroke="#6a4aa8" stroke-width="2"/>
+    <text x="495" y="326" text-anchor="middle" font-size="14" font-weight="bold" fill="#4a2b7d">电站自动控制模块</text>
+    <text x="495" y="348" text-anchor="middle" font-size="10.5" fill="#5a4a78">手动/自动旋钮 · 备用顺序旋钮</text>
+    <text x="495" y="366" text-anchor="middle" font-size="10.5" fill="#5a4a78">失电检测 · 机组可用性判定</text>
+    <text x="495" y="384" text-anchor="middle" font-size="10.5" fill="#5a4a78">起动 / 合闸 / 解列 / 调频命令</text>
+  </g>
+  <line x1="380" y1="336" x2="218" y2="336" stroke="#2f8a4a" stroke-width="2" marker-end="url(#ag)"/>
+  <line x1="380" y1="366" x2="218" y2="366" stroke="#2f8a4a" stroke-width="2" marker-end="url(#ag)"/>
+  <text x="336" y="328" font-size="10" fill="#3a6b4a">通信命令</text>
+
+  <!-- 母线采集 -->
+  <line x1="452" y1="250" x2="452" y2="298" stroke="#c9861a" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#ad)"/>
+  <text x="458" y="278" font-size="10" fill="#8a5a00">母线采集</text>
+
+  <!-- 控制电源 -->
+  <g>
+    <rect x="640" y="300" width="150" height="76" rx="8" fill="#f7f9fb" stroke="#8a8a8a" stroke-width="2"/>
+    <text x="715" y="326" text-anchor="middle" font-size="13" fill="#333">DC 24 V 控制电源</text>
+    <text x="715" y="346" text-anchor="middle" font-size="10.5" fill="#667">失压脱扣线圈</text>
+    <text x="715" y="364" text-anchor="middle" font-size="10.5" fill="#667">储能电机 · 合闸线圈</text>
+  </g>
+  <line x1="640" y1="338" x2="610" y2="338" stroke="#8a8a8a" stroke-width="2" marker-end="url(#ad)"/>
+
+  <!-- 故障设置说明 -->
+  <g>
+    <rect x="34" y="414" width="756" height="70" rx="8" fill="#fdf1f1" stroke="#b04a4a" stroke-width="1.5"/>
+    <text x="52" y="440" font-size="12.5" font-weight="bold" fill="#7d2b2b">三类教学故障（由「故障设置」界面勾选后应用）</text>
+    <text x="52" y="462" font-size="11" fill="#8d4a4a">① 1#机冷却水温高（原动机故障停机 → 母线失压 → 主开关欠压跳闸）</text>
+    <text x="52" y="478" font-size="11" fill="#8d4a4a">② 1#机欠压故障（AVR 输出 200 V → 2 s 后主开关欠压跳闸，机组仍在运行）　③ 汇流排干线短路（在网主开关瞬时跳闸）</text>
+  </g>
+</svg>
