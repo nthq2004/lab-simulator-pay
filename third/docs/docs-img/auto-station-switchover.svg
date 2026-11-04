@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="670" viewBox="0 0 1000 670" font-family="Microsoft YaHei, Arial, sans-serif">
+  <rect width="1000" height="670" fill="#ffffff"/>
+  <text x="500" y="34" text-anchor="middle" font-size="19" font-weight="bold" fill="#1b3a5c">图 2  故障等级与自动化电站的两种切换方式</text>
+
+  <!-- 故障分级 -->
+  <rect x="40" y="58" width="920" height="110" rx="8" fill="#f7f9fc" stroke="#c9d6e3" stroke-width="1.5"/>
+  <text x="60" y="82" font-size="13" font-weight="bold" fill="#1b3a5c">故障分级（自动化电站按等级选择切换方式）</text>
+  <rect x="60" y="92" width="420" height="60" rx="6" fill="#fdf6ec" stroke="#c08a24" stroke-width="1.5"/>
+  <text x="74" y="114" font-size="12" font-weight="bold" fill="#7a5310">Ⅰ级故障：滑油压力下降 / 冷却水温异常</text>
+  <text x="74" y="138" font-size="11" fill="#8a6d3b">机组继续运行、主开关不动作 → 具备并联条件，可带电换机</text>
+  <rect x="500" y="92" width="440" height="60" rx="6" fill="#fbeeee" stroke="#c0392b" stroke-width="1.5"/>
+  <text x="514" y="114" font-size="12" font-weight="bold" fill="#a93226">Ⅱ级故障：欠压 / 超速 / 滑油低压 / 冷却水温高</text>
+  <text x="514" y="138" font-size="11" fill="#a93226">机组停机或主开关保护跳闸、母线失电 → 只能断电切换</text>
+
+  <!-- Ⅰ级：带电换机 -->
+  <text x="60" y="206" font-size="14" font-weight="bold" fill="#7a5310">Ⅰ级故障 → 带电换机（全船不断电）</text>
+  <line x1="80" y1="268" x2="960" y2="268" stroke="#c08a24" stroke-width="2"/>
+  <g font-size="11" fill="#5a4410">
+    <circle cx="120" cy="268" r="6" fill="#c08a24"/>
+    <text x="120" y="246" text-anchor="middle">① 检测故障</text>
+    <text x="120" y="292" text-anchor="middle">Ⅰ级故障置位</text>
+
+    <circle cx="330" cy="268" r="6" fill="#c08a24"/>
+    <text x="330" y="246" text-anchor="middle">② 起动备用机并车</text>
+    <text x="330" y="292" text-anchor="middle">2# 起动 → 调频 → 同期合闸</text>
+
+    <circle cx="540" cy="268" r="6" fill="#c08a24"/>
+    <text x="540" y="246" text-anchor="middle">③ 转移负荷</text>
+    <text x="540" y="292" text-anchor="middle">调调速器把负荷全部交给 2#</text>
+
+    <circle cx="750" cy="268" r="6" fill="#c08a24"/>
+    <text x="750" y="246" text-anchor="middle">④ 解列 1#</text>
+    <text x="750" y="292" text-anchor="middle">负荷≈0 时 qf1 分闸</text>
+
+    <circle cx="920" cy="268" r="6" fill="#c08a24"/>
+    <text x="920" y="246" text-anchor="middle">⑤ 停机</text>
+    <text x="920" y="292" text-anchor="middle">1# 原动机停机</text>
+  </g>
+  <rect x="80" y="314" width="880" height="26" rx="4" fill="#fdf6ec"/>
+  <text x="520" y="332" text-anchor="middle" font-size="11" fill="#7a5310">母线始终有电：先「并」后「解」，负荷无缝转移，全船不停电</text>
+
+  <!-- Ⅱ级：断电切换 -->
+  <text x="60" y="388" font-size="14" font-weight="bold" fill="#a93226">Ⅱ级故障 → 断电切换（先失电，再恢复）</text>
+  <line x1="80" y1="450" x2="960" y2="450" stroke="#c0392b" stroke-width="2"/>
+  <g font-size="11" fill="#8c2f26">
+    <circle cx="130" cy="450" r="6" fill="#c0392b"/>
+    <text x="130" y="428" text-anchor="middle">① 故障动作</text>
+    <text x="130" y="474" text-anchor="middle">欠压跳闸 / 原动机停机</text>
+
+    <circle cx="350" cy="450" r="6" fill="#c0392b"/>
+    <text x="350" y="428" text-anchor="middle">② 母线失电</text>
+    <text x="350" y="474" text-anchor="middle">qf1 分闸，全船短时失电</text>
+
+    <circle cx="570" cy="450" r="6" fill="#c0392b"/>
+    <text x="570" y="428" text-anchor="middle">③ 失电检测延时</text>
+    <text x="570" y="474" text-anchor="middle">约 3 s 确认母线无压</text>
+
+    <circle cx="780" cy="450" r="6" fill="#c0392b"/>
+    <text x="780" y="428" text-anchor="middle">④ 自动起动备用机</text>
+    <text x="780" y="474" text-anchor="middle">2# 起动 → 建压 → 储能</text>
+
+    <circle cx="930" cy="450" r="6" fill="#c0392b"/>
+    <text x="930" y="428" text-anchor="middle">⑤ 合闸恢复</text>
+    <text x="930" y="474" text-anchor="middle">qf2 合闸供电</text>
+  </g>
+  <rect x="80" y="496" width="880" height="26" rx="4" fill="#fbeeee"/>
+  <text x="520" y="514" text-anchor="middle" font-size="11" fill="#a93226">母线必然失电：故障机已不能带载，只能「先断电、后供电」</text>
+
+  <!-- 结论 -->
+  <rect x="80" y="548" width="880" height="96" rx="8" fill="#f7f9fc" stroke="#c9d6e3" stroke-width="1.5"/>
+  <text x="100" y="572" font-size="12" font-weight="bold" fill="#1b3a5c">为什么Ⅰ级能带电换机、Ⅱ级不能？</text>
+  <text x="100" y="594" font-size="11" fill="#46688a">Ⅰ级故障只是「不宜继续带载」，机组与主开关都还在，具备并联条件；Ⅱ级故障本身就会停机或跳闸，母线失电不可避免。</text>
+  <text x="100" y="614" font-size="11" fill="#46688a">因此自动电站在Ⅱ级故障时只能等失电后再起动备用机恢复供电。判据不同，动作顺序就不同——这是本仿真最关键的主线。</text>
+  <text x="100" y="634" font-size="11" fill="#7a5310">补充：机械故障在并网运行时先使原动机停转，发电机被母线反拖（逆功率）后才跳闸，这解释了「母线必然失电」。</text>
+</svg>

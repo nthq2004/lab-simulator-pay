@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="640" viewBox="0 0 1000 640" font-family="Microsoft YaHei, Arial, sans-serif">
+  <rect width="1000" height="640" fill="#ffffff"/>
+  <text x="500" y="34" text-anchor="middle" font-size="19" font-weight="bold" fill="#1b3a5c">图 3  重载询问（侧推器）时序与判据</text>
+
+  <!-- ① 发询问 -->
+  <rect x="330" y="58" width="340" height="54" rx="8" fill="#eef3ee" stroke="#4a7c59" stroke-width="2"/>
+  <text x="500" y="80" text-anchor="middle" font-size="12" font-weight="bold" fill="#2f5c3c">① 侧推器面板按「起动/询问」</text>
+  <text x="500" y="100" text-anchor="middle" font-size="11" fill="#3f6b4c">向自动化电站发出询问请求</text>
+  <line x1="500" y1="112" x2="500" y2="136" stroke="#4a7c59" stroke-width="2"/>
+  <path d="M 495 130 L 500 138 L 505 130" fill="none" stroke="#4a7c59" stroke-width="2"/>
+
+  <!-- ② 判断 -->
+  <rect x="330" y="138" width="340" height="64" rx="8" fill="#f4eef8" stroke="#7a4a9e" stroke-width="2"/>
+  <text x="500" y="160" text-anchor="middle" font-size="12" font-weight="bold" fill="#5b2f7a">② 自动化电站判断在网机组台数</text>
+  <text x="500" y="179" text-anchor="middle" font-size="10" fill="#6d4a86">母线电压 / 功率采样 + comm1、comm2 通信</text>
+  <text x="500" y="195" text-anchor="middle" font-size="10" fill="#6d4a86">（通信断开时不应答「允许」，防止误判）</text>
+
+  <!-- 分支线 -->
+  <path d="M 400 202 L 400 226 L 240 226 L 240 250" fill="none" stroke="#4a7c59" stroke-width="2"/>
+  <path d="M 235 242 L 240 250 L 245 242" fill="none" stroke="#4a7c59" stroke-width="2"/>
+  <path d="M 600 202 L 600 226 L 760 226 L 760 250" fill="none" stroke="#c08a24" stroke-width="2"/>
+  <path d="M 755 242 L 760 250 L 765 242" fill="none" stroke="#c08a24" stroke-width="2"/>
+
+  <!-- 分支 A：并联 -->
+  <rect x="120" y="250" width="240" height="82" rx="8" fill="#eef7ee" stroke="#4a7c59" stroke-width="2"/>
+  <text x="240" y="272" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#2f5c3c">已在并联（≥ 2 台在网）</text>
+  <text x="240" y="293" text-anchor="middle" font-size="11" fill="#3f6b4c">容量足够 → 直接应答「允许」</text>
+  <text x="240" y="312" text-anchor="middle" font-size="11" fill="#3f6b4c">回应灯转绿（可立即起动）</text>
+
+  <!-- 分支 B：单机 -->
+  <rect x="640" y="250" width="240" height="104" rx="8" fill="#fdf6ec" stroke="#c08a24" stroke-width="2"/>
+  <text x="760" y="272" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#7a5310">单机在网（容量不足）</text>
+  <text x="760" y="292" text-anchor="middle" font-size="11" fill="#8a6d3b">先应答「等待」，回应灯转黄</text>
+  <text x="760" y="311" text-anchor="middle" font-size="11" fill="#8a6d3b">同时强制自动并车备用机组</text>
+  <text x="760" y="330" text-anchor="middle" font-size="11" fill="#8a6d3b">并车成功、容量足够后改答「允许」</text>
+  <text x="760" y="347" text-anchor="middle" font-size="10" fill="#8a6d3b">（等待期间按按钮不动作）</text>
+
+  <!-- 汇合 -->
+  <path d="M 240 332 L 240 366 L 500 366 L 500 384" fill="none" stroke="#7a4a9e" stroke-width="2" stroke-dasharray="6 4"/>
+  <path d="M 760 354 L 760 366 L 500 366" fill="none" stroke="#7a4a9e" stroke-width="2" stroke-dasharray="6 4"/>
+  <path d="M 495 378 L 500 386 L 505 378" fill="none" stroke="#7a4a9e" stroke-width="2"/>
+
+  <!-- ③ 允许后动作 -->
+  <rect x="230" y="386" width="540" height="56" rx="8" fill="#f7f9fc" stroke="#c9d6e3" stroke-width="1.5"/>
+  <text x="250" y="408" font-size="11.5" font-weight="bold" fill="#1b3a5c">③ 收到「允许」后再按一次「起动/询问」</text>
+  <text x="250" y="428" font-size="11" fill="#46688a">侧推器负载投入 → 两台机组自动均分负荷（均分有功，差值趋近 0）</text>
+  <line x1="500" y1="442" x2="500" y2="466" stroke="#c0392b" stroke-width="2"/>
+  <path d="M 495 460 L 500 468 L 505 460" fill="none" stroke="#c0392b" stroke-width="2"/>
+
+  <!-- ④ 停止 -->
+  <rect x="230" y="468" width="540" height="56" rx="8" fill="#fbeeee" stroke="#c0392b" stroke-width="1.5"/>
+  <text x="250" y="490" font-size="11.5" font-weight="bold" fill="#a93226">④ 按「停止」：重载退出</text>
+  <text x="250" y="510" font-size="11" fill="#a93226">负荷低于解列阈值 → 2# 自动转移负荷、分闸解列 → 延时自动停机 → 1# 单机供电</text>
+
+  <!-- 为什么 -->
+  <rect x="60" y="540" width="880" height="86" rx="8" fill="#f7f9fc" stroke="#c9d6e3" stroke-width="1.5"/>
+  <text x="80" y="562" font-size="12" font-weight="bold" fill="#1b3a5c">为什么必须「先问再起」？</text>
+  <text x="80" y="583" font-size="11" fill="#46688a">侧推器约 45 kW，占单机额定容量（80 kW）比例很大。单机在网时直接起动，起动冲击电流会使电网</text>
+  <text x="80" y="602" font-size="11" fill="#46688a">电压、频率大幅跌落，严重时引起主开关失压/过流跳闸、全船失电。重载询问把「容量够不够」的判断</text>
+  <text x="80" y="620" font-size="11" fill="#7a5310">交给自动化电站：够就允许，不够就先并车扩容——这就是大负载「有序投入」的电气保障。</text>
+</svg>
