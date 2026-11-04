@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="470" viewBox="0 0 960 470" font-family="Microsoft YaHei, Arial, sans-serif">
+  <defs>
+    <marker id="a2" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 z" fill="#2c6ea8"/>
+    </marker>
+    <marker id="a3" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 z" fill="#b04a4a"/>
+    </marker>
+  </defs>
+  <rect width="960" height="470" fill="#ffffff"/>
+  <text x="480" y="30" text-anchor="middle" font-size="19" font-weight="bold" fill="#1b3a5c">图 3  主开关跳闸后的应急处置流程</text>
+
+  <!-- 第 1 步 -->
+  <g>
+    <rect x="60" y="70" width="200" height="76" rx="10" fill="#fdf1f1" stroke="#b04a4a" stroke-width="2"/>
+    <text x="160" y="100" text-anchor="middle" font-size="14" font-weight="bold" fill="#7d2b2b">① 主开关跳闸</text>
+    <text x="160" y="122" text-anchor="middle" font-size="11" fill="#8d4a4a">全船失电 / 部分失电</text>
+  </g>
+  <!-- 第 2 步 -->
+  <g>
+    <rect x="330" y="70" width="230" height="76" rx="10" fill="#fdf7f0" stroke="#c9861a" stroke-width="2"/>
+    <text x="445" y="100" text-anchor="middle" font-size="14" font-weight="bold" fill="#8a5a00">② 判断跳闸原因</text>
+    <text x="445" y="122" text-anchor="middle" font-size="11" fill="#8a6a3a">看机组状态 / 电压 / 报警</text>
+  </g>
+  <!-- 第 3 步 -->
+  <g>
+    <rect x="630" y="70" width="270" height="76" rx="10" fill="#eaf3fb" stroke="#2c6ea8" stroke-width="2"/>
+    <text x="765" y="100" text-anchor="middle" font-size="14" font-weight="bold" fill="#1b3a5c">③ 起动备用机组恢复供电</text>
+    <text x="765" y="122" text-anchor="middle" font-size="11" fill="#446">先保重要负载，再谈排故</text>
+  </g>
+  <line x1="262" y1="108" x2="326" y2="108" stroke="#2c6ea8" stroke-width="2.4" marker-end="url(#a2)"/>
+  <line x1="562" y1="108" x2="626" y2="108" stroke="#2c6ea8" stroke-width="2.4" marker-end="url(#a2)"/>
+
+  <!-- 分支：三类原因的处置 -->
+  <g font-size="11.5" fill="#334">
+    <rect x="60" y="200" width="270" height="110" rx="10" fill="#f8fafc" stroke="#c8d3de" stroke-width="1.6"/>
+    <text x="76" y="226" font-size="12.5" font-weight="bold" fill="#1b3a5c">机械故障（原动机停机）</text>
+    <text x="76" y="250">· 母线无电，须先由备用机组供电</text>
+    <text x="76" y="270">· 排出燃油/滑油/冷却水故障</text>
+    <text x="76" y="290">· 故障机重新起动后再并网转移负荷</text>
+
+    <rect x="345" y="200" width="270" height="110" rx="10" fill="#f8fafc" stroke="#c8d3de" stroke-width="1.6"/>
+    <text x="361" y="226" font-size="12.5" font-weight="bold" fill="#1b3a5c">过载 / 欠压（机仍运行）</text>
+    <text x="361" y="250">· 主开关跳闸后负载已自动卸载</text>
+    <text x="361" y="270">· 减载 / 修好 AVR 后可直接合闸</text>
+    <text x="361" y="290">· 切勿带原负载一次全部投入</text>
+
+    <rect x="630" y="200" width="270" height="110" rx="10" fill="#fdf1f1" stroke="#e6c0c0" stroke-width="1.6"/>
+    <text x="646" y="226" font-size="12.5" font-weight="bold" fill="#7d2b2b">短路（瞬时跳闸）</text>
+    <text x="646" y="250">· 严禁反复强行合闸</text>
+    <text x="646" y="270">· 查明并隔离短路点、测绝缘</text>
+    <text x="646" y="290">· 确认绝缘合格后方可送电</text>
+  </g>
+  <line x1="445" y1="148" x2="445" y2="196" stroke="#2c6ea8" stroke-width="2" marker-end="url(#a2)"/>
+  <line x1="200" y1="150" x2="200" y2="196" stroke="#2c6ea8" stroke-width="1.6" stroke-dasharray="5 4" marker-end="url(#a2)"/>
+  <line x1="765" y1="150" x2="765" y2="196" stroke="#2c6ea8" stroke-width="1.6" stroke-dasharray="5 4" marker-end="url(#a2)"/>
+
+  <!-- 汇总 -->
+  <g>
+    <rect x="230" y="350" width="500" height="80" rx="10" fill="#eef7ee" stroke="#2f8a4a" stroke-width="2"/>
+    <text x="480" y="380" text-anchor="middle" font-size="14" font-weight="bold" fill="#1d5c32">④ 恢复并联运行 / 复位</text>
+    <text x="480" y="404" text-anchor="middle" font-size="11.5" fill="#3a6b4a">选择开关扳本机档 → 调速 → 看相位 → 合闸 → 均衡分配负荷 → 记录并上报</text>
+  </g>
+  <line x1="195" y1="312" x2="360" y2="346" stroke="#2f8a4a" stroke-width="2" marker-end="url(#a2)"/>
+  <line x1="480" y1="312" x2="480" y2="346" stroke="#2f8a4a" stroke-width="2" marker-end="url(#a2)"/>
+  <line x1="765" y1="312" x2="600" y2="346" stroke="#2f8a4a" stroke-width="2" marker-end="url(#a2)"/>
+
+  <text x="480" y="452" text-anchor="middle" font-size="12" fill="#b04a4a">总原则：先恢复供电保安全，再查明原因排故障；原因不明严禁强行合闸。</text>
+</svg>
