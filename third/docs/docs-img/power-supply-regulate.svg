@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="400" viewBox="0 0 960 400" font-family="Microsoft YaHei, Arial">
+  <rect width="960" height="400" fill="#f7f9f8"/>
+  <text x="480" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#263238">稳压的意义：输入电压、负载变化，输出仍是 5 V</text>
+
+  <rect x="20" y="56" width="438" height="248" rx="10" fill="#ffffff" stroke="#90a4ae" stroke-width="1.4"/>
+  <text x="239" y="84" text-anchor="middle" font-size="13" font-weight="bold" fill="#0d47a1">把电源电压 220 V 调到 240 V</text>
+  <line x1="44" y1="96" x2="434" y2="96" stroke="#cfd8dc"/>
+
+  <line x1="44" y1="146" x2="434" y2="146" stroke="#eceff1"/>
+  <text x="54" y="132" font-size="12" font-weight="bold" fill="#263238">电源电压</text>
+  <text x="170" y="132" font-size="12" fill="#37474f">220 V</text>
+  <text x="244" y="132" font-size="13" fill="#90a4ae">→</text>
+  <text x="266" y="132" font-size="12" fill="#37474f">240 V</text>
+  <text x="356" y="132" font-size="11.5" font-weight="bold" fill="#2e7d32">升高</text>
+  <line x1="44" y1="192" x2="434" y2="192" stroke="#eceff1"/>
+  <text x="54" y="178" font-size="12" font-weight="bold" fill="#263238">整流滤波</text>
+  <text x="170" y="178" font-size="12" fill="#37474f">≈17 V</text>
+  <text x="244" y="178" font-size="13" fill="#90a4ae">→</text>
+  <text x="266" y="178" font-size="12" fill="#37474f">≈18 V</text>
+  <text x="356" y="178" font-size="11.5" font-weight="bold" fill="#2e7d32">升高</text>
+  <line x1="44" y1="238" x2="434" y2="238" stroke="#eceff1"/>
+  <text x="54" y="224" font-size="12" font-weight="bold" fill="#263238">输出电压</text>
+  <text x="170" y="224" font-size="12" fill="#37474f">5.04 V</text>
+  <text x="244" y="224" font-size="13" fill="#90a4ae">→</text>
+  <text x="266" y="224" font-size="12" fill="#37474f">5.04 V</text>
+  <text x="356" y="224" font-size="11.5" font-weight="bold" fill="#2e7d32">不变</text>
+  <text x="239" y="286" text-anchor="middle" font-size="11" fill="#37474f">7805 自动增大内部管压降，把多出来的电压“吃掉”</text>
+
+  <rect x="502" y="56" width="438" height="248" rx="10" fill="#ffffff" stroke="#90a4ae" stroke-width="1.4"/>
+  <text x="721" y="84" text-anchor="middle" font-size="13" font-weight="bold" fill="#0d47a1">把负载电阻 200 Ω 调到 300 Ω</text>
+  <line x1="526" y1="96" x2="916" y2="96" stroke="#cfd8dc"/>
+
+  <line x1="526" y1="146" x2="916" y2="146" stroke="#eceff1"/>
+  <text x="536" y="132" font-size="12" font-weight="bold" fill="#263238">负载电阻</text>
+  <text x="652" y="132" font-size="12" fill="#37474f">200 Ω</text>
+  <text x="726" y="132" font-size="13" fill="#90a4ae">→</text>
+  <text x="748" y="132" font-size="12" fill="#37474f">300 Ω</text>
+  <text x="838" y="132" font-size="11.5" font-weight="bold" fill="#2e7d32">变大</text>
+  <line x1="526" y1="192" x2="916" y2="192" stroke="#eceff1"/>
+  <text x="536" y="178" font-size="12" font-weight="bold" fill="#263238">输出电流</text>
+  <text x="652" y="178" font-size="12" fill="#37474f">25 mA</text>
+  <text x="726" y="178" font-size="13" fill="#90a4ae">→</text>
+  <text x="748" y="178" font-size="12" fill="#37474f">17 mA</text>
+  <text x="838" y="178" font-size="11.5" font-weight="bold" fill="#2e7d32">变小</text>
+  <line x1="526" y1="238" x2="916" y2="238" stroke="#eceff1"/>
+  <text x="536" y="224" font-size="12" font-weight="bold" fill="#263238">输出电压</text>
+  <text x="652" y="224" font-size="12" fill="#37474f">5.04 V</text>
+  <text x="726" y="224" font-size="13" fill="#90a4ae">→</text>
+  <text x="748" y="224" font-size="12" fill="#37474f">5.04 V</text>
+  <text x="838" y="224" font-size="11.5" font-weight="bold" fill="#2e7d32">不变</text>
+  <text x="721" y="286" text-anchor="middle" font-size="11" fill="#37474f">负载变轻，7805 自动减小输出电流，电压保持不变</text>
+  <rect x="20" y="324" width="920" height="58" rx="8" fill="#ffffff" stroke="#90a4ae" stroke-width="1.4"/>
+  <text x="38" y="348" font-size="11.5" fill="#37474f">这就是“稳压”的含意：只要输入电压高于 7 V 左右、输出电流不超过 1.5 A，7805 始终把输出端电压稳在 +5 V；</text>
+  <text x="38" y="370" font-size="11.5" fill="#37474f">若输入跌破 7 V（例如滤波电容失效、变压器副边电压过低），输出会随之跌落——这也是判断 7805 前后级故障的分界点。</text>
+</svg>

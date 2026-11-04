@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="490" viewBox="0 0 980 490" font-family="Microsoft YaHei, Arial">
+  <rect width="980" height="490" fill="#f7f9f8"/>
+  <text x="490" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#263238">单相直流稳压电源的组成（AC 220 V → +5 V）</text>
+  <line x1="72" y1="205" x2="924" y2="205" stroke="#37474f" stroke-width="2"/>
+
+  <!-- 交流电源 -->
+  <circle cx="72" cy="205" r="30" fill="#ffffff" stroke="#1e88e5" stroke-width="2"/>
+  <path d="M58 205 q7 -13 14 0 q7 13 14 0" fill="none" stroke="#1e88e5" stroke-width="2"/>
+  <text x="72" y="150" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#0d47a1">交流电源</text>
+  <text x="72" y="166" text-anchor="middle" font-size="11" fill="#546e7a">AC 220 V / 50 Hz</text>
+
+  <!-- 熔断器 -->
+  <rect x="130" y="191" width="60" height="28" fill="#ffffff" stroke="#1e88e5" stroke-width="2"/>
+  <line x1="140" y1="205" x2="180" y2="205" stroke="#1e88e5" stroke-width="2"/>
+  <text x="160" y="150" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#0d47a1">熔断器 FU</text>
+  <text x="160" y="166" text-anchor="middle" font-size="11" fill="#546e7a">短路保护</text>
+
+  <!-- 变压器 -->
+  <rect x="216" y="150" width="104" height="110" fill="#ffffff" stroke="#1e88e5" stroke-width="2"/>
+  <path d="M246 172 a7 7 0 0 1 0 14 a7 7 0 0 1 0 14 a7 7 0 0 1 0 14 a7 7 0 0 1 0 14" fill="none" stroke="#1e88e5" stroke-width="2"/>
+  <path d="M290 172 a7 7 0 0 1 0 14 a7 7 0 0 1 0 14 a7 7 0 0 1 0 14 a7 7 0 0 1 0 14" fill="none" stroke="#1e88e5" stroke-width="2"/>
+  <line x1="262" y1="168" x2="274" y2="168" stroke="#546e7a" stroke-width="1.6"/>
+  <line x1="262" y1="164" x2="262" y2="172" stroke="#546e7a" stroke-width="1.6"/>
+  <line x1="274" y1="164" x2="274" y2="172" stroke="#546e7a" stroke-width="1.6"/>
+  <text x="268" y="132" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#0d47a1">控制变压器 T</text>
+  <text x="268" y="285" text-anchor="middle" font-size="11.5" fill="#37474f">220 V / 12 V</text>
+
+  <!-- 整流桥 -->
+  <g transform="translate(404 205)">
+    <path d="M0 -36 L36 0 L0 36 L-36 0 Z" fill="#ffffff" stroke="#1e88e5" stroke-width="2"/>
+    <text x="0" y="6" text-anchor="middle" font-size="13" font-weight="bold" fill="#0d47a1">VD</text>
+    <text x="0" y="-46" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#0d47a1">整流桥</text>
+    <text x="0" y="58" text-anchor="middle" font-size="11.5" fill="#37474f">VD1~VD4</text>
+  </g>
+
+  <!-- 滤波电容 C1 -->
+  <g transform="translate(516 205)">
+    <line x1="-16" y1="-30" x2="-16" y2="30" stroke="#1e88e5" stroke-width="3.4"/>
+    <line x1="8" y1="-30" x2="8" y2="30" stroke="#1e88e5" stroke-width="3.4"/>
+    <text x="-4" y="-44" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#0d47a1">滤波 C1</text>
+    <text x="-4" y="54" text-anchor="middle" font-size="11.5" fill="#37474f">47 µF</text>
+  </g>
+
+  <!-- 7805 -->
+  <rect x="588" y="171" width="94" height="68" rx="5" fill="#eceff1" stroke="#1e88e5" stroke-width="2"/>
+  <text x="635" y="213" text-anchor="middle" font-size="17" font-weight="bold" fill="#263238">7805</text>
+  <text x="635" y="161" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#0d47a1">三端稳压器</text>
+  <text x="635" y="263" text-anchor="middle" font-size="11.5" fill="#37474f">IN / GND / OUT</text>
+
+  <!-- 滤波电容 C2 -->
+  <g transform="translate(724 205)">
+    <line x1="-16" y1="-24" x2="-16" y2="24" stroke="#1e88e5" stroke-width="3.4"/>
+    <line x1="8" y1="-24" x2="8" y2="24" stroke="#1e88e5" stroke-width="3.4"/>
+    <text x="-4" y="-38" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#0d47a1">滤波 C2</text>
+    <text x="-4" y="46" text-anchor="middle" font-size="11.5" fill="#37474f">22 µF</text>
+  </g>
+
+  <!-- 负载 -->
+  <rect x="806" y="175" width="60" height="60" rx="3" fill="#ffffff" stroke="#1e88e5" stroke-width="2"/>
+  <text x="836" y="211" text-anchor="middle" font-size="13" font-weight="bold" fill="#263238">RL</text>
+  <text x="836" y="165" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#0d47a1">负载</text>
+  <text x="836" y="259" text-anchor="middle" font-size="11.5" fill="#37474f">200 Ω</text>
+
+  <!-- 各点电压标注 -->
+  <g font-size="11.5">
+    <text x="72" y="318" text-anchor="middle" fill="#37474f">U₁</text>
+    <text x="72" y="336" text-anchor="middle" font-weight="bold" fill="#c62828">220 V～</text>
+
+    <text x="268" y="318" text-anchor="middle" fill="#37474f">U₂</text>
+    <text x="268" y="336" text-anchor="middle" font-weight="bold" fill="#c62828">12 V～</text>
+
+    <text x="404" y="318" text-anchor="middle" fill="#37474f">整流后</text>
+    <text x="404" y="336" text-anchor="middle" font-weight="bold" fill="#c62828">脉动 ≈17 V</text>
+
+    <text x="516" y="318" text-anchor="middle" fill="#37474f">滤波后</text>
+    <text x="516" y="336" text-anchor="middle" font-weight="bold" fill="#c62828">≈17 V 平滑</text>
+
+    <text x="635" y="318" text-anchor="middle" fill="#37474f">稳压后</text>
+    <text x="635" y="336" text-anchor="middle" font-weight="bold" fill="#c62828">5.0 V</text>
+
+    <text x="836" y="318" text-anchor="middle" fill="#37474f">输出电压 Uo</text>
+    <text x="836" y="336" text-anchor="middle" font-weight="bold" fill="#c62828">5.0 V</text>
+  </g>
+
+  <rect x="24" y="364" width="932" height="106" rx="8" fill="#ffffff" stroke="#90a4ae" stroke-width="1.4"/>
+  <text x="44" y="390" font-size="13" font-weight="bold" fill="#263238">四个环节</text>
+  <text x="120" y="390" font-size="12" fill="#37474f"><tspan font-weight="bold" fill="#c62828">变压</tspan>（T）→ <tspan font-weight="bold" fill="#c62828">整流</tspan>（VD1~VD4）→ <tspan font-weight="bold" fill="#c62828">滤波</tspan>（C1、C2）→ <tspan font-weight="bold" fill="#c62828">稳压</tspan>（7805）</text>
+  <text x="44" y="416" font-size="11.5" fill="#37474f">① 220 V 市电经熔断器 FU 送入控制变压器，降到 12 V；② 四只二极管接成桥式整流，把交流变成单向脉动直流；</text>
+  <text x="44" y="438" font-size="11.5" fill="#37474f">③ C1（47 µF）充电储能、平滑脉动电压；④ 7805 把不稳定的直流稳压成 +5 V，C2（22 µF）就近滤除高频纹波，RL 为 200 Ω 负载。</text>
+  <text x="44" y="460" font-size="11.5" fill="#c62828">仿真中：拖动元件可移动位置；右键元件「参数设置」可改电压、容量、阻值等参数。</text>
+</svg>
