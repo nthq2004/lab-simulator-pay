@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="600" viewBox="0 0 1000 600" font-family="Microsoft YaHei, Arial">
+  <rect width="1000" height="600" fill="#f7f9f8"/>
+  <text x="500" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#263238">「主开关合不上闸」的判断流程</text>
+
+  <defs>
+    <marker id="af" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0 0 L10 4 L0 8 z" fill="#37474f"/>
+    </marker>
+  </defs>
+
+  <!-- 起点 -->
+  <rect x="390" y="52" width="220" height="46" rx="23" fill="#e3f2fd" stroke="#1e88e5" stroke-width="2"/>
+  <text x="500" y="81" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#0d47a1">主开关合不上闸</text>
+  <path d="M500 98 L500 118" stroke="#37474f" stroke-width="2" marker-end="url(#af)"/>
+
+  <!-- 判断 1 -->
+  <polygon points="500,120 660,168 500,216 340,168" fill="#fff8e1" stroke="#f9a825" stroke-width="2"/>
+  <text x="500" y="164" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#795548">看储能指示牌：已储能吗？</text>
+  <text x="500" y="184" text-anchor="middle" font-size="11.5" fill="#8d6e63">确认储能电机电源与手柄</text>
+
+  <!-- 判断1 否 -->
+  <path d="M340 168 L230 168" stroke="#37474f" stroke-width="2" marker-end="url(#af)"/>
+  <text x="285" y="160" text-anchor="middle" font-size="12" fill="#c62828">否</text>
+  <rect x="40" y="140" width="186" height="56" rx="6" fill="#ffebee" stroke="#c62828" stroke-width="2"/>
+  <text x="133" y="164" text-anchor="middle" font-size="12" fill="#b71c1c">按压储能手柄 5 次</text>
+  <text x="133" y="184" text-anchor="middle" font-size="11.5" fill="#546e7a">仍不能储能 → 弹簧故障</text>
+  <path d="M133 196 L133 232" stroke="#37474f" stroke-width="2" marker-end="url(#af)"/>
+  <rect x="40" y="234" width="186" height="52" rx="6" fill="#ffffff" stroke="#90a4ae"/>
+  <text x="133" y="256" text-anchor="middle" font-size="12" fill="#37474f">手柄能储能 → 储能电机</text>
+  <text x="133" y="274" text-anchor="middle" font-size="12" fill="#37474f">控制回路断线</text>
+
+  <!-- 判断1 是 -->
+  <path d="M500 216 L500 244" stroke="#37474f" stroke-width="2" marker-end="url(#af)"/>
+  <text x="512" y="236" font-size="12" fill="#2e7d32">是</text>
+  <polygon points="500,246 700,296 500,346 300,296" fill="#fff8e1" stroke="#f9a825" stroke-width="2"/>
+  <text x="500" y="290" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#795548">试遥控合闸：有反应吗？</text>
+  <text x="500" y="310" text-anchor="middle" font-size="11.5" fill="#8d6e63">无反应 → 改按手动合闸按钮</text>
+
+  <!-- 判断2 右：手动能合 -->
+  <path d="M700 296 L790 296" stroke="#37474f" stroke-width="2" marker-end="url(#af)"/>
+  <text x="745" y="288" text-anchor="middle" font-size="12" fill="#c62828">无反应</text>
+  <rect x="792" y="266" width="176" height="60" rx="6" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="880" y="290" text-anchor="middle" font-size="12" fill="#1b5e20">手动合闸成功</text>
+  <text x="880" y="310" text-anchor="middle" font-size="11.5" fill="#546e7a">→ 合闸线圈/合闸回路故障</text>
+
+  <!-- 判断2 下：储能释放但合不上 -->
+  <path d="M500 346 L500 372" stroke="#37474f" stroke-width="2" marker-end="url(#af)"/>
+  <text x="512" y="364" font-size="12" fill="#2e7d32">储能释放但合不上</text>
+  <rect x="330" y="374" width="340" height="46" rx="6" fill="#f3e5f5" stroke="#6a1b9a" stroke-width="2"/>
+  <text x="500" y="394" text-anchor="middle" font-size="12.5" fill="#4a148c">先看电子脱扣器 et1：显示正常吗？</text>
+  <text x="500" y="412" text-anchor="middle" font-size="11.5" fill="#546e7a">et1 自身误动也会导致合不上闸</text>
+  <path d="M500 420 L500 446" stroke="#37474f" stroke-width="2" marker-end="url(#af)"/>
+  <rect x="330" y="448" width="340" height="46" rx="6" fill="#fff3e0" stroke="#ef6c00" stroke-width="2"/>
+  <text x="500" y="468" text-anchor="middle" font-size="12.5" fill="#e65100">et1 正常 → 查失压脱扣器</text>
+  <text x="500" y="486" text-anchor="middle" font-size="11.5" fill="#546e7a">断电、拆线、2 kΩ 档测失压线圈电阻</text>
+
+  <path d="M330 471 L220 471" stroke="#37474f" stroke-width="2" marker-end="url(#af)"/>
+  <path d="M670 471 L780 471" stroke="#37474f" stroke-width="2" marker-end="url(#af)"/>
+
+  <rect x="40" y="446" width="176" height="52" rx="6" fill="#ffebee" stroke="#c62828"/>
+  <text x="128" y="468" text-anchor="middle" font-size="12" fill="#b71c1c">读数 O.L（无穷大）</text>
+  <text x="128" y="486" text-anchor="middle" font-size="11.5" fill="#546e7a">→ 失压线圈断线</text>
+
+  <rect x="782" y="438" width="186" height="68" rx="6" fill="#e8f5e9" stroke="#2e7d32"/>
+  <text x="875" y="458" text-anchor="middle" font-size="12" fill="#1b5e20">读数≈2 kΩ（正常）</text>
+  <text x="875" y="476" text-anchor="middle" font-size="11.5" fill="#546e7a">通 24 V 后按动衔铁：</text>
+  <text x="875" y="494" text-anchor="middle" font-size="11.5" fill="#546e7a">能复位 → 反作用弹簧过大</text>
+
+  <rect x="30" y="522" width="940" height="60" rx="8" fill="#ffffff" stroke="#b0bec5"/>
+  <text x="50" y="546" font-size="12.5" fill="#37474f">测线圈电阻必须"先断开控制电源、拆开一端接线"，否则测到的是整条控制回路的并联值。</text>
+  <text x="50" y="568" font-size="12.5" fill="#37474f">顺序记牢：先看储能 → 再分遥控/手动 → 最后查失压脱扣器 → 处理后复位故障并重新合闸。</text>
+</svg>

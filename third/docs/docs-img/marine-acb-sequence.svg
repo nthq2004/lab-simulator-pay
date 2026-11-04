@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="545" viewBox="0 0 1000 545" font-family="Microsoft YaHei, Arial">
+  <rect width="1000" height="545" fill="#f7f9f8"/>
+  <text x="500" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#263238">储能 → 合闸 → 分闸：能量是怎样走的</text>
+
+  <defs>
+    <marker id="ar2" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0 0 L10 4 L0 8 z" fill="#37474f"/>
+    </marker>
+    <marker id="ar3" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0 0 L10 4 L0 8 z" fill="#c62828"/>
+    </marker>
+  </defs>
+
+  <!-- 阶段 1 储能 -->
+  <rect x="30" y="55" width="300" height="200" rx="8" fill="#ffffff" stroke="#1e88e5" stroke-width="2"/>
+  <text x="180" y="82" text-anchor="middle" font-size="14" font-weight="bold" fill="#0d47a1">① 储能</text>
+  <rect x="55" y="100" width="250" height="34" rx="5" fill="#e3f2fd" stroke="#1e88e5"/>
+  <text x="180" y="122" text-anchor="middle" font-size="12.5" fill="#0d47a1">储能电机得电（DC 24 V）</text>
+  <path d="M180 136 L180 158" stroke="#37474f" stroke-width="2" marker-end="url(#ar2)"/>
+  <rect x="55" y="160" width="250" height="34" rx="5" fill="#e3f2fd" stroke="#1e88e5"/>
+  <text x="180" y="182" text-anchor="middle" font-size="12.5" fill="#0d47a1">压缩储能弹簧（能量存入）</text>
+  <path d="M180 196 L180 214" stroke="#37474f" stroke-width="2" marker-end="url(#ar2)"/>
+  <text x="180" y="234" text-anchor="middle" font-size="12.5" fill="#2e7d32" font-weight="bold">储能指示：已储能（斜线消失）</text>
+  <text x="180" y="250" text-anchor="middle" font-size="11" fill="#546e7a">无电机时也可用手摇储能手柄按压 5 次</text>
+
+  <!-- 阶段 2 合闸 -->
+  <rect x="360" y="55" width="300" height="200" rx="8" fill="#ffffff" stroke="#2e7d32" stroke-width="2"/>
+  <text x="510" y="82" text-anchor="middle" font-size="14" font-weight="bold" fill="#1b5e20">② 合闸</text>
+  <rect x="385" y="100" width="250" height="34" rx="5" fill="#e8f5e9" stroke="#2e7d32"/>
+  <text x="510" y="122" text-anchor="middle" font-size="12.5" fill="#1b5e20">合闸线圈得电（或手动合闸按钮）</text>
+  <path d="M510 136 L510 158" stroke="#37474f" stroke-width="2" marker-end="url(#ar2)"/>
+  <rect x="385" y="160" width="250" height="34" rx="5" fill="#e8f5e9" stroke="#2e7d32"/>
+  <text x="510" y="182" text-anchor="middle" font-size="12.5" fill="#1b5e20">释放锁扣 → 弹簧能量推动主轴</text>
+  <path d="M510 196 L510 214" stroke="#37474f" stroke-width="2" marker-end="url(#ar2)"/>
+  <text x="510" y="234" text-anchor="middle" font-size="12.5" fill="#2e7d32" font-weight="bold">三对动触头闭合，主开关送电</text>
+  <text x="510" y="250" text-anchor="middle" font-size="11" fill="#546e7a">前提取决于失压脱扣器是否已吸合</text>
+
+  <!-- 阶段 3 分闸 -->
+  <rect x="690" y="55" width="280" height="200" rx="8" fill="#ffffff" stroke="#c62828" stroke-width="2"/>
+  <text x="830" y="82" text-anchor="middle" font-size="14" font-weight="bold" fill="#b71c1c">③ 分闸</text>
+  <rect x="715" y="100" width="230" height="34" rx="5" fill="#ffebee" stroke="#c62828"/>
+  <text x="830" y="122" text-anchor="middle" font-size="12.5" fill="#b71c1c">分励线圈 / 电动脱扣 / 手动分闸</text>
+  <path d="M830 136 L830 158" stroke="#c62828" stroke-width="2" marker-end="url(#ar3)"/>
+  <rect x="715" y="160" width="230" height="34" rx="5" fill="#ffebee" stroke="#c62828"/>
+  <text x="830" y="182" text-anchor="middle" font-size="12.5" fill="#b71c1c">脱扣轴转动，释放分闸弹簧</text>
+  <path d="M830 196 L830 214" stroke="#c62828" stroke-width="2" marker-end="url(#ar3)"/>
+  <text x="830" y="234" text-anchor="middle" font-size="12.5" fill="#b71c1c" font-weight="bold">触头分离，电弧由栅片熄灭</text>
+  <text x="830" y="250" text-anchor="middle" font-size="11" fill="#546e7a">储能已被消耗，需重新储能</text>
+
+  <path d="M330 155 L356 155" stroke="#37474f" stroke-width="2" marker-end="url(#ar2)"/>
+  <path d="M660 155 L686 155" stroke="#37474f" stroke-width="2" marker-end="url(#ar2)"/>
+
+  <!-- 保护动作 -->
+  <rect x="30" y="285" width="940" height="100" rx="8" fill="#ffffff" stroke="#6a1b9a" stroke-width="2"/>
+  <text x="50" y="312" font-size="14" font-weight="bold" fill="#4a148c">保护动作（不需要人操作，自动走到 ③）</text>
+  <rect x="55" y="324" width="180" height="48" rx="6" fill="#f3e5f5" stroke="#6a1b9a"/>
+  <text x="145" y="344" text-anchor="middle" font-size="12" fill="#4a148c">失压：线圈失电</text>
+  <text x="145" y="362" text-anchor="middle" font-size="11.5" fill="#546e7a">电压过低 / 24 V 消失</text>
+  <rect x="255" y="324" width="180" height="48" rx="6" fill="#f3e5f5" stroke="#6a1b9a"/>
+  <text x="345" y="344" text-anchor="middle" font-size="12" fill="#4a148c">过流 / 短路</text>
+  <text x="345" y="362" text-anchor="middle" font-size="11.5" fill="#546e7a">et1 检测 → 脱扣输出</text>
+  <rect x="455" y="324" width="180" height="48" rx="6" fill="#f3e5f5" stroke="#6a1b9a"/>
+  <text x="545" y="344" text-anchor="middle" font-size="12" fill="#4a148c">逆功率</text>
+  <text x="545" y="362" text-anchor="middle" font-size="11.5" fill="#546e7a">原动机故障拖转</text>
+  <rect x="655" y="324" width="290" height="48" rx="6" fill="#fff8e1" stroke="#f9a825"/>
+  <text x="800" y="344" text-anchor="middle" font-size="12" fill="#795548">共同结果</text>
+  <text x="800" y="362" text-anchor="middle" font-size="11.5" fill="#546e7a">脱扣轴被释放 → 主触头断开，发电机解列</text>
+
+  <rect x="30" y="405" width="940" height="118" rx="8" fill="#ffffff" stroke="#b0bec5"/>
+  <text x="50" y="431" font-size="14" font-weight="bold" fill="#263238">记住三句话</text>
+  <text x="50" y="456" font-size="12.5" fill="#37474f">· 储能是为了"合得上"：弹簧不储能，按什么按钮都合不上闸。</text>
+  <text x="50" y="478" font-size="12.5" fill="#37474f">· 合闸靠储能弹簧、分闸靠分闸弹簧；线圈只是"扳机"，真正的力来自弹簧。</text>
+  <text x="50" y="500" font-size="12.5" fill="#37474f">· 分闸有三条路：手动分闸、失压脱扣、电子脱扣——最终都靠释放脱扣轴，由分闸弹簧把触头拉开。</text>
+</svg>

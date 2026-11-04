@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="584" viewBox="0 0 1000 584" font-family="Microsoft YaHei, Arial">
+  <rect width="1000" height="584" fill="#f7f9f8"/>
+  <text x="500" y="32" text-anchor="middle" font-size="18" font-weight="bold" fill="#263238">船舶发电机主开关（船用框架式空气断路器）的组成</text>
+
+  <defs>
+    <marker id="ar" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0 0 L10 4 L0 8 z" fill="#37474f"/>
+    </marker>
+    <marker id="arg" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0 0 L10 4 L0 8 z" fill="#2e7d32"/>
+    </marker>
+    <marker id="arp" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0 0 L10 4 L0 8 z" fill="#6a1b9a"/>
+    </marker>
+  </defs>
+
+  <!-- 主回路 -->
+  <rect x="30" y="60" width="940" height="120" rx="8" fill="#ffffff" stroke="#1e88e5" stroke-width="2"/>
+  <text x="50" y="86" font-size="14" font-weight="bold" fill="#0d47a1">一、主回路（三相 400 V）</text>
+
+  <rect x="50" y="100" width="150" height="60" rx="6" fill="#e3f2fd" stroke="#1e88e5"/>
+  <text x="125" y="126" text-anchor="middle" font-size="13" font-weight="bold" fill="#0d47a1">同步发电机 gen1</text>
+  <text x="125" y="146" text-anchor="middle" font-size="11.5" fill="#546e7a">400 kW / 400 V / 50 Hz</text>
+
+  <rect x="250" y="100" width="180" height="60" rx="6" fill="#e3f2fd" stroke="#1e88e5"/>
+  <text x="340" y="126" text-anchor="middle" font-size="13" font-weight="bold" fill="#0d47a1">主开关 qf1（主触头）</text>
+  <text x="340" y="146" text-anchor="middle" font-size="11.5" fill="#546e7a">框架式空气断路器 · 三极</text>
+
+  <rect x="480" y="100" width="150" height="60" rx="6" fill="#e3f2fd" stroke="#1e88e5"/>
+  <text x="555" y="126" text-anchor="middle" font-size="13" font-weight="bold" fill="#0d47a1">汇流排 bus1</text>
+  <text x="555" y="146" text-anchor="middle" font-size="11.5" fill="#546e7a">三相母排 · 6 路抽头</text>
+
+  <rect x="680" y="88" width="130" height="36" rx="6" fill="#ffffff" stroke="#90a4ae"/>
+  <text x="745" y="111" text-anchor="middle" font-size="12.5" fill="#37474f">QF2 → 异步电机</text>
+  <rect x="680" y="136" width="130" height="36" rx="6" fill="#ffffff" stroke="#90a4ae"/>
+  <text x="745" y="159" text-anchor="middle" font-size="12.5" fill="#37474f">QF3 → 三盏照明灯</text>
+
+  <path d="M204 130 L246 130" stroke="#37474f" stroke-width="2" marker-end="url(#ar)"/>
+  <path d="M434 130 L476 130" stroke="#37474f" stroke-width="2" marker-end="url(#ar)"/>
+  <path d="M634 130 L676 130" stroke="#37474f" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- 控制回路 -->
+  <rect x="30" y="200" width="620" height="200" rx="8" fill="#ffffff" stroke="#2e7d32" stroke-width="2"/>
+  <text x="50" y="226" font-size="14" font-weight="bold" fill="#1b5e20">二、控制回路（DC 24 V）</text>
+
+  <rect x="50" y="240" width="130" height="56" rx="6" fill="#e8f5e9" stroke="#2e7d32"/>
+  <text x="115" y="264" text-anchor="middle" font-size="13" font-weight="bold" fill="#1b5e20">直流电源 dc_uv</text>
+  <text x="115" y="284" text-anchor="middle" font-size="11.5" fill="#546e7a">DC 24 V</text>
+
+  <rect x="225" y="240" width="120" height="32" rx="5" fill="#ffffff" stroke="#90a4ae"/>
+  <text x="285" y="261" text-anchor="middle" font-size="12" fill="#37474f">sb「模拟失压」常闭</text>
+  <rect x="225" y="282" width="120" height="32" rx="5" fill="#ffffff" stroke="#90a4ae"/>
+  <text x="285" y="303" text-anchor="middle" font-size="12" fill="#37474f">sc「合闸」常开</text>
+  <rect x="225" y="324" width="120" height="32" rx="5" fill="#ffffff" stroke="#90a4ae"/>
+  <text x="285" y="345" text-anchor="middle" font-size="12" fill="#37474f">ss「分闸」常开</text>
+
+  <rect x="380" y="240" width="110" height="32" rx="5" fill="#fff3e0" stroke="#ef6c00"/>
+  <text x="435" y="261" text-anchor="middle" font-size="12" fill="#e65100">失压线圈 uv</text>
+  <rect x="380" y="282" width="110" height="32" rx="5" fill="#fff3e0" stroke="#ef6c00"/>
+  <text x="435" y="303" text-anchor="middle" font-size="12" fill="#e65100">合闸线圈 c</text>
+  <rect x="380" y="324" width="110" height="32" rx="5" fill="#fff3e0" stroke="#ef6c00"/>
+  <text x="435" y="345" text-anchor="middle" font-size="12" fill="#e65100">分励线圈 fl</text>
+
+  <rect x="520" y="240" width="110" height="32" rx="5" fill="#ffffff" stroke="#90a4ae"/>
+  <text x="575" y="261" text-anchor="middle" font-size="12" fill="#37474f">储能电机 m</text>
+  <rect x="520" y="300" width="110" height="56" rx="6" fill="#f1f8e9" stroke="#2e7d32"/>
+  <text x="575" y="324" text-anchor="middle" font-size="12" font-weight="bold" fill="#1b5e20">储能弹簧</text>
+  <text x="575" y="344" text-anchor="middle" font-size="11" fill="#546e7a">压缩即「已储能」</text>
+
+  <path d="M184 268 L221 256" stroke="#2e7d32" stroke-width="2" marker-end="url(#arg)"/>
+  <path d="M184 290 L221 298" stroke="#2e7d32" stroke-width="2" marker-end="url(#arg)"/>
+  <path d="M184 300 L221 340" stroke="#2e7d32" stroke-width="2" marker-end="url(#arg)"/>
+  <path d="M184 246 L184 234 L575 234 L575 237" fill="none" stroke="#2e7d32" stroke-width="2" marker-end="url(#arg)"/>
+  <path d="M349 256 L376 256" stroke="#37474f" stroke-width="2" marker-end="url(#ar)"/>
+  <path d="M349 298 L376 298" stroke="#37474f" stroke-width="2" marker-end="url(#ar)"/>
+  <path d="M349 340 L376 340" stroke="#37474f" stroke-width="2" marker-end="url(#ar)"/>
+  <path d="M494 256 L521 300" stroke="#37474f" stroke-width="2" stroke-dasharray="4 3"/>
+  <path d="M494 298 L521 310" stroke="#37474f" stroke-width="2" stroke-dasharray="4 3"/>
+  <path d="M494 340 L521 336" stroke="#37474f" stroke-width="2" stroke-dasharray="4 3"/>
+
+  <!-- 检测回路 -->
+  <rect x="680" y="200" width="290" height="200" rx="8" fill="#ffffff" stroke="#6a1b9a" stroke-width="2"/>
+  <text x="700" y="226" font-size="14" font-weight="bold" fill="#4a148c">三、检测回路</text>
+  <rect x="700" y="240" width="250" height="46" rx="6" fill="#f3e5f5" stroke="#6a1b9a"/>
+  <text x="825" y="260" text-anchor="middle" font-size="13" font-weight="bold" fill="#4a148c">电子脱扣器 et1</text>
+  <text x="825" y="278" text-anchor="middle" font-size="11" fill="#546e7a">电流采样 I+/I− · 电压采样 U+/U−</text>
+  <rect x="700" y="296" width="250" height="32" rx="5" fill="#ffffff" stroke="#90a4ae"/>
+  <text x="825" y="317" text-anchor="middle" font-size="12" fill="#37474f">整定值：In、过载、欠压、逆功率</text>
+  <rect x="700" y="336" width="250" height="46" rx="6" fill="#fce4ec" stroke="#c2185b"/>
+  <text x="825" y="356" text-anchor="middle" font-size="13" font-weight="bold" fill="#880e4f">脱扣输出 t1 / t2</text>
+  <text x="825" y="374" text-anchor="middle" font-size="11" fill="#546e7a">→ 主开关脱扣线圈（et）→ 分闸</text>
+  <path d="M825 332 L825 334" stroke="#37474f" stroke-width="2"/>
+  <path d="M698 218 L662 184" fill="none" stroke="#6a1b9a" stroke-width="1.6" stroke-dasharray="5 4" marker-end="url(#arp)"/>
+  <text x="704" y="197" font-size="11" fill="#6a1b9a">监测主回路电流/电压</text>
+
+  <!-- 说明 -->
+  <rect x="30" y="420" width="940" height="136" rx="8" fill="#ffffff" stroke="#b0bec5"/>
+  <text x="50" y="446" font-size="14" font-weight="bold" fill="#263238">四类部件，四种作用</text>
+  <text x="50" y="472" font-size="12.5" fill="#37474f">· 储能弹簧：先把能量"存"起来，合闸时快速释放，使主触头瞬间闭合（不依赖电源瞬时容量）。</text>
+  <text x="50" y="494" font-size="12.5" fill="#37474f">· 失压脱扣器：线圈带电时锁住脱扣轴；电压过低或失电即释放，主开关自动分闸（防欠压运行）。</text>
+  <text x="50" y="516" font-size="12.5" fill="#37474f">· 分励脱扣器：接到分闸指令（按钮/遥控）时通电顶开脱扣轴，实现电动分闸。</text>
+  <text x="50" y="538" font-size="12.5" fill="#37474f">· 电子脱扣器：采样主回路电流/电压，按 In、过载、欠压、逆功率判断，发出脱扣信号 t1/t2 → 分闸。</text>
+</svg>
