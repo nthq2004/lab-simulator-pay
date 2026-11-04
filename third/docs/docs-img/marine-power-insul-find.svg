@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="560" viewBox="0 0 960 560" font-family="Microsoft YaHei, Arial, sans-serif">
+  <rect width="960" height="560" fill="#ffffff"/>
+  <text x="480" y="32" text-anchor="middle" font-size="19" font-weight="bold" fill="#1b3a5c">图 4  绝缘故障排查流程：先判断「有没有」，再定位「在哪一路」，最后复核「是多少」</text>
+
+  <!-- 箭头定义 -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 z" fill="#5a7a99"/>
+    </marker>
+  </defs>
+
+  <!-- 第一列 -->
+  <g>
+    <rect x="60" y="70" width="210" height="66" rx="8" fill="#f2f8ff" stroke="#2c6ea8" stroke-width="1.8"/>
+    <text x="165" y="96" text-anchor="middle" font-size="13" font-weight="bold" fill="#1b3a5c">① 发现报警</text>
+    <text x="165" y="118" text-anchor="middle" font-size="11" fill="#334">监视仪读数 &lt; 0.1 MΩ</text>
+    <text x="165" y="132" text-anchor="middle" font-size="10" fill="#667">红灯快闪 + 蜂鸣</text>
+
+    <rect x="60" y="176" width="210" height="66" rx="8" fill="#f7f9fb" stroke="#2c6ea8" stroke-width="1.8"/>
+    <text x="165" y="202" text-anchor="middle" font-size="13" font-weight="bold" fill="#1b3a5c">② 消音、消闪</text>
+    <text x="165" y="224" text-anchor="middle" font-size="11" fill="#334">按「消音」「消闪」</text>
+    <text x="165" y="238" text-anchor="middle" font-size="10" fill="#667">报警灯转常亮，故障仍存在</text>
+
+    <rect x="60" y="282" width="210" height="66" rx="8" fill="#fff5f5" stroke="#c0392b" stroke-width="1.8"/>
+    <text x="165" y="308" text-anchor="middle" font-size="13" font-weight="bold" fill="#8e2c20">③ 判断故障相</text>
+    <text x="165" y="330" text-anchor="middle" font-size="11" fill="#334">按住绝缘指示灯「测试」</text>
+    <text x="165" y="344" text-anchor="middle" font-size="10" fill="#667">变暗/熄灭那相 = 故障相</text>
+
+    <rect x="60" y="388" width="210" height="66" rx="8" fill="#fffaf0" stroke="#b58a22" stroke-width="1.8"/>
+    <text x="165" y="414" text-anchor="middle" font-size="13" font-weight="bold" fill="#7a5a10">④ 拉电查找</text>
+    <text x="165" y="436" text-anchor="middle" font-size="11" fill="#334">逐路拉开负载开关</text>
+    <text x="165" y="450" text-anchor="middle" font-size="10" fill="#667">读数恢复 → 该路即故障支路</text>
+  </g>
+
+  <!-- 第二列 -->
+  <g>
+    <rect x="370" y="70" width="230" height="66" rx="8" fill="#f4fbf5" stroke="#3a8b4a" stroke-width="1.8"/>
+    <text x="485" y="96" text-anchor="middle" font-size="13" font-weight="bold" fill="#26622f">⑤ 隔离与挂牌</text>
+    <text x="485" y="118" text-anchor="middle" font-size="11" fill="#334">断开故障支路开关</text>
+    <text x="485" y="132" text-anchor="middle" font-size="10" fill="#667">挂「禁止合闸，有人工作」</text>
+
+    <rect x="370" y="176" width="230" height="66" rx="8" fill="#f4eefa" stroke="#7a4fa8" stroke-width="1.8"/>
+    <text x="485" y="202" text-anchor="middle" font-size="13" font-weight="bold" fill="#54307a">⑥ 兆欧表复核</text>
+    <text x="485" y="224" text-anchor="middle" font-size="11" fill="#334">L 接故障相端子、E 接船体地</text>
+    <text x="485" y="238" text-anchor="middle" font-size="10" fill="#667">摇测确认绝缘值（≈0.05 MΩ）</text>
+
+    <rect x="370" y="282" width="230" height="66" rx="8" fill="#f7f9fb" stroke="#2c6ea8" stroke-width="1.8"/>
+    <text x="485" y="308" text-anchor="middle" font-size="13" font-weight="bold" fill="#1b3a5c">⑦ 修复故障</text>
+    <text x="485" y="330" text-anchor="middle" font-size="11" fill="#334">取消故障设置、恢复绝缘</text>
+    <text x="485" y="344" text-anchor="middle" font-size="10" fill="#667">合回支路开关</text>
+
+    <rect x="370" y="388" width="230" height="66" rx="8" fill="#f4fbf5" stroke="#3a8b4a" stroke-width="1.8"/>
+    <text x="485" y="414" text-anchor="middle" font-size="13" font-weight="bold" fill="#26622f">⑧ 复位恢复供电</text>
+    <text x="485" y="436" text-anchor="middle" font-size="11" fill="#334">读数恢复正常后按「复位」</text>
+    <text x="485" y="450" text-anchor="middle" font-size="10" fill="#667">报警灯熄灭、蜂鸣停止</text>
+  </g>
+
+  <!-- 说明框 -->
+  <g>
+    <rect x="680" y="70" width="230" height="384" rx="8" fill="#ffffff" stroke="#c8d4de" stroke-width="1.4"/>
+    <text x="795" y="96" text-anchor="middle" font-size="13" font-weight="bold" fill="#1b3a5c">为什么先「拉电」再「摇表」</text>
+    <text x="700" y="126" font-size="11" fill="#334">· 拉电查找：带电运行中快速</text>
+    <text x="708" y="144" font-size="11" fill="#334">分段，靠监视仪读数判断，</text>
+    <text x="708" y="162" font-size="11" fill="#334">不必停整段电网。</text>
+    <text x="700" y="192" font-size="11" fill="#334">· 兆欧表复核：停电后测量，</text>
+    <text x="708" y="210" font-size="11" fill="#334">读数即为该相实际绝缘电阻，</text>
+    <text x="708" y="228" font-size="11" fill="#334">不受运行电压干扰。</text>
+    <text x="700" y="258" font-size="11" fill="#334">· 动力支路负载是电动机，应</text>
+    <text x="708" y="276" font-size="11" fill="#334">先停机再操作，避免带载拉</text>
+    <text x="708" y="294" font-size="11" fill="#334">闸产生电弧与工况冲击。</text>
+    <text x="700" y="324" font-size="11" fill="#334">· 照明支路可直接拉照明开关</text>
+    <text x="708" y="342" font-size="11" fill="#334">分段查找。</text>
+    <text x="700" y="372" font-size="11" fill="#8e2c20">· 复位的前提：绝缘已恢复正</text>
+    <text x="708" y="390" font-size="11" fill="#8e2c20">常，否则按键无效（防误复</text>
+    <text x="708" y="408" font-size="11" fill="#8e2c20">位掩盖故障）。</text>
+    <text x="700" y="438" font-size="10" fill="#667">口诀：先判有无、再定相别、</text>
+    <text x="700" y="454" font-size="10" fill="#667">后找支路、最后复核。</text>
+  </g>
+
+  <!-- 箭头 -->
+  <line x1="270" y1="103" x2="366" y2="103" stroke="#5a7a99" stroke-width="1.8" marker-end="url(#arrow)"/>
+  <line x1="165" y1="136" x2="165" y2="172" stroke="#5a7a99" stroke-width="1.8" marker-end="url(#arrow)"/>
+  <line x1="165" y1="242" x2="165" y2="278" stroke="#5a7a99" stroke-width="1.8" marker-end="url(#arrow)"/>
+  <line x1="165" y1="348" x2="165" y2="384" stroke="#5a7a99" stroke-width="1.8" marker-end="url(#arrow)"/>
+
+  <line x1="485" y1="136" x2="485" y2="172" stroke="#5a7a99" stroke-width="1.8" marker-end="url(#arrow)"/>
+  <line x1="485" y1="242" x2="485" y2="278" stroke="#5a7a99" stroke-width="1.8" marker-end="url(#arrow)"/>
+  <line x1="485" y1="348" x2="485" y2="384" stroke="#5a7a99" stroke-width="1.8" marker-end="url(#arrow)"/>
+
+  <!-- ④ → ⑤ 折线 -->
+  <path d="M270 421 L330 421 L330 103 L366 103" fill="none" stroke="#5a7a99" stroke-width="1.8" marker-end="url(#arrow)"/>
+
+  <text x="480" y="530" text-anchor="middle" font-size="11" fill="#667">查找顺序与仿真「项目 1 / 项目 2」的步骤一一对应：项目 1 训练判断，项目 2 训练定位与复核</text>
+</svg>

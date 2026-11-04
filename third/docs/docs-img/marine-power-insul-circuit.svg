@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="470" viewBox="0 0 960 470" font-family="Microsoft YaHei, Arial, sans-serif">
+  <rect width="960" height="470" fill="#ffffff"/>
+  <text x="480" y="30" text-anchor="middle" font-size="19" font-weight="bold" fill="#1b3a5c">图 1  船舶动力电网绝缘监视与故障排查——组成原理</text>
+
+  <!-- 发电机 -->
+  <g>
+    <circle cx="80" cy="150" r="30" fill="#eaf3fb" stroke="#2c6ea8" stroke-width="2"/>
+    <text x="80" y="147" text-anchor="middle" font-size="15" fill="#1b3a5c">G</text>
+    <text x="80" y="164" text-anchor="middle" font-size="10" fill="#1b3a5c">~</text>
+    <text x="80" y="203" text-anchor="middle" font-size="12" fill="#334">同步发电机</text>
+    <text x="80" y="219" text-anchor="middle" font-size="11" fill="#667">80 kW / 400 V</text>
+  </g>
+
+  <!-- 主开关 -->
+  <g>
+    <rect x="150" y="118" width="96" height="64" rx="6" fill="#f7f9fb" stroke="#2c6ea8" stroke-width="2"/>
+    <text x="198" y="145" text-anchor="middle" font-size="13" fill="#1b3a5c">QF1</text>
+    <text x="198" y="163" text-anchor="middle" font-size="10" fill="#667">主开关</text>
+    <text x="198" y="203" text-anchor="middle" font-size="11" fill="#667">储能 / 合闸 / 分励 / 失压</text>
+  </g>
+
+  <!-- 汇流排 -->
+  <g>
+    <rect x="285" y="122" width="260" height="56" rx="4" fill="#fdf7e6" stroke="#b58a22" stroke-width="2"/>
+    <text x="415" y="146" text-anchor="middle" font-size="13" fill="#7a5a10">汇流排 BUS1（L1 / L2 / L3）</text>
+    <text x="415" y="166" text-anchor="middle" font-size="10" fill="#8a6a14">低压配电母排 400 V / 50 Hz</text>
+  </g>
+
+  <!-- 连线 -->
+  <line x1="110" y1="150" x2="150" y2="150" stroke="#2c6ea8" stroke-width="2"/>
+  <line x1="246" y1="150" x2="285" y2="150" stroke="#2c6ea8" stroke-width="2"/>
+
+  <!-- 配电箱 -->
+  <g>
+    <rect x="590" y="100" width="150" height="100" rx="6" fill="#f7f9fb" stroke="#2c6ea8" stroke-width="2"/>
+    <text x="665" y="126" text-anchor="middle" font-size="13" fill="#1b3a5c">低压配电箱 PDB1</text>
+    <text x="612" y="150" font-size="11" fill="#334">SW1 → 电机</text>
+    <text x="612" y="170" font-size="11" fill="#334">SW2 → 照明</text>
+    <text x="612" y="190" font-size="11" fill="#334">SW3 → 可调负载</text>
+  </g>
+  <line x1="545" y1="150" x2="590" y2="150" stroke="#2c6ea8" stroke-width="2"/>
+
+  <!-- 三路负载 -->
+  <g>
+    <rect x="790" y="72" width="140" height="40" rx="5" fill="#eaf6ec" stroke="#3a8b4a" stroke-width="1.6"/>
+    <text x="860" y="97" text-anchor="middle" font-size="12" fill="#26622f">三相异步电机 IM01</text>
+    <rect x="790" y="128" width="140" height="40" rx="5" fill="#fdf7e6" stroke="#b58a22" stroke-width="1.6"/>
+    <text x="860" y="153" text-anchor="middle" font-size="12" fill="#7a5a10">照明 LAMP1~3</text>
+    <rect x="790" y="184" width="140" height="40" rx="5" fill="#f4eefa" stroke="#7a4fa8" stroke-width="1.6"/>
+    <text x="860" y="209" text-anchor="middle" font-size="12" fill="#54307a">可调负载 TLOAD</text>
+    <line x1="740" y1="140" x2="790" y2="92" stroke="#3a8b4a" stroke-width="1.4"/>
+    <line x1="740" y1="150" x2="790" y2="148" stroke="#b58a22" stroke-width="1.4"/>
+    <line x1="740" y1="160" x2="790" y2="204" stroke="#7a4fa8" stroke-width="1.4"/>
+  </g>
+
+  <!-- 母线下缘抽头 -->
+  <circle cx="415" cy="178" r="3.5" fill="#b58a22"/>
+  <line x1="415" y1="178" x2="415" y2="250" stroke="#b58a22" stroke-width="1.6" stroke-dasharray="4 3"/>
+  <text x="425" y="243" font-size="10" fill="#8a6a14">母线抽头（三相）</text>
+
+  <!-- 绝缘指示灯 -->
+  <g>
+    <rect x="120" y="270" width="230" height="120" rx="6" fill="#fff5f5" stroke="#c0392b" stroke-width="1.8"/>
+    <text x="235" y="292" text-anchor="middle" font-size="13" font-weight="bold" fill="#8e2c20">三灯绝缘指示灯 INSUL</text>
+    <circle cx="170" cy="325" r="11" fill="#ffe9a8" stroke="#9a7b16" stroke-width="1.4"/>
+    <circle cx="235" cy="325" r="11" fill="#ffe9a8" stroke="#9a7b16" stroke-width="1.4"/>
+    <circle cx="300" cy="325" r="11" fill="#3c3c3c" stroke="#111" stroke-width="1.4"/>
+    <text x="170" y="308" text-anchor="middle" font-size="10.5" fill="#334">L1</text>
+    <text x="235" y="308" text-anchor="middle" font-size="10.5" fill="#334">L2</text>
+    <text x="300" y="308" text-anchor="middle" font-size="10.5" fill="#334">L3</text>
+    <line x1="170" y1="336" x2="235" y2="360" stroke="#666" stroke-width="1.2"/>
+    <line x1="235" y1="336" x2="235" y2="360" stroke="#666" stroke-width="1.2"/>
+    <line x1="300" y1="336" x2="235" y2="360" stroke="#666" stroke-width="1.2"/>
+    <line x1="235" y1="360" x2="235" y2="374" stroke="#666" stroke-width="1.2"/>
+    <rect x="222" y="374" width="26" height="9" rx="2" fill="#d8d8d8" stroke="#666" stroke-width="1"/>
+    <text x="258" y="382" font-size="9" fill="#666">常开测试按钮</text>
+  </g>
+  <line x1="415" y1="250" x2="350" y2="300" stroke="#b58a22" stroke-width="1.4" stroke-dasharray="4 3"/>
+
+  <!-- 绝缘监视仪 -->
+  <g>
+    <rect x="420" y="270" width="250" height="120" rx="6" fill="#f2f8ff" stroke="#2c6ea8" stroke-width="1.8"/>
+    <text x="545" y="292" text-anchor="middle" font-size="13" font-weight="bold" fill="#1b3a5c">绝缘监视仪 INSULMON</text>
+    <rect x="440" y="304" width="86" height="44" rx="4" fill="#0d1b12" stroke="#333"/>
+    <text x="483" y="325" text-anchor="middle" font-size="14" fill="#43f07a" font-family="Consolas, monospace">0.05 MΩ</text>
+    <text x="483" y="341" text-anchor="middle" font-size="9" fill="#43f07a">阈值 0.1 MΩ</text>
+    <circle cx="556" cy="316" r="9" fill="#ff3020"/>
+    <text x="556" y="345" text-anchor="middle" font-size="9" fill="#666">报警灯</text>
+    <rect x="586" y="304" width="30" height="16" rx="2" fill="#e9e9e9" stroke="#888"/>
+    <text x="601" y="316" text-anchor="middle" font-size="8" fill="#333">消音</text>
+    <rect x="622" y="304" width="30" height="16" rx="2" fill="#e9e9e9" stroke="#888"/>
+    <text x="637" y="316" text-anchor="middle" font-size="8" fill="#333">消闪</text>
+    <rect x="586" y="328" width="30" height="16" rx="2" fill="#e9e9e9" stroke="#888"/>
+    <text x="601" y="340" text-anchor="middle" font-size="8" fill="#333">复位</text>
+    <text x="545" y="380" text-anchor="middle" font-size="10" fill="#667">取三相最小绝缘 → 声光报警</text>
+  </g>
+  <line x1="415" y1="250" x2="480" y2="270" stroke="#b58a22" stroke-width="1.4" stroke-dasharray="4 3"/>
+
+  <!-- 船体地 -->
+  <line x1="235" y1="383" x2="235" y2="410" stroke="#444" stroke-width="1.6"/>
+  <line x1="215" y1="410" x2="255" y2="410" stroke="#444" stroke-width="2"/>
+  <line x1="222" y1="416" x2="248" y2="416" stroke="#444" stroke-width="2"/>
+  <line x1="230" y1="422" x2="240" y2="422" stroke="#444" stroke-width="2"/>
+  <text x="262" y="414" font-size="10" fill="#444">船体地</text>
+
+  <line x1="545" y1="390" x2="545" y2="410" stroke="#444" stroke-width="1.6"/>
+  <line x1="525" y1="410" x2="565" y2="410" stroke="#444" stroke-width="2"/>
+  <line x1="532" y1="416" x2="558" y2="416" stroke="#444" stroke-width="2"/>
+  <line x1="540" y1="422" x2="550" y2="422" stroke="#444" stroke-width="2"/>
+  <text x="572" y="414" font-size="10" fill="#444">船体地</text>
+
+  <text x="480" y="452" text-anchor="middle" font-size="11" fill="#667">绝缘下降处：该相灯变暗/熄灭（图中 L3 相接地 → 该相灯灭），监视仪读数为三相最小绝缘值</text>
+</svg>

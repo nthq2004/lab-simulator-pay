@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="400" viewBox="0 0 960 400" font-family="Microsoft YaHei, Arial, sans-serif">
+  <rect width="960" height="400" fill="#ffffff"/>
+  <text x="480" y="30" text-anchor="middle" font-size="19" font-weight="bold" fill="#1b3a5c">图 2  三灯绝缘指示灯：不同绝缘程度下三灯的表现（定性判断）</text>
+
+  <!-- 三相母线 -->
+  <g stroke-width="2.2">
+    <line x1="90" y1="100" x2="260" y2="100" stroke="#3a9e46"/>
+    <line x1="90" y1="140" x2="260" y2="140" stroke="#e3b12e"/>
+    <line x1="90" y1="180" x2="260" y2="180" stroke="#8b5a2b"/>
+  </g>
+  <text x="70" y="105" font-size="11" fill="#26622f">L1</text>
+  <text x="70" y="145" font-size="11" fill="#7a5a10">L2</text>
+  <text x="70" y="185" font-size="11" fill="#4e3217">L3</text>
+
+  <!-- 三灯 -->
+  <g>
+    <circle cx="330" cy="100" r="16" fill="#ffe9a8" stroke="#9a7b16" stroke-width="1.6"/>
+    <circle cx="330" cy="140" r="16" fill="#ffe9a8" stroke="#9a7b16" stroke-width="1.6"/>
+    <circle cx="330" cy="180" r="16" fill="#ffe9a8" stroke="#9a7b16" stroke-width="1.6"/>
+    <line x1="260" y1="100" x2="312" y2="100" stroke="#666" stroke-width="1.4"/>
+    <line x1="260" y1="140" x2="312" y2="140" stroke="#666" stroke-width="1.4"/>
+    <line x1="260" y1="180" x2="312" y2="180" stroke="#666" stroke-width="1.4"/>
+
+    <!-- 星点 -->
+    <line x1="348" y1="100" x2="420" y2="140" stroke="#666" stroke-width="1.4"/>
+    <line x1="348" y1="140" x2="420" y2="140" stroke="#666" stroke-width="1.4"/>
+    <line x1="348" y1="180" x2="420" y2="140" stroke="#666" stroke-width="1.4"/>
+    <circle cx="420" cy="140" r="4" fill="#666"/>
+  </g>
+
+  <!-- 测试按钮 + 地 -->
+  <line x1="420" y1="140" x2="470" y2="140" stroke="#666" stroke-width="1.4"/>
+  <g>
+    <circle cx="476" cy="140" r="4" fill="#333"/>
+    <line x1="480" y1="140" x2="506" y2="118" stroke="#333" stroke-width="2.2"/>
+    <circle cx="510" cy="114" r="3" fill="#333"/>
+    <text x="492" y="100" font-size="10" fill="#333">测试按钮（常开）</text>
+  </g>
+  <line x1="480" y1="140" x2="480" y2="176" stroke="#333" stroke-width="1.4"/>
+  <line x1="522" y1="140" x2="522" y2="176" stroke="#333" stroke-width="1.4"/>
+  <line x1="470" y1="176" x2="532" y2="176" stroke="#444" stroke-width="2"/>
+  <line x1="480" y1="184" x2="522" y2="184" stroke="#444" stroke-width="2"/>
+  <line x1="490" y1="192" x2="512" y2="192" stroke="#444" stroke-width="2"/>
+  <text x="540" y="182" font-size="10" fill="#444">船体地</text>
+
+  <!-- 三种工况 -->
+  <g>
+    <!-- 正常 -->
+    <rect x="80" y="225" width="270" height="145" rx="6" fill="#f4fbf5" stroke="#3a8b4a" stroke-width="1.6"/>
+    <text x="215" y="248" text-anchor="middle" font-size="13" font-weight="bold" fill="#26622f">① 三相对地绝缘良好</text>
+    <text x="100" y="272" font-size="11" fill="#334">各相绝缘 100 MΩ，与灯串联后</text>
+    <text x="100" y="290" font-size="11" fill="#334">灯上电压接近相电压；</text>
+    <text x="100" y="308" font-size="11" fill="#334">三灯亮度相近、接近全亮。</text>
+    <text x="100" y="336" font-size="11" fill="#26622f">判定：三相绝缘正常。</text>
+    <text x="100" y="356" font-size="10" fill="#667">监视仪读数：≥ 0.1 MΩ，不报警</text>
+
+    <!-- 绝缘低 -->
+    <rect x="365" y="225" width="270" height="145" rx="6" fill="#fffaf0" stroke="#b58a22" stroke-width="1.6"/>
+    <text x="500" y="248" text-anchor="middle" font-size="13" font-weight="bold" fill="#7a5a10">② 某相绝缘下降（0.05 MΩ，已报警）</text>
+    <text x="385" y="272" font-size="11" fill="#334">0.05 MΩ 仍远大于灯丝电阻（几 Ω），</text>
+    <text x="385" y="290" font-size="11" fill="#334">灯上分压变化很小；</text>
+    <text x="385" y="308" font-size="11" fill="#334">三灯亮度几乎不变，仅凭灯难以判断。</text>
+    <text x="385" y="336" font-size="11" fill="#7a5a10">判定：靠监视仪读数（定量）。</text>
+    <text x="385" y="356" font-size="10" fill="#667">监视仪：0.05 MΩ &lt; 0.1 MΩ，声光报警</text>
+
+    <!-- 接地 -->
+    <rect x="650" y="225" width="280" height="145" rx="6" fill="#fff5f5" stroke="#c0392b" stroke-width="1.6"/>
+    <text x="790" y="248" text-anchor="middle" font-size="13" font-weight="bold" fill="#8e2c20">③ 某相直接接地（0 MΩ）</text>
+    <text x="670" y="272" font-size="11" fill="#334">该相与地等电位，灯两端电压≈0；</text>
+    <text x="670" y="290" font-size="11" fill="#334">该相灯完全不亮（熄灭），</text>
+    <text x="670" y="308" font-size="11" fill="#334">另两相仍正常发光。</text>
+    <text x="670" y="336" font-size="11" fill="#8e2c20">判定：熄灭那一相即接地相。</text>
+    <text x="670" y="356" font-size="10" fill="#667">监视仪：读数 0 MΩ，持续报警</text>
+  </g>
+
+  <text x="480" y="392" text-anchor="middle" font-size="11" fill="#667">0.05 MΩ 级绝缘下降时灯亮度几乎不变——"看不见的隐患"要靠监视仪读数发现；灯只对严重接地直观</text>
+</svg>
