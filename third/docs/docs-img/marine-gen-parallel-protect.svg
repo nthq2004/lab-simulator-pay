@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="470" viewBox="0 0 960 470" font-family="Microsoft YaHei, Arial, sans-serif">
+  <rect width="960" height="470" fill="#ffffff"/>
+  <defs>
+    <marker id="a1" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 z" fill="#2c6ea8"/>
+    </marker>
+    <marker id="a2" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 z" fill="#b03a2e"/>
+    </marker>
+    <marker id="a3" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 z" fill="#1d8a4e"/>
+    </marker>
+  </defs>
+  <text x="480" y="30" text-anchor="middle" font-size="19" font-weight="bold" fill="#1b3a5c">图 4  并车保护的动作条件（合闸瞬间判定）</text>
+
+  <!-- 合闸瞬间 -->
+  <g>
+    <rect x="30" y="80" width="170" height="64" rx="8" fill="#eef6ff" stroke="#2c6ea8" stroke-width="2"/>
+    <text x="115" y="106" text-anchor="middle" font-size="13" fill="#1b3a5c">QF2 主触头闭合</text>
+    <text x="115" y="126" text-anchor="middle" font-size="11" fill="#667">合闸完成瞬间采样</text>
+  </g>
+
+  <!-- 前提：已有其它机组在网 -->
+  <g>
+    <polygon points="360,60 470,112 360,164 250,112" fill="#fff6e5" stroke="#c9861a" stroke-width="2"/>
+    <text x="360" y="106" text-anchor="middle" font-size="13" fill="#8a5a00">已有其它机组在网？</text>
+    <text x="360" y="126" text-anchor="middle" font-size="10" fill="#a8763a">（首台投入不检查）</text>
+  </g>
+
+  <!-- 两个判据 -->
+  <g>
+    <rect x="520" y="46" width="400" height="60" rx="6" fill="#f7fbff" stroke="#b9cfe2"/>
+    <text x="536" y="70" font-size="13" fill="#1b3a5c">判据 1：相位差是否落在 60°~270°（非同期区）</text>
+    <text x="536" y="92" font-size="11" fill="#667">越界即判非同期并车</text>
+  </g>
+  <g>
+    <rect x="520" y="118" width="400" height="60" rx="6" fill="#f7fbff" stroke="#b9cfe2"/>
+    <text x="536" y="142" font-size="13" fill="#1b3a5c">判据 2：频差 |Δf| 是否超过 ±0.5 Hz</text>
+    <text x="536" y="164" font-size="11" fill="#667">超限即判频差越限</text>
+  </g>
+
+  <!-- 动作 -->
+  <g>
+    <rect x="520" y="206" width="400" height="76" rx="8" fill="#fdeeee" stroke="#b03a2e" stroke-width="2"/>
+    <text x="720" y="234" text-anchor="middle" font-size="14" fill="#8c2b21" font-weight="bold">并车保护立即动作：全部发电机主开关跳闸</text>
+    <text x="720" y="256" text-anchor="middle" font-size="11" fill="#a8453a">QF1、QF2 同时分闸 → 全船失电（发电机本身不停机，可重新调速再并车）</text>
+  </g>
+
+  <!-- 正常 -->
+  <g>
+    <rect x="520" y="300" width="400" height="66" rx="8" fill="#eafaf1" stroke="#1d8a4e" stroke-width="2"/>
+    <text x="720" y="326" text-anchor="middle" font-size="13" fill="#14683a" font-weight="bold">两判据均满足 → 自动同期、平稳并联</text>
+    <text x="720" y="348" text-anchor="middle" font-size="11" fill="#2f7a52">对齐相位/频率/电压后合闸冲击最小，两机按调差分配负载</text>
+  </g>
+
+  <!-- 连线 -->
+  <g stroke="#2c6ea8" stroke-width="2" fill="none" marker-end="url(#a1)">
+    <line x1="200" y1="112" x2="246" y2="112"/>
+    <path d="M470,112 L516,76"/>
+    <path d="M470,112 L516,148"/>
+  </g>
+  <g stroke="#b03a2e" stroke-width="2" fill="none" marker-end="url(#a2)">
+    <path d="M920,106 L936,106 L936,244 L924,244"/>
+    <path d="M920,178 L936,178 L936,244"/>
+  </g>
+  <text x="230" y="102" font-size="11" fill="#2c6ea8">是</text>
+  <g stroke="#1d8a4e" stroke-width="2" fill="none" marker-end="url(#a3)">
+    <path d="M295,164 L295,404 L716,404 L716,372"/>
+  </g>
+  <text x="300" y="180" font-size="11" fill="#1d8a4e">否：首台投入，直接并联</text>
+
+  <!-- 底部说明 -->
+  <g>
+    <rect x="30" y="410" width="880" height="46" rx="6" fill="#f7fbff" stroke="#b9cfe2" stroke-width="1"/>
+    <text x="470" y="438" text-anchor="middle" font-size="12" fill="#334">
+      非同期或频差越限合闸会产生巨大冲击电流与功率振荡，可能损坏发电机绕组与轴系，因此保护宁可「全船失电」也要切除
+    </text>
+  </g>
+</svg>

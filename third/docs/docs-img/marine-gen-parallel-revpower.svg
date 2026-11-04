@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="440" viewBox="0 0 960 440" font-family="Microsoft YaHei, Arial, sans-serif">
+  <rect width="960" height="440" fill="#ffffff"/>
+  <defs>
+    <marker id="ar1" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 z" fill="#2c6ea8"/>
+    </marker>
+    <marker id="ar2" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 z" fill="#b03a2e"/>
+    </marker>
+  </defs>
+  <text x="480" y="30" text-anchor="middle" font-size="19" font-weight="bold" fill="#1b3a5c">图 5  逆功率的成因与逆功率保护</text>
+
+  <!-- 正常：发电机输出正功率 -->
+  <g>
+    <rect x="40" y="60" width="380" height="120" rx="8" fill="#eafaf1" stroke="#1d8a4e" stroke-width="2"/>
+    <text x="230" y="86" text-anchor="middle" font-size="14" fill="#14683a" font-weight="bold">正常并联运行（同期）</text>
+    <!-- 原动机 -->
+    <circle cx="100" cy="140" r="26" fill="#ffffff" stroke="#1d8a4e" stroke-width="2"/>
+    <text x="100" y="140" text-anchor="middle" font-size="12" fill="#14683a">柴油机</text>
+    <text x="100" y="154" text-anchor="middle" font-size="10" fill="#2f7a52">出力</text>
+    <!-- 发电机 -->
+    <circle cx="230" cy="140" r="26" fill="#ffffff" stroke="#1d8a4e" stroke-width="2"/>
+    <text x="230" y="145" text-anchor="middle" font-size="14" fill="#14683a">G</text>
+    <!-- 电网 -->
+    <rect x="320" y="116" width="80" height="48" rx="6" fill="#fff6e5" stroke="#c9861a" stroke-width="2"/>
+    <text x="360" y="146" text-anchor="middle" font-size="12" fill="#8a5a00">电网</text>
+    <line x1="128" y1="140" x2="200" y2="140" stroke="#1d8a4e" stroke-width="2"/>
+    <line x1="258" y1="140" x2="318" y2="140" stroke="#b03a2e" stroke-width="2" marker-end="url(#ar2)"/>
+    <text x="288" y="132" text-anchor="middle" font-size="10" fill="#b03a2e">P &gt; 0</text>
+    <text x="230" y="172" text-anchor="middle" font-size="10" fill="#2f7a52">原动机带动转子 → 送出有功</text>
+  </g>
+
+  <!-- 故障：原动机停机，被电网拖动 -->
+  <g>
+    <rect x="540" y="60" width="390" height="120" rx="8" fill="#fdeeee" stroke="#b03a2e" stroke-width="2"/>
+    <text x="735" y="86" text-anchor="middle" font-size="14" fill="#8c2b21" font-weight="bold">原动机故障停机后（被拖动）</text>
+    <circle cx="600" cy="140" r="26" fill="#ffffff" stroke="#b03a2e" stroke-width="2" stroke-dasharray="5 4"/>
+    <text x="600" y="140" text-anchor="middle" font-size="12" fill="#8c2b21">柴油机</text>
+    <text x="600" y="154" text-anchor="middle" font-size="10" fill="#a8453a">失去动力</text>
+    <circle cx="730" cy="140" r="26" fill="#ffffff" stroke="#b03a2e" stroke-width="2"/>
+    <text x="730" y="145" text-anchor="middle" font-size="14" fill="#8c2b21">G</text>
+    <rect x="820" y="116" width="80" height="48" rx="6" fill="#fff6e5" stroke="#c9861a" stroke-width="2"/>
+    <text x="860" y="146" text-anchor="middle" font-size="12" fill="#8a5a00">电网</text>
+    <line x1="628" y1="140" x2="700" y2="140" stroke="#b03a2e" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#ar2)"/>
+    <line x1="758" y1="140" x2="818" y2="140" stroke="#2c6ea8" stroke-width="2" marker-end="url(#ar1)"/>
+    <text x="788" y="132" text-anchor="middle" font-size="10" fill="#2c6ea8">P &lt; 0</text>
+    <text x="735" y="172" text-anchor="middle" font-size="10" fill="#a8453a">电网拖动转子 → 吸收有功，柴油机有反转危险</text>
+  </g>
+
+  <!-- 保护流程 -->
+  <g>
+    <rect x="40" y="206" width="880" height="96" rx="8" fill="#f7fbff" stroke="#b9cfe2" stroke-width="1.5"/>
+    <text x="60" y="232" font-size="13" fill="#1b3a5c" font-weight="bold">逆功率保护的判定与动作</text>
+    <text x="60" y="258" font-size="12" fill="#334">① 原动机故障（如冷却水温高）→ 原动机停机，发电机仍并网，被母线拖着转动，有功功率由正转负（逆功率）；</text>
+    <text x="60" y="280" font-size="12" fill="#334">② 逆功率达定值（本工程 8 kW）并持续到整定时间（5 s）→ 该机主开关逆功率保护跳闸，把故障机组解列；</text>
+    <text x="60" y="298" font-size="12" fill="#334">③ 剩余机组继续供电。若逆功率未超定值或故障已排除，计时清零、不动作。</text>
+  </g>
+
+  <!-- 曲线示意 -->
+  <g>
+    <rect x="40" y="318" width="400" height="96" rx="6" fill="#ffffff" stroke="#b9cfe2"/>
+    <text x="60" y="340" font-size="12" fill="#1b3a5c">有功功率 P(t)</text>
+    <line x1="70" y1="398" x2="420" y2="398" stroke="#8a97a3" stroke-width="1.2"/>
+    <line x1="70" y1="352" x2="70" y2="404" stroke="#8a97a3" stroke-width="1.2"/>
+    <line x1="70" y1="380" x2="420" y2="380" stroke="#8a97a3" stroke-width="1" stroke-dasharray="4 4"/>
+    <text x="66" y="384" text-anchor="end" font-size="10" fill="#667">0</text>
+    <path d="M80,368 C140,366 190,372 240,384 C290,394 350,398 410,399" fill="none" stroke="#b03a2e" stroke-width="2.2"/>
+    <line x1="70" y1="392" x2="420" y2="392" stroke="#c9861a" stroke-width="1.4" stroke-dasharray="6 4"/>
+    <text x="414" y="410" text-anchor="end" font-size="10" fill="#a8763a">−8 kW 定值（逆功率整定）</text>
+    <text x="300" y="340" font-size="10" fill="#667">故障后逐渐爬升的逆功率</text>
+  </g>
+
+  <g>
+    <rect x="470" y="318" width="450" height="96" rx="6" fill="#eafaf1" stroke="#1d8a4e"/>
+    <text x="490" y="342" font-size="12" fill="#14683a" font-weight="bold">操纵要点</text>
+    <text x="490" y="364" font-size="11" fill="#14683a">并车后若发现某台机功率为负，应立即检查该机原动机（燃油、冷却水、滑油）；</text>
+    <text x="490" y="384" font-size="11" fill="#14683a">逆功率保护跳闸后该机已解列，需查明原因、排除故障、重新起动调速后再并车。</text>
+    <text x="490" y="404" font-size="11" fill="#14683a">切勿用提高转速的方式「抢回」功率，否则会掩盖原动机故障。</text>
+  </g>
+</svg>

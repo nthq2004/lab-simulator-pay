@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="430" viewBox="0 0 960 430" font-family="Microsoft YaHei, Arial, sans-serif">
+  <rect width="960" height="430" fill="#ffffff"/>
+  <text x="480" y="30" text-anchor="middle" font-size="19" font-weight="bold" fill="#1b3a5c">图 2  数字同步表读数与「可合闸」判定</text>
+
+  <!-- 同步表圆环 -->
+  <g>
+    <circle cx="250" cy="200" r="120" fill="#0d1117" stroke="#3a4a55" stroke-width="2"/>
+    <circle cx="250" cy="200" r="96" fill="none" stroke="#233" stroke-width="1"/>
+    <!-- 24 个 LED -->
+    <g fill="#c9d2db">
+      <circle cx="250" cy="92" r="6"/><circle cx="279" cy="96" r="6"/><circle cx="305" cy="110" r="6"/>
+      <circle cx="326" cy="131" r="6"/><circle cx="340" cy="157" r="6"/><circle cx="348" cy="186" r="6"/>
+      <circle cx="348" cy="214" r="6"/><circle cx="340" cy="243" r="6"/><circle cx="326" cy="269" r="6"/>
+      <circle cx="305" cy="290" r="6"/><circle cx="279" cy="304" r="6"/><circle cx="250" cy="308" r="6"/>
+      <circle cx="221" cy="304" r="6"/><circle cx="195" cy="290" r="6"/><circle cx="174" cy="269" r="6"/>
+      <circle cx="160" cy="243" r="6"/><circle cx="152" cy="214" r="6"/><circle cx="152" cy="186" r="6"/>
+      <circle cx="160" cy="157" r="6"/><circle cx="174" cy="131" r="6"/><circle cx="195" cy="110" r="6"/>
+      <circle cx="221" cy="96" r="6"/><circle cx="236" cy="90" r="6"/><circle cx="264" cy="90" r="6"/>
+    </g>
+    <!-- 准同步绿灯（12 点） -->
+    <circle cx="250" cy="92" r="9" fill="#2ecc71" stroke="#7dffb0" stroke-width="2"/>
+    <!-- 当前点亮位置（约 11 点：顺时针第 22 格） -->
+    <circle cx="236" cy="90" r="8" fill="#ff3020"/>
+    <!-- 中央读数 -->
+    <text x="250" y="182" text-anchor="middle" font-size="15" fill="#00ff88" font-family="Consolas, monospace">Δf 0.20 Hz</text>
+    <text x="250" y="206" text-anchor="middle" font-size="15" fill="#7dd3ff" font-family="Consolas, monospace">Δφ 330°</text>
+    <text x="250" y="232" text-anchor="middle" font-size="12" fill="#8a97a3">顺时针转：f待并 &gt; f母线</text>
+    <text x="250" y="64" text-anchor="middle" font-size="11.5" fill="#14683a">12 点 = 0°（可合闸）</text>
+    <text x="250" y="342" text-anchor="middle" font-size="11.5" fill="#b03a2e">6 点 = 180°（必须避开）</text>
+  </g>
+
+  <!-- 说明文字 -->
+  <g font-size="13" fill="#1b3a5c">
+    <text x="430" y="80" font-size="15" font-weight="bold">三个必须同时满足的条件</text>
+
+    <rect x="430" y="96" width="480" height="54" rx="6" fill="#f7fbff" stroke="#b9cfe2"/>
+    <text x="446" y="118" font-size="13">① 电压相等：待并机电压 ≈ 母线电压（差 &lt; 10 %Un）</text>
+    <text x="446" y="138" font-size="11" fill="#667">电压差大 → 合闸瞬间产生无功环流</text>
+
+    <rect x="430" y="160" width="480" height="54" rx="6" fill="#f7fbff" stroke="#b9cfe2"/>
+    <text x="446" y="182" font-size="13">② 频率接近：|Δf| &lt; 0.5 Hz（本工程保护定值）</text>
+    <text x="446" y="202" font-size="11" fill="#667">频差大 → 有功冲击与功率振荡，保护跳闸</text>
+
+    <rect x="430" y="224" width="480" height="54" rx="6" fill="#f7fbff" stroke="#b9cfe2"/>
+    <text x="446" y="246" font-size="13">③ 相位一致：指针转到 12 点附近（本工程允许区 &lt; 60° 或 &gt; 270°）</text>
+    <text x="446" y="266" font-size="11" fill="#667">相位差落在 60°~270° 属非同期，严禁合闸</text>
+
+    <rect x="430" y="292" width="480" height="76" rx="6" fill="#eafaf1" stroke="#1d8a4e"/>
+    <text x="446" y="316" font-size="13" fill="#14683a" font-weight="bold">操作要领</text>
+    <text x="446" y="338" font-size="12" fill="#14683a">调频使指针缓慢转动（0.1~0.3 Hz，3~5 s 一圈），</text>
+    <text x="446" y="358" font-size="12" fill="#14683a">在指针转到 12 点前后（11~12 点）立刻按下「合闸」。</text>
+  </g>
+</svg>

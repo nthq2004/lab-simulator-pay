@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="400" viewBox="0 0 960 400" font-family="Microsoft YaHei, Arial, sans-serif">
+  <rect width="960" height="400" fill="#ffffff"/>
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 z" fill="#2c6ea8"/>
+    </marker>
+    <marker id="arrR" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 z" fill="#b03a2e"/>
+    </marker>
+    <marker id="arrG" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 z" fill="#1d8a4e"/>
+    </marker>
+  </defs>
+  <text x="480" y="30" text-anchor="middle" font-size="19" font-weight="bold" fill="#1b3a5c">图 3  遥控合闸的联锁逻辑</text>
+
+  <!-- 起点 -->
+  <g>
+    <rect x="30" y="170" width="150" height="60" rx="8" fill="#eef6ff" stroke="#2c6ea8" stroke-width="2"/>
+    <text x="105" y="196" text-anchor="middle" font-size="13" fill="#1b3a5c">按下面板「合闸」</text>
+    <text x="105" y="216" text-anchor="middle" font-size="11" fill="#667">close_a / close_b 输出</text>
+  </g>
+
+  <!-- 判断 1 -->
+  <g>
+    <polygon points="295,120 405,170 295,220 185,170" fill="#fff6e5" stroke="#c9861a" stroke-width="2"/>
+    <text x="295" y="164" text-anchor="middle" font-size="13" fill="#8a5a00">母线已带电？</text>
+    <text x="295" y="184" text-anchor="middle" font-size="10" fill="#a8763a">（无电则无并车问题）</text>
+  </g>
+
+  <!-- 判断 2 -->
+  <g>
+    <polygon points="560,120 670,170 560,220 450,170" fill="#f4f0fb" stroke="#6b4fa8" stroke-width="2"/>
+    <text x="560" y="164" text-anchor="middle" font-size="13" fill="#3f2b70">选择开关在</text>
+    <text x="560" y="184" text-anchor="middle" font-size="13" fill="#3f2b70">本机档位？</text>
+  </g>
+
+  <!-- 允许 -->
+  <g>
+    <rect x="730" y="60" width="200" height="80" rx="8" fill="#eafaf1" stroke="#1d8a4e" stroke-width="2"/>
+    <text x="830" y="90" text-anchor="middle" font-size="13" fill="#14683a" font-weight="bold">输出 24 V 合闸信号</text>
+    <text x="830" y="112" text-anchor="middle" font-size="11" fill="#2f7a52">合闸线圈得电 → 主开关闭合</text>
+  </g>
+  <!-- 封锁 -->
+  <g>
+    <rect x="730" y="200" width="200" height="80" rx="8" fill="#fdeeee" stroke="#b03a2e" stroke-width="2"/>
+    <text x="830" y="230" text-anchor="middle" font-size="13" fill="#8c2b21" font-weight="bold">合闸输出被封锁</text>
+    <text x="830" y="252" text-anchor="middle" font-size="11" fill="#a8453a">主触头不动作（按压动作仍记录）</text>
+  </g>
+
+  <!-- 连线 -->
+  <g stroke="#2c6ea8" stroke-width="2" fill="none" marker-end="url(#arr)">
+    <line x1="180" y1="188" x2="183" y2="183"/>
+    <path d="M180,190 L185,170"/>
+    <line x1="405" y1="170" x2="448" y2="170"/>
+    <path d="M670,170 L728,110"/>
+  </g>
+  <g stroke="#b03a2e" stroke-width="2" fill="none" marker-end="url(#arrR)">
+    <path d="M670,170 L728,236"/>
+  </g>
+
+  <!-- 母线无电 → 直接允许合闸（首台投入） -->
+  <g stroke="#1d8a4e" stroke-width="2" fill="none" marker-end="url(#arrG)">
+    <path d="M295,220 L295,310 L426,310"/>
+  </g>
+  <g>
+    <rect x="430" y="288" width="250" height="46" rx="8" fill="#eafaf1" stroke="#1d8a4e" stroke-width="2"/>
+    <text x="555" y="308" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#14683a">母线无电 → 直接允许合闸</text>
+    <text x="555" y="326" text-anchor="middle" font-size="11" fill="#2f7a52">首台投入，不存在非同期问题，不需同期表</text>
+  </g>
+
+  <!-- 连线文字 -->
+  <text x="424" y="160" text-anchor="middle" font-size="11" fill="#2c6ea8">是</text>
+  <text x="690" y="126" text-anchor="middle" font-size="11" fill="#1d8a4e">是</text>
+  <text x="690" y="222" text-anchor="middle" font-size="11" fill="#b03a2e">否</text>
+  <text x="300" y="240" text-anchor="middle" font-size="11" fill="#1d8a4e">否（母线无电）</text>
+
+  <!-- 底部说明 -->
+  <g>
+    <rect x="30" y="344" width="900" height="50" rx="6" fill="#f7fbff" stroke="#b9cfe2" stroke-width="1"/>
+    <text x="480" y="366" text-anchor="middle" font-size="12" fill="#334">
+      母线无电时：合闸联锁直接放行（不存在非同期问题）；母线有电时：必须把同步表选择开关扳到本机档位，
+    </text>
+    <text x="480" y="384" text-anchor="middle" font-size="12" fill="#334">
+      操作者才能通过同步表确认同步情况，联锁放行后合闸 —— 这就是「并车联锁」的根本目的。
+    </text>
+  </g>
+</svg>
