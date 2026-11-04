@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="440" viewBox="0 0 1000 440" font-family="Microsoft YaHei, Arial">
+  <rect width="1000" height="440" fill="#f7f9f8"/>
+  <text x="500" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#263238">沿电流方向看电压：每一级该是多少伏</text>
+
+  <!-- 波形与数值：五个测点 -->
+  <g font-size="12.5">
+    <!-- ① 变压器副边 -->
+    <g>
+      <text x="100" y="66" text-anchor="middle" font-size="13" font-weight="bold" fill="#0d47a1">① 变压器副边 s1–s2</text>
+      <rect x="40" y="76" width="120" height="70" fill="#ffffff" stroke="#cfd8dc"/>
+      <path d="M50 111 q15 -34 30 0 q15 34 30 0 q15 -34 30 0" fill="none" stroke="#1e88e5" stroke-width="2"/>
+      <line x1="40" y1="111" x2="160" y2="111" stroke="#cfd8dc" stroke-dasharray="3 3"/>
+      <text x="100" y="166" text-anchor="middle" font-size="12" fill="#37474f">12 V 有效值 / 峰约 17 V</text>
+    </g>
+
+    <!-- ② 整流后 -->
+    <g>
+      <text x="270" y="66" text-anchor="middle" font-size="13" font-weight="bold" fill="#0d47a1">② 整流二极管之后</text>
+      <rect x="210" y="76" width="120" height="70" fill="#ffffff" stroke="#cfd8dc"/>
+      <path d="M218 146 L218 96 q15 -30 30 0 L248 146 L248 96 q15 -30 30 0 L278 146 L278 96 q15 -30 30 0 L308 146" fill="none" stroke="#1e88e5" stroke-width="2"/>
+      <text x="270" y="166" text-anchor="middle" font-size="12" fill="#37474f">只剩正半周（脉动直流）</text>
+    </g>
+
+    <!-- ③ 滤波后 -->
+    <g>
+      <text x="440" y="66" text-anchor="middle" font-size="13" font-weight="bold" fill="#0d47a1">③ 滤波电容两端</text>
+      <rect x="380" y="76" width="120" height="70" fill="#ffffff" stroke="#cfd8dc"/>
+      <path d="M386 146 L386 100 q12 -8 24 0 q12 8 24 0 q12 -8 24 0 q12 8 24 0 q12 -8 24 0" fill="none" stroke="#1e88e5" stroke-width="2"/>
+      <text x="440" y="166" text-anchor="middle" font-size="12" fill="#37474f">≈ 15 V（纹波约 1 V）</text>
+    </g>
+
+    <!-- ④ 稳压管两端 -->
+    <g>
+      <text x="610" y="66" text-anchor="middle" font-size="13" font-weight="bold" fill="#1b5e20">④ 稳压管 DZ 两端</text>
+      <rect x="550" y="76" width="120" height="70" fill="#ffffff" stroke="#cfd8dc"/>
+      <line x1="556" y1="112" x2="664" y2="112" stroke="#2e7d32" stroke-width="2.4"/>
+      <text x="610" y="104" text-anchor="middle" font-size="12" fill="#2e7d32">平直</text>
+      <text x="610" y="166" text-anchor="middle" font-size="12" fill="#37474f">6.00 V（基极基准）</text>
+    </g>
+
+    <!-- ⑤ 发射极对地 -->
+    <g>
+      <text x="790" y="66" text-anchor="middle" font-size="13" font-weight="bold" fill="#e65100">⑤ 发射极对地 Ve</text>
+      <rect x="730" y="76" width="120" height="70" fill="#ffffff" stroke="#cfd8dc"/>
+      <line x1="736" y1="118" x2="844" y2="118" stroke="#ef6c00" stroke-width="2.4"/>
+      <text x="790" y="108" text-anchor="middle" font-size="12" fill="#ef6c00">平直</text>
+      <text x="790" y="166" text-anchor="middle" font-size="12" fill="#37474f">5.31 V（= 6 V − Vbe）</text>
+    </g>
+  </g>
+
+  <!-- 箭头链 -->
+  <g stroke="#37474f" stroke-width="2" fill="none">
+    <path d="M160 111 L208 111" marker-end="url(#a1)"/>
+    <path d="M330 111 L378 111" marker-end="url(#a1)"/>
+    <path d="M500 111 L548 111" marker-end="url(#a1)"/>
+    <path d="M670 111 L728 111" marker-end="url(#a1)"/>
+  </g>
+
+  <!-- 电流换算 -->
+  <g>
+    <rect x="120" y="210" width="760" height="96" rx="8" fill="#ffffff" stroke="#b0bec5"/>
+    <text x="140" y="238" font-size="13.5" font-weight="bold" fill="#263238">电流换算（用⑤的读数算充电电流）</text>
+    <text x="140" y="264" font-size="13" fill="#37474f">I = Ve / R　　T1 档：R3 = 53 Ω → I ≈ 5.31 / 53 ≈ 0.100 A = 100 mA</text>
+    <text x="140" y="288" font-size="13" fill="#37474f">　　　　　　　　T2 档：R4 = 106 Ω → I ≈ 5.31 / 106 ≈ 0.050 A = 50 mA</text>
+  </g>
+
+  <!-- 排查口诀 -->
+  <g>
+    <text x="500" y="346" text-anchor="middle" font-size="13" font-weight="bold" fill="#263238">逐级对照，就能判断问题出在哪一级</text>
+    <text x="500" y="374" text-anchor="middle" font-size="12.5" fill="#37474f">②不是脉动波 → 整流二极管接反或开路　　③纹波过粗 → 电容容量不足/失效</text>
+    <text x="500" y="400" text-anchor="middle" font-size="12.5" fill="#37474f">④不是 6 V → 稳压管或 R1 有问题　　⑤与④差值不是 0.7 V 左右 → 三极管发射结异常</text>
+  </g>
+
+  <defs>
+    <marker id="a1" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#37474f"/>
+    </marker>
+  </defs>
+</svg>

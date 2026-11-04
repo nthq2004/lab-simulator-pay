@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="440" viewBox="0 0 1000 440" font-family="Microsoft YaHei, Arial">
+  <rect width="1000" height="440" fill="#f7f9f8"/>
+  <text x="500" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#263238">数字万用表的三个测点（DCV 20 档）</text>
+
+  <!-- ① 滤波电容 -->
+  <g>
+    <rect x="40" y="56" width="290" height="234" rx="8" fill="#ffffff" stroke="#b0bec5"/>
+    <text x="185" y="84" text-anchor="middle" font-size="14" font-weight="bold" fill="#0d47a1">① 滤波电容 C1 两端</text>
+
+    <line x1="185" y1="96" x2="185" y2="120" stroke="#37474f" stroke-width="2"/>
+    <line x1="158" y1="120" x2="212" y2="120" stroke="#37474f" stroke-width="3.5"/>
+    <line x1="158" y1="136" x2="212" y2="136" stroke="#37474f" stroke-width="3.5"/>
+    <line x1="185" y1="136" x2="185" y2="165" stroke="#37474f" stroke-width="2"/>
+    <text x="218" y="112" font-size="12" fill="#37474f">+</text>
+
+    <line x1="110" y1="96" x2="185" y2="96" stroke="#e53935" stroke-width="2.5"/>
+    <circle cx="110" cy="96" r="5" fill="#e53935"/>
+    <text x="92" y="90" font-size="12" fill="#e53935">红</text>
+
+    <line x1="185" y1="165" x2="255" y2="165" stroke="#212121" stroke-width="2.5"/>
+    <circle cx="255" cy="165" r="5" fill="#212121"/>
+    <text x="262" y="160" font-size="12" fill="#212121">黑</text>
+
+    <text x="185" y="204" text-anchor="middle" font-size="12.5" fill="#37474f">整流滤波后的直流电压</text>
+    <text x="185" y="234" text-anchor="middle" font-size="15" font-weight="bold" fill="#c62828">≈ 15 V</text>
+    <text x="185" y="262" text-anchor="middle" font-size="11.5" fill="#607d8b">检查整流与滤波是否正常</text>
+  </g>
+
+  <!-- ② 稳压管 -->
+  <g>
+    <rect x="355" y="56" width="290" height="234" rx="8" fill="#ffffff" stroke="#b0bec5"/>
+    <text x="500" y="84" text-anchor="middle" font-size="14" font-weight="bold" fill="#1b5e20">② 稳压管 DZ 两端</text>
+
+    <line x1="500" y1="96" x2="500" y2="120" stroke="#37474f" stroke-width="2"/>
+    <line x1="472" y1="120" x2="528" y2="120" stroke="#37474f" stroke-width="3.5"/>
+    <line x1="472" y1="120" x2="464" y2="112" stroke="#37474f" stroke-width="2"/>
+    <line x1="528" y1="120" x2="536" y2="128" stroke="#37474f" stroke-width="2"/>
+    <path d="M476 150 L524 150 L500 122 Z" fill="#ffffff" stroke="#37474f" stroke-width="2"/>
+    <line x1="500" y1="150" x2="500" y2="175" stroke="#37474f" stroke-width="2"/>
+
+    <line x1="418" y1="96" x2="500" y2="96" stroke="#e53935" stroke-width="2.5"/>
+    <circle cx="418" cy="96" r="5" fill="#e53935"/>
+    <text x="368" y="90" font-size="12" fill="#e53935">红（阴极）</text>
+
+    <line x1="500" y1="175" x2="578" y2="175" stroke="#212121" stroke-width="2.5"/>
+    <circle cx="578" cy="175" r="5" fill="#212121"/>
+    <text x="584" y="170" font-size="12" fill="#212121">黑（阳极）</text>
+
+    <text x="500" y="208" text-anchor="middle" font-size="12.5" fill="#37474f">基极基准电压（反向击穿）</text>
+    <text x="500" y="238" text-anchor="middle" font-size="15" font-weight="bold" fill="#2e7d32">6.00 V</text>
+    <text x="500" y="264" text-anchor="middle" font-size="11.5" fill="#607d8b">不是 6 V → 查 DZ 与 R1</text>
+  </g>
+
+  <!-- ③ 发射极对地 -->
+  <g>
+    <rect x="670" y="56" width="290" height="234" rx="8" fill="#ffffff" stroke="#b0bec5"/>
+    <text x="815" y="84" text-anchor="middle" font-size="14" font-weight="bold" fill="#e65100">③ 发射极对地 Ve</text>
+
+    <circle cx="812" cy="138" r="30" fill="#ffffff" stroke="#37474f" stroke-width="2"/>
+    <line x1="800" y1="122" x2="800" y2="154" stroke="#37474f" stroke-width="3"/>
+    <line x1="776" y1="138" x2="800" y2="138" stroke="#37474f" stroke-width="2"/>
+    <line x1="800" y1="130" x2="830" y2="114" stroke="#37474f" stroke-width="2"/>
+    <line x1="830" y1="114" x2="830" y2="100" stroke="#37474f" stroke-width="2"/>
+    <line x1="800" y1="146" x2="830" y2="162" stroke="#37474f" stroke-width="2"/>
+    <line x1="830" y1="162" x2="830" y2="180" stroke="#37474f" stroke-width="2"/>
+    <path d="M822 158 L830 164 L821 166 Z" fill="#37474f"/>
+    <text x="770" y="132" font-size="11" fill="#37474f">b</text>
+    <text x="836" y="98" font-size="11" fill="#37474f">c</text>
+    <text x="836" y="194" font-size="11" fill="#37474f">e</text>
+
+    <line x1="760" y1="180" x2="830" y2="180" stroke="#e53935" stroke-width="2.5"/>
+    <circle cx="760" cy="180" r="5" fill="#e53935"/>
+    <text x="700" y="174" font-size="12" fill="#e53935">红（e）</text>
+
+    <line x1="872" y1="180" x2="900" y2="180" stroke="#212121" stroke-width="2.5"/>
+    <circle cx="872" cy="180" r="5" fill="#212121"/>
+    <text x="874" y="172" font-size="12" fill="#212121">黑（地）</text>
+    <line x1="900" y1="180" x2="900" y2="190" stroke="#212121" stroke-width="2.5"/>
+    <line x1="884" y1="190" x2="916" y2="190" stroke="#212121" stroke-width="2.5"/>
+    <line x1="890" y1="196" x2="910" y2="196" stroke="#212121" stroke-width="2.5"/>
+    <line x1="896" y1="202" x2="904" y2="202" stroke="#212121" stroke-width="2.5"/>
+
+    <text x="815" y="232" text-anchor="middle" font-size="12.5" fill="#37474f">= Vb − Vbe，与档位无关</text>
+    <text x="815" y="260" text-anchor="middle" font-size="15" font-weight="bold" fill="#e65100">5.31 V</text>
+  </g>
+
+  <!-- 操作顺序 -->
+  <g>
+    <rect x="40" y="306" width="920" height="108" rx="8" fill="#ffffff" stroke="#b0bec5"/>
+    <text x="60" y="332" font-size="13.5" font-weight="bold" fill="#263238">操作顺序（演示与练习都按这个顺序）</text>
+    <text x="60" y="358" font-size="12.5" fill="#37474f">① 工具栏「选择仪表」勾选"数字万用表" → ② 旋钮拨到 DCV 20 档 → ③ 红表笔接被测点高端、黑表笔接低端</text>
+    <text x="60" y="382" font-size="12.5" fill="#37474f">④ 等读数稳定再记录 → ⑤ 换测点前先把两只表笔拔下来，避免两个测点被表笔并联在一起</text>
+    <text x="60" y="402" font-size="12" fill="#c62828">用电阻档去测带电电路，读数必然不对；测直流电压一定要选 DCV 档。</text>
+  </g>
+</svg>

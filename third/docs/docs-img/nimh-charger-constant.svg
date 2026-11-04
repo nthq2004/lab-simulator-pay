@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="430" viewBox="0 0 1000 430" font-family="Microsoft YaHei, Arial">
+  <rect width="1000" height="430" fill="#f7f9f8"/>
+  <text x="500" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#263238">"恒流"是怎么来的：电池电压变了，电流为什么不变</text>
+
+  <!-- 左：三个固定量 -->
+  <g>
+    <rect x="40" y="60" width="380" height="180" rx="8" fill="#ffffff" stroke="#b0bec5"/>
+    <text x="230" y="88" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#263238">三极管基极被"钉"住了</text>
+
+    <text x="62" y="118" font-size="13" fill="#37474f">① 稳压管 DZ 把基极钳在</text>
+    <text x="230" y="118" font-size="13" font-weight="bold" fill="#2e7d32">Vb = 6 V</text>
+    <text x="62" y="146" font-size="13" fill="#37474f">② 发射结压降固定</text>
+    <text x="230" y="146" font-size="13" font-weight="bold" fill="#2e7d32">Vbe ≈ 0.7 V</text>
+    <text x="62" y="174" font-size="13" fill="#37474f">③ 发射极电位因此固定</text>
+    <text x="230" y="174" font-size="13" font-weight="bold" fill="#e65100">Ve = 6 − 0.7 = 5.3 V</text>
+    <text x="62" y="204" font-size="13" fill="#37474f">④ 发射极电流只由电阻决定</text>
+    <text x="230" y="204" font-size="13" font-weight="bold" fill="#c62828">I = Ve / R</text>
+    <text x="62" y="228" font-size="12" fill="#607d8b">只要三极管还工作在放大区，上式就成立</text>
+  </g>
+
+  <!-- 右：曲线 -->
+  <g>
+    <rect x="450" y="60" width="510" height="180" rx="8" fill="#ffffff" stroke="#b0bec5"/>
+    <text x="705" y="86" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#263238">充电电流与电池电压的关系</text>
+    <!-- 坐标轴 -->
+    <line x1="500" y1="210" x2="930" y2="210" stroke="#37474f" stroke-width="1.6"/>
+    <line x1="500" y1="210" x2="500" y2="104" stroke="#37474f" stroke-width="1.6"/>
+    <text x="930" y="228" text-anchor="end" font-size="11.5" fill="#546e7a">电池电压 / V</text>
+    <text x="506" y="102" font-size="11.5" fill="#546e7a">I / mA</text>
+    <!-- 100mA 平台 -->
+    <line x1="500" y1="132" x2="900" y2="132" stroke="#c62828" stroke-width="2.6"/>
+    <text x="905" y="128" font-size="11.5" font-weight="bold" fill="#c62828">100</text>
+    <!-- 50mA 平台 -->
+    <line x1="500" y1="172" x2="900" y2="172" stroke="#ef6c00" stroke-width="2.6" stroke-dasharray="7 4"/>
+    <text x="905" y="168" font-size="11.5" font-weight="bold" fill="#ef6c00">50</text>
+    <!-- 电池电压区间标注 -->
+    <line x1="620" y1="210" x2="620" y2="214" stroke="#37474f" stroke-width="1.4"/>
+    <line x1="820" y1="210" x2="820" y2="214" stroke="#37474f" stroke-width="1.4"/>
+    <text x="620" y="226" text-anchor="middle" font-size="11" fill="#546e7a">1.20</text>
+    <text x="820" y="226" text-anchor="middle" font-size="11" fill="#546e7a">1.25</text>
+    <text x="720" y="240" text-anchor="middle" font-size="11" fill="#607d8b">正常充电区间：电流是一条水平线</text>
+    <text x="705" y="120" font-size="11.5" fill="#c62828">T1：R3 = 53 Ω</text>
+    <text x="705" y="162" font-size="11.5" fill="#ef6c00">T2：R4 = 106 Ω</text>
+  </g>
+
+  <!-- 底部：结论 -->
+  <g>
+    <rect x="40" y="262" width="920" height="120" rx="8" fill="#e8f5e9" stroke="#2e7d32"/>
+    <text x="60" y="290" font-size="13.5" font-weight="bold" fill="#1b5e20">电池电压升高时，多出来的电压去哪了？</text>
+    <text x="60" y="316" font-size="12.5" fill="#33691e">电池电压升高 → 三极管集电极与发射极之间的电压 Uce 自动减小，把多出来的电压"吃掉"，</text>
+    <text x="60" y="340" font-size="12.5" fill="#33691e">发射极电流（也就是充电电流）基本保持不变。这正是恒流充电与"串一个电阻限流"的本质区别。</text>
+    <text x="60" y="366" font-size="12" fill="#c62828">注意：Uce 已经降到很小（三极管饱和）时恒流就失效了，此时充电电流会随电池电压升高而变小。</text>
+  </g>
+</svg>
