@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="640" viewBox="0 0 1000 640" font-family="Microsoft YaHei, Arial, sans-serif">
+  <defs>
+    <marker id="ar" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 z" fill="#a93226"/>
+    </marker>
+  </defs>
+  <rect width="1000" height="640" fill="#ffffff"/>
+  <text x="500" y="32" text-anchor="middle" font-size="19" font-weight="bold" fill="#1b3a5c">图 2  失压线圈双向联锁与电源切换顺序</text>
+
+  <!-- ===== 左：联锁回路 ===== -->
+  <text x="30" y="62" font-size="14" font-weight="bold" fill="#1b3a5c">① 联锁回路（DC 24 V 供电）</text>
+  <line x1="45" y1="86" x2="45" y2="330" stroke="#a93226" stroke-width="3"/>
+  <text x="30" y="82" font-size="11" font-weight="bold" fill="#a93226">+24 V</text>
+
+  <!-- 支路 1 -->
+  <line x1="45" y1="120" x2="120" y2="120" stroke="#a93226" stroke-width="2"/>
+  <rect x="120" y="86" width="196" height="66" rx="6" fill="#fdf6ec" stroke="#c08a24" stroke-width="2"/>
+  <text x="218" y="108" text-anchor="middle" font-size="11" font-weight="bold" fill="#7a5310">岸电主开关常闭触头</text>
+  <text x="218" y="126" text-anchor="middle" font-size="10" fill="#8a6d3b">pdb1  nc2 → nc1</text>
+  <text x="218" y="143" text-anchor="middle" font-size="9.5" fill="#8a6d3b">合闸到位即断开</text>
+  <line x1="316" y1="120" x2="380" y2="120" stroke="#a93226" stroke-width="2"/>
+  <rect x="380" y="88" width="180" height="64" rx="6" fill="#eaf3fb" stroke="#2c6ea8" stroke-width="2"/>
+  <text x="470" y="112" text-anchor="middle" font-size="11" font-weight="bold" fill="#1b3a5c">船电主开关失压线圈</text>
+  <text x="470" y="132" text-anchor="middle" font-size="10" fill="#46688a">qf1  uv1 → uv2</text>
+  <line x1="560" y1="120" x2="620" y2="120" stroke="#a93226" stroke-width="2"/>
+  <line x1="620" y1="120" x2="620" y2="350" stroke="#2f5c3c" stroke-width="3"/>
+  <text x="620" y="368" text-anchor="middle" font-size="11" font-weight="bold" fill="#2f5c3c">GND（船体）</text>
+  <text x="120" y="80" font-size="10" fill="#a93226">岸电合闸到位 → 船电失压合不上</text>
+
+  <!-- 支路 2 -->
+  <line x1="45" y1="250" x2="90" y2="250" stroke="#a93226" stroke-width="2"/>
+  <rect x="90" y="222" width="130" height="56" rx="6" fill="#fdf6ec" stroke="#c08a24" stroke-width="2"/>
+  <text x="155" y="248" text-anchor="middle" font-size="11" font-weight="bold" fill="#7a5310">负序继电器常闭</text>
+  <text x="155" y="266" text-anchor="middle" font-size="10" fill="#8a6d3b">neg1（负序即断开）</text>
+  <line x1="220" y1="250" x2="250" y2="250" stroke="#a93226" stroke-width="2"/>
+  <rect x="250" y="222" width="150" height="56" rx="6" fill="#eaf3fb" stroke="#2c6ea8" stroke-width="2"/>
+  <text x="325" y="248" text-anchor="middle" font-size="11" font-weight="bold" fill="#1b3a5c">船电主开关常闭触头</text>
+  <text x="325" y="266" text-anchor="middle" font-size="10" fill="#46688a">qf1  nc1 → nc2</text>
+  <line x1="400" y1="250" x2="430" y2="250" stroke="#a93226" stroke-width="2"/>
+  <rect x="430" y="222" width="180" height="56" rx="6" fill="#fdf6ec" stroke="#c08a24" stroke-width="2"/>
+  <text x="520" y="248" text-anchor="middle" font-size="11" font-weight="bold" fill="#7a5310">岸电主开关失压线圈</text>
+  <text x="520" y="266" text-anchor="middle" font-size="10" fill="#8a6d3b">pdb1  sw1_uv1 → sw1_uv2</text>
+  <line x1="610" y1="250" x2="620" y2="250" stroke="#a93226" stroke-width="2"/>
+  <text x="90" y="198" font-size="10" fill="#a93226">船电合闸到位 → 岸电失压合不上</text>
+  <text x="90" y="214" font-size="10" fill="#a93226">岸电相序负序 → 岸电也合不上</text>
+
+  <rect x="30" y="380" width="580" height="90" rx="8" fill="#f7f9fc" stroke="#8aa3b8" stroke-width="1.5"/>
+  <text x="46" y="403" font-size="12" font-weight="bold" fill="#1b3a5c">联锁结论</text>
+  <text x="46" y="424" font-size="11" fill="#33475b">1. 每台主开关的失压线圈由「对方」主开关的常闭辅助触头供电；</text>
+  <text x="46" y="443" font-size="11" fill="#33475b">2. 一台合闸到位 → 常闭断开 → 对方线圈失电 → 对方失压脱扣，<tspan font-weight="bold" fill="#a93226">两路电源只能有一路投入</tspan>；</text>
+  <text x="46" y="462" font-size="11" fill="#33475b">3. 岸电相序为负序或缺相 → 负序继电器常闭断开 → 岸电主开关同样无法合闸。</text>
+
+  <!-- ===== 右：切换顺序 ===== -->
+  <text x="680" y="62" font-size="14" font-weight="bold" fill="#1b3a5c">② 切换顺序</text>
+
+  <!-- 船电 → 岸电 -->
+  <rect x="660" y="78" width="310" height="24" rx="4" fill="#eaf3fb"/>
+  <text x="815" y="95" text-anchor="middle" font-size="12" font-weight="bold" fill="#1b3a5c">船电 → 岸电（先断后合）</text>
+  <g font-size="10.5" fill="#33475b">
+    <rect x="660" y="110" width="310" height="40" rx="6" fill="#ffffff" stroke="#2c6ea8" stroke-width="1.6"/>
+    <text x="674" y="128" font-weight="bold" fill="#1b3a5c">① 起动系统</text>
+    <text x="674" y="143">主发电机运行、船电主开关合闸，负载由船电供电</text>
+
+    <line x1="815" y1="150" x2="815" y2="166" stroke="#a93226" stroke-width="1.6" marker-end="url(#ar)"/>
+
+    <rect x="660" y="170" width="310" height="40" rx="6" fill="#ffffff" stroke="#2c6ea8" stroke-width="1.6"/>
+    <text x="674" y="188" font-weight="bold" fill="#1b3a5c">② 接岸电四线 + 合电源</text>
+    <text x="674" y="203">U/V/W 接 in1~in3，N 接船体接线柱，合上岸电电源</text>
+
+    <line x1="815" y1="210" x2="815" y2="226" stroke="#a93226" stroke-width="1.6" marker-end="url(#ar)"/>
+
+    <rect x="660" y="230" width="310" height="40" rx="6" fill="#ffffff" stroke="#2c6ea8" stroke-width="1.6"/>
+    <text x="674" y="248" font-weight="bold" fill="#1b3a5c">③ 相序开关「相序1」+ 确认正序</text>
+    <text x="674" y="263">正序灯亮（负序灯灭），说明输出相序正确</text>
+
+    <line x1="815" y1="270" x2="815" y2="286" stroke="#a93226" stroke-width="1.6" marker-end="url(#ar)"/>
+
+    <rect x="660" y="290" width="310" height="40" rx="6" fill="#ffffff" stroke="#2c6ea8" stroke-width="1.6"/>
+    <text x="674" y="308" font-weight="bold" fill="#1b3a5c">④ 合上岸电箱空气开关</text>
+    <text x="674" y="323">岸电箱输出带电，负序继电器开始监视相序</text>
+
+    <line x1="815" y1="330" x2="815" y2="346" stroke="#a93226" stroke-width="1.6" marker-end="url(#ar)"/>
+
+    <rect x="660" y="350" width="310" height="40" rx="6" fill="#fdf6ec" stroke="#c08a24" stroke-width="2"/>
+    <text x="674" y="368" font-weight="bold" fill="#7a5310">⑤ 分闸船电主开关（断电间隙）</text>
+    <text x="674" y="383">先断船电，避免与岸电非同期并列</text>
+
+    <line x1="815" y1="390" x2="815" y2="406" stroke="#a93226" stroke-width="1.6" marker-end="url(#ar)"/>
+
+    <rect x="660" y="410" width="310" height="40" rx="6" fill="#fdf6ec" stroke="#c08a24" stroke-width="2"/>
+    <text x="674" y="428" font-weight="bold" fill="#7a5310">⑥ 合闸岸电主开关</text>
+    <text x="674" y="443">岸电经汇流排给负载供电，负载灯保持点亮</text>
+
+    <line x1="815" y1="450" x2="815" y2="466" stroke="#a93226" stroke-width="1.6" marker-end="url(#ar)"/>
+
+    <rect x="660" y="470" width="310" height="56" rx="6" fill="#eef3ee" stroke="#4a7c59" stroke-width="1.6"/>
+    <text x="674" y="489" font-weight="bold" fill="#2f5c3c">岸电 → 船电（反向操作）</text>
+    <text x="674" y="505">分岸电主开关 → 起动主发电机 → 合船电主开关；</text>
+    <text x="674" y="520">岸电未退出前，船电主开关因联锁合不上（合上即跳）。</text>
+  </g>
+</svg>

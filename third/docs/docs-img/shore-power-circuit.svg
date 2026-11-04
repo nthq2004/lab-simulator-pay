@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="680" viewBox="0 0 1000 680" font-family="Microsoft YaHei, Arial, sans-serif">
+  <rect width="1000" height="680" fill="#ffffff"/>
+  <defs>
+    <marker id="ag" markerWidth="9" markerHeight="8" refX="8" refY="4" orient="auto">
+      <path d="M0,0 L9,4 L0,8 z" fill="#4a7c59"/>
+    </marker>
+  </defs>
+  <text x="500" y="34" text-anchor="middle" font-size="19" font-weight="bold" fill="#1b3a5c">图 1  船舶岸电接入系统组成（船电 ⇄ 岸电）</text>
+
+  <!-- 汇流排 -->
+  <rect x="250" y="150" width="540" height="18" rx="4" fill="#2c6ea8"/>
+  <text x="520" y="118" text-anchor="middle" font-size="13" font-weight="bold" fill="#1b3a5c">汇流排 BUS1（400 V / 50 Hz）</text>
+  <text x="250" y="144" text-anchor="middle" font-size="11" fill="#46688a">第 2 口</text>
+  <text x="680" y="144" text-anchor="middle" font-size="11" fill="#46688a">第 6 口</text>
+  <text x="420" y="144" text-anchor="middle" font-size="11" fill="#46688a">第 10 口</text>
+
+  <!-- 船电：发电机 → 主开关 → 汇流排 -->
+  <line x1="135" y1="500" x2="135" y2="410" stroke="#2c6ea8" stroke-width="3"/>
+  <line x1="135" y1="300" x2="135" y2="168" stroke="#2c6ea8" stroke-width="3"/>
+  <line x1="135" y1="168" x2="250" y2="168" stroke="#2c6ea8" stroke-width="3"/>
+  <rect x="60" y="500" width="150" height="92" rx="8" fill="#eaf3fb" stroke="#2c6ea8" stroke-width="2"/>
+  <text x="135" y="527" text-anchor="middle" font-size="13" font-weight="bold" fill="#1b3a5c">1# 同步发电机</text>
+  <text x="135" y="548" text-anchor="middle" font-size="11" fill="#46688a">gen1</text>
+  <text x="135" y="569" text-anchor="middle" font-size="11" fill="#46688a">80 kW / 400 V / 50 Hz</text>
+
+  <rect x="75" y="300" width="120" height="110" rx="8" fill="#eaf3fb" stroke="#2c6ea8" stroke-width="2"/>
+  <text x="135" y="327" text-anchor="middle" font-size="12" font-weight="bold" fill="#1b3a5c">船电主开关</text>
+  <text x="135" y="347" text-anchor="middle" font-size="11" fill="#46688a">qf1（框架式 ACB）</text>
+  <text x="135" y="368" text-anchor="middle" font-size="10" fill="#46688a">储能 / 合闸 / 分励</text>
+  <text x="135" y="386" text-anchor="middle" font-size="10" fill="#46688a">失压线圈 + 常闭辅助</text>
+
+  <!-- 负载灯（星形） -->
+  <line x1="420" y1="168" x2="420" y2="240" stroke="#2c6ea8" stroke-width="2"/>
+  <line x1="470" y1="168" x2="470" y2="286" stroke="#2c6ea8" stroke-width="2"/>
+  <line x1="520" y1="168" x2="520" y2="332" stroke="#2c6ea8" stroke-width="2"/>
+  <circle cx="420" cy="256" r="15" fill="#fdf6ec" stroke="#c08a24" stroke-width="2"/>
+  <circle cx="470" cy="302" r="15" fill="#fdf6ec" stroke="#c08a24" stroke-width="2"/>
+  <circle cx="520" cy="348" r="15" fill="#fdf6ec" stroke="#c08a24" stroke-width="2"/>
+  <line x1="420" y1="271" x2="470" y2="430" stroke="#c08a24" stroke-width="2"/>
+  <line x1="470" y1="317" x2="470" y2="430" stroke="#c08a24" stroke-width="2"/>
+  <line x1="520" y1="363" x2="470" y2="430" stroke="#c08a24" stroke-width="2"/>
+  <circle cx="470" cy="430" r="4" fill="#c08a24"/>
+  <text x="575" y="256" font-size="11" fill="#8a6d3b">L1 灯 bl1</text>
+  <text x="575" y="302" font-size="11" fill="#8a6d3b">L2 灯 bl2</text>
+  <text x="575" y="348" font-size="11" fill="#8a6d3b">L3 灯 bl3</text>
+  <text x="470" y="455" text-anchor="middle" font-size="11" fill="#8a6d3b">三灯星形连接（冷态 48.4 Ω），中性点不接地</text>
+
+  <!-- 岸电：电源 → 岸电箱 → 岸电主开关 → 汇流排 -->
+  <line x1="715" y1="240" x2="715" y2="168" stroke="#c08a24" stroke-width="3"/>
+  <line x1="830" y1="290" x2="770" y2="290" stroke="#c08a24" stroke-width="3"/>
+  <line x1="910" y1="480" x2="910" y2="378" stroke="#c08a24" stroke-width="3"/>
+  <rect x="660" y="240" width="110" height="105" rx="8" fill="#fdf6ec" stroke="#c08a24" stroke-width="2"/>
+  <text x="715" y="266" text-anchor="middle" font-size="12" font-weight="bold" fill="#7a5310">岸电主开关</text>
+  <text x="715" y="286" text-anchor="middle" font-size="11" fill="#8a6d3b">pdb1（塑壳）</text>
+  <text x="715" y="307" text-anchor="middle" font-size="10" fill="#8a6d3b">失压线圈</text>
+  <text x="715" y="325" text-anchor="middle" font-size="10" fill="#8a6d3b">常闭辅助触头</text>
+
+  <rect x="830" y="240" width="152" height="138" rx="8" fill="#fdf6ec" stroke="#c08a24" stroke-width="2"/>
+  <text x="906" y="266" text-anchor="middle" font-size="12" font-weight="bold" fill="#7a5310">岸电箱 shorebox1</text>
+  <text x="906" y="288" text-anchor="middle" font-size="10" fill="#8a6d3b">相序检测（正序 / 负序灯）</text>
+  <text x="906" y="308" text-anchor="middle" font-size="10" fill="#8a6d3b">相序转换开关（相序1 / 相序2）</text>
+  <text x="906" y="328" text-anchor="middle" font-size="10" fill="#8a6d3b">出口空气开关（刀片式）</text>
+  <text x="906" y="350" text-anchor="middle" font-size="10" fill="#8a6d3b">进线 in1/in2/in3，中线接船体</text>
+  <text x="906" y="370" text-anchor="middle" font-size="10" fill="#8a6d3b">输出 t1/t2/t3</text>
+
+  <rect x="845" y="480" width="130" height="92" rx="8" fill="#fdf6ec" stroke="#c08a24" stroke-width="2"/>
+  <text x="910" y="507" text-anchor="middle" font-size="12" font-weight="bold" fill="#7a5310">岸电电源</text>
+  <text x="910" y="528" text-anchor="middle" font-size="11" fill="#8a6d3b">shore_in</text>
+  <text x="910" y="549" text-anchor="middle" font-size="10" fill="#8a6d3b">三相四线 220 V / 50 Hz</text>
+
+  <!-- 负序继电器 -->
+  <path d="M 880 378 L 880 467 L 740 467" fill="none" stroke="#c08a24" stroke-width="2" stroke-dasharray="6 4"/>
+  <rect x="600" y="430" width="140" height="76" rx="8" fill="#fdf6ec" stroke="#c08a24" stroke-width="2"/>
+  <text x="670" y="456" text-anchor="middle" font-size="12" font-weight="bold" fill="#7a5310">负序继电器 neg1</text>
+  <text x="670" y="476" text-anchor="middle" font-size="10" fill="#8a6d3b">正序：常闭闭合（允许接入）</text>
+  <text x="670" y="494" text-anchor="middle" font-size="10" fill="#8a6d3b">负序/缺相：常闭断开（禁止）</text>
+
+  <!-- 联锁说明 -->
+  <path d="M 198 320 L 655 320" fill="none" stroke="#c0392b" stroke-width="2.5" stroke-dasharray="9 5"/>
+  <path d="M 208 314 L 198 320 L 208 326" fill="none" stroke="#c0392b" stroke-width="2"/>
+  <path d="M 645 314 L 655 320 L 645 326" fill="none" stroke="#c0392b" stroke-width="2"/>
+  <text x="214" y="311" font-size="11" font-weight="bold" fill="#a93226">失压线圈双向联锁（见图 2）</text>
+
+  <!-- 控制电源 -->
+  <rect x="60" y="620" width="150" height="48" rx="8" fill="#eef3ee" stroke="#4a7c59" stroke-width="2"/>
+  <text x="135" y="641" text-anchor="middle" font-size="12" font-weight="bold" fill="#2f5c3c">DC 24 V 控制电源</text>
+  <text x="135" y="659" text-anchor="middle" font-size="10" fill="#3f6b4c">dc_uv</text>
+  <path d="M 210 644 L 620 644 L 620 508" fill="none" stroke="#4a7c59" stroke-width="2" marker-end="url(#ag)"/>
+  <text x="232" y="662" font-size="10" fill="#3f6b4c">DC 24 V → 负序继电器常闭 + 两台主开关失压/储能/合闸/分励线圈 + 遥控面板</text>
+</svg>
