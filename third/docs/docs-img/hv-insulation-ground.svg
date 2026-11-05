@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="430" viewBox="0 0 980 430" font-family="Microsoft YaHei, PingFang SC, sans-serif">
+  <rect width="980" height="430" fill="#ffffff"/>
+  <text x="490" y="28" font-size="17" font-weight="bold" fill="#1a252f" text-anchor="middle">图 3　左段汇流排单相接地：先「分区判断」，再「逐相测量」</text>
+
+  <!-- 左段 -->
+  <line x1="80" y1="120" x2="380" y2="120" stroke="#2c3e50" stroke-width="4"/>
+  <text x="90" y="106" font-size="11" fill="#2c3e50">左段 bus1（1# 机组供电）</text>
+  <!-- 故障相 C 接地 -->
+  <line x1="300" y1="120" x2="300" y2="176" stroke="#c0392b" stroke-width="2.4"/>
+  <rect x="292" y="176" width="16" height="24" fill="#ffffff" stroke="#c0392b" stroke-width="1.6"/>
+  <text x="316" y="192" font-size="10" fill="#c0392b">C 相绝缘降到 10 kΩ</text>
+  <line x1="300" y1="200" x2="300" y2="216" stroke="#c0392b" stroke-width="1.8"/>
+  <line x1="288" y1="216" x2="312" y2="216" stroke="#c0392b" stroke-width="1.8"/>
+
+  <!-- 接地监视仪 -->
+  <line x1="200" y1="120" x2="200" y2="150" stroke="#2c3e50" stroke-width="1.6"/>
+  <rect x="140" y="150" width="120" height="66" rx="4" fill="#ffffff" stroke="#2c3e50" stroke-width="1.5"/>
+  <text x="200" y="166" font-size="9" fill="#2c3e50" text-anchor="middle">高压接地监视仪</text>
+  <text x="152" y="184" font-size="9" fill="#555">A  ∞ MΩ</text>
+  <text x="152" y="197" font-size="9" fill="#555">B  ∞ MΩ</text>
+  <text x="152" y="210" font-size="9" fill="#c0392b">C  0.01 MΩ</text>
+  <circle cx="238" cy="205" r="5" fill="#e74c3c"/>
+  <text x="204" y="232" font-size="9" fill="#7f8c8d" text-anchor="middle">红灯闪 + 蜂鸣 → 按「确认」</text>
+
+  <!-- 母联 -->
+  <rect x="380" y="100" width="56" height="40" rx="3" fill="#eef3f7" stroke="#2c3e50" stroke-width="1.4"/>
+  <text x="408" y="120" font-size="10" fill="#2c3e50" text-anchor="middle">vcbs2</text>
+  <text x="408" y="133" font-size="9" fill="#c0392b" text-anchor="middle">断开</text>
+  <line x1="436" y1="120" x2="480" y2="120" stroke="#2c3e50" stroke-width="2"/>
+  <line x1="480" y1="80" x2="480" y2="180" stroke="#95a5a6" stroke-width="3.4" stroke-dasharray="7 4"/>
+  <text x="480" y="198" font-size="10" fill="#7f8c8d" text-anchor="middle">右段失电</text>
+
+  <!-- 判断结论 -->
+  <rect x="520" y="86" width="420" height="52" rx="5" fill="#eaf2fb" stroke="#1c6ea4" stroke-width="1.3"/>
+  <text x="538" y="106" font-size="11" fill="#1c6ea4" font-weight="bold">断开母联后报警仍保持 → 故障在左段（1# 机组侧）</text>
+  <text x="538" y="126" font-size="10" fill="#2c3e50">若报警消失，则故障在右段；这是"分区分段"缩小查找范围的第一步</text>
+
+  <!-- 兆欧表 -->
+  <text x="120" y="272" font-size="12" font-weight="bold" fill="#2c3e50">左段失电后：2500V 手摇兆欧表逐相测量</text>
+  <rect x="120" y="288" width="120" height="86" rx="6" fill="#fffdf5" stroke="#b7950b" stroke-width="1.5"/>
+  <circle cx="180" cy="330" r="26" fill="#ffffff" stroke="#b7950b" stroke-width="1.4"/>
+  <line x1="180" y1="330" x2="196" y2="312" stroke="#c0392b" stroke-width="2"/>
+  <text x="180" y="366" font-size="9" fill="#8a6d0b" text-anchor="middle">megohm 2500V</text>
+  <text x="106" y="322" font-size="10" fill="#2c3e50">L</text>
+  <text x="250" y="322" font-size="10" fill="#2c3e50">E → 地</text>
+  <line x1="120" y1="318" x2="150" y2="318" stroke="#2c3e50" stroke-width="1.6"/>
+  <line x1="212" y1="318" x2="246" y2="318" stroke="#2c3e50" stroke-width="1.6"/>
+
+  <!-- 测量结果表 -->
+  <g font-size="11" fill="#2c3e50">
+    <rect x="300" y="286" width="320" height="96" rx="4" fill="#fbfcfd" stroke="#bdc3c7" stroke-width="1.2"/>
+    <text x="316" y="306" font-size="11" font-weight="bold">测量相 → 读数 → 判定</text>
+    <line x1="310" y1="314" x2="610" y2="314" stroke="#d5dbdb" stroke-width="1"/>
+    <text x="316" y="332">L→A 相：读数 ∞（正常）</text>
+    <text x="316" y="352">L→B 相：读数 ∞（正常）</text>
+    <text x="316" y="372" fill="#c0392b" font-weight="bold">L→C 相：0.01 MΩ（＜1MΩ）</text>
+  </g>
+
+  <!-- 结论 -->
+  <rect x="650" y="286" width="290" height="96" rx="4" fill="#fef5f4" stroke="#c0392b" stroke-width="1.3"/>
+  <text x="666" y="308" font-size="11" fill="#c0392b" font-weight="bold">判定：左段汇流排 C 相接地</text>
+  <text x="666" y="330" font-size="10" fill="#2c3e50">① 先分段：断母联看报警是否消失</text>
+  <text x="666" y="350" font-size="10" fill="#2c3e50">② 再定位：停电、验电、放电后逐相摇绝缘</text>
+  <text x="666" y="370" font-size="10" fill="#2c3e50">③ 测毕对被测相充分放电，挂接地线后检修</text>
+
+  <!-- 提示 -->
+  <text x="120" y="404" font-size="10" fill="#7f8c8d">注意：带电摇绝缘既测不准也极危险；本流程必须先"分闸 → 停机"，确认母线无压后再调出兆欧表。</text>
+</svg>

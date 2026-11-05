@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="520" viewBox="0 0 980 520" font-family="Microsoft YaHei, PingFang SC, sans-serif">
+  <rect width="980" height="520" fill="#ffffff"/>
+  <text x="490" y="28" font-size="17" font-weight="bold" fill="#1a252f" text-anchor="middle">图 4　真空断路器的五防联锁与隔离操作顺序</text>
+
+  <!-- 状态栏 -->
+  <text x="60" y="70" font-size="12" font-weight="bold" fill="#2c3e50">当前状态</text>
+  <text x="150" y="70" font-size="12" font-weight="bold" fill="#2c3e50">允许 / 禁止的操作</text>
+  <text x="700" y="70" font-size="12" font-weight="bold" fill="#2c3e50">对应「五防」</text>
+  <line x1="40" y1="80" x2="940" y2="80" stroke="#bdc3c7" stroke-width="1.2"/>
+
+  <!-- 行 1：合闸（工作位、带电） -->
+  <rect x="50" y="92" width="86" height="46" rx="5" fill="#fdecea" stroke="#c0392b" stroke-width="1.4"/>
+  <text x="93" y="111" font-size="11" fill="#c0392b" text-anchor="middle">合闸运行</text>
+  <text x="93" y="127" font-size="9" fill="#c0392b" text-anchor="middle">连接位·带电</text>
+  <text x="150" y="108" font-size="11" fill="#2c3e50">✕ 摇柄插不进，工作位摇不动（带负荷）</text>
+  <text x="150" y="128" font-size="11" fill="#2c3e50">✕ 接地开关闭锁、柜门闭锁</text>
+  <text x="700" y="108" font-size="11" fill="#1c6ea4">防带负荷拉合隔离</text>
+  <text x="700" y="128" font-size="11" fill="#1c6ea4">防带电合接地开关 / 防误入带电间隔</text>
+
+  <!-- 行 2：分闸 + 工作位 -->
+  <rect x="50" y="156" width="86" height="46" rx="5" fill="#fdf6e3" stroke="#b7950b" stroke-width="1.4"/>
+  <text x="93" y="175" font-size="11" fill="#8a6d0b" text-anchor="middle">分闸·连接位</text>
+  <text x="93" y="191" font-size="9" fill="#8a6d0b" text-anchor="middle">未接地</text>
+  <text x="150" y="172" font-size="11" fill="#2c3e50">✓ 可摇到试验位（3 点点动 = 1 档）</text>
+  <text x="150" y="192" font-size="11" fill="#2c3e50">✕ 柜门仍闭锁（未可靠接地）</text>
+  <text x="700" y="172" font-size="11" fill="#1c6ea4">防误入带电间隔</text>
+  <text x="700" y="192" font-size="11" fill="#7f8c8d">（先隔离、后接地、再开门）</text>
+
+  <!-- 行 3：试验位 -->
+  <rect x="50" y="220" width="86" height="46" rx="5" fill="#eaf7ee" stroke="#27ae60" stroke-width="1.4"/>
+  <text x="93" y="239" font-size="11" fill="#1e6b3a" text-anchor="middle">试验位</text>
+  <text x="93" y="255" font-size="9" fill="#1e6b3a" text-anchor="middle">两侧无压</text>
+  <text x="150" y="236" font-size="11" fill="#2c3e50">✓ 电磁锁可解锁 → 插入摇柄</text>
+  <text x="150" y="256" font-size="11" fill="#2c3e50">✓ 顺时针摇 5 圈 → 三相接地开关闭合</text>
+  <text x="700" y="236" font-size="11" fill="#1c6ea4">停电—验电—接地</text>
+  <text x="700" y="256" font-size="11" fill="#1c6ea4">防带电挂接地线</text>
+
+  <!-- 行 4：接地闭合 -->
+  <rect x="50" y="284" width="86" height="46" rx="5" fill="#eef3f7" stroke="#2c3e50" stroke-width="1.4"/>
+  <text x="93" y="303" font-size="11" fill="#2c3e50" text-anchor="middle">接地开关合</text>
+  <text x="93" y="319" font-size="9" fill="#7f8c8d" text-anchor="middle">负荷侧已接地</text>
+  <text x="150" y="300" font-size="11" fill="#2c3e50">✓ 柜门解锁，可开门检修</text>
+  <text x="150" y="320" font-size="11" fill="#2c3e50">✕ 合闸回路闭锁（合闸按钮盖锁死）</text>
+  <text x="700" y="300" font-size="11" fill="#1c6ea4">防带接地线合闸</text>
+  <text x="700" y="320" font-size="11" fill="#7f8c8d">（与上一条构成双向互锁）</text>
+
+  <!-- 行 5：检修位 -->
+  <rect x="50" y="348" width="86" height="46" rx="5" fill="#f4ecf7" stroke="#8e44ad" stroke-width="1.4"/>
+  <text x="93" y="367" font-size="11" fill="#6c3483" text-anchor="middle">检修位</text>
+  <text x="93" y="383" font-size="9" fill="#6c3483" text-anchor="middle">一二次全断</text>
+  <text x="150" y="364" font-size="11" fill="#2c3e50">✕ 合闸失效（合闸盖"检修闭锁"）</text>
+  <text x="150" y="384" font-size="11" fill="#2c3e50">✓ 可检修一次隔离与二次回路</text>
+  <text x="700" y="364" font-size="11" fill="#1c6ea4">防误分误合</text>
+  <text x="700" y="384" font-size="11" fill="#1c6ea4">防误入带电间隔</text>
+
+  <!-- 底部：操作顺序链 -->
+  <line x1="40" y1="416" x2="940" y2="416" stroke="#bdc3c7" stroke-width="1.2"/>
+  <text x="60" y="442" font-size="12" font-weight="bold" fill="#2c3e50">停电操作顺序（本工程流程 4）</text>
+
+  <g font-size="10.5" fill="#2c3e50">
+    <rect x="60" y="452" width="104" height="30" rx="15" fill="#eef3f7" stroke="#2c3e50" stroke-width="1.2"/>
+    <text x="112" y="472" text-anchor="middle">① 分闸（卸负荷）</text>
+    <path d="M164 467 L188 467" stroke="#2c3e50" stroke-width="1.6"/><polygon points="188,467 180,463 180,471" fill="#2c3e50"/>
+
+    <rect x="190" y="452" width="104" height="30" rx="15" fill="#eef3f7" stroke="#2c3e50" stroke-width="1.2"/>
+    <text x="242" y="472" text-anchor="middle">② 停机、验电</text>
+    <path d="M294 467 L318 467" stroke="#2c3e50" stroke-width="1.6"/><polygon points="318,467 310,463 310,471" fill="#2c3e50"/>
+
+    <rect x="320" y="452" width="120" height="30" rx="15" fill="#eef3f7" stroke="#2c3e50" stroke-width="1.2"/>
+    <text x="380" y="472" text-anchor="middle">③ 摇至试验位</text>
+    <path d="M440 467 L464 467" stroke="#2c3e50" stroke-width="1.6"/><polygon points="464,467 456,463 456,471" fill="#2c3e50"/>
+
+    <rect x="466" y="452" width="120" height="30" rx="15" fill="#eef3f7" stroke="#2c3e50" stroke-width="1.2"/>
+    <text x="526" y="472" text-anchor="middle">④ 合接地开关</text>
+    <path d="M586 467 L610 467" stroke="#2c3e50" stroke-width="1.6"/><polygon points="610,467 602,463 602,471" fill="#2c3e50"/>
+
+    <rect x="612" y="452" width="120" height="30" rx="15" fill="#eef3f7" stroke="#2c3e50" stroke-width="1.2"/>
+    <text x="672" y="472" text-anchor="middle">⑤ 开门检修</text>
+  </g>
+  <text x="60" y="506" font-size="11" fill="#7f8c8d">送电严格反向：关门 → 断接地 → 摇回连接位 → 起机 → 合闸</text>
+</svg>
