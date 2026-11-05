@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="440" viewBox="0 0 980 440" font-family="Microsoft YaHei, PingFang SC, sans-serif">
+  <rect width="980" height="440" fill="#ffffff"/>
+  <text x="490" y="28" font-size="17" font-weight="bold" fill="#1a252f" text-anchor="middle">图 1　船舶高压系统（6.6 kV）组成与绝缘监测接入点</text>
+
+  <!-- 1# 高压发电机 -->
+  <rect x="40" y="70" width="150" height="96" rx="6" fill="#eef4fb" stroke="#2471a3" stroke-width="1.6"/>
+  <text x="115" y="98" font-size="12" font-weight="bold" fill="#1a5276" text-anchor="middle">1# 高压发电机</text>
+  <text x="115" y="118" font-size="10" fill="#2c3e50" text-anchor="middle">6600 V / 50 Hz / 2000 kW</text>
+  <text x="115" y="136" font-size="10" fill="#2c3e50" text-anchor="middle">中性点经 500 Ω 接地</text>
+  <text x="115" y="154" font-size="10" fill="#7f8c8d" text-anchor="middle">gen_hv</text>
+
+  <!-- 真空断路器 -->
+  <rect x="240" y="70" width="130" height="96" rx="6" fill="#fdf3e7" stroke="#b9770e" stroke-width="1.6"/>
+  <text x="305" y="98" font-size="12" font-weight="bold" fill="#7e5109" text-anchor="middle">10 kV 真空断路器</text>
+  <text x="305" y="118" font-size="10" fill="#2c3e50" text-anchor="middle">储能 / 合分闸线圈</text>
+  <text x="305" y="136" font-size="10" fill="#2c3e50" text-anchor="middle">工作位 + 接地开关闭锁</text>
+  <text x="305" y="154" font-size="10" fill="#7f8c8d" text-anchor="middle">qf1</text>
+
+  <!-- 左段汇流排 -->
+  <line x1="380" y1="118" x2="470" y2="118" stroke="#34495e" stroke-width="4"/>
+  <rect x="470" y="86" width="120" height="64" rx="4" fill="#eafaf1" stroke="#1e8449" stroke-width="1.6"/>
+  <text x="530" y="110" font-size="12" font-weight="bold" fill="#145a32" text-anchor="middle">左段汇流排</text>
+  <text x="530" y="130" font-size="10" fill="#2c3e50" text-anchor="middle">HBBA · bus1</text>
+
+  <!-- 发电机→断路器 -->
+  <line x1="190" y1="118" x2="240" y2="118" stroke="#34495e" stroke-width="3"/>
+  <polygon points="240,118 230,113 230,123" fill="#34495e"/>
+
+  <!-- 接地监视仪 -->
+  <rect x="470" y="196" width="170" height="74" rx="6" fill="#fef5f4" stroke="#c0392b" stroke-width="1.6"/>
+  <text x="555" y="220" font-size="12" font-weight="bold" fill="#922b21" text-anchor="middle">高压接地监视仪</text>
+  <text x="555" y="240" font-size="10" fill="#2c3e50" text-anchor="middle">三相绝缘电阻显示</text>
+  <text x="555" y="258" font-size="10" fill="#7f8c8d" text-anchor="middle">hv_ground_monitor</text>
+  <line x1="520" y1="150" x2="520" y2="196" stroke="#c0392b" stroke-width="2.2"/>
+  <circle cx="520" cy="173" r="5" fill="none" stroke="#c0392b" stroke-width="1.6"/>
+
+  <!-- 绝缘支路 -->
+  <rect x="700" y="196" width="150" height="74" rx="6" fill="#f4f6f7" stroke="#566573" stroke-width="1.6"/>
+  <text x="775" y="220" font-size="12" font-weight="bold" fill="#2c3e50" text-anchor="middle">绝缘支路</text>
+  <text x="775" y="240" font-size="10" fill="#2c3e50" text-anchor="middle">10 MΩ 对地</text>
+  <text x="775" y="258" font-size="10" fill="#7f8c8d" text-anchor="middle">r_insul · gnd_insul</text>
+  <line x1="600" y1="150" x2="600" y2="173" stroke="#566573" stroke-width="2.2"/>
+  <line x1="600" y1="173" x2="775" y2="173" stroke="#566573" stroke-width="2.2"/>
+  <line x1="775" y1="173" x2="775" y2="196" stroke="#566573" stroke-width="2.2"/>
+  <line x1="775" y1="270" x2="775" y2="292" stroke="#566573" stroke-width="2.2"/>
+  <line x1="759" y1="292" x2="791" y2="292" stroke="#566573" stroke-width="2.6"/>
+  <line x1="764" y1="299" x2="786" y2="299" stroke="#566573" stroke-width="2.2"/>
+  <line x1="769" y1="305" x2="781" y2="305" stroke="#566573" stroke-width="1.8"/>
+
+  <!-- 母联 -->
+  <rect x="470" y="330" width="120" height="56" rx="6" fill="#fdf3e7" stroke="#b9770e" stroke-width="1.6"/>
+  <text x="530" y="352" font-size="12" font-weight="bold" fill="#7e5109" text-anchor="middle">高压母联</text>
+  <text x="530" y="372" font-size="10" fill="#7f8c8d" text-anchor="middle">vcbs2</text>
+  <line x1="590" y1="118" x2="640" y2="118" stroke="#34495e" stroke-width="2.2"/>
+  <line x1="640" y1="118" x2="640" y2="358" stroke="#34495e" stroke-width="2.2"/>
+  <line x1="640" y1="358" x2="590" y2="358" stroke="#34495e" stroke-width="2.2"/>
+
+  <!-- 右段汇流排 -->
+  <rect x="640" y="330" width="120" height="56" rx="6" fill="#eafaf1" stroke="#1e8449" stroke-width="1.6"/>
+  <text x="700" y="352" font-size="12" font-weight="bold" fill="#145a32" text-anchor="middle">右段汇流排</text>
+  <text x="700" y="372" font-size="10" fill="#7f8c8d" text-anchor="middle">bus_s2</text>
+
+  <!-- 两台变压器 -->
+  <rect x="800" y="330" width="70" height="56" rx="6" fill="#eef4fb" stroke="#2471a3" stroke-width="1.5"/>
+  <text x="835" y="352" font-size="11" font-weight="bold" fill="#1a5276" text-anchor="middle">1# 变</text>
+  <text x="835" y="370" font-size="10" fill="#7f8c8d" text-anchor="middle">tf1</text>
+  <rect x="890" y="330" width="70" height="56" rx="6" fill="#eef4fb" stroke="#2471a3" stroke-width="1.5"/>
+  <text x="925" y="352" font-size="11" font-weight="bold" fill="#1a5276" text-anchor="middle">2# 变</text>
+  <text x="925" y="370" font-size="10" fill="#7f8c8d" text-anchor="middle">tf2</text>
+  <line x1="760" y1="340" x2="800" y2="340" stroke="#2471a3" stroke-width="1.8"/>
+  <line x1="760" y1="358" x2="890" y2="358" stroke="#2471a3" stroke-width="1.8"/>
+
+  <!-- 低压母线 -->
+  <line x1="835" y1="386" x2="835" y2="404" stroke="#2471a3" stroke-width="1.8"/>
+  <line x1="925" y1="386" x2="925" y2="404" stroke="#2471a3" stroke-width="1.8"/>
+  <line x1="835" y1="404" x2="925" y2="404" stroke="#2471a3" stroke-width="2.6"/>
+  <text x="880" y="424" font-size="10" fill="#2c3e50" text-anchor="middle">440 V 低压母线（三相四线）→ 照明负载</text>
+
+  <!-- 说明 -->
+  <rect x="40" y="196" width="390" height="160" rx="5" fill="#f8f9f9" stroke="#bdc3c7" stroke-width="1.2"/>
+  <text x="58" y="220" font-size="11.5" font-weight="bold" fill="#2c3e50">系统特点</text>
+  <text x="58" y="244" font-size="10.5" fill="#34495e">· 高压机组中性点经 500 Ω 电阻接地，单相接地时接地电流受限</text>
+  <text x="58" y="266" font-size="10.5" fill="#34495e">· 真空断路器具备储能、五防闭锁与接地开关，用于隔离与检修</text>
+  <text x="58" y="288" font-size="10.5" fill="#34495e">· 汇流排常态经 10 MΩ 绝缘支路接地，作为绝缘监测基准</text>
+  <text x="58" y="310" font-size="10.5" fill="#34495e">· 左右两段由母联 vcbs2 并联，变压器可「先合后断」转换</text>
+  <text x="58" y="332" font-size="10.5" fill="#c0392b">· 绝缘降到阈值（&lt; 1 MΩ）时监视仪声光报警并锁存</text>
+</svg>

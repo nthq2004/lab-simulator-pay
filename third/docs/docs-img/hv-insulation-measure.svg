@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="430" viewBox="0 0 980 430" font-family="Microsoft YaHei, PingFang SC, sans-serif">
+  <rect width="980" height="430" fill="#ffffff"/>
+  <text x="490" y="28" font-size="17" font-weight="bold" fill="#1a252f" text-anchor="middle">图 3　高压汇流排停电与绝缘电阻测量流程</text>
+
+  <!-- 六步链 -->
+  <g font-size="10.5" fill="#2c3e50">
+    <rect x="36" y="60" width="140" height="76" rx="7" fill="#eef4fb" stroke="#2471a3" stroke-width="1.5"/>
+    <text x="106" y="82" font-weight="bold" fill="#1a5276" text-anchor="middle">① 分闸停机</text>
+    <text x="106" y="102" text-anchor="middle">遥控面板「分闸」</text>
+    <text x="106" y="120" text-anchor="middle">再按「停机」</text>
+
+    <rect x="196" y="60" width="140" height="76" rx="7" fill="#eef4fb" stroke="#2471a3" stroke-width="1.5"/>
+    <text x="266" y="82" font-weight="bold" fill="#1a5276" text-anchor="middle">② 摇至试验位</text>
+    <text x="266" y="102" text-anchor="middle">工作位旋钮</text>
+    <text x="266" y="120" text-anchor="middle">连接位 → 试验位</text>
+
+    <rect x="356" y="60" width="150" height="76" rx="7" fill="#fef5f4" stroke="#c0392b" stroke-width="1.5"/>
+    <text x="431" y="82" font-weight="bold" fill="#922b21" text-anchor="middle">③ 合接地开关</text>
+    <text x="431" y="102" text-anchor="middle">电磁锁解锁 → 插摇柄</text>
+    <text x="431" y="120" text-anchor="middle">顺时针摇合，泄放电荷</text>
+
+    <rect x="526" y="60" width="150" height="76" rx="7" fill="#f8f9f9" stroke="#7f8c8d" stroke-width="1.5"/>
+    <text x="601" y="82" font-weight="bold" fill="#34495e" text-anchor="middle">④ 断开接地开关</text>
+    <text x="601" y="102" text-anchor="middle">逆时针摇脱扣</text>
+    <text x="601" y="120" text-anchor="middle">否则测得接地值</text>
+
+    <rect x="696" y="60" width="150" height="76" rx="7" fill="#f8f9f9" stroke="#7f8c8d" stroke-width="1.5"/>
+    <text x="771" y="82" font-weight="bold" fill="#34495e" text-anchor="middle">⑤ 接线</text>
+    <text x="771" y="102" text-anchor="middle">E 端接地线</text>
+    <text x="771" y="120" text-anchor="middle">L 端接被测相</text>
+
+    <rect x="866" y="60" width="90" height="76" rx="7" fill="#eafaf1" stroke="#1e8449" stroke-width="1.5"/>
+    <text x="911" y="82" font-weight="bold" fill="#145a32" text-anchor="middle">⑥ 摇测</text>
+    <text x="911" y="102" text-anchor="middle">摇动手柄</text>
+    <text x="911" y="120" text-anchor="middle">读数记录</text>
+  </g>
+
+  <g stroke="#2471a3" stroke-width="2.6">
+    <line x1="176" y1="98" x2="192" y2="98"/><line x1="336" y1="98" x2="352" y2="98"/>
+    <line x1="506" y1="98" x2="522" y2="98"/><line x1="676" y1="98" x2="692" y2="98"/>
+    <line x1="846" y1="98" x2="862" y2="98"/>
+  </g>
+  <g fill="#2471a3">
+    <polygon points="192,98 183,93 183,103"/><polygon points="352,98 343,93 343,103"/>
+    <polygon points="522,98 513,93 513,103"/><polygon points="692,98 683,93 683,103"/>
+    <polygon points="862,98 853,93 853,103"/>
+  </g>
+
+  <!-- 兆欧表接线示意 -->
+  <g>
+    <rect x="40" y="176" width="420" height="220" rx="8" fill="#fbfcfd" stroke="#bdc3c7" stroke-width="1.2"/>
+    <text x="250" y="194" font-size="12" font-weight="bold" fill="#2c3e50" text-anchor="middle">手摇兆欧表（2500 V）逐相测量</text>
+
+    <!-- 表体 -->
+    <rect x="90" y="226" width="120" height="96" rx="8" fill="#ffffff" stroke="#34495e" stroke-width="1.6"/>
+    <text x="150" y="252" font-size="11" fill="#2c3e50" text-anchor="middle">兆欧表</text>
+    <circle cx="150" cy="282" r="24" fill="#fdfefe" stroke="#566573" stroke-width="1.4"/>
+    <line x1="150" y1="282" x2="163" y2="266" stroke="#c0392b" stroke-width="2"/>
+    <text x="150" y="316" font-size="9.5" fill="#7f8c8d" text-anchor="middle">megohm</text>
+
+    <!-- 摇柄 -->
+    <circle cx="222" cy="300" r="10" fill="#f4f6f7" stroke="#566573" stroke-width="1.4"/>
+    <text x="222" y="330" font-size="9.5" fill="#566573" text-anchor="middle">摇柄</text>
+
+    <!-- L 端 -->
+    <line x1="210" y1="238" x2="300" y2="238" stroke="#c0392b" stroke-width="2"/>
+    <text x="256" y="232" font-size="10" fill="#c0392b" text-anchor="middle">L（线）</text>
+    <!-- E 端 -->
+    <line x1="150" y1="322" x2="150" y2="352" stroke="#2c3e50" stroke-width="2"/>
+    <line x1="132" y1="352" x2="168" y2="352" stroke="#2c3e50" stroke-width="2.4"/>
+    <line x1="138" y1="359" x2="162" y2="359" stroke="#2c3e50" stroke-width="2"/>
+    <line x1="144" y1="365" x2="156" y2="365" stroke="#2c3e50" stroke-width="1.6"/>
+    <text x="150" y="382" font-size="10" fill="#2c3e50" text-anchor="middle">E（地）</text>
+
+    <!-- 被测三相 -->
+    <line x1="300" y1="238" x2="300" y2="220" stroke="#c0392b" stroke-width="2"/>
+    <line x1="280" y1="220" x2="360" y2="220" stroke="#34495e" stroke-width="3"/>
+    <text x="320" y="212" font-size="10" fill="#34495e" text-anchor="middle">汇流排 A / B / C</text>
+    <text x="368" y="242" font-size="9.5" fill="#7f8c8d" text-anchor="middle">逐相换接</text>
+    <text x="368" y="258" font-size="9.5" fill="#7f8c8d" text-anchor="middle">L 端</text>
+  </g>
+
+  <!-- 结论 -->
+  <rect x="480" y="176" width="460" height="220" rx="8" fill="#f4f8fb" stroke="#aed6f1" stroke-width="1.3"/>
+  <text x="500" y="200" font-size="12" font-weight="bold" fill="#1a5276">判定与安全要求</text>
+  <text x="500" y="226" font-size="10.5" fill="#2c3e50">· 6.6 kV 系统使用 2500 V 兆欧表；测量前后均须充分放电</text>
+  <text x="500" y="248" font-size="10.5" fill="#2c3e50">· 本台架汇流排经 10 MΩ 绝缘支路接地，正常读数约为 10 MΩ</text>
+  <text x="500" y="270" font-size="10.5" fill="#2c3e50">· 相间不接地时读数为 ∞，显示「--」，按「良好」处理</text>
+  <text x="500" y="292" font-size="10.5" fill="#c0392b">· 读数低于 1 MΩ 判为绝缘不合格，须查明接地相并处理</text>
+  <text x="500" y="314" font-size="10.5" fill="#2c3e50">· 测量时断路器在试验位、接地开关已断开，防止反送电伤人</text>
+  <text x="500" y="336" font-size="10.5" fill="#2c3e50">· 测毕恢复：合接地开关 → 拔摇柄 → 摇回连接位 → 送电</text>
+  <text x="500" y="364" font-size="10" fill="#7f8c8d">操作顺序对应工作流第 3 项：分闸停机 → 试验位 → 接地放电 → 断接地 → 摇测</text>
+</svg>

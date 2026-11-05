@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="400" viewBox="0 0 980 400" font-family="Microsoft YaHei, PingFang SC, sans-serif">
+  <rect width="980" height="400" fill="#ffffff"/>
+  <text x="490" y="28" font-size="17" font-weight="bold" fill="#1a252f" text-anchor="middle">图 4　高压接地监视仪的工作原理与报警处置</text>
+
+  <!-- 采样 -->
+  <rect x="40" y="70" width="150" height="96" rx="7" fill="#eef4fb" stroke="#2471a3" stroke-width="1.5"/>
+  <text x="115" y="94" font-size="12" font-weight="bold" fill="#1a5276" text-anchor="middle">采样</text>
+  <text x="115" y="116" font-size="10.5" fill="#2c3e50" text-anchor="middle">三相 PT 电压</text>
+  <text x="115" y="136" font-size="10.5" fill="#2c3e50" text-anchor="middle">中性点电压 U0</text>
+  <text x="115" y="156" font-size="10.5" fill="#2c3e50" text-anchor="middle">零序电流 I0</text>
+
+  <line x1="190" y1="118" x2="240" y2="118" stroke="#2471a3" stroke-width="2.6"/>
+  <polygon points="240,118 230,113 230,123" fill="#2471a3"/>
+
+  <!-- 折放 -->
+  <rect x="240" y="70" width="170" height="96" rx="7" fill="#fdf3e7" stroke="#b9770e" stroke-width="1.5"/>
+  <text x="325" y="94" font-size="12" font-weight="bold" fill="#7e5109" text-anchor="middle">折算</text>
+  <text x="325" y="116" font-size="10.5" fill="#2c3e50" text-anchor="middle">R相 = U相 / I0</text>
+  <text x="325" y="136" font-size="10.5" fill="#2c3e50" text-anchor="middle">（除以 PT 变比）</text>
+  <text x="325" y="156" font-size="10.5" fill="#2c3e50" text-anchor="middle">取三相最小值</text>
+
+  <line x1="410" y1="118" x2="460" y2="118" stroke="#2471a3" stroke-width="2.6"/>
+  <polygon points="460,118 450,113 450,123" fill="#2471a3"/>
+
+  <!-- 显示 -->
+  <rect x="460" y="60" width="200" height="116" rx="7" fill="#f8f9f9" stroke="#34495e" stroke-width="1.6"/>
+  <rect x="478" y="76" width="164" height="84" rx="4" fill="#0f2220" stroke="#566573" stroke-width="1"/>
+  <text x="490" y="98" font-size="11" fill="#7ee7a8" font-family="Consolas, monospace">A 相： 良好</text>
+  <text x="490" y="118" font-size="11" fill="#7ee7a8" font-family="Consolas, monospace">B 相： 良好</text>
+  <text x="490" y="138" font-size="11" fill="#ffd166" font-family="Consolas, monospace">C 相： 0.01 MΩ</text>
+  <text x="560" y="190" font-size="10" fill="#7f8c8d" text-anchor="middle">液晶三行显示三相绝缘</text>
+
+  <line x1="660" y1="118" x2="710" y2="118" stroke="#c0392b" stroke-width="2.6"/>
+  <polygon points="710,118 700,113 700,123" fill="#c0392b"/>
+
+  <!-- 报警 -->
+  <rect x="710" y="62" width="230" height="112" rx="7" fill="#fef5f4" stroke="#c0392b" stroke-width="1.6"/>
+  <text x="825" y="86" font-size="12" font-weight="bold" fill="#922b21" text-anchor="middle">报警（最小值 &lt; 1 MΩ）</text>
+  <circle cx="766" cy="116" r="12" fill="#ff3020" stroke="#922b21" stroke-width="1.2"/>
+  <text x="766" y="120" font-size="10" fill="#fff" text-anchor="middle">灯</text>
+  <text x="790" y="120" font-size="10.5" fill="#2c3e50">红灯闪 + 蜂鸣</text>
+  <text x="790" y="140" font-size="10.5" fill="#2c3e50">报警锁存，故障消失前不复位</text>
+  <text x="790" y="160" font-size="10" fill="#7f8c8d">（_latched / _ack 记忆）</text>
+
+  <!-- 三个操作键 -->
+  <g>
+    <rect x="60" y="210" width="250" height="70" rx="7" fill="#eafaf1" stroke="#1e8449" stroke-width="1.4"/>
+    <text x="80" y="234" font-size="11.5" font-weight="bold" fill="#145a32">「确认」</text>
+    <text x="80" y="256" font-size="10.5" fill="#2c3e50">消音、消闪（灯转常亮），</text>
+    <text x="80" y="272" font-size="10.5" fill="#2c3e50">保留故障记忆，便于排查</text>
+  </g>
+  <g>
+    <rect x="350" y="210" width="250" height="70" rx="7" fill="#eef4fb" stroke="#2471a3" stroke-width="1.4"/>
+    <text x="370" y="234" font-size="11.5" font-weight="bold" fill="#1a5276">「复位」</text>
+    <text x="370" y="256" font-size="10.5" fill="#2c3e50">仅在故障消失后有效，</text>
+    <text x="370" y="272" font-size="10.5" fill="#2c3e50">熄灭报警灯、清除锁存</text>
+  </g>
+  <g>
+    <rect x="640" y="210" width="300" height="70" rx="7" fill="#fdf3e7" stroke="#b9770e" stroke-width="1.4"/>
+    <text x="660" y="234" font-size="11.5" font-weight="bold" fill="#7e5109">判别接地段</text>
+    <text x="660" y="256" font-size="10.5" fill="#2c3e50">断开母联后报警仍保持 → 故障在左段；</text>
+    <text x="660" y="272" font-size="10.5" fill="#2c3e50">报警消失 → 故障在右段</text>
+  </g>
+
+  <!-- 底部 -->
+  <rect x="40" y="300" width="900" height="72" rx="6" fill="#f4f8fb" stroke="#aed6f1" stroke-width="1.2"/>
+  <text x="60" y="324" font-size="11" font-weight="bold" fill="#1a5276">为什么用「绝缘电阻」而不是「电压」判断接地</text>
+  <text x="60" y="346" font-size="10.5" fill="#2c3e50">高压系统单相接地时三相线电压基本不变，故障特征体现在对地绝缘电阻与零序电压、零序电流上，</text>
+  <text x="60" y="364" font-size="10.5" fill="#2c3e50">因此由接地监视仪（绝缘监视装置）连续测量对地绝缘，配合兆欧表停电核实。</text>
+</svg>
