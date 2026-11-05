@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="480" viewBox="0 0 1000 480" font-family="Microsoft YaHei,PingFang SC,sans-serif">
+  <defs>
+    <marker id="b1" markerWidth="10" markerHeight="10" refX="8" refY="3.5" orient="auto">
+      <path d="M0,0 L8,3.5 L0,7 Z" fill="#34495e"/>
+    </marker>
+    <marker id="b2" markerWidth="9" markerHeight="9" refX="7" refY="3.2" orient="auto">
+      <path d="M0,0 L7,3.2 L0,6.4 Z" fill="#c0392b"/>
+    </marker>
+  </defs>
+  <rect width="1000" height="480" fill="#fbfcfe"/>
+  <text x="24" y="34" font-size="20" font-weight="bold" fill="#1a3a5c">图 2　两线制 4~20mA 原理与量程对应关系</text>
+
+  <!-- 信号链 -->
+  <rect x="40" y="62" width="150" height="62" rx="8" fill="#eaf2fb" stroke="#2471a3" stroke-width="2"/>
+  <text x="115" y="88" font-size="12" font-weight="bold" fill="#154360" text-anchor="middle">被测压力 p</text>
+  <text x="115" y="108" font-size="10" fill="#1a5276" text-anchor="middle">0 ~ 1.0 MPa</text>
+
+  <rect x="230" y="62" width="150" height="62" rx="8" fill="#e8f6f3" stroke="#16a085" stroke-width="2"/>
+  <text x="305" y="88" font-size="12" font-weight="bold" fill="#0b5345" text-anchor="middle">敏感元件</text>
+  <text x="305" y="108" font-size="10" fill="#0b5345" text-anchor="middle">应变 / 电容 → 电信号</text>
+
+  <rect x="420" y="62" width="150" height="62" rx="8" fill="#e8f6f3" stroke="#16a085" stroke-width="2"/>
+  <text x="495" y="88" font-size="12" font-weight="bold" fill="#0b5345" text-anchor="middle">放大与线性化</text>
+  <text x="495" y="108" font-size="10" fill="#0b5345" text-anchor="middle">零点 / 满度校准</text>
+
+  <rect x="610" y="62" width="150" height="62" rx="8" fill="#fdf2e9" stroke="#d35400" stroke-width="2"/>
+  <text x="685" y="88" font-size="12" font-weight="bold" fill="#935116" text-anchor="middle">V/I 转换</text>
+  <text x="685" y="108" font-size="10" fill="#935116" text-anchor="middle">输出 4 ~ 20mA</text>
+
+  <path d="M190,93 H226" stroke="#34495e" stroke-width="2" marker-end="url(#b1)"/>
+  <path d="M380,93 H416" stroke="#34495e" stroke-width="2" marker-end="url(#b1)"/>
+  <path d="M570,93 H606" stroke="#34495e" stroke-width="2" marker-end="url(#b1)"/>
+
+  <path d="M760,93 H796" stroke="#34495e" stroke-width="2" marker-end="url(#b1)"/>
+  <rect x="800" y="62" width="160" height="62" rx="8" fill="#f4ecf7" stroke="#7d3c98" stroke-width="2"/>
+  <text x="880" y="86" font-size="12" font-weight="bold" fill="#5b2c6f" text-anchor="middle">两线制</text>
+  <text x="880" y="108" font-size="10" fill="#5b2c6f" text-anchor="middle">两根线既供电又传信号</text>
+
+  <!-- 供电回路 -->
+  <text x="40" y="164" font-size="12" font-weight="bold" fill="#922b21">实际回路：电源(+) —— 回路电阻 —— 变送器 —— 电流表 —— 电源(−)</text>
+
+  <rect x="40" y="182" width="120" height="54" rx="6" fill="#eef3f7" stroke="#5d6d7e" stroke-width="2"/>
+  <text x="100" y="206" font-size="12" font-weight="bold" fill="#1a3a5c" text-anchor="middle">DC 24V</text>
+  <text x="100" y="224" font-size="10" fill="#34495e" text-anchor="middle">电源</text>
+
+  <rect x="210" y="182" width="110" height="54" rx="6" fill="#fdf2e9" stroke="#d35400" stroke-width="2"/>
+  <text x="265" y="206" font-size="12" font-weight="bold" fill="#935116" text-anchor="middle">回路电阻</text>
+  <text x="265" y="224" font-size="10" fill="#a04000" text-anchor="middle">限流 500Ω</text>
+
+  <rect x="370" y="176" width="140" height="66" rx="6" fill="#e8f6f3" stroke="#16a085" stroke-width="2"/>
+  <text x="440" y="200" font-size="12" font-weight="bold" fill="#0b5345" text-anchor="middle">变送器</text>
+  <text x="440" y="220" font-size="10" fill="#0b5345" text-anchor="middle">等效为受控电流源</text>
+
+  <rect x="560" y="182" width="120" height="54" rx="6" fill="#eaf2fb" stroke="#2471a3" stroke-width="2"/>
+  <text x="620" y="206" font-size="12" font-weight="bold" fill="#154360" text-anchor="middle">电流表</text>
+  <text x="620" y="224" font-size="10" fill="#1a5276" text-anchor="middle">读 I = 4~20mA</text>
+
+  <path d="M160,209 H206" stroke="#c0392b" stroke-width="2.5" marker-end="url(#b2)"/>
+  <path d="M320,209 H366" stroke="#c0392b" stroke-width="2.5" marker-end="url(#b2)"/>
+  <path d="M510,209 H556" stroke="#c0392b" stroke-width="2.5" marker-end="url(#b2)"/>
+  <!-- 回流：电流表 → 下方 → 电源 -->
+  <path d="M680,209 H720 V248 H100 V240" stroke="#c0392b" stroke-width="2.5" fill="none" marker-end="url(#b2)"/>
+  <text x="400" y="266" font-size="10" fill="#922b21" text-anchor="middle">电流表负极经导线回到电源负极（全部元件串联）</text>
+
+  <!-- 线性标尺 -->
+  <text x="40" y="304" font-size="13" font-weight="bold" fill="#1a3a5c">量程与电流的线性对应：I = 4 + 16 × p / p_max</text>
+  <line x1="90" y1="372" x2="915" y2="372" stroke="#34495e" stroke-width="2"/>
+  <path d="M918,372 L906,366 L906,378 Z" fill="#34495e"/>
+  <g font-size="12" fill="#1a3a5c" text-anchor="middle">
+    <line x1="110" y1="372" x2="110" y2="386" stroke="#34495e" stroke-width="2"/>
+    <text x="110" y="404">0</text>
+    <text x="110" y="424" fill="#c0392b" font-weight="bold">4mA</text>
+
+    <line x1="310" y1="372" x2="310" y2="386" stroke="#34495e" stroke-width="2"/>
+    <text x="310" y="404">0.25</text>
+    <text x="310" y="424" fill="#c0392b" font-weight="bold">8mA</text>
+
+    <line x1="510" y1="372" x2="510" y2="386" stroke="#34495e" stroke-width="2"/>
+    <text x="510" y="404">0.50</text>
+    <text x="510" y="424" fill="#c0392b" font-weight="bold">12mA</text>
+
+    <line x1="710" y1="372" x2="710" y2="386" stroke="#34495e" stroke-width="2"/>
+    <text x="710" y="404">0.75</text>
+    <text x="710" y="424" fill="#c0392b" font-weight="bold">16mA</text>
+
+    <line x1="900" y1="372" x2="900" y2="386" stroke="#34495e" stroke-width="2"/>
+    <text x="900" y="404">1.0 MPa</text>
+    <text x="900" y="424" fill="#c0392b" font-weight="bold">20mA</text>
+  </g>
+  <text x="500" y="458" font-size="11" fill="#566573" text-anchor="middle">4mA 既是“零压力”信号，也是变送器的“存活电流”——电流明显低于 4mA 说明回路或变送器异常</text>
+</svg>

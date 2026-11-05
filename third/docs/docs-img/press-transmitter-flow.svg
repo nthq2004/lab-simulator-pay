@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="520" viewBox="0 0 1000 520" font-family="Microsoft YaHei,PingFang SC,sans-serif">
+  <defs>
+    <marker id="c1" markerWidth="10" markerHeight="10" refX="8" refY="3.5" orient="auto">
+      <path d="M0,0 L8,3.5 L0,7 Z" fill="#7f8c8d"/>
+    </marker>
+  </defs>
+  <rect width="1000" height="520" fill="#fbfcfe"/>
+  <text x="24" y="34" font-size="20" font-weight="bold" fill="#1a3a5c">图 3　压力变送器好坏判别的操作流程（13 步）</text>
+
+  <!-- 第一段：气路 -->
+  <text x="36" y="86" font-size="13" font-weight="bold" fill="#1a5276">① 接气路</text>
+  <rect x="130" y="64" width="250" height="62" rx="8" fill="#eaf2fb" stroke="#2471a3" stroke-width="2"/>
+  <text x="255" y="86" font-size="12" font-weight="bold" fill="#154360" text-anchor="middle">第 1 步　气瓶 → 截止阀</text>
+  <text x="255" y="106" font-size="10" fill="#1a5276" text-anchor="middle">cab 出气口 → stopvalve 进气端</text>
+
+  <rect x="400" y="64" width="250" height="62" rx="8" fill="#eaf2fb" stroke="#2471a3" stroke-width="2"/>
+  <text x="525" y="86" font-size="12" font-weight="bold" fill="#154360" text-anchor="middle">第 2 步　截止阀 → 减压阀</text>
+  <text x="525" y="106" font-size="10" fill="#1a5276" text-anchor="middle">stopvalve 出口 → pressreg 入口</text>
+
+  <rect x="670" y="64" width="250" height="62" rx="8" fill="#eaf2fb" stroke="#2471a3" stroke-width="2"/>
+  <text x="795" y="86" font-size="12" font-weight="bold" fill="#154360" text-anchor="middle">第 3 步　减压阀 → 变送器</text>
+  <text x="795" y="106" font-size="10" fill="#1a5276" text-anchor="middle">pressreg 出口 → ptr 输入口 i</text>
+
+  <path d="M384,95 H396" stroke="#7f8c8d" stroke-width="2" marker-end="url(#c1)"/>
+  <path d="M654,95 H666" stroke="#7f8c8d" stroke-width="2" marker-end="url(#c1)"/>
+
+  <!-- 第二段：电路 -->
+  <text x="36" y="186" font-size="13" font-weight="bold" fill="#922b21">② 接电路</text>
+  <rect x="130" y="164" width="192" height="62" rx="8" fill="#fdedec" stroke="#c0392b" stroke-width="2"/>
+  <text x="226" y="186" font-size="12" font-weight="bold" fill="#922b21" text-anchor="middle">第 4 步　24V(+) → 电阻</text>
+  <text x="226" y="206" font-size="10" fill="#922b21" text-anchor="middle">dcpower p → varires l</text>
+
+  <rect x="334" y="164" width="192" height="62" rx="8" fill="#fdedec" stroke="#c0392b" stroke-width="2"/>
+  <text x="430" y="186" font-size="12" font-weight="bold" fill="#922b21" text-anchor="middle">第 5 步　电阻 → 变送器 P</text>
+  <text x="430" y="206" font-size="10" fill="#922b21" text-anchor="middle">varires r → ptr p（+）</text>
+
+  <rect x="538" y="164" width="192" height="62" rx="8" fill="#fdedec" stroke="#c0392b" stroke-width="2"/>
+  <text x="634" y="186" font-size="12" font-weight="bold" fill="#922b21" text-anchor="middle">第 6 步　变送器 N → 电流表</text>
+  <text x="634" y="206" font-size="10" fill="#922b21" text-anchor="middle">ptr n(−) → ampmeter p</text>
+
+  <rect x="742" y="164" width="192" height="62" rx="8" fill="#fdedec" stroke="#c0392b" stroke-width="2"/>
+  <text x="838" y="186" font-size="12" font-weight="bold" fill="#922b21" text-anchor="middle">第 7 步　电流表 → 24V(−)</text>
+  <text x="838" y="206" font-size="10" fill="#922b21" text-anchor="middle">ampmeter n → dcpower n</text>
+
+  <path d="M326,195 H330" stroke="#7f8c8d" stroke-width="2"/>
+  <path d="M530,195 H534" stroke="#7f8c8d" stroke-width="2"/>
+  <path d="M734,195 H738" stroke="#7f8c8d" stroke-width="2"/>
+
+  <!-- 第三段：启动 -->
+  <text x="36" y="286" font-size="13" font-weight="bold" fill="#7d6608">③ 通电通气</text>
+  <rect x="130" y="262" width="300" height="66" rx="8" fill="#fef9e7" stroke="#b7950b" stroke-width="2"/>
+  <text x="280" y="286" font-size="12" font-weight="bold" fill="#7d6608" text-anchor="middle">第 8 步　按下电源键（DC 24V）</text>
+  <text x="280" y="306" font-size="10" fill="#7d6608" text-anchor="middle">LCD 点亮显示 0.000MPa，电流 4.00mA</text>
+
+  <rect x="452" y="262" width="300" height="66" rx="8" fill="#fef9e7" stroke="#b7950b" stroke-width="2"/>
+  <text x="602" y="286" font-size="12" font-weight="bold" fill="#7d6608" text-anchor="middle">第 9 步　转动手柄开截止阀</text>
+  <text x="602" y="306" font-size="10" fill="#7d6608" text-anchor="middle">气源进入减压阀，约 2.0MPa（输出仍为 0）</text>
+
+  <path d="M434,295 H448" stroke="#7f8c8d" stroke-width="2" marker-end="url(#c1)"/>
+
+  <!-- 第四段：步进 -->
+  <text x="36" y="390" font-size="13" font-weight="bold" fill="#0b5345">④ 步进校验</text>
+  <rect x="130" y="366" width="192" height="66" rx="8" fill="#e8f6f3" stroke="#16a085" stroke-width="2"/>
+  <text x="226" y="388" font-size="12" font-weight="bold" fill="#0b5345" text-anchor="middle">第 10 步　设定 0.25MPa</text>
+  <text x="226" y="408" font-size="11" font-family="monospace" fill="#c0392b" text-anchor="middle">I = 8mA</text>
+
+  <rect x="334" y="366" width="192" height="66" rx="8" fill="#e8f6f3" stroke="#16a085" stroke-width="2"/>
+  <text x="430" y="388" font-size="12" font-weight="bold" fill="#0b5345" text-anchor="middle">第 11 步　设定 0.50MPa</text>
+  <text x="430" y="408" font-size="11" font-family="monospace" fill="#c0392b" text-anchor="middle">I = 12mA</text>
+
+  <rect x="538" y="366" width="192" height="66" rx="8" fill="#e8f6f3" stroke="#16a085" stroke-width="2"/>
+  <text x="634" y="388" font-size="12" font-weight="bold" fill="#0b5345" text-anchor="middle">第 12 步　设定 0.75MPa</text>
+  <text x="634" y="408" font-size="11" font-family="monospace" fill="#c0392b" text-anchor="middle">I = 16mA</text>
+
+  <rect x="742" y="366" width="192" height="66" rx="8" fill="#e8f6f3" stroke="#16a085" stroke-width="2"/>
+  <text x="838" y="388" font-size="12" font-weight="bold" fill="#0b5345" text-anchor="middle">第 13 步　设定 1.00MPa</text>
+  <text x="838" y="408" font-size="11" font-family="monospace" fill="#c0392b" text-anchor="middle">I = 20mA</text>
+
+  <path d="M326,399 H330" stroke="#7f8c8d" stroke-width="2"/>
+  <path d="M530,399 H534" stroke="#7f8c8d" stroke-width="2"/>
+  <path d="M734,399 H738" stroke="#7f8c8d" stroke-width="2"/>
+
+  <!-- 结论 -->
+  <rect x="130" y="456" width="804" height="44" rx="8" fill="#f4ecf7" stroke="#7d3c98" stroke-width="1.5"/>
+  <text x="532" y="483" font-size="12" font-weight="bold" fill="#5b2c6f" text-anchor="middle">四个点的电流都落在理论值 ±0.2mA 内、且 LCD 与电流同步变化 → 变送器合格；否则判明是气路、回路还是变送器问题</text>
+
+  <!-- 设定方法注释 -->
+  <text x="130" y="240" font-size="10" fill="#7f8c8d">注：设定压力通过「右键 → 参数设置」修改，属于参数配置界面操作，不直接拧手轮</text>
+</svg>

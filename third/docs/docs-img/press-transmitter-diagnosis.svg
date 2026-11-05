@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="560" viewBox="0 0 1000 560" font-family="Microsoft YaHei,PingFang SC,sans-serif">
+  <defs>
+    <marker id="d1" markerWidth="10" markerHeight="10" refX="8" refY="3.5" orient="auto">
+      <path d="M0,0 L8,3.5 L0,7 Z" fill="#34495e"/>
+    </marker>
+  </defs>
+  <rect width="1000" height="560" fill="#fbfcfe"/>
+  <text x="24" y="34" font-size="20" font-weight="bold" fill="#1a3a5c">图 4　读数判读与故障排查流程</text>
+
+  <!-- 起点 -->
+  <rect x="40" y="56" width="920" height="48" rx="8" fill="#eaf2fb" stroke="#2471a3" stroke-width="2"/>
+  <text x="500" y="86" font-size="13" font-weight="bold" fill="#154360" text-anchor="middle">接好气路与电路 → 通电 → 开启截止阀（设定压力仍为 0）→ 观察电流表与变送器 LCD</text>
+
+  <!-- 左：正常路径 -->
+  <text x="40" y="136" font-size="13" font-weight="bold" fill="#196f3d">✔ 正常读数</text>
+  <rect x="40" y="148" width="440" height="56" rx="8" fill="#eafaf1" stroke="#27ae60" stroke-width="2"/>
+  <text x="60" y="170" font-size="12" font-weight="bold" fill="#196f3d">零压：I ≈ 4.00mA，LCD 显示 0.000MPa</text>
+  <text x="60" y="190" font-size="10" fill="#196f3d">4mA 是“存活电流”，说明电源、接线、变送器都完好</text>
+
+  <rect x="40" y="222" width="440" height="56" rx="8" fill="#eafaf1" stroke="#27ae60" stroke-width="2"/>
+  <text x="60" y="244" font-size="12" font-weight="bold" fill="#196f3d">加压后电流随手轮设定线性升高</text>
+  <text x="60" y="264" font-size="10" fill="#196f3d">25% → 8mA　　50% → 12mA　　75% → 16mA　　100% → 20mA</text>
+
+  <rect x="40" y="296" width="440" height="56" rx="8" fill="#eafaf1" stroke="#27ae60" stroke-width="2"/>
+  <text x="60" y="318" font-size="12" font-weight="bold" fill="#196f3d">四点偏差 ≤0.2mA 且 LCD 与电流同步</text>
+  <text x="60" y="338" font-size="10" fill="#196f3d">判定：变送器合格，可投入使用</text>
+
+  <path d="M260,204 V218" stroke="#34495e" stroke-width="2" marker-end="url(#d1)"/>
+  <path d="M260,278 V292" stroke="#34495e" stroke-width="2" marker-end="url(#d1)"/>
+
+  <!-- 右：异常判断 -->
+  <text x="520" y="136" font-size="13" font-weight="bold" fill="#922b21">✘ 异常读数</text>
+
+  <rect x="520" y="148" width="440" height="56" rx="8" fill="#fdedec" stroke="#e74c3c" stroke-width="2"/>
+  <text x="540" y="170" font-size="12" font-weight="bold" fill="#922b21">电流为 0mA、变送器 LCD 黑屏</text>
+  <text x="540" y="190" font-size="10" fill="#922b21">判断：回路断路 —— 电源未开、导线松脱、变送器开路</text>
+
+  <rect x="520" y="222" width="440" height="56" rx="8" fill="#fef5e7" stroke="#d35400" stroke-width="2"/>
+  <text x="540" y="244" font-size="12" font-weight="bold" fill="#935116">电流有 4mA，但加压后数值不变</text>
+  <text x="540" y="264" font-size="10" fill="#935116">判断：气路无压 —— 截止阀未开、管路未接、减压阀设定为 0</text>
+
+  <rect x="520" y="296" width="440" height="56" rx="8" fill="#fef5e7" stroke="#d35400" stroke-width="2"/>
+  <text x="540" y="318" font-size="12" font-weight="bold" fill="#935116">电流能变但偏离理论值（如 50% 只有 9mA）</text>
+  <text x="540" y="338" font-size="10" fill="#935116">判断：零点/量程未校准、气路漏压、回路串入较大接触电阻</text>
+
+  <!-- 断路定位链 -->
+  <text x="40" y="392" font-size="13" font-weight="bold" fill="#1a3a5c">断路点的查找（万用表 DC 电压档，逐段测量）</text>
+
+  <rect x="40" y="406" width="200" height="62" rx="8" fill="#eaf2fb" stroke="#2471a3" stroke-width="2"/>
+  <text x="140" y="428" font-size="12" font-weight="bold" fill="#154360" text-anchor="middle">① 测电源两端</text>
+  <text x="140" y="448" font-size="10" fill="#1a5276" text-anchor="middle">≈24V → 电源正常</text>
+
+  <rect x="266" y="406" width="200" height="62" rx="8" fill="#eaf2fb" stroke="#2471a3" stroke-width="2"/>
+  <text x="366" y="428" font-size="12" font-weight="bold" fill="#154360" text-anchor="middle">② 测变送器 P / N</text>
+  <text x="366" y="448" font-size="10" fill="#1a5276" text-anchor="middle">≈24V → 断点在变送器内部</text>
+
+  <rect x="492" y="406" width="200" height="62" rx="8" fill="#eaf2fb" stroke="#2471a3" stroke-width="2"/>
+  <text x="592" y="428" font-size="12" font-weight="bold" fill="#154360" text-anchor="middle">③ 测电阻、电流表</text>
+  <text x="592" y="448" font-size="10" fill="#1a5276" text-anchor="middle">无压降 → 该段导通良好</text>
+
+  <rect x="718" y="406" width="242" height="62" rx="8" fill="#eafaf1" stroke="#27ae60" stroke-width="2"/>
+  <text x="839" y="428" font-size="12" font-weight="bold" fill="#196f3d" text-anchor="middle">④ 修复后复测</text>
+  <text x="839" y="448" font-size="10" fill="#196f3d" text-anchor="middle">零压回到 4mA，再加压复核线性</text>
+
+  <path d="M242,437 H262" stroke="#34495e" stroke-width="2" marker-end="url(#d1)"/>
+  <path d="M468,437 H488" stroke="#34495e" stroke-width="2" marker-end="url(#d1)"/>
+  <path d="M694,437 H714" stroke="#34495e" stroke-width="2" marker-end="url(#d1)"/>
+
+  <!-- 提示 -->
+  <rect x="40" y="490" width="920" height="48" rx="8" fill="#fef9e7" stroke="#b7950b" stroke-width="1.5"/>
+  <text x="60" y="512" font-size="11" font-weight="bold" fill="#7d6608">注意：</text>
+  <text x="112" y="512" font-size="11" fill="#7d6608">两线制变送器的供电与信号共用同一对导线，测量电压时必须保持回路闭合（表笔并接），不可串入电流档；</text>
+  <text x="60" y="530" font-size="11" fill="#7d6608">拆线、改接前必须先按下电源键断开 24V，防止短路损坏电源或变送器。</text>
+</svg>

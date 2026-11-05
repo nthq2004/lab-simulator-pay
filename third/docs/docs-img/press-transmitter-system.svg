@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="480" viewBox="0 0 1000 480" font-family="Microsoft YaHei,PingFang SC,sans-serif">
+  <defs>
+    <marker id="a1" markerWidth="10" markerHeight="10" refX="8" refY="3.5" orient="auto">
+      <path d="M0,0 L8,3.5 L0,7 Z" fill="#c0392b"/>
+    </marker>
+    <marker id="a2" markerWidth="12" markerHeight="12" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,3.5 L0,7 Z" fill="#2471a3"/>
+    </marker>
+  </defs>
+  <rect width="1000" height="480" fill="#fbfcfe"/>
+  <text x="24" y="34" font-size="20" font-weight="bold" fill="#1a3a5c">图 1　压力变送器测试系统的组成</text>
+
+  <!-- ── 电气回路（上） ── -->
+  <text x="40" y="76" font-size="13" font-weight="bold" fill="#922b21">电气回路（4~20mA 电流环）</text>
+
+  <!-- 24V 电源 -->
+  <rect x="40" y="96" width="150" height="88" rx="8" fill="#eef3f7" stroke="#5d6d7e" stroke-width="2"/>
+  <text x="115" y="120" font-size="13" font-weight="bold" fill="#1a3a5c" text-anchor="middle">DC 24V 电源</text>
+  <rect x="60" y="130" width="110" height="26" rx="3" fill="#2c3e50"/>
+  <text x="115" y="149" font-size="13" fill="#7CFC00" text-anchor="middle" font-family="monospace">24.0 V</text>
+  <text x="115" y="175" font-size="10" fill="#34495e" text-anchor="middle">dcpower</text>
+
+  <!-- 回路电阻 -->
+  <rect x="230" y="110" width="120" height="66" rx="8" fill="#fdf2e9" stroke="#d35400" stroke-width="2"/>
+  <text x="290" y="134" font-size="12" font-weight="bold" fill="#935116" text-anchor="middle">回路电阻</text>
+  <text x="290" y="152" font-size="11" fill="#935116" text-anchor="middle">500Ω（限流）</text>
+  <text x="290" y="168" font-size="10" fill="#a04000" text-anchor="middle">varires</text>
+
+  <!-- 压力变送器 -->
+  <rect x="430" y="80" width="200" height="130" rx="10" fill="#e8f6f3" stroke="#16a085" stroke-width="2"/>
+  <text x="530" y="104" font-size="13" font-weight="bold" fill="#0b5345" text-anchor="middle">压力变送器 ptr</text>
+  <circle cx="530" cy="150" r="30" fill="#27ae60" stroke="#1e8449" stroke-width="3"/>
+  <text x="530" y="156" font-size="14" font-family="monospace" fill="#0b3d2e" text-anchor="middle">0.500</text>
+  <text x="530" y="172" font-size="9" fill="#0b5345" text-anchor="middle">MPa</text>
+  <text x="530" y="196" font-size="10" fill="#0b5345" text-anchor="middle">两线制　0~1MPa → 4~20mA</text>
+  <text x="436" y="126" font-size="10" fill="#922b21">P(+)</text>
+  <text x="606" y="126" font-size="10" fill="#34495e">N(−)</text>
+
+  <!-- 电流表 -->
+  <rect x="690" y="110" width="130" height="70" rx="8" fill="#eaf2fb" stroke="#2471a3" stroke-width="2"/>
+  <text x="755" y="134" font-size="12" font-weight="bold" fill="#154360" text-anchor="middle">电流表</text>
+  <text x="755" y="156" font-size="15" font-family="monospace" fill="#0b5345" text-anchor="middle">12.00 mA</text>
+  <text x="755" y="172" font-size="10" fill="#1a5276" text-anchor="middle">ampmeter</text>
+
+  <!-- 电气连线 -->
+  <path d="M190,132 H226" stroke="#c0392b" stroke-width="2.5" marker-end="url(#a1)"/>
+  <path d="M350,132 H426" stroke="#c0392b" stroke-width="2.5" marker-end="url(#a1)"/>
+  <text x="388" y="124" font-size="10" fill="#922b21" text-anchor="middle">P(+)/N(-)</text>
+  <path d="M630,120 H686" stroke="#c0392b" stroke-width="2.5" marker-end="url(#a1)"/>
+  <!-- 回流线 -->
+  <path d="M755,180 V268 H115 V190" stroke="#c0392b" stroke-width="2.5" fill="none" marker-end="url(#a1)"/>
+  <text x="430" y="284" font-size="11" fill="#922b21" text-anchor="middle">电流表负极接回电源负极，构成串联回路</text>
+
+  <!-- ── 气路（下） ── -->
+  <text x="40" y="330" font-size="13" font-weight="bold" fill="#1a5276">气路（压力源）</text>
+
+  <!-- 气瓶 -->
+  <rect x="40" y="352" width="130" height="104" rx="10" fill="#eaf2fb" stroke="#2471a3" stroke-width="2"/>
+  <rect x="72" y="362" width="66" height="70" rx="18" fill="#3498db" stroke="#154360" stroke-width="2"/>
+  <text x="105" y="392" font-size="11" fill="#fff" text-anchor="middle" font-family="monospace">2.00</text>
+  <text x="105" y="406" font-size="9" fill="#eaf6ff" text-anchor="middle">MPa</text>
+  <text x="105" y="448" font-size="10" fill="#1a5276" text-anchor="middle">气瓶 cab</text>
+
+  <!-- 截止阀 -->
+  <rect x="214" y="360" width="112" height="86" rx="8" fill="#fdf2e9" stroke="#d35400" stroke-width="2"/>
+  <circle cx="270" cy="392" r="14" fill="#bdc3c7" stroke="#7f8c8d" stroke-width="2"/>
+  <line x1="270" y1="392" x2="270" y2="378" stroke="#2c3e50" stroke-width="3"/>
+  <text x="270" y="420" font-size="12" font-weight="bold" fill="#935116" text-anchor="middle">截止阀</text>
+  <text x="270" y="436" font-size="10" fill="#a04000" text-anchor="middle">stopvalve（手柄开关）</text>
+
+  <!-- 减压阀 -->
+  <rect x="368" y="360" width="128" height="86" rx="8" fill="#e8f6f3" stroke="#16a085" stroke-width="2"/>
+  <circle cx="432" cy="390" r="14" fill="#2980b9" stroke="#1c5982" stroke-width="2"/>
+  <text x="432" y="394" font-size="11" fill="#fff" text-anchor="middle">✳</text>
+  <text x="432" y="418" font-size="12" font-weight="bold" fill="#0b5345" text-anchor="middle">减压/稳压阀</text>
+  <text x="432" y="436" font-size="10" fill="#0b5345" text-anchor="middle">pressreg（设定压力）</text>
+
+  <!-- 气路连线 -->
+  <path d="M170,400 H210" stroke="#7f8c8d" stroke-width="3"/>
+  <path d="M326,400 H364" stroke="#7f8c8d" stroke-width="3"/>
+  <path d="M496,400 H530 V214" stroke="#7f8c8d" stroke-width="3" fill="none" marker-end="url(#a2)"/>
+  <text x="548" y="300" font-size="11" fill="#1a5276">气压送入变送器测量室</text>
+
+  <!-- 说明 -->
+  <rect x="640" y="352" width="320" height="96" rx="8" fill="#fef9e7" stroke="#b7950b" stroke-width="1.5"/>
+  <text x="660" y="376" font-size="12" font-weight="bold" fill="#7d6608">测什么？</text>
+  <text x="660" y="398" font-size="11" fill="#7d6608">① 通气压后，电流是否随压力线性升高</text>
+  <text x="660" y="416" font-size="11" fill="#7d6608">② 25%/50%/75%/100% 量程对应</text>
+  <text x="660" y="434" font-size="11" fill="#7d6608">　 8/12/16/20mA，偏差越小越好</text>
+</svg>
