@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="600" viewBox="0 0 1000 600" font-family="Microsoft YaHei,PingFang SC,sans-serif">
+  <rect width="1000" height="600" fill="#fbfcfe"/>
+  <text x="24" y="34" font-size="20" font-weight="bold" fill="#1a3a5c">图 2　PT100 三线制测量与阻温关系</text>
+
+  <!-- ① 三线制结构 -->
+  <text x="40" y="72" font-size="15" font-weight="bold" fill="#0e6655">① 三线制结构：T、R 是同端引出的两根同色线</text>
+  <rect x="50" y="88" width="330" height="150" rx="8" fill="#e8f6f3" stroke="#16a085" stroke-width="2"/>
+
+  <circle cx="110" cy="116" r="5" fill="#130901"/>
+  <circle cx="110" cy="140" r="5" fill="#e74c3c"/>
+  <circle cx="110" cy="164" r="5" fill="#130901"/>
+  <text x="96" y="120" font-size="12" font-weight="bold" fill="#2c3e50" text-anchor="end">T</text>
+  <text x="96" y="144" font-size="12" font-weight="bold" fill="#c0392b" text-anchor="end">L</text>
+  <text x="96" y="168" font-size="12" font-weight="bold" fill="#2c3e50" text-anchor="end">R</text>
+
+  <rect x="250" y="126" width="70" height="28" rx="4" fill="#fff" stroke="#7f8c8d" stroke-width="2"/>
+  <text x="285" y="145" font-size="12" fill="#2c3e50" text-anchor="middle">R<tspan font-size="9" dy="3">pt</tspan></text>
+
+  <path d="M110,140 H250" stroke="#e74c3c" stroke-width="3" fill="none"/>
+  <path d="M110,116 H340 V140" stroke="#2e86c1" stroke-width="3" fill="none"/>
+  <path d="M110,164 H340 V140" stroke="#2e86c1" stroke-width="3" fill="none"/>
+  <path d="M320,140 H340" stroke="#7f8c8d" stroke-width="3" fill="none"/>
+  <circle cx="340" cy="140" r="4" fill="#2e86c1"/>
+
+  <text x="62" y="200" font-size="11" fill="#566573">L：红色引线（信号端）　T、R：两根蓝色引线（同一端引出）</text>
+  <text x="62" y="222" font-size="11" fill="#0b5345">T 通测量电流、R 取电压 → 引线电阻在回路中相互抵消</text>
+
+  <!-- ② 两个测量结果 -->
+  <text x="410" y="72" font-size="15" font-weight="bold" fill="#7d6608">② 200Ω 档的两个读数</text>
+
+  <rect x="410" y="88" width="150" height="150" rx="8" fill="#f4ecf7" stroke="#8e44ad" stroke-width="2"/>
+  <text x="485" y="112" font-size="11" fill="#6c3483" text-anchor="middle">测 T — R（同色）</text>
+  <text x="485" y="158" font-size="28" font-family="monospace" fill="#1a5276" text-anchor="middle">0.00</text>
+  <text x="485" y="178" font-size="12" fill="#6c3483" text-anchor="middle">Ω</text>
+  <text x="485" y="206" font-size="11" fill="#7d3c98" text-anchor="middle">三线制特征（不是阻值）</text>
+  <text x="485" y="226" font-size="11" fill="#7d3c98" text-anchor="middle">若此处不为 0Ω → 引线断</text>
+
+  <rect x="576" y="88" width="170" height="150" rx="8" fill="#fef9e7" stroke="#b7950b" stroke-width="2"/>
+  <text x="661" y="112" font-size="11" fill="#7d6608" text-anchor="middle">测 L — R（异色）</text>
+  <text x="661" y="156" font-size="24" font-family="monospace" fill="#1a5276" text-anchor="middle">107.70</text>
+  <text x="661" y="176" font-size="12" fill="#7d6608" text-anchor="middle">Ω　（20℃）</text>
+  <text x="661" y="204" font-size="11" fill="#7d6608" text-anchor="middle">加热到 50℃ 后</text>
+  <text x="661" y="226" font-size="15" font-family="monospace" fill="#c0392b" text-anchor="middle">≈ 119.3 Ω</text>
+
+  <!-- ③ 阻温对照 -->
+  <text x="782" y="72" font-size="13" font-weight="bold" fill="#1a3a5c">③ 阻温对照</text>
+  <rect x="778" y="82" width="184" height="156" rx="6" fill="#fff" stroke="#aab7b8"/>
+  <line x1="778" y1="114" x2="962" y2="114" stroke="#aab7b8"/>
+  <line x1="778" y1="146" x2="962" y2="146" stroke="#d5dbdb"/>
+  <line x1="778" y1="178" x2="962" y2="178" stroke="#d5dbdb"/>
+  <line x1="778" y1="210" x2="962" y2="210" stroke="#d5dbdb"/>
+  <text x="820" y="104" font-size="11" fill="#1a3a5c" text-anchor="middle">温度</text>
+  <text x="916" y="104" font-size="11" fill="#1a3a5c" text-anchor="middle">阻值</text>
+  <text x="820" y="136" font-size="12" fill="#2c3e50" text-anchor="middle">0 ℃</text>
+  <text x="916" y="136" font-size="12" font-family="monospace" fill="#2c3e50" text-anchor="middle">100.0 Ω</text>
+  <text x="820" y="168" font-size="12" fill="#2c3e50" text-anchor="middle">20 ℃</text>
+  <text x="916" y="168" font-size="12" font-family="monospace" fill="#2c3e50" text-anchor="middle">107.7 Ω</text>
+  <text x="820" y="200" font-size="12" fill="#c0392b" text-anchor="middle">50 ℃</text>
+  <text x="916" y="200" font-size="12" font-family="monospace" fill="#c0392b" text-anchor="middle">119.3 Ω</text>
+  <text x="820" y="230" font-size="12" fill="#2c3e50" text-anchor="middle">100 ℃</text>
+  <text x="916" y="230" font-size="12" font-family="monospace" fill="#2c3e50" text-anchor="middle">138.5 Ω</text>
+
+  <!-- ④ 读数判读 -->
+  <text x="40" y="288" font-size="15" font-weight="bold" fill="#7b241c">④ 读数判读（200Ω 档三种典型结果）</text>
+
+  <rect x="40" y="306" width="290" height="116" rx="8" fill="#eafaf1" stroke="#27ae60" stroke-width="2"/>
+  <text x="60" y="332" font-size="13" font-weight="bold" fill="#196f3d">正常</text>
+  <text x="60" y="362" font-size="20" font-family="monospace" fill="#1a5276">107.7 Ω</text>
+  <text x="60" y="388" font-size="11" fill="#196f3d">阻值随槽温升高而增大</text>
+  <text x="60" y="408" font-size="11" fill="#196f3d">正温度系数：+0.385Ω/℃</text>
+
+  <rect x="350" y="306" width="290" height="116" rx="8" fill="#fdedec" stroke="#e74c3c" stroke-width="2"/>
+  <text x="370" y="332" font-size="13" font-weight="bold" fill="#922b21">断路（开路）</text>
+  <text x="370" y="362" font-size="20" font-family="monospace" fill="#c0392b">O.L</text>
+  <text x="370" y="388" font-size="11" fill="#922b21">阻值趋于无穷，超出 200Ω 量程</text>
+  <text x="370" y="408" font-size="11" fill="#922b21">元件断路或引线/端子断开</text>
+
+  <rect x="660" y="306" width="302" height="116" rx="8" fill="#fef5e7" stroke="#d35400" stroke-width="2"/>
+  <text x="680" y="332" font-size="13" font-weight="bold" fill="#935116">短路</text>
+  <text x="680" y="362" font-size="20" font-family="monospace" fill="#c0392b">0.00 ~ 0.01 Ω</text>
+  <text x="680" y="388" font-size="11" fill="#935116">远小于当时温度对应的正常阻值</text>
+  <text x="680" y="408" font-size="11" fill="#935116">元件内部短接或引线相互短接</text>
+
+  <text x="40" y="456" font-size="12" fill="#566573">测量前确认：万用表已置 200Ω 档、表笔接稳；表笔悬空时显示 O.L 属正常现象，不是故障。</text>
+  <text x="40" y="478" font-size="12" fill="#566573">判断故障时必须同时记录当时的槽温——阻值只有与温度对应才有意义。</text>
+
+  <text x="40" y="516" font-size="13" font-weight="bold" fill="#1a3a5c">记忆要点</text>
+  <text x="40" y="540" font-size="12" fill="#566573">同色两端（T—R）≈0Ω 是三线制的结构特征；异色两端（L—R）才是真正的热电阻值，随温度线性增大。</text>
+</svg>

@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="470" viewBox="0 0 1000 470" font-family="Microsoft YaHei,PingFang SC,sans-serif">
+  <defs>
+    <marker id="a1" markerWidth="10" markerHeight="10" refX="8" refY="3.5" orient="auto">
+      <path d="M0,0 L8,3.5 L0,7 Z" fill="#34495e"/>
+    </marker>
+  </defs>
+  <rect width="1000" height="470" fill="#fbfcfe"/>
+  <text x="24" y="34" font-size="20" font-weight="bold" fill="#1a3a5c">图 1　温度传感器测试系统的组成</text>
+
+  <!-- 恒温水浴 -->
+  <rect x="40" y="110" width="250" height="270" rx="10" fill="#eef3f7" stroke="#5d6d7e" stroke-width="2"/>
+  <rect x="50" y="120" width="64" height="250" rx="4" fill="#ecf0f1" stroke="#95a5a6"/>
+  <rect x="58" y="132" width="48" height="24" rx="2" fill="#2c3e50"/>
+  <text x="82" y="149" font-size="13" fill="#7CFC00" text-anchor="middle" font-family="monospace">50.0</text>
+  <text x="82" y="172" font-size="9" fill="#7f8c8d" text-anchor="middle">槽温 (℃)</text>
+  <circle cx="82" cy="205" r="15" fill="#7f8c8d" stroke="#2c3e50" stroke-width="1.5"/>
+  <line x1="82" y1="205" x2="92" y2="195" stroke="#e74c3c" stroke-width="2.5"/>
+  <text x="82" y="235" font-size="10" fill="#34495e" text-anchor="middle">温度设定</text>
+  <rect x="66" y="300" width="32" height="18" rx="3" fill="#bdc3c7"/>
+  <circle cx="90" cy="309" r="6" fill="#27ae60"/>
+  <text x="82" y="335" font-size="10" fill="#34495e" text-anchor="middle">电源</text>
+  <text x="82" y="360" font-size="9" fill="#7f8c8d" text-anchor="middle">20~100℃</text>
+
+  <!-- 水槽与水 -->
+  <rect x="122" y="200" width="156" height="170" rx="3" fill="#a2d9ff" opacity="0.75"/>
+  <text x="200" y="232" font-size="12" fill="#1b4f72" text-anchor="middle">恒温槽（水温场）</text>
+  <path d="M130,352 q10,-9 20,0 t20,0 t20,0 t20,0 t20,0 t20,0" stroke="#c0392b" stroke-width="3" fill="none"/>
+  <text x="200" y="340" font-size="9" fill="#c0392b" text-anchor="middle">加热盘管</text>
+  <text x="165" y="128" font-size="13" font-weight="bold" fill="#2c3e50">恒温水浴 temptest</text>
+
+  <!-- 箭头：温度场 → 传感器 -->
+  <path d="M292,245 L330,245" stroke="#34495e" stroke-width="2" fill="none" marker-end="url(#a1)"/>
+  <text x="311" y="236" font-size="10" fill="#34495e" text-anchor="middle">温度 t</text>
+
+  <!-- PT100 -->
+  <rect x="336" y="110" width="210" height="120" rx="8" fill="#e8f6f3" stroke="#16a085" stroke-width="2"/>
+  <text x="441" y="134" font-size="13" font-weight="bold" fill="#0b5345" text-anchor="middle">PT100 铂电阻（三线制）</text>
+  <rect x="356" y="146" width="70" height="22" rx="3" fill="#fff" stroke="#7f8c8d"/>
+  <circle cx="368" cy="157" r="5" fill="#e74c3c"/><text x="368" y="184" font-size="10" fill="#c0392b" text-anchor="middle">L</text>
+  <circle cx="391" cy="157" r="5" fill="#130901"/><text x="391" y="184" font-size="10" fill="#2c3e50" text-anchor="middle">T</text>
+  <circle cx="414" cy="157" r="5" fill="#130901"/><text x="414" y="184" font-size="10" fill="#2c3e50" text-anchor="middle">R</text>
+  <rect x="438" y="150" width="10" height="66" rx="3" fill="#bdc3c7" stroke="#7f8c8d"/>
+  <text x="458" y="196" font-size="9.5" fill="#0b5345">R=100+0.385t</text>
+  <text x="458" y="214" font-size="9.5" fill="#16a085">20℃≈107.7Ω</text>
+
+  <!-- 热电偶 -->
+  <rect x="336" y="260" width="210" height="120" rx="8" fill="#fdf2e9" stroke="#d35400" stroke-width="2"/>
+  <text x="441" y="284" font-size="13" font-weight="bold" fill="#7e3f00" text-anchor="middle">K 型热电偶（两线）</text>
+  <rect x="356" y="296" width="70" height="22" rx="3" fill="#fff" stroke="#7f8c8d"/>
+  <circle cx="378" cy="307" r="5" fill="#e74c3c"/><text x="378" y="334" font-size="10" fill="#c0392b" text-anchor="middle">R</text>
+  <circle cx="410" cy="307" r="5" fill="#130901"/><text x="410" y="334" font-size="10" fill="#2c3e50" text-anchor="middle">L</text>
+  <rect x="438" y="300" width="10" height="66" rx="3" fill="#bdc3c7" stroke="#7f8c8d"/>
+  <text x="458" y="338" font-size="9.5" fill="#7e3f00">E≈0.041·Δt (mV)</text>
+
+  <!-- 箭头：传感器 → 万用表 -->
+  <path d="M556,170 L600,170 L600,245 L640,245" stroke="#34495e" stroke-width="2" fill="none" marker-end="url(#a1)"/>
+  <path d="M556,320 L620,320 L620,245 L640,245" stroke="#34495e" stroke-width="2" fill="none" marker-end="url(#a1)"/>
+  <text x="620" y="236" font-size="10" fill="#34495e" text-anchor="middle">R / E</text>
+
+  <!-- 万用表 -->
+  <rect x="646" y="110" width="250" height="270" rx="12" fill="#555" stroke="#00ced1" stroke-width="8"/>
+  <rect x="668" y="126" width="206" height="76" rx="4" fill="#c5ccb7" stroke="#222" stroke-width="2"/>
+  <text x="822" y="176" font-size="34" font-family="monospace" fill="#222" text-anchor="end">107.70</text>
+  <text x="866" y="196" font-size="14" fill="#222" text-anchor="end">Ω</text>
+  <circle cx="771" cy="253" r="34" fill="#333" stroke="#111" stroke-width="4"/>
+  <line x1="771" y1="253" x2="792" y2="228" stroke="#999" stroke-width="6" stroke-linecap="round"/>
+  <text x="771" y="230" font-size="9" fill="#fff" text-anchor="middle">OFF</text>
+  <text x="816" y="252" font-size="9" fill="#7CFC00">200Ω</text>
+  <text x="726" y="252" font-size="9" fill="#f39c12">200mv</text>
+  <text x="736" y="300" font-size="10" fill="#ddd">mA</text>
+  <text x="806" y="300" font-size="10" fill="#ddd">COM</text>
+  <text x="872" y="300" font-size="10" fill="#ddd">V</text>
+  <circle cx="741" cy="340" r="8" fill="#c0392b" stroke="#000"/>
+  <circle cx="811" cy="340" r="8" fill="#111" stroke="#000"/>
+  <circle cx="877" cy="340" r="8" fill="#c0392b" stroke="#000"/>
+  <text x="771" y="404" font-size="12" font-weight="bold" fill="#2c3e50" text-anchor="middle">数字万用表 multimeter</text>
+
+  <!-- 底部说明 -->
+  <text x="40" y="432" font-size="12" fill="#566573">恒温水浴提供已知温度场；PT100 把温度转换为电阻、热电偶转换为毫伏电动势；</text>
+  <text x="40" y="452" font-size="12" fill="#566573">数字万用表分别用 200Ω 电阻档（测阻值）、通断档（测通断）、200mV 直流档（测热电势）读数。</text>
+</svg>

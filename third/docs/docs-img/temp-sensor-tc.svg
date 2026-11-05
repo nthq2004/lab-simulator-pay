@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="560" viewBox="0 0 1000 560" font-family="Microsoft YaHei,PingFang SC,sans-serif">
+  <rect width="1000" height="560" fill="#fbfcfe"/>
+  <text x="24" y="34" font-size="20" font-weight="bold" fill="#1a3a5c">图 3　K 型热电偶的热电效应与热电势读数</text>
+
+  <!-- ① 塞贝克效应示意 -->
+  <text x="40" y="72" font-size="15" font-weight="bold" fill="#7e3f00">① 两种不同导体组成回路，冷热端温差产生热电动势 E</text>
+  <rect x="50" y="90" width="470" height="230" rx="8" fill="#fdf2e9" stroke="#d35400" stroke-width="2"/>
+
+  <!-- 恒温水槽与热端 -->
+  <rect x="300" y="150" width="140" height="140" rx="4" fill="#a2d9ff" opacity="0.75"/>
+  <text x="370" y="306" font-size="10" fill="#1b4f72" text-anchor="middle">恒温水槽</text>
+  <circle cx="360" cy="220" r="7" fill="#f1c40f" stroke="#b7950b" stroke-width="2"/>
+  <text x="376" y="168" font-size="11" fill="#935116">热端 t（工作端）</text>
+
+  <!-- 两根不同材料的导线 -->
+  <path d="M110,120 H360 V213" stroke="#c0392b" stroke-width="4" fill="none"/>
+  <path d="M110,150 H320 V220 H353" stroke="#2c3e50" stroke-width="4" fill="none"/>
+
+  <!-- 冷端接线 -->
+  <circle cx="110" cy="120" r="5" fill="#c0392b"/>
+  <circle cx="110" cy="150" r="5" fill="#2c3e50"/>
+  <text x="96" y="124" font-size="12" font-weight="bold" fill="#c0392b" text-anchor="end">R</text>
+  <text x="96" y="154" font-size="12" font-weight="bold" fill="#2c3e50" text-anchor="end">L</text>
+  <text x="130" y="106" font-size="11" fill="#935116">冷端 t₀（接线端，接仪表）</text>
+
+  <!-- 热电势标注 -->
+  <text x="120" y="196" font-size="10" fill="#7f8c8d">两种不同金属 A / B</text>
+  <text x="70" y="236" font-size="11" fill="#566573">E 只取决于材料与冷热端温差 Δt，</text>
+  <text x="70" y="254" font-size="11" fill="#566573">与导线长度、直径无关</text>
+
+  <!-- ② 读数对照 -->
+  <text x="556" y="72" font-size="15" font-weight="bold" fill="#1a3a5c">② 200mV 直流档读数（冷端≈环境 20℃）</text>
+  <rect x="556" y="88" width="404" height="232" rx="8" fill="#fff" stroke="#aab7b8"/>
+  <line x1="556" y1="124" x2="960" y2="124" stroke="#aab7b8"/>
+  <line x1="556" y1="164" x2="960" y2="164" stroke="#d5dbdb"/>
+  <line x1="556" y1="204" x2="960" y2="204" stroke="#d5dbdb"/>
+  <line x1="556" y1="244" x2="960" y2="244" stroke="#d5dbdb"/>
+  <text x="620" y="112" font-size="11" fill="#1a3a5c" text-anchor="middle">热端水温</text>
+  <text x="760" y="112" font-size="11" fill="#1a3a5c" text-anchor="middle">温差 Δt</text>
+  <text x="900" y="112" font-size="11" fill="#1a3a5c" text-anchor="middle">热电势</text>
+  <text x="620" y="152" font-size="12" fill="#2c3e50" text-anchor="middle">20 ℃（同温）</text>
+  <text x="760" y="152" font-size="12" fill="#2c3e50" text-anchor="middle">0 ℃</text>
+  <text x="900" y="152" font-size="13" font-family="monospace" fill="#2c3e50" text-anchor="middle">0.0 mV</text>
+  <text x="620" y="192" font-size="12" fill="#c0392b" text-anchor="middle">50 ℃</text>
+  <text x="760" y="192" font-size="12" fill="#c0392b" text-anchor="middle">30 ℃</text>
+  <text x="900" y="192" font-size="13" font-family="monospace" fill="#c0392b" text-anchor="middle">1.2 mV</text>
+  <text x="620" y="232" font-size="12" fill="#c0392b" text-anchor="middle">70 ℃</text>
+  <text x="760" y="232" font-size="12" fill="#c0392b" text-anchor="middle">50 ℃</text>
+  <text x="900" y="232" font-size="13" font-family="monospace" fill="#c0392b" text-anchor="middle">2.0 mV</text>
+  <text x="620" y="272" font-size="12" fill="#2c3e50" text-anchor="middle">100 ℃</text>
+  <text x="760" y="272" font-size="12" fill="#2c3e50" text-anchor="middle">80 ℃</text>
+  <text x="900" y="272" font-size="13" font-family="monospace" fill="#2c3e50" text-anchor="middle">3.3 mV</text>
+  <text x="576" y="300" font-size="11" fill="#935116">K 型灵敏度约 0.041 mV/℃，线性良好</text>
+
+  <!-- ③ 通断检查 -->
+  <text x="40" y="366" font-size="15" font-weight="bold" fill="#0e6655">③ 测量前先做通断检查（二极管/蜂鸣档）</text>
+  <rect x="50" y="384" width="300" height="120" rx="8" fill="#eafaf1" stroke="#27ae60" stroke-width="2"/>
+  <text x="70" y="410" font-size="12" font-weight="bold" fill="#196f3d">热偶丝完好</text>
+  <text x="70" y="438" font-size="16" font-family="monospace" fill="#1a5276">&lt; 5 Ω（约 0.5Ω），蜂鸣响</text>
+  <text x="70" y="466" font-size="11" fill="#196f3d">回路电阻很小是正常现象</text>
+  <text x="70" y="488" font-size="11" fill="#196f3d">通断档注 1mA 恒流，&lt;5Ω 即鸣叫</text>
+
+  <rect x="370" y="384" width="300" height="120" rx="8" fill="#fdedec" stroke="#e74c3c" stroke-width="2"/>
+  <text x="390" y="410" font-size="12" font-weight="bold" fill="#922b21">热偶丝断路</text>
+  <text x="390" y="438" font-size="16" font-family="monospace" fill="#c0392b">O.L，不鸣叫</text>
+  <text x="390" y="466" font-size="11" fill="#922b21">热端焊点脱开或引线折断</text>
+  <text x="390" y="488" font-size="11" fill="#922b21">此时热电势恒为 0，必须更换</text>
+
+  <rect x="690" y="384" width="272" height="120" rx="8" fill="#eaf2fb" stroke="#2471a3" stroke-width="2"/>
+  <text x="710" y="410" font-size="12" font-weight="bold" fill="#154360">读数与温差对应</text>
+  <text x="710" y="436" font-size="12" fill="#1a5276">≈0mV 且热端已入水</text>
+  <text x="710" y="458" font-size="12" fill="#1a5276">→ 插入过浅或未浸入</text>
+  <text x="710" y="482" font-size="11" fill="#154360">电压不随温差变化 → 查冷端补偿</text>
+
+  <text x="40" y="536" font-size="12" fill="#566573">热电偶测的是“冷热端温差”，必须做冷端补偿；热电阻（PT100）测的是元件自身温度，二者不可混淆。</text>
+</svg>

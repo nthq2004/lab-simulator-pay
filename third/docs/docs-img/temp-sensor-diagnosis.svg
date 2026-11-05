@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="560" viewBox="0 0 1000 560" font-family="Microsoft YaHei,PingFang SC,sans-serif">
+  <defs>
+    <marker id="fa" markerWidth="10" markerHeight="10" refX="8" refY="3.5" orient="auto">
+      <path d="M0,0 L8,3.5 L0,7 Z" fill="#34495e"/>
+    </marker>
+  </defs>
+  <rect width="1000" height="560" fill="#fbfcfe"/>
+  <text x="24" y="34" font-size="20" font-weight="bold" fill="#1a3a5c">图 4　温度传感器读数判读与故障排查流程</text>
+
+  <!-- 起点 -->
+  <rect x="40" y="60" width="230" height="52" rx="8" fill="#eaf2fb" stroke="#2471a3" stroke-width="2"/>
+  <text x="155" y="84" font-size="13" font-weight="bold" fill="#154360" text-anchor="middle">万用表 200Ω 档</text>
+  <text x="155" y="102" font-size="11" fill="#1a5276" text-anchor="middle">测 PT100 的 L — R 两端</text>
+  <path d="M155,112 V146" stroke="#34495e" stroke-width="2" marker-end="url(#fa)"/>
+
+  <!-- 判断菱形 -->
+  <path d="M155,150 L255,203 L155,256 L55,203 Z" fill="#fef9e7" stroke="#b7950b" stroke-width="2"/>
+  <text x="155" y="198" font-size="12" font-weight="bold" fill="#7d6608" text-anchor="middle">读数与当时</text>
+  <text x="155" y="216" font-size="12" font-weight="bold" fill="#7d6608" text-anchor="middle">槽温是否对应？</text>
+
+  <!-- 正常分支 -->
+  <path d="M255,203 H330" stroke="#34495e" stroke-width="2" marker-end="url(#fa)"/>
+  <text x="292" y="194" font-size="11" fill="#196f3d" text-anchor="middle">对应</text>
+  <rect x="336" y="174" width="250" height="58" rx="8" fill="#eafaf1" stroke="#27ae60" stroke-width="2"/>
+  <text x="461" y="198" font-size="13" font-weight="bold" fill="#196f3d" text-anchor="middle">传感器正常</text>
+  <text x="461" y="218" font-size="11" fill="#196f3d" text-anchor="middle">20℃≈107.7Ω　50℃≈119.3Ω</text>
+
+  <!-- 断路分支（向下） -->
+  <path d="M155,256 V292" stroke="#34495e" stroke-width="2" marker-end="url(#fa)"/>
+  <text x="166" y="282" font-size="11" fill="#922b21">显示 O.L</text>
+  <rect x="40" y="300" width="210" height="64" rx="8" fill="#fdedec" stroke="#e74c3c" stroke-width="2"/>
+  <text x="60" y="324" font-size="13" font-weight="bold" fill="#922b21">判断路</text>
+  <text x="60" y="344" font-size="11" fill="#922b21">端子松脱、引线折断</text>
+  <text x="60" y="360" font-size="11" fill="#922b21">故障设置“PT100 断路”</text>
+
+  <!-- 短路分支（右下斜线） -->
+  <path d="M155,256 L400,292" stroke="#34495e" stroke-width="2" fill="none" marker-end="url(#fa)"/>
+  <text x="330" y="266" font-size="11" fill="#935116">显示 ≈0Ω</text>
+  <rect x="300" y="300" width="210" height="64" rx="8" fill="#fef5e7" stroke="#d35400" stroke-width="2"/>
+  <text x="320" y="324" font-size="13" font-weight="bold" fill="#935116">判短路</text>
+  <text x="320" y="344" font-size="11" fill="#935116">元件短接或引线互短</text>
+  <text x="320" y="360" font-size="11" fill="#935116">故障设置“PT100 短路”</text>
+
+  <!-- 汇合到复测 -->
+  <path d="M145,364 V392" stroke="#34495e" stroke-width="2" marker-end="url(#fa)"/>
+  <path d="M405,364 V392" stroke="#34495e" stroke-width="2" marker-end="url(#fa)"/>
+  <rect x="60" y="400" width="360" height="60" rx="8" fill="#eaf2fb" stroke="#2471a3" stroke-width="2"/>
+  <text x="80" y="424" font-size="13" font-weight="bold" fill="#154360">修复 / 更换后复测</text>
+  <text x="80" y="446" font-size="11" fill="#1a5276">阻值回到与槽温对应的数值，再升温 50℃ 复核 119.3Ω</text>
+
+  <!-- 右侧：热电偶 -->
+  <rect x="620" y="60" width="340" height="52" rx="8" fill="#fdf2e9" stroke="#d35400" stroke-width="2"/>
+  <text x="790" y="84" font-size="13" font-weight="bold" fill="#7e3f00" text-anchor="middle">K 型热电偶：通断档（二极管/蜂鸣）</text>
+  <text x="790" y="102" font-size="11" fill="#935116" text-anchor="middle">红表笔 → R，黑表笔 → L</text>
+  <path d="M790,112 V146" stroke="#34495e" stroke-width="2" marker-end="url(#fa)"/>
+
+  <rect x="620" y="154" width="340" height="60" rx="8" fill="#eafaf1" stroke="#27ae60" stroke-width="2"/>
+  <text x="640" y="178" font-size="13" font-weight="bold" fill="#196f3d">阻值 &lt; 5Ω、蜂鸣响 → 热偶丝完好</text>
+  <text x="640" y="200" font-size="11" fill="#196f3d">显示 O.L、不鸣叫 → 断路，须更换</text>
+  <path d="M790,214 V248" stroke="#34495e" stroke-width="2" marker-end="url(#fa)"/>
+
+  <rect x="620" y="256" width="340" height="60" rx="8" fill="#eaf2fb" stroke="#2471a3" stroke-width="2"/>
+  <text x="640" y="280" font-size="13" font-weight="bold" fill="#154360">换 200mV 直流档测热电势</text>
+  <text x="640" y="302" font-size="11" fill="#1a5276">冷热端同温 ≈ 0mV（与 PT100 不同，不是 O.L）</text>
+  <path d="M790,316 V350" stroke="#34495e" stroke-width="2" marker-end="url(#fa)"/>
+
+  <rect x="620" y="358" width="340" height="122" rx="8" fill="#fef9e7" stroke="#b7950b" stroke-width="2"/>
+  <text x="640" y="382" font-size="12" font-weight="bold" fill="#7d6608">热电势判读（每 1℃ 温差约 0.041mV）</text>
+  <text x="640" y="406" font-size="11" fill="#7d6608">热端入水 50℃ → 约 1.2mV</text>
+  <text x="640" y="428" font-size="11" fill="#7d6608">继续升温 70℃ → 约 2.0mV</text>
+  <text x="640" y="450" font-size="11" fill="#7d6608">电压不随温差变化 → 查插入深度、冷端补偿</text>
+  <text x="640" y="470" font-size="11" fill="#7d6608">恒为 0 但通断正常 → 热端未浸入水中</text>
+
+  <!-- 口诀 -->
+  <text x="40" y="504" font-size="13" font-weight="bold" fill="#1a3a5c">判读口诀：阻值对得上温度才叫正常；O.L 是断、≈0Ω 是短；</text>
+  <text x="40" y="526" font-size="13" font-weight="bold" fill="#1a3a5c">热偶看毫伏，同温为 0，温差每 1℃ 约 0.04mV。</text>
+</svg>
