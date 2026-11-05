@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="540" viewBox="0 0 1000 540" font-family="Microsoft YaHei,PingFang SC,sans-serif">
+  <defs>
+    <marker id="a1" markerWidth="10" markerHeight="10" refX="8" refY="3.5" orient="auto">
+      <path d="M0,0 L8,3.5 L0,7 Z" fill="#c0392b"/>
+    </marker>
+    <marker id="a2" markerWidth="10" markerHeight="10" refX="8" refY="3.5" orient="auto">
+      <path d="M0,0 L8,3.5 L0,7 Z" fill="#2471a3"/>
+    </marker>
+  </defs>
+  <rect width="1000" height="540" fill="#fbfcfe"/>
+  <text x="24" y="34" font-size="20" font-weight="bold" fill="#1a3a5c">图 1　电动差压变送器功能测试系统的组成</text>
+
+  <!-- ── 电气回路（上） ── -->
+  <text x="40" y="74" font-size="13" font-weight="bold" fill="#922b21">电气回路（二线制 4~20mA 电流环）</text>
+
+  <rect x="40" y="92" width="150" height="88" rx="8" fill="#eef3f7" stroke="#5d6d7e" stroke-width="2"/>
+  <text x="115" y="116" font-size="13" font-weight="bold" fill="#1a3a5c" text-anchor="middle">DC 24V 电源</text>
+  <rect x="60" y="126" width="110" height="26" rx="3" fill="#2c3e50"/>
+  <text x="115" y="145" font-size="13" fill="#7CFC00" text-anchor="middle" font-family="monospace">24.0 V</text>
+  <text x="115" y="170" font-size="10" fill="#34495e" text-anchor="middle">dcpower</text>
+
+  <rect x="228" y="104" width="118" height="64" rx="8" fill="#fdf2e9" stroke="#d35400" stroke-width="2"/>
+  <text x="287" y="126" font-size="12" font-weight="bold" fill="#935116" text-anchor="middle">可调电阻</text>
+  <text x="287" y="144" font-size="11" fill="#935116" text-anchor="middle">250Ω（限流）</text>
+  <text x="287" y="160" font-size="10" fill="#a04000" text-anchor="middle">varires</text>
+
+  <rect x="420" y="76" width="220" height="140" rx="10" fill="#e8f6f3" stroke="#16a085" stroke-width="2"/>
+  <text x="530" y="100" font-size="13" font-weight="bold" fill="#0b5345" text-anchor="middle">差压变送器 difftr</text>
+  <circle cx="530" cy="146" r="30" fill="#27ae60" stroke="#1e8449" stroke-width="3"/>
+  <text x="530" y="152" font-size="14" font-family="monospace" fill="#0b3d2e" text-anchor="middle">0.100</text>
+  <text x="530" y="168" font-size="9" fill="#0b5345" text-anchor="middle">MPa</text>
+  <text x="530" y="196" font-size="10" fill="#0b5345" text-anchor="middle">量程 0~1MPa　零点 Z / 量程 S 旋钮</text>
+  <text x="426" y="120" font-size="10" fill="#922b21">p(+)</text>
+  <text x="600" y="120" font-size="10" fill="#34495e">n(−)</text>
+
+  <rect x="700" y="106" width="140" height="72" rx="8" fill="#eaf2fb" stroke="#2471a3" stroke-width="2"/>
+  <text x="770" y="130" font-size="12" font-weight="bold" fill="#154360" text-anchor="middle">电流表</text>
+  <text x="770" y="152" font-size="15" font-family="monospace" fill="#0b5345" text-anchor="middle">4.00 mA</text>
+  <text x="770" y="168" font-size="10" fill="#1a5276" text-anchor="middle">ampmeter</text>
+
+  <path d="M190,128 H224" stroke="#c0392b" stroke-width="2.5" marker-end="url(#a1)"/>
+  <path d="M346,128 H416" stroke="#c0392b" stroke-width="2.5" marker-end="url(#a1)"/>
+  <text x="382" y="118" font-size="10" fill="#922b21" text-anchor="middle">p / n</text>
+  <path d="M640,120 H696" stroke="#c0392b" stroke-width="2.5" marker-end="url(#a1)"/>
+  <path d="M770,178 V250 H115 V184" stroke="#c0392b" stroke-width="2.5" fill="none" marker-end="url(#a1)"/>
+  <text x="440" y="266" font-size="11" fill="#922b21" text-anchor="middle">电流表负极接回电源负极：24V、250Ω、变送器、电流表串联成环</text>
+
+  <!-- ── 气路（下） ── -->
+  <text x="40" y="310" font-size="13" font-weight="bold" fill="#1a5276">气路（差压源：H 侧、L 侧分别调压）</text>
+
+  <rect x="40" y="330" width="112" height="120" rx="10" fill="#eaf2fb" stroke="#2471a3" stroke-width="2"/>
+  <rect x="68" y="342" width="56" height="76" rx="16" fill="#3498db" stroke="#154360" stroke-width="2"/>
+  <text x="96" y="384" font-size="11" fill="#fff" text-anchor="middle" font-family="monospace">2.00</text>
+  <text x="96" y="400" font-size="9" fill="#d6eaf8" text-anchor="middle">MPa</text>
+  <text x="96" y="440" font-size="10" fill="#1a5276" text-anchor="middle">气瓶 cab</text>
+
+  <rect x="192" y="352" width="104" height="76" rx="8" fill="#f4f6f7" stroke="#5d6d7e" stroke-width="2"/>
+  <text x="244" y="382" font-size="12" font-weight="bold" fill="#1a3a5c" text-anchor="middle">截止阀</text>
+  <circle cx="244" cy="404" r="12" fill="#e74c3c" stroke="#2c3e50"/>
+  <text x="244" y="446" font-size="10" fill="#34495e" text-anchor="middle">stopvalve</text>
+
+  <rect x="336" y="352" width="92" height="76" rx="8" fill="#f4f6f7" stroke="#5d6d7e" stroke-width="2"/>
+  <text x="382" y="382" font-size="12" font-weight="bold" fill="#1a3a5c" text-anchor="middle">三通</text>
+  <path d="M382,392 V418 M382,404 H356 M382,404 H408" stroke="#7f8c8d" stroke-width="8" stroke-linecap="round"/>
+  <text x="382" y="446" font-size="10" fill="#34495e" text-anchor="middle">tee</text>
+
+  <rect x="468" y="330" width="126" height="58" rx="8" fill="#fef9e7" stroke="#b9770e" stroke-width="2"/>
+  <text x="531" y="352" font-size="12" font-weight="bold" fill="#7e5109" text-anchor="middle">调压阀1（H）</text>
+  <text x="531" y="372" font-size="10" fill="#7e5109" text-anchor="middle">设定 0.400MPa</text>
+
+  <rect x="468" y="404" width="126" height="58" rx="8" fill="#fef9e7" stroke="#b9770e" stroke-width="2"/>
+  <text x="531" y="426" font-size="12" font-weight="bold" fill="#7e5109" text-anchor="middle">调压阀2（L）</text>
+  <text x="531" y="446" font-size="10" fill="#7e5109" text-anchor="middle">设定 0.300MPa</text>
+
+  <rect x="634" y="330" width="130" height="132" rx="8" fill="#eaecee" stroke="#5d6d7e" stroke-width="2"/>
+  <text x="699" y="352" font-size="12" font-weight="bold" fill="#1a3a5c" text-anchor="middle">三阀组</text>
+  <path d="M672,368 V436 M726,368 V436 M672,384 H726" stroke="#7f8c8d" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="699" cy="384" r="8" fill="#2ecc71" stroke="#2c3e50"/>
+  <circle cx="672" cy="412" r="8" fill="#2ecc71" stroke="#2c3e50"/>
+  <circle cx="726" cy="412" r="8" fill="#2ecc71" stroke="#2c3e50"/>
+  <text x="699" y="452" font-size="9" fill="#34495e" text-anchor="middle">平衡阀 vE / 低压 vL / 高压 vH</text>
+
+  <rect x="800" y="336" width="160" height="120" rx="8" fill="#e8f6f3" stroke="#16a085" stroke-width="2"/>
+  <text x="880" y="358" font-size="12" font-weight="bold" fill="#0b5345" text-anchor="middle">变送器过程接口</text>
+  <text x="880" y="382" font-size="12" fill="#c0392b" text-anchor="middle">L（低压室）</text>
+  <text x="880" y="404" font-size="12" fill="#2980b9" text-anchor="middle">H（高压室）</text>
+  <text x="880" y="432" font-size="11" fill="#0b5345" text-anchor="middle" font-family="monospace">Δp = p(H) − p(L)</text>
+
+  <path d="M152,382 H188" stroke="#2471a3" stroke-width="2.5" marker-end="url(#a2)"/>
+  <path d="M296,390 H332" stroke="#2471a3" stroke-width="2.5" marker-end="url(#a2)"/>
+  <path d="M428,378 H464" stroke="#2471a3" stroke-width="2.5" marker-end="url(#a2)"/>
+  <path d="M428,406 V430 H464" stroke="#2471a3" stroke-width="2.5" fill="none" marker-end="url(#a2)"/>
+  <path d="M594,358 H630" stroke="#2471a3" stroke-width="2.5" marker-end="url(#a2)"/>
+  <path d="M594,432 H630" stroke="#2471a3" stroke-width="2.5" marker-end="url(#a2)"/>
+  <path d="M764,384 H796" stroke="#2471a3" stroke-width="2.5" marker-end="url(#a2)"/>
+  <path d="M764,420 V462 H880 V460" stroke="#2471a3" stroke-width="2.5" fill="none" marker-end="url(#a2)"/>
+  <text x="836" y="480" font-size="10" fill="#1a5276" text-anchor="middle">三阀组输出 → L / H 接口</text>
+  <text x="470" y="500" font-size="11" fill="#1a5276" text-anchor="middle">投运顺序：开平衡阀 → 开高压阀、低压阀 → 关平衡阀</text>
+</svg>

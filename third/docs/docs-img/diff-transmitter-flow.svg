@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="430" viewBox="0 0 1000 430" font-family="Microsoft YaHei,PingFang SC,sans-serif">
+  <defs>
+    <marker id="f1" markerWidth="10" markerHeight="10" refX="8" refY="3.5" orient="auto">
+      <path d="M0,0 L8,3.5 L0,7 Z" fill="#2471a3"/>
+    </marker>
+    <marker id="f2" markerWidth="10" markerHeight="10" refX="8" refY="3.5" orient="auto">
+      <path d="M0,0 L8,3.5 L0,7 Z" fill="#c0392b"/>
+    </marker>
+  </defs>
+  <rect width="1000" height="430" fill="#fbfcfe"/>
+  <text x="24" y="32" font-size="20" font-weight="bold" fill="#1a3a5c">图 3　零点与量程调整流程（项目 7.3-2，12 步）</text>
+
+  <!-- 第一行：准备 -->
+  <text x="24" y="62" font-size="12" font-weight="bold" fill="#1a5276">准备（第 1~4 步）</text>
+  <g font-size="12">
+    <rect x="24" y="72" width="200" height="62" rx="8" fill="#eaf2fb" stroke="#2471a3" stroke-width="1.6"/>
+    <text x="124" y="96" text-anchor="middle" fill="#154360" font-weight="bold">① 连线并检查</text>
+    <text x="124" y="116" text-anchor="middle" fill="#34495e" font-size="11">气路 + 电路共 12 根</text>
+
+    <rect x="264" y="72" width="200" height="62" rx="8" fill="#eaf2fb" stroke="#2471a3" stroke-width="1.6"/>
+    <text x="364" y="96" text-anchor="middle" fill="#154360" font-weight="bold">② 通电、开截止阀</text>
+    <text x="364" y="116" text-anchor="middle" fill="#34495e" font-size="11">差压为 0 → 电流 4mA</text>
+
+    <rect x="504" y="72" width="200" height="62" rx="8" fill="#eaf2fb" stroke="#2471a3" stroke-width="1.6"/>
+    <text x="604" y="96" text-anchor="middle" fill="#154360" font-weight="bold">③ 开平衡阀 vE</text>
+    <text x="604" y="116" text-anchor="middle" fill="#34495e" font-size="11">vH、vL 保持关闭</text>
+
+    <rect x="744" y="72" width="200" height="62" rx="8" fill="#eaf2fb" stroke="#2471a3" stroke-width="1.6"/>
+    <text x="844" y="96" text-anchor="middle" fill="#154360" font-weight="bold">④ 开 vH、vL，关 vE</text>
+    <text x="844" y="116" text-anchor="middle" fill="#34495e" font-size="11">三阀组投入运行</text>
+  </g>
+  <path d="M224,103 H260" stroke="#2471a3" stroke-width="2" marker-end="url(#f1)"/>
+  <path d="M464,103 H500" stroke="#2471a3" stroke-width="2" marker-end="url(#f1)"/>
+  <path d="M704,103 H740" stroke="#2471a3" stroke-width="2" marker-end="url(#f1)"/>
+  <path d="M944,134 V160 H124 V166" stroke="#2471a3" stroke-width="2" fill="none" marker-end="url(#f1)"/>
+
+  <!-- 第二行：第一轮 -->
+  <text x="24" y="188" font-size="12" font-weight="bold" fill="#922b21">第一轮（第 5~8 步）</text>
+  <g font-size="12">
+    <rect x="24" y="198" width="200" height="66" rx="8" fill="#fdf2e9" stroke="#c0392b" stroke-width="1.6"/>
+    <text x="124" y="222" text-anchor="middle" fill="#7b241c" font-weight="bold">⑤ 加 0.1MPa 差压</text>
+    <text x="124" y="242" text-anchor="middle" fill="#5d4037" font-size="11">H 0.400 / L 0.300 MPa</text>
+    <text x="124" y="258" text-anchor="middle" fill="#a04000" font-size="10">电流 5.60mA</text>
+
+    <rect x="264" y="198" width="200" height="66" rx="8" fill="#fdf2e9" stroke="#c0392b" stroke-width="1.6"/>
+    <text x="364" y="222" text-anchor="middle" fill="#7b241c" font-weight="bold">⑥ 调零 → 4mA</text>
+    <text x="364" y="242" text-anchor="middle" fill="#5d4037" font-size="11">旋转调零旋钮 Z</text>
+    <text x="364" y="258" text-anchor="middle" fill="#a04000" font-size="10">显示仍为 0.100MPa</text>
+
+    <rect x="504" y="198" width="200" height="66" rx="8" fill="#fdf2e9" stroke="#c0392b" stroke-width="1.6"/>
+    <text x="604" y="222" text-anchor="middle" fill="#7b241c" font-weight="bold">⑦ 升到 0.9MPa 差压</text>
+    <text x="604" y="242" text-anchor="middle" fill="#5d4037" font-size="11">H 1.200 / L 0.300 MPa</text>
+    <text x="604" y="258" text-anchor="middle" fill="#a04000" font-size="10">电流 16.8mA</text>
+
+    <rect x="744" y="198" width="200" height="66" rx="8" fill="#fdf2e9" stroke="#c0392b" stroke-width="1.6"/>
+    <text x="844" y="222" text-anchor="middle" fill="#7b241c" font-weight="bold">⑧ 调量程 → 20mA</text>
+    <text x="844" y="242" text-anchor="middle" fill="#5d4037" font-size="11">旋转量程旋钮 S</text>
+    <text x="844" y="258" text-anchor="middle" fill="#a04000" font-size="10">满度对准 20.00mA</text>
+  </g>
+  <path d="M224,231 H260" stroke="#c0392b" stroke-width="2" marker-end="url(#f2)"/>
+  <path d="M464,231 H500" stroke="#c0392b" stroke-width="2" marker-end="url(#f2)"/>
+  <path d="M704,231 H740" stroke="#c0392b" stroke-width="2" marker-end="url(#f2)"/>
+  <path d="M944,264 V290 H124 V296" stroke="#c0392b" stroke-width="2" fill="none" marker-end="url(#f2)"/>
+
+  <!-- 第三行：第二轮 -->
+  <text x="24" y="318" font-size="12" font-weight="bold" fill="#196f3d">第二轮（第 9~12 步）</text>
+  <g font-size="12">
+    <rect x="24" y="328" width="200" height="66" rx="8" fill="#eafaf1" stroke="#1e8449" stroke-width="1.6"/>
+    <text x="124" y="352" text-anchor="middle" fill="#145a32" font-weight="bold">⑨ 回到 0.1MPa</text>
+    <text x="124" y="372" text-anchor="middle" fill="#145a32" font-size="11">电流偏离 4mA</text>
+    <text x="124" y="388" text-anchor="middle" fill="#1e8449" font-size="10">量程改动带偏了零点</text>
+
+    <rect x="264" y="328" width="200" height="66" rx="8" fill="#eafaf1" stroke="#1e8449" stroke-width="1.6"/>
+    <text x="364" y="352" text-anchor="middle" fill="#145a32" font-weight="bold">⑩ 再调零 → 4mA</text>
+    <text x="364" y="372" text-anchor="middle" fill="#145a32" font-size="11">再次微调调零旋钮</text>
+
+    <rect x="504" y="328" width="200" height="66" rx="8" fill="#eafaf1" stroke="#1e8449" stroke-width="1.6"/>
+    <text x="604" y="352" text-anchor="middle" fill="#145a32" font-weight="bold">⑪ 回到 0.9MPa</text>
+    <text x="604" y="372" text-anchor="middle" fill="#145a32" font-size="11">电流略低于 20mA</text>
+
+    <rect x="744" y="328" width="200" height="66" rx="8" fill="#eafaf1" stroke="#1e8449" stroke-width="1.6"/>
+    <text x="844" y="352" text-anchor="middle" fill="#145a32" font-weight="bold">⑫ 再调量程 → 20mA</text>
+    <text x="844" y="372" text-anchor="middle" fill="#145a32" font-size="11">零点 4mA / 满度 20mA 收敛</text>
+  </g>
+  <path d="M224,361 H260" stroke="#1e8449" stroke-width="2" marker-end="url(#f1)"/>
+  <path d="M464,361 H500" stroke="#1e8449" stroke-width="2" marker-end="url(#f1)"/>
+  <path d="M704,361 H740" stroke="#1e8449" stroke-width="2" marker-end="url(#f1)"/>
+
+  <text x="24" y="422" font-size="11" fill="#5d6d7e">每改一次调压阀设定压力，都要在「参数设置」里改值并点「保存」；电流表读数稳定后再进入下一步。</text>
+</svg>
