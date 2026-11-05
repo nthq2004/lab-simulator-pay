@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500" font-family="Microsoft YaHei,PingFang SC,sans-serif">
+  <defs>
+    <marker id="pf1" markerWidth="10" markerHeight="10" refX="8" refY="3.5" orient="auto">
+      <path d="M0,0 L8,3.5 L0,7 Z" fill="#5d6d7e"/>
+    </marker>
+  </defs>
+  <rect width="1000" height="500" fill="#fbfcfe"/>
+  <text x="24" y="34" font-size="20" font-weight="bold" fill="#1a3a5c">图 3　压力开关测试与调整流程（17 步）</text>
+
+  <!-- 组1 -->
+  <rect x="30" y="60" width="150" height="54" rx="8" fill="#e8f8f5" stroke="#16a085" stroke-width="2"/>
+  <text x="105" y="82" font-size="12" font-weight="bold" fill="#0b5345" text-anchor="middle">① 参数整定</text>
+  <text x="105" y="100" font-size="10.5" fill="#0b5345" text-anchor="middle">第 1 步</text>
+  <text x="196" y="80" font-size="11.5" fill="#1e8449">给定值 → 60%（动作下限 0.12MPa）</text>
+  <text x="196" y="100" font-size="11.5" fill="#1e8449">幅差 → 第 6 格（动作上限 0.298MPa）</text>
+
+  <!-- 组2 -->
+  <rect x="30" y="140" width="150" height="54" rx="8" fill="#eaf2fb" stroke="#2471a3" stroke-width="2"/>
+  <text x="105" y="162" font-size="12" font-weight="bold" fill="#1a5276" text-anchor="middle">② 气路接线</text>
+  <text x="105" y="180" font-size="10.5" fill="#1a5276" text-anchor="middle">第 2~6 步</text>
+  <text x="196" y="158" font-size="11.5" fill="#21618c">气瓶 → 截止阀 → 调压阀 → 三通 ┬→ 压力表（u）</text>
+  <text x="196" y="178" font-size="11.5" fill="#21618c">　　　　　　　　　　　　　　　└→ 压力开关（l）</text>
+
+  <!-- 组3 -->
+  <rect x="30" y="220" width="150" height="54" rx="8" fill="#fdecea" stroke="#c0392b" stroke-width="2"/>
+  <text x="105" y="242" font-size="12" font-weight="bold" fill="#922b21" text-anchor="middle">③ 仪表与电路</text>
+  <text x="105" y="260" font-size="10.5" fill="#922b21" text-anchor="middle">第 7~9 步</text>
+  <text x="196" y="238" font-size="11.5" fill="#922b21">万用表切 200Ω 档：红表笔 → NC，黑表笔 → COM</text>
+  <text x="196" y="258" font-size="11.5" fill="#922b21">（触点闭合≈0.0Ω；断开显示 O.L）</text>
+
+  <!-- 组4 -->
+  <rect x="30" y="300" width="150" height="150" rx="8" fill="#fef9e7" stroke="#b9770e" stroke-width="2"/>
+  <text x="105" y="322" font-size="12" font-weight="bold" fill="#7e5109" text-anchor="middle">④ 通气与调压</text>
+  <text x="105" y="340" font-size="10.5" fill="#7e5109" text-anchor="middle">第 10~17 步</text>
+  <text x="105" y="362" font-size="10" fill="#7e5109" text-anchor="middle">打开截止阀后</text>
+  <text x="105" y="378" font-size="10" fill="#7e5109" text-anchor="middle">逐点改变设定压力</text>
+  <text x="105" y="398" font-size="10" fill="#7e5109" text-anchor="middle">观察触点动作</text>
+  <text x="105" y="418" font-size="10" fill="#7e5109" text-anchor="middle">（双位/滞环）</text>
+
+  <!-- 压力序列 -->
+  <rect x="196" y="300" width="776" height="150" rx="8" fill="#fffdf5" stroke="#d6c08a" stroke-width="1.2"/>
+  <text x="212" y="322" font-size="11.5" font-weight="bold" fill="#7e5109">设定压力序列（MPa）与 NC 触点状态</text>
+
+  <!-- 节点 -->
+  <g font-size="11" text-anchor="middle">
+    <rect x="212" y="336" width="84" height="34" rx="6" fill="#d5f5e3" stroke="#1e8449"/><text x="254" y="350" fill="#145a32">0.11</text><text x="254" y="365" fill="#145a32">闭合</text>
+    <line x1="296" y1="353" x2="316" y2="353" stroke="#5d6d7e" stroke-width="1.5" marker-end="url(#pf1)"/>
+    <rect x="318" y="336" width="84" height="34" rx="6" fill="#d5f5e3" stroke="#1e8449"/><text x="360" y="350" fill="#145a32">0.13</text><text x="360" y="365" fill="#145a32">闭合</text>
+    <line x1="402" y1="353" x2="422" y2="353" stroke="#5d6d7e" stroke-width="1.5" marker-end="url(#pf1)"/>
+    <rect x="424" y="336" width="84" height="34" rx="6" fill="#d5f5e3" stroke="#1e8449"/><text x="466" y="350" fill="#145a32">0.288</text><text x="466" y="365" fill="#145a32">闭合</text>
+    <line x1="508" y1="353" x2="528" y2="353" stroke="#5d6d7e" stroke-width="1.5" marker-end="url(#pf1)"/>
+    <rect x="530" y="336" width="84" height="34" rx="6" fill="#fadbd8" stroke="#c0392b"/><text x="572" y="350" fill="#922b21">0.308</text><text x="572" y="365" fill="#922b21">断开</text>
+    <line x1="614" y1="353" x2="634" y2="353" stroke="#5d6d7e" stroke-width="1.5" marker-end="url(#pf1)"/>
+    <rect x="636" y="336" width="84" height="34" rx="6" fill="#fadbd8" stroke="#c0392b"/><text x="678" y="350" fill="#922b21">0.288</text><text x="678" y="365" fill="#922b21">断开</text>
+    <line x1="720" y1="353" x2="740" y2="353" stroke="#5d6d7e" stroke-width="1.5" marker-end="url(#pf1)"/>
+    <rect x="742" y="336" width="84" height="34" rx="6" fill="#fadbd8" stroke="#c0392b"/><text x="784" y="350" fill="#922b21">0.13</text><text x="784" y="365" fill="#922b21">断开</text>
+    <line x1="826" y1="353" x2="846" y2="353" stroke="#5d6d7e" stroke-width="1.5" marker-end="url(#pf1)"/>
+    <rect x="848" y="336" width="84" height="34" rx="6" fill="#d5f5e3" stroke="#1e8449"/><text x="890" y="350" fill="#145a32">0.11</text><text x="890" y="365" fill="#145a32">闭合</text>
+  </g>
+  <text x="212" y="394" font-size="10.5" fill="#7d6608">第 11~17 步：升压到上限即断开，回落到下限才重新闭合；中间区段保持原状态 —— 这就是压力开关的"切换差"（幅差）。</text>
+  <text x="212" y="416" font-size="10.5" fill="#566573">每改一次设定压力都要走「右键 → 参数设置 → 修改 → 保存」，与现场拧调压阀手轮、并在仪表上读数的过程一致。</text>
+
+  <!-- 连线箭头 -->
+  <line x1="105" y1="114" x2="105" y2="140" stroke="#5d6d7e" stroke-width="2" marker-end="url(#pf1)"/>
+  <line x1="105" y1="194" x2="105" y2="220" stroke="#5d6d7e" stroke-width="2" marker-end="url(#pf1)"/>
+  <line x1="105" y1="274" x2="105" y2="300" stroke="#5d6d7e" stroke-width="2" marker-end="url(#pf1)"/>
+</svg>
