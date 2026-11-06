@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="560" viewBox="0 0 1000 560" font-family="Microsoft YaHei,PingFang SC,sans-serif">
+  <rect width="1000" height="560" fill="#fbfcfe"/>
+  <text x="24" y="30" font-size="20" font-weight="bold" fill="#1a3a5c">图 3　信号链换算：温度 T → 电阻 R → 电流 I → 测量值 PV</text>
+
+  <!-- 换算链 -->
+  <g font-size="12">
+    <rect x="40" y="56" width="150" height="58" rx="8" fill="#fdf2e9" stroke="#d35400" stroke-width="2"/>
+    <text x="115" y="80" font-size="12.5" font-weight="bold" fill="#935116" text-anchor="middle">温度 T</text>
+    <text x="115" y="100" font-size="10.5" fill="#a04000" text-anchor="middle">0 ~ 100 ℃</text>
+
+    <rect x="240" y="56" width="170" height="58" rx="8" fill="#fdf2e9" stroke="#d35400" stroke-width="2"/>
+    <text x="325" y="80" font-size="12.5" font-weight="bold" fill="#935116" text-anchor="middle">PT100 电阻 R</text>
+    <text x="325" y="100" font-size="10.5" fill="#a04000" text-anchor="middle">R＝100＋0.3851·T</text>
+
+    <rect x="460" y="56" width="180" height="58" rx="8" fill="#e8f6f3" stroke="#16a085" stroke-width="2"/>
+    <text x="550" y="80" font-size="12.5" font-weight="bold" fill="#0b5345" text-anchor="middle">变送器输出 I</text>
+    <text x="550" y="100" font-size="10.5" fill="#0b5345" text-anchor="middle">I＝4＋16·T/100（mA）</text>
+
+    <rect x="690" y="56" width="180" height="58" rx="8" fill="#eef3f7" stroke="#5d6d7e" stroke-width="2"/>
+    <text x="780" y="80" font-size="12.5" font-weight="bold" fill="#1a3a5c" text-anchor="middle">PID 测量值 PV</text>
+    <text x="780" y="100" font-size="10.5" fill="#34495e" text-anchor="middle">PV＝(I−4)/16×100</text>
+  </g>
+  <defs>
+    <marker id="sgn" markerWidth="10" markerHeight="10" refX="8" refY="3.5" orient="auto">
+      <path d="M0,0 L8,3.5 L0,7 Z" fill="#c0392b"/>
+    </marker>
+  </defs>
+  <g stroke="#c0392b" stroke-width="2" fill="none" marker-end="url(#sgn)">
+    <path d="M190,85 H236"/>
+    <path d="M410,85 H456"/>
+    <path d="M640,85 H686"/>
+  </g>
+
+  <!-- 折线图：T-I 线性 -->
+  <g>
+    <text x="60" y="170" font-size="13" font-weight="bold" fill="#1a3a5c">变送器静态特性（本项目实测四点）</text>
+    <!-- 坐标轴 -->
+    <path d="M100,430 H470" stroke="#333" stroke-width="2"/>
+    <path d="M100,430 V190" stroke="#333" stroke-width="2"/>
+    <text x="330" y="470" font-size="11" fill="#333" text-anchor="middle">温度 T / ℃</text>
+    <text x="66" y="310" font-size="11" fill="#333" text-anchor="middle" transform="rotate(-90 66 310)">输出电流 I / mA</text>
+    <!-- 刻度 -->
+    <g font-size="10" fill="#444">
+      <text x="100" y="448" text-anchor="middle">0</text>
+      <text x="192" y="448" text-anchor="middle">25</text>
+      <text x="285" y="448" text-anchor="middle">50</text>
+      <text x="377" y="448" text-anchor="middle">75</text>
+      <text x="470" y="448" text-anchor="middle">100</text>
+      <text x="92" y="434" text-anchor="end">4</text>
+      <text x="92" y="374" text-anchor="end">8</text>
+      <text x="92" y="314" text-anchor="end">12</text>
+      <text x="92" y="254" text-anchor="end">16</text>
+      <text x="92" y="194" text-anchor="end">20</text>
+    </g>
+    <!-- 网格 -->
+    <g stroke="#d5dbdb" stroke-width="1" stroke-dasharray="4 4">
+      <path d="M100,370 H470"/><path d="M100,310 H470"/><path d="M100,250 H470"/><path d="M100,190 H470"/>
+      <path d="M192,430 V190"/><path d="M285,430 V190"/><path d="M377,430 V190"/>
+    </g>
+    <!-- 特性线 -->
+    <path d="M100,430 L470,190" stroke="#c0392b" stroke-width="3"/>
+    <!-- 四点 -->
+    <g fill="#fff" stroke="#c0392b" stroke-width="3">
+      <circle cx="192" cy="370" r="5"/>
+      <circle cx="285" cy="310" r="5"/>
+      <circle cx="377" cy="250" r="5"/>
+      <circle cx="470" cy="190" r="5"/>
+    </g>
+    <g font-size="10" fill="#922b21">
+      <text x="202" y="392">8mA / 109.62Ω</text>
+      <text x="295" y="330">12mA / 119.25Ω</text>
+      <text x="387" y="270">16mA / 128.88Ω</text>
+      <text x="462" y="176" text-anchor="end">20mA / 138.51Ω</text>
+    </g>
+  </g>
+
+  <!-- 调节器算法 -->
+  <g>
+    <rect x="530" y="180" width="430" height="112" rx="10" fill="#f4f6f7" stroke="#2c3e50" stroke-width="2"/>
+    <text x="550" y="206" font-size="13" font-weight="bold" fill="#1a3a5c">调节器：偏差 → 输出</text>
+    <text x="550" y="230" font-size="11.5" fill="#34495e">偏差 e ＝ SV − PV（本例 SV＝60℃，URV−LRV＝100）</text>
+    <text x="550" y="252" font-size="11.5" fill="#34495e">OUT ＝ 50 ＋ P·e ＋ (1/Ti)∫e dt ＋ Td·de/dt ，限幅 0~100</text>
+    <text x="550" y="274" font-size="11.5" fill="#34495e">输出电流 I_out ＝ 4 ＋ 16·OUT/100（mA）</text>
+  </g>
+
+  <!-- 偏差表 -->
+  <g>
+    <rect x="530" y="308" width="430" height="184" rx="10" fill="#fff" stroke="#95a5a6" stroke-width="1.5"/>
+    <text x="550" y="332" font-size="13" font-weight="bold" fill="#1a3a5c">项目 8.2.2 三次偏差比对（P＝4，I＝D＝0）</text>
+    <g font-size="11" fill="#34495e">
+      <text x="550" y="358">PV＝60℃（123.11Ω）：e＝0  → OUT＝50%，12.00mA，阀 50%</text>
+      <text x="550" y="384">PV＝50℃（119.25Ω）：e＝+10 → OUT＝90%，18.40mA，阀 90%</text>
+      <text x="550" y="410">PV＝70℃（126.96Ω）：e＝−10 → OUT＝10%，5.60mA，阀 10%</text>
+    </g>
+    <text x="550" y="440" font-size="11" fill="#7b241c">要点：偏差为正（PV 低于 SV）输出增大，偏差为负输出减小；</text>
+    <text x="550" y="460" font-size="11" fill="#7b241c">比例系数 P 越大，同样的偏差引起的输出变化越大。</text>
+    <text x="550" y="482" font-size="10.5" fill="#7f8c8d">（测量电流与输出电流数值相近但含义不同，注意区分 PV 回路与 MV 回路。）</text>
+  </g>
+</svg>

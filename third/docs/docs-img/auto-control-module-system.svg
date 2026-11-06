@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="500" viewBox="0 0 1000 500" font-family="Microsoft YaHei,PingFang SC,sans-serif">
+  <rect width="1000" height="500" fill="#fbfcfe"/>
+  <text x="24" y="30" font-size="20" font-weight="bold" fill="#1a3a5c">图 1　自动控制系统各模块的功能测试：系统组成</text>
+
+  <defs>
+    <marker id="ar" markerWidth="10" markerHeight="10" refX="8" refY="3.5" orient="auto">
+      <path d="M0,0 L8,3.5 L0,7 Z" fill="#c0392b"/>
+    </marker>
+    <marker id="ar2" markerWidth="10" markerHeight="10" refX="8" refY="3.5" orient="auto">
+      <path d="M0,0 L8,3.5 L0,7 Z" fill="#1f618d"/>
+    </marker>
+  </defs>
+
+  <!-- 四个模块的分组虚线 -->
+  <g font-size="12" fill="#7b241c" font-weight="bold" text-anchor="middle">
+    <text x="110" y="74">① 传感器</text>
+    <text x="360" y="74">② 变送器</text>
+    <text x="615" y="74">③ 调节器</text>
+    <text x="870" y="74">④ 执行器</text>
+  </g>
+  <g stroke="#e6b0aa" stroke-width="1.5" stroke-dasharray="5 4">
+    <path d="M40,84 H180"/>
+    <path d="M290,84 H430"/>
+    <path d="M545,84 H685"/>
+    <path d="M800,84 H940"/>
+  </g>
+
+  <!-- ① 传感器 -->
+  <rect x="30" y="100" width="160" height="112" rx="10" fill="#fdf2e9" stroke="#d35400" stroke-width="2"/>
+  <text x="110" y="126" font-size="13" font-weight="bold" fill="#935116" text-anchor="middle">可调电阻 varires</text>
+  <text x="110" y="144" font-size="10.5" fill="#a04000" text-anchor="middle">模拟 PT100 热电阻</text>
+  <path d="M66,186 H154" stroke="#7f8c8d" stroke-width="4"/>
+  <rect x="82" y="176" width="56" height="20" fill="#ececec" stroke="#555"/>
+  <path d="M110,166 v10" stroke="#2c3e50" stroke-width="3" marker-end="url(#ar)"/>
+  <text x="110" y="204" font-size="10" fill="#a04000" text-anchor="middle">R＝100＋0.3851·T</text>
+
+  <!-- ② 变送器 -->
+  <rect x="280" y="100" width="160" height="112" rx="10" fill="#e8f6f3" stroke="#16a085" stroke-width="2"/>
+  <text x="360" y="126" font-size="13" font-weight="bold" fill="#0b5345" text-anchor="middle">温度变送器 temptr</text>
+  <text x="360" y="144" font-size="10.5" fill="#0b5345" text-anchor="middle">PT100 三线制输入</text>
+  <circle cx="360" cy="176" r="20" fill="#27ae60" stroke="#1e8449" stroke-width="3"/>
+  <text x="360" y="181" font-size="10" fill="#0b2a12" text-anchor="middle" font-family="monospace">60.0℃</text>
+  <text x="360" y="206" font-size="10" fill="#0b5345" text-anchor="middle">输出 4~20mA（二线制）</text>
+
+  <!-- ③ 调节器 -->
+  <rect x="530" y="100" width="170" height="112" rx="10" fill="#f4f6f7" stroke="#2c3e50" stroke-width="2"/>
+  <text x="615" y="126" font-size="13" font-weight="bold" fill="#1a3a5c" text-anchor="middle">PID 调节器 pid</text>
+  <text x="615" y="144" font-size="10.5" fill="#34495e" text-anchor="middle">P＝4，SV＝60℃，量程 0~100</text>
+  <rect x="538" y="154" width="154" height="30" rx="3" fill="#111"/>
+  <text x="562" y="174" font-size="11" fill="#ff5d5d" text-anchor="start" font-family="monospace">PV 60.0</text>
+  <text x="668" y="174" font-size="11" fill="#5dff8f" text-anchor="end" font-family="monospace">SV 60.0</text>
+  <text x="615" y="206" font-size="10" fill="#34495e" text-anchor="middle">偏差 e＝SV−PV → 输出 4~20mA</text>
+
+  <!-- ④ 执行器 -->
+  <rect x="790" y="100" width="160" height="112" rx="10" fill="#eaf2f8" stroke="#2471a3" stroke-width="2"/>
+  <text x="870" y="126" font-size="13" font-weight="bold" fill="#1a5276" text-anchor="middle">电动调节阀 valve</text>
+  <text x="870" y="144" font-size="10.5" fill="#1a5276" text-anchor="middle">REMOTE 远程给定</text>
+  <circle cx="870" cy="176" r="20" fill="#bdc3c7" stroke="#7f8c8d" stroke-width="3"/>
+  <path d="M870,176 v-13" stroke="#2c3e50" stroke-width="3"/>
+  <text x="870" y="206" font-size="10" fill="#1a5276" text-anchor="middle">4mA 全关 ~ 20mA 全开</text>
+
+  <!-- 信号流箭头 -->
+  <g stroke="#c0392b" stroke-width="2.5" fill="none" marker-end="url(#ar)">
+    <path d="M192,150 H276"/>
+    <path d="M442,150 H526"/>
+    <path d="M702,150 H786"/>
+  </g>
+  <g font-size="10.5" fill="#922b21" text-anchor="middle">
+    <text x="234" y="140">热电阻 R</text>
+    <text x="484" y="140">4~20mA</text>
+    <text x="744" y="140">4~20mA</text>
+    <text x="484" y="176">测量回路 PV</text>
+    <text x="744" y="176">输出回路 MV</text>
+  </g>
+
+  <!-- 串在回路里的电流表 -->
+  <g>
+    <circle cx="234" cy="186" r="17" fill="#fff" stroke="#333" stroke-width="2.5"/>
+    <path d="M234,186 L242,173" stroke="#c0392b" stroke-width="2"/>
+    <text x="234" y="218" font-size="10" fill="#1a3a5c" text-anchor="middle">（传感器本体）</text>
+
+    <circle cx="484" cy="200" r="17" fill="#fff" stroke="#333" stroke-width="2.5"/>
+    <path d="M484,200 L492,187" stroke="#c0392b" stroke-width="2"/>
+    <text x="484" y="228" font-size="10" fill="#1a3a5c" text-anchor="middle">A1</text>
+
+    <circle cx="744" cy="200" r="17" fill="#fff" stroke="#333" stroke-width="2.5"/>
+    <path d="M744,200 L752,187" stroke="#c0392b" stroke-width="2"/>
+    <text x="744" y="228" font-size="10" fill="#1a3a5c" text-anchor="middle">A2</text>
+  </g>
+
+  <!-- 24V 电源 -->
+  <rect x="540" y="300" width="150" height="86" rx="10" fill="#eef3f7" stroke="#5d6d7e" stroke-width="2"/>
+  <text x="615" y="326" font-size="12.5" font-weight="bold" fill="#1a3a5c" text-anchor="middle">DC 24V 电源</text>
+  <text x="615" y="344" font-size="10.5" fill="#34495e" text-anchor="middle">dcpower　电源键通断</text>
+  <text x="615" y="364" font-size="10" fill="#34495e" text-anchor="middle">给 PID 供电，再由</text>
+  <text x="615" y="378" font-size="10" fill="#34495e" text-anchor="middle">PID 配电给变送器</text>
+
+  <g stroke="#1f618d" stroke-width="2" fill="none" marker-end="url(#ar2)">
+    <path d="M615,300 V216"/>
+  </g>
+  <text x="624" y="268" font-size="10" fill="#1f618d">24V → vcc / gnd</text>
+
+  <!-- 说明 -->
+  <text x="40" y="424" font-size="12" fill="#34495e">测试思路：传感器/变送器看"物理量 → 4~20mA 是否线性"；调节器看"偏差 → 输出电流"；执行器看"输出电流 → 阀位"。</text>
+  <text x="40" y="448" font-size="12" fill="#34495e">三个项目共用同一套台架，区别只在于接线范围与 PID 的运行模式（自动 / 手动）。</text>
+  <text x="40" y="472" font-size="11" fill="#7f8c8d">注：A1 串在测量回路（PV）中读测量电流，A2 串在输出回路（MV）中读输出电流，两只表量程均为 0~20mA。</text>
+</svg>
