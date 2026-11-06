@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="520" viewBox="0 0 1000 520" font-family="Microsoft YaHei,PingFang SC,sans-serif">
+  <defs>
+    <marker id="ax" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#34495e"/>
+    </marker>
+  </defs>
+  <rect width="1000" height="520" fill="#fbfcfe"/>
+  <text x="24" y="30" font-size="20" font-weight="bold" fill="#1a3a5c">图 3　PID 的参数作用：偏差—输出关系与 P/I/D 的调节效果</text>
+
+  <!-- ══ 左：静态特性 ══ -->
+  <text x="30" y="66" font-size="13" font-weight="bold" fill="#922b21">（a）比例作用：OUT = 50 + P × 偏差</text>
+
+  <!-- 坐标轴 -->
+  <path d="M90,400 H470" stroke="#34495e" stroke-width="2" marker-end="url(#ax)"/>
+  <path d="M90,400 V70" stroke="#34495e" stroke-width="2" marker-end="url(#ax)"/>
+  <text x="482" y="392" font-size="11" fill="#34495e">偏差 e（℃）</text>
+  <text x="60" y="80" font-size="11" fill="#34495e" text-anchor="middle">OUT</text>
+  <text x="60" y="94" font-size="11" fill="#34495e" text-anchor="middle">（%）</text>
+
+  <!-- y 网格 -->
+  <g font-size="10" fill="#566573">
+    <line x1="90" y1="125" x2="470" y2="125" stroke="#dfe6e9" stroke-width="1"/>
+    <text x="80" y="129" text-anchor="end">100</text>
+    <line x1="90" y1="262.5" x2="470" y2="262.5" stroke="#b2bec3" stroke-width="1" stroke-dasharray="5 4"/>
+    <text x="80" y="266" text-anchor="end">50</text>
+    <line x1="90" y1="400" x2="470" y2="400" stroke="#dfe6e9" stroke-width="1"/>
+    <text x="80" y="404" text-anchor="end">0</text>
+    <text x="280" y="418" text-anchor="middle">10</text>
+    <text x="470" y="418" text-anchor="middle">20</text>
+    <line x1="280" y1="400" x2="280" y2="152" stroke="#b2bec3" stroke-width="1" stroke-dasharray="5 4"/>
+  </g>
+
+  <!-- 三条比例直线 -->
+  <path d="M90,262.5 L327.5,125 H470" stroke="#c0392b" stroke-width="3" fill="none"/>
+  <path d="M90,262.5 L406.7,125 H470" stroke="#e67e22" stroke-width="3" fill="none"/>
+  <path d="M90,262.5 L470,152.5" stroke="#2471a3" stroke-width="3" fill="none"/>
+
+  <circle cx="280" cy="152.5" r="5" fill="#c0392b"/>
+  <circle cx="280" cy="180" r="5" fill="#e67e22"/>
+  <circle cx="280" cy="207.5" r="5" fill="#2471a3"/>
+  <text x="292" y="146" font-size="11" fill="#c0392b" stroke="#fbfcfe" stroke-width="3" paint-order="stroke">P=4</text>
+  <text x="292" y="199" font-size="11" fill="#e67e22" stroke="#fbfcfe" stroke-width="3" paint-order="stroke">P=3</text>
+  <text x="292" y="240" font-size="11" fill="#2471a3" stroke="#fbfcfe" stroke-width="3" paint-order="stroke">P=2</text>
+
+  <text x="96" y="386" font-size="10" fill="#566573">无偏差（e=0）时 OUT＝50%，对应 12mA，是加热/冷却的平衡点</text>
+  <text x="280" y="442" font-size="10" fill="#566573" text-anchor="middle">偏差 e＝10℃（50℃ → 60℃）</text>
+  <text x="30" y="468" font-size="11" fill="#566573">同一偏差 10℃ 下：<tspan fill="#c0392b">P=4 → 90.0%（18.4mA）</tspan>　<tspan fill="#e67e22">P=3 → 80.0%（16.8mA）</tspan>　<tspan fill="#2471a3">P=2 → 70.0%（15.2mA）</tspan></text>
+
+  <!-- ══ 右：动态效果 ══ -->
+  <text x="540" y="66" font-size="13" font-weight="bold" fill="#1a5276">（b）阶跃扰动后三种作用的输出变化</text>
+
+  <path d="M570,400 H950" stroke="#34495e" stroke-width="2" marker-end="url(#ax)"/>
+  <path d="M570,400 V80" stroke="#34495e" stroke-width="2" marker-end="url(#ax)"/>
+  <text x="952" y="420" font-size="11" fill="#34495e" text-anchor="end">t</text>
+  <text x="552" y="90" font-size="11" fill="#34495e" text-anchor="middle">OUT</text>
+
+  <line x1="570" y1="280" x2="950" y2="280" stroke="#b2bec3" stroke-width="1" stroke-dasharray="5 4"/>
+  <text x="578" y="274" font-size="10" fill="#566573">50%</text>
+  <line x1="600" y1="400" x2="600" y2="110" stroke="#dfe6e9" stroke-width="1" stroke-dasharray="4 4"/>
+  <text x="604" y="414" font-size="10" fill="#566573">加扰动</text>
+
+  <!-- 纯 P -->
+  <path d="M600,280 L600,172 H940" stroke="#c0392b" stroke-width="3" fill="none"/>
+  <text x="760" y="164" font-size="11" fill="#c0392b">纯 P：立刻跳到新值并停住（有余差）</text>
+
+  <!-- P+I：积分持续累积 -->
+  <path d="M600,280 C700,255 800,190 940,120" stroke="#1e8449" stroke-width="3" fill="none"/>
+  <text x="790" y="240" font-size="11" fill="#1e8449">P+I：积分不断累积，慢慢逼近目标</text>
+
+  <!-- P+D：突变瞬间超前 -->
+  <path d="M600,280 L600,150 C636,196 686,214 750,214 H940" stroke="#2471a3" stroke-width="3" fill="none"/>
+  <text x="760" y="206" font-size="11" fill="#2471a3" font-weight="bold">P+D：突变瞬间超前调节，抑制超调</text>
+
+  <text x="30" y="490" font-size="11" fill="#566573">说明：本项目演示中 P 由 4 改为 3，同一偏差 10℃ 下输出由 90% 降到 80%（电流 18.4mA → 16.8mA），即 P 越小比例作用越弱。</text>
+  <text x="30" y="512" font-size="11" fill="#566573">积分时间 Ti 越小、微分时间 Td 越大，相应作用越强；纯微分不能消除静差，纯积分会使响应变慢，工程上三者配合整定。</text>
+</svg>

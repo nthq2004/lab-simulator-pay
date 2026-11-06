@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="600" viewBox="0 0 1000 600" font-family="Microsoft YaHei,PingFang SC,sans-serif">
+  <defs>
+    <marker id="w" markerWidth="10" markerHeight="10" refX="8" refY="3.5" orient="auto">
+      <path d="M0,0 L8,3.5 L0,7 Z" fill="#c0392b"/>
+    </marker>
+  </defs>
+  <rect width="1000" height="600" fill="#fbfcfe"/>
+  <text x="24" y="30" font-size="20" font-weight="bold" fill="#1a3a5c">图 2　PID 调节器（项目 7.4）接线图：4 条回路、11 根导线</text>
+
+  <g font-size="11">
+    <!-- ① 工作电源 -->
+    <text x="30" y="72" font-size="13" font-weight="bold" fill="#922b21">① 工作电源回路（给 PID 供电，PID 上电后才有显示与输出）</text>
+    <rect x="30" y="84" width="180" height="66" rx="8" fill="#eef3f7" stroke="#5d6d7e" stroke-width="2"/>
+    <text x="120" y="108" font-size="12" font-weight="bold" fill="#1a3a5c" text-anchor="middle">DC 24V 电源</text>
+    <text x="120" y="128" font-size="10" fill="#34495e" text-anchor="middle">dcpower p(+) / n(−)</text>
+
+    <rect x="620" y="84" width="230" height="66" rx="8" fill="#f4f6f7" stroke="#2c3e50" stroke-width="2"/>
+    <text x="735" y="108" font-size="12" font-weight="bold" fill="#1a3a5c" text-anchor="middle">PID 电源端子</text>
+    <text x="735" y="128" font-size="10" fill="#34495e" text-anchor="middle">vcc(+) / gnd(−)</text>
+
+    <path d="M214,102 H614" stroke="#c0392b" stroke-width="2.5" marker-end="url(#w)"/>
+    <circle cx="330" cy="102" r="11" fill="#fff" stroke="#c0392b" stroke-width="2"/>
+    <text x="330" y="106" font-size="11" fill="#c0392b" text-anchor="middle">1</text>
+    <text x="470" y="94" font-size="10" fill="#922b21" text-anchor="middle">p(+) → vcc</text>
+
+    <path d="M214,134 H614" stroke="#34495e" stroke-width="2.5" marker-end="url(#w)"/>
+    <circle cx="330" cy="134" r="11" fill="#fff" stroke="#34495e" stroke-width="2"/>
+    <text x="330" y="138" font-size="11" fill="#34495e" text-anchor="middle">2</text>
+    <text x="470" y="152" font-size="10" fill="#34495e" text-anchor="middle">n(−) → gnd</text>
+
+    <!-- ② PT100 三线制 -->
+    <text x="30" y="196" font-size="13" font-weight="bold" fill="#935116">② PT100 三线制输入（可调电阻模拟热电阻，m、r 在变送器端短接实现引线补偿）</text>
+    <rect x="30" y="208" width="180" height="92" rx="8" fill="#fdf2e9" stroke="#d35400" stroke-width="2"/>
+    <text x="120" y="232" font-size="12" font-weight="bold" fill="#935116" text-anchor="middle">可调电阻 varires</text>
+    <text x="120" y="252" font-size="10" fill="#a04000" text-anchor="middle">l 左端　r 右端</text>
+    <text x="120" y="272" font-size="10" fill="#a04000" text-anchor="middle">R＝100＋0.3851·T（Ω）</text>
+    <text x="120" y="290" font-size="10" fill="#a04000" text-anchor="middle">100Ω＝0℃　138.5Ω＝100℃</text>
+
+    <rect x="620" y="208" width="230" height="92" rx="8" fill="#e8f6f3" stroke="#16a085" stroke-width="2"/>
+    <text x="735" y="232" font-size="12" font-weight="bold" fill="#0b5345" text-anchor="middle">温度变送器 temptr</text>
+    <text x="735" y="252" font-size="10" fill="#0b5345" text-anchor="middle">输入端子 l / m / r</text>
+    <text x="735" y="272" font-size="10" fill="#0b5345" text-anchor="middle">输出端子 p(+) / n(−)</text>
+
+    <path d="M214,224 H614" stroke="#c0392b" stroke-width="2.5" marker-end="url(#w)"/>
+    <circle cx="330" cy="224" r="11" fill="#fff" stroke="#c0392b" stroke-width="2"/>
+    <text x="330" y="228" font-size="11" fill="#c0392b" text-anchor="middle">3</text>
+    <text x="470" y="216" font-size="10" fill="#922b21" text-anchor="middle">l → l（信号端）</text>
+
+    <path d="M214,256 H614" stroke="#c0392b" stroke-width="2.5" marker-end="url(#w)"/>
+    <circle cx="330" cy="256" r="11" fill="#fff" stroke="#c0392b" stroke-width="2"/>
+    <text x="330" y="260" font-size="11" fill="#c0392b" text-anchor="middle">4</text>
+    <text x="470" y="248" font-size="10" fill="#922b21" text-anchor="middle">r → m</text>
+
+    <path d="M214,288 H614" stroke="#c0392b" stroke-width="2.5" marker-end="url(#w)"/>
+    <circle cx="330" cy="288" r="11" fill="#fff" stroke="#c0392b" stroke-width="2"/>
+    <text x="330" y="292" font-size="11" fill="#c0392b" text-anchor="middle">5</text>
+    <text x="470" y="280" font-size="10" fill="#922b21" text-anchor="middle">r → r（m、r 短接，三线补偿）</text>
+
+    <!-- ③ 测量回路 -->
+    <text x="30" y="336" font-size="13" font-weight="bold" fill="#1a5276">③ 测量反馈回路（PID 内部 24V 配电 → 电流表 → 变送器 → 250Ω 采样电阻，测得 4~20mA）</text>
+    <rect x="30" y="348" width="150" height="62" rx="8" fill="#f4f6f7" stroke="#2c3e50" stroke-width="2"/>
+    <text x="105" y="372" font-size="12" font-weight="bold" fill="#1a3a5c" text-anchor="middle">PID 配电</text>
+    <text x="105" y="392" font-size="10" fill="#34495e" text-anchor="middle">pi1(+)</text>
+
+    <rect x="300" y="348" width="180" height="62" rx="8" fill="#eaf2fb" stroke="#2471a3" stroke-width="2"/>
+    <text x="390" y="372" font-size="12" font-weight="bold" fill="#154360" text-anchor="middle">电流表 A1</text>
+    <text x="390" y="392" font-size="10" fill="#1a5276" text-anchor="middle">p(+) / n(−)</text>
+
+    <rect x="570" y="348" width="180" height="62" rx="8" fill="#e8f6f3" stroke="#16a085" stroke-width="2"/>
+    <text x="660" y="372" font-size="12" font-weight="bold" fill="#0b5345" text-anchor="middle">温度变送器</text>
+    <text x="660" y="392" font-size="10" fill="#0b5345" text-anchor="middle">p(+) / n(−)</text>
+
+    <rect x="800" y="348" width="150" height="62" rx="8" fill="#f4f6f7" stroke="#2c3e50" stroke-width="2"/>
+    <text x="875" y="372" font-size="12" font-weight="bold" fill="#1a3a5c" text-anchor="middle">PID 输入</text>
+    <text x="875" y="392" font-size="10" fill="#34495e" text-anchor="middle">ni1(−)</text>
+
+    <path d="M184,379 H296" stroke="#c0392b" stroke-width="2.5" marker-end="url(#w)"/>
+    <circle cx="240" cy="379" r="11" fill="#fff" stroke="#c0392b" stroke-width="2"/>
+    <text x="240" y="383" font-size="11" fill="#c0392b" text-anchor="middle">6</text>
+
+    <path d="M484,379 H566" stroke="#c0392b" stroke-width="2.5" marker-end="url(#w)"/>
+    <circle cx="525" cy="379" r="11" fill="#fff" stroke="#c0392b" stroke-width="2"/>
+    <text x="525" y="383" font-size="11" fill="#c0392b" text-anchor="middle">7</text>
+
+    <path d="M754,379 H796" stroke="#c0392b" stroke-width="2.5" marker-end="url(#w)"/>
+    <circle cx="775" cy="379" r="11" fill="#fff" stroke="#c0392b" stroke-width="2"/>
+    <text x="775" y="383" font-size="11" fill="#c0392b" text-anchor="middle">8</text>
+
+    <!-- ④ 输出回路 -->
+    <text x="30" y="452" font-size="13" font-weight="bold" fill="#7e5109">④ 控制输出回路（PID 按 P/I/D 运算输出 4~20mA → 电流表 → 电动阀，阀开度随输出变化）</text>
+    <rect x="30" y="464" width="150" height="62" rx="8" fill="#f4f6f7" stroke="#2c3e50" stroke-width="2"/>
+    <text x="105" y="488" font-size="12" font-weight="bold" fill="#1a3a5c" text-anchor="middle">PID 输出</text>
+    <text x="105" y="508" font-size="10" fill="#34495e" text-anchor="middle">po1(+)</text>
+
+    <rect x="300" y="464" width="180" height="62" rx="8" fill="#eaf2fb" stroke="#2471a3" stroke-width="2"/>
+    <text x="390" y="488" font-size="12" font-weight="bold" fill="#154360" text-anchor="middle">电流表 A2</text>
+    <text x="390" y="508" font-size="10" fill="#1a5276" text-anchor="middle">p(+) / n(−)</text>
+
+    <rect x="570" y="464" width="180" height="62" rx="8" fill="#fef5e7" stroke="#b9770e" stroke-width="2"/>
+    <text x="660" y="488" font-size="12" font-weight="bold" fill="#7e5109" text-anchor="middle">电动调节阀</text>
+    <text x="660" y="508" font-size="10" fill="#7e5109" text-anchor="middle">l(+) / r(−)</text>
+
+    <rect x="800" y="464" width="150" height="62" rx="8" fill="#f4f6f7" stroke="#2c3e50" stroke-width="2"/>
+    <text x="875" y="488" font-size="12" font-weight="bold" fill="#1a3a5c" text-anchor="middle">PID 输出</text>
+    <text x="875" y="508" font-size="10" fill="#34495e" text-anchor="middle">no1(−)</text>
+
+    <path d="M184,495 H296" stroke="#c0392b" stroke-width="2.5" marker-end="url(#w)"/>
+    <circle cx="240" cy="495" r="11" fill="#fff" stroke="#c0392b" stroke-width="2"/>
+    <text x="240" y="499" font-size="11" fill="#c0392b" text-anchor="middle">9</text>
+
+    <path d="M484,495 H566" stroke="#c0392b" stroke-width="2.5" marker-end="url(#w)"/>
+    <circle cx="525" cy="495" r="11" fill="#fff" stroke="#c0392b" stroke-width="2"/>
+    <text x="525" y="499" font-size="11" fill="#c0392b" text-anchor="middle">10</text>
+
+    <path d="M754,495 H796" stroke="#c0392b" stroke-width="2.5" marker-end="url(#w)"/>
+    <circle cx="775" cy="495" r="11" fill="#fff" stroke="#c0392b" stroke-width="2"/>
+    <text x="775" y="499" font-size="11" fill="#c0392b" text-anchor="middle">11</text>
+  </g>
+
+  <text x="30" y="562" font-size="11" fill="#566573">端口命名：组件 id + _wire_ + 端口名（如 pid_wire_pi1、temptr_wire_p）。接线时电流表、变送器、电动阀都串在电流环里，正负不可接反。</text>
+  <text x="30" y="582" font-size="11" fill="#566573">接反的后果：变送器不显示（p/n 悬空或反接无电流）、PID 输入开路判为 HHHH/LLLL、输出回路无电流则阀门开度不动。</text>
+</svg>

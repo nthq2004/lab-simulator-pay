@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="540" viewBox="0 0 1000 540" font-family="Microsoft YaHei,PingFang SC,sans-serif">
+  <defs>
+    <marker id="ar" markerWidth="10" markerHeight="10" refX="8" refY="3.5" orient="auto">
+      <path d="M0,0 L8,3.5 L0,7 Z" fill="#c0392b"/>
+    </marker>
+    <marker id="ab" markerWidth="10" markerHeight="10" refX="8" refY="3.5" orient="auto">
+      <path d="M0,0 L8,3.5 L0,7 Z" fill="#2471a3"/>
+    </marker>
+  </defs>
+  <rect width="1000" height="540" fill="#fbfcfe"/>
+  <text x="24" y="30" font-size="20" font-weight="bold" fill="#1a3a5c">图 1　PID 数字调节器温度控制系统的组成</text>
+
+  <!-- ── 工作电源 ── -->
+  <rect x="770" y="46" width="170" height="58" rx="8" fill="#eef3f7" stroke="#5d6d7e" stroke-width="2"/>
+  <text x="855" y="68" font-size="13" font-weight="bold" fill="#1a3a5c" text-anchor="middle">DC 24V 电源</text>
+  <text x="855" y="88" font-size="11" font-family="monospace" fill="#1a5276" text-anchor="middle">24.0 V （dcpower）</text>
+  <path d="M855,108 V112" stroke="#2471a3" stroke-width="2.5" marker-end="url(#ab)"/>
+  <text x="760" y="54" font-size="10" fill="#1a5276" text-anchor="end">24V → vcc(+) / gnd(−)</text>
+
+  <!-- ── 测量（输入）通道 ── -->
+  <text x="30" y="96" font-size="13" font-weight="bold" fill="#922b21">测量通道（PV：被测量 → 4~20mA → PID 输入）</text>
+
+  <rect x="30" y="112" width="160" height="72" rx="8" fill="#fdf2e9" stroke="#d35400" stroke-width="2"/>
+  <text x="110" y="134" font-size="13" font-weight="bold" fill="#935116" text-anchor="middle">PT100 模拟</text>
+  <text x="110" y="153" font-size="11" fill="#935116" text-anchor="middle">可调电阻 100~138.5Ω</text>
+  <text x="110" y="171" font-size="10" fill="#a04000" text-anchor="middle">varires</text>
+
+  <rect x="240" y="104" width="180" height="90" rx="8" fill="#e8f6f3" stroke="#16a085" stroke-width="2"/>
+  <text x="330" y="126" font-size="13" font-weight="bold" fill="#0b5345" text-anchor="middle">温度变送器 temptr</text>
+  <text x="330" y="146" font-size="11" fill="#0b5345" text-anchor="middle">三线制输入 l / m / r</text>
+  <text x="330" y="164" font-size="11" fill="#0b5345" text-anchor="middle">量程 0~100℃</text>
+  <text x="330" y="182" font-size="10" fill="#0b5345" text-anchor="middle">二线制 p(+) / n(−)</text>
+
+  <rect x="470" y="114" width="150" height="66" rx="8" fill="#eaf2fb" stroke="#2471a3" stroke-width="2"/>
+  <text x="545" y="136" font-size="12" font-weight="bold" fill="#154360" text-anchor="middle">测量电流表 A1</text>
+  <text x="545" y="158" font-size="15" font-family="monospace" fill="#0b5345" text-anchor="middle">12.00 mA</text>
+  <text x="545" y="174" font-size="10" fill="#1a5276" text-anchor="middle">ampmeter</text>
+
+  <path d="M190,148 H236" stroke="#c0392b" stroke-width="2.5" marker-end="url(#ar)"/>
+  <text x="213" y="140" font-size="10" fill="#922b21" text-anchor="middle">R(T)</text>
+  <path d="M420,140 H466" stroke="#c0392b" stroke-width="2.5" marker-end="url(#ar)"/>
+  <text x="443" y="132" font-size="10" fill="#922b21" text-anchor="middle">4~20mA</text>
+  <path d="M620,142 H666" stroke="#c0392b" stroke-width="2.5" marker-end="url(#ar)"/>
+  <text x="643" y="160" font-size="10" fill="#922b21" text-anchor="middle">pi1/ni1</text>
+
+  <!-- ── PID 调节器 ── -->
+  <rect x="666" y="112" width="300" height="200" rx="10" fill="#f4f6f7" stroke="#2c3e50" stroke-width="2.5"/>
+  <text x="816" y="134" font-size="13" font-weight="bold" fill="#1a3a5c" text-anchor="middle">PID 数字调节器 pid</text>
+  <rect x="682" y="142" width="268" height="56" rx="4" fill="#0b0b0b"/>
+  <text x="700" y="176" font-size="19" font-family="monospace" fill="#ff6b6b">PV 50.00</text>
+  <text x="850" y="176" font-size="19" font-family="monospace" fill="#19f1a2">SV 50.00</text>
+  <text x="700" y="216" font-size="12" font-family="monospace" fill="#e67e22">P 4.0</text>
+  <text x="760" y="216" font-size="12" font-family="monospace" fill="#e67e22">I 0</text>
+  <text x="800" y="216" font-size="12" font-family="monospace" fill="#e67e22">D 0</text>
+  <text x="850" y="216" font-size="12" font-family="monospace" fill="#e67e22">OUT 50.0%</text>
+  <text x="816" y="248" font-size="11" fill="#34495e" text-anchor="middle">A/M · SET · ▲ · ▼ 面板按键</text>
+  <text x="816" y="270" font-size="11" fill="#34495e" text-anchor="middle">deviation = SV − PV，偏差送入 P/I/D 运算</text>
+  <text x="816" y="292" font-size="10" fill="#7f8c8d" text-anchor="middle">输入 pi1(+) / ni1(−)　输出 po1(+) / no1(−)</text>
+
+  <!-- ── 输出通道 ── -->
+  <text x="30" y="330" font-size="13" font-weight="bold" fill="#1a5276">输出通道（MV：PID 输出 → 4~20mA → 电动阀开度）</text>
+
+  <path d="M816,312 V336" stroke="#c0392b" stroke-width="2.5" marker-end="url(#ar)"/>
+  <text x="826" y="330" font-size="10" fill="#922b21">po1/no1</text>
+
+  <rect x="740" y="340" width="150" height="66" rx="8" fill="#eaf2fb" stroke="#2471a3" stroke-width="2"/>
+  <text x="815" y="362" font-size="12" font-weight="bold" fill="#154360" text-anchor="middle">输出电流表 A2</text>
+  <text x="815" y="384" font-size="15" font-family="monospace" fill="#0b5345" text-anchor="middle">12.00 mA</text>
+  <text x="815" y="400" font-size="10" fill="#1a5276" text-anchor="middle">ampmeter2</text>
+
+  <path d="M736,373 H636" stroke="#c0392b" stroke-width="2.5" marker-end="url(#ar)"/>
+  <text x="686" y="365" font-size="10" fill="#922b21" text-anchor="middle">4~20mA</text>
+
+  <rect x="450" y="342" width="180" height="90" rx="8" fill="#fef5e7" stroke="#b9770e" stroke-width="2"/>
+  <text x="540" y="364" font-size="13" font-weight="bold" fill="#7e5109" text-anchor="middle">电动调节阀 valve</text>
+  <text x="540" y="384" font-size="11" fill="#7e5109" text-anchor="middle">4~20mA → 开度 0~100%</text>
+  <circle cx="540" cy="398" r="13" fill="#11ed65" stroke="#145a32" stroke-width="2"/>
+  <text x="540" y="403" font-size="11" fill="#145a32" text-anchor="middle">50%</text>
+  <text x="540" y="426" font-size="10" fill="#7e5109" text-anchor="middle">l(+) / r(−) 控制端子</text>
+
+  <path d="M540,432 V470 H930 V316" stroke="#7f8c8d" stroke-width="2" fill="none" stroke-dasharray="7 5" marker-end="url(#ab)"/>
+  <text x="700" y="486" font-size="11" fill="#566573" text-anchor="middle">电动阀负极回到 PID 输出 no1（与内部 GND 等电位），4~20mA 电流环闭合</text>
+
+  <!-- ── 说明 ── -->
+  <text x="30" y="516" font-size="11" fill="#566573">PV＝被测量（温度），SV＝设定值，OUT＝输出百分比；PV 由输入电流换算，OUT 由 P/I/D 运算后换算成 4~20mA 输出。</text>
+</svg>
