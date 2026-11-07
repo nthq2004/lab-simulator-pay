@@ -1,0 +1,272 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 760" width="650" height="760" font-family="Arial, Microsoft YaHei, sans-serif">
+  <rect x="2" y="2" width="646" height="756" rx="14" fill="#e8eaec" stroke="#9aa3ab" stroke-width="2"/>
+
+  <!-- ══════════ OP 操作面板 ══════════ -->
+  <rect x="8" y="8" width="634" height="360" rx="10" fill="#0b4a9c" stroke="#07356f" stroke-width="2"/>
+  <text x="634" y="26" fill="#fff" font-size="16" font-weight="bold" text-anchor="end">OP</text>
+
+  <!-- ── 流程图（P&ID）── -->
+  <rect x="22" y="22" width="434" height="178" rx="3" fill="#ffffff" stroke="#c8ced4" stroke-width="1.5"/>
+  <g stroke="#222222" fill="none" stroke-linecap="round">
+    <!-- 供油主管路（V1 右口向下折 = 进油，不再向右连） -->
+    <path d="M36 58 H240" stroke-width="3.2"/>
+    <path d="M240 58 H260 V80" stroke-width="2.6"/>
+    <!-- 净油通道：分离筒向上 → 向右 → 出口箭头 -->
+    <path d="M280 80 V58 H422" stroke-width="3.2"/>
+    <path d="M418 50 L436 58 L418 66 Z" fill="#222222" stroke="#222222" stroke-width="2"/>
+    <!-- 指示泡引线 -->
+    <path d="M82 40 V46 M119 40 V46 M156 40 V46 M192 40 V46 M322 40 V46 M358 40 V46" stroke-width="1.4"/>
+    <!-- V1 / V4 气动膜头连杆（延长到阀芯中心） -->
+    <path d="M228 58 V44" stroke-width="1.8"/>
+    <path d="M394 58 V44" stroke-width="1.8"/>
+    <!-- 回油支路（由下位端口引出） -->
+    <path d="M228 76 V96 H190" stroke-width="2"/>
+    <path d="M196 90 L182 96 L196 102 Z" fill="#222222" stroke="#222222" stroke-width="1.6"/>
+    <!-- 出水支路：分离机右侧 → PT5 → 出水阀 V5 → 排出 -->
+    <path d="M322 138 H436" stroke-width="2.4"/>
+    <path d="M432 132 L450 138 L432 144 Z" fill="#222222" stroke="#222222" stroke-width="1.8"/>
+    <path d="M408 138 V124" stroke-width="1.8"/>
+    <path d="M358 120 V126" stroke-width="1.4"/>
+    <!-- 工作水管路：16、15 合一 → 左下角；10 单独 → 左上角 -->
+    <path d="M42 140 H112 V164 H240" stroke-width="2"/>
+    <path d="M234 158 L248 164 L234 170 Z" fill="#222222" stroke="#222222" stroke-width="1.6"/>
+    <path d="M122 140 H182 V118 H240" stroke-width="2"/>
+    <path d="M234 112 L248 118 L234 124 Z" fill="#222222" stroke="#222222" stroke-width="1.6"/>
+  </g>
+  <!-- 指示泡（圆形，r=6） -->
+  <g fill="#ffffff" stroke="#222222" stroke-width="1.6">
+    <circle cx="82" cy="34" r="6"/><circle cx="119" cy="34" r="6"/><circle cx="156" cy="34" r="6"/>
+    <circle cx="192" cy="34" r="6"/><circle cx="322" cy="34" r="6"/><circle cx="358" cy="34" r="6"/>
+  </g>
+  <!-- 供油泵 -->
+  <circle cx="82" cy="58" r="12" fill="#ffffff" stroke="#222222" stroke-width="2.2"/>
+  <path d="M76 52 L90 58 L76 64 Z" fill="#222222" stroke="#222222"/>
+  <!-- 滤器 / 加热器 -->
+  <rect x="108" y="47" width="22" height="22" fill="#ffffff" stroke="#222222" stroke-width="2"/>
+  <path d="M113 64 L119 52 L125 64" fill="none" stroke="#222222" stroke-width="1.8"/>
+  <!-- 变送器圆 -->
+  <g fill="#ffffff" stroke="#222222" stroke-width="2">
+    <circle cx="156" cy="58" r="12"/><circle cx="192" cy="58" r="12"/>
+    <circle cx="322" cy="58" r="12"/><circle cx="358" cy="58" r="12"/>
+  </g>
+  <g font-size="8" font-weight="bold" fill="#111111" text-anchor="middle">
+    <text x="156" y="61">TT</text><text x="192" y="61">PT</text>
+    <text x="322" y="61">MT</text><text x="358" y="61">PT</text>
+  </g>
+  <!-- 三通阀 V1：气动膜头 + 左/右/下三位（无气时左+下通） -->
+  <path d="M220 44 A 8 8 0 0 1 236 44 Z" fill="#ffffff" stroke="#222222" stroke-width="1.8"/>
+  <path d="M215 50 L228 58 L215 66 Z" fill="#2e7d32" stroke="#222222" stroke-width="1.8" stroke-linejoin="round"/>
+  <path d="M241 50 L228 58 L241 66 Z" fill="#ffffff" stroke="#222222" stroke-width="1.8" stroke-linejoin="round"/>
+  <path d="M217 76 L239 76 L228 58 Z" fill="#2e7d32" stroke="#222222" stroke-width="1.8" stroke-linejoin="round"/>
+  <!-- 出油阀 V4：气动阀（蝶形 + 气动膜头） -->
+  <path d="M386 44 A 8 8 0 0 1 402 44 Z" fill="#ffffff" stroke="#222222" stroke-width="1.8"/>
+  <path d="M381 50 L394 58 L381 66 Z" fill="#ffffff" stroke="#222222" stroke-width="1.8" stroke-linejoin="round"/>
+  <path d="M407 50 L394 58 L407 66 Z" fill="#ffffff" stroke="#222222" stroke-width="1.8" stroke-linejoin="round"/>
+  <!-- 分离筒 + 机架 + 皮带轮 -->
+  <path d="M254 80 H286 L274 104 H266 Z" fill="#ffffff" stroke="#222222" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M258 104 H318 V118 L328 126 V144 L318 152 V170 H248 V152 L236 144 V126 L248 118 Z"
+        fill="#ffffff" stroke="#222222" stroke-width="2" stroke-linejoin="round"/>
+  <circle cx="310" cy="138" r="9" fill="#ffffff" stroke="#222222" stroke-width="2"/>
+  <!-- 出水压力变送器 PT5 + 出水阀 V5（气动） -->
+  <circle cx="358" cy="114" r="6" fill="#ffffff" stroke="#222222" stroke-width="1.6"/>
+  <circle cx="358" cy="138" r="12" fill="#ffffff" stroke="#222222" stroke-width="2"/>
+  <text x="358" y="141" font-size="8" font-weight="bold" fill="#111111" text-anchor="middle">PT</text>
+  <path d="M400 124 A 8 8 0 0 1 416 124 Z" fill="#ffffff" stroke="#222222" stroke-width="1.8"/>
+  <path d="M395 130 L408 138 L395 146 Z" fill="#ffffff" stroke="#222222" stroke-width="1.8" stroke-linejoin="round"/>
+  <path d="M421 130 L408 138 L421 146 Z" fill="#ffffff" stroke="#222222" stroke-width="1.8" stroke-linejoin="round"/>
+  <!-- 工作水阀组 16 / 15 / 10 -->
+  <g stroke="#222222" fill="#ffffff">
+    <rect x="32" y="114" width="12" height="10" stroke-width="1.8"/><path d="M38 124 V140" stroke-width="1.6"/>
+    <rect x="68" y="114" width="12" height="10" stroke-width="1.8"/><path d="M74 124 V140" stroke-width="1.6"/>
+    <rect x="104" y="114" width="12" height="10" stroke-width="1.8"/><path d="M110 124 V140" stroke-width="1.6"/>
+    <path d="M29 134 L38 140 L29 146 Z M47 134 L38 140 L47 146 Z" stroke-width="1.8"/>
+    <path d="M65 134 L74 140 L65 146 Z M83 134 L74 140 L83 146 Z" stroke-width="1.8"/>
+    <path d="M101 134 L110 140 L101 146 Z M119 134 L110 140 L119 146 Z" stroke-width="1.8"/>
+  </g>
+  <g font-size="10" font-weight="bold" fill="#111111" text-anchor="middle">
+    <text x="38" y="156">16</text><text x="74" y="156">15</text><text x="110" y="156">10</text>
+  </g>
+  <text x="30" y="194" font-size="10" font-weight="bold" fill="#111111">EPC-50</text>
+
+
+  <!-- ── INFO 区 ── -->
+  <rect x="22" y="206" width="160" height="146" rx="3" fill="#fff" stroke="#c8ced4" stroke-width="1.5"/>
+  <rect x="22" y="206" width="160" height="22" fill="#cfe0f2"/>
+  <text x="30" y="220" font-size="12" font-weight="bold" fill="#0b4a9c">INFO</text>
+  <g stroke="#dde3e8" stroke-width="1">
+    <line x1="28" y1="259" x2="176" y2="259"/>
+    <line x1="28" y1="290" x2="176" y2="290"/>
+    <line x1="28" y1="321" x2="176" y2="321"/>
+  </g>
+  <g font-size="12" fill="#1b2a38" font-family="Consolas, monospace">
+    <text x="30" y="250">STATE  Standst</text>
+    <text x="30" y="281">SPEED  0 r/min</text>
+    <text x="30" y="312">TT1    40.0 C</text>
+    <text x="30" y="343">NEXT   --</text>
+  </g>
+
+  <!-- ── 液晶 ── -->
+  <rect x="194" y="206" width="262" height="94" rx="4" fill="#0b0b0b" stroke="#3a3a3a" stroke-width="2"/>
+  <text x="204" y="241" font-size="26" font-weight="bold" fill="#ff3b30" font-family="Consolas, monospace">Standst</text>
+  <text x="446" y="282" font-size="12" fill="#ff6b60" text-anchor="end" font-family="Consolas, monospace">40C  0rpm</text>
+
+  <!-- ── − / + / ENTER ── -->
+  <g>
+    <rect x="222" y="308" width="64" height="44" rx="6" fill="#3f3f3f" stroke="#9aa3ab" stroke-width="1.4"/>
+    <rect x="293" y="308" width="64" height="44" rx="6" fill="#3f3f3f" stroke="#9aa3ab" stroke-width="1.4"/>
+    <rect x="364" y="308" width="64" height="44" rx="6" fill="#3f3f3f" stroke="#9aa3ab" stroke-width="1.4"/>
+    <text x="254" y="340" font-size="23" fill="#fff" text-anchor="middle">−</text>
+    <text x="325" y="340" font-size="23" fill="#fff" text-anchor="middle">+</text>
+    <text x="396" y="336" font-size="12" font-weight="bold" fill="#fff" text-anchor="middle">ENTER</text>
+  </g>
+
+  <!-- ══════════ 右侧按钮区：5 个白色圆角分组框 ══════════ -->
+  <g fill="#ffffff" stroke="#0b4a9c" stroke-width="1.4">
+    <rect x="466" y="22"  width="170" height="58" rx="9"/>
+    <rect x="466" y="88"  width="170" height="70" rx="9"/>
+    <rect x="466" y="166" width="170" height="58" rx="9"/>
+    <rect x="466" y="232" width="170" height="50" rx="9"/>
+    <rect x="466" y="290" width="170" height="62" rx="9"/>
+  </g>
+  <!-- 指示灯（未点亮）：SEPARATION 与 STOP 两只灯相对按钮上下对称，均在按键左侧 -->
+  <g fill="#c9ccce" stroke="#2b2f2f" stroke-width="1">
+    <circle cx="480" cy="36"  r="5.5"/>
+    <circle cx="480" cy="102" r="5.5"/>
+    <circle cx="480" cy="144" r="5.5"/>
+    <circle cx="480" cy="180" r="5.5"/>
+    <circle cx="480" cy="246" r="5.5"/>
+    <circle cx="480" cy="304" r="5.5"/>
+  </g>
+  <!-- 黑色按键（HEATER / SEPARATION-STOP 共用 / DISCHARGE / ALARM） -->
+  <g fill="#1d2225" stroke="#111111" stroke-width="1.2">
+    <rect x="474" y="42"  width="38" height="30" rx="5"/>
+    <rect x="474" y="108" width="38" height="30" rx="5"/>
+    <rect x="474" y="186" width="38" height="30" rx="5"/>
+    <rect x="474" y="310" width="38" height="30" rx="5"/>
+  </g>
+  <!-- ① HEATER：标注在图标正上方 -->
+  <rect x="539" y="47" width="22" height="22" fill="#ffffff" stroke="#111111" stroke-width="1.7"/>
+  <path d="M543 62.4 L547.6 53.6 L552.2 62.4 L556.8 53.6" fill="none" stroke="#111111" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round"/>
+  <text x="550" y="40" font-size="10.5" font-weight="bold" fill="#111111" text-anchor="middle">HEATER</text>
+  <!-- ② SEPARATION（同一只按键兼作停止）与下方 STOP 指示灯 -->
+  <path d="M539.4 115.8 H560.6 L555.3 132.6 H544.7 Z" fill="#ffffff" stroke="#111111" stroke-width="1.7" stroke-linejoin="round"/>
+  <path d="M546.2 115.8 V127.8 M553.8 115.8 V127.8" stroke="#111111" stroke-width="1.1"/>
+  <path d="M550 111 V115.8" stroke="#111111" stroke-width="1.7"/>
+  <text x="550" y="106" font-size="10.5" font-weight="bold" fill="#111111" text-anchor="middle">SEPARATION</text>
+  <text x="550" y="146" font-size="10.5" font-weight="bold" fill="#111111" text-anchor="middle">STOP</text>
+  <!-- ③ DISCHARGE -->
+  <path d="M545.6 194.1 H554.4 L550 202 L554.4 209.1 H545.6 L550 202 Z"
+        fill="#ffffff" stroke="#111111" stroke-width="1.7" stroke-linejoin="round"/>
+  <g fill="#111111">
+    <circle cx="542.1" cy="197.6" r="1.3"/><circle cx="540.3" cy="202" r="1.3"/><circle cx="542.1" cy="206.4" r="1.3"/>
+    <circle cx="557.9" cy="197.6" r="1.3"/><circle cx="559.7" cy="202" r="1.3"/><circle cx="557.9" cy="206.4" r="1.3"/>
+  </g>
+  <text x="550" y="184" font-size="10.5" font-weight="bold" fill="#111111" text-anchor="middle">DISCHARGE</text>
+  <!-- ④ OP ACTIVE -->
+  <text x="550" y="262" font-size="10.5" font-weight="bold" fill="#111111" text-anchor="middle">OP ACTIVE</text>
+  <!-- ⑤ ALARM -->
+  <path d="M541.2 333.5 H558.8 L550 318.1 Z" fill="#ffffff" stroke="#111111" stroke-width="1.8" stroke-linejoin="round"/>
+  <path d="M550 323.8 V328.2" stroke="#111111" stroke-width="1.8" stroke-linecap="round"/>
+  <circle cx="550" cy="330.8" r="1.3" fill="#111111"/>
+  <path d="M557.8 319.4 A 7.6 7.6 0 0 1 557.8 332.6" fill="none" stroke="#111111" stroke-width="1.4"/>
+  <text x="550" y="308" font-size="10.5" font-weight="bold" fill="#111111" text-anchor="middle">ALARM</text>
+
+  <!-- ══════════ 电机起动控制箱 ══════════ -->
+  <rect x="8" y="376" width="634" height="376" rx="10" fill="#0b4a9c" stroke="#07356f" stroke-width="2"/>
+
+  <!-- 四只起停按钮 -->
+  <g>
+    <rect x="10" y="389" width="116" height="30" rx="3" fill="#fff" stroke="#0b4a9c"/>
+    <text x="68" y="400" font-size="10" font-weight="bold" fill="#0b1a2b" text-anchor="middle">START</text>
+    <text x="68" y="412" font-size="10" font-weight="bold" fill="#0b1a2b" text-anchor="middle">FEED PUMP</text>
+    <circle cx="68" cy="455" r="27" fill="#e4e7e7" stroke="#7f8585"/>
+    <circle cx="68" cy="455" r="22" fill="#1b5e20" stroke="#0b0b0b"/>
+
+    <rect x="138" y="389" width="116" height="30" rx="3" fill="#fff" stroke="#0b4a9c"/>
+    <text x="196" y="400" font-size="10" font-weight="bold" fill="#0b1a2b" text-anchor="middle">START</text>
+    <text x="196" y="412" font-size="10" font-weight="bold" fill="#0b1a2b" text-anchor="middle">MOTOR</text>
+    <circle cx="196" cy="455" r="27" fill="#e4e7e7" stroke="#7f8585"/>
+    <circle cx="196" cy="455" r="22" fill="#1b5e20" stroke="#0b0b0b"/>
+
+    <rect x="10" y="495" width="116" height="30" rx="3" fill="#fff" stroke="#0b4a9c"/>
+    <text x="68" y="506" font-size="10" font-weight="bold" fill="#0b1a2b" text-anchor="middle">STOP</text>
+    <text x="68" y="518" font-size="10" font-weight="bold" fill="#0b1a2b" text-anchor="middle">FEED PUMP</text>
+    <circle cx="68" cy="561" r="27" fill="#e4e7e7" stroke="#7f8585"/>
+    <circle cx="68" cy="561" r="22" fill="#b71c1c" stroke="#0b0b0b"/>
+
+    <rect x="138" y="495" width="116" height="30" rx="3" fill="#fff" stroke="#0b4a9c"/>
+    <text x="196" y="506" font-size="10" font-weight="bold" fill="#0b1a2b" text-anchor="middle">STOP</text>
+    <text x="196" y="518" font-size="10" font-weight="bold" fill="#0b1a2b" text-anchor="middle">MOTOR</text>
+    <circle cx="196" cy="561" r="27" fill="#e4e7e7" stroke="#7f8585"/>
+    <circle cx="196" cy="561" r="22" fill="#b71c1c" stroke="#0b0b0b"/>
+  </g>
+
+  <!-- 电流表 -->
+  <rect x="276" y="386" width="150" height="26" rx="3" fill="#fff" stroke="#0b4a9c"/>
+  <text x="351" y="404" font-size="11" font-weight="bold" fill="#0b1a2b" text-anchor="middle">MOTOR CURRENT</text>
+  <rect x="278" y="416" width="146" height="150" rx="6" fill="#2b2b2b" stroke="#111" stroke-width="2"/>
+  <rect x="285" y="423" width="132" height="136" rx="3" fill="#f7f7f2" stroke="#111" stroke-width="1.5"/>
+  <circle cx="351" cy="476" r="48" fill="#fff" stroke="#54606a" stroke-width="2"/>
+  <g stroke="#111">
+    <g stroke-width="1.5">
+      <line x1="351" y1="439" x2="351" y2="431" transform="rotate(-120 351 476)"/>
+      <line x1="351" y1="439" x2="351" y2="431" transform="rotate(-72 351 476)"/>
+      <line x1="351" y1="439" x2="351" y2="431" transform="rotate(-24 351 476)"/>
+      <line x1="351" y1="439" x2="351" y2="431" transform="rotate(24 351 476)"/>
+      <line x1="351" y1="439" x2="351" y2="431" transform="rotate(72 351 476)"/>
+      <line x1="351" y1="439" x2="351" y2="431" transform="rotate(120 351 476)"/>
+    </g>
+    <g stroke-width="0.9">
+      <line x1="351" y1="435" x2="351" y2="431" transform="rotate(-96 351 476)"/>
+      <line x1="351" y1="435" x2="351" y2="431" transform="rotate(-48 351 476)"/>
+      <line x1="351" y1="435" x2="351" y2="431" transform="rotate(0 351 476)"/>
+      <line x1="351" y1="435" x2="351" y2="431" transform="rotate(48 351 476)"/>
+      <line x1="351" y1="435" x2="351" y2="431" transform="rotate(96 351 476)"/>
+    </g>
+  </g>
+  <g font-size="10" fill="#111" text-anchor="middle">
+    <text x="328" y="493">0</text><text x="325" y="471">5</text><text x="340" y="455">10</text>
+    <text x="362" y="455">15</text><text x="377" y="471">20</text><text x="374" y="493">25</text>
+  </g>
+  <text x="299" y="448" font-size="11" font-weight="bold" fill="#111">A</text>
+  <line x1="351" y1="476" x2="319" y2="494" stroke="#c62828" stroke-width="2.4" stroke-linecap="round"/>
+  <circle cx="351" cy="476" r="4" fill="#37474f"/>
+  <rect x="288" y="530" width="42" height="24" rx="2" fill="#fff" stroke="#111" stroke-width="1.2"/>
+  <text x="309" y="547" font-size="13" fill="#111" text-anchor="middle" font-family="Consolas, monospace">0.0</text>
+
+  <!-- 蜂鸣器 -->
+  <rect x="480" y="416" width="110" height="26" rx="3" fill="#fff" stroke="#0b4a9c"/>
+  <text x="535" y="434" font-size="11" font-weight="bold" fill="#0b1a2b" text-anchor="middle">BUZZER</text>
+  <circle cx="535" cy="500" r="28" fill="#3a4044" stroke="#1b1f22" stroke-width="2"/>
+  <circle cx="535" cy="500" r="22" fill="none" stroke="#6f767a"/>
+  <circle cx="535" cy="500" r="16" fill="none" stroke="#6f767a"/>
+  <circle cx="535" cy="500" r="10" fill="none" stroke="#6f767a"/>
+
+  <!-- SEPARATOR MODE（CIP / MAN / AUT） -->
+  <rect x="280" y="600" width="142" height="24" rx="3" fill="#fff" stroke="#0b4a9c"/>
+  <text x="351" y="617" font-size="11" font-weight="bold" fill="#0b1a2b" text-anchor="middle">SEPARATOR MODE</text>
+  <rect x="287" y="630" width="128" height="100" rx="4" fill="#fff" stroke="#0b4a9c" stroke-width="1.2"/>
+  <circle cx="351" cy="676" r="30" fill="#fff" stroke="#9aa0a0" stroke-width="1.2"/>
+  <circle cx="351" cy="676" r="23" fill="#141414" stroke="#000"/>
+  <line x1="351" y1="676" x2="351" y2="646" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+  <text x="293" y="653" font-size="10" font-weight="bold" fill="#37474f">CIP</text>
+  <text x="339" y="639" font-size="10" font-weight="bold" fill="#37474f">MAN</text>
+  <text x="384" y="653" font-size="10" font-weight="bold" fill="#37474f">AUT</text>
+
+  <!-- POWER SWITCH -->
+  <rect x="61" y="600" width="142" height="24" rx="3" fill="#fff" stroke="#0b4a9c"/>
+  <text x="132" y="617" font-size="11" font-weight="bold" fill="#0b1a2b" text-anchor="middle">POWER SWITCH</text>
+  <rect x="68" y="630" width="128" height="100" rx="4" fill="#fff" stroke="#0b4a9c" stroke-width="1.2"/>
+  <circle cx="132" cy="676" r="30" fill="#fff" stroke="#9aa0a0" stroke-width="1.2"/>
+  <circle cx="132" cy="676" r="23" fill="#141414" stroke="#000"/>
+  <line x1="132" y1="676" x2="113" y2="659" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+  <text x="76" y="650" font-size="10" font-weight="bold" fill="#37474f">OFF</text>
+  <text x="162" y="650" font-size="10" font-weight="bold" fill="#37474f">ON</text>
+
+  <!-- 应急停止 -->
+  <rect x="476" y="600" width="118" height="24" rx="3" fill="#fff" stroke="#0b4a9c"/>
+  <text x="535" y="617" font-size="11" font-weight="bold" fill="#0b1a2b" text-anchor="middle">EMCY STOP</text>
+  <circle cx="535" cy="680" r="34" fill="#f2c200" stroke="#b39400" stroke-width="2"/>
+  <circle cx="535" cy="680" r="28" fill="#c62828" stroke="#5c0d0d" stroke-width="2"/>
+  <circle cx="535" cy="680" r="16" fill="#e53935" stroke="#8e1515"/>
+</svg>

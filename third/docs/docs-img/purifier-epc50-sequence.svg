@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" width="900" height="520" font-family="Arial, Microsoft YaHei, sans-serif">
+  <rect x="0" y="0" width="900" height="520" fill="#fbfbfb"/>
+
+  <defs>
+    <marker id="a" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto">
+      <path d="M0 0 L9 4.5 L0 9 Z" fill="#455a64"/>
+    </marker>
+  </defs>
+
+  <!-- ══════════ 起动程序 ══════════ -->
+  <text x="24" y="34" font-size="17" font-weight="bold" fill="#0b4a9c">起动程序（SEPARATOR MODE = AUT）：一次按键 + 回答问询，其余由控制器自动执行</text>
+
+  <!-- ① 按键问询 -->
+  <rect x="24" y="52" width="210" height="54" rx="6" fill="#fff" stroke="#0b4a9c" stroke-width="1.6"/>
+  <text x="129" y="74" font-size="12.5" font-weight="bold" fill="#1b2a38" text-anchor="middle">① 按「SEPARATION」键</text>
+  <text x="129" y="94" font-size="11.5" fill="#455a64" text-anchor="middle">液晶提出三个起动问询</text>
+  <path d="M234 79 H270" stroke="#455a64" stroke-width="1.6" marker-end="url(#a)"/>
+
+  <!-- ② 回答问询 -->
+  <rect x="274" y="52" width="230" height="54" rx="6" fill="#fff" stroke="#0b4a9c" stroke-width="1.6"/>
+  <text x="389" y="74" font-size="12.5" font-weight="bold" fill="#1b2a38" text-anchor="middle">② 「+」= YES　「−」= NO</text>
+  <text x="389" y="94" font-size="11.5" fill="#455a64" text-anchor="middle">拆检？装配？清洗？</text>
+  <path d="M504 79 H540" stroke="#455a64" stroke-width="1.6" marker-end="url(#a)"/>
+
+  <!-- ③ 问询通过 -->
+  <rect x="544" y="52" width="332" height="54" rx="6" fill="#fff" stroke="#0b4a9c" stroke-width="1.6"/>
+  <text x="710" y="74" font-size="12.5" font-weight="bold" fill="#1b2a38" text-anchor="middle">③ 问询通过 → 自动程序自 Ti50 开始执行</text>
+  <text x="710" y="94" font-size="11.5" fill="#455a64" text-anchor="middle">第 1 问答 NO，或三问全答 YES</text>
+
+  <!-- Ti 链 第一行 -->
+  <path d="M600 106 V115 H121 V122" stroke="#455a64" stroke-width="1.6" fill="none" marker-end="url(#a)"/>
+
+  <rect x="24" y="126" width="195" height="54" rx="6" fill="#fff" stroke="#0b4a9c" stroke-width="1.6"/>
+  <text x="121" y="148" font-size="12.5" font-weight="bold" fill="#1b2a38" text-anchor="middle">Ti50 起动供油泵</text>
+  <text x="121" y="168" font-size="11" fill="#455a64" text-anchor="middle">建立进油压力</text>
+  <path d="M219 153 H239" stroke="#455a64" stroke-width="1.6" marker-end="url(#a)"/>
+
+  <rect x="243" y="126" width="195" height="54" rx="6" fill="#fff" stroke="#0b4a9c" stroke-width="1.6"/>
+  <text x="340" y="148" font-size="12.5" font-weight="bold" fill="#1b2a38" text-anchor="middle">Ti51 检查进油压力</text>
+  <text x="340" y="168" font-size="11" fill="#455a64" text-anchor="middle">PT1 约 0.28 MPa</text>
+  <path d="M438 153 H458" stroke="#455a64" stroke-width="1.6" marker-end="url(#a)"/>
+
+  <rect x="462" y="126" width="195" height="54" rx="6" fill="#fff" stroke="#0b4a9c" stroke-width="1.6"/>
+  <text x="559" y="148" font-size="12.5" font-weight="bold" fill="#1b2a38" text-anchor="middle">Ti52 起动分油机电机</text>
+  <text x="559" y="168" font-size="11" fill="#455a64" text-anchor="middle">分离筒 ≥ 10000 r/min</text>
+  <path d="M657 153 H677" stroke="#455a64" stroke-width="1.6" marker-end="url(#a)"/>
+
+  <rect x="681" y="126" width="195" height="54" rx="6" fill="#fff" stroke="#0b4a9c" stroke-width="1.6"/>
+  <text x="778" y="148" font-size="12.5" font-weight="bold" fill="#1b2a38" text-anchor="middle">Ti53 投入加热器</text>
+  <text x="778" y="168" font-size="11" fill="#455a64" text-anchor="middle">进油温度 TT1 ≥ 96 ℃</text>
+
+  <!-- Ti 链 第二行 -->
+  <path d="M778 180 V190 H121 V198" stroke="#455a64" stroke-width="1.6" fill="none" marker-end="url(#a)"/>
+
+  <rect x="24" y="202" width="195" height="54" rx="6" fill="#fff" stroke="#0b4a9c" stroke-width="1.6"/>
+  <text x="121" y="224" font-size="12.5" font-weight="bold" fill="#1b2a38" text-anchor="middle">Ti55 回流待命</text>
+  <text x="121" y="244" font-size="11" fill="#455a64" text-anchor="middle">油经 V1 回流口回沉淀柜</text>
+  <path d="M219 229 H239" stroke="#455a64" stroke-width="1.6" marker-end="url(#a)"/>
+
+  <rect x="243" y="202" width="195" height="54" rx="6" fill="#fff" stroke="#0b4a9c" stroke-width="1.6"/>
+  <text x="340" y="224" font-size="12.5" font-weight="bold" fill="#1b2a38" text-anchor="middle">Ti56 ~ Ti63</text>
+  <text x="340" y="244" font-size="11" fill="#455a64" text-anchor="middle">排渣 → 放残 → 密封 → 水封</text>
+  <path d="M438 229 H458" stroke="#455a64" stroke-width="1.6" marker-end="url(#a)"/>
+
+  <rect x="462" y="202" width="195" height="54" rx="6" fill="#fff" stroke="#0b4a9c" stroke-width="1.6"/>
+  <text x="559" y="224" font-size="12.5" font-weight="bold" fill="#1b2a38" text-anchor="middle">Ti64 ~ Ti68</text>
+  <text x="559" y="244" font-size="11" fill="#455a64" text-anchor="middle">进油 → 水分检查 → 检漏 → 基准</text>
+  <path d="M657 229 H677" stroke="#455a64" stroke-width="1.6" marker-end="url(#a)"/>
+
+  <rect x="681" y="202" width="195" height="54" rx="6" fill="#e8f5e9" stroke="#1b5e20" stroke-width="1.6"/>
+  <text x="778" y="224" font-size="12.5" font-weight="bold" fill="#1b5e20" text-anchor="middle">Ti68 稳定分油</text>
+  <text x="778" y="244" font-size="11" fill="#2e7d32" text-anchor="middle">SV16 脉冲补偿，V5 排水</text>
+
+  <!-- ══════════ 停止程序 ══════════ -->
+  <text x="24" y="292" font-size="17" font-weight="bold" fill="#0b4a9c">停止程序：分油中再按一次「SEPARATION」键</text>
+
+  <rect x="24" y="306" width="124" height="54" rx="6" fill="#fff" stroke="#b71c1c" stroke-width="1.6"/>
+  <text x="86" y="327" font-size="12" font-weight="bold" fill="#1b2a38" text-anchor="middle">正常分油</text>
+  <text x="86" y="347" font-size="11" fill="#455a64" text-anchor="middle">Ti68 分油中</text>
+  <path d="M148 333 H166" stroke="#455a64" stroke-width="1.6" marker-end="url(#a)"/>
+
+  <rect x="170" y="306" width="124" height="54" rx="6" fill="#fff" stroke="#b71c1c" stroke-width="1.6"/>
+  <text x="232" y="327" font-size="12" font-weight="bold" fill="#1b2a38" text-anchor="middle">按「SEPARATION」</text>
+  <text x="232" y="347" font-size="11" fill="#455a64" text-anchor="middle">再按一次</text>
+  <path d="M294 333 H312" stroke="#455a64" stroke-width="1.6" marker-end="url(#a)"/>
+
+  <rect x="316" y="306" width="124" height="54" rx="6" fill="#fff" stroke="#b71c1c" stroke-width="1.6"/>
+  <text x="378" y="327" font-size="12" font-weight="bold" fill="#1b2a38" text-anchor="middle">阶段四 排渣</text>
+  <text x="378" y="347" font-size="11" fill="#455a64" text-anchor="middle">Ti70 → Ti75</text>
+  <path d="M440 333 H458" stroke="#455a64" stroke-width="1.6" marker-end="url(#a)"/>
+
+  <rect x="462" y="306" width="124" height="54" rx="6" fill="#fff" stroke="#b71c1c" stroke-width="1.6"/>
+  <text x="524" y="327" font-size="12" font-weight="bold" fill="#1b2a38" text-anchor="middle">阶段五 置换密封</text>
+  <text x="524" y="347" font-size="11" fill="#455a64" text-anchor="middle">Ti81 → Ti83</text>
+  <path d="M586 333 H604" stroke="#455a64" stroke-width="1.6" marker-end="url(#a)"/>
+
+  <rect x="608" y="306" width="124" height="54" rx="6" fill="#fff" stroke="#b71c1c" stroke-width="1.6"/>
+  <text x="670" y="327" font-size="12" font-weight="bold" fill="#1b2a38" text-anchor="middle">阶段六 自动停机</text>
+  <text x="670" y="347" font-size="11" fill="#455a64" text-anchor="middle">Ti85 → Ti89</text>
+  <path d="M732 333 H750" stroke="#455a64" stroke-width="1.6" marker-end="url(#a)"/>
+
+  <rect x="754" y="306" width="122" height="54" rx="6" fill="#eceff1" stroke="#607d8b" stroke-width="1.6"/>
+  <text x="815" y="327" font-size="12" font-weight="bold" fill="#37474f" text-anchor="middle">Standst</text>
+  <text x="815" y="347" font-size="11" fill="#607d8b" text-anchor="middle">停机</text>
+
+  <text x="24" y="382" font-size="11.5" fill="#455a64">注：SEPARATION 与 STOP 共用同一只黑色按键——分油中按它即执行停止程序；STOP 是它下方的指示灯，停机程序运行时闪烁。</text>
+
+  <!-- ══════════ 模式对照 ══════════ -->
+  <text x="24" y="414" font-size="17" font-weight="bold" fill="#0b4a9c">SEPARATOR MODE 三档与控制权分配</text>
+
+  <rect x="24" y="428" width="270" height="68" rx="6" fill="#fff" stroke="#9aa3ab" stroke-width="1.6"/>
+  <text x="40" y="452" font-size="13" font-weight="bold" fill="#b71c1c">CIP（左 60°）</text>
+  <text x="40" y="471" font-size="11.5" fill="#455a64">清洗位，本仿真不实现，控制指令不响应</text>
+  <text x="40" y="488" font-size="11" fill="#78909c">仍可操作 POWER SWITCH 与 EMCY STOP</text>
+
+  <rect x="315" y="428" width="270" height="68" rx="6" fill="#fff" stroke="#9aa3ab" stroke-width="1.6"/>
+  <text x="331" y="452" font-size="13" font-weight="bold" fill="#e07b00">MAN（垂直向上）</text>
+  <text x="331" y="471" font-size="11.5" fill="#455a64">机旁手动：起动箱按钮直接操作</text>
+  <text x="331" y="488" font-size="11" fill="#78909c">供油泵 / 电机起停，OP 功能键无效</text>
+
+  <rect x="606" y="428" width="270" height="68" rx="6" fill="#e8f5e9" stroke="#1b5e20" stroke-width="1.6"/>
+  <text x="622" y="452" font-size="13" font-weight="bold" fill="#1b5e20">AUT（右 60°）</text>
+  <text x="622" y="471" font-size="11.5" fill="#2e7d32">远程自动：OP 面板功能键接管</text>
+  <text x="622" y="488" font-size="11" fill="#2e7d32">问询起动 / 手动排渣 / 报警复位</text>
+</svg>
