@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="430" viewBox="0 0 960 430">
+  <rect width="960" height="430" fill="#ffffff"/>
+  <text x="16" y="26" font-family="Microsoft YaHei,Arial" font-size="16" font-weight="bold" fill="#1b3a4b">图 5  安全保护信号链：任一报警 → M0.1 → 切断进油 / 停炉 / 后扫风 / 声光报警</text>
+
+  <!-- 报警源 -->
+  <g font-family="Microsoft YaHei" font-size="11" fill="#37474f">
+    <rect x="30" y="60" width="190" height="34" rx="5" fill="#ffebee" stroke="#e57373"/>
+    <text x="125" y="82" text-anchor="middle">危险低水位 Q0.3（I0.6）</text>
+
+    <rect x="30" y="104" width="190" height="34" rx="5" fill="#ffebee" stroke="#e57373"/>
+    <text x="125" y="126" text-anchor="middle">重油油温过低 Q0.7（I2.1）</text>
+
+    <rect x="30" y="148" width="190" height="34" rx="5" fill="#ffebee" stroke="#e57373"/>
+    <text x="125" y="170" text-anchor="middle">风机失压 Q1.0（I2.2 失压）</text>
+
+    <rect x="30" y="192" width="190" height="34" rx="5" fill="#ffebee" stroke="#e57373"/>
+    <text x="125" y="214" text-anchor="middle">蒸汽超压 Q1.7（I2.6）</text>
+
+    <rect x="30" y="236" width="190" height="34" rx="5" fill="#ffebee" stroke="#e57373"/>
+    <text x="125" y="258" text-anchor="middle">故障熄火 Q2.5</text>
+
+    <rect x="30" y="280" width="190" height="34" rx="5" fill="#ffebee" stroke="#e57373"/>
+    <text x="125" y="302" text-anchor="middle">点火失败 Q2.4</text>
+  </g>
+
+  <!-- M0.1 -->
+  <rect x="300" y="150" width="150" height="80" rx="8" fill="#ffe082" stroke="#f9a825" stroke-width="2"/>
+  <text x="375" y="180" font-family="Microsoft YaHei" font-size="13" font-weight="bold" fill="#e65100" text-anchor="middle">M0.1</text>
+  <text x="375" y="202" font-family="Microsoft YaHei" font-size="11.5" fill="#e65100" text-anchor="middle">报警汇总</text>
+  <text x="375" y="220" font-family="Microsoft YaHei" font-size="10" fill="#bf360c" text-anchor="middle">程序段 19</text>
+
+  <g stroke="#e57373" stroke-width="1.6" fill="none">
+    <path d="M220 77 L260 77 L260 190 L298 190"/>
+    <path d="M220 121 L252 121 L252 190 L298 190"/>
+    <path d="M220 165 L298 165"/>
+    <path d="M220 209 L252 209 L252 190 L298 190"/>
+    <path d="M220 253 L260 253 L260 200 L298 200"/>
+    <path d="M220 297 L268 297 L268 200 L298 200"/>
+  </g>
+
+  <!-- 后果 -->
+  <g font-family="Microsoft YaHei" font-size="11.5">
+    <rect x="530" y="60" width="230" height="52" rx="6" fill="#e8f5e9" stroke="#66bb6a"/>
+    <text x="645" y="82" text-anchor="middle" fill="#1b5e20">M0.2 自动安全运行 = 0</text>
+    <text x="645" y="100" text-anchor="middle" fill="#1b5e20">→ 自动时序复位</text>
+
+    <rect x="530" y="130" width="230" height="52" rx="6" fill="#fff3e0" stroke="#ffb74d"/>
+    <text x="645" y="152" text-anchor="middle" fill="#e65100">M2.1 进油使能 = 0</text>
+    <text x="645" y="170" text-anchor="middle" fill="#e65100">→ Q1.2 总阀 / Q1.3 1# 阀断开（含手动）</text>
+
+    <rect x="530" y="200" width="230" height="52" rx="6" fill="#e3f2fd" stroke="#64b5f6"/>
+    <text x="645" y="222" text-anchor="middle" fill="#0d47a1">TOF T104 开始 20 s 后扫风</text>
+    <text x="645" y="240" text-anchor="middle" fill="#0d47a1">→ 扫风结束后 Q0.4 断开</text>
+
+    <rect x="530" y="270" width="230" height="52" rx="6" fill="#fce4ec" stroke="#f06292"/>
+    <text x="645" y="292" text-anchor="middle" fill="#880e4f">Q2.0 音响 + 面板红灯</text>
+    <text x="645" y="310" text-anchor="middle" fill="#880e4f">→ 消声后转常亮（故障消失才灭）</text>
+  </g>
+
+  <g stroke="#90a4ae" stroke-width="1.6" fill="none" marker-end="url(#m1)">
+    <path d="M452 178 L500 178 L500 86 L528 86"/>
+    <path d="M452 186 L510 186 L510 156 L528 156"/>
+    <path d="M452 196 L492 196 L492 226 L528 226"/>
+    <path d="M452 204 L500 204 L500 296 L528 296"/>
+  </g>
+
+  <text x="30" y="356" font-family="Microsoft YaHei" font-size="11.5" fill="#37474f">补充保护：</text>
+  <text x="30" y="378" font-family="Microsoft YaHei" font-size="11" fill="#546e7a">· 超高水位 Q0.2：仅报警并停给水泵，不停炉（教材要求）； · 蒸汽超压 Q1.7：报警 + 停炉；</text>
+  <text x="30" y="398" font-family="Microsoft YaHei" font-size="11" fill="#546e7a">· 安全阀（机械保护）0.85 MPa 起座、0.765 MPa 回座，与 PLC 保护形成"电气 + 机械"两级冗余。</text>
+
+  <defs>
+    <marker id="m1" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#90a4ae"/></marker>
+  </defs>
+</svg>

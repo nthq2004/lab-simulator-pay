@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="420" viewBox="0 0 960 420">
+  <rect width="960" height="420" fill="#ffffff"/>
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#37474f"/>
+    </marker>
+  </defs>
+
+  <text x="16" y="28" font-family="Microsoft YaHei,Arial" font-size="16" font-weight="bold" fill="#1b3a4b">图 1  辅锅炉自动控制系统的组成与信号关系</text>
+
+  <!-- 机旁操纵台 -->
+  <rect x="20" y="90" width="180" height="240" rx="10" fill="#eef6fb" stroke="#26323a" stroke-width="1.8"/>
+  <text x="110" y="114" font-family="Microsoft YaHei" font-size="13" font-weight="bold" fill="#0d47a1" text-anchor="middle">机旁操纵台</text>
+  <text x="34" y="140" font-family="Microsoft YaHei" font-size="11" fill="#263238">· 总电源开关（两档）</text>
+  <text x="34" y="162" font-family="Microsoft YaHei" font-size="11" fill="#263238">· 燃烧控制旋钮（六档）</text>
+  <text x="34" y="184" font-family="Microsoft YaHei" font-size="11" fill="#263238">· 油泵 / 给水泵选择开关</text>
+  <text x="34" y="206" font-family="Microsoft YaHei" font-size="11" fill="#263238">· 燃烧准备 / 停止 / 消声</text>
+  <text x="34" y="228" font-family="Microsoft YaHei" font-size="11" fill="#263238">· 12 只状态指示灯</text>
+  <text x="34" y="250" font-family="Microsoft YaHei" font-size="11" fill="#263238">· 压力表 / 数字显示 / 报警窗</text>
+  <text x="34" y="288" font-family="Microsoft YaHei" font-size="10.5" fill="#0277bd">开关量与按钮脉冲</text>
+  <text x="34" y="306" font-family="Microsoft YaHei" font-size="10.5" fill="#0277bd">经虚拟 I/O 桥写入 I 映像</text>
+
+  <!-- PLC -->
+  <rect x="250" y="70" width="220" height="280" rx="10" fill="#e8f5e9" stroke="#1b5e20" stroke-width="1.8"/>
+  <text x="360" y="96" font-family="Microsoft YaHei" font-size="13" font-weight="bold" fill="#1b5e20" text-anchor="middle">PLC（CPU SR40 + EM DQ08）</text>
+  <text x="266" y="124" font-family="Microsoft YaHei" font-size="11" fill="#1b5e20">输入 I0.0~I2.6（23 点）</text>
+  <text x="266" y="146" font-family="Microsoft YaHei" font-size="11" fill="#1b5e20">输出 Q0.0~Q2.5（22 点）</text>
+  <text x="266" y="168" font-family="Microsoft YaHei" font-size="11" fill="#1b5e20">中间位 M0.0~M3.2</text>
+  <text x="266" y="190" font-family="Microsoft YaHei" font-size="11" fill="#1b5e20">定时器 T101~T110（100 ms 时基）</text>
+  <text x="266" y="212" font-family="Microsoft YaHei" font-size="11" fill="#1b5e20">27 段语句表程序</text>
+  <text x="266" y="246" font-family="Microsoft YaHei" font-size="10.5" fill="#2e7d32">水位：双位给水 + HH/LL 保护</text>
+  <text x="266" y="266" font-family="Microsoft YaHei" font-size="10.5" fill="#2e7d32">压力：大小火 + 自动起停 + 超压</text>
+  <text x="266" y="286" font-family="Microsoft YaHei" font-size="10.5" fill="#2e7d32">燃烧：预扫风→点火→小火→大火</text>
+  <text x="266" y="306" font-family="Microsoft YaHei" font-size="10.5" fill="#c62828">安保：报警汇总 M0.1 断油停炉</text>
+
+  <!-- 执行机构 -->
+  <rect x="520" y="40" width="210" height="130" rx="10" fill="#fff3e0" stroke="#e65100" stroke-width="1.8"/>
+  <text x="625" y="64" font-family="Microsoft YaHei" font-size="13" font-weight="bold" fill="#e65100" text-anchor="middle">执行机构</text>
+  <text x="534" y="88" font-family="Microsoft YaHei" font-size="11" fill="#4e342e">给水泵 Q0.0 / Q0.1</text>
+  <text x="534" y="108" font-family="Microsoft YaHei" font-size="11" fill="#4e342e">油泵 Q0.5 / Q0.6 · 风机 Q0.4</text>
+  <text x="534" y="128" font-family="Microsoft YaHei" font-size="11" fill="#4e342e">风门 Q1.4 · 点火变压器 Q1.1</text>
+  <text x="534" y="148" font-family="Microsoft YaHei" font-size="11" fill="#4e342e">总/1#/2# 电磁阀 Q1.2/Q1.3/Q1.5</text>
+
+  <!-- 锅炉本体 -->
+  <rect x="780" y="120" width="160" height="200" rx="10" fill="#e1f5fe" stroke="#01579b" stroke-width="1.8"/>
+  <text x="860" y="146" font-family="Microsoft YaHei" font-size="13" font-weight="bold" fill="#01579b" text-anchor="middle">锅炉本体</text>
+  <text x="794" y="176" font-family="Microsoft YaHei" font-size="11" fill="#01579b">汽包水位</text>
+  <text x="794" y="198" font-family="Microsoft YaHei" font-size="11" fill="#01579b">蒸汽压力</text>
+  <text x="794" y="220" font-family="Microsoft YaHei" font-size="11" fill="#01579b">重油温度</text>
+  <text x="794" y="242" font-family="Microsoft YaHei" font-size="11" fill="#01579b">炉膛火焰</text>
+  <text x="794" y="272" font-family="Microsoft YaHei" font-size="10.5" fill="#0277bd">安全阀 0.85 MPa</text>
+  <text x="794" y="290" font-family="Microsoft YaHei" font-size="10.5" fill="#0277bd">起座 / 0.765 回座</text>
+
+  <!-- 检测元件 -->
+  <rect x="520" y="270" width="210" height="110" rx="10" fill="#f3e5f5" stroke="#4a148c" stroke-width="1.8"/>
+  <text x="625" y="294" font-family="Microsoft YaHei" font-size="13" font-weight="bold" fill="#4a148c" text-anchor="middle">检测元件</text>
+  <text x="534" y="318" font-family="Microsoft YaHei" font-size="11" fill="#4a148c">水位电极 HH/H/L/LL</text>
+  <text x="534" y="338" font-family="Microsoft YaHei" font-size="11" fill="#4a148c">压力继电器 ×3 + 压力表</text>
+  <text x="534" y="358" font-family="Microsoft YaHei" font-size="11" fill="#4a148c">油温继电器 · 紫外光电管 · 风压开关</text>
+
+  <!-- 箭头：操纵台 → PLC -->
+  <line x1="200" y1="210" x2="248" y2="210" stroke="#37474f" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="224" y="200" font-family="Microsoft YaHei" font-size="10" fill="#37474f" text-anchor="middle">I</text>
+
+  <!-- 箭头：PLC → 执行机构 -->
+  <polyline points="470,140 500,140 500,105 518,105" fill="none" stroke="#37474f" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="492" y="132" font-family="Microsoft YaHei" font-size="10" fill="#37474f" text-anchor="middle">Q</text>
+
+  <!-- 箭头：执行机构 → 锅炉 -->
+  <polyline points="730,105 755,105 755,150 778,150" fill="none" stroke="#37474f" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- 箭头：锅炉 → 检测元件 -->
+  <polyline points="860,320 800,320 800,325 732,325" fill="none" stroke="#37474f" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="800" y="345" font-family="Microsoft YaHei" font-size="10" fill="#37474f" text-anchor="middle">过程量</text>
+
+  <!-- 箭头：检测元件 → PLC -->
+  <line x1="518" y1="325" x2="472" y2="325" stroke="#37474f" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="494" y="315" font-family="Microsoft YaHei" font-size="10" fill="#37474f" text-anchor="middle">I</text>
+
+  <text x="16" y="404" font-family="Microsoft YaHei" font-size="10" fill="#546e7a">说明：操纵台与 CPU 分处第 1、2 页，无法拉真实导线，开关量由 BoilerSolver 经 sys.ioBridge 写入 PLC 的 I 过程映像，Q 输出再回读给锅炉本体与面板指示灯。</text>
+</svg>

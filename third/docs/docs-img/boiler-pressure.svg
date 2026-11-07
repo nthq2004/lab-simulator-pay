@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="940" height="360" viewBox="0 0 940 360">
+  <rect width="940" height="360" fill="#ffffff"/>
+  <text x="16" y="28" font-family="Microsoft YaHei,Arial" font-size="16" font-weight="bold" fill="#1b3a4b">图 3  蒸汽压力分档设定与动作区（单位 MPa）</text>
+
+  <!-- 标尺：y = 574 - 600 × P -->
+  <line x1="90" y1="334" x2="90" y2="52" stroke="#37474f" stroke-width="2"/>
+  <g font-family="Microsoft YaHei" font-size="11" fill="#37474f">
+    <text x="70" y="334" text-anchor="end">0.40</text>
+    <text x="70" y="278" text-anchor="end">0.50</text>
+    <text x="70" y="218" text-anchor="end">0.60</text>
+    <text x="70" y="158" text-anchor="end">0.70</text>
+    <text x="70" y="98" text-anchor="end">0.80</text>
+  </g>
+
+  <!-- 自动起停工作区 0.56 ~ 0.70 -->
+  <rect x="90" y="154" width="430" height="84" fill="#e8f5e9" stroke="#a5d6a7"/>
+  <text x="110" y="200" font-family="Microsoft YaHei" font-size="12" fill="#2e7d32">自动起停工作区：0.56 ~ 0.70（压力在此区间自动维持）</text>
+
+  <!-- 各设定线 -->
+  <g stroke-width="2">
+    <line x1="90" y1="274" x2="520" y2="274" stroke="#0288d1"/>
+    <line x1="90" y1="238" x2="520" y2="238" stroke="#0288d1" stroke-dasharray="6,4"/>
+    <line x1="90" y1="202" x2="520" y2="202" stroke="#2e7d32"/>
+    <line x1="90" y1="154" x2="520" y2="154" stroke="#ef6c00"/>
+    <line x1="90" y1="106" x2="520" y2="106" stroke="#c62828"/>
+    <line x1="90" y1="64" x2="520" y2="64" stroke="#6a1b9a"/>
+  </g>
+
+  <g font-family="Microsoft YaHei" font-size="11.5" font-weight="bold">
+    <text x="532" y="278" fill="#0288d1">0.50 双位下限（转回大火）</text>
+    <text x="532" y="242" fill="#0288d1">0.56 自动恢复（重新起动）</text>
+    <text x="532" y="206" fill="#2e7d32">0.62 双位上限（转小火）</text>
+    <text x="532" y="158" fill="#ef6c00">0.70 自动停炉</text>
+    <text x="532" y="110" fill="#c62828">0.78 蒸汽超压保护</text>
+    <text x="532" y="68" fill="#6a1b9a">0.85 安全阀起座（0.765 回座）</text>
+  </g>
+
+  <g font-family="Microsoft YaHei" font-size="11" fill="#546e7a">
+    <text x="106" y="300">◀ 压力下降</text>
+    <text x="512" y="50" text-anchor="end">压力上升 ▲</text>
+  </g>
+
+  <text x="16" y="352" font-family="Microsoft YaHei" font-size="10.5" fill="#546e7a">三只压力继电器与安全阀各自带回差：I2.3 自动起停 0.70/0.56、I2.5 大小火 0.62/0.50、I2.6 超压 0.78、安全阀 0.85/0.765；设定值可在系统图右键「参数设置」中修改。</text>
+</svg>
