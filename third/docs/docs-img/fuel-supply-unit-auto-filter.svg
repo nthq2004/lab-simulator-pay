@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="420" viewBox="0 0 900 420" font-family="'Microsoft YaHei','Source Han Sans SC',sans-serif">
+  <rect width="900" height="420" fill="#ffffff"/>
+  <defs>
+    <marker id="a6" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#5b7f9e"/>
+    </marker>
+    <marker id="a6b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#d9534f"/>
+    </marker>
+  </defs>
+
+  <text x="450" y="28" font-size="16" font-weight="bold" fill="#1f2d3d" text-anchor="middle">自清洗滤器（AFB）结构与自动控制</text>
+
+  <!-- 滤器壳体 -->
+  <rect x="60" y="80" width="150" height="240" rx="8" fill="#f6fbff" stroke="#3b82c4" stroke-width="1.8"/>
+  <text x="135" y="108" font-size="13" fill="#1b4f80" text-anchor="middle">自动滤器</text>
+  <text x="135" y="128" font-size="11" fill="#4a6572" text-anchor="middle">A/F（自清洗）</text>
+
+  <!-- 滤芯 -->
+  <rect x="88" y="146" width="94" height="120" rx="4" fill="#eaf3fd" stroke="#3f8fd0" stroke-width="1.6"/>
+  <g stroke="#9cc1e0" stroke-width="1.2">
+    <path d="M98 160 L172 160"/>
+    <path d="M98 176 L172 176"/>
+    <path d="M98 192 L172 192"/>
+    <path d="M98 208 L172 208"/>
+    <path d="M98 224 L172 224"/>
+    <path d="M98 240 L172 240"/>
+  </g>
+  <text x="135" y="288" font-size="11" fill="#1b4f80" text-anchor="middle">滤芯（滤网）</text>
+
+  <!-- 进出口 -->
+  <path d="M20 120 L60 120" fill="none" stroke="#7f98ad" stroke-width="2.2" marker-end="url(#a6)"/>
+  <text x="26" y="112" font-size="11" fill="#4a6572">进油</text>
+  <path d="M210 120 L250 120" fill="none" stroke="#7f98ad" stroke-width="2.2" marker-end="url(#a6)"/>
+  <text x="216" y="112" font-size="11" fill="#4a6572">出油</text>
+
+  <!-- 放残阀 -->
+  <path d="M135 320 L135 344" fill="none" stroke="#7f98ad" stroke-width="2.2"/>
+  <path d="M120 344 L150 344 L135 364 z" fill="#ffffff" stroke="#d9534f" stroke-width="1.8"/>
+  <text x="168" y="352" font-size="11" fill="#a13b39">放残（冲洗）阀</text>
+  <path d="M135 364 L135 384" fill="none" stroke="#7f98ad" stroke-width="2.2" marker-end="url(#a6)"/>
+  <text x="150" y="394" font-size="11" fill="#4a6572">污油排出（至污油柜）</text>
+
+  <!-- PDS -->
+  <rect x="248" y="146" width="96" height="28" rx="3" fill="#ffeaea" stroke="#d9534f" stroke-width="1.6"/>
+  <text x="296" y="165" font-size="12" fill="#a13b39" text-anchor="middle">PDS 压差开关</text>
+  <path d="M210 160 L246 160" fill="none" stroke="#d9534f" stroke-width="1.6" stroke-dasharray="4 3"/>
+  <path d="M344 160 L366 160 L366 200" fill="none" stroke="#d9534f" stroke-width="1.6" stroke-dasharray="4 3"/>
+
+  <!-- AUTO 逻辑 -->
+  <text x="640" y="70" font-size="13" font-weight="bold" fill="#28455e" text-anchor="middle">选择开关在 AUTO 时的冲洗逻辑</text>
+
+  <rect x="520" y="88" width="240" height="52" rx="5" fill="#eef3f8" stroke="#5b7f9e" stroke-width="1.6"/>
+  <text x="640" y="110" font-size="12" fill="#28455e" text-anchor="middle">冲洗条件（任一成立）</text>
+  <text x="640" y="130" font-size="11" fill="#4a6572" text-anchor="middle">PDS 闭合（ΔP ≥ 0.09 MPa）／ 到 Fa21 间隔</text>
+
+  <path d="M640 140 L640 168" fill="none" stroke="#5b7f9e" stroke-width="1.8" marker-end="url(#a6)"/>
+
+  <rect x="520" y="170" width="240" height="52" rx="5" fill="#fff6f2" stroke="#d08a62" stroke-width="1.6"/>
+  <text x="640" y="192" font-size="12" fill="#8d4a22" text-anchor="middle">放残阀打开，维持 Fa22 秒</text>
+  <text x="640" y="212" font-size="11" fill="#8d4a22" text-anchor="middle">（冲洗时间，默认 8 s）</text>
+
+  <path d="M640 222 L640 250" fill="none" stroke="#5b7f9e" stroke-width="1.8" marker-end="url(#a6)"/>
+
+  <rect x="520" y="252" width="240" height="52" rx="5" fill="#e8f7ef" stroke="#3d8f66" stroke-width="1.6"/>
+  <text x="640" y="274" font-size="12" fill="#1f5c40" text-anchor="middle">压差回落（&lt; 0.03 MPa 断开）</text>
+  <text x="640" y="294" font-size="11" fill="#1f5c40" text-anchor="middle">恢复正常过滤，重新计时 Fa21</text>
+
+  <path d="M640 304 L640 330" fill="none" stroke="#3d8f66" stroke-width="1.8" marker-end="url(#a6)"/>
+  <rect x="470" y="332" width="340" height="58" rx="5" fill="#fffafa" stroke="#d9534f" stroke-width="1.5"/>
+  <text x="640" y="354" font-size="12" fill="#a13b39" text-anchor="middle">真实脏堵（故障设置）：冲洗不能消除压差</text>
+  <text x="640" y="374" font-size="11" fill="#8f4543" text-anchor="middle">ΔP ≥ 0.12 MPa → A 55 报警，须清洗/更换滤芯</text>
+
+  <text x="40" y="414" font-size="11" fill="#7a8b99">选择开关：MAN 位供电即持续清洗；DRAIN 位放残卸放（压差不增长）；STOP 位不动作。</text>
+</svg>

@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="430" viewBox="0 0 1000 430" font-family="'Microsoft YaHei','Source Han Sans SC',sans-serif">
+  <rect width="1000" height="430" fill="#ffffff"/>
+  <defs>
+    <marker id="a2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#5b7f9e"/>
+    </marker>
+    <marker id="a2b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#3f8fd0"/>
+    </marker>
+  </defs>
+
+  <text x="500" y="30" font-size="16" font-weight="bold" fill="#1f2d3d" text-anchor="middle">燃油黏度（温度）控制系统原理框图</text>
+
+  <!-- 控制方式选择 -->
+  <rect x="40" y="52" width="330" height="58" rx="5" fill="#eef3f8" stroke="#5b7f9e" stroke-width="1.6"/>
+  <text x="205" y="76" font-size="13" fill="#28455e" text-anchor="middle">Pr19 控制方式选择</text>
+  <text x="205" y="97" font-size="11" fill="#4a6572" text-anchor="middle">VISC 黏度定值（HFO 默认）　/　TEMP 温度定值（DO 强制）</text>
+  <path d="M205 110 L205 152" fill="none" stroke="#5b7f9e" stroke-width="1.8" marker-end="url(#a2)"/>
+
+  <!-- 设定值 -->
+  <rect x="150" y="154" width="112" height="62" rx="5" fill="#f6fbff" stroke="#3b82c4" stroke-width="1.8"/>
+  <text x="206" y="176" font-size="13" fill="#1b4f80" text-anchor="middle">设定值</text>
+  <text x="206" y="196" font-size="11" fill="#4a6572" text-anchor="middle">Pr20 cSt / Pr30 ℃</text>
+  <path d="M262 185 L292 185" fill="none" stroke="#5b7f9e" stroke-width="1.8" marker-end="url(#a2)"/>
+
+  <!-- 比较 -->
+  <circle cx="318" cy="185" r="20" fill="#ffffff" stroke="#5b7f9e" stroke-width="1.8"/>
+  <text x="318" y="191" font-size="15" fill="#28455e" text-anchor="middle">Σ</text>
+  <path d="M338 185 L372 185" fill="none" stroke="#5b7f9e" stroke-width="1.8" marker-end="url(#a2)"/>
+
+  <!-- PI -->
+  <rect x="374" y="148" width="150" height="74" rx="5" fill="#eaf3fd" stroke="#3b82c4" stroke-width="1.8"/>
+  <text x="449" y="172" font-size="13" fill="#1b4f80" text-anchor="middle">PI 调节器</text>
+  <text x="449" y="192" font-size="11" fill="#1b4f80" text-anchor="middle">Fa25 比例带（℃）</text>
+  <text x="449" y="210" font-size="11" fill="#1b4f80" text-anchor="middle">Fa26 积分时间（s）</text>
+  <path d="M524 185 L558 185" fill="none" stroke="#5b7f9e" stroke-width="1.8" marker-end="url(#a2)"/>
+
+  <!-- 执行器 -->
+  <rect x="560" y="148" width="158" height="74" rx="5" fill="#fff6f2" stroke="#d08a62" stroke-width="1.8"/>
+  <text x="639" y="172" font-size="13" fill="#8d4a22" text-anchor="middle">执行器</text>
+  <text x="639" y="192" font-size="11" fill="#8d4a22" text-anchor="middle">SRV 蒸汽电动调节阀</text>
+  <text x="639" y="210" font-size="11" fill="#8d4a22" text-anchor="middle">0.5 % 步进，行程受控</text>
+  <path d="M718 185 L752 185" fill="none" stroke="#5b7f9e" stroke-width="1.8" marker-end="url(#a2)"/>
+
+  <!-- 对象 -->
+  <rect x="754" y="148" width="180" height="74" rx="5" fill="#fff6f2" stroke="#d08a62" stroke-width="1.8"/>
+  <text x="844" y="172" font-size="13" fill="#8d4a22" text-anchor="middle">被控对象</text>
+  <text x="844" y="192" font-size="11" fill="#8d4a22" text-anchor="middle">SHS 蒸汽加热器</text>
+  <text x="844" y="210" font-size="11" fill="#8d4a22" text-anchor="middle">开度 ≈ 加热量（1 : 1）</text>
+
+  <!-- 前馈 -->
+  <rect x="374" y="272" width="380" height="54" rx="5" fill="#f8fff9" stroke="#3d8f66" stroke-width="1.6" stroke-dasharray="6 4"/>
+  <text x="564" y="294" font-size="12" fill="#1f5c40" text-anchor="middle">前馈通道：按（目标温度 − 混合筒温度）直接给出维持开度</text>
+  <text x="564" y="313" font-size="11" fill="#3d8f66" text-anchor="middle">抑制大幅超调；PI 只做小幅修正（限幅 ±12 %）</text>
+  <path d="M736 272 L736 232" fill="none" stroke="#3d8f66" stroke-width="1.6" stroke-dasharray="6 4" marker-end="url(#a2b)"/>
+
+  <!-- 测量与反馈 -->
+  <rect x="754" y="272" width="180" height="62" rx="5" fill="#e8f7ef" stroke="#3d8f66" stroke-width="1.8"/>
+  <text x="844" y="294" font-size="12" fill="#1f5c40" text-anchor="middle">测量变送</text>
+  <text x="844" y="313" font-size="11" fill="#1f5c40" text-anchor="middle">VT（EVT20）/ TT（Pt100）</text>
+  <path d="M844 222 L844 272" fill="none" stroke="#3d8f66" stroke-width="1.8" marker-end="url(#a2b)"/>
+  <path d="M844 334 L844 378 L318 378 L318 205" fill="none" stroke="#3d8f66" stroke-width="1.8" marker-end="url(#a2b)"/>
+  <text x="520" y="396" font-size="11" fill="#1f5c40" text-anchor="middle">反馈：4–20 mA（无油流动时测不到，显示 0 或 ***）</text>
+
+  <text x="40" y="424" font-size="11" fill="#7a8b99">注：黏度偏差在调节器内按当前油温的黏温斜率折算为温度偏差（±15 ℃ 限幅），与温度同为同一套加热回路。</text>
+</svg>

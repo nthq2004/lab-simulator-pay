@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="420" viewBox="0 0 880 420" font-family="'Microsoft YaHei','Source Han Sans SC',sans-serif">
+  <rect width="880" height="420" fill="#ffffff"/>
+  <defs>
+    <marker id="a4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#5b7f9e"/>
+    </marker>
+    <marker id="a4b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#3f8fd0"/>
+    </marker>
+  </defs>
+
+  <text x="440" y="28" font-size="16" font-weight="bold" fill="#1f2d3d" text-anchor="middle">EVT20 振动式黏度计测量原理</text>
+
+  <!-- 测量腔（油管） -->
+  <rect x="40" y="150" width="330" height="90" rx="6" fill="#ffeecb" stroke="#c8a165" stroke-width="1.8"/>
+  <text x="60" y="235" font-size="11" fill="#8a6c42">燃油流入</text>
+  <text x="372" y="235" font-size="11" fill="#8a6c42" text-anchor="end">燃油流出</text>
+  <text x="240" y="128" font-size="12" fill="#8a6c42">测量腔（必须有油流经）</text>
+
+  <!-- 探头 -->
+  <rect x="186" y="60" width="38" height="96" rx="4" fill="#eef3f8" stroke="#28455e" stroke-width="1.8"/>
+  <path d="M196 156 L196 196" fill="none" stroke="#28455e" stroke-width="4"/>
+  <path d="M214 156 L214 196" fill="none" stroke="#28455e" stroke-width="4"/>
+  <circle cx="196" cy="200" r="5" fill="#28455e"/>
+  <circle cx="214" cy="200" r="5" fill="#28455e"/>
+  <text x="236" y="70" font-size="11" fill="#28455e">振动探头（音叉式，约 1 kHz）</text>
+
+  <!-- 线圈 -->
+  <rect x="96" y="74" width="76" height="30" rx="3" fill="#eaf3fd" stroke="#3f8fd0" stroke-width="1.5"/>
+  <text x="134" y="94" font-size="11" fill="#1b4f80" text-anchor="middle">驱动线圈</text>
+  <rect x="240" y="74" width="76" height="30" rx="3" fill="#eaf3fd" stroke="#3f8fd0" stroke-width="1.5"/>
+  <text x="278" y="94" font-size="11" fill="#1b4f80" text-anchor="middle">检测线圈</text>
+  <path d="M172 89 L184 89" fill="none" stroke="#3f8fd0" stroke-width="1.5" marker-end="url(#a4b)"/>
+  <path d="M224 89 L238 89" fill="none" stroke="#3f8fd0" stroke-width="1.5" marker-end="url(#a4b)"/>
+
+  <!-- Pt100 -->
+  <rect x="330" y="168" width="30" height="30" rx="3" fill="#e8f7ef" stroke="#3d8f66" stroke-width="1.6"/>
+  <text x="345" y="188" font-size="10" fill="#1f5c40" text-anchor="middle">Pt</text>
+  <text x="345" y="216" font-size="11" fill="#1f5c40" text-anchor="middle">Pt100</text>
+
+  <!-- 信号处理链 -->
+  <rect x="430" y="60" width="150" height="60" rx="5" fill="#f6fbff" stroke="#3b82c4" stroke-width="1.8"/>
+  <text x="505" y="84" font-size="12" fill="#1b4f80" text-anchor="middle">前置放大器</text>
+  <text x="505" y="104" font-size="11" fill="#4a6572" text-anchor="middle">振幅 / 相位差 → 阻尼量</text>
+  <path d="M316 89 L428 89" fill="none" stroke="#5b7f9e" stroke-width="1.8" marker-end="url(#a4)"/>
+
+  <rect x="430" y="150" width="150" height="72" rx="5" fill="#f8fff9" stroke="#3d8f66" stroke-width="1.8"/>
+  <text x="505" y="172" font-size="12" fill="#1f5c40" text-anchor="middle">微处理器</text>
+  <text x="505" y="192" font-size="11" fill="#1f5c40" text-anchor="middle">温度补偿（Pt100）</text>
+  <text x="505" y="210" font-size="11" fill="#1f5c40" text-anchor="middle">密度换算（Pr23）</text>
+  <path d="M505 120 L505 148" fill="none" stroke="#3d8f66" stroke-width="1.8" marker-end="url(#a4)"/>
+
+  <rect x="620" y="150" width="110" height="72" rx="5" fill="#fff6f2" stroke="#d08a62" stroke-width="1.8"/>
+  <text x="675" y="176" font-size="12" fill="#8d4a22" text-anchor="middle">4–20 mA</text>
+  <text x="675" y="196" font-size="11" fill="#8d4a22" text-anchor="middle">至 EPC-50B</text>
+  <text x="675" y="214" font-size="11" fill="#8d4a22" text-anchor="middle">VT 输入端</text>
+  <path d="M580 186 L618 186" fill="none" stroke="#d08a62" stroke-width="1.8" marker-end="url(#a4)"/>
+
+  <rect x="620" y="60" width="230" height="60" rx="5" fill="#eef3f8" stroke="#5b7f9e" stroke-width="1.8"/>
+  <text x="735" y="84" font-size="12" fill="#28455e" text-anchor="middle">液晶显示 VT ≈ 12.0 cSt</text>
+  <text x="735" y="104" font-size="11" fill="#4a6572" text-anchor="middle">并作为黏度定值控制的反馈量</text>
+  <path d="M675 150 L675 122" fill="none" stroke="#5b7f9e" stroke-width="1.8" marker-end="url(#a4)"/>
+
+  <!-- 公式 -->
+  <rect x="60" y="276" width="360" height="76" rx="6" fill="#f8fafc" stroke="#a9b7c2" stroke-width="1.5"/>
+  <text x="240" y="302" font-size="13" fill="#28455e" text-anchor="middle">振动阻尼 ∝ 动力黏度 μ</text>
+  <text x="240" y="328" font-size="13" fill="#28455e" text-anchor="middle">运动黏度 ν = μ / ρ（ρ 取 Pr23 密度设定）</text>
+
+  <!-- 失效说明 -->
+  <rect x="440" y="276" width="400" height="110" rx="6" fill="#fff5f5" stroke="#d9534f" stroke-width="1.5"/>
+  <text x="460" y="300" font-size="12" font-weight="bold" fill="#a13b39">失效与自诊断</text>
+  <text x="460" y="322" font-size="11" fill="#8f4543">· 无油流动（泵未运行 / 断流）→ 测不到黏度，显示 0 或 ***</text>
+  <text x="460" y="342" font-size="11" fill="#8f4543">· VT 断线或探头故障 → A 42 报警，Pr19 自动转 TEMP</text>
+  <text x="460" y="362" font-size="11" fill="#8f4543">· 密度设定错（Pr23）→ 换算偏差，黏度显示与实测不符</text>
+
+  <text x="40" y="404" font-size="11" fill="#7a8b99">提示：黏度计是“测量腔式”仪表，安装位置必须保证始终充满燃油，否则黏度控制会失去反馈。</text>
+</svg>

@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="410" viewBox="0 0 900 410" font-family="'Microsoft YaHei','Source Han Sans SC',sans-serif">
+  <rect width="900" height="410" fill="#ffffff"/>
+  <defs>
+    <marker id="a7" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#5b7f9e"/>
+    </marker>
+    <marker id="a7b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#3f8fd0"/>
+    </marker>
+  </defs>
+
+  <text x="450" y="28" font-size="16" font-weight="bold" fill="#1f2d3d" text-anchor="middle">混合筒自动脱气（MIXING TUBE）</text>
+
+  <!-- 混合筒 -->
+  <rect x="150" y="80" width="150" height="250" rx="8" fill="#ffffff" stroke="#3b82c4" stroke-width="1.8"/>
+  <rect x="158" y="150" width="134" height="172" rx="5" fill="#ffeecb" stroke="none"/>
+  <text x="225" y="108" font-size="13" fill="#1b4f80" text-anchor="middle">混合筒</text>
+  <text x="225" y="128" font-size="11" fill="#4a6572" text-anchor="middle">（立式，带液位开关）</text>
+
+  <!-- 气泡 -->
+  <g fill="#ffffff" stroke="#c8a165" stroke-width="1">
+    <circle cx="185" cy="200" r="7"/>
+    <circle cx="225" cy="180" r="5"/>
+    <circle cx="260" cy="215" r="6"/>
+    <circle cx="205" cy="245" r="5"/>
+    <circle cx="250" cy="260" r="7"/>
+    <circle cx="190" cy="285" r="5"/>
+  </g>
+  <text x="225" y="312" font-size="11" fill="#8a6c42" text-anchor="middle">气体析出、液面下沉</text>
+
+  <!-- 浮子 LS -->
+  <rect x="246" y="269" width="46" height="20" rx="10" fill="#ffeaea" stroke="#d9534f" stroke-width="1.8"/>
+  <text x="269" y="283" font-size="11" fill="#a13b39" text-anchor="middle">浮子</text>
+  <text x="318" y="279" font-size="12" fill="#a13b39">LS 浮子开关</text>
+  <text x="318" y="297" font-size="11" fill="#8f4543">液位 &lt; 25 % → 动作</text>
+
+  <!-- 脱气阀 -->
+  <rect x="185" y="52" width="80" height="24" rx="4" fill="#eaf3fd" stroke="#3f8fd0" stroke-width="1.6"/>
+  <text x="225" y="69" font-size="12" fill="#1b4f80" text-anchor="middle">脱气阀</text>
+  <path d="M225 80 L225 76" fill="none" stroke="#3f8fd0" stroke-width="1.6"/>
+  <path d="M225 52 L225 34 L520 34 L520 66" fill="none" stroke="#3f8fd0" stroke-width="1.8" stroke-dasharray="6 4" marker-end="url(#a7b)"/>
+  <text x="560" y="56" font-size="11" fill="#1b4f80">脱出的气体 → 回 HFO 日用柜（或透气管）</text>
+
+  <!-- 进出口 -->
+  <path d="M40 200 L148 200" fill="none" stroke="#7f98ad" stroke-width="2.2" marker-end="url(#a7)"/>
+  <text x="46" y="192" font-size="11" fill="#4a6572">来自滤器</text>
+  <path d="M300 200 L400 200" fill="none" stroke="#7f98ad" stroke-width="2.2" marker-end="url(#a7)"/>
+  <text x="312" y="192" font-size="11" fill="#4a6572">至循环泵</text>
+  <path d="M40 300 L148 300" fill="none" stroke="#7f98ad" stroke-width="2.2" marker-end="url(#a7)"/>
+  <text x="46" y="292" font-size="11" fill="#4a6572">回油</text>
+
+  <!-- 逻辑 -->
+  <rect x="430" y="86" width="420" height="72" rx="5" fill="#fff5f5" stroke="#d9534f" stroke-width="1.5"/>
+  <text x="450" y="110" font-size="12" font-weight="bold" fill="#a13b39">① 气多油少（液位 &lt; 25 %）</text>
+  <text x="450" y="132" font-size="11" fill="#8f4543">浮子下沉 → 脱气阀打开，把气体放回 HFO 日用柜，</text>
+  <text x="450" y="150" font-size="11" fill="#8f4543">筒内油位回升，供油泵不会吸入空气。</text>
+
+  <path d="M640 158 L640 176" fill="none" stroke="#5b7f9e" stroke-width="1.8" marker-end="url(#a7)"/>
+
+  <rect x="430" y="178" width="420" height="66" rx="5" fill="#e8f7ef" stroke="#3d8f66" stroke-width="1.5"/>
+  <text x="450" y="202" font-size="12" font-weight="bold" fill="#1f5c40">② 液位回升到 65 % 以上</text>
+  <text x="450" y="224" font-size="11" fill="#1f5c40">脱气阀关闭，恢复密闭运行（回差 40 %，避免频繁动作）。</text>
+
+  <path d="M640 244 L640 262" fill="none" stroke="#5b7f9e" stroke-width="1.8" marker-end="url(#a7)"/>
+
+  <rect x="430" y="264" width="420" height="66" rx="5" fill="#eef3f8" stroke="#5b7f9e" stroke-width="1.5"/>
+  <text x="450" y="288" font-size="12" fill="#28455e">③ 脱气阀连续打开超过 120 s 仍未脱净</text>
+  <text x="450" y="310" font-size="11" fill="#4a6572">判定系统吸入空气 / 回油带气过多 → A 58 报警，提示检查管路。</text>
+
+  <text x="40" y="392" font-size="11" fill="#7a8b99">脱气与滤器、泵的运行状态联动：任一循环泵运行时主油路有流量，混合筒液位才会下降。</text>
+</svg>
