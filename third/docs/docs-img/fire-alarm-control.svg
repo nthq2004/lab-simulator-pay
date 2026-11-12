@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="360" viewBox="0 0 880 360" font-family="Microsoft YaHei, Arial, sans-serif">
+  <rect width="880" height="360" fill="#f7f9fa"/>
+  <text x="440" y="32" font-size="20" font-weight="bold" text-anchor="middle" fill="#1f3b4d">火灾报警控制器状态与菜单操作</text>
+
+  <!-- 左侧竖排灯 -->
+  <rect x="40" y="60" width="150" height="270" rx="8" fill="#1c1f22"/>
+  <g font-size="12" fill="#e6e9ec">
+    <circle cx="66" cy="90" r="7" fill="#25d425"/><text x="84" y="94">Power</text>
+    <circle cx="66" cy="124" r="7" fill="#ffd400"/><text x="84" y="128">System fault</text>
+    <circle cx="66" cy="158" r="7" fill="#555"/><text x="84" y="162">Test</text>
+    <circle cx="66" cy="192" r="7" fill="#555"/><text x="84" y="196">Warning</text>
+    <circle cx="66" cy="226" r="7" fill="#555"/><text x="84" y="230">Zone</text>
+    <circle cx="66" cy="260" r="7" fill="#555"/><text x="84" y="264">Alarm device</text>
+    <circle cx="66" cy="294" r="7" fill="#555"/><text x="84" y="298">Alarm delay off</text>
+  </g>
+
+  <!-- 中部 LCD -->
+  <rect x="220" y="60" width="300" height="270" rx="8" fill="#4a4f55"/>
+  <rect x="232" y="72" width="276" height="246" fill="#1b1fd0"/>
+  <text x="244" y="96" font-size="13" font-family="Consolas, monospace" fill="#fff">SYSTEM STATUS</text>
+  <text x="244" y="122" font-size="12" font-family="Consolas, monospace" fill="#dfe3ff">&gt; System : FIRE ALARM</text>
+  <text x="244" y="144" font-size="12" font-family="Consolas, monospace" fill="#dfe3ff">　 Fire alarms : 1</text>
+  <text x="244" y="166" font-size="12" font-family="Consolas, monospace" fill="#dfe3ff">　 Loop nodes : 8/8 online</text>
+  <text x="244" y="188" font-size="12" font-family="Consolas, monospace" fill="#dfe3ff">　 Power : Mains OK</text>
+
+  <!-- 右侧操作 -->
+  <rect x="560" y="60" width="290" height="270" rx="8" fill="#fff" stroke="#90a4ae"/>
+  <text x="580" y="88" font-size="14" font-weight="bold" fill="#263238">STATUS：状态浏览</text>
+  <text x="580" y="110" font-size="12" fill="#37474f">1. 按 STATUS 显示系统状态</text>
+  <text x="580" y="130" font-size="12" fill="#37474f">2. 上下键浏览状态条目</text>
+  <text x="580" y="150" font-size="12" fill="#37474f">3. 按 OK 查看条目详情</text>
+  <text x="580" y="170" font-size="12" fill="#37474f">4. 左右/上下切换项目</text>
+  <text x="580" y="190" font-size="12" fill="#37474f">5. ESC 返回上一层</text>
+
+  <text x="580" y="222" font-size="14" font-weight="bold" fill="#263238">MENU：四项重点菜单</text>
+  <text x="580" y="244" font-size="12" fill="#37474f">1. Fault Alarms（故障/警告/复位）</text>
+  <text x="580" y="264" font-size="12" fill="#37474f">2. Fire Alarms（火警/预报警/复位）</text>
+  <text x="580" y="284" font-size="12" fill="#b71c1c" font-weight="bold">3. Disconnections（隔离）★考证重点</text>
+  <text x="580" y="304" font-size="12" fill="#37474f">4. History（历史记录）</text>
+</svg>
