@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1060" height="470" viewBox="0 0 1060 470" font-family="'Microsoft YaHei','Source Han Sans SC',sans-serif">
+  <rect width="1060" height="470" fill="#ffffff"/>
+  <defs>
+    <marker id="e1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/>
+    </marker>
+    <marker id="e2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2f8f4f"/>
+    </marker>
+  </defs>
+
+  <text x="530" y="30" font-size="17" font-weight="bold" fill="#1f2d3d" text-anchor="middle">滑油压力低（滑油低压跳闸）原因分析</text>
+
+  <rect x="30" y="62" width="300" height="60" rx="5" fill="#fdf6f5" stroke="#c0392b" stroke-width="1.6"/>
+  <text x="44" y="84" font-size="12" font-weight="bold" fill="#8e1b1b">① 滑油滤器堵塞</text>
+  <text x="44" y="105" font-size="11" fill="#33475b">滤芯脏堵 → 滤后压力下降、旁通开启</text>
+
+  <rect x="30" y="134" width="300" height="60" rx="5" fill="#fdf6f5" stroke="#c0392b" stroke-width="1.6"/>
+  <text x="44" y="156" font-size="12" font-weight="bold" fill="#8e1b1b">② 滑油管路泄漏</text>
+  <text x="44" y="177" font-size="11" fill="#33475b">接头 / 法兰 / 管壁漏油，油柜液位持续下降</text>
+
+  <rect x="30" y="206" width="300" height="60" rx="5" fill="#fdf6f5" stroke="#c0392b" stroke-width="1.6"/>
+  <text x="44" y="228" font-size="12" font-weight="bold" fill="#8e1b1b">③ 滑油泵故障 / 泵不出力</text>
+  <text x="44" y="249" font-size="11" fill="#33475b">机带泵磨损、预润滑泵未起、泵吸入阀未开</text>
+
+  <rect x="30" y="278" width="300" height="60" rx="5" fill="#fdf6f5" stroke="#c0392b" stroke-width="1.6"/>
+  <text x="44" y="300" font-size="12" font-weight="bold" fill="#8e1b1b">④ 油柜液位低 / 吸入口吸空</text>
+  <text x="44" y="321" font-size="11" fill="#33475b">补油不及时、放残阀误开、吸油管进气</text>
+
+  <rect x="30" y="350" width="300" height="60" rx="5" fill="#fdf6f5" stroke="#c0392b" stroke-width="1.6"/>
+  <text x="44" y="372" font-size="12" font-weight="bold" fill="#8e1b1b">⑤ 油温过高、黏度太低 / 安全阀泄漏</text>
+  <text x="44" y="393" font-size="11" fill="#33475b">冷却器失效或调温阀卡涩，油稀压力建立不起来</text>
+
+  <rect x="390" y="150" width="230" height="200" rx="8" fill="#fff8e6" stroke="#d9a521" stroke-width="2"/>
+  <text x="505" y="180" font-size="13" font-weight="bold" fill="#8a5a00" text-anchor="middle">油压下降机理</text>
+  <text x="505" y="208" font-size="11.5" fill="#5b4426" text-anchor="middle">供油量 &lt; 轴承间隙泄漏量</text>
+  <path d="M420 224 L590 224" stroke="#d9a521" stroke-width="1.2"/>
+  <text x="505" y="248" font-size="11.5" fill="#5b4426" text-anchor="middle">油膜变薄、边界润滑</text>
+  <path d="M420 262 L590 262" stroke="#d9a521" stroke-width="1.2"/>
+  <text x="505" y="286" font-size="11.5" fill="#5b4426" text-anchor="middle">轴瓦干摩擦、温度上升</text>
+  <path d="M420 300 L590 300" stroke="#d9a521" stroke-width="1.2"/>
+  <text x="505" y="324" font-size="11.5" fill="#8e1b1b" text-anchor="middle">数十秒内即烧瓦抱轴</text>
+
+  <rect x="690" y="96" width="340" height="90" rx="6" fill="#f3f8f3" stroke="#2f8f4f" stroke-width="1.8"/>
+  <text x="860" y="124" font-size="12.5" font-weight="bold" fill="#1b6b2e" text-anchor="middle">保护动作（延时 4 s）</text>
+  <text x="860" y="148" font-size="11.5" fill="#33475b" text-anchor="middle">运行中油压 &lt; 1.5 bar 持续 4 s</text>
+  <text x="860" y="170" font-size="11.5" fill="#33475b" text-anchor="middle">继电器 → 电磁阀 → 断油停车</text>
+
+  <rect x="690" y="216" width="340" height="90" rx="6" fill="#fdf6f5" stroke="#c0392b" stroke-width="1.8"/>
+  <text x="860" y="244" font-size="12.5" font-weight="bold" fill="#8e1b1b" text-anchor="middle">若保护失效的后果</text>
+  <text x="860" y="268" font-size="11.5" fill="#33475b" text-anchor="middle">轴瓦烧熔、曲轴抱死、连杆大端烧损，</text>
+  <text x="860" y="290" font-size="11.5" fill="#33475b" text-anchor="middle">整机报废性损坏</text>
+
+  <rect x="690" y="336" width="340" height="76" rx="6" fill="#eef4fa" stroke="#3b82c4" stroke-width="1.8"/>
+  <text x="860" y="362" font-size="12.5" font-weight="bold" fill="#124a7a" text-anchor="middle">预防与处置</text>
+  <text x="860" y="384" font-size="11.5" fill="#33475b" text-anchor="middle">起动前必须先预润滑 · 定期换滤芯、查液位</text>
+  <text x="860" y="404" font-size="11.5" fill="#33475b" text-anchor="middle">报警即降负荷，跳闸后先查漏再复位</text>
+
+  <path d="M334 92 L360 92 L360 208 L386 208" fill="none" stroke="#c0392b" stroke-width="2" marker-end="url(#e1)"/>
+  <path d="M334 164 L360 164 L360 226 L386 226" fill="none" stroke="#c0392b" stroke-width="2" marker-end="url(#e1)"/>
+  <path d="M334 236 L360 236 L360 252 L386 252" fill="none" stroke="#c0392b" stroke-width="2" marker-end="url(#e1)"/>
+  <path d="M334 308 L360 308 L360 274 L386 274" fill="none" stroke="#c0392b" stroke-width="2" marker-end="url(#e1)"/>
+  <path d="M334 380 L360 380 L360 296 L386 296" fill="none" stroke="#c0392b" stroke-width="2" marker-end="url(#e1)"/>
+  <path d="M620 210 L660 210 L660 150 L686 150" fill="none" stroke="#2f8f4f" stroke-width="2.2" marker-end="url(#e2)"/>
+  <path d="M620 260 L660 260 L660 262 L686 262" fill="none" stroke="#c0392b" stroke-width="2.2" marker-end="url(#e1)"/>
+</svg>

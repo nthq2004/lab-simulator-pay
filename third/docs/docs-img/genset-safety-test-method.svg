@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="560" viewBox="0 0 1120 560" font-family="'Microsoft YaHei','Source Han Sans SC',sans-serif">
+  <rect width="1120" height="560" fill="#ffffff"/>
+  <defs>
+    <marker id="c1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2f8fe0"/>
+    </marker>
+    <marker id="c2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/>
+    </marker>
+  </defs>
+
+  <text x="560" y="30" font-size="17" font-weight="bold" fill="#1f2d3d" text-anchor="middle">安全保护功能测试方法：用试验工具代替传感器送入模拟信号</text>
+
+  <!-- 通道一：转速 -->
+  <rect x="30" y="70" width="190" height="100" rx="6" fill="#f4f6f7" stroke="#8a959e" stroke-width="1.8" stroke-dasharray="7 5"/>
+  <text x="125" y="98" font-size="12" font-weight="bold" fill="#4a5560" text-anchor="middle">磁电式转速传感器</text>
+  <text x="125" y="120" font-size="11" fill="#8a959e" text-anchor="middle">（试验时脱开）</text>
+  <line x1="52" y1="132" x2="160" y2="132" stroke="#c0392b" stroke-width="2.6"/>
+  <line x1="52" y1="146" x2="160" y2="146" stroke="#c0392b" stroke-width="2.6"/>
+  <text x="106" y="163" font-size="10.5" fill="#c0392b" text-anchor="middle">✂ 不参与试验</text>
+
+  <rect x="30" y="220" width="190" height="100" rx="6" fill="#f4f6f7" stroke="#8a959e" stroke-width="1.8" stroke-dasharray="7 5"/>
+  <text x="125" y="248" font-size="12" font-weight="bold" fill="#4a5560" text-anchor="middle">滑油压力传感器 PT</text>
+  <text x="125" y="270" font-size="11" fill="#8a959e" text-anchor="middle">（试验时脱开）</text>
+  <line x1="52" y1="282" x2="160" y2="282" stroke="#c0392b" stroke-width="2.6"/>
+  <line x1="52" y1="296" x2="160" y2="296" stroke="#c0392b" stroke-width="2.6"/>
+  <text x="106" y="313" font-size="10.5" fill="#c0392b" text-anchor="middle">✂ 不参与试验</text>
+
+  <rect x="30" y="370" width="190" height="100" rx="6" fill="#f4f6f7" stroke="#8a959e" stroke-width="1.8" stroke-dasharray="7 5"/>
+  <text x="125" y="398" font-size="12" font-weight="bold" fill="#4a5560" text-anchor="middle">PT100 温度传感器</text>
+  <text x="125" y="420" font-size="11" fill="#8a959e" text-anchor="middle">（从管路中取出）</text>
+  <line x1="52" y1="432" x2="160" y2="432" stroke="#c0392b" stroke-width="2.6"/>
+  <line x1="52" y1="446" x2="160" y2="446" stroke="#c0392b" stroke-width="2.6"/>
+  <text x="106" y="463" font-size="10.5" fill="#c0392b" text-anchor="middle">✂ 不参与试验</text>
+
+  <!-- 工具箱 -->
+  <rect x="290" y="60" width="270" height="430" rx="6" fill="#f4f8fc" stroke="#5b9bd5" stroke-width="2"/>
+  <text x="425" y="88" font-size="13" font-weight="bold" fill="#124a7a" text-anchor="middle">安保测试工具箱</text>
+
+  <rect x="308" y="104" width="234" height="106" rx="5" fill="#ffffff" stroke="#3b82c4"/>
+  <text x="320" y="126" font-size="12" font-weight="bold" fill="#124a7a">频率发生器</text>
+  <text x="320" y="148" font-size="11" fill="#33475b">输出 0~2500 Hz（≈ r/min）</text>
+  <text x="320" y="168" font-size="11" fill="#33475b">50 Hz 一档，默认 1500 Hz</text>
+  <text x="320" y="192" font-size="11" fill="#8e1b1b">试验值：1800 Hz</text>
+
+  <rect x="308" y="226" width="234" height="106" rx="5" fill="#ffffff" stroke="#3b82c4"/>
+  <text x="320" y="248" font-size="12" font-weight="bold" fill="#124a7a">手动泵压模块</text>
+  <text x="320" y="270" font-size="11" fill="#33475b">输出 0~8 bar，0.5 bar 一档</text>
+  <text x="320" y="290" font-size="11" fill="#33475b">默认 5.00 bar</text>
+  <text x="320" y="314" font-size="11" fill="#8e1b1b">试验值：泄至 1.00 bar</text>
+
+  <rect x="308" y="348" width="234" height="126" rx="5" fill="#ffffff" stroke="#3b82c4"/>
+  <text x="320" y="370" font-size="12" font-weight="bold" fill="#124a7a">电阻箱 / 干式校验炉</text>
+  <text x="320" y="392" font-size="11" fill="#33475b">电阻箱 100~180 Ω（2 Ω 一档）</text>
+  <text x="320" y="412" font-size="11" fill="#33475b">校验炉 0~200 ℃（5 ℃ 一档）</text>
+  <text x="320" y="434" font-size="11" fill="#33475b">默认炉温 25 ℃</text>
+  <text x="320" y="458" font-size="11" fill="#8e1b1b">试验值：100 ℃</text>
+
+  <!-- 保护模块 -->
+  <rect x="620" y="60" width="240" height="430" rx="6" fill="#fdf6f5" stroke="#c0392b" stroke-width="2"/>
+  <text x="740" y="88" font-size="13" font-weight="bold" fill="#8e1b1b" text-anchor="middle">安全保护模块</text>
+  <rect x="636" y="112" width="208" height="90" rx="4" fill="#ffffff" stroke="#e0a3a0"/>
+  <text x="648" y="136" font-size="11.5" font-weight="bold" fill="#8e1b1b">① 超速：&gt; 1725 r/min</text>
+  <text x="648" y="158" font-size="11" fill="#33475b">无延时，立即跳闸</text>
+  <text x="648" y="180" font-size="11" fill="#5a6b78">1800 &gt; 1725 → 动作</text>
+
+  <rect x="636" y="222" width="208" height="90" rx="4" fill="#ffffff" stroke="#e0a3a0"/>
+  <text x="648" y="246" font-size="11.5" font-weight="bold" fill="#8e1b1b">② 低压：&lt; 1.5 bar</text>
+  <text x="648" y="268" font-size="11" fill="#33475b">确认延时 4 s</text>
+  <text x="648" y="290" font-size="11" fill="#5a6b78">1.00 &lt; 1.5 → 4 s 后动作</text>
+
+  <rect x="636" y="332" width="208" height="90" rx="4" fill="#ffffff" stroke="#e0a3a0"/>
+  <text x="648" y="356" font-size="11.5" font-weight="bold" fill="#8e1b1b">③ 高温：&gt; 95 ℃</text>
+  <text x="648" y="378" font-size="11" fill="#33475b">确认延时 6 s</text>
+  <text x="648" y="400" font-size="11" fill="#5a6b78">100 &gt; 95 → 6 s 后动作</text>
+
+  <!-- 停机链 -->
+  <rect x="910" y="60" width="180" height="430" rx="6" fill="#eef4fa" stroke="#3b82c4" stroke-width="2"/>
+  <text x="1000" y="88" font-size="13" font-weight="bold" fill="#124a7a" text-anchor="middle">停机执行链</text>
+  <rect x="928" y="112" width="144" height="56" rx="4" fill="#ffffff" stroke="#3b82c4"/>
+  <text x="1000" y="146" font-size="11.5" fill="#124a7a" text-anchor="middle">停机继电器</text>
+  <rect x="928" y="192" width="144" height="56" rx="4" fill="#ffffff" stroke="#3b82c4"/>
+  <text x="1000" y="226" font-size="11.5" fill="#124a7a" text-anchor="middle">停机电磁阀</text>
+  <rect x="928" y="272" width="144" height="56" rx="4" fill="#ffffff" stroke="#3b82c4"/>
+  <text x="1000" y="306" font-size="11.5" fill="#124a7a" text-anchor="middle">燃油切断</text>
+  <rect x="928" y="352" width="144" height="56" rx="4" fill="#f3f8f3" stroke="#2f8f4f"/>
+  <text x="1000" y="386" font-size="11.5" fill="#1b6b2e" text-anchor="middle">机组停车</text>
+  <path d="M1000 168 L1000 188" fill="none" stroke="#3b82c4" stroke-width="2.2" marker-end="url(#c1)"/>
+  <path d="M1000 248 L1000 268" fill="none" stroke="#3b82c4" stroke-width="2.2" marker-end="url(#c1)"/>
+  <path d="M1000 328 L1000 348" fill="none" stroke="#3b82c4" stroke-width="2.2" marker-end="url(#c1)"/>
+  <text x="1000" y="440" font-size="11" fill="#8e1b1b" text-anchor="middle">试验后须 RESET</text>
+  <text x="1000" y="458" font-size="11" fill="#8e1b1b" text-anchor="middle">复位跳闸锁存</text>
+
+  <!-- 模拟信号连线 -->
+  <path d="M220 120 L286 120 L286 157 L304 157" fill="none" stroke="#2f8fe0" stroke-width="2.4" stroke-dasharray="7 4" marker-end="url(#c1)"/>
+  <path d="M560 157 L620 157" fill="none" stroke="#2f8fe0" stroke-width="2.4" stroke-dasharray="7 4" marker-end="url(#c1)"/>
+  <path d="M220 270 L286 270 L286 279 L304 279" fill="none" stroke="#2f8fe0" stroke-width="2.4" stroke-dasharray="7 4" marker-end="url(#c1)"/>
+  <path d="M560 279 L620 279" fill="none" stroke="#2f8fe0" stroke-width="2.4" stroke-dasharray="7 4" marker-end="url(#c1)"/>
+  <path d="M220 420 L286 420 L286 411 L304 411" fill="none" stroke="#2f8fe0" stroke-width="2.4" stroke-dasharray="7 4" marker-end="url(#c1)"/>
+  <path d="M560 411 L620 411" fill="none" stroke="#2f8fe0" stroke-width="2.4" stroke-dasharray="7 4" marker-end="url(#c1)"/>
+
+  <path d="M860 157 L906 157" fill="none" stroke="#c0392b" stroke-width="2.4" marker-end="url(#c2)"/>
+  <path d="M860 267 L906 267" fill="none" stroke="#c0392b" stroke-width="2.4" marker-end="url(#c2)"/>
+  <path d="M860 377 L906 377" fill="none" stroke="#c0392b" stroke-width="2.4" marker-end="url(#c2)"/>
+
+  <text x="600" y="530" font-size="11.5" fill="#5a6b78" text-anchor="middle">要点：保护单元只认信号、不认真实工况 —— 脱开真实传感器、送入模拟信号，即可在机组不停机升速 / 不真降油压 / 不真升温的情况下验证三路保护</text>
+</svg>

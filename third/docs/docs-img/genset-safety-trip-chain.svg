@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="520" viewBox="0 0 1120 520" font-family="'Microsoft YaHei','Source Han Sans SC',sans-serif">
+  <rect width="1120" height="520" fill="#ffffff"/>
+  <defs>
+    <marker id="b1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#5f7d95"/>
+    </marker>
+    <marker id="b2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/>
+    </marker>
+  </defs>
+
+  <text x="560" y="30" font-size="17" font-weight="bold" fill="#1f2d3d" text-anchor="middle">三路保护信号与停机链（定值 · 延时 · 执行）</text>
+
+  <!-- 传感器 -->
+  <rect x="30" y="70" width="230" height="90" rx="6" fill="#eef4fa" stroke="#3b82c4" stroke-width="1.8"/>
+  <text x="145" y="96" font-size="12.5" font-weight="bold" fill="#124a7a" text-anchor="middle">磁电式转速传感器</text>
+  <text x="145" y="118" font-size="11.5" fill="#33475b" text-anchor="middle">飞轮齿圈 → 频率信号</text>
+  <text x="145" y="140" font-size="11.5" fill="#8e1b1b" text-anchor="middle">超速定值 1725 r/min</text>
+
+  <rect x="30" y="200" width="230" height="90" rx="6" fill="#eef4fa" stroke="#3b82c4" stroke-width="1.8"/>
+  <text x="145" y="226" font-size="12.5" font-weight="bold" fill="#124a7a" text-anchor="middle">滑油压力传感器 PT</text>
+  <text x="145" y="248" font-size="11.5" fill="#33475b" text-anchor="middle">4~20 mA 压力信号</text>
+  <text x="145" y="270" font-size="11.5" fill="#8e1b1b" text-anchor="middle">低压定值 1.5 bar</text>
+
+  <rect x="30" y="330" width="230" height="90" rx="6" fill="#eef4fa" stroke="#3b82c4" stroke-width="1.8"/>
+  <text x="145" y="356" font-size="12.5" font-weight="bold" fill="#124a7a" text-anchor="middle">PT100 温度传感器</text>
+  <text x="145" y="378" font-size="11.5" fill="#33475b" text-anchor="middle">电阻信号 → 温度</text>
+  <text x="145" y="400" font-size="11.5" fill="#8e1b1b" text-anchor="middle">高温定值 95 ℃</text>
+
+  <!-- 保护模块 -->
+  <rect x="300" y="55" width="270" height="390" rx="6" fill="#fdf6f5" stroke="#c0392b" stroke-width="2"/>
+  <text x="435" y="82" font-size="13" font-weight="bold" fill="#8e1b1b" text-anchor="middle">安全保护模块</text>
+  <text x="435" y="103" font-size="11.5" fill="#8a5a00" text-anchor="middle">信号 → 与定值比较 → 延时确认</text>
+
+  <rect x="316" y="118" width="238" height="86" rx="4" fill="#ffffff" stroke="#e0a3a0"/>
+  <text x="330" y="140" font-size="12" font-weight="bold" fill="#8e1b1b">比较器 ①：转速 &gt; 1725</text>
+  <text x="330" y="162" font-size="11.5" fill="#33475b">确认延时 0 s</text>
+  <text x="330" y="184" font-size="11.5" fill="#c0392b">越限即跳闸（防止飞车）</text>
+
+  <rect x="316" y="216" width="238" height="86" rx="4" fill="#ffffff" stroke="#e0a3a0"/>
+  <text x="330" y="238" font-size="12" font-weight="bold" fill="#8e1b1b">比较器 ②：油压 &lt; 1.5 bar</text>
+  <text x="330" y="260" font-size="11.5" fill="#33475b">确认延时 4 s</text>
+  <text x="330" y="282" font-size="11.5" fill="#5a6b78">避开起动 / 换泵瞬时波动</text>
+
+  <rect x="316" y="314" width="238" height="86" rx="4" fill="#ffffff" stroke="#e0a3a0"/>
+  <text x="330" y="336" font-size="12" font-weight="bold" fill="#8e1b1b">比较器 ③：水温 &gt; 95 ℃</text>
+  <text x="330" y="358" font-size="11.5" fill="#33475b">确认延时 6 s</text>
+  <text x="330" y="380" font-size="11.5" fill="#5a6b78">避开负荷突变引起的温度波动</text>
+
+  <text x="435" y="424" font-size="11.5" fill="#8e1b1b" text-anchor="middle">任一路越限 → 输出停机命令（锁存）</text>
+
+  <!-- 执行链 -->
+  <rect x="630" y="80" width="200" height="80" rx="6" fill="#eef4fa" stroke="#3b82c4" stroke-width="1.8"/>
+  <text x="730" y="112" font-size="12.5" font-weight="bold" fill="#124a7a" text-anchor="middle">停机继电器</text>
+  <text x="730" y="136" font-size="11.5" fill="#33475b" text-anchor="middle">线圈得电并自保持</text>
+
+  <rect x="880" y="80" width="200" height="80" rx="6" fill="#eef4fa" stroke="#3b82c4" stroke-width="1.8"/>
+  <text x="980" y="112" font-size="12.5" font-weight="bold" fill="#124a7a" text-anchor="middle">停机电磁阀</text>
+  <text x="980" y="136" font-size="11.5" fill="#33475b" text-anchor="middle">动作，释放燃油齿条</text>
+
+  <rect x="630" y="250" width="200" height="80" rx="6" fill="#eef4fa" stroke="#3b82c4" stroke-width="1.8"/>
+  <text x="730" y="282" font-size="12.5" font-weight="bold" fill="#124a7a" text-anchor="middle">燃油切断机构</text>
+  <text x="730" y="306" font-size="11.5" fill="#33475b" text-anchor="middle">齿条拉到 0 位</text>
+
+  <rect x="880" y="250" width="200" height="80" rx="6" fill="#f3f8f3" stroke="#2f8f4f" stroke-width="1.8"/>
+  <text x="980" y="282" font-size="12.5" font-weight="bold" fill="#1b6b2e" text-anchor="middle">柴油机停车</text>
+  <text x="980" y="306" font-size="11.5" fill="#33475b" text-anchor="middle">转速下降至 0</text>
+
+  <rect x="630" y="380" width="450" height="60" rx="6" fill="#fff8e6" stroke="#d9a521" stroke-width="1.8"/>
+  <text x="855" y="404" font-size="12" font-weight="bold" fill="#8a5a00" text-anchor="middle">跳闸后处理：排除越限原因 → 按 RESET 复位锁存 → 重新起动</text>
+  <text x="855" y="426" font-size="11" fill="#8a6c42" text-anchor="middle">保护未复位前，ENG. START 无效</text>
+
+  <!-- 连线 -->
+  <path d="M260 115 L296 115 L296 160 L312 160" fill="none" stroke="#5f7d95" stroke-width="2.2" marker-end="url(#b1)"/>
+  <path d="M260 245 L296 245 L296 258 L312 258" fill="none" stroke="#5f7d95" stroke-width="2.2" marker-end="url(#b1)"/>
+  <path d="M260 375 L296 375 L296 356 L312 356" fill="none" stroke="#5f7d95" stroke-width="2.2" marker-end="url(#b1)"/>
+  <path d="M570 160 L600 160 L600 120 L626 120" fill="none" stroke="#c0392b" stroke-width="2.4" marker-end="url(#b2)"/>
+  <path d="M830 120 L876 120" fill="none" stroke="#c0392b" stroke-width="2.4" marker-end="url(#b2)"/>
+  <path d="M980 160 L980 210 L730 210 L730 246" fill="none" stroke="#c0392b" stroke-width="2.4" marker-end="url(#b2)"/>
+  <path d="M830 290 L876 290" fill="none" stroke="#c0392b" stroke-width="2.4" marker-end="url(#b2)"/>
+</svg>

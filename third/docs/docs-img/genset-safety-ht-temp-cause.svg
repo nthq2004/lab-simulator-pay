@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1060" height="470" viewBox="0 0 1060 470" font-family="'Microsoft YaHei','Source Han Sans SC',sans-serif">
+  <rect width="1060" height="470" fill="#ffffff"/>
+  <defs>
+    <marker id="f1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/>
+    </marker>
+    <marker id="f2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2f8f4f"/>
+    </marker>
+  </defs>
+
+  <text x="530" y="30" font-size="17" font-weight="bold" fill="#1f2d3d" text-anchor="middle">冷却水温度高（缸套水超温跳闸）原因分析</text>
+
+  <rect x="30" y="62" width="300" height="60" rx="5" fill="#fdf6f5" stroke="#c0392b" stroke-width="1.6"/>
+  <text x="44" y="84" font-size="12" font-weight="bold" fill="#8e1b1b">① 三通调温阀卡涩 / 开度不当</text>
+  <text x="44" y="105" font-size="11" fill="#33475b">阀芯卡在旁通位，淡水不经冷却器</text>
+
+  <rect x="30" y="134" width="300" height="60" rx="5" fill="#fdf6f5" stroke="#c0392b" stroke-width="1.6"/>
+  <text x="44" y="156" font-size="12" font-weight="bold" fill="#8e1b1b">② 冷却器结垢 / 海水侧脏堵</text>
+  <text x="44" y="177" font-size="11" fill="#33475b">传热恶化、低温淡水先升高再带动缸套水升温</text>
+
+  <rect x="30" y="206" width="300" height="60" rx="5" fill="#fdf6f5" stroke="#c0392b" stroke-width="1.6"/>
+  <text x="44" y="228" font-size="12" font-weight="bold" fill="#8e1b1b">③ 冷却水泵故障 / 阀门未开</text>
+  <text x="44" y="249" font-size="11" fill="#33475b">泵磨损、气蚀、进出口阀误关 → 流量不足</text>
+
+  <rect x="30" y="278" width="300" height="60" rx="5" fill="#fdf6f5" stroke="#c0392b" stroke-width="1.6"/>
+  <text x="44" y="300" font-size="12" font-weight="bold" fill="#8e1b1b">④ 系统缺水 / 气塞 / 膨胀水柜液位低</text>
+  <text x="44" y="321" font-size="11" fill="#33475b">补水不足、放气不彻底，循环中断</text>
+
+  <rect x="30" y="350" width="300" height="60" rx="5" fill="#fdf6f5" stroke="#c0392b" stroke-width="1.6"/>
+  <text x="44" y="372" font-size="12" font-weight="bold" fill="#8e1b1b">⑤ 长期超负荷 / 燃烧不良</text>
+  <text x="44" y="393" font-size="11" fill="#33475b">喷油定时、雾化不良，缸内热负荷偏高</text>
+
+  <rect x="390" y="150" width="230" height="200" rx="8" fill="#fff8e6" stroke="#d9a521" stroke-width="2"/>
+  <text x="505" y="180" font-size="13" font-weight="bold" fill="#8a5a00" text-anchor="middle">超温机理</text>
+  <text x="505" y="208" font-size="11.5" fill="#5b4426" text-anchor="middle">发热量 &gt; 冷却水带走的热量</text>
+  <path d="M420 224 L590 224" stroke="#d9a521" stroke-width="1.2"/>
+  <text x="505" y="248" font-size="11.5" fill="#5b4426" text-anchor="middle">缸套、缸盖壁温上升</text>
+  <path d="M420 262 L590 262" stroke="#d9a521" stroke-width="1.2"/>
+  <text x="505" y="286" font-size="11.5" fill="#5b4426" text-anchor="middle">热应力增大、密封件老化</text>
+  <path d="M420 300 L590 300" stroke="#d9a521" stroke-width="1.2"/>
+  <text x="505" y="324" font-size="11.5" fill="#8e1b1b" text-anchor="middle">壁温持续升高 → 拉缸、缸头裂</text>
+
+  <rect x="690" y="96" width="340" height="90" rx="6" fill="#f3f8f3" stroke="#2f8f4f" stroke-width="1.8"/>
+  <text x="860" y="124" font-size="12.5" font-weight="bold" fill="#1b6b2e" text-anchor="middle">保护动作（延时 6 s）</text>
+  <text x="860" y="148" font-size="11.5" fill="#33475b" text-anchor="middle">运行中出水温度 &gt; 95 ℃ 持续 6 s</text>
+  <text x="860" y="170" font-size="11.5" fill="#33475b" text-anchor="middle">继电器 → 电磁阀 → 断油停车</text>
+
+  <rect x="690" y="216" width="340" height="90" rx="6" fill="#fdf6f5" stroke="#c0392b" stroke-width="1.8"/>
+  <text x="860" y="244" font-size="12.5" font-weight="bold" fill="#8e1b1b" text-anchor="middle">若保护失效的后果</text>
+  <text x="860" y="268" font-size="11.5" fill="#33475b" text-anchor="middle">缸套 / 缸头热裂，活塞环结焦卡死，</text>
+  <text x="860" y="290" font-size="11.5" fill="#33475b" text-anchor="middle">密封圈烧损导致冷却水进入曲轴箱</text>
+
+  <rect x="690" y="336" width="340" height="76" rx="6" fill="#eef4fa" stroke="#3b82c4" stroke-width="1.8"/>
+  <text x="860" y="362" font-size="12.5" font-weight="bold" fill="#124a7a" text-anchor="middle">预防与处置</text>
+  <text x="860" y="384" font-size="11.5" fill="#33475b" text-anchor="middle">定期清洗冷却器 · 校验三通阀与温度计</text>
+  <text x="860" y="404" font-size="11.5" fill="#33475b" text-anchor="middle">报警先降负荷，超温跳闸后查冷却系统</text>
+
+  <path d="M334 92 L360 92 L360 208 L386 208" fill="none" stroke="#c0392b" stroke-width="2" marker-end="url(#f1)"/>
+  <path d="M334 164 L360 164 L360 226 L386 226" fill="none" stroke="#c0392b" stroke-width="2" marker-end="url(#f1)"/>
+  <path d="M334 236 L360 236 L360 252 L386 252" fill="none" stroke="#c0392b" stroke-width="2" marker-end="url(#f1)"/>
+  <path d="M334 308 L360 308 L360 274 L386 274" fill="none" stroke="#c0392b" stroke-width="2" marker-end="url(#f1)"/>
+  <path d="M334 380 L360 380 L360 296 L386 296" fill="none" stroke="#c0392b" stroke-width="2" marker-end="url(#f1)"/>
+  <path d="M620 210 L660 210 L660 150 L686 150" fill="none" stroke="#2f8f4f" stroke-width="2.2" marker-end="url(#f2)"/>
+  <path d="M620 260 L660 260 L660 262 L686 262" fill="none" stroke="#c0392b" stroke-width="2.2" marker-end="url(#f1)"/>
+</svg>

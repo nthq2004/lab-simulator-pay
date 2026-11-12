@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1060" height="470" viewBox="0 0 1060 470" font-family="'Microsoft YaHei','Source Han Sans SC',sans-serif">
+  <rect width="1060" height="470" fill="#ffffff"/>
+  <defs>
+    <marker id="d1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/>
+    </marker>
+    <marker id="d2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2f8f4f"/>
+    </marker>
+  </defs>
+
+  <text x="530" y="30" font-size="17" font-weight="bold" fill="#1f2d3d" text-anchor="middle">柴油发电机组超速（飞车）原因分析</text>
+
+  <!-- 原因 -->
+  <rect x="30" y="62" width="300" height="64" rx="5" fill="#fdf6f5" stroke="#c0392b" stroke-width="1.6"/>
+  <text x="44" y="86" font-size="12" font-weight="bold" fill="#8e1b1b">① 发电机突然甩负荷</text>
+  <text x="44" y="108" font-size="11" fill="#33475b">断路器跳闸 / 电网失电，负荷瞬间归零</text>
+
+  <rect x="30" y="140" width="300" height="64" rx="5" fill="#fdf6f5" stroke="#c0392b" stroke-width="1.6"/>
+  <text x="44" y="164" font-size="12" font-weight="bold" fill="#8e1b1b">② 调速器执行机构卡涩</text>
+  <text x="44" y="186" font-size="11" fill="#33475b">齿条冻结在加油位，负荷降低也不回油</text>
+
+  <rect x="30" y="218" width="300" height="64" rx="5" fill="#fdf6f5" stroke="#c0392b" stroke-width="1.6"/>
+  <text x="44" y="242" font-size="12" font-weight="bold" fill="#8e1b1b">③ 燃油齿条 / 拉杆卡滞</text>
+  <text x="44" y="264" font-size="11" fill="#33475b">机械卡死、弹簧断裂，油门关不小</text>
+
+  <rect x="30" y="296" width="300" height="64" rx="5" fill="#fdf6f5" stroke="#c0392b" stroke-width="1.6"/>
+  <text x="44" y="320" font-size="12" font-weight="bold" fill="#8e1b1b">④ 调速器参数错误 / 反馈断线</text>
+  <text x="44" y="342" font-size="11" fill="#33475b">增益过大、转速反馈丢失，调节失控</text>
+
+  <rect x="30" y="374" width="300" height="64" rx="5" fill="#fdf6f5" stroke="#c0392b" stroke-width="1.6"/>
+  <text x="44" y="398" font-size="12" font-weight="bold" fill="#8e1b1b">⑤ 起动时油门过大 / 进气异常</text>
+  <text x="44" y="420" font-size="11" fill="#33475b">起动油量限位失效、增压空气骤增</text>
+
+  <!-- 中间机理 -->
+  <rect x="390" y="150" width="230" height="200" rx="8" fill="#fff8e6" stroke="#d9a521" stroke-width="2"/>
+  <text x="505" y="180" font-size="13" font-weight="bold" fill="#8a5a00" text-anchor="middle">转速失控机理</text>
+  <text x="505" y="208" font-size="11.5" fill="#5b4426" text-anchor="middle">输入油量 &gt; 该负荷所需油量</text>
+  <path d="M420 224 L590 224" stroke="#d9a521" stroke-width="1.2"/>
+  <text x="505" y="248" font-size="11.5" fill="#5b4426" text-anchor="middle">柴油机输出转矩 &gt; 阻力矩</text>
+  <path d="M420 262 L590 262" stroke="#d9a521" stroke-width="1.2"/>
+  <text x="505" y="286" font-size="11.5" fill="#5b4426" text-anchor="middle">转速持续上升（正反馈）</text>
+  <path d="M420 300 L590 300" stroke="#d9a521" stroke-width="1.2"/>
+  <text x="505" y="324" font-size="11.5" fill="#8e1b1b" text-anchor="middle">10 s 内可越过 1725 r/min</text>
+
+  <!-- 结果 -->
+  <rect x="690" y="96" width="340" height="90" rx="6" fill="#f3f8f3" stroke="#2f8f4f" stroke-width="1.8"/>
+  <text x="860" y="124" font-size="12.5" font-weight="bold" fill="#1b6b2e" text-anchor="middle">保护动作（无延时）</text>
+  <text x="860" y="148" font-size="11.5" fill="#33475b" text-anchor="middle">转速 &gt; 1725 r/min（115 % 额定）</text>
+  <text x="860" y="170" font-size="11.5" fill="#33475b" text-anchor="middle">停机继电器 → 电磁阀 → 断油停车</text>
+
+  <rect x="690" y="216" width="340" height="90" rx="6" fill="#fdf6f5" stroke="#c0392b" stroke-width="1.8"/>
+  <text x="860" y="244" font-size="12.5" font-weight="bold" fill="#8e1b1b" text-anchor="middle">若保护失效的后果</text>
+  <text x="860" y="268" font-size="11.5" fill="#33475b" text-anchor="middle">连杆螺栓过载断裂、活塞烧顶、</text>
+  <text x="860" y="290" font-size="11.5" fill="#33475b" text-anchor="middle">轴瓦烧损、飞轮解体（飞车事故）</text>
+
+  <rect x="690" y="336" width="340" height="76" rx="6" fill="#eef4fa" stroke="#3b82c4" stroke-width="1.8"/>
+  <text x="860" y="362" font-size="12.5" font-weight="bold" fill="#124a7a" text-anchor="middle">预防措施</text>
+  <text x="860" y="384" font-size="11.5" fill="#33475b" text-anchor="middle">调速器定期校验 · 甩负荷试验 · 齿条活络</text>
+  <text x="860" y="404" font-size="11.5" fill="#33475b" text-anchor="middle">超速保护每班 / 每月试验一次</text>
+
+  <!-- 连线 -->
+  <path d="M334 94 L360 94 L360 210 L386 210" fill="none" stroke="#c0392b" stroke-width="2" marker-end="url(#d1)"/>
+  <path d="M334 172 L360 172 L360 228 L386 228" fill="none" stroke="#c0392b" stroke-width="2" marker-end="url(#d1)"/>
+  <path d="M334 250 L360 250 L360 252 L386 252" fill="none" stroke="#c0392b" stroke-width="2" marker-end="url(#d1)"/>
+  <path d="M334 328 L360 328 L360 276 L386 276" fill="none" stroke="#c0392b" stroke-width="2" marker-end="url(#d1)"/>
+  <path d="M334 406 L360 406 L360 300 L386 300" fill="none" stroke="#c0392b" stroke-width="2" marker-end="url(#d1)"/>
+  <path d="M620 210 L660 210 L660 150 L686 150" fill="none" stroke="#2f8f4f" stroke-width="2.2" marker-end="url(#d2)"/>
+  <path d="M620 260 L660 260 L660 262 L686 262" fill="none" stroke="#c0392b" stroke-width="2.2" marker-end="url(#d1)"/>
+</svg>
