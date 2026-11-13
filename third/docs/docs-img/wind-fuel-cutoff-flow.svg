@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1020" height="600" viewBox="0 0 1020 600" font-family="'Microsoft YaHei','Source Han Sans SC',sans-serif">
+  <rect width="1020" height="600" fill="#ffffff"/>
+  <defs>
+    <marker id="ar3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#5b7f9e"/>
+    </marker>
+  </defs>
+
+  <text x="510" y="28" font-size="17" font-weight="bold" fill="#1f2d3d" text-anchor="middle">风油切断装置功能实验流程</text>
+
+  <!-- 流程一 -->
+  <rect x="40" y="56" width="940" height="150" rx="6" fill="#f4f8f2" stroke="#5a7a5a" stroke-width="1.6"/>
+  <text x="60" y="80" font-size="13" font-weight="bold" fill="#0b6a14">流程一　装置组成与识读（8 步）</text>
+  <g font-size="10.5" fill="#1f2d3d">
+    <text x="60" y="104">① 识别机舱风机应急切断按钮（ESS-1F）</text>
+    <text x="60" y="126">② 识别驾驶台的机舱油泵应急切断按钮（ESS-1P）</text>
+    <text x="60" y="148">③ 识别中间继电器 KA1</text>
+    <text x="60" y="170">④ 识别 1#机舱风机塑壳断路器（ESS-1F）</text>
+    <text x="520" y="104">⑤ 识别 1#滑油泵塑壳断路器（ESS-1P）</text>
+    <text x="520" y="126">⑥ 识别风机面板 START 按钮</text>
+    <text x="520" y="148">⑦ 识别风机面板 MAN/AUT 控制方式旋钮</text>
+    <text x="520" y="170">⑧ 识别油泵面板 STOP 按钮</text>
+  </g>
+  <text x="60" y="194" font-size="9.5" fill="#5a6a75">判据：能说出每个部件的位置、名称与作用；点击正确部件即通过</text>
+
+  <!-- 流程二 -->
+  <rect x="40" y="220" width="940" height="210" rx="6" fill="#fffdf3" stroke="#b99a2a" stroke-width="1.6"/>
+  <text x="60" y="244" font-size="13" font-weight="bold" fill="#8a6d00">流程二　操作与原理演示（7 步）</text>
+
+  <g font-size="10.5" fill="#1f2d3d">
+    <text x="60" y="268">① 合上 1#机舱风机与 1#滑油泵断路器，按 START 起动，观察 RUNNING 灯亮、桨叶/齿轮转动</text>
+    <text x="60" y="292">② 消防控制室按下「机舱风机应急切断」→ 只有上方按钮触头闭合 → KA1 得电 → 三副触头闭合</text>
+    <text x="60" y="316">③ 三只风机断路器跳至 TRIP，风机停转、POWER 灯灭 → 证明“弱电控强电”</text>
+    <text x="60" y="340">④ 按钮弹出 → 断器复位 OFF→ON → 按 START 恢复运行（切断未复归时合闸即跳闸）</text>
+    <text x="60" y="364">⑤ 驾驶台按下「机舱油泵应急切断」→ 油泵停转，同时燃油泵全停 → 发电机停机 → 主配电板失电</text>
+    <text x="60" y="388">⑥ 合闸后再按 START 仍不能起动：开关在 ON 位，但汇流排无电（POWER 灯不亮）</text>
+    <text x="60" y="412">⑦ 点击负载屏汇流排指示「重新建压」→ 供电恢复 → 油泵重新起动 → 选择正确答案</text>
+  </g>
+
+  <!-- 流程三 -->
+  <rect x="40" y="444" width="940" height="132" rx="6" fill="#f8f5fb" stroke="#7d5aa0" stroke-width="1.6"/>
+  <text x="60" y="468" font-size="13" font-weight="bold" fill="#5b3a7a">流程三　回路故障分析（5 步）</text>
+  <g font-size="10.5" fill="#1f2d3d">
+    <text x="60" y="492">① 故障界面勾选「KA1 线圈断线」→ ② 起动风机后按下切断按钮：KA1 不吸合、风机不停</text>
+    <text x="60" y="516">③ 取消故障：回路接通瞬间三台风机立即跳闸（说明断线是“隐性故障”，恢复送电即动作）</text>
+    <text x="60" y="540">④ 改设「2# 风机分励脱扣器断线」→ ⑤ 按下按钮：1#、3# 跳闸，2# 仍在合闸位（分励回路单路失效）</text>
+  </g>
+  <text x="60" y="564" font-size="9.5" fill="#5a6a75">判据：故障标志、断路器位置、机组运行状态三者在每一步都要与描述一致</text>
+</svg>

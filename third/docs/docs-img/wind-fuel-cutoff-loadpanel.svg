@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="520" viewBox="0 0 980 520" font-family="'Microsoft YaHei','Source Han Sans SC',sans-serif">
+  <rect width="980" height="520" fill="#ffffff"/>
+
+  <text x="490" y="28" font-size="17" font-weight="bold" fill="#1f2d3d" text-anchor="middle">部分动力负载屏与铭牌含义</text>
+
+  <!-- 柜体 -->
+  <rect x="40" y="56" width="620" height="424" rx="6" fill="#e8ecef" stroke="#4a5a66" stroke-width="1.8"/>
+  <text x="330" y="80" font-size="13" font-weight="bold" fill="#006400" text-anchor="middle">部分动力负载屏（3 × 3 塑壳断路器）</text>
+  <circle cx="452" cy="98" r="4.5" fill="#2eff3e" stroke="#1a5a1a"/>
+  <text x="462" y="102" font-size="9.5" fill="#0a6a12">汇流排带电（失电转红）</text>
+  <line x1="48" y1="112" x2="652" y2="112" stroke="#7a8494" stroke-width="1"/>
+
+  <!-- 三排 × 三列 开关（统一画法：柜壳 + 滑槽 + 手柄 + 名称 + 铭牌） -->
+  <g>
+    <!-- 第 1 排 y0=126 -->
+    <g>
+      <rect x="60" y="126" width="186" height="110" rx="4" fill="#ffffff" stroke="#c2ccd4" stroke-dasharray="5 3"/>
+      <rect x="126" y="132" width="56" height="74" rx="3" fill="#f0f1f4" stroke="#a0a8b8" stroke-width="1.3"/>
+      <rect x="144" y="138" width="20" height="42" rx="2" fill="#cfd3da" stroke="#9aa2ac"/>
+      <rect x="146" y="140" width="16" height="20" rx="2" fill="#2878c8" stroke="#0f3a68"/>
+      <text x="153" y="218" font-size="9.5" fill="#1a252f" text-anchor="middle">1#机舱风机</text>
+      <rect x="129" y="222" width="50" height="13" rx="2" fill="#c62828"/>
+      <text x="154" y="232" font-size="8" fill="#ffffff" text-anchor="middle">ESS-1F</text>
+    </g>
+    <g>
+      <rect x="252" y="126" width="186" height="110" rx="4" fill="#ffffff" stroke="#c2ccd4" stroke-dasharray="5 3"/>
+      <rect x="318" y="132" width="56" height="74" rx="3" fill="#f0f1f4" stroke="#a0a8b8" stroke-width="1.3"/>
+      <rect x="336" y="138" width="20" height="42" rx="2" fill="#cfd3da" stroke="#9aa2ac"/>
+      <rect x="338" y="140" width="16" height="20" rx="2" fill="#2878c8" stroke="#0f3a68"/>
+      <text x="345" y="218" font-size="9.5" fill="#1a252f" text-anchor="middle">2#机舱风机</text>
+      <rect x="321" y="222" width="50" height="13" rx="2" fill="#c62828"/>
+      <text x="346" y="232" font-size="8" fill="#ffffff" text-anchor="middle">ESS-1F</text>
+    </g>
+    <g>
+      <rect x="444" y="126" width="186" height="110" rx="4" fill="#ffffff" stroke="#c2ccd4" stroke-dasharray="5 3"/>
+      <rect x="510" y="132" width="56" height="74" rx="3" fill="#f0f1f4" stroke="#a0a8b8" stroke-width="1.3"/>
+      <rect x="528" y="138" width="20" height="42" rx="2" fill="#cfd3da" stroke="#9aa2ac"/>
+      <rect x="530" y="140" width="16" height="20" rx="2" fill="#2878c8" stroke="#0f3a68"/>
+      <text x="537" y="218" font-size="9.5" fill="#1a252f" text-anchor="middle">舵机房风机</text>
+      <rect x="513" y="222" width="50" height="13" rx="2" fill="#c62828"/>
+      <text x="538" y="232" font-size="8" fill="#ffffff" text-anchor="middle">ESS-1F</text>
+    </g>
+
+    <!-- 第 2 排 y0=242 -->
+    <g>
+      <rect x="60" y="242" width="186" height="110" rx="4" fill="#ffffff" stroke="#c2ccd4" stroke-dasharray="5 3"/>
+      <rect x="126" y="248" width="56" height="74" rx="3" fill="#f0f1f4" stroke="#a0a8b8" stroke-width="1.3"/>
+      <rect x="144" y="254" width="20" height="42" rx="2" fill="#cfd3da" stroke="#9aa2ac"/>
+      <rect x="146" y="256" width="16" height="20" rx="2" fill="#2878c8" stroke="#0f3a68"/>
+      <text x="153" y="334" font-size="9.5" fill="#1a252f" text-anchor="middle">1#滑油泵</text>
+      <rect x="129" y="338" width="50" height="13" rx="2" fill="#c62828"/>
+      <text x="154" y="348" font-size="8" fill="#ffffff" text-anchor="middle">ESS-1P</text>
+    </g>
+    <g>
+      <rect x="252" y="242" width="186" height="110" rx="4" fill="#ffffff" stroke="#c2ccd4" stroke-dasharray="5 3"/>
+      <rect x="318" y="248" width="56" height="74" rx="3" fill="#f0f1f4" stroke="#a0a8b8" stroke-width="1.3"/>
+      <rect x="336" y="254" width="20" height="42" rx="2" fill="#cfd3da" stroke="#9aa2ac"/>
+      <rect x="338" y="256" width="16" height="20" rx="2" fill="#2878c8" stroke="#0f3a68"/>
+      <text x="345" y="334" font-size="9.5" fill="#1a252f" text-anchor="middle">1#燃油泵</text>
+      <rect x="321" y="338" width="50" height="13" rx="2" fill="#c62828"/>
+      <text x="346" y="348" font-size="8" fill="#ffffff" text-anchor="middle">ESS-1P</text>
+    </g>
+    <g>
+      <rect x="444" y="242" width="186" height="110" rx="4" fill="#ffffff" stroke="#c2ccd4" stroke-dasharray="5 3"/>
+      <rect x="510" y="248" width="56" height="74" rx="3" fill="#f0f1f4" stroke="#a0a8b8" stroke-width="1.3"/>
+      <rect x="528" y="254" width="20" height="42" rx="2" fill="#cfd3da" stroke="#9aa2ac"/>
+      <rect x="530" y="256" width="16" height="20" rx="2" fill="#2878c8" stroke="#0f3a68"/>
+      <text x="537" y="334" font-size="9.5" fill="#1a252f" text-anchor="middle">1#增压泵</text>
+      <rect x="513" y="338" width="50" height="13" rx="2" fill="#c62828"/>
+      <text x="538" y="348" font-size="8" fill="#ffffff" text-anchor="middle">ESS-1P</text>
+    </g>
+
+    <!-- 第 3 排 y0=358（一般负载，手柄均在 ON 位下方为 OFF 表示） -->
+    <g>
+      <rect x="60" y="358" width="186" height="110" rx="4" fill="#ffffff" stroke="#c2ccd4" stroke-dasharray="5 3"/>
+      <rect x="126" y="364" width="56" height="74" rx="3" fill="#f0f1f4" stroke="#a0a8b8" stroke-width="1.3"/>
+      <rect x="144" y="370" width="20" height="42" rx="2" fill="#cfd3da" stroke="#9aa2ac"/>
+      <rect x="146" y="372" width="16" height="20" rx="2" fill="#2878c8" stroke="#0f3a68"/>
+      <text x="153" y="450" font-size="9.5" fill="#1a252f" text-anchor="middle">1#厨房变压器</text>
+      <rect x="125" y="454" width="58" height="13" rx="2" fill="#f2c200" stroke="#8a6d00"/>
+      <text x="154" y="464" font-size="8" fill="#3a3000" text-anchor="middle">PT-1</text>
+    </g>
+    <g>
+      <rect x="252" y="358" width="186" height="110" rx="4" fill="#ffffff" stroke="#c2ccd4" stroke-dasharray="5 3"/>
+      <rect x="318" y="364" width="56" height="74" rx="3" fill="#f0f1f4" stroke="#a0a8b8" stroke-width="1.3"/>
+      <rect x="336" y="370" width="20" height="42" rx="2" fill="#cfd3da" stroke="#9aa2ac"/>
+      <rect x="338" y="372" width="16" height="20" rx="2" fill="#2878c8" stroke="#0f3a68"/>
+      <text x="345" y="450" font-size="9.5" fill="#1a252f" text-anchor="middle">1#主空压机</text>
+      <rect x="317" y="454" width="58" height="13" rx="2" fill="#1565c0"/>
+      <text x="346" y="464" font-size="8" fill="#ffffff" text-anchor="middle">HEF-1</text>
+    </g>
+    <g>
+      <rect x="444" y="358" width="186" height="110" rx="4" fill="#ffffff" stroke="#c2ccd4" stroke-dasharray="5 3"/>
+      <rect x="510" y="364" width="56" height="74" rx="3" fill="#f0f1f4" stroke="#a0a8b8" stroke-width="1.3"/>
+      <rect x="528" y="370" width="20" height="42" rx="2" fill="#cfd3da" stroke="#9aa2ac"/>
+      <rect x="530" y="372" width="16" height="20" rx="2" fill="#2878c8" stroke="#0f3a68"/>
+      <text x="537" y="450" font-size="9.5" fill="#1a252f" text-anchor="middle">1#主海水泵</text>
+      <rect x="509" y="454" width="58" height="13" rx="2" fill="#2e7d32"/>
+      <text x="538" y="464" font-size="8" fill="#ffffff" text-anchor="middle">SQ4</text>
+    </g>
+  </g>
+
+  <!-- 图例 -->
+  <rect x="686" y="56" width="274" height="424" rx="6" fill="#f8fafb" stroke="#7a8494" stroke-width="1.4"/>
+  <text x="823" y="82" font-size="12.5" font-weight="bold" fill="#1f2d3d" text-anchor="middle">铭牌与符号含义</text>
+
+  <rect x="704" y="98" width="54" height="16" rx="2" fill="#c62828"/>
+  <text x="731" y="110" font-size="9" fill="#ffffff" text-anchor="middle">ESS-1F</text>
+  <text x="766" y="110" font-size="10" fill="#1f2d3d">应急切断（风机组）</text>
+  <text x="704" y="128" font-size="9" fill="#5a6a75">Emergency Stop Switch，F = Fan</text>
+
+  <rect x="704" y="144" width="54" height="16" rx="2" fill="#c62828"/>
+  <text x="731" y="156" font-size="9" fill="#ffffff" text-anchor="middle">ESS-1P</text>
+  <text x="766" y="156" font-size="10" fill="#1f2d3d">应急切断（油泵组）</text>
+  <text x="704" y="174" font-size="9" fill="#5a6a75">P = Pump</text>
+
+  <rect x="704" y="190" width="54" height="16" rx="2" fill="#f2c200" stroke="#8a6d00"/>
+  <text x="731" y="202" font-size="9" fill="#3a3000" text-anchor="middle">PT-1</text>
+  <text x="766" y="202" font-size="10" fill="#1f2d3d">1#厨房变压器（优先脱扣）</text>
+  <text x="704" y="220" font-size="9" fill="#5a6a75">Preferential Trip（过载时优先切除）</text>
+
+  <rect x="704" y="236" width="54" height="16" rx="2" fill="#1565c0"/>
+  <text x="731" y="248" font-size="9" fill="#ffffff" text-anchor="middle">HEF-1</text>
+  <text x="766" y="248" font-size="10" fill="#1f2d3d">1#主空压机（高泡释放联锁）</text>
+  <text x="704" y="266" font-size="9" fill="#5a6a75">High Expansion Foam（消防高泡释放）</text>
+
+  <rect x="704" y="282" width="54" height="16" rx="2" fill="#2e7d32"/>
+  <text x="731" y="294" font-size="9" fill="#ffffff" text-anchor="middle">SQ4</text>
+  <text x="766" y="294" font-size="10" fill="#1f2d3d">1#主海水泵（顺序起动）</text>
+  <text x="704" y="312" font-size="9" fill="#5a6a75">Sequential Start（顺序起动 4#）</text>
+
+  <text x="704" y="342" font-size="10" font-weight="bold" fill="#1f2d3d">其它缩写</text>
+  <g font-size="9.5" fill="#3a4a56">
+    <text x="704" y="362">MCCB：塑壳断路器，手柄三位置</text>
+    <text x="704" y="380">ON（合闸）/ TRIP（脱扣）/ OFF（分闸）</text>
+    <text x="704" y="398">KA：中间继电器（放大触点数量）</text>
+    <text x="704" y="416">SR：分励脱扣器（得电即跳闸）</text>
+    <text x="704" y="434">QF：开关位号</text>
+  </g>
+  <text x="704" y="458" font-size="8.5" fill="#7a8494">同一排铭牌相同 → 同组联动，一台动作台台跳闸</text>
+  <text x="704" y="470" font-size="8.5" fill="#7a8494">（仿真中以位置键逐台判定，可模拟单路失效）</text>
+</svg>

@@ -1,0 +1,180 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="520" viewBox="0 0 1040 520" font-family="'Microsoft YaHei','Source Han Sans SC',sans-serif">
+  <rect width="1040" height="520" fill="#ffffff"/>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#5b7f9e"/>
+    </marker>
+    <marker id="arrR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#d9534f"/>
+    </marker>
+  </defs>
+
+  <text x="520" y="30" font-size="17" font-weight="bold" fill="#1f2d3d" text-anchor="middle">风油切断装置组成与相互关系</text>
+
+  <!-- 左侧：操作与原理演示屏 -->
+  <rect x="30" y="60" width="360" height="420" rx="6" fill="#f7fbf6" stroke="#5a7a5a" stroke-width="1.8"/>
+  <text x="210" y="84" font-size="13" font-weight="bold" fill="#0b6a14" text-anchor="middle">风油切断操作与原理演示屏</text>
+
+  <rect x="46" y="96" width="158" height="150" rx="4" fill="#eef6ee" stroke="#7aa77a" stroke-width="1.2"/>
+  <text x="125" y="114" font-size="11" font-weight="bold" fill="#0b6a14" text-anchor="middle">消防控制室控制屏</text>
+  <g font-size="9.5" fill="#1a252f">
+    <text x="58" y="134">机舱风机 ESS-1F</text><rect x="140" y="122" width="34" height="16" rx="2" fill="#c02020" stroke="#5a0000"/>
+    <text x="58" y="158">机舱油泵 ESS-1P</text><rect x="140" y="146" width="34" height="16" rx="2" fill="#c02020" stroke="#5a0000"/>
+    <text x="58" y="182">住舱风机 ESS-1F</text><rect x="140" y="170" width="34" height="16" rx="2" fill="#c02020" stroke="#5a0000"/>
+    <text x="58" y="206">泵房风机 ESS-1F</text><rect x="140" y="194" width="34" height="16" rx="2" fill="#c02020" stroke="#5a0000"/>
+  </g>
+  <text x="46" y="240" font-size="9" fill="#5a6a75">按下自锁 / 再按弹出（每路一个状态灯）</text>
+
+  <rect x="212" y="96" width="158" height="150" rx="4" fill="#eef6ee" stroke="#7aa77a" stroke-width="1.2"/>
+  <text x="291" y="114" font-size="11" font-weight="bold" fill="#0b6a14" text-anchor="middle">驾驶台控制屏</text>
+  <g font-size="9.5" fill="#1a252f">
+    <text x="224" y="134">机舱风机 ESS-1F</text><rect x="306" y="122" width="34" height="16" rx="2" fill="#c02020" stroke="#5a0000"/>
+    <text x="224" y="158">机舱油泵 ESS-1P</text><rect x="306" y="146" width="34" height="16" rx="2" fill="#c02020" stroke="#5a0000"/>
+    <text x="224" y="182">住舱风机 ESS-1F</text><rect x="306" y="170" width="34" height="16" rx="2" fill="#c02020" stroke="#5a0000"/>
+    <text x="224" y="206">泵房风机 ESS-1F</text><rect x="306" y="194" width="34" height="16" rx="2" fill="#c02020" stroke="#5a0000"/>
+  </g>
+
+  <!-- MIMIC -->
+  <rect x="46" y="258" width="324" height="212" rx="4" fill="#fbfcf7" stroke="#8a9a8a" stroke-width="1.2"/>
+  <text x="208" y="276" font-size="11" font-weight="bold" fill="#1a252f" text-anchor="middle">风油切断工作原理图（24 V 直流）</text>
+
+  <rect x="56" y="286" width="304" height="86" rx="3" fill="#ffffff" stroke="#c6d3c6"/>
+  <text x="64" y="300" font-size="9.5" font-weight="bold" fill="#1a252f">风机切断电路</text>
+  <g stroke="#8a9290" stroke-width="1.6" fill="none">
+    <path d="M66 356 L96 356"/><path d="M96 322 L96 356"/><path d="M96 322 L124 322"/>
+    <path d="M159 322 L186 322"/><path d="M96 352 L124 352"/><path d="M159 352 L186 352"/>
+    <path d="M186 322 L186 352"/><path d="M186 336 L232 336"/>
+  </g>
+  <g stroke="#2c3e50" stroke-width="2"><path d="M124 322 L152 314"/><path d="M124 352 L152 344"/></g>
+  <rect x="232" y="316" width="44" height="40" rx="3" fill="#ffd7a8" stroke="#e02020" stroke-width="1.6"/>
+  <text x="254" y="341" font-size="11" font-weight="bold" fill="#8a3a10" text-anchor="middle">KA1</text>
+  <text x="66" y="314" font-size="9" fill="#1a252f">消防控制室按钮</text>
+  <text x="66" y="368" font-size="9" fill="#1a252f">驾驶台按钮</text>
+
+  <g stroke="#e02020" stroke-width="1.6" fill="none">
+    <path d="M282 300 L358 300"/><path d="M282 352 L358 352"/>
+    <path d="M292 300 L292 310"/><path d="M320 300 L320 310"/><path d="M348 300 L348 310"/>
+    <path d="M292 334 L292 352"/><path d="M320 334 L320 352"/><path d="M348 334 L348 352"/>
+  </g>
+  <rect x="280" y="310" width="24" height="24" rx="2" fill="#ffb3b3" stroke="#e02020"/>
+  <rect x="308" y="310" width="24" height="24" rx="2" fill="#ffb3b3" stroke="#e02020"/>
+  <rect x="336" y="310" width="24" height="24" rx="2" fill="#ffb3b3" stroke="#e02020"/>
+  <text x="292" y="326" font-size="8.5" fill="#8a3a10" text-anchor="middle">SR</text>
+  <text x="320" y="326" font-size="8.5" fill="#8a3a10" text-anchor="middle">SR</text>
+  <text x="348" y="326" font-size="8.5" fill="#8a3a10" text-anchor="middle">SR</text>
+  <text x="276" y="366" font-size="8.5" fill="#2c3e50">0V −</text>
+
+  <rect x="56" y="380" width="304" height="82" rx="3" fill="#ffffff" stroke="#c6d3c6"/>
+  <text x="64" y="394" font-size="9.5" font-weight="bold" fill="#1a252f">油泵切断电路（KA2）</text>
+  <g stroke="#8a9290" stroke-width="1.6" fill="none">
+    <path d="M66 440 L96 440"/><path d="M96 410 L96 440"/><path d="M96 410 L124 410"/>
+    <path d="M159 410 L186 410"/><path d="M96 438 L124 438"/><path d="M159 438 L186 438"/>
+    <path d="M186 410 L186 438"/><path d="M186 424 L232 424"/>
+  </g>
+  <g stroke="#2c3e50" stroke-width="2"><path d="M124 410 L152 402"/><path d="M124 438 L152 430"/></g>
+  <rect x="232" y="404" width="44" height="40" rx="3" fill="#ffd7a8" stroke="#e02020" stroke-width="1.6"/>
+  <text x="254" y="429" font-size="11" font-weight="bold" fill="#8a3a10" text-anchor="middle">KA2</text>
+  <text x="286" y="446" font-size="8.5" fill="#2c3e50">0V −</text>
+
+  <!-- 中间：动力负载屏 -->
+  <rect x="440" y="96" width="290" height="384" rx="6" fill="#eef1f3" stroke="#4a5a66" stroke-width="1.8"/>
+  <text x="585" y="118" font-size="13" font-weight="bold" fill="#006400" text-anchor="middle">部分动力负载屏</text>
+  <circle cx="596" cy="136" r="4" fill="#2eff3e" stroke="#1a5a1a"/>
+  <text x="604" y="140" font-size="9" fill="#0a6a12">配电板带电</text>
+
+  <g>
+    <!-- 3×3 开关 -->
+    <g>
+      <rect x="456" y="152" width="76" height="96" rx="3" fill="#f0f1f4" stroke="#a0a8b8"/>
+      <rect x="484" y="160" width="20" height="44" rx="2" fill="#cfd3da" stroke="#9aa2ac"/>
+      <rect x="486" y="162" width="16" height="22" rx="2" fill="#2878c8" stroke="#0f3a68"/>
+      <text x="460" y="262" font-size="9" fill="#1a252f">1#机舱风机</text>
+      <rect x="470" y="266" width="48" height="13" rx="2" fill="#c62828"/>
+      <text x="494" y="276" font-size="8" fill="#ffffff" text-anchor="middle">ESS-1F</text>
+    </g>
+    <g>
+      <rect x="550" y="152" width="76" height="96" rx="3" fill="#f0f1f4" stroke="#a0a8b8"/>
+      <rect x="578" y="160" width="20" height="44" rx="2" fill="#cfd3da" stroke="#9aa2ac"/>
+      <rect x="580" y="162" width="16" height="22" rx="2" fill="#2878c8" stroke="#0f3a68"/>
+      <text x="552" y="262" font-size="9" fill="#1a252f">2#机舱风机</text>
+      <rect x="564" y="266" width="48" height="13" rx="2" fill="#c62828"/>
+      <text x="588" y="276" font-size="8" fill="#ffffff" text-anchor="middle">ESS-1F</text>
+    </g>
+    <g>
+      <rect x="644" y="152" width="76" height="96" rx="3" fill="#f0f1f4" stroke="#a0a8b8"/>
+      <rect x="672" y="160" width="20" height="44" rx="2" fill="#cfd3da" stroke="#9aa2ac"/>
+      <rect x="674" y="162" width="16" height="22" rx="2" fill="#2878c8" stroke="#0f3a68"/>
+      <text x="646" y="262" font-size="9" fill="#1a252f">舵机房风机</text>
+      <rect x="658" y="266" width="48" height="13" rx="2" fill="#c62828"/>
+      <text x="682" y="276" font-size="8" fill="#ffffff" text-anchor="middle">ESS-1F</text>
+    </g>
+    <g>
+      <rect x="456" y="290" width="76" height="96" rx="3" fill="#f0f1f4" stroke="#a0a8b8"/>
+      <rect x="484" y="298" width="20" height="44" rx="2" fill="#cfd3da" stroke="#9aa2ac"/>
+      <rect x="486" y="300" width="16" height="22" rx="2" fill="#2878c8" stroke="#0f3a68"/>
+      <text x="460" y="400" font-size="9" fill="#1a252f">1#滑油泵</text>
+      <rect x="470" y="404" width="48" height="13" rx="2" fill="#c62828"/>
+      <text x="494" y="414" font-size="8" fill="#ffffff" text-anchor="middle">ESS-1P</text>
+    </g>
+    <g>
+      <rect x="550" y="290" width="76" height="96" rx="3" fill="#f0f1f4" stroke="#a0a8b8"/>
+      <rect x="578" y="298" width="20" height="44" rx="2" fill="#cfd3da" stroke="#9aa2ac"/>
+      <rect x="580" y="300" width="16" height="22" rx="2" fill="#2878c8" stroke="#0f3a68"/>
+      <text x="554" y="400" font-size="9" fill="#1a252f">1#燃油泵</text>
+      <rect x="564" y="404" width="48" height="13" rx="2" fill="#c62828"/>
+      <text x="588" y="414" font-size="8" fill="#ffffff" text-anchor="middle">ESS-1P</text>
+    </g>
+    <g>
+      <rect x="644" y="290" width="76" height="96" rx="3" fill="#f0f1f4" stroke="#a0a8b8"/>
+      <rect x="672" y="298" width="20" height="44" rx="2" fill="#cfd3da" stroke="#9aa2ac"/>
+      <rect x="674" y="300" width="16" height="22" rx="2" fill="#2878c8" stroke="#0f3a68"/>
+      <text x="648" y="400" font-size="9" fill="#1a252f">1#增压泵</text>
+      <rect x="658" y="404" width="48" height="13" rx="2" fill="#c62828"/>
+      <text x="682" y="414" font-size="8" fill="#ffffff" text-anchor="middle">ESS-1P</text>
+    </g>
+    <g>
+      <rect x="456" y="428" width="76" height="0" fill="none"/>
+      <text x="470" y="440" font-size="9" fill="#1a252f">第 3 排：厨房变压器 PT-1</text>
+      <text x="470" y="456" font-size="9" fill="#1a252f">主空压机 HEF-1、主海水泵 SQ4</text>
+      <text x="470" y="472" font-size="8.5" fill="#5a6a75">（一般动力负载，不受风油切断控制）</text>
+    </g>
+  </g>
+
+  <!-- 右侧：机组 -->
+  <rect x="790" y="96" width="220" height="150" rx="6" fill="#eff2f4" stroke="#5a6a75" stroke-width="1.6"/>
+  <text x="900" y="118" font-size="12" font-weight="bold" fill="#1a252f" text-anchor="middle">风机及控制面板</text>
+  <rect x="806" y="130" width="70" height="20" rx="3" fill="#125018" stroke="#0a3410"/>
+  <text x="841" y="144" font-size="9" fill="#ffffff" text-anchor="middle">RUNNING</text>
+  <rect x="884" y="130" width="70" height="20" rx="3" fill="#2eff3e" stroke="#111"/>
+  <text x="919" y="144" font-size="9" fill="#08300a" text-anchor="middle">POWER</text>
+  <circle cx="840" cy="180" r="18" fill="#d8dee2" stroke="#8a929c"/><circle cx="840" cy="180" r="13" fill="#1f9e1f"/>
+  <circle cx="920" cy="180" r="18" fill="#d8dee2" stroke="#8a929c"/><circle cx="920" cy="180" r="13" fill="#c02020"/>
+  <text x="840" y="212" font-size="9" fill="#1a252f" text-anchor="middle">START</text>
+  <text x="920" y="212" font-size="9" fill="#1a252f" text-anchor="middle">STOP</text>
+  <circle cx="880" cy="228" r="12" fill="#ffffff" stroke="#9aa0a0"/><circle cx="880" cy="228" r="8" fill="#141414"/>
+  <text x="906" y="232" font-size="8.5" fill="#1a252f">MAN / AUT</text>
+  <text x="900" y="266" font-size="9" fill="#5a6a75" text-anchor="middle">供电取自 ESS-1F 塑壳断路器</text>
+
+  <rect x="790" y="272" width="220" height="150" rx="6" fill="#eff2f4" stroke="#5a6a75" stroke-width="1.6"/>
+  <text x="900" y="294" font-size="12" font-weight="bold" fill="#1a252f" text-anchor="middle">油泵及控制面板</text>
+  <rect x="806" y="306" width="70" height="20" rx="3" fill="#125018" stroke="#0a3410"/>
+  <text x="841" y="320" font-size="9" fill="#ffffff" text-anchor="middle">RUNNING</text>
+  <rect x="884" y="306" width="70" height="20" rx="3" fill="#ffffff" stroke="#111"/>
+  <text x="919" y="320" font-size="9" fill="#1a1a1a" text-anchor="middle">POWER</text>
+  <circle cx="840" cy="352" r="18" fill="#d8dee2" stroke="#8a929c"/><circle cx="840" cy="352" r="13" fill="#1f9e1f"/>
+  <circle cx="920" cy="352" r="18" fill="#d8dee2" stroke="#8a929c"/><circle cx="920" cy="352" r="13" fill="#c02020"/>
+  <text x="840" y="384" font-size="9" fill="#1a252f" text-anchor="middle">START</text>
+  <text x="920" y="384" font-size="9" fill="#1a252f" text-anchor="middle">STOP</text>
+  <text x="900" y="410" font-size="9" fill="#5a6a75" text-anchor="middle">供电取自 ESS-1P 塑壳断路器</text>
+
+  <!-- 关系箭头 -->
+  <path d="M370 336 L436 336" fill="none" stroke="#d9534f" stroke-width="2.2" marker-end="url(#arrR)"/>
+  <text x="402" y="328" font-size="9" fill="#a13b39" text-anchor="middle">分励</text>
+  <text x="402" y="352" font-size="9" fill="#a13b39" text-anchor="middle">脱扣</text>
+
+  <path d="M730 200 L786 178" fill="none" stroke="#5b7f9e" stroke-width="2.2" marker-end="url(#arr)"/>
+  <path d="M730 330 L786 344" fill="none" stroke="#5b7f9e" stroke-width="2.2" marker-end="url(#arr)"/>
+  <text x="756" y="252" font-size="9" fill="#3f5c78" text-anchor="middle">供电</text>
+
+  <text x="520" y="500" font-size="9" fill="#5a6a75" text-anchor="middle">操作屏 → 24V 控制回路 → 中间继电器 → 分励脱扣器 → 负载屏塑壳断路器跳闸 → 对应机组失电停转</text>
+</svg>
