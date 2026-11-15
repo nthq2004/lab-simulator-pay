@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="600" viewBox="0 0 1120 600" font-family="Microsoft YaHei, Arial, sans-serif">
+  <defs>
+    <marker id="arw" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 z" fill="#4a5a66"/>
+    </marker>
+    <style>
+      .box { fill:#f4f6f7; stroke:#8b959c; stroke-width:1.4; }
+      .grp { fill:#eef1f2; stroke:#a8b0b5; stroke-width:1.2; }
+      .t  { font-size:13px; fill:#22303a; }
+      .tb { font-size:14px; font-weight:bold; fill:#1b3a4b; }
+      .ts { font-size:11.5px; fill:#5b666d; }
+      .w  { font-size:12px; fill:#ffffff; }
+      .ln { stroke:#4a5a66; stroke-width:1.6; fill:none; marker-end:url(#arw); }
+      .net{ stroke:#2f7fc1; stroke-width:2; fill:none; }
+    </style>
+  </defs>
+
+  <text x="24" y="30" class="tb" font-size="17">图 1　船舶机舱监视报警系统（Kongsberg K-Chief 600）组成原理</text>
+
+  <!-- 机舱测点 -->
+  <rect x="24" y="58" width="238" height="256" class="grp" rx="6"/>
+  <text x="36" y="80" class="tb">机舱监测点（传感器）</text>
+  <text x="36" y="99" class="ts">模拟量 4~20 mA / 开关量</text>
+  <g class="box">
+    <rect x="36" y="110" width="214" height="26" rx="3"/><text x="46" y="128" class="t">主机滑油进机压力　ME-LO-P</text>
+    <rect x="36" y="142" width="214" height="26" rx="3"/><text x="46" y="160" class="t">主机缸套水出口温度　ME-CW-T</text>
+    <rect x="36" y="174" width="214" height="26" rx="3"/><text x="46" y="192" class="t">主机燃油进机压力　ME-FO-P</text>
+    <rect x="36" y="206" width="214" height="26" rx="3"/><text x="46" y="224" class="t">辅锅炉水位　AUX-BLR-L</text>
+    <rect x="36" y="238" width="214" height="26" rx="3"/><text x="46" y="256" class="t">主空压机排气温度　AUX-AC-T</text>
+    <rect x="36" y="270" width="214" height="26" rx="3"/><text x="46" y="288" class="t">舱底水高位　BLG-LV</text>
+  </g>
+
+  <!-- 采集处理单元 DPU -->
+  <path class="ln" d="M262,186 L318,186"/>
+  <rect x="318" y="120" width="150" height="132" class="grp" rx="6"/>
+  <text x="330" y="142" class="tb">DPU</text>
+  <text x="330" y="160" class="ts">过程数据采集</text>
+  <text x="330" y="178" class="ts">＋报警判定</text>
+  <text x="330" y="196" class="ts">延时 / 死区 / 优先级</text>
+  <text x="330" y="214" class="ts">报警组分配（ME/AUX/…）</text>
+  <text x="330" y="236" class="ts">双机冗余热备</text>
+
+  <!-- 网络 -->
+  <path class="net" d="M468,160 L560,160"/>
+  <path class="net" d="M468,212 L560,212"/>
+  <text x="470" y="146" class="ts">双环冗余网络</text>
+
+  <!-- 操作站 -->
+  <rect x="560" y="70" width="330" height="120" class="grp" rx="6"/>
+  <text x="572" y="92" class="tb">操作站 OS（ROS）— 报警系统主界面</text>
+  <g class="box">
+    <rect x="572" y="102" width="306" height="22" rx="3"/><text x="580" y="118" class="t">工具栏：值班状态框　未确认计数　ACK　消音</text>
+    <rect x="572" y="130" width="148" height="22" rx="3"/><text x="580" y="146" class="t">表格视图（当前报警…）</text>
+    <rect x="730" y="130" width="148" height="22" rx="3"/><text x="738" y="146" class="t">工艺流程图 / 趋势</text>
+    <rect x="572" y="158" width="306" height="22" rx="3"/><text x="580" y="174" class="t">点击测点行 → 参数设置（限值/延时/死区/优先级）</text>
+  </g>
+
+  <!-- 延伸报警面板 -->
+  <path class="ln" d="M890,130 L952,130"/>
+  <rect x="952" y="70" width="144" height="230" class="grp" rx="6"/>
+  <text x="962" y="92" class="tb">延伸报警单元</text>
+  <g class="box">
+    <rect x="962" y="102" width="124" height="28" rx="3"/><text x="972" y="121" class="t">驾驶室（值班位）</text>
+    <rect x="962" y="136" width="124" height="24" rx="3"/><text x="972" y="153" class="t">轮机长</text>
+    <rect x="962" y="166" width="124" height="24" rx="3"/><text x="972" y="183" class="t">大管轮</text>
+    <rect x="962" y="196" width="124" height="24" rx="3"/><text x="972" y="213" class="t">二管轮</text>
+    <rect x="962" y="226" width="124" height="24" rx="3"/><text x="972" y="243" class="t">三管轮</text>
+    <rect x="962" y="256" width="124" height="24" rx="3"/><text x="972" y="273" class="t">电机员</text>
+  </g>
+
+  <!-- 说明 -->
+  <rect x="24" y="330" width="1072" height="112" class="grp" rx="6"/>
+  <text x="38" y="354" class="tb">信号流与报警流向</text>
+  <text x="38" y="378" class="t">① 机舱各测点经变送器（4~20 mA / 开关量）送入 DPU，由 DPU 按各测点的「设定值 + 延时 + 死区」判出报警；</text>
+  <text x="38" y="400" class="t">② DPU 通过冗余网络把报警送到集控室操作站（OS），按报警组 ME（主机）/ AUX（辅机）/ BILGE（舱底）分组显示与计数；</text>
+  <text x="38" y="422" class="t">③ 需延伸的报警组同时送到驾驶室与当班轮机员住舱的延伸报警面板，值班轮机员可就地确认（静音本单元），</text>
+  <text x="38" y="440" class="t">　　主报警仍须在操作站按「确认 ACK」确认；驾驶室面板还可进行 BRIDGE / ECR 值班切换与轮机员呼叫。</text>
+
+  <!-- 图注 -->
+  <rect x="24" y="462" width="1072" height="112" class="grp" rx="6"/>
+  <text x="38" y="486" class="tb">主界面各功能区（页 1）</text>
+  <text x="38" y="510" class="t">A 窗体标题栏　B 工具栏（ROS 节点 / 时钟 / Command control / 值班状态框 / 未确认报警计数 / 报警图标 / 确认 ACK / 消音 / 蜂鸣器）</text>
+  <text x="38" y="532" class="t">C 左列 Dock 报警组计数器（各组未确认报警数，红色＝有未确认报警）　D 船舶剪影</text>
+  <text x="38" y="554" class="t">E 表格视图（当前报警 / 报警历史 / 标签一览 / 事件历史 / 被越控标签 / 日志 / 被抑制标签 / 计数器列表 / 标签恢复初值）</text>
+</svg>

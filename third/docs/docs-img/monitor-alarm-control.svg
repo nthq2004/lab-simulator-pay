@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="600" viewBox="0 0 1120 600" font-family="Microsoft YaHei, Arial, sans-serif">
+  <defs>
+    <marker id="ca" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 z" fill="#4a5a66"/>
+    </marker>
+    <style>
+      .tb { font-size:15px; font-weight:bold; fill:#1b3a4b; }
+      .t  { font-size:12.5px; fill:#22303a; }
+      .ts { font-size:11.5px; fill:#5b666d; }
+      .grp{ fill:#f7f9fa; stroke:#a8b0b5; stroke-width:1.2; }
+      .box{ fill:#ffffff; stroke:#8b959c; stroke-width:1.3; }
+      .prc{ fill:#eaf3fa; stroke:#1c6fb2; stroke-width:1.3; }
+      .ar { stroke:#4a5a66; stroke-width:1.6; fill:none; marker-end:url(#ca); }
+      .fb { stroke:#c0392b; stroke-width:1.5; fill:none; stroke-dasharray:7 5; marker-end:url(#ca); }
+    </style>
+  </defs>
+  <text x="24" y="28" class="tb" font-size="17">图 3　K-Chief 600 的控制功能（泵、阀门、PID、辅机与 PMS）</text>
+
+  <!-- ① 泵控制 -->
+  <rect x="24" y="44" width="340" height="248" class="grp" rx="6"/>
+  <text x="38" y="68" class="tb">① 泵控制（一用一备）</text>
+  <rect x="46" y="86" width="120" height="44" class="box" rx="3"/><text x="56" y="106" class="t">1# 泵（运行）</text><text x="56" y="124" class="ts">手动 / 自动</text>
+  <rect x="46" y="146" width="120" height="44" class="box" rx="3"/><text x="56" y="166" class="t">2# 泵（备用）</text><text x="56" y="184" class="ts">自动待命</text>
+  <path class="ar" d="M170,108 L232,108"/>
+  <path class="ar" d="M170,168 L232,168"/>
+  <rect x="232" y="86" width="112" height="104" class="prc" rx="4"/>
+  <text x="242" y="108" class="t">自动切换逻辑</text>
+  <text x="242" y="130" class="ts">出口压力低</text>
+  <text x="242" y="150" class="ts">运行泵过载</text>
+  <text x="242" y="170" class="ts">→ 备泵自启</text>
+  <path class="fb" d="M288,190 L288,214 L106,214 L106,194"/>
+  <text x="46" y="234" class="ts">红色虚线：故障/压力信号回馈，实现"泵故障 → 备泵自动投入"</text>
+  <text x="46" y="256" class="ts">两台泵同时运行用于大负荷，停一台即自动恢复一用一备</text>
+  <text x="46" y="278" class="ts">起动/停止须经"手动/自动"选择开关与过载保护</text>
+
+  <!-- ② 阀门控制 -->
+  <rect x="384" y="44" width="330" height="248" class="grp" rx="6"/>
+  <text x="398" y="68" class="tb">② 阀门控制</text>
+  <rect x="406" y="86" width="130" height="52" class="box" rx="3"/>
+  <text x="416" y="108" class="t">手动三通转换阀</text>
+  <text x="416" y="128" class="ts">上+下通 / 上+右通</text>
+  <rect x="406" y="150" width="130" height="52" class="box" rx="3"/>
+  <text x="416" y="172" class="t">手动截止阀</text>
+  <text x="416" y="192" class="ts">开 / 关（泵进出口）</text>
+  <rect x="566" y="86" width="130" height="116" class="prc" rx="4"/>
+  <text x="576" y="108" class="t">三通调节阀 SRV</text>
+  <text x="576" y="130" class="ts">手动：DECR / INCR</text>
+  <text x="576" y="150" class="ts">自动：接收 PID 输出</text>
+  <text x="576" y="170" class="ts">旁通 ↔ 冷却器</text>
+  <text x="576" y="190" class="ts">开度 0~100 %</text>
+  <path class="ar" d="M536,252 L536,212"/>
+  <text x="406" y="236" class="ts">阀门状态（通/断、开度）在 MIMIC 上用颜色与填充表示，</text>
+  <text x="406" y="258" class="ts">并与管路流动判定、报警联动（如阀关 → 泵不允许起动）。</text>
+  <text x="406" y="280" class="ts">调节阀执行机构失气/失电时应停在安全位置。</text>
+
+  <!-- ③ PID -->
+  <rect x="734" y="44" width="362" height="248" class="grp" rx="6"/>
+  <text x="748" y="68" class="tb">③ PID 控制（以滑油温度 TIC-101 为例）</text>
+  <rect x="756" y="96" width="60" height="40" class="box" rx="3"/><text x="766" y="121" class="ts">SV 给定</text>
+  <circle cx="856" cy="116" r="22" class="prc"/>
+  <text x="844" y="120" class="t">Σ</text>
+  <rect x="912" y="96" width="80" height="40" class="prc" rx="3"/><text x="922" y="121" class="t">PID</text>
+  <rect x="1010" y="96" width="72" height="40" class="box" rx="3"/><text x="1018" y="121" class="ts">调节阀</text>
+  <rect x="1010" y="176" width="72" height="40" class="box" rx="3"/><text x="1018" y="201" class="ts">冷却器</text>
+  <path class="ar" d="M816,116 L830,116"/>
+  <path class="ar" d="M878,116 L908,116"/>
+  <path class="ar" d="M992,116 L1006,116"/>
+  <path class="ar" d="M1046,136 L1046,172"/>
+  <path class="ar" d="M1010,196 L840,196"/>
+  <path class="fb" d="M840,196 L840,140"/>
+  <text x="850" y="190" class="ts" fill="#c0392b">PV 反馈</text>
+  <text x="756" y="232" class="ts">反作用：PV＞SV 时开大冷却水（OUT 增大），PV 下降；</text>
+  <text x="756" y="252" class="ts">手/自动无扰切换，OUT 限幅 0~100 %，积分分离抑制超调；</text>
+  <text x="756" y="272" class="ts">面板显示 PV / SV / OUT 三行，▲▼ 按钮调整给定值。</text>
+
+  <!-- ④ 辅机 + PMS -->
+  <rect x="24" y="306" width="524" height="196" class="grp" rx="6"/>
+  <text x="38" y="330" class="tb">④ 辅机系统控制</text>
+  <rect x="46" y="346" width="220" height="30" class="box" rx="3"/><text x="56" y="366" class="t">辅锅炉：水位双位/比例 + 蒸汽压力</text>
+  <rect x="46" y="384" width="220" height="30" class="box" rx="3"/><text x="56" y="404" class="t">空压机：压力上/下限自动起停</text>
+  <rect x="46" y="422" width="220" height="30" class="box" rx="3"/><text x="56" y="442" class="t">分油机：顺序起动 + 排渣定时</text>
+  <rect x="286" y="346" width="240" height="30" class="box" rx="3"/><text x="296" y="366" class="t">阀件/泵组联锁（先开阀后起泵）</text>
+  <rect x="286" y="384" width="240" height="30" class="box" rx="3"/><text x="296" y="404" class="t">备用设备自动投入 / 轮换运行</text>
+  <rect x="286" y="422" width="240" height="30" class="box" rx="3"/><text x="296" y="442" class="t">越限联锁保护（A 级报警 → 安保）</text>
+  <text x="46" y="478" class="ts">辅机控制原则：就地（LOS）与遥控（ECR/BRIDGE）双位置，故障时自动降级并报警。</text>
+
+  <rect x="568" y="306" width="528" height="196" class="grp" rx="6"/>
+  <text x="582" y="330" class="tb">⑤ PMS 电站管理控制</text>
+  <rect x="590" y="346" width="150" height="56" class="prc" rx="4"/>
+  <text x="600" y="368" class="t">负荷检测</text><text x="600" y="388" class="ts">功率 / 电流 / 频率</text>
+  <rect x="762" y="346" width="150" height="56" class="prc" rx="4"/>
+  <text x="772" y="368" class="t">负荷分配</text><text x="772" y="388" class="ts">发电机均载 / 调频</text>
+  <rect x="934" y="346" width="146" height="56" class="prc" rx="4"/>
+  <text x="944" y="368" class="t">备用机组自启</text><text x="944" y="388" class="ts">重载询问 / 解列</text>
+  <path class="ar" d="M740,374 L758,374"/>
+  <path class="ar" d="M912,374 L930,374"/>
+  <text x="590" y="428" class="t">● 优先脱扣（Preferential Trip）：过载时先切次要负载（厨房、空调），保推进与安全负载；</text>
+  <text x="590" y="450" class="t">● 大功率负载起动前先向 PMS 发"重载询问"，确认后再起动，避免全船失电；</text>
+  <text x="590" y="472" class="t">● 全船失电（Blackout）后按顺序恢复：应急发电机 → 主发电机建压 → 逐级加载。</text>
+</svg>

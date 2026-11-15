@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="620" viewBox="0 0 1120 620" font-family="Microsoft YaHei, Arial, sans-serif">
+  <defs>
+    <marker id="a2" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+      <path d="M0,0 L9,3.5 L0,7 z" fill="#4a5a66"/>
+    </marker>
+    <marker id="a3" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+      <path d="M0,0 L9,3.5 L0,7 z" fill="#c8161d"/>
+    </marker>
+    <style>
+      .t  { font-size:13px; fill:#22303a; }
+      .tb { font-size:14px; font-weight:bold; fill:#1b3a4b; }
+      .ts { font-size:11.5px; fill:#5b666d; }
+      .box{ fill:#f4f6f7; stroke:#8b959c; stroke-width:1.3; }
+      .grp{ fill:#eef1f2; stroke:#a8b0b5; stroke-width:1.1; }
+    </style>
+  </defs>
+
+  <text x="24" y="28" class="tb" font-size="17">图 2　报警的判定（设定值 / 延时 / 死区）与报警状态处理</text>
+
+  <!-- 时序图 -->
+  <rect x="24" y="42" width="1072" height="298" class="grp" rx="6"/>
+  <text x="38" y="64" class="tb">① 测量值越限 → 延时确认 → 报警产生 → 值回升越过死区 → 报警消失</text>
+
+  <!-- 坐标轴 -->
+  <line x1="70" y1="290" x2="1060" y2="290" stroke="#4a5a66" stroke-width="1.4"/>
+  <line x1="70" y1="90" x2="70" y2="290" stroke="#4a5a66" stroke-width="1.4"/>
+  <text x="1000" y="308" class="ts">时间 t</text>
+  <text x="30" y="104" class="ts">测量值</text>
+
+  <!-- 设定值 -->
+  <line x1="70" y1="190" x2="1060" y2="190" stroke="#c8161d" stroke-width="1.6" stroke-dasharray="7 5"/>
+  <text x="966" y="184" class="ts" fill="#c8161d">报警设定值</text>
+  <!-- 死区（回差）带：设定值以下报警，恢复到 设定值+死区 才消除 -->
+  <rect x="70" y="170" width="990" height="20" fill="rgba(47,127,193,0.12)"/>
+  <line x1="70" y1="170" x2="1060" y2="170" stroke="#2f7fc1" stroke-width="1.2" stroke-dasharray="5 4"/>
+  <text x="800" y="166" class="ts" fill="#2f7fc1">死区（回差）上沿</text>
+
+  <!-- 测量值曲线：正常 → 下降越限 → 保持 → 回升 -->
+  <path d="M90,140 L360,140 C420,140 440,250 500,250 L700,250 C760,250 790,140 860,140 L1040,140"
+        fill="none" stroke="#1f9e35" stroke-width="2.6"/>
+  <circle cx="360" cy="140" r="4" fill="#1f9e35"/>
+  <circle cx="500" cy="250" r="4" fill="#c8161d"/>
+  <circle cx="860" cy="140" r="4" fill="#1f9e35"/>
+
+  <!-- 延时标注 -->
+  <line x1="360" y1="140" x2="360" y2="290" stroke="#8b959c" stroke-width="1" stroke-dasharray="4 4"/>
+  <line x1="452" y1="250" x2="452" y2="290" stroke="#8b959c" stroke-width="1" stroke-dasharray="4 4"/>
+  <line x1="360" y1="272" x2="452" y2="272" stroke="#c8161d" stroke-width="1.6" marker-end="url(#a3)"/>
+  <text x="352" y="264" class="ts" fill="#c8161d">报警延时</text>
+
+  <!-- 状态文字 -->
+  <text x="96" y="132" class="t">正常</text>
+  <text x="500" y="272" class="t" fill="#c8161d">越限持续 → 延时到 → 报警产生（未确认，闪＋鸣响）</text>
+  <text x="500" y="222" class="t" fill="#1d7a1d">越限</text>
+  <text x="866" y="132" class="t" fill="#1d7a1d">回到死区外 → 报警消失</text>
+
+  <!-- 说明 -->
+  <text x="90" y="330" class="ts">判定顺序：① 测量值越过设定值 → ② 连续保持超过「报警延时」→ ③ 产生报警；恢复时测量值须回到设定值之外（越过死区）才消警。</text>
+
+  <!-- 状态机 -->
+  <rect x="24" y="356" width="520" height="244" class="grp" rx="6"/>
+  <text x="38" y="378" class="tb">② 报警状态与处理</text>
+  <g class="box">
+    <rect x="44" y="392" width="140" height="44" rx="4"/>
+    <text x="54" y="412" class="t" font-weight="bold">未确认 ALARM</text>
+    <text x="54" y="428" class="ts">红灯闪 + 蜂鸣器响</text>
+
+    <rect x="248" y="392" width="140" height="44" rx="4"/>
+    <text x="258" y="412" class="t" font-weight="bold">已确认 ACK</text>
+    <text x="258" y="428" class="ts">红灯常亮，声音停</text>
+
+    <rect x="248" y="484" width="150" height="44" rx="4"/>
+    <text x="258" y="504" class="t" font-weight="bold">已恢复正常</text>
+    <text x="258" y="520" class="ts">黄色，仍待确认</text>
+
+    <rect x="44" y="484" width="140" height="44" rx="4"/>
+    <text x="54" y="504" class="t" font-weight="bold">正常（无报警）</text>
+    <text x="54" y="520" class="ts">从报警列表移除</text>
+  </g>
+  <path d="M184,414 L246,414" stroke="#4a5a66" stroke-width="1.6" fill="none" marker-end="url(#a2)"/>
+  <text x="192" y="406" class="ts">按 ACK</text>
+  <path d="M318,436 L318,482" stroke="#4a5a66" stroke-width="1.6" fill="none" marker-end="url(#a2)"/>
+  <text x="326" y="464" class="ts">值恢复</text>
+  <path d="M248,506 L186,506" stroke="#4a5a66" stroke-width="1.6" fill="none" marker-end="url(#a2)"/>
+  <text x="196" y="522" class="ts">再 ACK</text>
+  <path d="M114,484 L114,438" stroke="#4a5a66" stroke-width="1.6" fill="none" marker-end="url(#a2)" stroke-dasharray="5 4"/>
+  <text x="120" y="466" class="ts">值恢复</text>
+  <text x="44" y="580" class="ts">提示：先「消音」只是停止蜂鸣器，报警灯仍闪，必须再「确认 ACK」。</text>
+
+  <!-- 参数表 -->
+  <rect x="560" y="356" width="536" height="244" class="grp" rx="6"/>
+  <text x="574" y="378" class="tb">③ 报警主要参数（在「标签一览」中点击测点行设置）</text>
+  <g class="box">
+    <rect x="574" y="388" width="508" height="26" rx="3"/><text x="584" y="406" class="t">报警方向：高限 HIGH / 低限 LOW</text>
+    <rect x="574" y="420" width="508" height="26" rx="3"/><text x="584" y="438" class="t">报警设定值：越此值即报警（MPa / ℃ / % …）</text>
+    <rect x="574" y="452" width="508" height="26" rx="3"/><text x="584" y="470" class="t">报警延时：越限持续多久才报警（s），滤除瞬时波动</text>
+    <rect x="574" y="484" width="508" height="26" rx="3"/><text x="584" y="502" class="t">报警死区（回差）：恢复时须越过的间隔，防抖动反复报警</text>
+    <rect x="574" y="516" width="508" height="26" rx="3"/><text x="584" y="534" class="t">优先级 / 报警组：A 报警·B 注意·C 警告；组决定显示与是否延伸</text>
+    <rect x="574" y="548" width="508" height="26" rx="3"/><text x="584" y="566" class="t">报警抑制：检修、试验期间临时屏蔽，须记录在「被抑制标签」</text>
+  </g>
+</svg>

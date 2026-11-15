@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="620" viewBox="0 0 1120 620" font-family="Microsoft YaHei, Arial, sans-serif">
+  <defs>
+    <marker id="ta" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 z" fill="#c0392b"/>
+    </marker>
+    <style>
+      .tb { font-size:15px; font-weight:bold; fill:#1b3a4b; }
+      .t  { font-size:12.5px; fill:#22303a; }
+      .ts { font-size:11.5px; fill:#5b666d; }
+      .win{ fill:#eef1f3; stroke:#5a6167; stroke-width:1.4; }
+      .bar{ fill:#3c4f5c; }
+      .row{ fill:#ffffff; stroke:#b7bdc1; stroke-width:1; }
+      .cell{ fill:#eaf3fa; stroke:#1c6fb2; stroke-width:1.1; }
+      .btn{ fill:#fbfcfc; stroke:#8b9195; stroke-width:1.2; }
+      .pri{ fill:#2f9de0; stroke:#14567f; stroke-width:1.2; }
+      .an { stroke:#c0392b; stroke-width:1.8; fill:none; marker-end:url(#ta); }
+    </style>
+  </defs>
+
+  <text x="24" y="28" class="tb" font-size="17">图 5　报警参数设置界面（双击列表行打开）与修改要点</text>
+
+  <!-- 参数窗口 -->
+  <rect x="24" y="52" width="610" height="430" class="win" rx="4"/>
+  <rect x="24" y="52" width="610" height="34" class="bar" rx="4"/>
+  <text x="40" y="75" font-size="14" font-weight="bold" fill="#ffffff">33 - M/E LO INLET PRESS LOW</text>
+  <rect x="592" y="58" width="32" height="22" class="btn" rx="2"/><text x="603" y="74" class="t">✕</text>
+
+  <rect x="42" y="100" width="132" height="32" class="btn" rx="2"/><text x="60" y="121" class="t">Acknowledge</text>
+
+  <rect x="452" y="100" width="82" height="24" class="row" rx="2"/><text x="462" y="117" class="ts">Summary</text>
+  <rect x="538" y="100" width="80" height="24" class="cell" rx="2"/><text x="548" y="117" class="ts">Parameters</text>
+
+  <text x="452" y="146" class="tb">Parameters</text>
+
+  <!-- 参数行 -->
+  <g>
+    <rect x="452" y="158" width="166" height="30" class="row"/><text x="462" y="178" class="t">Is Alarm</text>
+    <rect x="620" y="158" width="86" height="30" class="row"/><text x="630" y="178" class="t">Yes</text>
+
+    <rect x="452" y="192" width="166" height="30" class="row"/><text x="462" y="212" class="t">Is Inhibit</text>
+    <rect x="620" y="192" width="86" height="30" class="row"/><text x="630" y="212" class="t">No</text>
+
+    <rect x="452" y="226" width="166" height="30" class="row"/><text x="462" y="246" class="t">Low Limit</text>
+    <rect x="620" y="226" width="86" height="30" class="cell"/><text x="636" y="246" font-size="13" font-weight="bold" fill="#12384f">0.22</text>
+
+    <rect x="452" y="260" width="166" height="30" class="row"/><text x="462" y="280" class="t">Deadband</text>
+    <rect x="620" y="260" width="86" height="30" class="cell"/><text x="636" y="280" font-size="13" font-weight="bold" fill="#12384f">0.06</text>
+
+    <rect x="452" y="294" width="166" height="30" class="row"/><text x="462" y="314" class="t">Delay Time</text>
+    <rect x="620" y="294" width="86" height="30" class="cell"/><text x="640" y="314" font-size="13" font-weight="bold" fill="#12384f">3</text>
+
+    <rect x="452" y="328" width="166" height="30" class="row"/><text x="462" y="348" class="t">Priority</text>
+    <rect x="620" y="328" width="86" height="30" class="row"/><text x="638" y="348" class="t">A</text>
+
+    <rect x="452" y="362" width="166" height="30" class="row"/><text x="462" y="382" class="t">Alarm group</text>
+    <rect x="620" y="362" width="86" height="30" class="row"/><text x="628" y="382" class="ts">M/E LO</text>
+  </g>
+
+  <rect x="404" y="432" width="100" height="34" class="pri" rx="2"/><text x="428" y="455" font-size="13" fill="#ffffff" font-weight="bold">保存</text>
+  <rect x="514" y="432" width="100" height="34" class="btn" rx="2"/><text x="538" y="455" class="t">取消</text>
+
+  <!-- 操作说明 -->
+  <rect x="654" y="52" width="442" height="430" fill="#f7f9fa" stroke="#a8b0b5" rx="6"/>
+  <text x="670" y="76" class="tb">修改参数的五步法</text>
+  <text x="670" y="104" class="t">① 在「当前报警 / 标签一览 / 报警组页」找到测点行；</text>
+  <text x="670" y="132" class="t">② <tspan font-weight="bold">双击</tspan>该行 → 打开报警参数界面（Tag properties）；</text>
+  <text x="670" y="160" class="t">③ 切到 Parameters 页，<tspan font-weight="bold">双击</tspan>要改的数值（单元格变蓝）；</text>
+  <text x="670" y="188" class="t">④ 输入新值后按回车；可连续修改多项；</text>
+  <text x="670" y="216" class="t">⑤ 点「保存」写入 — 取消则全部还原。</text>
+
+  <text x="670" y="252" class="tb">各行的含义</text>
+  <text x="670" y="278" class="ts">Is Alarm：该测点是否投入报警（No＝不报警，仅显示）</text>
+  <text x="670" y="300" class="ts">Is Inhibit：闭锁该测点报警（检修/试验期间，须可追溯）</text>
+  <text x="670" y="322" class="ts">Low / High Limit：低限或高限报警的设定值</text>
+  <text x="670" y="344" class="ts">Deadband：报警回差，恢复时的缓冲带（仅模拟量）</text>
+  <text x="670" y="366" class="ts">Delay Time：越限持续多久才报警（秒）</text>
+  <text x="670" y="388" class="ts">Priority：报警优先级 A / B / C（A 级可触发安保动作）</text>
+  <text x="670" y="410" class="ts">Alarm group：归入哪个报警组（决定延伸报警去向）</text>
+
+  <text x="670" y="444" class="ts" fill="#c0392b">注意：开关量测点没有 Limit / Deadband 行，只有延时与优先级。</text>
+  <text x="670" y="466" class="ts" fill="#c0392b">改完参数要验证：令测量值越限，确认报警按新设定值动作。</text>
+
+  <!-- 底部提示 -->
+  <rect x="24" y="500" width="1072" height="98" fill="#ffffff" stroke="#c0c6c9" rx="4"/>
+  <text x="40" y="524" class="tb">典型练习（本仿真可复现）</text>
+  <text x="40" y="550" class="t">① 查：M/E LO SYSTEM 报警组里，ME-LO-P 为模拟量低限报警，当前限值 0.25 MPa、死区 0.02 MPa、延时 3 s；</text>
+  <text x="40" y="574" class="t">② 改：把 ME-LO-P 的下限改 0.22 MPa、死区改 0.06 MPa；把开关量 ME-LO-PR-SW 的延时改 3 s；保存后触发故障验证动作。</text>
+</svg>
