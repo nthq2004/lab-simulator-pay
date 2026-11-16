@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="600" viewBox="0 0 1040 600" font-family="Microsoft YaHei, Arial, sans-serif">
+  <defs>
+    <marker id="w1" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 z" fill="#4a5a66"/>
+    </marker>
+    <style>
+      .tb { font-size:15px; font-weight:bold; fill:#1b3a4b; }
+      .t  { font-size:12.5px; fill:#22303a; }
+      .ts { font-size:11.5px; fill:#5b666d; }
+      .grp{ fill:#f7f9fa; stroke:#a8b0b5; stroke-width:1.2; }
+      .btn{ fill:#eef1f2; stroke:#8b959c; stroke-width:1.2; }
+      .bgr{ fill:#c8e6c9; stroke:#2e7d32; stroke-width:1.6; }
+      .ar { stroke:#4a5a66; stroke-width:1.6; fill:none; marker-end:url(#w1); }
+    </style>
+  </defs>
+
+  <text x="24" y="32" class="tb" font-size="18">图 1　值班切换（Watch calling）关系与交班流程</text>
+
+  <!-- 左：OS 值班呼叫对话框 -->
+  <rect x="24" y="56" width="400" height="248" class="grp" rx="8"/>
+  <text x="40" y="82" class="tb">操作站 OS：值班呼叫对话框</text>
+  <text x="40" y="102" class="ts">入口：顶部 ECR watch 框，或 Operate → Watch call</text>
+
+  <text x="40" y="130" class="t">Engine duty（被呼叫岗位）</text>
+  <g class="btn">
+    <rect x="40" y="140" width="116" height="26" rx="3"/><text x="98" y="158" class="t" text-anchor="middle">CHIEF ENG.</text>
+    <rect x="164" y="140" width="116" height="26" rx="3"/><text x="222" y="158" class="t" text-anchor="middle">2ND ENG.</text>
+    <rect x="288" y="140" width="116" height="26" rx="3"/><text x="346" y="158" class="t" text-anchor="middle">3RD ENG.</text>
+  </g>
+  <g class="btn">
+    <rect x="40" y="172" width="116" height="26" rx="3"/><text x="98" y="190" class="t" text-anchor="middle">4TH ENG.</text>
+    <rect x="164" y="172" width="116" height="26" rx="3"/><text x="222" y="190" class="t" text-anchor="middle">ELEC. ENG.</text>
+  </g>
+
+  <text x="40" y="222" class="t">Engine watch（值班位置）</text>
+  <rect x="40" y="232" width="116" height="26" rx="3" class="bgr"/><text x="98" y="250" class="t" text-anchor="middle">ECR 集控室</text>
+  <rect x="164" y="232" width="116" height="26" rx="3" class="btn"/><text x="222" y="250" class="t" text-anchor="middle">BRIDGE 驾驶台</text>
+  <text x="292" y="250" class="ts">绿色＝当前</text>
+
+  <g class="btn">
+    <rect x="40" y="268" width="90" height="24" rx="3"/><text x="85" y="285" class="t" text-anchor="middle">Call all</text>
+    <rect x="140" y="268" width="130" height="24" rx="3"/><text x="205" y="285" class="t" text-anchor="middle">Call duty eng.</text>
+    <rect x="280" y="268" width="62" height="24" rx="3"/><text x="311" y="285" class="t" text-anchor="middle">Accept</text>
+    <rect x="350" y="268" width="62" height="24" rx="3"/><text x="381" y="285" class="t" text-anchor="middle">Reject</text>
+  </g>
+
+  <!-- 右：6 块延伸报警单元 -->
+  <rect x="448" y="56" width="568" height="248" class="grp" rx="8"/>
+  <text x="464" y="82" class="tb">延伸报警单元 ×6（各设 On Watch / Duty / 状态栏）</text>
+
+  <g>
+    <rect x="464" y="94" width="174" height="46" rx="4" class="btn"/>
+    <text x="551" y="112" class="t" text-anchor="middle">驾驶室（值班面板）</text>
+    <text x="551" y="130" class="ts" text-anchor="middle">值班驾驶员</text>
+    <rect x="652" y="94" width="174" height="46" rx="4" class="btn"/>
+    <text x="739" y="112" class="t" text-anchor="middle">轮机长</text>
+    <text x="739" y="130" class="ts" text-anchor="middle">轮机长</text>
+    <rect x="840" y="94" width="160" height="46" rx="4" class="btn"/>
+    <text x="920" y="112" class="t" text-anchor="middle">大管轮</text>
+    <text x="920" y="130" class="ts" text-anchor="middle">大管轮</text>
+
+    <rect x="464" y="152" width="174" height="46" rx="4" class="btn"/>
+    <text x="551" y="170" class="t" text-anchor="middle">二管轮</text>
+    <text x="551" y="188" class="ts" text-anchor="middle">二管轮</text>
+    <rect x="652" y="152" width="174" height="46" rx="4" class="btn"/>
+    <text x="739" y="170" class="t" text-anchor="middle">三管轮</text>
+    <text x="739" y="188" class="ts" text-anchor="middle">三管轮</text>
+    <rect x="840" y="152" width="160" height="46" rx="4" class="btn"/>
+    <text x="920" y="170" class="t" text-anchor="middle">电机员</text>
+    <text x="920" y="188" class="ts" text-anchor="middle">电机员</text>
+  </g>
+
+  <text x="464" y="220" class="ts">状态栏：扬声器（被呼叫时闪烁，按下＝应答）、REPEAT / DEADMAN 红底字、Sound off（只静音本机）</text>
+  <text x="464" y="242" class="ts">报警只延伸到「当班」的那一块；REPEAT 与 DEADMAN 只在驾驶室与轮机长两块显示</text>
+  <text x="464" y="264" class="ts">Duty 区：单人值班显示一行；交接未确认时上下两行分别显示原值班者与接班者</text>
+  <text x="464" y="286" class="ts">扬声器按下的含义是「应答」；消音按钮不能接班</text>
+
+  <!-- 交班流程 -->
+  <rect x="24" y="320" width="992" height="150" class="grp" rx="8"/>
+  <text x="40" y="346" class="tb">交班流程（以三管轮 → 二管轮为例）</text>
+
+  <g class="btn">
+    <rect x="40" y="360" width="150" height="54" rx="5"/>
+    <text x="115" y="382" class="t" text-anchor="middle">① 三管轮当班</text>
+    <text x="115" y="400" class="ts" text-anchor="middle">Duty 区显示三管轮</text>
+    <rect x="216" y="360" width="150" height="54" rx="5"/>
+    <text x="291" y="382" class="t" text-anchor="middle">② 呼叫 3RD ENG.</text>
+    <text x="291" y="400" class="ts" text-anchor="middle">按钮绿色闪烁</text>
+    <rect x="392" y="360" width="150" height="54" rx="5"/>
+    <text x="467" y="382" class="t" text-anchor="middle">③ 二管轮按扬声器</text>
+    <text x="467" y="400" class="ts" text-anchor="middle">进入交班待确认</text>
+    <rect x="568" y="360" width="150" height="54" rx="5"/>
+    <text x="643" y="382" class="t" text-anchor="middle">④ 三管轮按自己按钮</text>
+    <text x="643" y="400" class="ts" text-anchor="middle">本人退班</text>
+    <rect x="744" y="360" width="150" height="54" rx="5"/>
+    <text x="819" y="382" class="t" text-anchor="middle">⑤ 二管轮接班</text>
+    <text x="819" y="400" class="ts" text-anchor="middle">Duty 区改为二管轮</text>
+    <rect x="920" y="360" width="80" height="54" rx="5" class="bgr"/>
+    <text x="960" y="382" class="t" text-anchor="middle">交班完成</text>
+    <text x="960" y="400" class="ts" text-anchor="middle">报警改送</text>
+  </g>
+  <g class="ar">
+    <path d="M192,387 H212"/>
+    <path d="M368,387 H388"/>
+    <path d="M544,387 H564"/>
+    <path d="M720,387 H740"/>
+    <path d="M896,387 H916"/>
+  </g>
+  <text x="40" y="444" class="ts">要点：当班者按「自己」的按钮＝退班/交班，不是呼叫；被叫者必须按「扬声器」应答才能接班。</text>
+  <text x="40" y="462" class="ts">若被叫者不按扬声器，交班不成立，原值班者继续值班，报警仍送原面板。</text>
+
+  <!-- 颜色图例 -->
+  <rect x="24" y="484" width="992" height="94" class="grp" rx="8"/>
+  <text x="40" y="508" class="tb">按钮颜色语义</text>
+  <rect x="46" y="520" width="60" height="18" rx="3" fill="#a5d6a7" stroke="#2e7d32"/>
+  <text x="116" y="534" class="t">呼叫中：绿色闪烁</text>
+  <rect x="286" y="520" width="60" height="18" rx="3" fill="#2e7d32" stroke="#1b5e20"/>
+  <text x="356" y="534" class="t">当班者：常绿</text>
+  <rect x="506" y="520" width="60" height="18" rx="3" fill="#66bb6a" stroke="#2e7d32"/>
+  <text x="576" y="534" class="t">已应答待接班：常绿（Duty 区显示两人）</text>
+  <text x="40" y="562" class="ts">值班位置 ECR／BRIDGE 由「Engine watch」决定，与「谁在值班」是两件事：前者是岗位位置，后者是具体的人。</text>
+</svg>

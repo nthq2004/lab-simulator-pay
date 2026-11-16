@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="620" viewBox="0 0 1040 620" font-family="Microsoft YaHei, Arial, sans-serif">
+  <defs>
+    <marker id="r2" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 z" fill="#4a5a66"/>
+    </marker>
+    <style>
+      .tb { font-size:15px; font-weight:bold; fill:#1b3a4b; }
+      .t  { font-size:12.5px; fill:#22303a; }
+      .ts { font-size:11.5px; fill:#5b666d; }
+      .grp{ fill:#f7f9fa; stroke:#a8b0b5; stroke-width:1.2; }
+      .cnd{ fill:#eef4f8; stroke:#5a86a6; stroke-width:1.4; }
+      .rep{ fill:#fdecea; stroke:#c62828; stroke-width:1.8; }
+      .ar { stroke:#4a5a66; stroke-width:1.6; fill:none; marker-end:url(#r2); }
+      .ln { stroke:#4a5a66; stroke-width:1.6; fill:none; }
+    </style>
+  </defs>
+
+  <text x="24" y="32" class="tb" font-size="18">图 2　失职报警（REPEAT）的判定条件、显示与清除</text>
+
+  <!-- 判据一 -->
+  <rect x="24" y="56" width="480" height="150" class="cnd" rx="6"/>
+  <text x="44" y="82" class="tb">判据一：值班面板未确认</text>
+  <text x="44" y="108" class="t">报警已延伸到「当班」的那一块延伸面板；</text>
+  <text x="44" y="130" class="t">面板既不按扬声器（应答），也不按 Sound off；</text>
+  <text x="44" y="152" class="t">主站也没有按「确认 ACK」。</text>
+  <text x="44" y="178" class="ts">→ 计时满 Repeat delay 即判失职</text>
+
+  <!-- 判据二 -->
+  <rect x="536" y="56" width="480" height="150" class="cnd" rx="6"/>
+  <text x="556" y="82" class="tb">判据二：面板已消音、主站未确认</text>
+  <text x="556" y="108" class="t">值班人员按了面板 Sound off（只静音本机）；</text>
+  <text x="556" y="130" class="t">报警在主站仍为未确认（UNACK）；</text>
+  <text x="556" y="152" class="t">主站在 Repeat delay 内始终未按 ACK。</text>
+  <text x="556" y="178" class="ts">→ 消音不等于确认，同样判失职</text>
+
+  <text x="514" y="140" class="tb" font-size="14">或</text>
+
+  <!-- 汇合 -->
+  <path class="ln" d="M264,206 V236"/>
+  <path class="ln" d="M776,206 V236"/>
+  <path class="ln" d="M264,236 H776"/>
+  <path class="ar" d="M520,236 V250"/>
+
+  <!-- 结果 -->
+  <rect x="300" y="256" width="440" height="100" class="rep" rx="6"/>
+  <text x="520" y="286" class="tb" font-size="15.5" fill="#b3261e" text-anchor="middle">REPEAT 失职报警成立</text>
+  <text x="520" y="312" class="t" text-anchor="middle">驾驶台与轮机长面板状态栏红底 REPEAT 闪烁</text>
+  <text x="520" y="334" class="ts" text-anchor="middle">（闪烁与扬声器同相位，提示值班人员已失职）</text>
+
+  <!-- 清除 -->
+  <rect x="24" y="380" width="480" height="118" class="grp" rx="6"/>
+  <text x="44" y="406" class="tb">如何清除</text>
+  <text x="44" y="432" class="t">• 主站「确认 ACK」：终止计时、REPEAT 消失、入历史</text>
+  <text x="44" y="456" class="t">• 面板按扬声器只消声，REPEAT 仍然保留</text>
+  <text x="44" y="480" class="t">• 计时未满就 ACK，计时重置，不再升级</text>
+
+  <!-- 参数 -->
+  <rect x="536" y="380" width="480" height="118" class="grp" rx="6"/>
+  <text x="556" y="406" class="tb">延时参数的设置</text>
+  <text x="556" y="432" class="t">• 入口：面板右键 → 参数设置 →「失职报警延时」</text>
+  <text x="556" y="456" class="t">• 默认 180 s（3 min），可设 10 ～ 600 s</text>
+  <text x="556" y="480" class="t">• 两个判据共用同一个延时值</text>
+
+  <!-- 时间轴 -->
+  <rect x="24" y="504" width="992" height="110" class="grp" rx="6"/>
+  <text x="40" y="530" class="tb" font-size="13">计时关系（Repeat delay 取 180 s 为例）</text>
+
+  <rect x="40" y="540" width="300" height="42" rx="4" fill="#ffffff" stroke="#8b959c" stroke-width="1.2"/>
+  <text x="190" y="566" class="t" text-anchor="middle">t = 0：报警产生，失职计时开始</text>
+
+  <rect x="368" y="540" width="300" height="42" rx="4" fill="#fdecea" stroke="#c62828" stroke-width="1.4"/>
+  <text x="518" y="566" class="t" text-anchor="middle" fill="#b3261e">t = Repeat delay：到点，REPEAT 成立</text>
+
+  <rect x="696" y="540" width="304" height="42" rx="4" fill="#ffffff" stroke="#8b959c" stroke-width="1.2"/>
+  <text x="848" y="566" class="t" text-anchor="middle">t = ACK：计时终止，REPEAT 清除</text>
+
+  <path class="ar" d="M344,561 H362"/>
+  <path class="ar" d="M672,561 H690"/>
+
+  <text x="40" y="598" class="ts">两条判据同时计时：面板未确认，或面板已消音而主站未确认，任一条成立都升级为 REPEAT。</text>
+</svg>
