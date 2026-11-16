@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="580" viewBox="0 0 1040 580" font-family="Microsoft YaHei, Arial, sans-serif">
+  <defs>
+    <marker id="s2" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 z" fill="#4a5a66"/>
+    </marker>
+    <style>
+      .tb { font-size:12.5px; font-weight:bold; fill:#1b3a4b; }
+      .t  { font-size:11px; fill:#22303a; }
+      .ts { font-size:10.5px; fill:#5b666d; }
+      .st { fill:#ffffff; stroke:#8b959c; stroke-width:1.5; }
+      .un { fill:#fff6e0; stroke:#c9a800; stroke-width:1.6; }
+      .ak { fill:#e8eaeb; stroke:#6b7370; stroke-width:1.5; }
+      .hi { fill:#eef4f8; stroke:#5a86a6; stroke-width:1.5; }
+      .grp{ fill:#f7f9fa; stroke:#a8b0b5; stroke-width:1.2; }
+      .ar { stroke:#4a5a66; stroke-width:1.6; fill:none; marker-end:url(#s2); }
+      .ln { stroke:#4a5a66; stroke-width:1.6; fill:none; }
+    </style>
+  </defs>
+
+  <text x="24" y="30" class="tb" font-size="17">图 2　模拟量报警的状态流转与处理流程</text>
+
+  <!-- 第一行：主流程 -->
+  <rect x="40" y="96" width="200" height="64" class="st" rx="6"/>
+  <text x="140" y="124" class="tb" font-size="13" text-anchor="middle">正常 NORMAL</text>
+  <text x="140" y="146" class="ts" text-anchor="middle">实测值在限值以内</text>
+
+  <rect x="300" y="96" width="200" height="64" class="un" rx="6"/>
+  <text x="400" y="124" class="tb" font-size="13" text-anchor="middle">未确认 UNACK</text>
+  <text x="400" y="146" class="ts" text-anchor="middle">闪 ＋ 鸣，组计数闪红</text>
+
+  <rect x="560" y="96" width="200" height="64" class="ak" rx="6"/>
+  <text x="660" y="124" class="tb" font-size="13" text-anchor="middle">已确认 ACK</text>
+  <text x="660" y="146" class="ts" text-anchor="middle">常亮停响，报警条仍在</text>
+
+  <rect x="820" y="96" width="200" height="64" class="hi" rx="6"/>
+  <text x="920" y="124" class="tb" font-size="13" text-anchor="middle">报警历史 ✓</text>
+  <text x="920" y="146" class="ts" text-anchor="middle">确认后故障消失</text>
+
+  <path class="ar" d="M244,128 H296"/>
+  <path class="ar" d="M504,128 H556"/>
+  <path class="ar" d="M764,128 H816"/>
+
+  <text x="252" y="88" class="ts">越限持续 &gt; Delay Time</text>
+  <text x="512" y="88" class="ts">按 确认 ACK</text>
+  <text x="772" y="88" class="ts">越过回差恢复</text>
+
+  <text x="40" y="180" class="ts">波动短于延时 → 不报警</text>
+
+  <!-- 第二行：先恢复后确认 -->
+  <rect x="300" y="236" width="200" height="64" class="un" rx="6"/>
+  <text x="400" y="264" class="tb" font-size="13" text-anchor="middle">已恢复正常 RTN</text>
+  <text x="400" y="286" class="ts" text-anchor="middle">黄色高亮，仍未确认</text>
+
+  <rect x="560" y="236" width="200" height="64" class="hi" rx="6"/>
+  <text x="660" y="264" class="tb" font-size="13" text-anchor="middle">报警历史（恢复未确认）</text>
+  <text x="660" y="286" class="ts" text-anchor="middle">记录标为“恢复未确认”</text>
+
+  <path class="ar" d="M400,164 V232"/>
+  <path class="ar" d="M504,268 H556"/>
+  <text x="412" y="204" class="ts">故障先消失，人还没确认</text>
+  <text x="512" y="228" class="ts">再按 确认 ACK</text>
+
+  <!-- 第三行：三种“非确认”操作 -->
+  <text x="40" y="352" class="tb">三种“非确认”操作——都不等于处理完毕</text>
+
+  <rect x="40" y="366" width="300" height="88" class="grp" rx="5"/>
+  <text x="56" y="390" class="tb">消音 Sound off</text>
+  <text x="56" y="412" class="t">只停蜂鸣器，报警灯仍闪</text>
+  <text x="56" y="432" class="t">状态仍是未确认（UNACK）</text>
+
+  <rect x="360" y="366" width="300" height="88" class="grp" rx="5"/>
+  <text x="376" y="390" class="tb">闭锁 Is Inhibit</text>
+  <text x="376" y="412" class="t">报警立即清除，之后不再产生</text>
+  <text x="376" y="432" class="t">实测值照常显示，可随时解除</text>
+
+  <rect x="680" y="366" width="320" height="88" class="grp" rx="5"/>
+  <text x="696" y="390" class="tb">越控 Cancel Shut Down / Slow Down</text>
+  <text x="696" y="412" class="t">只阻止安保动作，报警仍然存在</text>
+  <text x="696" y="432" class="t">状态加 · OVR，进入“被越控标签”</text>
+
+  <!-- 要点 -->
+  <rect x="40" y="472" width="960" height="82" class="grp" rx="5"/>
+  <text x="56" y="498" class="t">要点：确认（ACK）只停止声光提示、把状态改成“已知晓”，报警条要等故障真正消失（越过回差）才离开当前报警页；</text>
+  <text x="56" y="522" class="t">消音只关声音，闭锁连报警一起清掉，越控只阻止安保动作——三者都不产生“已知晓”的记录，值班责任仍在。</text>
+  <text x="56" y="544" class="ts">开关量报警走同一套流程：触点动作＝越限，触点复位＝恢复，只是没有限值、死区和工程单位。</text>
+</svg>

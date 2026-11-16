@@ -1,0 +1,152 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="560" viewBox="0 0 1040 560" font-family="Microsoft YaHei, Arial, sans-serif">
+  <defs>
+    <style>
+      .tb { font-size:12.5px; font-weight:bold; fill:#1b3a4b; }
+      .t  { font-size:11px; fill:#22303a; }
+      .ts { font-size:10.5px; fill:#5b666d; }
+      .xh { font-size:9.5px; fill:#2b3134; }
+      .cell{ font-size:9.5px; fill:#1b1f21; }
+      .grp{ fill:#f7f9fa; stroke:#a8b0b5; stroke-width:1.2; }
+      .win{ fill:#f1f3f4; stroke:#6b7370; stroke-width:1.4; }
+      .bar{ fill:#eceded; stroke:#a8aeb2; stroke-width:1; }
+    </style>
+  </defs>
+
+  <text x="24" y="30" class="tb" font-size="17">图 1　报警信息在操作站（OS）界面上的五处分布</text>
+
+  <!-- 界面外框 -->
+  <rect x="24" y="48" width="640" height="440" class="win" rx="4"/>
+  <rect x="24" y="48" width="640" height="22" fill="#c9d2d6" stroke="#6b7370" stroke-width="1"/>
+  <text x="34" y="63" class="ts" fill="#1b3a4b">报警系统 V1.0　—　Kongsberg K-Chief 600 操作站</text>
+
+  <!-- ① 横幅 -->
+  <rect x="40" y="80" width="300" height="66" class="grp" rx="3"/>
+  <text x="46" y="96" class="tb">① 顶部最新警报横幅（两行，最新在上）</text>
+  <rect x="48" y="102" width="30" height="16" fill="#e01b1b" stroke="#7a0f0f" stroke-width="1"/>
+  <text x="63" y="114" class="cell" fill="#ffffff" text-anchor="middle">A</text>
+  <text x="84" y="114" class="cell">LOW</text>
+  <text x="114" y="114" class="cell">11:35:36</text>
+  <text x="174" y="114" class="cell">M/E LO SYSTEM</text>
+  <rect x="48" y="122" width="30" height="16" fill="#e08a00" stroke="#7a0f0f" stroke-width="1"/>
+  <text x="63" y="134" class="cell" fill="#ffffff" text-anchor="middle">B</text>
+  <text x="84" y="134" class="cell">HIGH</text>
+  <text x="114" y="134" class="cell">11:37:59</text>
+  <text x="174" y="134" class="cell">M/E COOL FW SYS</text>
+
+  <!-- ② 计数块 -->
+  <rect x="348" y="80" width="96" height="66" class="grp" rx="3"/>
+  <text x="354" y="96" class="tb">② 未确认计数</text>
+  <rect x="356" y="102" width="40" height="36" fill="#c8161d" stroke="#7a0f0f" stroke-width="1"/>
+  <text x="376" y="122" class="cell" font-size="15" font-weight="bold" fill="#ffffff" text-anchor="middle">2</text>
+  <text x="376" y="134" class="cell" fill="#ffffff" text-anchor="middle">▼</text>
+  <text x="404" y="112" class="ts">点击</text>
+  <text x="404" y="128" class="ts">进入</text>
+
+  <!-- ③ 左列 UnDock -->
+  <rect x="40" y="156" width="150" height="192" class="grp" rx="3"/>
+  <text x="46" y="172" class="tb">③ 左列 UnDock</text>
+  <rect x="46" y="178" width="138" height="28" fill="#ff2b2b" stroke="#7a0f0f" stroke-width="1"/>
+  <text x="52" y="195" class="cell" fill="#ffffff">M/E LO SYSTEM</text>
+  <text x="178" y="195" class="cell" fill="#ffffff" text-anchor="end">1</text>
+  <rect x="46" y="210" width="138" height="28" fill="#8f0d0d" stroke="#7a0f0f" stroke-width="1"/>
+  <text x="52" y="227" class="cell" fill="#ffffff">M/E CFW SYS</text>
+  <text x="178" y="227" class="cell" fill="#ffffff" text-anchor="end">1</text>
+  <rect x="46" y="242" width="138" height="28" fill="#f6f7f8" stroke="#b9bfc3" stroke-width="1"/>
+  <text x="52" y="259" class="cell">M/E FO SYS</text>
+  <text x="178" y="259" class="cell" text-anchor="end">0</text>
+  <rect x="46" y="274" width="138" height="28" fill="#f6f7f8" stroke="#b9bfc3" stroke-width="1"/>
+  <text x="52" y="291" class="cell">AUX BOILER</text>
+  <text x="178" y="291" class="cell" text-anchor="end">0</text>
+  <text x="46" y="322" class="ts">闪红＝有未确认</text>
+  <text x="46" y="338" class="ts">深红常亮＝已确认</text>
+
+  <!-- ④ 当前报警 -->
+  <rect x="200" y="156" width="470" height="192" class="grp" rx="3"/>
+  <text x="206" y="172" class="tb">④ 当前报警 Active alarms（一行一条，最新在上）</text>
+  <rect x="206" y="178" width="458" height="18" class="bar"/>
+  <text x="210" y="191" class="xh">Status</text>
+  <text x="256" y="191" class="xh">Pri</text>
+  <text x="288" y="191" class="xh">时间</text>
+  <text x="344" y="191" class="xh">Tag</text>
+  <text x="410" y="191" class="xh">Function</text>
+  <text x="472" y="191" class="xh">Alarm state</text>
+  <text x="556" y="191" class="xh">Value</text>
+  <text x="604" y="191" class="xh">设定值</text>
+  <rect x="206" y="196" width="458" height="22" fill="#ffffff" stroke="#c6cacd" stroke-width="1"/>
+  <text x="212" y="211" class="cell" fill="#1a8f2a">✓</text>
+  <rect x="250" y="199" width="20" height="16" fill="#e01b1b" stroke="#7a0f0f" stroke-width="1"/>
+  <text x="260" y="211" class="cell" fill="#ffffff" text-anchor="middle">A</text>
+  <text x="288" y="211" class="cell">11:35:36</text>
+  <text x="344" y="211" class="cell">ME-LO-P</text>
+  <text x="410" y="211" class="cell">PIAL</text>
+  <text x="472" y="211" class="cell" fill="#1a4fd0">LOW</text>
+  <text x="556" y="211" class="cell">0.15</text>
+  <text x="604" y="211" class="cell">0.25</text>
+  <rect x="206" y="218" width="458" height="22" fill="#ffffff" stroke="#c6cacd" stroke-width="1"/>
+  <text x="212" y="233" class="cell" fill="#1a8f2a">✓</text>
+  <rect x="250" y="221" width="20" height="16" fill="#e08a00" stroke="#7a0f0f" stroke-width="1"/>
+  <text x="260" y="233" class="cell" fill="#ffffff" text-anchor="middle">B</text>
+  <text x="288" y="233" class="cell">11:37:59</text>
+  <text x="344" y="233" class="cell">ME-CW-T</text>
+  <text x="410" y="233" class="cell">TIAH</text>
+  <text x="472" y="233" class="cell" fill="#1a4fd0">ACK</text>
+  <text x="556" y="233" class="cell">96.0</text>
+  <text x="604" y="233" class="cell">88</text>
+  <text x="206" y="262" class="ts">Status：✓＝确认后故障消失；⏎＝故障先恢复、之后才确认（黄色）</text>
+  <text x="206" y="280" class="ts">Alarm state：未确认 HIGH/LOW（开关量 ALARM），已确认 ACK，越控加 · OVR</text>
+  <text x="206" y="298" class="ts">Function＝类型（P/Q/L/T/X）＋ I ＋ 方向（AH/AL）；开关量固定 XA</text>
+  <text x="206" y="316" class="ts">点击一行＝查看/修改该测点参数；双击直接打开参数界面</text>
+  <text x="206" y="334" class="ts">报警条还在＝故障未消除，Status 只表示“人是否已知晓”</text>
+
+  <!-- ⑤ 参数界面 -->
+  <rect x="40" y="360" width="630" height="112" class="grp" rx="3"/>
+  <text x="46" y="378" class="tb">⑤ 参数界面 Tag properties（双击任一报警条弹出）</text>
+  <rect x="46" y="386" width="62" height="20" fill="#ffffff" stroke="#8b959c" stroke-width="1"/>
+  <text x="77" y="400" class="xh" text-anchor="middle">Summary</text>
+  <rect x="112" y="386" width="46" height="20" fill="#d7dcdf" stroke="#8b959c" stroke-width="1"/>
+  <text x="135" y="400" class="xh" text-anchor="middle">Trend</text>
+  <rect x="162" y="386" width="104" height="20" fill="#ffffff" stroke="#8b959c" stroke-width="1"/>
+  <text x="214" y="400" class="xh" text-anchor="middle">Alarm parameters</text>
+  <rect x="270" y="386" width="104" height="20" fill="#d7dcdf" stroke="#8b959c" stroke-width="1"/>
+  <text x="322" y="400" class="xh" text-anchor="middle">Other parameters</text>
+  <rect x="378" y="386" width="44" height="20" fill="#d7dcdf" stroke="#8b959c" stroke-width="1"/>
+  <text x="400" y="400" class="xh" text-anchor="middle">Help</text>
+
+  <rect x="46" y="414" width="84" height="24" fill="#eef1f2" stroke="#8b959c" stroke-width="1"/>
+  <text x="88" y="430" class="xh" text-anchor="middle">Acknowledge</text>
+  <text x="150" y="430" class="t">Is Alarm　Yes</text>
+  <text x="150" y="448" class="t">Is Inhibit　No</text>
+  <text x="150" y="466" class="t">Low Limit　0.25 MPa</text>
+  <text x="330" y="430" class="t">Deadband　0.02 MPa</text>
+  <text x="330" y="448" class="t">Delay Time　3 sec.</text>
+  <text x="330" y="466" class="ts">开关量只有 Is Alarm／Is Inhibit／Delay Time</text>
+
+  <!-- 右侧判读顺序 -->
+  <rect x="680" y="48" width="336" height="424" class="grp" rx="4"/>
+  <text x="694" y="72" class="tb" font-size="13">判读顺序</text>
+
+  <text x="694" y="98" class="t">① 横幅：先看最新两条——优先级、高/低、</text>
+  <text x="706" y="114" class="t">时刻、报警组、英文描述</text>
+  <text x="694" y="140" class="t">② 计数块：红色数字＝未确认条数，点它</text>
+  <text x="706" y="156" class="t">直接进入「当前报警」</text>
+  <text x="694" y="182" class="t">③ 左列：按报警组显示未确认数，闪红＝</text>
+  <text x="706" y="198" class="t">有未确认；深红常亮＝已确认未消除</text>
+  <text x="694" y="224" class="t">④ 表格：一行一条、序号越大越新；Tag、</text>
+  <text x="706" y="240" class="t">Function、Value、设定值 四列是核心</text>
+  <text x="694" y="266" class="t">⑤ 参数：双击打开，看 Is Alarm／Limit／</text>
+  <text x="706" y="282" class="t">Deadband／Delay Time；Acknowledge 单独确认</text>
+
+  <text x="694" y="314" class="tb" font-size="12">四种颜色一眼分清</text>
+  <rect x="694" y="324" width="26" height="16" fill="#ffffff" stroke="#c6cacd" stroke-width="1"/>
+  <text x="728" y="336" class="t">白底：未确认（闪＋鸣）</text>
+  <rect x="694" y="348" width="26" height="16" fill="#e8eaeb" stroke="#c6cacd" stroke-width="1"/>
+  <text x="728" y="360" class="t">灰底：已确认、故障仍在</text>
+  <rect x="694" y="372" width="26" height="16" fill="#fdf3d8" stroke="#c9a800" stroke-width="1"/>
+  <text x="728" y="384" class="t">黄底：已恢复未确认（⏎）</text>
+  <rect x="694" y="396" width="26" height="16" fill="#c8161d" stroke="#7a0f0f" stroke-width="1"/>
+  <text x="728" y="408" class="t">红块：A 级／未确认计数</text>
+  <text x="694" y="436" class="ts">A＝红　B＝橙　C＝黄；A 级可触发主机安保</text>
+  <text x="694" y="454" class="ts">报警条本身只有“确认”和“故障消失”两条路</text>
+
+  <text x="24" y="524" class="ts">一句话：横幅／计数块回答“有没有、几条”，左列回答“哪个系统”，表格回答“哪个测点、多少值”，参数界面回答“为什么报”。</text>
+</svg>
